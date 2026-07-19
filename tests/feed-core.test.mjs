@@ -37,6 +37,34 @@ test("merges territorial broadcasters for the same event", () => {
   assert.equal(validateFeed(feed, now), true);
 });
 
+test("adds validated club artwork from event details", () => {
+  const records = [{
+    idEvent: "99",
+    strSport: "Soccer",
+    strEvent: "Fallback title",
+    strTimeStamp: "2027-01-15 08:00:00",
+    strChannel: "M6",
+    __territory: "FR"
+  }];
+  const details = new Map([[
+    "99",
+    {
+      strEvent: "Home FC vs Away FC",
+      strTimestamp: "2027-01-15T08:00:00Z",
+      strHomeTeam: "Home FC",
+      strAwayTeam: "Away FC",
+      strHomeTeamBadge: "https://r2.thesportsdb.com/images/media/team/badge/home.png",
+      strAwayTeamBadge: "https://r2.thesportsdb.com/images/media/team/badge/away.png"
+    }
+  ]]);
+
+  const feed = buildFeed(records, {}, now, details);
+
+  assert.equal(feed.events[0].title, "Home FC vs Away FC");
+  assert.equal(feed.events[0].homeTeam.badgeUrl.endsWith("home.png"), true);
+  assert.equal(validateFeed(feed, now), true);
+});
+
 test("drops malformed, non-football, and out-of-window records", () => {
   const feed = buildFeed([
     { idEvent: "1", strSport: "Basketball", strEvent: "A vs B", strTimeStamp: "2027-01-15 08:00:00", strChannel: "TV", __territory: "US" },

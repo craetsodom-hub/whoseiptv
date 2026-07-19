@@ -13,6 +13,26 @@ function channelKey(value) {
   return String(value ?? "").toLocaleLowerCase("en-US").replace(/[^a-z0-9]+/g, "");
 }
 
+function imageUrl(value) {
+  const url = clean(value, 300);
+  if (!url) return null;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" && parsed.hostname === "r2.thesportsdb.com" ? url : null;
+  } catch {
+    return null;
+  }
+}
+
+function teamFromDetails(details, prefix) {
+  const name = clean(details?.[`str${prefix}Team`], 120);
+  if (!name) return null;
+  return {
+    name,
+    badgeUrl: imageUrl(details?.[`str${prefix}TeamBadge`])
+  };
+}
+
 export function parseUtcTimestamp(value) {
   const raw = clean(value, 80);
   if (!raw) return null;
@@ -41,7 +61,7 @@ function aliasesFor(channelName, aliasesByChannel) {
     .slice(0, MAX_ALIASES_PER_BROADCAST);
 }
 
-export function buildFeed(records, aliasesByChannel, nowEpochSeconds) {
+export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent = new Map()) {
   if (!Number.isInteger(nowEpochSeconds) || nowEpochSeconds <= 0) {
     throw new Error("A valid generation time is required");
   }
@@ -53,10 +73,11 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds) {
   for (const record of records) {
     if (record?.strSport !== "Soccer") continue;
     const sourceId = clean(record.idEvent, 100);
-    const title = clean(record.strEvent, 200);
+    const details = detailsByEvent.get(sourceId);
+    const title = clean(details?.strEvent ?? record.strEvent, 200);
     const channelName = clean(record.strChannel, 120);
     const territory = clean(record.__territory, 16);
-    const startUtcEpochSeconds = parseUtcTimestamp(record.strTimeStamp);
+    const startUtcEpochSeconds = parseUtcTimestamp(details?.strTimestamp ?? record.strTimeStamp);
     if (!sourceId || !title || !channelName || !territory || !startUtcEpochSeconds) continue;
     if (startUtcEpochSeconds < earliest || startUtcEpochSeconds > latest) continue;
 
@@ -69,6 +90,13 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds) {
       status: "confirmed",
       broadcasts: []
     };
+
+    const homeTeam = teamFromDetails(details, "Home");
+    const awayTeam = teamFromDetails(details, "Away");
+    if (homeTeam && awayTeam && !event.homeTeam) {
+      event.homeTeam = homeTeam;
+      event.awayTeam = awayTeam;
+    }
 
     const competition = clean(record.strLeague, 120);
     if (competition && !event.competition) event.competition = competition;
@@ -115,6 +143,14 @@ export function validateFeed(feed, nowEpochSeconds) {
     ids.add(event.id);
     if (!event.title || event.sport !== "football" || event.status !== "confirmed") {
       throw new Error(`Invalid event ${event.id}`);
+    }
+    if ((event.homeTeam && !event.awayTeam) || (!event.homeTeam && event.awayTeam)) {
+      throw new Error(`Incomplete teams for ${event.id}`);
+    }
+    for (const team of [event.homeTeam, event.awayTeam].filter(Boolean)) {
+      if (!team.name || (team.badgeUrl && !team.badgeUrl.startsWith("https://r2.thesportsdb.com/"))) {
+        throw new Error(`Invalid team artwork for ${event.id}`);
+      }
     }
     if (!Number.isInteger(event.startUtcEpochSeconds)) throw new Error(`Invalid time for ${event.id}`);
     if (!Array.isArray(event.broadcasts) || event.broadcasts.length === 0) {

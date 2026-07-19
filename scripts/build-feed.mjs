@@ -52,6 +52,28 @@ async function fetchCountryDay(country, date) {
   }
 }
 
+async function fetchEventDetails(sourceId) {
+  const parameters = new URLSearchParams({ id: sourceId });
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const response = await fetch(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupevent.php?${parameters}`, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)"
+      },
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const text = await response.text();
+    if (text.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response too large");
+    const payload = JSON.parse(text);
+    return payload.events?.[0] ?? null;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 async function main() {
   const aliasesByChannel = JSON.parse(await readFile(aliasesPath, "utf8"));
   const dates = [utcDate(0), utcDate(1), utcDate(2)];
@@ -74,8 +96,18 @@ async function main() {
     throw new Error(`Only ${successfulRequests}/${totalRequests} source requests succeeded; keeping the previous feed`);
   }
 
+  const detailsByEvent = new Map();
+  for (const sourceId of new Set(records.map((record) => String(record.idEvent ?? "").trim()).filter(Boolean))) {
+    try {
+      const details = await fetchEventDetails(sourceId);
+      if (details) detailsByEvent.set(sourceId, details);
+    } catch (error) {
+      console.error(`Event details failed for ${sourceId}: ${error.message}`);
+    }
+  }
+
   const nowEpochSeconds = Math.floor(Date.now() / 1000);
-  const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds);
+  const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent);
   validateFeed(feed, nowEpochSeconds);
 
   await mkdir(dirname(outputPath), { recursive: true });
