@@ -6,12 +6,14 @@ import { fileURLToPath } from "node:url";
 import { buildFeed, validateFeed } from "./feed-core.mjs";
 import { collectFormulaOneEvents } from "./official-f1.mjs";
 import { collectNbaEvents } from "./official-nba.mjs";
+import { augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
 const aliasesPath = resolve(projectRoot, "config/channel-aliases.json");
 const footballCountriesPath = resolve(projectRoot, "config/football-countries.json");
 const sportCountriesPath = resolve(projectRoot, "config/sport-countries.json");
+const officialRightsPath = resolve(projectRoot, "config/official-event-broadcasters.json");
 const apiKey = process.env.THESPORTSDB_API_KEY || "123";
 const sourceBase = `https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/eventstv.php`;
 const countries = [
@@ -148,6 +150,8 @@ async function main() {
   const aliasesByChannel = JSON.parse(await readFile(aliasesPath, "utf8"));
   const footballCountries = JSON.parse(await readFile(footballCountriesPath, "utf8"));
   const sportCountries = JSON.parse(await readFile(sportCountriesPath, "utf8"));
+  const officialRights = JSON.parse(await readFile(officialRightsPath, "utf8"));
+  validateOfficialRightsConfig(officialRights);
   if (!isValidCountryList(footballCountries) || footballCountries.length < countries.length) {
     throw new Error("Football country configuration is incomplete");
   }
@@ -235,6 +239,7 @@ async function main() {
     feed.events = [...mergedEvents.values()]
       .sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds)
       .slice(0, 100);
+    augmentWithOfficialRights(feed.events, officialRights);
     console.log(`Collected ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);
   } catch (error) {
     console.error(`Official source batch failed safely: ${error.message}`);

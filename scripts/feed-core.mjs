@@ -1,7 +1,9 @@
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
 const MAX_EVENTS = 100;
-const MAX_BROADCASTS_PER_EVENT = 12;
+// Official tournament rights can cover many territories. Keep the feed bounded,
+// while allowing the 30-country rights map to reach the app for matching.
+const MAX_BROADCASTS_PER_EVENT = 64;
 const MAX_ALIASES_PER_BROADCAST = 8;
 const TRUSTED_ARTWORK_HOSTS = new Set([
   "r2.thesportsdb.com",
