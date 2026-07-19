@@ -6,7 +6,7 @@ Small, validated multi-sport schedule feed for the WhoseIPTV Android app. No dom
 
 `https://raw.githubusercontent.com/craetsodom-hub/whoseiptv/main/feed/events/v1/events.json`
 
-The scheduled GitHub Action refreshes the feed every three hours. It requests today plus the next two UTC days for all six sports across GB, US, ES, FR, MA, TR, DE, and IT; football is additionally checked across the maintained country list in `config/football-countries.json`, including Central/Eastern Europe, Latin America, North Africa, the Middle East, and Asia-Pacific. Requests are paced to respect the free source limits; the list can grow without changing the Android app.
+The scheduled GitHub Action refreshes the feed every three hours. It requests today plus the next two UTC days using reviewable, sport-specific country lists. Football uses `config/football-countries.json`; basketball, tennis, cricket, and rugby use `config/sport-countries.json`. Formula 1 uses the official worldwide broadcaster table instead of duplicating legacy country requests. Requests are paced to respect the free source limits; the lists can grow without changing the Android app.
 
 ## Data source and safety
 

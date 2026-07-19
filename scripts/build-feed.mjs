@@ -11,6 +11,7 @@ const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
 const aliasesPath = resolve(projectRoot, "config/channel-aliases.json");
 const footballCountriesPath = resolve(projectRoot, "config/football-countries.json");
+const sportCountriesPath = resolve(projectRoot, "config/sport-countries.json");
 const apiKey = process.env.THESPORTSDB_API_KEY || "123";
 const sourceBase = `https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/eventstv.php`;
 const countries = [
@@ -44,6 +45,16 @@ function utcDate(offsetDays) {
   const date = new Date();
   date.setUTCDate(date.getUTCDate() + offsetDays);
   return date.toISOString().slice(0, 10);
+}
+
+function isValidCountryList(value, allowEmpty = false) {
+  if (!Array.isArray(value) || (!allowEmpty && value.length === 0)) return false;
+  const entriesAreValid = value.every((country) =>
+    typeof country?.query === "string" && country.query.length > 0 &&
+    typeof country?.territory === "string" && /^[A-Z]{2}$/.test(country.territory)
+  );
+  const uniqueEntries = new Set(value.map((country) => `${country.query}|${country.territory}`));
+  return entriesAreValid && uniqueEntries.size === value.length;
 }
 
 async function fetchCountryDay(country, date, sport) {
@@ -136,23 +147,21 @@ async function fetchOfficialPage(url) {
 async function main() {
   const aliasesByChannel = JSON.parse(await readFile(aliasesPath, "utf8"));
   const footballCountries = JSON.parse(await readFile(footballCountriesPath, "utf8"));
-  const validFootballCountries = Array.isArray(footballCountries) && footballCountries.every((country) =>
-    typeof country?.query === "string" && country.query.length > 0 &&
-    typeof country?.territory === "string" && /^[A-Z]{2}$/.test(country.territory)
-  );
-  const uniqueFootballCountries = new Set(
-    (Array.isArray(footballCountries) ? footballCountries : [])
-      .map((country) => `${country.query}|${country.territory}`)
-  );
-  if (!validFootballCountries || footballCountries.length < countries.length ||
-      uniqueFootballCountries.size !== footballCountries.length) {
+  const sportCountries = JSON.parse(await readFile(sportCountriesPath, "utf8"));
+  if (!isValidCountryList(footballCountries) || footballCountries.length < countries.length) {
     throw new Error("Football country configuration is incomplete");
+  }
+  for (const sport of sports.filter((candidate) => candidate.id !== "football")) {
+    const configuredCountries = sportCountries?.[sport.id];
+    if (!isValidCountryList(configuredCountries, sport.id === "formula1")) {
+      throw new Error(`Country configuration is incomplete for ${sport.id}`);
+    }
   }
   const dates = [utcDate(0), utcDate(1), utcDate(2)];
   const records = [];
   let successfulRequests = 0;
   const jobs = dates.flatMap((date) => sports.flatMap((sport) =>
-    (sport.id === "football" ? footballCountries : countries)
+    (sport.id === "football" ? footballCountries : sportCountries[sport.id])
       .map((country) => ({ date, sport, country }))
   ));
   const totalRequests = jobs.length;
