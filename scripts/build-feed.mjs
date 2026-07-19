@@ -10,6 +10,7 @@ import { collectNbaEvents } from "./official-nba.mjs";
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
 const aliasesPath = resolve(projectRoot, "config/channel-aliases.json");
+const footballCountriesPath = resolve(projectRoot, "config/football-countries.json");
 const apiKey = process.env.THESPORTSDB_API_KEY || "123";
 const sourceBase = `https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/eventstv.php`;
 const countries = [
@@ -134,11 +135,16 @@ async function fetchOfficialPage(url) {
 
 async function main() {
   const aliasesByChannel = JSON.parse(await readFile(aliasesPath, "utf8"));
+  const footballCountries = JSON.parse(await readFile(footballCountriesPath, "utf8"));
+  if (!Array.isArray(footballCountries) || footballCountries.length < countries.length) {
+    throw new Error("Football country configuration is incomplete");
+  }
   const dates = [utcDate(0), utcDate(1), utcDate(2)];
   const records = [];
   let successfulRequests = 0;
   const jobs = dates.flatMap((date) => sports.flatMap((sport) =>
-    countries.map((country) => ({ date, sport, country }))
+    (sport.id === "football" ? footballCountries : countries)
+      .map((country) => ({ date, sport, country }))
   ));
   const totalRequests = jobs.length;
   for (const { date, sport, country } of jobs) {

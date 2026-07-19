@@ -107,7 +107,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
       event.awayTeam = awayTeam;
     }
 
-    const competition = clean(record.strLeague, 120);
+    const competition = clean(details?.strLeague ?? record.strLeague, 120);
     if (competition && !event.competition) event.competition = competition;
 
     const duplicate = event.broadcasts.some(

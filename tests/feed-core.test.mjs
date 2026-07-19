@@ -54,13 +54,15 @@ test("adds validated club artwork from event details", () => {
       strHomeTeam: "Home FC",
       strAwayTeam: "Away FC",
       strHomeTeamBadge: "https://r2.thesportsdb.com/images/media/team/badge/home.png",
-      strAwayTeamBadge: "https://r2.thesportsdb.com/images/media/team/badge/away.png"
+      strAwayTeamBadge: "https://r2.thesportsdb.com/images/media/team/badge/away.png",
+      strLeague: "Test League"
     }
   ]]);
 
   const feed = buildFeed(records, {}, now, details);
 
   assert.equal(feed.events[0].title, "Home FC vs Away FC");
+  assert.equal(feed.events[0].competition, "Test League");
   assert.equal(feed.events[0].homeTeam.badgeUrl.endsWith("home.png"), true);
   assert.equal(validateFeed(feed, now), true);
 });
