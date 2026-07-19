@@ -49,6 +49,18 @@ function broadcasterEntries(card, aliasesByChannel) {
   );
 }
 
+function teamFromCard(team) {
+  const name = String(team?.teamName ?? "").trim();
+  const teamId = String(team?.teamId ?? "").trim();
+  if (!name) return null;
+  return {
+    name: name.slice(0, 120),
+    badgeUrl: /^\d+$/.test(teamId)
+      ? `https://cdn.nba.com/logos/nba/${teamId}/primary/L/logo.svg`
+      : null
+  };
+}
+
 function cardEvents(data, nowEpochSeconds, aliasesByChannel) {
   const earliest = nowEpochSeconds - MAX_PAST_SECONDS;
   const latest = nowEpochSeconds + MAX_FUTURE_SECONDS;
@@ -69,7 +81,9 @@ function cardEvents(data, nowEpochSeconds, aliasesByChannel) {
       competition: String(card.cardHat ?? card.seasonType ?? "NBA").slice(0, 120),
       startUtcEpochSeconds: start,
       status: "confirmed",
-      broadcasts
+      broadcasts,
+      homeTeam: teamFromCard(card.homeTeam),
+      awayTeam: teamFromCard(card.awayTeam)
     };
   }).filter(Boolean);
 }

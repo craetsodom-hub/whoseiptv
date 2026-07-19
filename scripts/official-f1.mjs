@@ -125,6 +125,18 @@ function stableSlug(value) {
   return normalizedName(value).replace(/\s+/g, "-").slice(0, 100);
 }
 
+function officialArtworkUrl(value) {
+  const url = typeof value === "string" ? value : value?.url;
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "https:" && parsed.hostname === "media.formula1.com"
+      ? parsed.toString().slice(0, 300)
+      : null;
+  } catch {
+    return null;
+  }
+}
+
 export function parseFormulaOneRacePage(html, broadcasts, nowEpochSeconds) {
   const earliest = nowEpochSeconds - MAX_PAST_SECONDS;
   const latest = nowEpochSeconds + MAX_FUTURE_SECONDS;
@@ -145,7 +157,8 @@ export function parseFormulaOneRacePage(html, broadcasts, nowEpochSeconds) {
         competition: "Formula 1",
         startUtcEpochSeconds,
         status: "confirmed",
-        broadcasts
+        broadcasts,
+        artworkUrl: officialArtworkUrl(session.image) ?? officialArtworkUrl(root.image)
       });
     }
   }

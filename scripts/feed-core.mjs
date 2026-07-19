@@ -3,6 +3,11 @@ const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
 const MAX_EVENTS = 100;
 const MAX_BROADCASTS_PER_EVENT = 12;
 const MAX_ALIASES_PER_BROADCAST = 8;
+const TRUSTED_ARTWORK_HOSTS = new Set([
+  "r2.thesportsdb.com",
+  "cdn.nba.com",
+  "media.formula1.com"
+]);
 
 function clean(value, maxLength) {
   const result = String(value ?? "").trim();
@@ -18,7 +23,7 @@ function imageUrl(value) {
   if (!url) return null;
   try {
     const parsed = new URL(url);
-    return parsed.protocol === "https:" && parsed.hostname === "r2.thesportsdb.com" ? url : null;
+    return parsed.protocol === "https:" && TRUSTED_ARTWORK_HOSTS.has(parsed.hostname) ? url : null;
   } catch {
     return null;
   }
@@ -162,9 +167,12 @@ export function validateFeed(feed, nowEpochSeconds) {
       throw new Error(`Incomplete teams for ${event.id}`);
     }
     for (const team of [event.homeTeam, event.awayTeam].filter(Boolean)) {
-      if (!team.name || (team.badgeUrl && !team.badgeUrl.startsWith("https://r2.thesportsdb.com/"))) {
+      if (!team.name || (team.badgeUrl && imageUrl(team.badgeUrl) !== team.badgeUrl)) {
         throw new Error(`Invalid team artwork for ${event.id}`);
       }
+    }
+    if (event.artworkUrl && imageUrl(event.artworkUrl) !== event.artworkUrl) {
+      throw new Error(`Invalid event artwork for ${event.id}`);
     }
     if (!Number.isInteger(event.startUtcEpochSeconds)) throw new Error(`Invalid time for ${event.id}`);
     if (!Array.isArray(event.broadcasts) || event.broadcasts.length === 0) {

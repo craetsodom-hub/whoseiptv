@@ -8,8 +8,8 @@ test("parses official NBA page data into a confirmed basketball event", () => {
   const data = {
     props: { pageProps: { gameCardFeed: { modules: [{ cards: [{ cardData: {
       gameId: "123",
-      homeTeam: { teamName: "Thunder" },
-      awayTeam: { teamName: "Nets" },
+      homeTeam: { teamId: "1610612760", teamName: "Thunder" },
+      awayTeam: { teamId: "1610612751", teamName: "Nets" },
       gameTimeUtc: "2026-07-19T20:30:00Z",
       cardHat: "2026 NBA Summer League",
       broadcasters: { nationalBroadcasters: [{ broadcasterDisplayName: "ESPN" }] }
@@ -21,6 +21,8 @@ test("parses official NBA page data into a confirmed basketball event", () => {
   assert.equal(events.length, 1);
   assert.equal(events[0].title, "Nets vs Thunder");
   assert.equal(events[0].sport, "basketball");
+  assert.equal(events[0].homeTeam.badgeUrl, "https://cdn.nba.com/logos/nba/1610612760/primary/L/logo.svg");
+  assert.equal(events[0].awayTeam.badgeUrl, "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg");
   assert.equal(events[0].broadcasts[0].territory, "US");
   assert.deepEqual(events[0].broadcasts[0].aliases, ["ESPN HD"]);
 });

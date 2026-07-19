@@ -204,6 +204,7 @@ async function main() {
           ) === index);
         existing.homeTeam ??= event.homeTeam;
         existing.awayTeam ??= event.awayTeam;
+        existing.artworkUrl ??= event.artworkUrl;
         existing.competition ??= event.competition;
       }
     }

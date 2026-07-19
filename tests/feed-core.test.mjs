@@ -89,3 +89,25 @@ test("keeps the supported sport category supplied by the source job", () => {
   assert.equal(feed.events[0].sport, "basketball");
   assert.equal(validateFeed(feed, now), true);
 });
+
+test("accepts only trusted official artwork hosts", () => {
+  const validFeed = {
+    schemaVersion: 1,
+    generatedAtEpochSeconds: now,
+    validUntilEpochSeconds: now + 3600,
+    events: [{
+      id: "nba-1",
+      title: "Away vs Home",
+      sport: "basketball",
+      startUtcEpochSeconds: now,
+      status: "confirmed",
+      homeTeam: { name: "Home", badgeUrl: "https://cdn.nba.com/logos/nba/1/primary/L/logo.svg" },
+      awayTeam: { name: "Away", badgeUrl: "https://cdn.nba.com/logos/nba/2/primary/L/logo.svg" },
+      broadcasts: [{ channelName: "ESPN", territory: "US", confirmed: true }]
+    }]
+  };
+  assert.equal(validateFeed(validFeed, now), true);
+
+  validFeed.events[0].homeTeam.badgeUrl = "https://example.com/untrusted.svg";
+  assert.throws(() => validateFeed(validFeed, now), /Invalid team artwork/);
+});

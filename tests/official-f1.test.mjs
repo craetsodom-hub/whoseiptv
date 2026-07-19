@@ -40,6 +40,7 @@ test("keeps only important current Formula 1 sessions with exact UTC times", () 
     "@context": "http://schema.org",
     "@type": "SportsEvent",
     name: "Belgian Grand Prix",
+    image: { url: "https://media.formula1.com/image/upload/belgium.jpg" },
     subEvent: [
       { "@id": "practice", name: "Practice 3 - Belgian Grand Prix", startDate: "2026-07-19T10:00:00Z" },
       { "@id": "race", name: "Race - Belgian Grand Prix", startDate: "2026-07-19T13:00:00Z" }
@@ -50,5 +51,6 @@ test("keeps only important current Formula 1 sessions with exact UTC times", () 
   assert.equal(result.length, 1);
   assert.equal(result[0].title, "Belgian Grand Prix");
   assert.equal(result[0].sport, "formula1");
+  assert.equal(result[0].artworkUrl, "https://media.formula1.com/image/upload/belgium.jpg");
   assert.equal(result[0].startUtcEpochSeconds, 1784466000);
 });
