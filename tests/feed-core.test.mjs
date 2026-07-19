@@ -104,7 +104,7 @@ test("accepts only trusted official artwork hosts", () => {
       startUtcEpochSeconds: now,
       status: "confirmed",
       homeTeam: { name: "Home", badgeUrl: "https://cdn.nba.com/logos/nba/1/primary/L/logo.svg" },
-      awayTeam: { name: "Away", badgeUrl: "https://cdn.nba.com/logos/nba/2/primary/L/logo.svg" },
+      awayTeam: { name: "Away", badgeUrl: "https://www.thesportsdb.com/images/media/team/badge/club.png" },
       broadcasts: [{ channelName: "ESPN", territory: "US", confirmed: true }]
     }]
   };

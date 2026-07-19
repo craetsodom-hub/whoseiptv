@@ -5,6 +5,7 @@ const MAX_BROADCASTS_PER_EVENT = 12;
 const MAX_ALIASES_PER_BROADCAST = 8;
 const TRUSTED_ARTWORK_HOSTS = new Set([
   "r2.thesportsdb.com",
+  "www.thesportsdb.com",
   "cdn.nba.com",
   "media.formula1.com"
 ]);
