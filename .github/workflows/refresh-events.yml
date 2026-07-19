@@ -1,0 +1,53 @@
+name: Refresh football events
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+      - ".github/workflows/refresh-events.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-football-events
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Test feed rules
+        run: npm test
+
+      - name: Build validated feed
+        run: npm run build
+
+      - name: Publish changed feed
+        shell: bash
+        run: |
+          if git diff --quiet -- feed/events/v1/events.json; then
+            echo "Feed has not changed"
+            exit 0
+          fi
+          git config user.name "whoseiptv-events-bot"
+          git config user.email "whoseiptv-events-bot@users.noreply.github.com"
+          git add feed/events/v1/events.json
+          git commit -m "chore: refresh football events"
+          git push
