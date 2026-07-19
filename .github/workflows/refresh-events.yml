@@ -1,4 +1,4 @@
-name: Refresh football events
+name: Refresh sports events
 
 on:
   schedule:
@@ -17,13 +17,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: refresh-football-events
+  group: refresh-sports-events
   cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -49,5 +49,5 @@ jobs:
           git config user.name "whoseiptv-events-bot"
           git config user.email "whoseiptv-events-bot@users.noreply.github.com"
           git add feed/events/v1/events.json
-          git commit -m "chore: refresh football events"
+          git commit -m "chore: refresh sports events"
           git push

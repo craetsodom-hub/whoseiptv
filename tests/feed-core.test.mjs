@@ -65,7 +65,7 @@ test("adds validated club artwork from event details", () => {
   assert.equal(validateFeed(feed, now), true);
 });
 
-test("drops malformed, non-football, and out-of-window records", () => {
+test("drops malformed, unsupported, and out-of-window records", () => {
   const feed = buildFeed([
     { idEvent: "1", strSport: "Basketball", strEvent: "A vs B", strTimeStamp: "2027-01-15 08:00:00", strChannel: "TV", __territory: "US" },
     { idEvent: "2", strSport: "Soccer", strEvent: "A vs B", strTimeStamp: "invalid", strChannel: "TV", __territory: "US" },
@@ -73,4 +73,19 @@ test("drops malformed, non-football, and out-of-window records", () => {
   ], {}, now);
 
   assert.deepEqual(feed.events, []);
+});
+
+test("keeps the supported sport category supplied by the source job", () => {
+  const feed = buildFeed([{
+    idEvent: "basketball-1",
+    strSport: "Basketball",
+    __sport: "basketball",
+    strEvent: "Home vs Away",
+    strTimeStamp: "2027-01-15 08:00:00",
+    strChannel: "ESPN",
+    __territory: "US"
+  }], {}, now);
+
+  assert.equal(feed.events[0].sport, "basketball");
+  assert.equal(validateFeed(feed, now), true);
 });

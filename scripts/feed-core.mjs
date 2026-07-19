@@ -71,7 +71,11 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
   const eventsById = new Map();
 
   for (const record of records) {
-    if (record?.strSport !== "Soccer") continue;
+    const sport = clean(
+      record?.__sport ?? (record?.strSport === "Soccer" ? "football" : null),
+      40
+    );
+    if (!sport) continue;
     const sourceId = clean(record.idEvent, 100);
     const details = detailsByEvent.get(sourceId);
     const title = clean(details?.strEvent ?? record.strEvent, 200);
@@ -85,7 +89,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
     const event = eventsById.get(id) ?? {
       id,
       title,
-      sport: "football",
+      sport,
       startUtcEpochSeconds,
       status: "confirmed",
       broadcasts: []
@@ -118,14 +122,24 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
 
   const events = [...eventsById.values()]
     .filter((event) => event.broadcasts.length > 0)
-    .sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds)
-    .slice(0, MAX_EVENTS);
+    .sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds);
+
+  // Keep the feed small and prevent football from crowding every other category out.
+  const selected = [];
+  const bySport = new Map();
+  for (const event of events) bySport.set(event.sport, [...(bySport.get(event.sport) ?? []), event]);
+  for (let index = 0; index < 20 && selected.length < MAX_EVENTS; index += 1) {
+    for (const sportEvents of bySport.values()) {
+      const event = sportEvents[index];
+      if (event && selected.length < MAX_EVENTS) selected.push(event);
+    }
+  }
 
   return {
     schemaVersion: 1,
     generatedAtEpochSeconds: nowEpochSeconds,
     validUntilEpochSeconds: nowEpochSeconds + 12 * 60 * 60,
-    events
+    events: selected.sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds)
   };
 }
 
@@ -141,7 +155,7 @@ export function validateFeed(feed, nowEpochSeconds) {
   for (const event of feed.events) {
     if (!event.id || ids.has(event.id)) throw new Error("Duplicate or missing event ID");
     ids.add(event.id);
-    if (!event.title || event.sport !== "football" || event.status !== "confirmed") {
+    if (!event.title || !["football", "basketball", "tennis", "formula1", "cricket", "rugby"].includes(event.sport) || event.status !== "confirmed") {
       throw new Error(`Invalid event ${event.id}`);
     }
     if ((event.homeTeam && !event.awayTeam) || (!event.homeTeam && event.awayTeam)) {
