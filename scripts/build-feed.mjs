@@ -136,7 +136,16 @@ async function fetchOfficialPage(url) {
 async function main() {
   const aliasesByChannel = JSON.parse(await readFile(aliasesPath, "utf8"));
   const footballCountries = JSON.parse(await readFile(footballCountriesPath, "utf8"));
-  if (!Array.isArray(footballCountries) || footballCountries.length < countries.length) {
+  const validFootballCountries = Array.isArray(footballCountries) && footballCountries.every((country) =>
+    typeof country?.query === "string" && country.query.length > 0 &&
+    typeof country?.territory === "string" && /^[A-Z]{2}$/.test(country.territory)
+  );
+  const uniqueFootballCountries = new Set(
+    (Array.isArray(footballCountries) ? footballCountries : [])
+      .map((country) => `${country.query}|${country.territory}`)
+  );
+  if (!validFootballCountries || footballCountries.length < countries.length ||
+      uniqueFootballCountries.size !== footballCountries.length) {
     throw new Error("Football country configuration is incomplete");
   }
   const dates = [utcDate(0), utcDate(1), utcDate(2)];
