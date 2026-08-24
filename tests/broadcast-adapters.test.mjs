@@ -71,6 +71,28 @@ test("generic Premier League network selection cannot overwrite a precise Sky ch
   assert.deepEqual(merged.map((item) => item.channelName), ["Sky Sports Main Event"]);
 });
 
+test("exact schedule channels win an equivalent generic all-event destination", () => {
+  const merged = mergeExactBroadcasts(
+    { channelName: "Sky Sports", territory: "GB", sourceType: "official-all-events", destinationType: "service", destinationPrecision: "network" },
+    { channelName: "Sky Sports Premier League", territory: "GB", sourceType: "official-broadcaster-schedule", destinationType: "linear", destinationPrecision: "channel" }
+  );
+  assert.deepEqual(merged.map((item) => item.channelName), ["Sky Sports Premier League"]);
+});
+
+test("resolver preserves independent exact channels and territories after an earlier match", () => {
+  const target = event("Test League", "Home", "Away", "2026-08-30T15:00:00Z");
+  const candidate = {
+    competition: "Test League", homeTeam: "Home", awayTeam: "Away", startUtcEpochSeconds: epoch("2026-08-30T15:00:00Z"),
+    broadcasts: [
+      { channelName: "Provider One", territory: "GB", sourceType: "official-event", destinationType: "linear" },
+      { channelName: "Provider Two", territory: "FR", sourceType: "official-event", destinationType: "linear" },
+      { channelName: "Provider Three", territory: "GB", sourceType: "official-event", destinationType: "linear" }
+    ]
+  };
+  resolveExactBroadcasts([target], [candidate]);
+  assert.deepEqual(target.broadcasts.map((item) => `${item.territory}:${item.channelName}`).sort(), ["FR:Provider Two", "GB:Provider One", "GB:Provider Three"]);
+});
+
 test("Premier League selection validates a network without inventing a subchannel", async () => {
   const html = script({ fixtures: [
     { homeTeam: "Crystal Palace", awayTeam: "Manchester City", kickoff: "2026-08-29T12:30:00Z", broadcaster: "Sky Sports" },

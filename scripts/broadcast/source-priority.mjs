@@ -1,8 +1,10 @@
 export const SOURCE_PRIORITY = Object.freeze({
   "official-event": 400,
+  // A first-party fixture schedule is Level 1 evidence and must win when it
+  // identifies the same destination as a broader all-event entitlement.
+  "official-broadcaster-schedule": 390,
+  "official-network-selection": 380,
   "official-all-events": 350,
-  "official-broadcaster-schedule": 300,
-  "official-network-selection": 250,
   "official-rights": 200,
   "source-event": 100
 });
