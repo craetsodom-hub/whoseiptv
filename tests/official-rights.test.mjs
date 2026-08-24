@@ -95,6 +95,9 @@ test("exact-event matching requires competition, both teams, and time", () => {
   assert.equal(matchesEvent(event(), { ...candidate, startUtcEpochSeconds: kickoff + 3600 }), false);
   assert.equal(matchesEvent(event(), { ...candidate, homeTeam: "Liverpool", awayTeam: "Liverpool" }), false);
   assert.equal(matchesEvent({ ...event(), homeTeam: { name: "Inter" }, awayTeam: { name: "Milan" } }, { ...candidate, homeTeam: "Internazionale", awayTeam: "Milan" }), true);
+  assert.equal(matchesEvent({ ...event("Spanish La Liga"), homeTeam: { name: "Real Madrid" }, awayTeam: { name: "Real Sociedad" } }, {
+    competition: "LALIGA EA SPORTS", homeTeam: "Real Madrid", awayTeam: "Real Sociedad", startUtcEpochSeconds: kickoff
+  }), true);
 });
 
 test("adapter outage fails safely without discarding successful candidates", async () => {

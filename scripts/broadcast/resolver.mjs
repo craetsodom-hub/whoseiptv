@@ -10,6 +10,10 @@ const TEAM_ALIASES = new Map([
   ["spurs", "tottenham hotspur"], ["tottenham", "tottenham hotspur"], ["brighton", "brighton and hove albion"],
   ["newcastle", "newcastle united"], ["athletic", "athletic club"], ["celta", "celta vigo"], ["lyon", "olympique lyonnais"]
 ]);
+const COMPETITION_ALIASES = new Map([
+  ["laliga", "laliga"], ["laliga ea sports", "laliga"], ["spanish la liga", "laliga"], ["la liga", "laliga"],
+  ["english premier league", "premier league"]
+]);
 
 function teamIdentity(value) {
   const normalized = normalizeBroadcastText(value).replace(/\b(?:fc|cf|afc)\b/g, " ").replace(/\s+/g, " ").trim();
@@ -17,7 +21,8 @@ function teamIdentity(value) {
 }
 
 function competitionIdentity(value) {
-  return normalizeBroadcastText(value).replace(/\s+(?:19|20)\d{2}(?:\s+(?:19|20)?\d{2})?$/, "");
+  const normalized = normalizeBroadcastText(value).replace(/\s+(?:19|20)\d{2}(?:\s+(?:19|20)?\d{2})?$/, "");
+  return COMPETITION_ALIASES.get(normalized) ?? normalized;
 }
 
 export function matchesEvent(event, candidate, toleranceSeconds = TIME_TOLERANCE_SECONDS) {
