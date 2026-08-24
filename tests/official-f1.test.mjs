@@ -30,9 +30,19 @@ test("parses country broadcasters and rejects unconfirmed rows", () => {
   `;
   const result = parseFormulaOneBroadcasters(html, { "Sky UK": ["Sky Sports F1"] });
   assert.deepEqual(result, [
-    { channelName: "Sky UK", aliases: ["Sky Sports F1"], territory: "GB", confirmed: true },
-    { channelName: "Canal+", aliases: [], territory: "FR", confirmed: true }
+    { channelName: "Sky UK", aliases: ["Sky Sports F1"], territory: "GB", confirmed: true, sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN", matchingMethod: "official-country-broadcaster-table" },
+    { channelName: "Canal+", aliases: [], territory: "FR", confirmed: true, sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN", matchingMethod: "official-country-broadcaster-table" }
   ]);
+});
+
+test("rejects legacy region codes from the official broadcaster table", () => {
+  const result = parseFormulaOneBroadcasters("<table><tr><td>East Germany</td><td>Legacy TV</td></tr><tr><td>Serbia and Montenegro</td><td>Legacy 2</td></tr></table>");
+  assert.deepEqual(result, []);
+});
+
+test("maps unambiguous current country labels instead of Intl legacy codes", () => {
+  const result = parseFormulaOneBroadcasters("<table><tr><td>Germany</td><td>Sky Deutschland</td></tr><tr><td>Serbia</td><td>Arena Sport</td></tr></table>");
+  assert.deepEqual(result.map(({ territory }) => territory), ["DE", "RS"]);
 });
 
 test("keeps only important current Formula 1 sessions with exact UTC times", () => {

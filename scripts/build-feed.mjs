@@ -3,10 +3,13 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildFeed, validateFeed } from "./feed-core.mjs";
+import { buildFeed, selectEvents, validateFeed } from "./feed-core.mjs";
 import { collectFormulaOneEvents } from "./official-f1.mjs";
 import { collectNbaEvents } from "./official-nba.mjs";
-import { augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
+import { collectOfficialFootballEvents } from "./official-football.mjs";
+import { attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
+import { collectAdaptersSafely, mergeExactBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
+import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
@@ -36,8 +39,30 @@ const sports = [
 ];
 const REQUEST_TIMEOUT_MS = 15_000;
 const MAX_RESPONSE_CHARACTERS = 1_000_000;
-const REQUEST_PACING_MS = 2_200;
+const REQUEST_PACING_MS = Number(process.env.REQUEST_PACING_MS ?? 2_200);
 const execFileAsync = promisify(execFile);
+
+async function fetchWithCurlFallback(url, accept) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, {
+      headers: { Accept: accept, "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)" },
+      signal: controller.signal
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const body = await response.text();
+    if (!body || body.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response is empty or too large");
+    return body;
+  } catch (fetchError) {
+    const curl = process.platform === "win32" ? "curl.exe" : "curl";
+    const result = await execFileAsync(curl, ["-L", "--fail", "--compressed", "--max-time", String(Math.ceil(REQUEST_TIMEOUT_MS / 1000)), "-A", "WhoseIPTV-Events/1.0", "-H", `Accept: ${accept}`, url], { maxBuffer: MAX_RESPONSE_CHARACTERS * 2 });
+    if (!result.stdout || result.stdout.length > MAX_RESPONSE_CHARACTERS) throw fetchError;
+    return result.stdout;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
 
 function wait(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -61,19 +86,8 @@ function isValidCountryList(value, allowEmpty = false) {
 
 async function fetchCountryDay(country, date, sport) {
   const parameters = new URLSearchParams({ d: date, s: sport.query, a: country.query });
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  try {
-    const response = await fetch(`${sourceBase}?${parameters}`, {
-      headers: {
-        Accept: "application/json",
-        "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)"
-      },
-      signal: controller.signal
-    });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const text = await response.text();
-    if (text.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response too large");
+  {
+    const text = await fetchWithCurlFallback(`${sourceBase}?${parameters}`, "application/json");
     const payload = JSON.parse(text);
     if (payload.tvevents !== null && !Array.isArray(payload.tvevents)) {
       throw new Error("Unexpected response shape");
@@ -83,67 +97,20 @@ async function fetchCountryDay(country, date, sport) {
       __territory: country.territory,
       __sport: sport.id
     }));
-  } finally {
-    clearTimeout(timeout);
   }
 }
 
 async function fetchEventDetails(sourceId) {
   const parameters = new URLSearchParams({ id: sourceId });
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  try {
-    const response = await fetch(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupevent.php?${parameters}`, {
-      headers: {
-        Accept: "application/json",
-        "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)"
-      },
-      signal: controller.signal
-    });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const text = await response.text();
-    if (text.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response too large");
+  {
+    const text = await fetchWithCurlFallback(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupevent.php?${parameters}`, "application/json");
     const payload = JSON.parse(text);
     return payload.events?.[0] ?? null;
-  } finally {
-    clearTimeout(timeout);
   }
 }
 
 async function fetchOfficialPage(url) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  try {
-    const response = await fetch(url, {
-      headers: {
-        Accept: "text/html,application/xhtml+xml",
-        "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)"
-      },
-      signal: controller.signal
-    });
-    if (response.status === 403) {
-      const curl = process.platform === "win32" ? "curl.exe" : "curl";
-      const result = await execFileAsync(curl, [
-        "-L",
-        "--fail",
-        "--max-time",
-        String(Math.ceil(REQUEST_TIMEOUT_MS / 1000)),
-        "-A",
-        "WhoseIPTV-Events/1.0",
-        url
-      ], { maxBuffer: MAX_RESPONSE_CHARACTERS * 2 });
-      if (!result.stdout || result.stdout.length > MAX_RESPONSE_CHARACTERS) {
-        throw new Error("Official source response is empty or too large");
-      }
-      return result.stdout;
-    }
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const text = await response.text();
-    if (text.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response too large");
-    return text;
-  } finally {
-    clearTimeout(timeout);
-  }
+  return fetchWithCurlFallback(url, "text/html,application/xhtml+xml");
 }
 
 async function main() {
@@ -195,9 +162,9 @@ async function main() {
   }
 
   const nowEpochSeconds = Math.floor(Date.now() / 1000);
-  const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent);
+  const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent, { select: false });
   try {
-    const [formulaOneResult, nbaResult] = await Promise.allSettled([
+    const [formulaOneResult, nbaResult, footballResult] = await Promise.allSettled([
       collectFormulaOneEvents({
         fetchText: fetchOfficialPage,
         nowEpochSeconds,
@@ -207,40 +174,57 @@ async function main() {
         fetchText: fetchOfficialPage,
         nowEpochSeconds,
         aliasesByChannel
+      }),
+      collectOfficialFootballEvents({
+        fetchText: fetchOfficialPage,
+        nowEpochSeconds,
+        aliasesByChannel,
+        records,
+        detailsByEvent
       })
     ]);
     const formulaOneEvents = formulaOneResult.status === "fulfilled" ? formulaOneResult.value : [];
     const nbaEvents = nbaResult.status === "fulfilled" ? nbaResult.value : [];
+    const footballEvents = footballResult.status === "fulfilled" ? footballResult.value : [];
     if (formulaOneResult.status === "rejected") {
       console.error(`Official Formula 1 source failed safely: ${formulaOneResult.reason.message}`);
     }
     if (nbaResult.status === "rejected") {
       console.error(`Official NBA source failed safely: ${nbaResult.reason.message}`);
     }
-    const allEvents = [...feed.events, ...formulaOneEvents, ...nbaEvents];
+    if (footballResult.status === "rejected") {
+      console.error(`Official football sources failed safely: ${footballResult.reason.message}`);
+    }
+    const allEvents = [...feed.events, ...footballEvents, ...formulaOneEvents, ...nbaEvents];
     const mergedEvents = new Map();
     for (const event of allEvents) {
-      const key = `${event.sport}|${event.startUtcEpochSeconds}|${event.title.toLocaleLowerCase("en-US")}`;
+      const key = event.id?.startsWith("tsdb-")
+        ? event.id
+        : `${event.sport}|${event.startUtcEpochSeconds}|${event.title.toLocaleLowerCase("en-US")}`;
       const existing = mergedEvents.get(key);
       if (!existing) {
         mergedEvents.set(key, event);
       } else {
-        existing.broadcasts = [...existing.broadcasts, ...event.broadcasts]
-          .filter((broadcast, index, all) => all.findIndex((candidate) =>
-            candidate.territory === broadcast.territory &&
-            candidate.channelName.toLocaleLowerCase("en-US") === broadcast.channelName.toLocaleLowerCase("en-US")
-          ) === index);
+        existing.broadcasts = mergeExactBroadcasts(existing.broadcasts, event.broadcasts);
         existing.homeTeam ??= event.homeTeam;
         existing.awayTeam ??= event.awayTeam;
         existing.artworkUrl ??= event.artworkUrl;
         existing.competition ??= event.competition;
+        existing.broadcasterEvidence ??= event.broadcasterEvidence;
       }
     }
-    feed.events = [...mergedEvents.values()]
-      .sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds)
-      .slice(0, 100);
-    augmentWithOfficialRights(feed.events, officialRights);
-    console.log(`Collected ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);
+    const exactCandidates = await collectAdaptersSafely(OFFICIAL_BROADCAST_ADAPTERS, {
+      events: [...mergedEvents.values()],
+      fetchText: fetchOfficialPage,
+      aliasesByChannel,
+      verifiedAt: new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10)
+    }, (id, error) => console.error(`Official broadcast adapter ${id} failed safely: ${error.message}`));
+    augmentWithOfficialRights([...mergedEvents.values()], officialRights);
+    attachAllEventDestinations([...mergedEvents.values()], officialRights);
+    resolveExactBroadcasts([...mergedEvents.values()], exactCandidates);
+    feed.events = selectEvents([...mergedEvents.values()]);
+    const matchedFootball = footballEvents.filter((event) => event.broadcasterEvidence?.eventMatched).length;
+    console.log(`Collected ${footballEvents.length} exact official football events (${matchedFootball} resolved to source events), ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);
   } catch (error) {
     console.error(`Official source batch failed safely: ${error.message}`);
   }

@@ -1,3 +1,5 @@
+import { isSupportedTerritory } from "./territories.mjs";
+
 const NBA_GAMES_URL = "https://www.nba.com/games?date=";
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
@@ -34,12 +36,15 @@ function broadcasterEntries(card, aliasesByChannel) {
       const channelName = String(value?.broadcasterDisplayName ?? "").trim();
       if (!channelName) continue;
       const region = String(value?.broadcasterLocalizationRegion ?? "").toUpperCase();
-      const territory = key.startsWith("intl") && /^[A-Z]{2}$/.test(region) ? region : "US";
+      const territory = key.startsWith("intl") && isSupportedTerritory(region) ? region : "US";
       entries.push({
         channelName,
         aliases: aliasesFor(channelName, aliasesByChannel),
         territory,
-        confirmed: true
+        confirmed: true,
+        sourceType: "official-event",
+        sourceUrl: NBA_GAMES_URL,
+        matchingMethod: "official-game-card"
       });
     }
   }

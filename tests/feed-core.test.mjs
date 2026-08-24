@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildFeed, parseUtcTimestamp, validateFeed } from "../scripts/feed-core.mjs";
+import { buildFeed, mergeBroadcastAssignments, parseUtcTimestamp, validateFeed } from "../scripts/feed-core.mjs";
 
 const now = 1_800_000_000;
 
@@ -33,8 +33,15 @@ test("merges territorial broadcasters for the same event", () => {
 
   assert.equal(feed.events.length, 1);
   assert.equal(feed.events[0].broadcasts.length, 2);
-  assert.deepEqual(feed.events[0].broadcasts[0].aliases, ["BBC 1"]);
+  assert.deepEqual(feed.events[0].broadcasts.find((broadcast) => broadcast.channelName === "BBC One").aliases, ["BBC 1"]);
   assert.equal(validateFeed(feed, now), true);
+});
+
+test("official evidence wins an identical source-event broadcaster assignment", () => {
+  const sourceEvent = { channelName: "DAZN", territory: "ES", sourceType: "source-event" };
+  const official = { channelName: "DAZN", territory: "ES", sourceType: "official-event" };
+  assert.equal(mergeBroadcastAssignments([sourceEvent], [official])[0].sourceType, "official-event");
+  assert.equal(mergeBroadcastAssignments([official], [sourceEvent])[0].sourceType, "official-event");
 });
 
 test("adds validated club artwork from event details", () => {
@@ -105,7 +112,14 @@ test("accepts only trusted official artwork hosts", () => {
       status: "confirmed",
       homeTeam: { name: "Home", badgeUrl: "https://cdn.nba.com/logos/nba/1/primary/L/logo.svg" },
       awayTeam: { name: "Away", badgeUrl: "https://www.thesportsdb.com/images/media/team/badge/club.png" },
-      broadcasts: [{ channelName: "ESPN", territory: "US", confirmed: true }]
+      broadcasts: [{
+        channelName: "ESPN",
+        territory: "US",
+        confirmed: true,
+        sourceType: "official-event",
+        sourceUrl: "https://www.nba.com/games",
+        matchingMethod: "official-game-card"
+      }]
     }]
   };
   assert.equal(validateFeed(validFeed, now), true);
