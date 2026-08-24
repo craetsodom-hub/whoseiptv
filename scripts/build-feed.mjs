@@ -8,7 +8,7 @@ import { collectFormulaOneEvents } from "./official-f1.mjs";
 import { collectNbaEvents } from "./official-nba.mjs";
 import { collectOfficialFootballEvents } from "./official-football.mjs";
 import { attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
-import { collectAdaptersSafely, mergeExactBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
+import { canonicalizeRegionalBroadcasts, collectAdaptersSafely, mergeExactBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
 import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -222,6 +222,7 @@ async function main() {
     augmentWithOfficialRights([...mergedEvents.values()], officialRights);
     attachAllEventDestinations([...mergedEvents.values()], officialRights);
     resolveExactBroadcasts([...mergedEvents.values()], exactCandidates);
+    canonicalizeRegionalBroadcasts([...mergedEvents.values()]);
     feed.events = selectEvents([...mergedEvents.values()]);
     const matchedFootball = footballEvents.filter((event) => event.broadcasterEvidence?.eventMatched).length;
     console.log(`Collected ${footballEvents.length} exact official football events (${matchedFootball} resolved to source events), ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);

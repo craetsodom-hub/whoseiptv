@@ -1,7 +1,7 @@
 import { isSupportedTerritory } from "../territories.mjs";
 import { normalizeBroadcastText } from "./normalize.mjs";
 import { expandTerritories } from "./territory-regions.mjs";
-import { mergeExactBroadcasts } from "./resolver.mjs";
+import { broadcastTerritories, mergeExactBroadcasts } from "./resolver.mjs";
 
 function seasonless(value) {
   return normalizeBroadcastText(value).replace(/\s+(?:19|20)\d{2}(?:\s+(?:19|20)?\d{2})?$/, "");
@@ -119,13 +119,13 @@ export function coverageReport(config, events = [], allTerritories = [], atEpoch
     const aliases = new Set(competition.aliases.map(seasonless));
     const broadcasts = events.filter((event) => aliases.has(seasonless(event.competition))).flatMap((event) => event.broadcasts ?? []);
     const official = broadcasts.filter((item) => ["official-event", "official-broadcaster-schedule", "official-all-events"].includes(item.sourceType));
-    const exactLinearTerritories = new Set(official.filter((item) => item.destinationType !== "service").map((item) => item.territory));
+    const exactLinearTerritories = new Set(official.filter((item) => item.destinationType !== "service").flatMap(broadcastTerritories));
     const guaranteedServiceTerritories = [...competition.cycles.filter((cycle) => dateWithin(cycle, atEpochSeconds))
       .flatMap((cycle) => cycle.allEventDestinations ?? []), ...(competition.allEventDestinations ?? []).filter((item) => dateWithin(item, atEpochSeconds))]
       .filter(allMatchesDestination).map((item) => item.territory);
-    const exactServiceTerritories = new Set([...official.filter((item) => item.destinationType === "service").map((item) => item.territory), ...guaranteedServiceTerritories]);
+    const exactServiceTerritories = new Set([...official.filter((item) => item.destinationType === "service").flatMap(broadcastTerritories), ...guaranteedServiceTerritories]);
     const exactTerritories = new Set([...exactLinearTerritories, ...exactServiceTerritories]);
-    const sourceEventTerritories = new Set(broadcasts.filter((item) => !item.sourceType || item.sourceType === "source-event").map((item) => item.territory));
+    const sourceEventTerritories = new Set(broadcasts.filter((item) => !item.sourceType || item.sourceType === "source-event").flatMap(broadcastTerritories));
     return {
       id: competition.id,
       rightsTerritories: [...rightsTerritories].sort(),

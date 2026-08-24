@@ -25,6 +25,20 @@ function competitionIdentity(value) {
   return COMPETITION_ALIASES.get(normalized) ?? normalized;
 }
 
+export function broadcastTerritories(item) {
+  const territories = [...new Set([
+    ...(Array.isArray(item?.territories) ? item.territories : []),
+    item?.territory
+  ].map((territory) => String(territory ?? "").trim().toUpperCase()).filter(isSupportedTerritory))];
+  return territories.sort();
+}
+
+export function broadcastScopeKey(item) {
+  const territories = broadcastTerritories(item);
+  if (item?.region) return `region:${String(item.region).trim().toLowerCase()}`;
+  return `territory:${territories[0] ?? ""}`;
+}
+
 export function matchesEvent(event, candidate, toleranceSeconds = TIME_TOLERANCE_SECONDS) {
   if (competitionIdentity(event?.competition) !== competitionIdentity(candidate?.competition)) return false;
   if (!Number.isInteger(event?.startUtcEpochSeconds) || !Number.isInteger(candidate?.startUtcEpochSeconds) ||
@@ -35,13 +49,16 @@ export function matchesEvent(event, candidate, toleranceSeconds = TIME_TOLERANCE
 }
 
 function normalizeAssignment(item) {
-  const channelName = String(item?.channelName ?? "").trim();
-  const territory = String(item?.territory ?? "").trim().toUpperCase();
-  if (!channelName || !isSupportedTerritory(territory)) return null;
+  const rawChannelName = String(item?.channelName ?? "").trim();
+  const region = String(item?.region ?? "").trim() || undefined;
+  const displayRegion = String(item?.displayRegion ?? "").trim() || undefined;
+  const territories = broadcastTerritories(item);
+  const channelName = region && displayRegion && !rawChannelName.endsWith(` ${displayRegion}`) ? `${rawChannelName} ${displayRegion}` : rawChannelName;
+  if (!channelName || territories.length === 0 || (region && !displayRegion)) return null;
   return {
     channelName,
     aliases: cleanAliases(channelName, item.aliases ?? []),
-    territory,
+    ...(region ? { region, displayRegion, territories } : { territory: territories[0] }),
     confirmed: true,
     sourceType: item.sourceType ?? "source-event",
     matchingMethod: item.matchingMethod ?? item.ruleType ?? item.sourceType ?? "source-event-id",
@@ -59,31 +76,36 @@ export function mergeExactBroadcasts(...collections) {
   const candidates = collections.flat().map(normalizeAssignment).filter(Boolean).sort(strongerSource);
   const accepted = [];
   for (const candidate of candidates) {
-    if (candidate.destinationPrecision === "network" && accepted.some((item) => item.territory === candidate.territory &&
+    const scope = broadcastScopeKey(candidate);
+    if (candidate.destinationPrecision === "network" && accepted.some((item) => broadcastScopeKey(item) === scope &&
       item.destinationPrecision === "channel" && canonicalChannelIdentity(item.channelName).startsWith(canonicalChannelIdentity(candidate.channelName)))) continue;
-    const strongerExclusive = accepted.some((item) => item.territory === candidate.territory && item.exclusive && strongerSource(item, candidate) <= 0);
+    const strongerExclusive = accepted.some((item) => broadcastScopeKey(item) === scope && item.exclusive && strongerSource(item, candidate) <= 0);
     if (strongerExclusive) continue;
     if (candidate.exclusive) {
       for (let index = accepted.length - 1; index >= 0; index -= 1) {
-        if (accepted[index].territory === candidate.territory && strongerSource(accepted[index], candidate) > 0) accepted.splice(index, 1);
+        if (broadcastScopeKey(accepted[index]) === scope && strongerSource(accepted[index], candidate) > 0) accepted.splice(index, 1);
       }
     }
-    const key = `${candidate.territory}|${canonicalChannelIdentity(candidate.channelName)}`;
-    const existing = accepted.find((item) => `${item.territory}|${canonicalChannelIdentity(item.channelName)}` === key);
+    const key = `${scope}|${canonicalChannelIdentity(candidate.channelName)}`;
+    const existing = accepted.find((item) => `${broadcastScopeKey(item)}|${canonicalChannelIdentity(item.channelName)}` === key);
     if (existing) {
       existing.aliases = cleanAliases(existing.channelName, [...existing.aliases, candidate.channelName, ...candidate.aliases]);
+      if (existing.region) existing.territories = [...new Set([...existing.territories, ...candidate.territories])].sort();
       continue;
     }
     accepted.push(candidate);
   }
   const groups = new Map();
-  for (const item of accepted) groups.set(item.territory, [...(groups.get(item.territory) ?? []), item]);
+  for (const item of accepted) {
+    const scope = broadcastScopeKey(item);
+    groups.set(scope, [...(groups.get(scope) ?? []), item]);
+  }
   const balanced = [];
-  const territories = [...groups.keys()].sort();
+  const scopes = [...groups.keys()].sort();
   for (let index = 0; balanced.length < MAX_BROADCASTS_PER_EVENT; index += 1) {
     let added = false;
-    for (const territory of territories) {
-      const item = groups.get(territory)[index];
+    for (const scope of scopes) {
+      const item = groups.get(scope)[index];
       if (item && balanced.length < MAX_BROADCASTS_PER_EVENT) {
         balanced.push(item);
         added = true;
@@ -100,21 +122,47 @@ export function resolveExactBroadcasts(events, scheduleCandidates) {
       .flatMap((candidate) => (candidate.broadcasts ?? []).flatMap((broadcast) => {
         if (!broadcast.region) return [broadcast];
         const allowed = new Set(broadcast.regionTerritories ?? []);
-        return (event.broadcastRights ?? []).filter((right) => allowed.has(right.territory) && right.holders.some((holder) =>
+        const territories = (event.broadcastRights ?? []).filter((right) => allowed.has(right.territory) && right.holders.some((holder) =>
           canonicalChannelIdentity(holder.name) === canonicalChannelIdentity(broadcast.rightsHolder)
-        )).map((right) => ({ ...broadcast, territory: right.territory }));
+        )).map((right) => right.territory);
+        return territories.length > 0 ? [{ ...broadcast, territories }] : [];
       })).filter((broadcast) => {
         if (broadcast.sourceType === "official-event") return true;
         if (!["official-broadcaster-schedule", "official-network-selection"].includes(broadcast.sourceType)) return false;
-        const rights = (event.broadcastRights ?? []).find((right) => right.territory === broadcast.territory);
         const channel = canonicalChannelIdentity(broadcast.channelName);
         const declaredHolder = canonicalChannelIdentity(broadcast.rightsHolder);
-        return rights?.holders.some((holder) => {
+        return broadcastTerritories(broadcast).some((territory) => (event.broadcastRights ?? []).find((right) => right.territory === territory)?.holders.some((holder) => {
           const identity = canonicalChannelIdentity(holder.name);
           return channel.startsWith(identity) || (declaredHolder && declaredHolder === identity);
-        }) ?? false;
+        }) ?? false);
       });
     event.broadcasts = mergeExactBroadcasts(event.broadcasts ?? [], matched);
+  }
+  return events;
+}
+
+export function canonicalizeRegionalBroadcasts(events) {
+  for (const event of events) {
+    const groups = new Map();
+    const retained = [];
+    for (const broadcast of event.broadcasts ?? []) {
+      const isMenaEpg = broadcast.sourceType === "official-broadcaster-schedule" &&
+        /beinsports\.com\/api\/opta\/tv-event\?region=en-mena/i.test(broadcast.sourceUrl ?? "") &&
+        /^beIN SPORTS (?:\d+|EN [12])$/i.test(broadcast.channelName ?? "") && isSupportedTerritory(broadcast.territory);
+      if (!isMenaEpg) {
+        retained.push(broadcast);
+        continue;
+      }
+      const key = [broadcast.channelName, broadcast.sourceUrl, broadcast.matchingMethod].join("|");
+      groups.set(key, [...(groups.get(key) ?? []), broadcast]);
+    }
+    const regional = [...groups.values()].map((items) => ({
+      ...items[0],
+      region: "Arabic",
+      displayRegion: "AR",
+      territories: items.map((item) => item.territory)
+    }));
+    event.broadcasts = mergeExactBroadcasts(retained, regional);
   }
   return events;
 }

@@ -1,3 +1,5 @@
+import { broadcastScopeKey, broadcastTerritories } from "./resolver.mjs";
+
 const EXACT_SOURCE_TYPES = new Set([
   "official-event",
   "official-broadcaster-schedule",
@@ -7,10 +9,14 @@ const EXACT_SOURCE_TYPES = new Set([
 function groupedDestinationLabels(destinations) {
   const groups = new Map();
   for (const destination of destinations) {
-    const key = `${destination.channelName} / ${destination.sourceUrl}`;
-    groups.set(key, [...(groups.get(key) ?? []), destination.territory]);
+    const key = `${broadcastScopeKey(destination)} / ${destination.channelName} / ${destination.sourceUrl}`;
+    groups.set(key, [...new Set([...(groups.get(key) ?? []), ...broadcastTerritories(destination)])]);
   }
-  return [...groups.entries()].map(([key, territories]) => `${territories.sort().join(",")} / ${key}`);
+  return [...groups.entries()].map(([key, territories]) => {
+    const destination = destinations.find((item) => `${broadcastScopeKey(item)} / ${item.channelName} / ${item.sourceUrl}` === key);
+    const label = destination?.region ? `${destination.displayRegion} (${destination.region}; ${territories.sort().join(",")})` : territories.sort().join(",");
+    return `${label} / ${destination.channelName} / ${destination.sourceUrl}`;
+  });
 }
 
 function groupedRightLabels(rights) {
@@ -27,7 +33,7 @@ export function classifyFootballEvent(event) {
   const exactChannels = broadcasts.filter((item) => EXACT_SOURCE_TYPES.has(item.sourceType));
   const allEventServices = broadcasts.filter((item) => item.sourceType === "official-all-events");
   const sourceEventFallback = broadcasts.filter((item) => item.sourceType === "source-event");
-  const officialTerritories = new Set([...exactChannels, ...allEventServices].map((item) => item.territory));
+  const officialTerritories = new Set([...exactChannels, ...allEventServices].flatMap(broadcastTerritories));
   const rightsWithoutDestination = (event.broadcastRights ?? []).filter((item) => !officialTerritories.has(item.territory));
   let level = "E";
   if (exactChannels.length > 0) level = "A";
