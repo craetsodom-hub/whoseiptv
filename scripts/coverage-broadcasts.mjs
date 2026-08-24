@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { isSupportedTerritory, territoryKind } from "./territories.mjs";
 import { canonicalChannelIdentity } from "./broadcast/normalize.mjs";
+import { broadcastScopeKey, broadcastTerritories } from "./broadcast/resolver.mjs";
 import { footballCoverageSummary } from "./broadcast/coverage.mjs";
 
 const feed = JSON.parse(await readFile(new URL("../feed/events/v1/events.json", import.meta.url), "utf8"));
@@ -15,16 +16,17 @@ const officialServices = assignments.filter((item) => isOfficial(item) && isServ
 const sourceEventServices = assignments.filter((item) => item.broadcast.sourceType === "source-event" && isService(item));
 const uniqueOfficialChannels = new Set([...officialLinear, ...officialServices].map(({ broadcast }) => canonicalChannelIdentity(broadcast.channelName)));
 const footballSummary = footballCoverageSummary(events);
+const topTierPattern = /^(?:Premier League|English Premier League|UEFA Champions League|UEFA Europa League|UEFA Conference League|LaLiga|LALIGA EA SPORTS|Spanish La Liga|Italian Serie A|Bundesliga|Ligue 1)$/i;
 
-const invalid = assignments.filter(({ broadcast }) => !isSupportedTerritory(broadcast.territory));
-const supportedTerritories = [...new Set(assignments.filter(({ broadcast }) => isSupportedTerritory(broadcast.territory)).map(({ broadcast }) => broadcast.territory))].sort();
-const officialExactTerritories = [...new Set(assignments.filter(isOfficial).map(({ broadcast }) => broadcast.territory))].sort();
+const invalid = assignments.filter(({ broadcast }) => broadcastTerritories(broadcast).length === 0);
+const supportedTerritories = [...new Set(assignments.flatMap(({ broadcast }) => broadcastTerritories(broadcast)))].sort();
+const officialExactTerritories = [...new Set(assignments.filter(isOfficial).flatMap(({ broadcast }) => broadcastTerritories(broadcast)))].sort();
 const rightsTerritories = [...new Set(events.flatMap((event) => event.broadcastRights ?? []).map((right) => right.territory).filter(isSupportedTerritory))].sort();
 const anomalies = [];
 for (const event of events) {
   const pairs = new Set();
   for (const broadcast of event.broadcasts ?? []) {
-    const pair = `${broadcast.territory}|${broadcast.channelName.toLocaleLowerCase("en-US")}`;
+    const pair = `${broadcastScopeKey(broadcast)}|${broadcast.channelName.toLocaleLowerCase("en-US")}`;
     if (pairs.has(pair)) anomalies.push(`${event.id}: duplicate territory/channel ${pair}`);
     pairs.add(pair);
     const aliases = broadcast.aliases ?? [];
@@ -54,6 +56,14 @@ for (const { event, coverage } of footballSummary.football) {
   console.log(`  source-event fallback: ${coverage.fallbackLabels.length ? coverage.fallbackLabels.join(" ; ") : "none"}`);
   console.log(`  rights without usable destination: ${coverage.rightsLabels.length ? coverage.rightsLabels.join(" ; ") : "none"}`);
   console.log(`  unsupported territories: ${coverage.unsupportedTerritories.length ? coverage.unsupportedTerritories.join(" ; ") : "none"}`);
+  console.log(`  provider families investigated: ${coverage.investigation.providers.length ? coverage.investigation.providers.join(", ") : "none"}`);
+  console.log(`  authoritative sources checked: ${coverage.investigation.sources.length ? coverage.investigation.sources.join(" ; ") : "none"}`);
+}
+const topTierGaps = footballSummary.football.filter(({ event, coverage }) => topTierPattern.test(event.competition ?? "") &&
+  coverage.exactChannels.length === 0 && coverage.allEventServices.length === 0);
+console.log(`Top-tier fixtures without official destination: ${topTierGaps.length}`);
+for (const { event, coverage } of topTierGaps) {
+  console.log(`TOP-TIER GAP | ${event.competition ?? "(none)"} | ${event.title} | ${coverage.investigation.reason}`);
 }
 console.log(`Current supported territories: ${supportedTerritories.length} (${supportedTerritories.map((code) => `${code}:${territoryKind(code)}`).join(", ")})`);
 console.log(`Official exact coverage territories: ${officialExactTerritories.length} (${officialExactTerritories.join(", ")})`);
@@ -63,7 +73,7 @@ console.log(`Invalid/legacy territories: ${invalid.length}`);
 console.log(`Sanity anomalies: ${anomalies.length}`);
 for (const anomaly of anomalies) console.log(`ANOMALY | ${anomaly}`);
 if (officialLinear.length === 0) throw new Error("OFFICIAL exact linear must be greater than zero");
-if (invalid.length > 0) throw new Error(`Invalid/legacy territories emitted: ${[...new Set(invalid.map(({ broadcast }) => broadcast.territory))].join(", ")}`);
+if (invalid.length > 0) throw new Error("Invalid or empty broadcaster territory scope emitted");
 if (anomalies.length > 0) throw new Error("Generated feed sanity audit failed");
 if (assignments.some(({ broadcast }) => !broadcast.sourceType || !broadcast.sourceUrl || !broadcast.matchingMethod)) {
   throw new Error("Every broadcaster assignment must carry provenance");

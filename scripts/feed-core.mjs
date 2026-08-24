@@ -1,6 +1,6 @@
 import { compareEvents } from "./football-ranking.mjs";
 import { isSupportedTerritory } from "./territories.mjs";
-import { MAX_BROADCASTS_PER_EVENT, mergeExactBroadcasts } from "./broadcast/resolver.mjs";
+import { MAX_BROADCASTS_PER_EVENT, broadcastTerritories, mergeExactBroadcasts } from "./broadcast/resolver.mjs";
 
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
@@ -203,7 +203,8 @@ export function validateFeed(feed, nowEpochSeconds) {
       throw new Error(`Event ${event.id} has no confirmed broadcaster`);
     }
     for (const broadcast of event.broadcasts) {
-      if (!broadcast.channelName || !isSupportedTerritory(broadcast.territory) || broadcast.confirmed !== true ||
+      const territories = broadcastTerritories(broadcast);
+      if (!broadcast.channelName || territories.length === 0 || (broadcast.region && (!broadcast.displayRegion || broadcast.territory !== undefined)) || broadcast.confirmed !== true ||
           !broadcast.sourceType || !broadcast.sourceUrl || !broadcast.matchingMethod ||
           (broadcast.aliases !== undefined && (!Array.isArray(broadcast.aliases) || broadcast.aliases.length > MAX_ALIASES_PER_BROADCAST))) {
         throw new Error(`Invalid broadcaster for ${event.id}`);

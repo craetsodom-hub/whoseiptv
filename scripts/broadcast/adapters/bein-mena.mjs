@@ -13,7 +13,7 @@ export const BEIN_MENA_API_URL = `${BEIN_MENA_API_BASE}&limit=${BEIN_MENA_PAGE_S
 const CHANNEL = /^beIN(?: SPORTS)? (?:(?:[1-9]|10)|4K(?: HDR)?|XTRA(?: [1-9])?|EN [12])$/i;
 
 function regionalBroadcast() {
-  return [{ region: "MENA", rightsHolder: "beIN Sports", regionTerritories: TERRITORY_REGIONS.MENA }];
+  return [{ region: "Arabic", displayRegion: "AR", rightsHolder: "beIN Sports", regionTerritories: TERRITORY_REGIONS.MENA }];
 }
 
 function normalizedChannel(value) {

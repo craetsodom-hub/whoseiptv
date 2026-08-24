@@ -124,10 +124,12 @@ test("beIN accepts only aligned LIVE matches and rejects replay programming", as
   const target = event("Premier League", "Manchester City", "Bournemouth", "2026-08-23T15:00:00Z");
   augmentWithOfficialRights([target], rights);
   resolveExactBroadcasts([target], await collect(beinMenaAdapter, guide));
-  assert(target.broadcasts.length > 10);
-  assert(target.broadcasts.every((item) => item.channelName === "beIN SPORTS 1"));
-  assert(target.broadcasts.some((item) => item.territory === "MA"));
-  assert(!target.broadcasts.some((item) => item.territory === "FR"));
+  assert.equal(target.broadcasts.length, 1);
+  assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1 AR");
+  assert.equal(target.broadcasts[0].region, "Arabic");
+  assert.equal(target.broadcasts[0].displayRegion, "AR");
+  assert(target.broadcasts[0].territories.includes("MA"));
+  assert(!target.broadcasts[0].territories.includes("FR"));
 });
 
 test("beIN first-party EPG aligns competition, teams, match kickoff and exact channel", async () => {
@@ -150,10 +152,11 @@ test("beIN first-party EPG aligns competition, teams, match kickoff and exact ch
   const target = event("UEFA Champions League", "LASK", "Celtic", "2026-08-25T19:00:00Z");
   augmentWithOfficialRights([target], rights);
   resolveExactBroadcasts([target], await collect(beinMenaAdapter, snapshot));
-  assert.equal(target.broadcasts.length, 17);
-  assert(target.broadcasts.every((item) => item.channelName === "beIN SPORTS 1"));
-  assert(target.broadcasts.every((item) => item.sourceUrl.includes("/api/opta/tv-event")));
-  assert(target.broadcasts.every((item) => item.matchingMethod === "bein-epg-match-teams-competition-kickoff"));
+  assert.equal(target.broadcasts.length, 1);
+  assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1 AR");
+  assert(target.broadcasts[0].territories.includes("MA"));
+  assert(target.broadcasts[0].sourceUrl.includes("/api/opta/tv-event"));
+  assert.equal(target.broadcasts[0].matchingMethod, "bein-epg-match-teams-competition-kickoff");
 });
 
 test("beIN discovers its full current EPG window from API count", async () => {

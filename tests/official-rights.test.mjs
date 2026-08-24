@@ -3,9 +3,10 @@ import assert from "node:assert/strict";
 import rights from "../config/official-event-broadcasters.json" with { type: "json" };
 import { attachAllEventDestinations, augmentWithOfficialRights, coverageReport, matchingRights, validateOfficialRightsConfig } from "../scripts/official-rights.mjs";
 import { canonicalChannelIdentity, cleanAliases } from "../scripts/broadcast/normalize.mjs";
-import { collectAdaptersSafely, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
+import { broadcastScopeKey, canonicalizeRegionalBroadcasts, collectAdaptersSafely, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import { SUPPORTED_TERRITORIES } from "../scripts/territories.mjs";
 import { expandTerritories } from "../scripts/broadcast/territory-regions.mjs";
+import { classifyFootballEvent } from "../scripts/broadcast/coverage.mjs";
 
 const kickoff = Math.floor(Date.parse("2026-08-23T15:00:00Z") / 1000);
 const event = (competition = "Premier League", season = "2026/27") => ({
@@ -100,6 +101,34 @@ test("exact-event matching requires competition, both teams, and time", () => {
   }), true);
 });
 
+test("one Arabic MENA feed is canonicalized without confusing Argentina", () => {
+  const merged = mergeExactBroadcasts(
+    { channelName: "beIN SPORTS 1", territory: "MA", territories: ["MA"], region: "Arabic", displayRegion: "AR", sourceType: "official-broadcaster-schedule" },
+    { channelName: "beIN SPORTS 1", territory: "QA", territories: ["QA"], region: "Arabic", displayRegion: "AR", sourceType: "official-broadcaster-schedule" },
+    { channelName: "beIN SPORTS 1", territory: "AE", territories: ["AE"], region: "Arabic", displayRegion: "AR", sourceType: "official-broadcaster-schedule" },
+    { channelName: "beIN SPORTS 1", territory: "FR", sourceType: "official-event" },
+    { channelName: "TyC Sports", territory: "AR", sourceType: "official-event" }
+  );
+  const arabic = merged.find((item) => item.region === "Arabic");
+  assert.equal(arabic.channelName, "beIN SPORTS 1 AR");
+  assert.deepEqual(arabic.territories, ["AE", "MA", "QA"]);
+  assert.equal(arabic.territory, undefined);
+  assert.equal(broadcastScopeKey(arabic), "region:arabic");
+  assert(merged.some((item) => item.channelName === "beIN SPORTS 1" && item.territory === "FR"));
+  assert(merged.some((item) => item.channelName === "TyC Sports" && item.territory === "AR"));
+});
+
+test("existing MENA EPG rows migrate to one Arabic destination", () => {
+  const events = [{ broadcasts: [
+    { channelName: "beIN SPORTS 1", territory: "MA", sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0", matchingMethod: "epg" },
+    { channelName: "beIN SPORTS 1", territory: "QA", sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0", matchingMethod: "epg" },
+    { channelName: "beIN SPORTS 1", territory: "AE", sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0", matchingMethod: "epg" }
+  ] }];
+  canonicalizeRegionalBroadcasts(events);
+  assert.deepEqual(events[0].broadcasts.map((item) => item.channelName), ["beIN SPORTS 1 AR"]);
+  assert.deepEqual(events[0].broadcasts[0].territories, ["AE", "MA", "QA"]);
+});
+
 test("adapter outage fails safely without discarding successful candidates", async () => {
   const failures = [];
   const candidates = await collectAdaptersSafely([
@@ -150,4 +179,11 @@ test("coverage reports rights-only, exact-event, and unresolved territories hone
   assert(premierLeague.unresolvedTerritories.includes("JP"));
   const laliga = reports.find((item) => item.id === "laliga");
   assert.deepEqual(laliga.exactServiceTerritories, ["FR", "US"]);
+});
+
+test("gap diagnostics declare authoritative providers and sources checked", () => {
+  const coverage = classifyFootballEvent({ ...event("Premier League"), broadcasts: [] });
+  assert(coverage.investigation.providers.includes("Sky Sports UK"));
+  assert(coverage.investigation.sources.some((source) => source.includes("skysports.com")));
+  assert.match(coverage.investigation.reason, /No checked authoritative source/);
 });
