@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { isSupportedTerritory, territoryKind } from "./territories.mjs";
+import { canonicalChannelIdentity } from "./broadcast/normalize.mjs";
 
 const feed = JSON.parse(await readFile(new URL("../feed/events/v1/events.json", import.meta.url), "utf8"));
 const events = Array.isArray(feed.events) ? feed.events : [];
@@ -11,8 +12,41 @@ const officialLinear = assignments.filter((item) => isOfficial(item) && !isServi
 const sourceEventLinear = assignments.filter((item) => item.broadcast.sourceType === "source-event" && !isService(item));
 const officialServices = assignments.filter((item) => isOfficial(item) && isService(item));
 const sourceEventServices = assignments.filter((item) => item.broadcast.sourceType === "source-event" && isService(item));
+const uniqueOfficialChannels = new Set([...officialLinear, ...officialServices].map(({ broadcast }) => canonicalChannelIdentity(broadcast.channelName)));
 const rightsOnly = events.filter((event) => (event.broadcastRights?.length ?? 0) > 0 && (event.broadcasts?.length ?? 0) === 0);
 const unresolved = events.filter((event) => (event.broadcasts?.length ?? 0) === 0 && (event.broadcastRights?.length ?? 0) === 0);
+const footballEvents = events.filter((event) => event.sport === "football");
+
+function eventCoverage(event) {
+  const broadcasts = event.broadcasts ?? [];
+  if (broadcasts.some((broadcast) => broadcast.sourceType?.startsWith("official-"))) return "official";
+  if (broadcasts.some((broadcast) => broadcast.sourceType === "source-event")) return "source-event-only";
+  if ((event.broadcastRights?.length ?? 0) > 0) return "rights-only";
+  return "no-evidence";
+}
+
+function coverageCounts(items) {
+  const counts = { total: items.length, official: 0, sourceEventOnly: 0, rightsOnly: 0, noEvidence: 0 };
+  for (const item of items) {
+    const coverage = eventCoverage(item);
+    if (coverage === "official") counts.official += 1;
+    else if (coverage === "source-event-only") counts.sourceEventOnly += 1;
+    else if (coverage === "rights-only") counts.rightsOnly += 1;
+    else counts.noEvidence += 1;
+  }
+  return counts;
+}
+
+function printEventCoverage(label, items) {
+  const counts = coverageCounts(items);
+  const percentage = counts.total === 0 ? "0.0" : ((counts.official / counts.total) * 100).toFixed(1);
+  console.log(`${label}: ${counts.total}`);
+  console.log(`Unique officially resolved events: ${counts.official}`);
+  console.log(`Official exact-event %: ${percentage}%`);
+  console.log(`Source-event-only: ${counts.sourceEventOnly}`);
+  console.log(`Rights-only: ${counts.rightsOnly}`);
+  console.log(`No broadcaster evidence: ${counts.noEvidence}`);
+}
 
 function domain(url) {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return "invalid-url"; }
@@ -53,8 +87,16 @@ console.log(`OFFICIAL exact services: ${officialServices.length}`);
 console.log(`SOURCE-EVENT exact services: ${sourceEventServices.length}`);
 console.log(`Rights-only events: ${rightsOnly.length}`);
 console.log(`Unresolved events: ${unresolved.length}`);
+printEventCoverage("Total football events", footballEvents);
+console.log("Football event coverage by competition");
+for (const competition of [...new Set(footballEvents.map((event) => event.competition ?? "(none)"))].sort()) {
+  const counts = coverageCounts(footballEvents.filter((event) => (event.competition ?? "(none)") === competition));
+  const percentage = counts.total === 0 ? "0.0" : ((counts.official / counts.total) * 100).toFixed(1);
+  console.log(`${competition} | total ${counts.total} | official ${counts.official} (${percentage}%) | source-event-only ${counts.sourceEventOnly} | rights-only ${counts.rightsOnly} | no-evidence ${counts.noEvidence} | unresolved ${counts.rightsOnly + counts.noEvidence}`);
+}
 console.log(`Current supported territories: ${supportedTerritories.length} (${supportedTerritories.map((code) => `${code}:${territoryKind(code)}`).join(", ")})`);
 console.log(`Official exact coverage territories: ${officialExactTerritories.length} (${officialExactTerritories.join(", ")})`);
+console.log(`Unique official exact channels: ${uniqueOfficialChannels.size}`);
 console.log(`Rights metadata territories: ${rightsTerritories.length} (${rightsTerritories.join(", ")})`);
 console.log(`Invalid/legacy territories: ${invalid.length}`);
 console.log(`Sanity anomalies: ${anomalies.length}`);

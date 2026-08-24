@@ -8,6 +8,7 @@ import { parseLaligaSchedule, parseLaligaSemanticTable, laligaAdapter } from "..
 import { parseLigue1Schedule, ligue1Adapter } from "../scripts/broadcast/adapters/ligue1.mjs";
 import { parseBundesligaSchedule, bundesligaAdapter } from "../scripts/broadcast/adapters/bundesliga.mjs";
 import { parsePremierLeagueSelections, premierLeagueAdapter } from "../scripts/broadcast/adapters/premier-league.mjs";
+import { parseMovistarChampionsSchedule, movistarChampionsAdapter } from "../scripts/broadcast/adapters/movistar-plus.mjs";
 import { parseTntSportsSchedule } from "../scripts/broadcast/adapters/tnt-sports.mjs";
 import { OFFICIAL_ADAPTER_STATUS, OFFICIAL_BROADCAST_ADAPTERS } from "../scripts/broadcast/adapters/index.mjs";
 import { attachAllEventDestinations, augmentWithOfficialRights } from "../scripts/official-rights.mjs";
@@ -23,7 +24,8 @@ const event = (competition, home, away, kickoff, season = "2026/27") => ({
 const collect = (adapter, html) => adapter.collect({ fetchText: async () => html, verifiedAt: "2026-08-23", aliasesByChannel: {} });
 
 test("only fail-closed fixture-tested adapters are registered", () => {
-  assert.deepEqual(OFFICIAL_BROADCAST_ADAPTERS.map((adapter) => adapter.id), ["bein-mena", "sky-sports-uk", "premier-league-selections", "laliga-spain", "ligue1-france", "bundesliga-active"]);
+  assert.deepEqual(OFFICIAL_BROADCAST_ADAPTERS.map((adapter) => adapter.id), ["bein-mena", "sky-sports-uk", "premier-league-selections", "laliga-spain", "movistar-plus-champions-spain", "bundesliga-active"]);
+  assert(!OFFICIAL_ADAPTER_STATUS.some((adapter) => adapter.id === "ligue1-france"));
   assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "sky-sports-uk").contractStatus, "semantic-html-verified");
   assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "bein-mena").contractStatus, "first-party-api-verified");
 });
@@ -130,6 +132,58 @@ test("beIN first-party EPG aligns competition, teams, match kickoff and exact ch
   assert(target.broadcasts.every((item) => item.channelName === "beIN SPORTS 1"));
   assert(target.broadcasts.every((item) => item.sourceUrl.includes("/api/opta/tv-event")));
   assert(target.broadcasts.every((item) => item.matchingMethod === "bein-epg-match-teams-competition-kickoff"));
+});
+
+test("beIN discovers its full current EPG window from API count", async () => {
+  const first = {
+    count: 301,
+    rows: [{ data: { m_date: "2026-08-25T19:00:00", m_time: "19:00:00Z", competition_name: "LaLiga", teama: "Elche", teamb: "Barcelona", Live: "True" }, live: true, replay: false, channel: { name: "beIN SPORTS 1" } }]
+  };
+  const last = {
+    count: 301,
+    rows: [{ data: { m_date: "2026-08-26T19:00:00", m_time: "19:00:00Z", competition_name: "Bundesliga", teama: "Bayern Munich", teamb: "RB Leipzig", Live: "True" }, live: true, replay: false, channel: { name: "beIN SPORTS 2" } }]
+  };
+  const urls = [];
+  const candidates = await beinMenaAdapter.collect({
+    fetchText: async (url) => {
+      urls.push(url);
+      return JSON.stringify(url.includes("offset=300") ? last : first);
+    },
+    verifiedAt: "2026-08-24"
+  });
+  assert.equal(urls.length, 4);
+  assert(urls[0].includes("offset=0"));
+  assert.deepEqual(urls.slice(1).map((url) => url.match(/offset=(\d+)/)?.[1]), ["100", "200", "300"]);
+  assert.deepEqual(candidates.map((candidate) => candidate.competition), ["LaLiga", "LaLiga", "LaLiga", "Bundesliga"]);
+});
+
+test("Movistar keeps its Champions League channel in the exact dated programme row", async () => {
+  const snapshot = await readFile(new URL("./fixtures/official-football/movistar-champions-chap3-2026-08-26.html", import.meta.url), "utf8");
+  const snapshotUrl = "https://www.movistarplus.es/programacion-tv/chap3/2026-08-26";
+  const rows = parseMovistarChampionsSchedule(snapshot, snapshotUrl);
+  assert.deepEqual(rows.map((row) => [row.competition, row.homeTeam, row.awayTeam, row.channelName]), [
+    ["UEFA Champions League", "Celje", "Slovan Bratislava", "M+ Liga de Campeones 4"]
+  ]);
+  assert.equal(rows[0].startUtcEpochSeconds, epoch("2026-08-26T18:53:00Z"));
+  const candidates = await movistarChampionsAdapter.collect({
+    events: [event("UEFA Champions League", "Celje", "Slovan Bratislava", "2026-08-26T19:00:00Z")],
+    fetchText: async (url) => url === snapshotUrl ? snapshot : "",
+    verifiedAt: "2026-08-24"
+  });
+  assert.equal(candidates.length, 1);
+  const target = event("UEFA Champions League", "Celje", "Slovan Bratislava", "2026-08-26T19:00:00Z");
+  resolveExactBroadcasts([target], candidates);
+  assert.deepEqual(target.broadcasts.map((broadcast) => broadcast.channelName), ["M+ Liga de Campeones 4"]);
+  assert.deepEqual(target.broadcasts.map((broadcast) => [broadcast.sourceType, broadcast.matchingMethod, broadcast.sourceUrl]), [[
+    "official-event", "movistar-epg-match-teams-coverage-time", snapshotUrl
+  ]]);
+  const wrongTeams = event("UEFA Champions League", "Celje", "Viking", "2026-08-26T19:00:00Z");
+  const wrongCompetition = event("UEFA Europa League", "Celje", "Slovan Bratislava", "2026-08-26T19:00:00Z");
+  const wrongKickoff = event("UEFA Champions League", "Celje", "Slovan Bratislava", "2026-08-26T20:00:00Z");
+  resolveExactBroadcasts([wrongTeams, wrongCompetition, wrongKickoff], candidates);
+  assert.deepEqual(wrongTeams.broadcasts, []);
+  assert.deepEqual(wrongCompetition.broadcasts, []);
+  assert.deepEqual(wrongKickoff.broadcasts, []);
 });
 
 test("LaLiga operator stays attached to its own exact fixture", async () => {
