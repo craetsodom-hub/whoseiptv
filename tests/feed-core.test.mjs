@@ -33,7 +33,7 @@ test("merges territorial broadcasters for the same event", () => {
 
   assert.equal(feed.events.length, 1);
   assert.equal(feed.events[0].broadcasts.length, 2);
-  assert.deepEqual(feed.events[0].broadcasts[0].aliases, ["BBC 1"]);
+  assert.deepEqual(feed.events[0].broadcasts.find((broadcast) => broadcast.channelName === "BBC One").aliases, ["BBC 1"]);
   assert.equal(validateFeed(feed, now), true);
 });
 
