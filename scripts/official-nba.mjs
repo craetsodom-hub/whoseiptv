@@ -39,7 +39,9 @@ function broadcasterEntries(card, aliasesByChannel) {
         channelName,
         aliases: aliasesFor(channelName, aliasesByChannel),
         territory,
-        confirmed: true
+        confirmed: true,
+        sourceType: "official-event",
+        sourceUrl: NBA_GAMES_URL
       });
     }
   }

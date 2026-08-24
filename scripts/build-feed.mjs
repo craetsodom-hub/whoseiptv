@@ -3,10 +3,12 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildFeed, validateFeed } from "./feed-core.mjs";
+import { buildFeed, selectEvents, validateFeed } from "./feed-core.mjs";
 import { collectFormulaOneEvents } from "./official-f1.mjs";
 import { collectNbaEvents } from "./official-nba.mjs";
-import { augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
+import { attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
+import { collectAdaptersSafely, mergeExactBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
+import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
@@ -195,7 +197,7 @@ async function main() {
   }
 
   const nowEpochSeconds = Math.floor(Date.now() / 1000);
-  const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent);
+  const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent, { select: false });
   try {
     const [formulaOneResult, nbaResult] = await Promise.allSettled([
       collectFormulaOneEvents({
@@ -225,21 +227,23 @@ async function main() {
       if (!existing) {
         mergedEvents.set(key, event);
       } else {
-        existing.broadcasts = [...existing.broadcasts, ...event.broadcasts]
-          .filter((broadcast, index, all) => all.findIndex((candidate) =>
-            candidate.territory === broadcast.territory &&
-            candidate.channelName.toLocaleLowerCase("en-US") === broadcast.channelName.toLocaleLowerCase("en-US")
-          ) === index);
+        existing.broadcasts = mergeExactBroadcasts(existing.broadcasts, event.broadcasts);
         existing.homeTeam ??= event.homeTeam;
         existing.awayTeam ??= event.awayTeam;
         existing.artworkUrl ??= event.artworkUrl;
         existing.competition ??= event.competition;
       }
     }
-    feed.events = [...mergedEvents.values()]
-      .sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds)
-      .slice(0, 100);
-    augmentWithOfficialRights(feed.events, officialRights);
+    const exactCandidates = await collectAdaptersSafely(OFFICIAL_BROADCAST_ADAPTERS, {
+      events: [...mergedEvents.values()],
+      fetchText: fetchOfficialPage,
+      aliasesByChannel,
+      verifiedAt: new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10)
+    }, (id, error) => console.error(`Official broadcast adapter ${id} failed safely: ${error.message}`));
+    augmentWithOfficialRights([...mergedEvents.values()], officialRights);
+    attachAllEventDestinations([...mergedEvents.values()], officialRights);
+    resolveExactBroadcasts([...mergedEvents.values()], exactCandidates);
+    feed.events = selectEvents([...mergedEvents.values()]);
     console.log(`Collected ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);
   } catch (error) {
     console.error(`Official source batch failed safely: ${error.message}`);

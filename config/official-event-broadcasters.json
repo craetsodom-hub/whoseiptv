@@ -1,38 +1,106 @@
 {
-  "source": "https://digitalhub.fifa.com/asset/84b936a9-3c00-4f58-ba66-c6284b8801b7/FWC26-Media-Rights-Licensees-Overview.pdf",
-  "lastVerified": "2026-06-11",
-  "competitionContains": ["world cup"],
-  "rightsType": "tv-internet",
-  "countries": [
-    { "territory": "DZ", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] },
-    { "territory": "EG", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] },
-    { "territory": "MA", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] },
-    { "territory": "TN", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] },
-    { "territory": "ZA", "channels": [{ "name": "SuperSport International", "aliases": ["SuperSport", "SuperSport Football", "SuperSport 1"] }] },
-    { "territory": "NG", "channels": [{ "name": "SuperSport International", "aliases": ["SuperSport", "SuperSport Football", "SuperSport 1"] }] },
-    { "territory": "GB", "channels": [{ "name": "BBC", "aliases": ["BBC One", "BBC iPlayer", "UK BBC One"] }, { "name": "ITV", "aliases": ["ITV1", "ITV 1", "ITV Hub"] }] },
-    { "territory": "FR", "channels": [{ "name": "M6", "aliases": ["FR M6", "France M6"] }, { "name": "beIN Sports France", "aliases": ["beIN Sports 1 France", "beIN Sports 1 FR"] }] },
-    { "territory": "ES", "channels": [{ "name": "RTVE", "aliases": ["La 1", "RTVE La 1"] }, { "name": "DAZN Spain", "aliases": ["DAZN ES", "ES DAZN"] }] },
-    { "territory": "DE", "channels": [{ "name": "ARD", "aliases": ["Das Erste", "ARD Das Erste"] }, { "name": "ZDF", "aliases": ["ZDF HD"] }] },
-    { "territory": "IT", "channels": [{ "name": "RAI", "aliases": ["Rai 1", "RAI 1", "RAI Sport"] }, { "name": "DAZN Italy", "aliases": ["DAZN IT", "IT DAZN"] }] },
-    { "territory": "TR", "channels": [{ "name": "TRT", "aliases": ["TRT 1", "TRT Spor", "TRT Spor HD"] }] },
-    { "territory": "US", "channels": [{ "name": "FOX Sports", "aliases": ["FOX Sports 1", "FS1", "Fox Sports One"] }] },
-    { "territory": "CA", "channels": [{ "name": "CTV", "aliases": ["CTV Sports", "CTV Specialty"] }] },
-    { "territory": "MX", "channels": [{ "name": "Televisa", "aliases": ["Las Estrellas", "Canal 5", "Televisa Deportes"] }] },
-    { "territory": "BR", "channels": [{ "name": "Globo", "aliases": ["TV Globo", "Globo TV"] }] },
-    { "territory": "AR", "channels": [{ "name": "ESPN", "aliases": ["ESPN HD", "ESPN Argentina"] }] },
-    { "territory": "CL", "channels": [{ "name": "ESPN", "aliases": ["ESPN HD", "ESPN Chile"] }] },
-    { "territory": "CO", "channels": [{ "name": "ESPN", "aliases": ["ESPN HD", "ESPN Colombia"] }] },
-    { "territory": "PE", "channels": [{ "name": "America TV", "aliases": ["América TV", "America Television", "América Televisión"] }] },
-    { "territory": "CN", "channels": [{ "name": "China Media Group", "aliases": ["CCTV", "CCTV 5", "China Central Television"] }] },
-    { "territory": "IN", "channels": [{ "name": "Zee Entertainment", "aliases": ["Zee TV", "Zee Sports"] }] },
-    { "territory": "ID", "channels": [{ "name": "TVRI Indonesia", "aliases": ["TVRI", "TVRI Sport"] }] },
-    { "territory": "JP", "channels": [{ "name": "DAZN Japan", "aliases": ["DAZN JP", "DAZN"] }] },
-    { "territory": "MY", "channels": [{ "name": "Total Sports", "aliases": ["Astro SuperSport", "Total Sports Malaysia"] }] },
-    { "territory": "PK", "channels": [{ "name": "Tapmad", "aliases": ["Tapmad Sports"] }] },
-    { "territory": "QA", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] },
-    { "territory": "KR", "channels": [{ "name": "JTBC", "aliases": ["JTBC Sports", "JTBC Golf"] }] },
-    { "territory": "SA", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] },
-    { "territory": "AE", "channels": [{ "name": "beIN Sports", "aliases": ["beIN Sports 1", "beIN Sports 1 HD"] }] }
+  "version": 3,
+  "competitions": [
+    {
+      "id": "fifa-world-cup", "aliases": ["FIFA World Cup", "FIFA World Cup 2026"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/match-center",
+      "cycles": [{
+        "seasons": ["2025/26"], "validFrom": "2026-06-11", "validThrough": "2026-07-19", "lastVerified": "2026-06-11",
+        "sourceUrl": "https://digitalhub.fifa.com/asset/84b936a9-3c00-4f58-ba66-c6284b8801b7/FWC26-Media-Rights-Licensees-Overview.pdf",
+        "coverage": [
+          { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] },
+          { "region": "SUB_SAHARAN_AFRICA", "holders": [{ "name": "SuperSport International", "kind": "network" }] },
+          { "territory": "GB", "holders": [{ "name": "BBC", "kind": "network" }, { "name": "ITV", "kind": "network" }] },
+          { "territory": "US", "holders": [{ "name": "FOX Sports", "kind": "network" }] },
+          { "territory": "BR", "holders": [{ "name": "Globo", "kind": "network" }] }
+        ]
+      }]
+    },
+    {
+      "id": "premier-league", "aliases": ["Premier League", "English Premier League"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.premierleague.com/en/fixtures",
+      "cycles": [{
+        "seasons": ["2025/26", "2026/27", "2027/28"], "validFrom": "2025-08-01", "validThrough": "2028-07-31", "lastVerified": "2026-08-23",
+        "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+        "coverage": [
+          { "territory": "GB", "holders": [{ "name": "Sky Sports", "kind": "network" }, { "name": "TNT Sports", "kind": "network" }] },
+          { "territory": "ES", "holders": [{ "name": "DAZN", "kind": "service" }] },
+          { "territory": "FR", "holders": [{ "name": "CANAL+", "kind": "network" }] },
+          { "territory": "DE", "holders": [{ "name": "Sky Deutschland", "kind": "network" }] },
+          { "territory": "AT", "holders": [{ "name": "Sky Deutschland", "kind": "network" }] },
+          { "territory": "IT", "holders": [{ "name": "Sky Italia", "kind": "network" }] },
+          { "territory": "PT", "holders": [{ "name": "DAZN", "kind": "service" }] },
+          { "territory": "TR", "holders": [{ "name": "beIN Sports", "kind": "network" }] },
+          { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] },
+          { "region": "SUB_SAHARAN_AFRICA", "holders": [{ "name": "SuperSport", "kind": "network" }] },
+          { "territory": "US", "holders": [{ "name": "NBC Sports", "kind": "network" }] },
+          { "territory": "CA", "holders": [{ "name": "Fubo", "kind": "service" }] },
+          { "territory": "AU", "holders": [{ "name": "Stan Sport", "kind": "service" }] },
+          { "territory": "BR", "holders": [{ "name": "ESPN", "kind": "network" }] },
+          { "region": "SOUTH_AMERICA", "exclude": ["BR"], "holders": [{ "name": "ESPN", "kind": "network" }] }
+        ]
+      }]
+    },
+    {
+      "id": "uefa-champions-league", "aliases": ["UEFA Champions League"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.uefa.com/uefachampionsleague/fixtures-results/",
+      "cycles": [{
+        "seasons": ["2024/25", "2025/26", "2026/27"], "validFrom": "2024-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-08-23",
+        "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+        "coverage": [
+          { "territory": "GB", "holders": [{ "name": "TNT Sports", "kind": "network" }] },
+          { "territory": "US", "holders": [{ "name": "Paramount+", "kind": "service" }, { "name": "TUDN", "kind": "network" }] },
+          { "territory": "CA", "holders": [{ "name": "DAZN", "kind": "service" }] },
+          { "territory": "AU", "holders": [{ "name": "Stan Sport", "kind": "service" }] },
+          { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] },
+          { "region": "SUB_SAHARAN_AFRICA", "holders": [{ "name": "SuperSport", "kind": "network" }] },
+          { "region": "INDIAN_SUBCONTINENT", "holders": [{ "name": "Sony Sports Network", "kind": "network" }] }
+        ]
+      }]
+    },
+    {
+      "id": "laliga", "aliases": ["LaLiga", "La Liga", "Spanish La Liga"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+      "allEventDestinations": [
+        { "seasons": ["2027/28", "2028/29"], "validFrom": "2027-07-01", "validThrough": "2029-06-30", "territory": "FR", "name": "DAZN", "aliases": ["DAZN France", "FR DAZN"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
+        { "seasons": ["2027/28", "2028/29"], "validFrom": "2027-07-01", "validThrough": "2029-06-30", "territory": "FR", "name": "Disney+", "aliases": ["Disney Plus", "Disney+ France", "FR Disney+"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" }
+      ],
+      "cycles": [{
+        "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-08-23",
+        "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+        "coverage": [
+          { "territory": "ES", "holders": [{ "name": "DAZN", "kind": "service" }, { "name": "Movistar Plus+", "kind": "service" }] },
+          { "territory": "US", "holders": [{ "name": "ESPN", "kind": "network" }, { "name": "ESPN+", "kind": "service" }] },
+          { "territory": "FR", "holders": [{ "name": "DAZN", "kind": "service" }, { "name": "Disney+", "kind": "service" }] },
+          { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] }
+        ],
+        "allEventDestinations": [
+          { "territory": "US", "name": "ESPN+", "aliases": ["ESPN Plus", "US ESPN+", "ESPN+ US"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
+          { "territory": "FR", "name": "DAZN", "aliases": ["DAZN France", "FR DAZN"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
+          { "territory": "FR", "name": "Disney+", "aliases": ["Disney Plus", "Disney+ France", "FR Disney+"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" }
+        ]
+      }]
+    },
+    {
+      "id": "bundesliga", "aliases": ["Bundesliga", "German Bundesliga"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.bundesliga.com/en/bundesliga/matchday",
+      "cycles": [{
+        "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-08-23",
+        "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+        "coverage": [
+          { "territory": "DE", "holders": [{ "name": "Sky Deutschland", "kind": "network" }, { "name": "DAZN", "kind": "service" }, { "name": "WOW", "kind": "service" }] },
+          { "territory": "US", "holders": [{ "name": "ESPN", "kind": "network" }] },
+          { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] }
+        ]
+      }]
+    },
+    {
+      "id": "ligue-1", "aliases": ["Ligue 1", "French Ligue 1"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://ligue1.com/en/fixtures-results",
+      "cycles": [{
+        "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-08-23",
+        "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+        "coverage": [
+          { "territory": "FR", "holders": [{ "name": "Ligue 1+", "kind": "service" }] }
+        ],
+        "allEventDestinations": [
+          { "territory": "FR", "name": "Ligue 1+", "aliases": ["Ligue 1 Plus", "Ligue1+", "FR Ligue 1+"], "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters", "lastVerified": "2026-08-23" }
+        ]
+      }]
+    }
   ]
 }
