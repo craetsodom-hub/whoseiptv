@@ -58,8 +58,8 @@
     {
       "id": "laliga", "aliases": ["LaLiga", "La Liga", "Spanish La Liga", "LALIGA EA SPORTS"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
       "allEventDestinations": [
-        { "seasons": ["2027/28", "2028/29"], "validFrom": "2027-07-01", "validThrough": "2029-06-30", "territory": "FR", "name": "DAZN", "aliases": ["DAZN France", "FR DAZN"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
-        { "seasons": ["2027/28", "2028/29"], "validFrom": "2027-07-01", "validThrough": "2029-06-30", "territory": "FR", "name": "Disney+", "aliases": ["Disney Plus", "Disney+ France", "FR Disney+"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" }
+        { "seasons": ["2027/28", "2028/29"], "validFrom": "2027-07-01", "validThrough": "2029-06-30", "territory": "FR", "name": "DAZN", "aliases": ["DAZN France", "FR DAZN"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "allMatches": true, "allMatchesEvidenceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
+        { "seasons": ["2027/28", "2028/29"], "validFrom": "2027-07-01", "validThrough": "2029-06-30", "territory": "FR", "name": "Disney+", "aliases": ["Disney Plus", "Disney+ France", "FR Disney+"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "allMatches": true, "allMatchesEvidenceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" }
       ],
       "cycles": [{
         "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-08-23",
@@ -71,9 +71,9 @@
           { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] }
         ],
         "allEventDestinations": [
-          { "territory": "US", "name": "ESPN+", "aliases": ["ESPN Plus", "US ESPN+", "ESPN+ US"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
-          { "territory": "FR", "name": "DAZN", "aliases": ["DAZN France", "FR DAZN"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
-          { "territory": "FR", "name": "Disney+", "aliases": ["Disney Plus", "Disney+ France", "FR Disney+"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" }
+          { "territory": "US", "name": "ESPN+", "aliases": ["ESPN Plus", "US ESPN+", "ESPN+ US"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "allMatches": true, "allMatchesEvidenceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
+          { "territory": "FR", "name": "DAZN", "aliases": ["DAZN France", "FR DAZN"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "allMatches": true, "allMatchesEvidenceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" },
+          { "territory": "FR", "name": "Disney+", "aliases": ["Disney Plus", "Disney+ France", "FR Disney+"], "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "allMatches": true, "allMatchesEvidenceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports", "lastVerified": "2026-08-23" }
         ]
       }]
     },
@@ -98,7 +98,7 @@
           { "territory": "FR", "holders": [{ "name": "Ligue 1+", "kind": "service" }] }
         ],
         "allEventDestinations": [
-          { "territory": "FR", "name": "Ligue 1+", "aliases": ["Ligue 1 Plus", "Ligue1+", "FR Ligue 1+"], "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters", "lastVerified": "2026-08-23" }
+          { "territory": "FR", "name": "Ligue 1+", "aliases": ["Ligue 1 Plus", "Ligue1+", "FR Ligue 1+"], "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters", "allMatches": true, "allMatchesEvidenceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters", "lastVerified": "2026-08-23" }
         ]
       }]
     },

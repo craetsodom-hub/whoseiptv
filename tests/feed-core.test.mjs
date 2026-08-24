@@ -99,6 +99,19 @@ test("keeps the supported sport category supplied by the source job", () => {
   assert.equal(validateFeed(feed, now), true);
 });
 
+test("retains a football fixture with rights-only or unresolved coverage", () => {
+  const feed = buildFeed([{
+    idEvent: "football-no-channel",
+    strSport: "Soccer",
+    strEvent: "Home vs Away",
+    strTimeStamp: "2027-01-15 08:00:00",
+    __territory: "US"
+  }], {}, now);
+  assert.equal(feed.events.length, 1);
+  assert.deepEqual(feed.events[0].broadcasts, []);
+  assert.equal(validateFeed(feed, now), true);
+});
+
 test("accepts only trusted official artwork hosts", () => {
   const validFeed = {
     schemaVersion: 1,

@@ -20,6 +20,10 @@ function eventSeason(event) {
   return `${start}/${String(start + 1).slice(-2)}`;
 }
 
+function allMatchesDestination(destination) {
+  return destination?.allMatches === true && /^https:\/\//.test(destination?.allMatchesEvidenceUrl ?? "");
+}
+
 export function matchingRights(event, config) {
   const competition = config.competitions.find((item) => item.aliases.some((alias) => seasonless(alias) === seasonless(event.competition)));
   if (!competition) return [];
@@ -52,22 +56,23 @@ export function attachAllEventDestinations(events, config) {
     if (!competition) continue;
     const season = eventSeason(event);
     const cycleDestinations = competition.cycles.filter((cycle) => cycle.seasons.includes(season) && dateWithin(cycle, event.startUtcEpochSeconds))
-      .flatMap((cycle) => (cycle.allEventDestinations ?? []).map((destination) => ({
+      .flatMap((cycle) => (cycle.allEventDestinations ?? []).filter(allMatchesDestination).map((destination) => ({
         ...destination,
         validFrom: cycle.validFrom,
         validThrough: cycle.validThrough,
         seasons: cycle.seasons
       })));
-    const independentDestinations = (competition.allEventDestinations ?? []).filter((destination) => destination.seasons.includes(season) && dateWithin(destination, event.startUtcEpochSeconds));
+    const independentDestinations = (competition.allEventDestinations ?? []).filter((destination) => allMatchesDestination(destination) && destination.seasons.includes(season) && dateWithin(destination, event.startUtcEpochSeconds));
     const assignments = [...cycleDestinations, ...independentDestinations].map((destination) => ({
       channelName: destination.name,
       aliases: destination.aliases ?? [],
       territory: destination.territory,
       confirmed: true,
       sourceType: "official-all-events",
-      sourceUrl: destination.sourceUrl,
+      sourceUrl: destination.allMatchesEvidenceUrl,
       verifiedAt: destination.lastVerified,
       destinationType: "service",
+      destinationPrecision: "service",
       ruleType: "all-events"
     }));
     event.broadcasts = mergeExactBroadcasts(event.broadcasts ?? [], assignments);
@@ -85,7 +90,7 @@ export function validateRightsCatalog(config) {
     for (const destination of competition.allEventDestinations ?? []) {
       if (!Array.isArray(destination.seasons) || destination.seasons.length === 0 || !/^\d{4}-\d{2}-\d{2}$/.test(destination.validFrom ?? "") ||
           !/^\d{4}-\d{2}-\d{2}$/.test(destination.validThrough ?? "") || destination.validFrom > destination.validThrough || !isSupportedTerritory(destination.territory) ||
-          !String(destination.name ?? "").trim() || !/^https:\/\//.test(destination.sourceUrl ?? "") || !/^\d{4}-\d{2}-\d{2}$/.test(destination.lastVerified ?? "")) throw new Error(`Invalid independent all-event destination for ${competition.id}`);
+          !String(destination.name ?? "").trim() || !/^https:\/\//.test(destination.sourceUrl ?? "") || !allMatchesDestination(destination) || !/^\d{4}-\d{2}-\d{2}$/.test(destination.lastVerified ?? "")) throw new Error(`Invalid independent all-event destination for ${competition.id}`);
     }
     for (const cycle of competition.cycles) {
       if (!/^https:\/\//.test(cycle.sourceUrl ?? "") || !/^\d{4}-\d{2}-\d{2}$/.test(cycle.lastVerified ?? "") ||
@@ -100,7 +105,7 @@ export function validateRightsCatalog(config) {
         }
       }
       for (const destination of cycle.allEventDestinations ?? []) {
-        if (!isSupportedTerritory(destination?.territory) || !String(destination?.name ?? "").trim() || !/^https:\/\//.test(destination?.sourceUrl ?? "") ||
+        if (!isSupportedTerritory(destination?.territory) || !String(destination?.name ?? "").trim() || !/^https:\/\//.test(destination?.sourceUrl ?? "") || !allMatchesDestination(destination) ||
             !/^\d{4}-\d{2}-\d{2}$/.test(destination?.lastVerified ?? "")) throw new Error(`Invalid all-event destination for ${competition.id}`);
       }
     }
@@ -116,7 +121,8 @@ export function coverageReport(config, events = [], allTerritories = [], atEpoch
     const official = broadcasts.filter((item) => ["official-event", "official-broadcaster-schedule", "official-all-events"].includes(item.sourceType));
     const exactLinearTerritories = new Set(official.filter((item) => item.destinationType !== "service").map((item) => item.territory));
     const guaranteedServiceTerritories = [...competition.cycles.filter((cycle) => dateWithin(cycle, atEpochSeconds))
-      .flatMap((cycle) => cycle.allEventDestinations ?? []), ...(competition.allEventDestinations ?? []).filter((item) => dateWithin(item, atEpochSeconds))].map((item) => item.territory);
+      .flatMap((cycle) => cycle.allEventDestinations ?? []), ...(competition.allEventDestinations ?? []).filter((item) => dateWithin(item, atEpochSeconds))]
+      .filter(allMatchesDestination).map((item) => item.territory);
     const exactServiceTerritories = new Set([...official.filter((item) => item.destinationType === "service").map((item) => item.territory), ...guaranteedServiceTerritories]);
     const exactTerritories = new Set([...exactLinearTerritories, ...exactServiceTerritories]);
     const sourceEventTerritories = new Set(broadcasts.filter((item) => !item.sourceType || item.sourceType === "source-event").map((item) => item.territory));

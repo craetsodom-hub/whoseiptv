@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import rights from "../config/official-event-broadcasters.json" with { type: "json" };
-import { augmentWithOfficialRights, coverageReport, matchingRights, validateOfficialRightsConfig } from "../scripts/official-rights.mjs";
+import { attachAllEventDestinations, augmentWithOfficialRights, coverageReport, matchingRights, validateOfficialRightsConfig } from "../scripts/official-rights.mjs";
 import { canonicalChannelIdentity, cleanAliases } from "../scripts/broadcast/normalize.mjs";
 import { collectAdaptersSafely, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import { SUPPORTED_TERRITORIES } from "../scripts/territories.mjs";
@@ -26,6 +26,22 @@ test("rights metadata never becomes a playlist-match broadcast and never leaks",
   assert(events[1].broadcastRights.some((item) => item.territory === "ES"));
   assert(events[2].broadcastRights.some((item) => item.holders.some((holder) => holder.name === "Paramount+")));
   assert.equal(events[3].broadcastRights, undefined);
+});
+
+test("all-event services require explicit all-match evidence", () => {
+  const withoutProof = structuredClone(rights);
+  delete withoutProof.competitions.find((item) => item.id === "laliga").cycles[0].allEventDestinations[0].allMatches;
+  const target = event("LaLiga");
+  attachAllEventDestinations([target], withoutProof);
+  assert(!target.broadcasts.some((item) => item.channelName === "ESPN+"));
+  assert(target.broadcasts.some((item) => item.channelName === "DAZN"));
+});
+
+test("generic rights never manufacture a numbered channel", () => {
+  const target = event("LaLiga");
+  augmentWithOfficialRights([target], rights);
+  assert(target.broadcastRights.some((right) => right.holders.some((holder) => holder.name === "beIN Sports")));
+  assert(!target.broadcasts.some((item) => /^beIN SPORTS \d+$/i.test(item.channelName)));
 });
 
 test("expired and wrong-season rights are ignored", () => {
@@ -66,6 +82,11 @@ test("duplicate formats collapse to aliases while distinct channel numbers survi
   assert(merged.find((item) => item.channelName === "beIN Sports 1").aliases.includes("MA | beIN Sports 1 HD"));
 });
 
+test("a service alias cannot become an alias for every numbered channel", () => {
+  assert.deepEqual(cleanAliases("beIN Sports", ["beIN Sports 1", "beIN Sports 2"]), []);
+  assert.deepEqual(cleanAliases("beIN Sports 1", ["beIN Sports HD 1", "beIN Sports 2"]), ["beIN Sports HD 1"]);
+});
+
 test("exact-event matching requires competition, both teams, and time", () => {
   const candidate = { competition: "Premier League", homeTeam: "Arsenal", awayTeam: "Liverpool", startUtcEpochSeconds: kickoff + 300 };
   assert.equal(matchesEvent(event(), candidate), true);
@@ -96,6 +117,16 @@ test("official schedules are checked against territorial rights before enrichmen
   ]);
   assert(target.broadcasts.some((item) => item.channelName === "Sky Sports Main Event"));
   assert(!target.broadcasts.some((item) => item.channelName === "Invented Sports 1"));
+});
+
+test("resolver continues with later providers after a successful provider", () => {
+  const target = event();
+  const base = { competition: "Premier League", homeTeam: "Liverpool", awayTeam: "Arsenal", startUtcEpochSeconds: kickoff };
+  resolveExactBroadcasts([target], [
+    { ...base, broadcasts: [{ channelName: "First Party One", territory: "US", sourceType: "official-event" }] },
+    { ...base, broadcasts: [{ channelName: "First Party Two", territory: "CA", sourceType: "official-event" }] }
+  ]);
+  assert.deepEqual(target.broadcasts.map((item) => item.channelName).sort(), ["First Party One", "First Party Two"]);
 });
 
 test("global exact-event collections retain more than 64 territories deterministically", () => {

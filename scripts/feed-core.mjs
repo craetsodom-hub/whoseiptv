@@ -115,7 +115,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
     const channelName = clean(record.strChannel, 120);
     const territory = clean(record.__territory, 16);
     const startUtcEpochSeconds = parseUtcTimestamp(details?.strTimestamp ?? record.strTimeStamp);
-    if (!sourceId || !title || !channelName || !isSupportedTerritory(territory) || !startUtcEpochSeconds) continue;
+    if (!sourceId || !title || !isSupportedTerritory(territory) || !startUtcEpochSeconds) continue;
     if (startUtcEpochSeconds < earliest || startUtcEpochSeconds > latest) continue;
 
     const id = `tsdb-${sourceId}`;
@@ -142,7 +142,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
       (broadcast) => broadcast.territory === territory &&
         broadcast.channelName.toLocaleLowerCase("en-US") === channelName.toLocaleLowerCase("en-US")
     );
-    if (!duplicate && event.broadcasts.length < MAX_BROADCASTS_PER_EVENT) {
+    if (channelName && !duplicate && event.broadcasts.length < MAX_BROADCASTS_PER_EVENT) {
       event.broadcasts.push({
         channelName,
         aliases: aliasesFor(channelName, aliasesByChannel),
@@ -157,7 +157,10 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
     eventsById.set(id, event);
   }
 
-  const events = [...eventsById.values()].filter((event) => event.broadcasts.length > 0);
+  // Football fixtures with no current destination remain in the feed so the
+  // resolver can attach rights metadata and the coverage report can expose
+  // the gap instead of silently treating it as a non-event.
+  const events = [...eventsById.values()].filter((event) => event.broadcasts.length > 0 || event.sport === "football");
   for (const event of events) event.broadcasts = mergeExactBroadcasts(event.broadcasts);
 
   return {
@@ -195,7 +198,8 @@ export function validateFeed(feed, nowEpochSeconds) {
       throw new Error(`Invalid event artwork for ${event.id}`);
     }
     if (!Number.isInteger(event.startUtcEpochSeconds)) throw new Error(`Invalid time for ${event.id}`);
-    if (!Array.isArray(event.broadcasts) || event.broadcasts.length === 0 || event.broadcasts.length > MAX_BROADCASTS_PER_EVENT) {
+    if (!Array.isArray(event.broadcasts) || event.broadcasts.length > MAX_BROADCASTS_PER_EVENT ||
+        (event.broadcasts.length === 0 && event.sport !== "football")) {
       throw new Error(`Event ${event.id} has no confirmed broadcaster`);
     }
     for (const broadcast of event.broadcasts) {
