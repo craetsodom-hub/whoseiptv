@@ -101,6 +101,22 @@
           { "territory": "FR", "name": "Ligue 1+", "aliases": ["Ligue 1 Plus", "Ligue1+", "FR Ligue 1+"], "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters", "lastVerified": "2026-08-23" }
         ]
       }]
+    },
+    {
+      "id": "mls", "aliases": ["Major League Soccer", "MLS"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/",
+      "cycles": [{
+        "seasons": ["2026"], "validFrom": "2026-02-01", "validThrough": "2026-12-31", "lastVerified": "2026-08-24",
+        "sourceUrl": "https://www.mlssoccer.com/how-to-watch/",
+        "coverage": [{ "territory": "US", "holders": [{ "name": "Apple TV", "kind": "service" }] }]
+      }]
+    },
+    {
+      "id": "leagues-cup", "aliases": ["Leagues Cup"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/",
+      "cycles": [{
+        "seasons": ["2026"], "validFrom": "2026-07-01", "validThrough": "2026-08-31", "lastVerified": "2026-08-24",
+        "sourceUrl": "https://www.mlssoccer.com/how-to-watch/",
+        "coverage": [{ "territory": "US", "holders": [{ "name": "Apple TV", "kind": "service" }] }]
+      }]
     }
   ]
 }

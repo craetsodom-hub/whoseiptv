@@ -1,7 +1,8 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { parseLaLiga, parseLigue1Match, parseSkyPremierLeague, resolveOfficialFootball } from "../scripts/official-football.mjs";
+import { parseLaLiga, parseLigue1Match, parseMlsMatch, parseSkyPremierLeague, resolveOfficialFootball } from "../scripts/official-football.mjs";
+import { matchesEvent } from "../scripts/broadcast/resolver.mjs";
 
 const fixture = (name) => readFile(new URL(`fixtures/official-football/${name}`, import.meta.url), "utf8");
 
@@ -45,6 +46,22 @@ test("parses a numbered Ligue 1+ channel from the official match object", async 
     sourceUrl: "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73827",
     matchingMethod: "official-match-id"
   }]);
+});
+
+test("parses the MLS match API's exact Apple TV event service", async () => {
+  const candidates = parseMlsMatch(await fixture("mls-match.json"));
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].title, "Club León vs Real Salt Lake");
+  assert.equal(candidates[0].startUtcEpochSeconds, Date.parse("2026-08-26T02:30:00Z") / 1000);
+  assert.deepEqual(candidates[0].broadcasts.map((item) => [item.channelName, item.territory, item.sourceType, item.matchingMethod]), [[
+    "Apple TV", "US", "official-event", "mls-match-api-broadcaster"
+  ]]);
+  assert.deepEqual(parseMlsMatch(JSON.stringify([{ ...(JSON.parse(await fixture("mls-match.json"))[0]), delayedMatch: true }])), []);
+  const event = { competition: "Leagues Cup", startUtcEpochSeconds: candidates[0].startUtcEpochSeconds, homeTeam: { name: "Club León" }, awayTeam: { name: "Real Salt Lake" } };
+  assert(matchesEvent(event, candidates[0]));
+  assert(!matchesEvent({ ...event, awayTeam: { name: "Chicago Fire" } }, candidates[0]));
+  assert(!matchesEvent({ ...event, competition: "MLS" }, candidates[0]));
+  assert(!matchesEvent({ ...event, startUtcEpochSeconds: event.startUtcEpochSeconds + 3600 }, candidates[0]));
 });
 
 test("real unresolved source snapshots contain no fixture-level channel to publish", async () => {
