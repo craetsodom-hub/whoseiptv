@@ -48,6 +48,15 @@ function printEventCoverage(label, items) {
   console.log(`No broadcaster evidence: ${counts.noEvidence}`);
 }
 
+function footballRegion(competition) {
+  const value = String(competition ?? "");
+  if (/Major League Soccer|Leagues Cup|Liga MX|CONCACAF|US Open Cup|Canadian Championship/i.test(value)) return "North/Central America";
+  if (/Libertadores|Sudamericana|Recopa|Argentinian|Brazil|Colombi|Chile|Uruguay|Paraguay|Ecuador|Peru|Bolivia|Venezuela/i.test(value)) return "South America";
+  if (/Saudi|UAE|Qatar|Morocc|Botola|CAF|Egypt|Algeria|Tunisia|South African|AFCON/i.test(value)) return /CAF|Egypt|Algeria|Tunisia|South African|AFCON/i.test(value) ? "Africa" : "Morocco/MENA";
+  if (/J League|K League|China|India|A-League|AFC|Japan|Korea/i.test(value)) return "Asia";
+  return "Europe";
+}
+
 function domain(url) {
   try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return "invalid-url"; }
 }
@@ -93,6 +102,12 @@ for (const competition of [...new Set(footballEvents.map((event) => event.compet
   const counts = coverageCounts(footballEvents.filter((event) => (event.competition ?? "(none)") === competition));
   const percentage = counts.total === 0 ? "0.0" : ((counts.official / counts.total) * 100).toFixed(1);
   console.log(`${competition} | total ${counts.total} | official ${counts.official} (${percentage}%) | source-event-only ${counts.sourceEventOnly} | rights-only ${counts.rightsOnly} | no-evidence ${counts.noEvidence} | unresolved ${counts.rightsOnly + counts.noEvidence}`);
+}
+console.log("Football event coverage by region");
+for (const region of ["Europe", "Morocco/MENA", "Africa", "Asia", "North/Central America", "South America"]) {
+  const counts = coverageCounts(footballEvents.filter((event) => footballRegion(event.competition) === region));
+  const percentage = counts.total === 0 ? "0.0" : ((counts.official / counts.total) * 100).toFixed(1);
+  console.log(`${region} | total ${counts.total} | official ${counts.official} (${percentage}%) | source-event-only ${counts.sourceEventOnly} | rights-only ${counts.rightsOnly} | no-evidence ${counts.noEvidence}`);
 }
 console.log(`Current supported territories: ${supportedTerritories.length} (${supportedTerritories.map((code) => `${code}:${territoryKind(code)}`).join(", ")})`);
 console.log(`Official exact coverage territories: ${officialExactTerritories.length} (${officialExactTerritories.join(", ")})`);

@@ -2,6 +2,8 @@ const SKY_URL = "https://www.skysports.com/watch/football-on-sky/competitions/pr
 const LALIGA_URL = "https://www.laliga.com/laliga-easports/resultados";
 const LIGUE1_CALENDAR_URL = "https://ma-api.ligue1.fr/championship-calendar/1/nearest-game-weeks";
 const LIGUE1_MATCH_URL = "https://ma-api.ligue1.fr/championship-match/";
+const MLS_SCHEDULE_URL = "https://stats-api.mlssoccer.com/matches/seasons/MLS-SEA-0001KA";
+const MLS_MATCH_URL = "https://sportapi.mlssoccer.com/api/matches/bySportecIds/";
 const EXACT_SKY_CHANNELS = new Set([
   "Sky Sports Main Event",
   "Sky Sports Premier League",
@@ -108,6 +110,44 @@ export function parseLigue1Match(body, aliasesByChannel = {}) {
   }];
 }
 
+export function parseMlsMatch(body, aliasesByChannel = {}) {
+  let match;
+  try { match = Array.isArray(body) ? body[0] : JSON.parse(body)?.[0]; } catch { return []; }
+  const homeTeam = String(match?.home?.fullName ?? "").trim();
+  const awayTeam = String(match?.away?.fullName ?? "").trim();
+  const competition = String(match?.competition?.name ?? "").trim();
+  const start = Date.parse(match?.matchDate ?? "");
+  const channel = (match?.broadcasters ?? []).find((item) => item?.broadcasterName === "Apple TV" && item?.broadcasterStreamingURL)?.broadcasterName;
+  if (!match?.sportecId || !homeTeam || !awayTeam || !competition || !Number.isFinite(start) || !channel || match?.delayedMatch === true) return [];
+  const sourceUrl = `${MLS_MATCH_URL}${encodeURIComponent(match.sportecId)}`;
+  return [{
+    source: "mls",
+    sourceUrl,
+    sourceId: `mls-${match.sportecId}`,
+    title: `${homeTeam} vs ${awayTeam}`,
+    competition,
+    homeTeam,
+    awayTeam,
+    startUtcEpochSeconds: Math.floor(start / 1000),
+    broadcasts: [broadcast(channel, "US", aliasesByChannel, "official-event", sourceUrl, "mls-match-api-broadcaster")]
+  }];
+}
+
+async function collectMlsMatches(fetchText, nowEpochSeconds, aliasesByChannel) {
+  const start = new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10);
+  const end = new Date((nowEpochSeconds + 8 * 86_400) * 1000).toISOString().slice(0, 10);
+  const parameters = new URLSearchParams({ "match_date[gte]": start, "match_date[lte]": end, per_page: "120", sort: "planned_kickoff_time:asc,home_team_name:asc" });
+  try {
+    const schedule = JSON.parse(await fetchText(`${MLS_SCHEDULE_URL}?${parameters}`));
+    const ids = [...new Set((schedule?.schedule ?? []).filter((item) => item?.match_status === "scheduled").map((item) => item?.match_id).filter(Boolean))];
+    const results = await Promise.allSettled(ids.map((id) => fetchText(`${MLS_MATCH_URL}${encodeURIComponent(id)}`)));
+    return results.flatMap((result) => result.status === "fulfilled" ? parseMlsMatch(result.value, aliasesByChannel) : []);
+  } catch (error) {
+    console.error(`Official MLS source failed safely: ${error.message}`);
+    return [];
+  }
+}
+
 function normalizedTeam(value) {
   return String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
     .replace(/\b(fc|cf|sad|club|de|del|la|futbol)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim();
@@ -156,5 +196,6 @@ export async function collectOfficialFootballEvents({ fetchText, aliasesByChanne
   } catch (error) {
     console.error(`Official Ligue 1 source failed safely: ${error.message}`);
   }
+  candidates.push(...await collectMlsMatches(fetchText, nowEpochSeconds, aliasesByChannel));
   return resolveOfficialFootball(candidates, records, detailsByEvent, nowEpochSeconds);
 }

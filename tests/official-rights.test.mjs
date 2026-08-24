@@ -14,7 +14,7 @@ const event = (competition = "Premier League", season = "2026/27") => ({
 
 test("validates the season-aware multi-competition rights catalog", () => {
   assert.equal(validateOfficialRightsConfig(rights), true);
-  assert.deepEqual(rights.competitions.map((item) => item.id), ["fifa-world-cup", "premier-league", "uefa-champions-league", "laliga", "bundesliga", "ligue-1"]);
+  assert.deepEqual(rights.competitions.map((item) => item.id), ["fifa-world-cup", "premier-league", "uefa-champions-league", "laliga", "bundesliga", "ligue-1", "mls", "leagues-cup"]);
 });
 
 test("rights metadata never becomes a playlist-match broadcast and never leaks", () => {
