@@ -1,10 +1,13 @@
+import { compareEvents } from "./football-ranking.mjs";
+import { isSupportedTerritory } from "./territories.mjs";
+import { MAX_BROADCASTS_PER_EVENT, mergeExactBroadcasts } from "./broadcast/resolver.mjs";
+
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
 const MAX_EVENTS = 100;
-// Official tournament rights can cover many territories. Keep the feed bounded,
-// while allowing the 30-country rights map to reach the app for matching.
-const MAX_BROADCASTS_PER_EVENT = 64;
-const MAX_ALIASES_PER_BROADCAST = 8;
+// Deduplicate before applying this larger bound so broad rights maps do not lose
+// later territories merely because their source happened to be processed last.
+const MAX_ALIASES_PER_BROADCAST = 12;
 const TRUSTED_ARTWORK_HOSTS = new Set([
   "r2.thesportsdb.com",
   "www.thesportsdb.com",
@@ -69,7 +72,29 @@ function aliasesFor(channelName, aliasesByChannel) {
     .slice(0, MAX_ALIASES_PER_BROADCAST);
 }
 
-export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent = new Map()) {
+export function mergeBroadcastAssignments(left = [], right = []) {
+  return mergeExactBroadcasts(left, right);
+}
+
+export function selectEvents(events, maximum = MAX_EVENTS) {
+  const bySport = new Map();
+  for (const event of events) bySport.set(event.sport, [...(bySport.get(event.sport) ?? []), event]);
+  for (const sportEvents of bySport.values()) sportEvents.sort(compareEvents);
+  const selected = [];
+  for (let index = 0; selected.length < maximum; index += 1) {
+    let added = false;
+    for (const sportEvents of bySport.values()) {
+      if (sportEvents[index] && selected.length < maximum) {
+        selected.push(sportEvents[index]);
+        added = true;
+      }
+    }
+    if (!added) break;
+  }
+  return selected;
+}
+
+export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent = new Map(), options = {}) {
   if (!Number.isInteger(nowEpochSeconds) || nowEpochSeconds <= 0) {
     throw new Error("A valid generation time is required");
   }
@@ -90,7 +115,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
     const channelName = clean(record.strChannel, 120);
     const territory = clean(record.__territory, 16);
     const startUtcEpochSeconds = parseUtcTimestamp(details?.strTimestamp ?? record.strTimeStamp);
-    if (!sourceId || !title || !channelName || !territory || !startUtcEpochSeconds) continue;
+    if (!sourceId || !title || !channelName || !isSupportedTerritory(territory) || !startUtcEpochSeconds) continue;
     if (startUtcEpochSeconds < earliest || startUtcEpochSeconds > latest) continue;
 
     const id = `tsdb-${sourceId}`;
@@ -122,32 +147,24 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
         channelName,
         aliases: aliasesFor(channelName, aliasesByChannel),
         territory,
-        confirmed: true
+        confirmed: true,
+        sourceType: "source-event",
+        sourceUrl: "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+        verifiedAt: new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10),
+        matchingMethod: "source-event-id"
       });
     }
     eventsById.set(id, event);
   }
 
-  const events = [...eventsById.values()]
-    .filter((event) => event.broadcasts.length > 0)
-    .sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds);
-
-  // Keep the feed small and prevent football from crowding every other category out.
-  const selected = [];
-  const bySport = new Map();
-  for (const event of events) bySport.set(event.sport, [...(bySport.get(event.sport) ?? []), event]);
-  for (let index = 0; index < 20 && selected.length < MAX_EVENTS; index += 1) {
-    for (const sportEvents of bySport.values()) {
-      const event = sportEvents[index];
-      if (event && selected.length < MAX_EVENTS) selected.push(event);
-    }
-  }
+  const events = [...eventsById.values()].filter((event) => event.broadcasts.length > 0);
+  for (const event of events) event.broadcasts = mergeExactBroadcasts(event.broadcasts);
 
   return {
     schemaVersion: 1,
     generatedAtEpochSeconds: nowEpochSeconds,
     validUntilEpochSeconds: nowEpochSeconds + 12 * 60 * 60,
-    events: selected.sort((left, right) => left.startUtcEpochSeconds - right.startUtcEpochSeconds)
+    events: options.select === false ? events : selectEvents(events)
   };
 }
 
@@ -178,14 +195,19 @@ export function validateFeed(feed, nowEpochSeconds) {
       throw new Error(`Invalid event artwork for ${event.id}`);
     }
     if (!Number.isInteger(event.startUtcEpochSeconds)) throw new Error(`Invalid time for ${event.id}`);
-    if (!Array.isArray(event.broadcasts) || event.broadcasts.length === 0) {
+    if (!Array.isArray(event.broadcasts) || event.broadcasts.length === 0 || event.broadcasts.length > MAX_BROADCASTS_PER_EVENT) {
       throw new Error(`Event ${event.id} has no confirmed broadcaster`);
     }
     for (const broadcast of event.broadcasts) {
-      if (!broadcast.channelName || !broadcast.territory || broadcast.confirmed !== true) {
+      if (!broadcast.channelName || !isSupportedTerritory(broadcast.territory) || broadcast.confirmed !== true ||
+          !broadcast.sourceType || !broadcast.sourceUrl || !broadcast.matchingMethod ||
+          (broadcast.aliases !== undefined && (!Array.isArray(broadcast.aliases) || broadcast.aliases.length > MAX_ALIASES_PER_BROADCAST))) {
         throw new Error(`Invalid broadcaster for ${event.id}`);
       }
     }
+    if (event.broadcastRights !== undefined && (!Array.isArray(event.broadcastRights) || event.broadcastRights.some((right) =>
+      !isSupportedTerritory(right?.territory) || right.sourceType !== "official-rights" || !/^https:\/\//.test(right.sourceUrl ?? "")
+    ))) throw new Error(`Invalid rights metadata for ${event.id}`);
   }
   return true;
 }

@@ -1,3 +1,5 @@
+import { isSupportedTerritory } from "./territories.mjs";
+
 const CALENDAR_BASE = "https://www.formula1.com/en/racing";
 const BROADCASTERS_URL = "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN";
 const MAX_PAST_SECONDS = 6 * 60 * 60;
@@ -49,13 +51,16 @@ const regionOverrides = new Map([
   ["united states", "US"],
   ["korea south", "KR"],
   ["chinese taipei", "TW"],
+  ["germany", "DE"],
+  ["serbia", "RS"],
   ["russia", "RU"],
   ["vietnam", "VN"]
 ]);
 
 function territoryForCountry(value) {
   const normalized = normalizedName(value.replace(/\s*\([^)]*\)\s*/g, " "));
-  return regionOverrides.get(normalized) ?? regionIndex.get(normalized) ?? null;
+  const territory = regionOverrides.get(normalized) ?? regionIndex.get(normalized) ?? null;
+  return isSupportedTerritory(territory) ? territory : null;
 }
 
 function splitBroadcasters(value) {
@@ -88,7 +93,10 @@ export function parseFormulaOneBroadcasters(html, aliasesByChannel = {}) {
         channelName: channelName.slice(0, 120),
         aliases: aliasesFor(channelName, aliasesByChannel),
         territory,
-        confirmed: true
+        confirmed: true,
+        sourceType: "official-broadcaster-schedule",
+        sourceUrl: BROADCASTERS_URL,
+        matchingMethod: "official-country-broadcaster-table"
       });
     }
   }
