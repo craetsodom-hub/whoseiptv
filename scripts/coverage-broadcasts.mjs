@@ -56,12 +56,14 @@ for (const { event, coverage } of footballSummary.football) {
   console.log(`  source-event fallback: ${coverage.fallbackLabels.length ? coverage.fallbackLabels.join(" ; ") : "none"}`);
   console.log(`  rights without usable destination: ${coverage.rightsLabels.length ? coverage.rightsLabels.join(" ; ") : "none"}`);
   console.log(`  unsupported territories: ${coverage.unsupportedTerritories.length ? coverage.unsupportedTerritories.join(" ; ") : "none"}`);
+  console.log(`  provider families investigated: ${coverage.investigation.providers.length ? coverage.investigation.providers.join(", ") : "none"}`);
+  console.log(`  authoritative sources checked: ${coverage.investigation.sources.length ? coverage.investigation.sources.join(" ; ") : "none"}`);
 }
 const topTierGaps = footballSummary.football.filter(({ event, coverage }) => topTierPattern.test(event.competition ?? "") &&
   coverage.exactChannels.length === 0 && coverage.allEventServices.length === 0);
 console.log(`Top-tier fixtures without official destination: ${topTierGaps.length}`);
 for (const { event, coverage } of topTierGaps) {
-  console.log(`TOP-TIER GAP | ${event.competition ?? "(none)"} | ${event.title} | ${coverage.unsupportedTerritories[0] ?? "Only rights metadata or source-event fallback is currently available"}`);
+  console.log(`TOP-TIER GAP | ${event.competition ?? "(none)"} | ${event.title} | ${coverage.investigation.reason}`);
 }
 console.log(`Current supported territories: ${supportedTerritories.length} (${supportedTerritories.map((code) => `${code}:${territoryKind(code)}`).join(", ")})`);
 console.log(`Official exact coverage territories: ${officialExactTerritories.length} (${officialExactTerritories.join(", ")})`);

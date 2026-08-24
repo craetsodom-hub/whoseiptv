@@ -6,6 +6,7 @@ import { canonicalChannelIdentity, cleanAliases } from "../scripts/broadcast/nor
 import { broadcastScopeKey, canonicalizeRegionalBroadcasts, collectAdaptersSafely, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import { SUPPORTED_TERRITORIES } from "../scripts/territories.mjs";
 import { expandTerritories } from "../scripts/broadcast/territory-regions.mjs";
+import { classifyFootballEvent } from "../scripts/broadcast/coverage.mjs";
 
 const kickoff = Math.floor(Date.parse("2026-08-23T15:00:00Z") / 1000);
 const event = (competition = "Premier League", season = "2026/27") => ({
@@ -178,4 +179,11 @@ test("coverage reports rights-only, exact-event, and unresolved territories hone
   assert(premierLeague.unresolvedTerritories.includes("JP"));
   const laliga = reports.find((item) => item.id === "laliga");
   assert.deepEqual(laliga.exactServiceTerritories, ["FR", "US"]);
+});
+
+test("gap diagnostics declare authoritative providers and sources checked", () => {
+  const coverage = classifyFootballEvent({ ...event("Premier League"), broadcasts: [] });
+  assert(coverage.investigation.providers.includes("Sky Sports UK"));
+  assert(coverage.investigation.sources.some((source) => source.includes("skysports.com")));
+  assert.match(coverage.investigation.reason, /No checked authoritative source/);
 });

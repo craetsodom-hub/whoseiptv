@@ -5,6 +5,31 @@ const EXACT_SOURCE_TYPES = new Set([
   "official-broadcaster-schedule",
   "official-network-selection"
 ]);
+const AUTHORITATIVE_SOURCE_CHECKS = [
+  { competitions: /premier league/i, provider: "Sky Sports UK", source: "https://www.skysports.com/watch/football-on-sky/competitions/premier-league" },
+  { competitions: /premier league/i, provider: "Premier League selections", source: "https://www.premierleague.com/en/fixtures" },
+  { competitions: /la ?liga|spanish la liga/i, provider: "LaLiga Spain", source: "https://www.laliga.com/laliga-easports/resultados" },
+  { competitions: /^UEFA Champions League$/i, provider: "Movistar Plus+ Spain", source: "https://www.movistarplus.es/programacion-tv" },
+  { competitions: /ligue 1/i, provider: "Ligue 1 official match API", source: "https://ma-api.ligue1.fr/championship-match/" },
+  { competitions: /bundesliga/i, provider: "Bundesliga official schedule", source: "https://www.bundesliga.com/en/bundesliga/matchday" },
+  { competitions: /major league soccer|\bmls\b|leagues cup/i, provider: "MLS match API", source: "https://sportapi.mlssoccer.com/api/matches/bySportecIds/" }
+];
+
+function investigation(event) {
+  const checks = AUTHORITATIVE_SOURCE_CHECKS.filter((item) => item.competitions.test(event.competition ?? ""));
+  if ((event.broadcastRights ?? []).some((right) => right.holders.some((holder) => /^beIN Sports$/i.test(holder.name)))) {
+    checks.push({ provider: "beIN MENA EPG", source: "https://www.beinsports.com/api/opta/tv-event?region=en-mena" });
+  }
+  const providers = [...new Set(checks.map((item) => item.provider))];
+  const sources = [...new Set(checks.map((item) => item.source))];
+  return {
+    providers,
+    sources,
+    reason: providers.length > 0
+      ? "No checked authoritative source produced an exact fixture destination or an explicit all-match entitlement."
+      : "No registered authoritative source contract currently covers this competition."
+  };
+}
 
 function groupedDestinationLabels(destinations) {
   const groups = new Map();
@@ -52,7 +77,8 @@ export function classifyFootballEvent(event) {
     exactLabels: groupedDestinationLabels(exactChannels),
     allEventLabels: groupedDestinationLabels(allEventServices),
     fallbackLabels: groupedDestinationLabels(sourceEventFallback),
-    rightsLabels: groupedRightLabels(rightsWithoutDestination)
+    rightsLabels: groupedRightLabels(rightsWithoutDestination),
+    investigation: investigation(event)
   };
 }
 
