@@ -29,6 +29,8 @@ function printGroups(items) {
 
 const invalid = assignments.filter(({ broadcast }) => !isSupportedTerritory(broadcast.territory));
 const supportedTerritories = [...new Set(assignments.filter(({ broadcast }) => isSupportedTerritory(broadcast.territory)).map(({ broadcast }) => broadcast.territory))].sort();
+const officialExactTerritories = [...new Set(assignments.filter(isOfficial).map(({ broadcast }) => broadcast.territory))].sort();
+const rightsTerritories = [...new Set(events.flatMap((event) => event.broadcastRights ?? []).map((right) => right.territory).filter(isSupportedTerritory))].sort();
 const anomalies = [];
 for (const event of events) {
   const pairs = new Set();
@@ -52,6 +54,8 @@ console.log(`SOURCE-EVENT exact services: ${sourceEventServices.length}`);
 console.log(`Rights-only events: ${rightsOnly.length}`);
 console.log(`Unresolved events: ${unresolved.length}`);
 console.log(`Current supported territories: ${supportedTerritories.length} (${supportedTerritories.map((code) => `${code}:${territoryKind(code)}`).join(", ")})`);
+console.log(`Official exact coverage territories: ${officialExactTerritories.length} (${officialExactTerritories.join(", ")})`);
+console.log(`Rights metadata territories: ${rightsTerritories.length} (${rightsTerritories.join(", ")})`);
 console.log(`Invalid/legacy territories: ${invalid.length}`);
 console.log(`Sanity anomalies: ${anomalies.length}`);
 for (const anomaly of anomalies) console.log(`ANOMALY | ${anomaly}`);

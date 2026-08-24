@@ -125,7 +125,8 @@ export function scheduleAdapter({ id, url, parse }) {
           sourceType: row.sourceType ?? "official-broadcaster-schedule",
           sourceUrl: url,
           verifiedAt,
-          destinationType: broadcast.destinationType ?? row.destinationType ?? "linear"
+          destinationType: broadcast.destinationType ?? row.destinationType ?? "linear",
+          matchingMethod: row.matchingMethod
         }))
       }));
     },

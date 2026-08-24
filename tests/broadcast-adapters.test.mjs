@@ -1,7 +1,8 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import rights from "../config/official-event-broadcasters.json" with { type: "json" };
-import { parseBeinMenaGuide, beinMenaAdapter } from "../scripts/broadcast/adapters/bein-mena.mjs";
+import { parseBeinMenaApi, parseBeinMenaGuide, beinMenaAdapter } from "../scripts/broadcast/adapters/bein-mena.mjs";
 import { parseSkySemanticHtml, parseSkySportsSchedule, skySportsAdapter } from "../scripts/broadcast/adapters/sky-sports.mjs";
 import { parseLaligaSchedule, parseLaligaSemanticTable, laligaAdapter } from "../scripts/broadcast/adapters/laliga.mjs";
 import { parseLigue1Schedule, ligue1Adapter } from "../scripts/broadcast/adapters/ligue1.mjs";
@@ -24,7 +25,7 @@ const collect = (adapter, html) => adapter.collect({ fetchText: async () => html
 test("only fail-closed fixture-tested adapters are registered", () => {
   assert.deepEqual(OFFICIAL_BROADCAST_ADAPTERS.map((adapter) => adapter.id), ["bein-mena", "sky-sports-uk", "premier-league-selections", "laliga-spain", "ligue1-france", "bundesliga-active"]);
   assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "sky-sports-uk").contractStatus, "semantic-html-verified");
-  assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "bein-mena").contractStatus, "fixture-tested-live-unverified");
+  assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "bein-mena").contractStatus, "first-party-api-verified");
 });
 
 test("Sky parses exact subchannels and preserves legitimate simulcasts", async () => {
@@ -103,6 +104,32 @@ test("beIN accepts only aligned LIVE matches and rejects replay programming", as
   assert(target.broadcasts.every((item) => item.channelName === "beIN SPORTS 1"));
   assert(target.broadcasts.some((item) => item.territory === "MA"));
   assert(!target.broadcasts.some((item) => item.territory === "FR"));
+});
+
+test("beIN first-party EPG aligns competition, teams, match kickoff and exact channel", async () => {
+  const snapshot = await readFile(new URL("./fixtures/official-football/bein-mena-tv-event.json", import.meta.url), "utf8");
+  const rows = parseBeinMenaApi(snapshot);
+  assert.deepEqual(rows.map((row) => [row.homeTeam, row.awayTeam, row.channels[0]]), [
+    ["Sabah", "Hapoel Be'er Sheva", "beIN SPORTS EN 2"],
+    ["LASK", "Celtic", "beIN SPORTS 1"],
+    ["Bodø / Glimt", "NEC", "beIN SPORTS 2"],
+    ["Olympique Lyonnais", "Fenerbahçe", "beIN SPORTS 2"]
+  ]);
+  // The API's TV programme starts before kickoff; matching deliberately uses
+  // the event's m_date/m_time fields from that same official row.
+  assert.equal(rows[1].startUtcEpochSeconds, epoch("2026-08-25T19:00:00Z"));
+  const replay = JSON.parse(snapshot);
+  replay.rows[1].replay = true;
+  replay.rows[2].data.Live = "False";
+  assert.deepEqual(parseBeinMenaApi(replay).map((row) => row.homeTeam), ["Sabah", "Olympique Lyonnais"]);
+
+  const target = event("UEFA Champions League", "LASK", "Celtic", "2026-08-25T19:00:00Z");
+  augmentWithOfficialRights([target], rights);
+  resolveExactBroadcasts([target], await collect(beinMenaAdapter, snapshot));
+  assert.equal(target.broadcasts.length, 17);
+  assert(target.broadcasts.every((item) => item.channelName === "beIN SPORTS 1"));
+  assert(target.broadcasts.every((item) => item.sourceUrl.includes("/api/opta/tv-event")));
+  assert(target.broadcasts.every((item) => item.matchingMethod === "bein-epg-match-teams-competition-kickoff"));
 });
 
 test("LaLiga operator stays attached to its own exact fixture", async () => {
