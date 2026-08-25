@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1787664538,
-  "validUntilEpochSeconds": 1787707738,
+  "generatedAtEpochSeconds": 1787674686,
+  "validUntilEpochSeconds": 1787717886,
   "events": [
     {
       "id": "sky-Aston Villa-Arsenal-1788206400000",
@@ -3078,7 +3078,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -3139,7 +3139,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -4430,7 +4430,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -11187,7 +11187,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -12399,8 +12399,11 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN SPORTS 4 AR",
-          "aliases": [],
+          "channelName": "beIN SPORTS EN 2 AR",
+          "aliases": [
+            "beIN Sports EN 2 HD",
+            "MENA | beIN Sports EN 2"
+          ],
           "region": "Arabic",
           "displayRegion": "AR",
           "territories": [
@@ -12425,7 +12428,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -12505,11 +12508,8 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "beIN SPORTS EN 2 AR",
-          "aliases": [
-            "beIN Sports EN 2 HD",
-            "MENA | beIN Sports EN 2"
-          ],
+          "channelName": "beIN SPORTS 4 AR",
+          "aliases": [],
           "region": "Arabic",
           "displayRegion": "AR",
           "territories": [
@@ -12534,7 +12534,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -13747,7 +13747,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -14997,7 +14997,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-08-25",
           "exclusive": false,
           "destinationType": "linear",
@@ -21431,6 +21431,40 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000A5M",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-000A5N",
+      "title": "TBC Home vs TBC Away",
+      "sport": "football",
+      "competition": "Leagues Cup",
+      "startUtcEpochSeconds": 1788364800,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "TBC Home",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "TBC Away",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000A5N",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000A5N",
         "eventMatched": false
       }
     },
