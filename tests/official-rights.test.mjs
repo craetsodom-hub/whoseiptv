@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import rights from "../config/official-event-broadcasters.json" with { type: "json" };
 import { attachAllEventDestinations, augmentWithOfficialRights, coverageReport, matchingRights, validateOfficialRightsConfig } from "../scripts/official-rights.mjs";
 import { canonicalChannelIdentity, cleanAliases } from "../scripts/broadcast/normalize.mjs";
-import { broadcastScopeKey, canonicalizeRegionalBroadcasts, collectAdaptersSafely, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
+import { broadcastScopeKey, canonicalizeRegionalBroadcasts, collectAdaptersSafely, filterTrustedScheduleBroadcasts, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import { SUPPORTED_TERRITORIES } from "../scripts/territories.mjs";
 import { expandTerritories } from "../scripts/broadcast/territory-regions.mjs";
 import { classifyFootballEvent } from "../scripts/broadcast/coverage.mjs";
@@ -73,6 +73,15 @@ test("source priority is deterministic and official exact data overrides weaker 
   assert.deepEqual(mergeExactBroadcasts(exact, weak, schedule).map((item) => item.channelName), ["Sky Sports Main Event"]);
 });
 
+test("equal-priority broadcaster ordering is independent of adapter row order", () => {
+  const rows = [
+    { channelName: "Provider Z", territory: "GB", sourceType: "official-event", sourceUrl: "https://example.test/schedule" },
+    { channelName: "Provider A", territory: "GB", sourceType: "official-event", sourceUrl: "https://example.test/schedule" }
+  ];
+  assert.deepEqual(mergeExactBroadcasts(rows), mergeExactBroadcasts([...rows].reverse()));
+  assert.deepEqual(mergeExactBroadcasts(rows).map((item) => item.channelName), ["Provider A", "Provider Z"]);
+});
+
 test("duplicate formats collapse to aliases while distinct channel numbers survive", () => {
   const merged = mergeExactBroadcasts(
     { channelName: "beIN Sports 1", aliases: [], territory: "MA", sourceType: "official-event" },
@@ -110,7 +119,7 @@ test("one Arabic MENA feed is canonicalized without confusing Argentina", () => 
     { channelName: "TyC Sports", territory: "AR", sourceType: "official-event" }
   );
   const arabic = merged.find((item) => item.region === "Arabic");
-  assert.equal(arabic.channelName, "beIN SPORTS 1 AR");
+  assert.equal(arabic.channelName, "beIN SPORTS 1");
   assert.deepEqual(arabic.territories, ["AE", "MA", "QA"]);
   assert.equal(arabic.territory, undefined);
   assert.equal(broadcastScopeKey(arabic), "region:arabic");
@@ -125,7 +134,7 @@ test("existing MENA EPG rows migrate to one Arabic destination", () => {
     { channelName: "beIN SPORTS 1", territory: "AE", sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0", matchingMethod: "epg" }
   ] }];
   canonicalizeRegionalBroadcasts(events);
-  assert.deepEqual(events[0].broadcasts.map((item) => item.channelName), ["beIN SPORTS 1 AR"]);
+  assert.deepEqual(events[0].broadcasts.map((item) => item.channelName), ["beIN SPORTS 1"]);
   assert.deepEqual(events[0].broadcasts[0].territories, ["AE", "MA", "QA"]);
 });
 
@@ -144,11 +153,24 @@ test("official schedules are checked against territorial rights before enrichmen
   augmentWithOfficialRights([target], rights);
   const base = { competition: "Premier League", homeTeam: "Liverpool", awayTeam: "Arsenal", startUtcEpochSeconds: kickoff };
   resolveExactBroadcasts([target], [
-    { ...base, broadcasts: [{ channelName: "Sky Sports Main Event", territory: "GB", sourceType: "official-broadcaster-schedule" }] },
-    { ...base, broadcasts: [{ channelName: "Invented Sports 1", territory: "GB", sourceType: "official-broadcaster-schedule" }] }
+    { ...base, broadcasts: [{ channelName: "Sky Sports Main Event", territory: "GB", sourceType: "official-broadcaster-schedule", destinationVerified: true }] },
+    { ...base, broadcasts: [{ channelName: "Invented Sports 1", territory: "GB", sourceType: "official-broadcaster-schedule", destinationVerified: true }] }
   ]);
   assert(target.broadcasts.some((item) => item.channelName === "Sky Sports Main Event"));
   assert(!target.broadcasts.some((item) => item.channelName === "Invented Sports 1"));
+});
+
+test("pre-attached football schedules pass through the same verification and rights gate", () => {
+  const target = event();
+  target.sport = "football";
+  target.broadcasts = [
+    { channelName: "Sky Sports Main Event", territory: "GB", sourceType: "official-broadcaster-schedule", destinationVerified: true },
+    { channelName: "Invented Sports 1", territory: "GB", sourceType: "official-broadcaster-schedule", destinationVerified: true },
+    { channelName: "Sky Sports Premier League", territory: "GB", sourceType: "official-broadcaster-schedule" }
+  ];
+  augmentWithOfficialRights([target], rights);
+  filterTrustedScheduleBroadcasts([target]);
+  assert.deepEqual(target.broadcasts.map((item) => item.channelName), ["Sky Sports Main Event"]);
 });
 
 test("resolver continues with later providers after a successful provider", () => {

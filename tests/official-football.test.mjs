@@ -25,12 +25,46 @@ test("keeps every observed LaLiga operator distinct and in its match row", async
 
 test("resolves an official exact destination to the corresponding source event", async () => {
   const candidates = parseLaLiga(await fixture("laliga-next-data.html"));
-  const records = [{ idEvent: "real-1", strEvent: "Elche CF vs FC Barcelona", strTimeStamp: "2026-08-23 19:30:00" }];
+  const records = [{ idEvent: "real-1", strSport: "Soccer", strEvent: "Elche CF vs FC Barcelona", strLeague: "LaLiga", strTimeStamp: "2026-08-23 19:30:00" }];
   const result = resolveOfficialFootball(candidates, records, new Map(), Date.parse("2026-08-23T18:00:00Z") / 1000);
   assert.equal(result.length, 1);
   assert.equal(result[0].id, "tsdb-real-1");
   assert.equal(result[0].broadcasterEvidence.eventMatched, true);
   assert.deepEqual(result[0].broadcasts.map((item) => item.channelName), ["Orange Fútbol 1", "Movistar Plus+", "Movistar LALIGA"]);
+  assert(result[0].broadcasts.every((item) => item.eventMatchingMethod.startsWith("ordered:")));
+});
+
+test("official football source linking rejects weak and ambiguous fixture identities", () => {
+  const startUtcEpochSeconds = Date.parse("2026-08-23T19:00:00Z") / 1000;
+  const candidate = {
+    sourceId: "official-unresolved",
+    source: "test",
+    sourceUrl: "https://example.test/fixture",
+    title: "North Athletic United vs Exact Opponent",
+    competition: "LaLiga",
+    homeTeam: "North Athletic United",
+    awayTeam: "Exact Opponent",
+    startUtcEpochSeconds,
+    broadcasts: [{ channelName: "Exact Channel", territory: "ES", sourceType: "official-event" }]
+  };
+  const weak = resolveOfficialFootball([candidate], [{
+    idEvent: "weak", strSport: "Soccer", strEvent: "South Athletic United vs Exact Opponent", strLeague: "LaLiga", strTimeStamp: "2026-08-23 19:00:00"
+  }], new Map(), startUtcEpochSeconds);
+  assert.equal(weak[0].id, "official-unresolved");
+  assert.equal(weak[0].broadcasterEvidence.eventMatched, false);
+
+  const ambiguous = resolveOfficialFootball([{ ...candidate, homeTeam: "Exact Home", title: "Exact Home vs Exact Opponent" }], [
+    { idEvent: "one", strSport: "Soccer", strEvent: "Exact Home vs Exact Opponent", strLeague: "LaLiga", strTimeStamp: "2026-08-23 19:00:00" },
+    { idEvent: "two", strSport: "Soccer", strEvent: "Exact Home vs Exact Opponent", strLeague: "LaLiga", strTimeStamp: "2026-08-23 19:00:00" }
+  ], new Map(), startUtcEpochSeconds);
+  assert.equal(ambiguous[0].id, "official-unresolved");
+  assert.equal(ambiguous[0].broadcasterEvidence.eventMatched, false);
+
+  const wrongSport = resolveOfficialFootball([{ ...candidate, homeTeam: "Exact Home", title: "Exact Home vs Exact Opponent" }], [{
+    idEvent: "basketball", __sport: "basketball", strEvent: "Exact Home vs Exact Opponent", strLeague: "LaLiga", strTimeStamp: "2026-08-23 19:00:00"
+  }], new Map(), startUtcEpochSeconds);
+  assert.equal(wrongSport[0].id, "official-unresolved");
+  assert.equal(wrongSport[0].broadcasterEvidence.eventMatched, false);
 });
 
 test("parses a numbered Ligue 1+ channel from the official match object", async () => {
@@ -57,6 +91,9 @@ test("parses the MLS match API's exact Apple TV event service", async () => {
     "Apple TV", "US", "official-event", "mls-match-api-broadcaster"
   ]]);
   assert.deepEqual(parseMlsMatch(JSON.stringify([{ ...(JSON.parse(await fixture("mls-match.json"))[0]), delayedMatch: true }])), []);
+  const placeholder = JSON.parse(await fixture("mls-match.json"));
+  placeholder[0].home.fullName = "TBC Home";
+  assert.deepEqual(parseMlsMatch(JSON.stringify(placeholder)), []);
   const event = { competition: "Leagues Cup", startUtcEpochSeconds: candidates[0].startUtcEpochSeconds, homeTeam: { name: "Club León" }, awayTeam: { name: "Real Salt Lake" } };
   assert(matchesEvent(event, candidates[0]));
   assert(!matchesEvent({ ...event, awayTeam: { name: "Chicago Fire" } }, candidates[0]));

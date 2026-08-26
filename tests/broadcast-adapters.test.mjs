@@ -42,6 +42,21 @@ test("Sky parses exact subchannels and preserves legitimate simulcasts", async (
   assert.notEqual(candidates[2].broadcasts[0].channelName, candidates[2].broadcasts[1].channelName);
 });
 
+test("structured adapters namespace and preserve participant metadata", async () => {
+  const html = script({ fixtures: [{
+    homeTeam: { name: "Home Club", id: "42", aliases: ["Home FC"], type: "club", country: "GB" },
+    awayTeam: { name: "Away Club", id: "42", type: "club", country: "GB" },
+    kickoff: "2026-08-23T15:00:00Z",
+    channels: ["Sky Sports Main Event"]
+  }] });
+  const [candidate] = await collect(skySportsAdapter, html);
+  assert.deepEqual(candidate.homeTeam, {
+    name: "Home Club", aliases: ["Home FC"], sourceIds: { "sky-sports-uk": "42" }, participantType: "club", country: "GB"
+  });
+  assert.deepEqual(candidate.awayTeam.sourceIds, { "sky-sports-uk": "42" });
+  assert.equal(candidate.broadcasts[0].destinationVerified, true);
+});
+
 test("Sky semantic HTML separates kickoff from coverage and supports Sky Sports+", () => {
   const html = `
     <article>
@@ -82,7 +97,7 @@ test("exact schedule channels win an equivalent generic all-event destination", 
 test("resolver preserves independent exact channels and territories after an earlier match", () => {
   const target = event("Test League", "Home", "Away", "2026-08-30T15:00:00Z");
   const candidate = {
-    competition: "Test League", homeTeam: "Home", awayTeam: "Away", startUtcEpochSeconds: epoch("2026-08-30T15:00:00Z"),
+    sport: "football", competition: "Test League", homeTeam: "Home", awayTeam: "Away", startUtcEpochSeconds: epoch("2026-08-30T15:00:00Z"),
     broadcasts: [
       { channelName: "Provider One", territory: "GB", sourceType: "official-event", destinationType: "linear" },
       { channelName: "Provider Two", territory: "FR", sourceType: "official-event", destinationType: "linear" },
@@ -125,7 +140,7 @@ test("beIN accepts only aligned LIVE matches and rejects replay programming", as
   augmentWithOfficialRights([target], rights);
   resolveExactBroadcasts([target], await collect(beinMenaAdapter, guide));
   assert.equal(target.broadcasts.length, 1);
-  assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1 AR");
+  assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1");
   assert.equal(target.broadcasts[0].region, "Arabic");
   assert.equal(target.broadcasts[0].displayRegion, "AR");
   assert(target.broadcasts[0].territories.includes("MA"));
@@ -153,10 +168,26 @@ test("beIN first-party EPG aligns competition, teams, match kickoff and exact ch
   augmentWithOfficialRights([target], rights);
   resolveExactBroadcasts([target], await collect(beinMenaAdapter, snapshot));
   assert.equal(target.broadcasts.length, 1);
-  assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1 AR");
+  assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1");
   assert(target.broadcasts[0].territories.includes("MA"));
   assert(target.broadcasts[0].sourceUrl.includes("/api/opta/tv-event"));
   assert.equal(target.broadcasts[0].matchingMethod, "bein-epg-match-teams-competition-kickoff");
+});
+
+test("beIN namespaces Opta event and participant IDs", async () => {
+  const body = JSON.stringify({ rows: [{
+    data: {
+      m_date: "2026-08-27T19:00:00", m_time: "19:00:00Z", competition_name: "LaLiga",
+      teama: "Barcelona", teamb: "Athletic Club", teama_id: "home-1", teamb_id: "away-1", matchid: "match-1", Live: "True"
+    },
+    live: true,
+    replay: false,
+    channel: { name: "beIN SPORTS 1" }
+  }] });
+  const [candidate] = await collect(beinMenaAdapter, body);
+  assert.deepEqual(candidate.sourceIds, { "bein-opta": "match-1" });
+  assert.deepEqual(candidate.homeTeam.sourceIds, { "bein-opta": "home-1" });
+  assert.deepEqual(candidate.awayTeam.sourceIds, { "bein-opta": "away-1" });
 });
 
 test("beIN discovers its full current EPG window from API count", async () => {
@@ -180,6 +211,13 @@ test("beIN discovers its full current EPG window from API count", async () => {
   assert(urls[0].includes("offset=0"));
   assert.deepEqual(urls.slice(1).map((url) => url.match(/offset=(\d+)/)?.[1]), ["100", "200", "300"]);
   assert.deepEqual(candidates.map((candidate) => candidate.competition), ["LaLiga", "LaLiga", "LaLiga", "Bundesliga"]);
+});
+
+test("beIN rejects an unbounded remote EPG page count", async () => {
+  await assert.rejects(() => beinMenaAdapter.collect({
+    fetchText: async () => JSON.stringify({ count: 10_001, rows: [] }),
+    verifiedAt: "2026-08-24"
+  }), /exceeds the audited limit/);
 });
 
 test("Movistar keeps its Champions League channel in the exact dated programme row", async () => {

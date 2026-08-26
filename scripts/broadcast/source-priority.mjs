@@ -16,5 +16,13 @@ export function sourcePriority(value) {
 export function strongerSource(left, right) {
   const difference = sourcePriority(right?.sourceType) - sourcePriority(left?.sourceType);
   if (difference !== 0) return difference;
-  return String(left?.sourceUrl ?? "").localeCompare(String(right?.sourceUrl ?? ""), "en-US");
+  const source = String(left?.sourceUrl ?? "").localeCompare(String(right?.sourceUrl ?? ""), "en-US");
+  if (source !== 0) return source;
+  const confidence = Number(right?.eventMatchConfidence ?? 0) - Number(left?.eventMatchConfidence ?? 0);
+  if (confidence !== 0) return confidence;
+  const channel = String(left?.channelName ?? "").localeCompare(String(right?.channelName ?? ""), "en-US");
+  if (channel !== 0) return channel;
+  const territory = String(left?.territory ?? "").localeCompare(String(right?.territory ?? ""), "en-US");
+  if (territory !== 0) return territory;
+  return String(left?.matchingMethod ?? "").localeCompare(String(right?.matchingMethod ?? ""), "en-US");
 }

@@ -70,6 +70,7 @@ export const movistarChampionsAdapter = {
       all.findIndex((item) => item.homeTeam === row.homeTeam && item.awayTeam === row.awayTeam &&
         item.startUtcEpochSeconds === row.startUtcEpochSeconds && item.channelName === row.channelName) === index);
     return rows.map((row) => ({
+      sport: "football",
       competition: row.competition,
       homeTeam: row.homeTeam,
       awayTeam: row.awayTeam,
