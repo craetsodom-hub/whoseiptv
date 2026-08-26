@@ -6,6 +6,7 @@ export const BEIN_MENA_URL = "https://www.beinsports.com/en-mena/tv-guide";
 // Some full EPG rows carry long programme descriptions. Keep pages well below
 // the shared fetch size limit while still discovering the whole API window.
 const BEIN_MENA_PAGE_SIZE = 100;
+const BEIN_MENA_MAX_PAGES = 100;
 const BEIN_MENA_API_BASE = "https://www.beinsports.com/api/opta/tv-event?region=en-mena";
 export const BEIN_MENA_API_URL = `${BEIN_MENA_API_BASE}&limit=${BEIN_MENA_PAGE_SIZE}&offset=0`;
 // These are the MENA destinations observed in the official guide. Language
@@ -18,6 +19,11 @@ function regionalBroadcast() {
 
 function normalizedChannel(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function normalizedSport(value) {
+  const sport = String(value ?? "").trim().toLowerCase();
+  return sport === "soccer" ? "football" : sport || undefined;
 }
 
 function guideKickoff(data) {
@@ -37,11 +43,18 @@ export function parseBeinMenaApi(body, sourceUrl = BEIN_MENA_API_URL) {
     const homeTeam = String(data?.teama ?? "").trim();
     const awayTeam = String(data?.teamb ?? "").trim();
     const competition = String(data?.competition_name ?? "").trim();
+    const homeTeamSourceId = String(data?.teama_id ?? "").trim();
+    const awayTeamSourceId = String(data?.teamb_id ?? "").trim();
+    const sourceId = String(data?.matchid ?? "").trim();
     const startUtcEpochSeconds = guideKickoff(data);
     const isLive = item?.live === true && String(data?.Live).toLowerCase() === "true";
     if (!CHANNEL.test(channelName) || !homeTeam || !awayTeam || !competition || !startUtcEpochSeconds || !isLive || item?.replay === true) return [];
     return [{
-      homeTeam, awayTeam, competition, startUtcEpochSeconds, channels: [channelName], broadcastsFor: regionalBroadcast,
+      homeTeam, awayTeam, competition, sport: normalizedSport(data?.sport ?? data?.sport_name) ?? "football",
+      ...(homeTeamSourceId ? { homeTeamSourceId } : {}),
+      ...(awayTeamSourceId ? { awayTeamSourceId } : {}),
+      ...(sourceId ? { sourceId } : {}),
+      startUtcEpochSeconds, channels: [channelName], broadcastsFor: regionalBroadcast,
       matchingMethod: "bein-epg-match-teams-competition-kickoff", sourceUrl
     }];
   });
@@ -51,13 +64,12 @@ export function parseBeinMenaApi(body, sourceUrl = BEIN_MENA_API_URL) {
 }
 
 function pageCount(body) {
-  try {
-    const payload = typeof body === "string" ? JSON.parse(body) : body;
-    const count = Number(payload?.count);
-    return Number.isSafeInteger(count) && count >= 0 ? Math.ceil(count / BEIN_MENA_PAGE_SIZE) : 1;
-  } catch {
-    return 1;
-  }
+  let payload;
+  try { payload = typeof body === "string" ? JSON.parse(body) : body; } catch { return 1; }
+  const count = Number(payload?.count);
+  const pages = Number.isSafeInteger(count) && count >= 0 ? Math.ceil(count / BEIN_MENA_PAGE_SIZE) : 1;
+  if (pages > BEIN_MENA_MAX_PAGES) throw new Error("beIN EPG row count exceeds the audited limit");
+  return pages;
 }
 
 function pageUrl(page) {
@@ -100,15 +112,18 @@ export const beinMenaAdapter = {
     // by older regression fixtures; live production responses are JSON.
     const rows = apiRows.length > 0 ? apiRows : bodies.flatMap(({ body }) => String(body).includes("<script") ? parseBeinMenaGuide(body) : []);
     return rows.map((row) => ({
+      sport: row.sport ?? "football",
       competition: row.competition,
-      homeTeam: row.homeTeam,
-      awayTeam: row.awayTeam,
+      homeTeam: row.homeTeamSourceId ? { name: row.homeTeam, sourceIds: { "bein-opta": row.homeTeamSourceId } } : row.homeTeam,
+      awayTeam: row.awayTeamSourceId ? { name: row.awayTeam, sourceIds: { "bein-opta": row.awayTeamSourceId } } : row.awayTeam,
+      ...(row.sourceId ? { sourceIds: { "bein-opta": row.sourceId } } : {}),
       startUtcEpochSeconds: row.startUtcEpochSeconds,
       broadcasts: row.channels.flatMap((channelName) => row.broadcastsFor().map((broadcast) => ({
         ...broadcast,
         channelName,
         aliases: Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? [],
         sourceType: "official-broadcaster-schedule",
+        destinationVerified: true,
         sourceUrl: row.sourceUrl ?? BEIN_MENA_API_URL,
         verifiedAt,
         destinationType: "linear",

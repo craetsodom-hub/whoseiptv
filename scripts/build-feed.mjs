@@ -3,12 +3,12 @@ import { execFile } from "node:child_process";
 import { promisify } from "node:util";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildFeed, selectEvents, validateFeed } from "./feed-core.mjs";
+import { buildFeed, mergeCollectedEvents, selectEvents, validateFeed } from "./feed-core.mjs";
 import { collectFormulaOneEvents } from "./official-f1.mjs";
 import { collectNbaEvents } from "./official-nba.mjs";
 import { collectOfficialFootballEvents } from "./official-football.mjs";
 import { attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
-import { canonicalizeRegionalBroadcasts, collectAdaptersSafely, mergeExactBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
+import { canonicalizeRegionalBroadcasts, collectAdaptersSafely, filterTrustedScheduleBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
 import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -40,36 +40,56 @@ const sports = [
 const REQUEST_TIMEOUT_MS = 15_000;
 const MAX_RESPONSE_CHARACTERS = 1_000_000;
 const REQUEST_PACING_MS = Number(process.env.REQUEST_PACING_MS ?? 2_200);
+const MAX_FETCH_ATTEMPTS = 3;
 const execFileAsync = promisify(execFile);
 
 async function fetchWithCurlFallback(url, accept) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-  try {
-    const response = await fetch(url, {
-      headers: { Accept: accept, "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)" },
-      signal: controller.signal
-    });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const body = await response.text();
-    if (!body || body.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response is empty or too large");
-    return body;
-  } catch (fetchError) {
-    const curl = process.platform === "win32" ? "curl.exe" : "curl";
-    const result = await execFileAsync(curl, ["-L", "--fail", "--compressed", "--max-time", String(Math.ceil(REQUEST_TIMEOUT_MS / 1000)), "-A", "WhoseIPTV-Events/1.0", "-H", `Accept: ${accept}`, url], { maxBuffer: MAX_RESPONSE_CHARACTERS * 2 });
-    if (!result.stdout || result.stdout.length > MAX_RESPONSE_CHARACTERS) throw fetchError;
-    return result.stdout;
-  } finally {
-    clearTimeout(timeout);
+  let lastError;
+  for (let attempt = 0; attempt < MAX_FETCH_ATTEMPTS; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+    try {
+      const response = await fetch(url, {
+        headers: { Accept: accept, "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)" },
+        signal: controller.signal
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const body = await response.text();
+      if (!body || body.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response is empty or too large");
+      return body;
+    } catch (fetchError) {
+      try {
+        const curl = process.platform === "win32" ? "curl.exe" : "curl";
+        const result = await execFileAsync(curl, ["-L", "--fail", "--compressed", "--max-time", String(Math.ceil(REQUEST_TIMEOUT_MS / 1000)), "-A", "WhoseIPTV-Events/1.0", "-H", `Accept: ${accept}`, url], { maxBuffer: MAX_RESPONSE_CHARACTERS * 2 });
+        if (!result.stdout || result.stdout.length > MAX_RESPONSE_CHARACTERS) throw fetchError;
+        return result.stdout;
+      } catch (curlError) {
+        lastError = curlError;
+      }
+    } finally {
+      clearTimeout(timeout);
+    }
+    if (attempt < MAX_FETCH_ATTEMPTS - 1) await wait(250 * (attempt + 1));
   }
+  throw lastError;
 }
 
 function wait(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
-function utcDate(offsetDays) {
-  const date = new Date();
+function generationEpochSeconds() {
+  const configured = Number(process.env.SOURCE_DATE_EPOCH);
+  const current = Math.floor(Date.now() / 1000);
+  if (process.env.SOURCE_DATE_EPOCH === undefined) return current;
+  if (!Number.isSafeInteger(configured) || configured <= 0 || Math.abs(current - configured) > 6 * 60 * 60) {
+    throw new Error("SOURCE_DATE_EPOCH must be within six hours of the current time");
+  }
+  return configured;
+}
+
+function utcDate(nowEpochSeconds, offsetDays) {
+  const date = new Date(nowEpochSeconds * 1000);
   date.setUTCDate(date.getUTCDate() + offsetDays);
   return date.toISOString().slice(0, 10);
 }
@@ -114,6 +134,19 @@ async function fetchOfficialPage(url) {
 }
 
 async function main() {
+  const nowEpochSeconds = generationEpochSeconds();
+  if (process.env.SOURCE_DATE_EPOCH !== undefined) {
+    try {
+      const existing = JSON.parse(await readFile(outputPath, "utf8"));
+      if (existing.generatedAtEpochSeconds === nowEpochSeconds) {
+        validateFeed(existing, nowEpochSeconds);
+        console.log(`Feed already generated for SOURCE_DATE_EPOCH=${nowEpochSeconds}; preserving deterministic output`);
+        return;
+      }
+    } catch (error) {
+      if (error?.code !== "ENOENT" && !(error instanceof SyntaxError)) throw error;
+    }
+  }
   const aliasesByChannel = JSON.parse(await readFile(aliasesPath, "utf8"));
   const footballCountries = JSON.parse(await readFile(footballCountriesPath, "utf8"));
   const sportCountries = JSON.parse(await readFile(sportCountriesPath, "utf8"));
@@ -128,7 +161,7 @@ async function main() {
       throw new Error(`Country configuration is incomplete for ${sport.id}`);
     }
   }
-  const dates = [utcDate(0), utcDate(1), utcDate(2)];
+  const dates = [utcDate(nowEpochSeconds, 0), utcDate(nowEpochSeconds, 1), utcDate(nowEpochSeconds, 2)];
   const records = [];
   let successfulRequests = 0;
   const jobs = dates.flatMap((date) => sports.flatMap((sport) =>
@@ -146,7 +179,7 @@ async function main() {
     await wait(REQUEST_PACING_MS);
   }
 
-  if (successfulRequests < Math.ceil(totalRequests * 0.8)) {
+  if (successfulRequests !== totalRequests) {
     throw new Error(`Only ${successfulRequests}/${totalRequests} source requests succeeded; keeping the previous feed`);
   }
 
@@ -161,7 +194,6 @@ async function main() {
     await wait(REQUEST_PACING_MS);
   }
 
-  const nowEpochSeconds = Math.floor(Date.now() / 1000);
   const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent, { select: false });
   try {
     const [formulaOneResult, nbaResult, footballResult] = await Promise.allSettled([
@@ -195,35 +227,19 @@ async function main() {
     if (footballResult.status === "rejected") {
       console.error(`Official football sources failed safely: ${footballResult.reason.message}`);
     }
-    const allEvents = [...feed.events, ...footballEvents, ...formulaOneEvents, ...nbaEvents];
-    const mergedEvents = new Map();
-    for (const event of allEvents) {
-      const key = event.id?.startsWith("tsdb-")
-        ? event.id
-        : `${event.sport}|${event.startUtcEpochSeconds}|${event.title.toLocaleLowerCase("en-US")}`;
-      const existing = mergedEvents.get(key);
-      if (!existing) {
-        mergedEvents.set(key, event);
-      } else {
-        existing.broadcasts = mergeExactBroadcasts(existing.broadcasts, event.broadcasts);
-        existing.homeTeam ??= event.homeTeam;
-        existing.awayTeam ??= event.awayTeam;
-        existing.artworkUrl ??= event.artworkUrl;
-        existing.competition ??= event.competition;
-        existing.broadcasterEvidence ??= event.broadcasterEvidence;
-      }
-    }
+    const mergedEvents = mergeCollectedEvents([...feed.events, ...footballEvents, ...formulaOneEvents, ...nbaEvents]);
     const exactCandidates = await collectAdaptersSafely(OFFICIAL_BROADCAST_ADAPTERS, {
-      events: [...mergedEvents.values()],
+      events: mergedEvents,
       fetchText: fetchOfficialPage,
       aliasesByChannel,
       verifiedAt: new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10)
     }, (id, error) => console.error(`Official broadcast adapter ${id} failed safely: ${error.message}`));
-    augmentWithOfficialRights([...mergedEvents.values()], officialRights);
-    attachAllEventDestinations([...mergedEvents.values()], officialRights);
-    resolveExactBroadcasts([...mergedEvents.values()], exactCandidates);
-    canonicalizeRegionalBroadcasts([...mergedEvents.values()]);
-    feed.events = selectEvents([...mergedEvents.values()]);
+    augmentWithOfficialRights(mergedEvents, officialRights);
+    filterTrustedScheduleBroadcasts(mergedEvents);
+    attachAllEventDestinations(mergedEvents, officialRights);
+    resolveExactBroadcasts(mergedEvents, exactCandidates);
+    canonicalizeRegionalBroadcasts(mergedEvents);
+    feed.events = selectEvents(mergedEvents);
     const matchedFootball = footballEvents.filter((event) => event.broadcasterEvidence?.eventMatched).length;
     console.log(`Collected ${footballEvents.length} exact official football events (${matchedFootball} resolved to source events), ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);
   } catch (error) {

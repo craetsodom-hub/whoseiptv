@@ -3,7 +3,9 @@ const COUNTRY_TOKENS = new Set(["uk", "gb", "us", "usa", "fr", "es", "de", "it",
 const NUMBER_WORDS = new Map([["one", "1"], ["two", "2"], ["three", "3"], ["four", "4"], ["five", "5"]]);
 
 export function normalizeBroadcastText(value) {
-  return String(value ?? "").normalize("NFD").replace(/\p{M}+/gu, "")
+  return String(value ?? "").replace(/[ßẞ]/g, "ss").replace(/[øØ]/g, "o").replace(/[łŁ]/g, "l")
+    .replace(/[đĐðÐ]/g, "d").replace(/[þÞ]/g, "th").replace(/[æÆ]/g, "ae").replace(/[œŒ]/g, "oe")
+    .normalize("NFKD").replace(/\p{M}+/gu, "")
     .toLocaleLowerCase("en-US").replace(/\+/g, " plus ").replace(/[^a-z0-9]+/g, " ").trim();
 }
 

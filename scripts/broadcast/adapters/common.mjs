@@ -79,9 +79,27 @@ export function timestamp(value) {
 }
 
 export function teamPair(object) {
-  const homeTeam = stringValue(object, ["homeTeam", "home", "teamA"]);
-  const awayTeam = stringValue(object, ["awayTeam", "away", "teamB"]);
-  if (homeTeam && awayTeam) return { homeTeam, awayTeam };
+  const participant = (side, keys) => {
+    const key = keys.find((candidate) => object?.[candidate] !== undefined);
+    const raw = key ? object[key] : null;
+    const name = typeof raw === "string" ? raw.trim() : String(raw?.name ?? "").trim();
+    if (!name) return null;
+    const aliases = [...(Array.isArray(raw?.aliases) ? raw.aliases : []), ...(Array.isArray(raw?.alternateNames) ? raw.alternateNames : [])]
+      .map((alias) => String(alias ?? "").trim()).filter(Boolean);
+    const sourceId = raw?.sourceId ?? raw?.id ?? object?.[`${side}TeamId`] ?? object?.[`${side}Id`];
+    const participantType = raw?.participantType ?? raw?.type ?? object?.[`${side}TeamType`];
+    const country = raw?.country ?? raw?.countryCode ?? object?.[`${side}TeamCountry`];
+    return {
+      [`${side}Team`]: name,
+      ...(aliases.length > 0 ? { [`${side}TeamAliases`]: aliases } : {}),
+      ...(sourceId != null && String(sourceId).trim() ? { [`${side}TeamSourceId`]: String(sourceId).trim() } : {}),
+      ...(participantType ? { [`${side}TeamType`]: String(participantType).trim() } : {}),
+      ...(country ? { [`${side}TeamCountry`]: String(country).trim() } : {})
+    };
+  };
+  const home = participant("home", ["homeTeam", "home", "teamA"]);
+  const away = participant("away", ["awayTeam", "away", "teamB"]);
+  if (home && away) return { ...home, ...away };
   const title = stringValue(object, ["title", "name", "eventName"]);
   const parts = title?.split(/\s+(?:vs?\.?|versus)\s+/i);
   return parts?.length === 2 ? { homeTeam: parts[0].trim(), awayTeam: parts[1].trim() } : null;
@@ -105,7 +123,23 @@ export function parseRows(html, options) {
       candidate.startUtcEpochSeconds === row.startUtcEpochSeconds && candidate.channels.join("|") === row.channels.join("|")) === index);
 }
 
-export function scheduleAdapter({ id, url, parse }) {
+function scheduledParticipant(row, side, source) {
+  const name = row[`${side}Team`];
+  const sourceId = row[`${side}TeamSourceId`];
+  const aliases = row[`${side}TeamAliases`];
+  const participantType = row[`${side}TeamType`];
+  const country = row[`${side}TeamCountry`];
+  if (!sourceId && !aliases && !participantType && !country) return name;
+  return {
+    name,
+    ...(Array.isArray(aliases) && aliases.length > 0 ? { aliases } : {}),
+    ...(sourceId ? { sourceIds: { [source]: String(sourceId) } } : {}),
+    ...(participantType ? { participantType } : {}),
+    ...(country ? { country } : {})
+  };
+}
+
+export function scheduleAdapter({ id, url, parse, sport = "football" }) {
   const trustedHost = new URL(url).hostname;
   return {
     id,
@@ -114,15 +148,17 @@ export function scheduleAdapter({ id, url, parse }) {
     async collect({ fetchText, verifiedAt, aliasesByChannel = {} }) {
       const rows = parse(await fetchText(url));
       return rows.map((row) => ({
+        sport: row.sport ?? sport,
         competition: row.competition,
-        homeTeam: row.homeTeam,
-        awayTeam: row.awayTeam,
+        homeTeam: scheduledParticipant(row, "home", id),
+        awayTeam: scheduledParticipant(row, "away", id),
         startUtcEpochSeconds: row.startUtcEpochSeconds,
         broadcasts: row.channels.flatMap((channelName) => row.broadcastsFor(channelName).map((broadcast) => ({ broadcast, channelName }))).map(({ broadcast, channelName }) => ({
           ...broadcast,
           channelName,
           aliases: Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? [],
           sourceType: row.sourceType ?? "official-broadcaster-schedule",
+          destinationVerified: true,
           sourceUrl: url,
           verifiedAt,
           destinationType: broadcast.destinationType ?? row.destinationType ?? "linear",

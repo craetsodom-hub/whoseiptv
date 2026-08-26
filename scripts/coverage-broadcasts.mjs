@@ -3,6 +3,7 @@ import { isSupportedTerritory, territoryKind } from "./territories.mjs";
 import { canonicalChannelIdentity } from "./broadcast/normalize.mjs";
 import { broadcastScopeKey, broadcastTerritories } from "./broadcast/resolver.mjs";
 import { footballCoverageSummary } from "./broadcast/coverage.mjs";
+import { eventIdentityEvidence } from "./broadcast/identity.mjs";
 
 const feed = JSON.parse(await readFile(new URL("../feed/events/v1/events.json", import.meta.url), "utf8"));
 const events = Array.isArray(feed.events) ? feed.events : [];
@@ -24,6 +25,10 @@ const officialExactTerritories = [...new Set(assignments.filter(isOfficial).flat
 const rightsTerritories = [...new Set(events.flatMap((event) => event.broadcastRights ?? []).map((right) => right.territory).filter(isSupportedTerritory))].sort();
 const anomalies = [];
 for (const event of events) {
+  if (/^(?:TBC|TBD|To Be (?:Confirmed|Determined))(?:\s|$)/i.test(event.homeTeam?.name ?? "") ||
+      /^(?:TBC|TBD|To Be (?:Confirmed|Determined))(?:\s|$)/i.test(event.awayTeam?.name ?? "")) {
+    anomalies.push(`${event.id}: placeholder participant published as confirmed`);
+  }
   const pairs = new Set();
   for (const broadcast of event.broadcasts ?? []) {
     const pair = `${broadcastScopeKey(broadcast)}|${broadcast.channelName.toLocaleLowerCase("en-US")}`;
@@ -36,6 +41,16 @@ for (const event of events) {
       const aliasNumber = alias.match(/(?:^|\s)(\d+)$/)?.[1];
       return aliasNumber && aliasNumber !== channelNumber;
     })) anomalies.push(`${event.id}: numbered channel alias crosses identity for ${broadcast.channelName}`);
+    if (event.sport === "football" && ["official-broadcaster-schedule", "official-network-selection"].includes(broadcast.sourceType) && broadcast.destinationVerified !== true) {
+      anomalies.push(`${event.id}: unverified schedule destination ${broadcast.channelName}`);
+    }
+  }
+}
+for (let left = 0; left < events.length; left += 1) {
+  for (let right = left + 1; right < events.length; right += 1) {
+    if (eventIdentityEvidence(events[left], events[right])) {
+      anomalies.push(`${events[left].id}/${events[right].id}: duplicate semantic fixture`);
+    }
   }
 }
 console.log(`OFFICIAL exact linear: ${officialLinear.length}`);

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildFeed, mergeBroadcastAssignments, parseUtcTimestamp, validateFeed } from "../scripts/feed-core.mjs";
+import { buildFeed, mergeBroadcastAssignments, mergeCollectedEvents, parseUtcTimestamp, validateFeed } from "../scripts/feed-core.mjs";
 
 const now = 1_800_000_000;
 
@@ -42,6 +42,22 @@ test("official evidence wins an identical source-event broadcaster assignment", 
   const official = { channelName: "DAZN", territory: "ES", sourceType: "official-event" };
   assert.equal(mergeBroadcastAssignments([sourceEvent], [official])[0].sourceType, "official-event");
   assert.equal(mergeBroadcastAssignments([official], [sourceEvent])[0].sourceType, "official-event");
+});
+
+test("final collection merge uses canonical event identity instead of title equality", () => {
+  const source = {
+    id: "tsdb-1", title: "Celta Vigo vs Osasuna", sport: "football", competition: "Spanish La Liga",
+    startUtcEpochSeconds: now, status: "confirmed", homeTeam: { name: "Celta Vigo" }, awayTeam: { name: "Osasuna" }, broadcasts: []
+  };
+  const official = {
+    id: "laliga-1", title: "Celta vs CA Osasuna", sport: "football", competition: "LALIGA EA SPORTS",
+    startUtcEpochSeconds: now, status: "confirmed", homeTeam: { name: "Celta" }, awayTeam: { name: "CA Osasuna" },
+    broadcasts: [{ channelName: "Movistar LALIGA", territory: "ES", sourceType: "official-event" }]
+  };
+  const merged = mergeCollectedEvents([source, official]);
+  assert.equal(merged.length, 1);
+  assert.equal(merged[0].id, "tsdb-1");
+  assert.deepEqual(merged[0].broadcasts.map((item) => item.channelName), ["Movistar LALIGA"]);
 });
 
 test("adds validated club artwork from event details", () => {

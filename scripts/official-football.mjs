@@ -19,7 +19,16 @@ function aliasesFor(channelName, aliasesByChannel) {
 }
 
 function broadcast(channelName, territory, aliasesByChannel, sourceType, sourceUrl, matchingMethod) {
-  return { channelName, aliases: aliasesFor(channelName, aliasesByChannel), territory, confirmed: true, sourceType, sourceUrl, matchingMethod };
+  return {
+    channelName,
+    aliases: aliasesFor(channelName, aliasesByChannel),
+    territory,
+    confirmed: true,
+    sourceType,
+    sourceUrl,
+    matchingMethod,
+    ...(["official-broadcaster-schedule", "official-network-selection"].includes(sourceType) ? { destinationVerified: true } : {})
+  };
 }
 
 export function parseSkyPremierLeague(html, aliasesByChannel = {}, referenceDate = new Date()) {
@@ -118,7 +127,9 @@ export function parseMlsMatch(body, aliasesByChannel = {}) {
   const competition = String(match?.competition?.name ?? "").trim();
   const start = Date.parse(match?.matchDate ?? "");
   const channel = (match?.broadcasters ?? []).find((item) => item?.broadcasterName === "Apple TV" && item?.broadcasterStreamingURL)?.broadcasterName;
-  if (!match?.sportecId || !homeTeam || !awayTeam || !competition || !Number.isFinite(start) || !channel || match?.delayedMatch === true) return [];
+  const placeholder = /^(?:tbc|tbd|to be (?:confirmed|determined))(?:\s+(?:home|away))?$/i;
+  if (!match?.sportecId || !homeTeam || !awayTeam || placeholder.test(homeTeam) || placeholder.test(awayTeam) ||
+      !competition || !Number.isFinite(start) || !channel || match?.delayedMatch === true) return [];
   const sourceUrl = `${MLS_MATCH_URL}${encodeURIComponent(match.sportecId)}`;
   return [{
     source: "mls",
@@ -148,25 +159,48 @@ async function collectMlsMatches(fetchText, nowEpochSeconds, aliasesByChannel) {
   }
 }
 
-function normalizedTeam(value) {
-  return String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
-    .replace(/\b(fc|cf|sad|club|de|del|la|futbol)\b/g, " ").replace(/[^a-z0-9]+/g, " ").trim();
+function sourceEvents(records, detailsByEvent) {
+  const events = new Map();
+  for (const record of records) {
+    const sport = String(record?.__sport ?? (record?.strSport === "Soccer" ? "football" : "")).trim().toLowerCase();
+    if (sport !== "football") continue;
+    const sourceId = String(record?.idEvent ?? "").trim();
+    if (!sourceId || events.has(sourceId)) continue;
+    const details = detailsByEvent.get(sourceId);
+    const title = String(details?.strEvent ?? record?.strEvent ?? "").trim();
+    const titleTeams = title.split(/\s+vs\s+/i);
+    const homeName = String(details?.strHomeTeam ?? titleTeams[0] ?? "").trim();
+    const awayName = String(details?.strAwayTeam ?? titleTeams[1] ?? "").trim();
+    const competition = String(details?.strLeague ?? record?.strLeague ?? "").trim();
+    const startUtcEpochSeconds = parseUtcTimestamp(details?.strTimestamp ?? record?.strTimeStamp);
+    if (!homeName || !awayName || !competition || !Number.isInteger(startUtcEpochSeconds)) continue;
+    const homeId = String(details?.idHomeTeam ?? "").trim();
+    const awayId = String(details?.idAwayTeam ?? "").trim();
+    events.set(sourceId, {
+      id: `tsdb-${sourceId}`,
+      sourceIds: { thesportsdb: sourceId },
+      sport: "football",
+      competition,
+      startUtcEpochSeconds,
+      homeTeam: { name: homeName, ...(homeId ? { sourceIds: { thesportsdb: homeId } } : {}) },
+      awayTeam: { name: awayName, ...(awayId ? { sourceIds: { thesportsdb: awayId } } : {}) }
+    });
+  }
+  return [...events.values()];
 }
 
 export function resolveOfficialFootball(candidates, records, detailsByEvent = new Map(), nowEpochSeconds = Math.floor(Date.now() / 1000)) {
   const earliest = nowEpochSeconds - 6 * 60 * 60;
   const latest = nowEpochSeconds + 8 * 24 * 60 * 60;
+  const sources = sourceEvents(records, detailsByEvent);
   return candidates.filter((candidate) => candidate.startUtcEpochSeconds >= earliest && candidate.startUtcEpochSeconds <= latest).map((candidate) => {
-    const source = records.find((record) => {
-      const details = detailsByEvent.get(String(record.idEvent ?? ""));
-      const title = String(details?.strEvent ?? record.strEvent ?? "");
-      const teams = title.split(/\s+vs\s+/i);
-      const timestamp = Date.parse(String(details?.strTimestamp ?? record.strTimeStamp ?? "").replace(" ", "T") + (String(details?.strTimestamp ?? record.strTimeStamp ?? "").includes("T") ? "" : "Z"));
-      return teams.length === 2 && Math.abs(timestamp / 1000 - candidate.startUtcEpochSeconds) <= 2 * 60 * 60 &&
-        normalizedTeam(teams[0]).includes(normalizedTeam(candidate.homeTeam)) && normalizedTeam(teams[1]).includes(normalizedTeam(candidate.awayTeam));
-    });
+    const possible = sources.map((source) => ({ source, evidence: eventIdentityEvidence(source, { ...candidate, sport: "football" }) }))
+      .filter(({ evidence }) => evidence);
+    const bestScore = possible.length > 0 ? Math.max(...possible.map(({ evidence }) => evidence.score)) : null;
+    const best = possible.filter(({ evidence }) => evidence.score === bestScore);
+    const resolved = best.length === 1 ? best[0] : null;
     return {
-      id: source?.idEvent ? `tsdb-${source.idEvent}` : candidate.sourceId,
+      id: resolved?.source.id ?? candidate.sourceId,
       title: candidate.title,
       sport: "football",
       competition: candidate.competition,
@@ -174,8 +208,12 @@ export function resolveOfficialFootball(candidates, records, detailsByEvent = ne
       status: "confirmed",
       homeTeam: { name: candidate.homeTeam, badgeUrl: null },
       awayTeam: { name: candidate.awayTeam, badgeUrl: null },
-      broadcasts: candidate.broadcasts,
-      broadcasterEvidence: { source: candidate.source, url: candidate.sourceUrl, eventMatched: Boolean(source) }
+      broadcasts: candidate.broadcasts.map((item) => resolved ? {
+        ...item,
+        eventMatchingMethod: resolved.evidence.matchingMethod,
+        eventMatchConfidence: resolved.evidence.score
+      } : item),
+      broadcasterEvidence: { source: candidate.source, url: candidate.sourceUrl, eventMatched: Boolean(resolved) }
     };
   });
 }
@@ -199,3 +237,5 @@ export async function collectOfficialFootballEvents({ fetchText, aliasesByChanne
   candidates.push(...await collectMlsMatches(fetchText, nowEpochSeconds, aliasesByChannel));
   return resolveOfficialFootball(candidates, records, detailsByEvent, nowEpochSeconds);
 }
+import { eventIdentityEvidence } from "./broadcast/identity.mjs";
+import { parseUtcTimestamp } from "./feed-core.mjs";

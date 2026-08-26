@@ -1,29 +1,10 @@
-import { canonicalChannelIdentity, cleanAliases, normalizeBroadcastText } from "./normalize.mjs";
+import { canonicalChannelIdentity, cleanAliases } from "./normalize.mjs";
+import { eventIdentityEvidence } from "./identity.mjs";
 import { strongerSource } from "./source-priority.mjs";
 import { isSupportedTerritory } from "../territories.mjs";
 
 export const MAX_BROADCASTS_PER_EVENT = 256;
 const TIME_TOLERANCE_SECONDS = 15 * 60;
-const TEAM_ALIASES = new Map([
-  ["inter", "internazionale"], ["inter milan", "internazionale"], ["fc internazionale milano", "internazionale"],
-  ["bayern munchen", "bayern munich"], ["paris saint germain", "psg"], ["man city", "manchester city"],
-  ["spurs", "tottenham hotspur"], ["tottenham", "tottenham hotspur"], ["brighton", "brighton and hove albion"],
-  ["newcastle", "newcastle united"], ["athletic", "athletic club"], ["celta", "celta vigo"], ["lyon", "olympique lyonnais"]
-]);
-const COMPETITION_ALIASES = new Map([
-  ["laliga", "laliga"], ["laliga ea sports", "laliga"], ["spanish la liga", "laliga"], ["la liga", "laliga"],
-  ["english premier league", "premier league"]
-]);
-
-function teamIdentity(value) {
-  const normalized = normalizeBroadcastText(value).replace(/\b(?:fc|cf|afc)\b/g, " ").replace(/\s+/g, " ").trim();
-  return TEAM_ALIASES.get(normalized) ?? normalized;
-}
-
-function competitionIdentity(value) {
-  const normalized = normalizeBroadcastText(value).replace(/\s+(?:19|20)\d{2}(?:\s+(?:19|20)?\d{2})?$/, "");
-  return COMPETITION_ALIASES.get(normalized) ?? normalized;
-}
 
 export function broadcastTerritories(item) {
   const territories = [...new Set([
@@ -40,12 +21,7 @@ export function broadcastScopeKey(item) {
 }
 
 export function matchesEvent(event, candidate, toleranceSeconds = TIME_TOLERANCE_SECONDS) {
-  if (competitionIdentity(event?.competition) !== competitionIdentity(candidate?.competition)) return false;
-  if (!Number.isInteger(event?.startUtcEpochSeconds) || !Number.isInteger(candidate?.startUtcEpochSeconds) ||
-      Math.abs(event.startUtcEpochSeconds - candidate.startUtcEpochSeconds) > toleranceSeconds) return false;
-  const eventTeams = [teamIdentity(event?.homeTeam?.name), teamIdentity(event?.awayTeam?.name)].sort();
-  const candidateTeams = [teamIdentity(candidate?.homeTeam), teamIdentity(candidate?.awayTeam)].sort();
-  return eventTeams.every(Boolean) && candidateTeams.every(Boolean) && eventTeams[0] === candidateTeams[0] && eventTeams[1] === candidateTeams[1];
+  return eventIdentityEvidence(event, candidate, toleranceSeconds) !== null;
 }
 
 function normalizeAssignment(item) {
@@ -53,7 +29,7 @@ function normalizeAssignment(item) {
   const region = String(item?.region ?? "").trim() || undefined;
   const displayRegion = String(item?.displayRegion ?? "").trim() || undefined;
   const territories = broadcastTerritories(item);
-  const channelName = region && displayRegion && !rawChannelName.endsWith(` ${displayRegion}`) ? `${rawChannelName} ${displayRegion}` : rawChannelName;
+  const channelName = rawChannelName;
   if (!channelName || territories.length === 0 || (region && !displayRegion)) return null;
   return {
     channelName,
@@ -68,7 +44,10 @@ function normalizeAssignment(item) {
     destinationType: item.destinationType,
     ruleType: item.ruleType,
     destinationPrecision: item.destinationPrecision ?? "channel",
-    rightsHolder: item.rightsHolder
+    ...(item.destinationVerified === true ? { destinationVerified: true } : {}),
+    rightsHolder: item.rightsHolder,
+    eventMatchingMethod: item.eventMatchingMethod,
+    eventMatchConfidence: item.eventMatchConfidence
   };
 }
 
@@ -116,26 +95,52 @@ export function mergeExactBroadcasts(...collections) {
   return balanced;
 }
 
-export function resolveExactBroadcasts(events, scheduleCandidates) {
+function trustedScheduleForEvent(event, broadcast) {
+  if (broadcast.sourceType === "official-event") return true;
+  if (!["official-broadcaster-schedule", "official-network-selection"].includes(broadcast.sourceType) || broadcast.destinationVerified !== true) return false;
+  const channel = canonicalChannelIdentity(broadcast.channelName);
+  const declaredHolder = canonicalChannelIdentity(broadcast.rightsHolder);
+  return broadcastTerritories(broadcast).some((territory) => (event.broadcastRights ?? []).find((right) => right.territory === territory)?.holders.some((holder) => {
+    const identity = canonicalChannelIdentity(holder.name);
+    return channel.startsWith(identity) || (declaredHolder && declaredHolder === identity);
+  }) ?? false);
+}
+
+export function filterTrustedScheduleBroadcasts(events) {
   for (const event of events) {
-    const matched = scheduleCandidates.filter((candidate) => matchesEvent(event, candidate))
-      .flatMap((candidate) => (candidate.broadcasts ?? []).flatMap((broadcast) => {
-        if (!broadcast.region) return [broadcast];
+    if (event.sport !== "football") continue;
+    event.broadcasts = mergeExactBroadcasts((event.broadcasts ?? []).filter((broadcast) =>
+      !["official-broadcaster-schedule", "official-network-selection"].includes(broadcast.sourceType) || trustedScheduleForEvent(event, broadcast)
+    ));
+  }
+  return events;
+}
+
+export function resolveExactBroadcasts(events, scheduleCandidates) {
+  const matchesByEvent = new Map(events.map((event) => [event, []]));
+  for (const candidate of scheduleCandidates) {
+    const possible = events.map((event) => ({ event, evidence: eventIdentityEvidence(event, candidate, TIME_TOLERANCE_SECONDS) }))
+      .filter(({ evidence }) => evidence);
+    if (possible.length === 0) continue;
+    const bestScore = Math.max(...possible.map(({ evidence }) => evidence.score));
+    const best = possible.filter(({ evidence }) => evidence.score === bestScore);
+    if (best.length !== 1) continue;
+    matchesByEvent.get(best[0].event).push({ candidate, evidence: best[0].evidence });
+  }
+  for (const event of events) {
+    const matched = matchesByEvent.get(event).flatMap(({ candidate, evidence }) => (candidate.broadcasts ?? []).flatMap((broadcast) => {
+        const resolved = {
+          ...broadcast,
+          eventMatchingMethod: evidence.matchingMethod,
+          eventMatchConfidence: evidence.score
+        };
+        if (!broadcast.region) return [resolved];
         const allowed = new Set(broadcast.regionTerritories ?? []);
         const territories = (event.broadcastRights ?? []).filter((right) => allowed.has(right.territory) && right.holders.some((holder) =>
           canonicalChannelIdentity(holder.name) === canonicalChannelIdentity(broadcast.rightsHolder)
         )).map((right) => right.territory);
-        return territories.length > 0 ? [{ ...broadcast, territories }] : [];
-      })).filter((broadcast) => {
-        if (broadcast.sourceType === "official-event") return true;
-        if (!["official-broadcaster-schedule", "official-network-selection"].includes(broadcast.sourceType)) return false;
-        const channel = canonicalChannelIdentity(broadcast.channelName);
-        const declaredHolder = canonicalChannelIdentity(broadcast.rightsHolder);
-        return broadcastTerritories(broadcast).some((territory) => (event.broadcastRights ?? []).find((right) => right.territory === territory)?.holders.some((holder) => {
-          const identity = canonicalChannelIdentity(holder.name);
-          return channel.startsWith(identity) || (declaredHolder && declaredHolder === identity);
-        }) ?? false);
-      });
+        return territories.length > 0 ? [{ ...resolved, territories }] : [];
+      })).filter((broadcast) => trustedScheduleForEvent(event, broadcast));
     event.broadcasts = mergeExactBroadcasts(event.broadcasts ?? [], matched);
   }
   return events;

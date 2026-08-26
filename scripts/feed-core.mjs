@@ -1,6 +1,7 @@
 import { compareEvents } from "./football-ranking.mjs";
 import { isSupportedTerritory } from "./territories.mjs";
 import { MAX_BROADCASTS_PER_EVENT, broadcastTerritories, mergeExactBroadcasts } from "./broadcast/resolver.mjs";
+import { eventIdentityEvidence } from "./broadcast/identity.mjs";
 
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
@@ -38,9 +39,11 @@ function imageUrl(value) {
 function teamFromDetails(details, prefix) {
   const name = clean(details?.[`str${prefix}Team`], 120);
   if (!name) return null;
+  const sourceId = clean(details?.[`id${prefix}Team`], 100);
   return {
     name,
-    badgeUrl: imageUrl(details?.[`str${prefix}TeamBadge`])
+    badgeUrl: imageUrl(details?.[`str${prefix}TeamBadge`]),
+    ...(sourceId ? { sourceIds: { thesportsdb: sourceId } } : {})
   };
 }
 
@@ -74,6 +77,38 @@ function aliasesFor(channelName, aliasesByChannel) {
 
 export function mergeBroadcastAssignments(left = [], right = []) {
   return mergeExactBroadcasts(left, right);
+}
+
+export function mergeCollectedEvents(events) {
+  const merged = new Map();
+  for (const event of events) {
+    let key = event.id?.startsWith("tsdb-")
+      ? event.id
+      : `${event.sport}|${event.startUtcEpochSeconds}|${event.title.toLocaleLowerCase("en-US")}`;
+    if (!merged.has(key) && !event.id?.startsWith("tsdb-")) {
+      const possible = [...merged.entries()].map(([candidateKey, candidate]) => ({
+        candidateKey,
+        evidence: eventIdentityEvidence(candidate, event)
+      })).filter(({ evidence }) => evidence);
+      if (possible.length > 0) {
+        const bestScore = Math.max(...possible.map(({ evidence }) => evidence.score));
+        const best = possible.filter(({ evidence }) => evidence.score === bestScore);
+        if (best.length === 1) key = best[0].candidateKey;
+      }
+    }
+    const existing = merged.get(key);
+    if (!existing) {
+      merged.set(key, event);
+      continue;
+    }
+    existing.broadcasts = mergeExactBroadcasts(existing.broadcasts, event.broadcasts);
+    existing.homeTeam ??= event.homeTeam;
+    existing.awayTeam ??= event.awayTeam;
+    existing.artworkUrl ??= event.artworkUrl;
+    existing.competition ??= event.competition;
+    existing.broadcasterEvidence ??= event.broadcasterEvidence;
+  }
+  return [...merged.values()];
 }
 
 export function selectEvents(events, maximum = MAX_EVENTS) {
@@ -121,6 +156,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
     const id = `tsdb-${sourceId}`;
     const event = eventsById.get(id) ?? {
       id,
+      sourceIds: { thesportsdb: sourceId },
       title,
       sport,
       startUtcEpochSeconds,
