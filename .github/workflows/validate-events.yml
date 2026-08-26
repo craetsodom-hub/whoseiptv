@@ -1,0 +1,58 @@
+name: Validate events feed
+
+on:
+  pull_request:
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - "tests/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-events-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Test feed rules
+        run: npm test
+
+      - name: Validate fixed-epoch feed determinism
+        shell: bash
+        run: |
+          epoch=$(node -p "JSON.parse(require('node:fs').readFileSync('feed/events/v1/events.json', 'utf8')).generatedAtEpochSeconds")
+          hash_before=$(git hash-object feed/events/v1/events.json)
+          now=$(date +%s)
+          if (( now - epoch <= 21600 && epoch - now <= 21600 )); then
+            SOURCE_DATE_EPOCH="$epoch" npm run build
+            test "$hash_before" = "$(git hash-object feed/events/v1/events.json)"
+          else
+            echo "Committed feed epoch is outside the supported fixed-epoch validation window; skipping."
+          fi
+
+      - name: Build validated feed
+        run: npm run build
+
+      - name: Audit broadcaster coverage
+        run: npm run coverage:broadcasts
+
+      - name: Check generated diff formatting
+        run: git diff --check
