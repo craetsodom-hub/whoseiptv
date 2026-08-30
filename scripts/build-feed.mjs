@@ -10,9 +10,13 @@ import { collectOfficialFootballEvents } from "./official-football.mjs";
 import { attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
 import { canonicalizeRegionalBroadcasts, collectAdaptersSafely, filterTrustedScheduleBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
 import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
+import { enrichTeamBadges } from "./team-badges.mjs";
+import { createCoverageReport } from "./coverage-report.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
+const coveragePath = resolve(projectRoot, "feed/events/v1/coverage.json");
+const badgeCachePath = resolve(projectRoot, "feed/events/v1/team-badges-cache.json");
 const aliasesPath = resolve(projectRoot, "config/channel-aliases.json");
 const footballCountriesPath = resolve(projectRoot, "config/football-countries.json");
 const sportCountriesPath = resolve(projectRoot, "config/sport-countries.json");
@@ -163,6 +167,7 @@ async function main() {
   }
   const dates = [utcDate(nowEpochSeconds, 0), utcDate(nowEpochSeconds, 1), utcDate(nowEpochSeconds, 2)];
   const records = [];
+  const sourceAttempts = [];
   let successfulRequests = 0;
   const jobs = dates.flatMap((date) => sports.flatMap((sport) =>
     (sport.id === "football" ? footballCountries : sportCountries[sport.id])
@@ -173,7 +178,9 @@ async function main() {
     try {
       records.push(...await fetchCountryDay(country, date, sport));
       successfulRequests += 1;
+      sourceAttempts.push({ sport: sport.id, territory: country.territory, date, status: "success" });
     } catch (error) {
+      sourceAttempts.push({ sport: sport.id, territory: country.territory, date, status: "failed" });
       console.error(`Source failed for ${sport.id}/${country.territory} on ${date}: ${error.message}`);
     }
     await wait(REQUEST_PACING_MS);
@@ -193,6 +200,12 @@ async function main() {
     }
     await wait(REQUEST_PACING_MS);
   }
+  const badgeStats = await enrichTeamBadges({
+    detailsByEvent,
+    cachePath: badgeCachePath,
+    fetchJson: async (teamId) => JSON.parse(await fetchWithCurlFallback(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupteam.php?id=${encodeURIComponent(teamId)}`, "application/json")),
+    onError: (teamId, error) => console.error(`Team badge lookup failed safely for ${teamId}: ${error.message}`)
+  });
 
   const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent, { select: false });
   try {
@@ -251,6 +264,8 @@ async function main() {
   const temporaryPath = `${outputPath}.tmp`;
   await writeFile(temporaryPath, `${JSON.stringify(feed, null, 2)}\n`, "utf8");
   await rename(temporaryPath, outputPath);
+  await writeFile(coveragePath, `${JSON.stringify(createCoverageReport(feed, sourceAttempts, nowEpochSeconds), null, 2)}\n`, "utf8");
+  console.log(`Resolved ${badgeStats.resolved} team badges (${badgeStats.cached} cached)`);
   console.log(`Published ${feed.events.length} multi-sport events from ${successfulRequests}/${totalRequests} successful requests`);
 }
 

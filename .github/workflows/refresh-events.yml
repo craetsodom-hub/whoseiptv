@@ -45,12 +45,12 @@ jobs:
       - name: Publish changed feed
         shell: bash
         run: |
-          if git diff --quiet -- feed/events/v1/events.json; then
+          if git diff --quiet -- feed/events/v1/events.json feed/events/v1/coverage.json feed/events/v1/team-badges-cache.json; then
             echo "Feed has not changed"
             exit 0
           fi
           git config user.name "whoseiptv-events-bot"
           git config user.email "whoseiptv-events-bot@users.noreply.github.com"
-          git add feed/events/v1/events.json
+          git add feed/events/v1/events.json feed/events/v1/coverage.json feed/events/v1/team-badges-cache.json
           git commit -m "chore: refresh sports events"
           git push

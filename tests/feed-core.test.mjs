@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { buildFeed, mergeBroadcastAssignments, mergeCollectedEvents, parseUtcTimestamp, validateFeed } from "../scripts/feed-core.mjs";
+import { createCoverageReport } from "../scripts/coverage-report.mjs";
 
 const now = 1_800_000_000;
 
@@ -155,4 +156,11 @@ test("accepts only trusted official artwork hosts", () => {
 
   validFeed.events[0].homeTeam.badgeUrl = "https://example.com/untrusted.svg";
   assert.throws(() => validateFeed(validFeed, now), /Invalid team artwork/);
+});
+
+test("coverage sidecar reports missing exact channels without inventing them", () => {
+  const feed = { events: [{ id: "one", title: "One vs Two", sport: "football", competition: "Italian Serie A", broadcasts: [] }] };
+  const report = createCoverageReport(feed, [{ sport: "football", territory: "IT", date: "2027-01-15", status: "success" }], now);
+  assert.equal(report.summary.topTierUnsupportedFixtures, 1);
+  assert.equal(report.gaps[0].id, "one");
 });
