@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788067285,
-  "validUntilEpochSeconds": 1788110485,
+  "generatedAtEpochSeconds": 1788090720,
+  "validUntilEpochSeconds": 1788133920,
   "events": [
     {
       "id": "sky-Arsenal-Chelsea-1788712200000",
@@ -1443,19 +1443,19 @@
       "competition": "FIBA Basketball World Cup"
     },
     {
-      "id": "tsdb-2470716",
+      "id": "tsdb-2417369",
       "sourceIds": {
-        "thesportsdb": "2470716"
+        "thesportsdb": "2417369"
       },
-      "title": "Wellington vs Counties Manukau",
+      "title": "Parramatta Eels vs Cronulla Sharks",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788055500,
+      "startUtcEpochSeconds": 1788069900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "BeIn Sports HD 1 France",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1466,20 +1466,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Wellington",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uw0qe01648907733.png",
+        "name": "Parramatta Eels",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5tvma21646347846.png",
         "sourceIds": {
-          "thesportsdb": "145944"
+          "thesportsdb": "135183"
         }
       },
       "awayTeam": {
-        "name": "Counties Manukau",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
+        "name": "Cronulla Sharks",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qn3n5r1552073088.png",
         "sourceIds": {
-          "thesportsdb": "145934"
+          "thesportsdb": "135184"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2578480",
@@ -2118,8 +2118,13 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN 4K",
-          "aliases": [],
+          "channelName": "beIN SPORTS 1",
+          "aliases": [
+            "beIN Sports HD 1",
+            "beIN Sports 1 HD",
+            "beIN Sports 1 FHD",
+            "MENA | beIN Sports 1"
+          ],
           "region": "Arabic",
           "displayRegion": "AR",
           "territories": [
@@ -2144,7 +2149,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -2293,48 +2298,6 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "beIN SPORTS 1",
-          "aliases": [
-            "beIN Sports HD 1",
-            "beIN Sports 1 HD",
-            "beIN Sports 1 FHD",
-            "MENA | beIN Sports 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
-          "verifiedAt": "2026-08-30",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "aliases": [
             "beIN Sports EN 1 HD",
@@ -2364,7 +2327,44 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "beIN 4K",
+          "aliases": [],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -3753,6 +3753,42 @@
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Canada",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Spain",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Italy",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -3772,31 +3808,19 @@
       "competition": "FIBA Basketball World Cup"
     },
     {
-      "id": "tsdb-2417368",
+      "id": "tsdb-2498570",
       "sourceIds": {
-        "thesportsdb": "2417368"
+        "thesportsdb": "2498570"
       },
-      "title": "New Zealand Warriors vs Newcastle Knights",
+      "title": "Boland Cavaliers vs Griquas",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788062400,
+      "startUtcEpochSeconds": 1788091200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "SuperSport Rugby",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-08-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Action",
-          "aliases": [],
-          "territory": "GB",
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3807,20 +3831,20 @@
         }
       ],
       "homeTeam": {
-        "name": "New Zealand Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w8b9kw1646347767.png",
+        "name": "Boland Cavaliers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/04o3ss1625358974.png",
         "sourceIds": {
-          "thesportsdb": "135193"
+          "thesportsdb": "142063"
         }
       },
       "awayTeam": {
-        "name": "Newcastle Knights",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/aes2o51646347790.png",
+        "name": "Griquas",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cv86da1651859337.png",
         "sourceIds": {
-          "thesportsdb": "135198"
+          "thesportsdb": "142070"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "Currie Cup"
     },
     {
       "id": "tsdb-2578481",
@@ -5349,45 +5373,6 @@
       "competition": "FIBA Basketball World Cup"
     },
     {
-      "id": "tsdb-2417369",
-      "sourceIds": {
-        "thesportsdb": "2417369"
-      },
-      "title": "Parramatta Eels vs Cronulla Sharks",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788069900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "BeIn Sports HD 1 France",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-08-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Parramatta Eels",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5tvma21646347846.png",
-        "sourceIds": {
-          "thesportsdb": "135183"
-        }
-      },
-      "awayTeam": {
-        "name": "Cronulla Sharks",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qn3n5r1552073088.png",
-        "sourceIds": {
-          "thesportsdb": "135184"
-        }
-      },
-      "competition": "Australian National Rugby League"
-    },
-    {
       "id": "sky-Manchester United-Ipswich Town-1788107400000",
       "title": "Manchester United vs Ipswich Town",
       "sport": "football",
@@ -6827,45 +6812,6 @@
       "competition": "FIBA Basketball World Cup"
     },
     {
-      "id": "tsdb-2498570",
-      "sourceIds": {
-        "thesportsdb": "2498570"
-      },
-      "title": "Boland Cavaliers vs Griquas",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788091200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "SuperSport Rugby",
-          "aliases": [],
-          "territory": "ZA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-08-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Boland Cavaliers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/04o3ss1625358974.png",
-        "sourceIds": {
-          "thesportsdb": "142063"
-        }
-      },
-      "awayTeam": {
-        "name": "Griquas",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cv86da1651859337.png",
-        "sourceIds": {
-          "thesportsdb": "142070"
-        }
-      },
-      "competition": "Currie Cup"
-    },
-    {
       "id": "tsdb-2506189",
       "sourceIds": {
         "thesportsdb": "2506189"
@@ -6907,7 +6853,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -6972,6 +6918,18 @@
           "destinationType": "service",
           "ruleType": "all-events",
           "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Sport Klub 1 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "Spíler2 HU",
@@ -10279,6 +10237,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "MagentaTV DE",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "BeIn Sports HD 3 France",
           "aliases": [],
           "territory": "FR",
@@ -10373,7 +10343,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -10456,6 +10426,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "TOD KSA",
+          "aliases": [],
+          "territory": "SA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Setanta Sports UA",
           "aliases": [],
           "territory": "UA",
@@ -10509,7 +10491,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -15165,7 +15147,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -16612,7 +16594,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -20792,7 +20774,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -20902,7 +20884,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -21301,7 +21283,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -23060,6 +23042,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Sport Klub 1 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Sport TV 1",
           "aliases": [],
           "territory": "PT",
@@ -23238,7 +23232,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-08-30",
           "exclusive": false,
           "destinationType": "linear",
@@ -23739,84 +23733,6 @@
       }
     },
     {
-      "id": "tsdb-2398440",
-      "sourceIds": {
-        "thesportsdb": "2398440"
-      },
-      "title": "Vasco da Gama vs Cruzeiro",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788049200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Canal 11 Portugal",
-          "aliases": [],
-          "territory": "PT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-08-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Vasco da Gama",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ynqlxo1630521109.png",
-        "sourceIds": {
-          "thesportsdb": "134282"
-        }
-      },
-      "awayTeam": {
-        "name": "Cruzeiro",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/upsvvu1473538059.png",
-        "sourceIds": {
-          "thesportsdb": "134294"
-        }
-      },
-      "competition": "Brazilian Serie A"
-    },
-    {
-      "id": "tsdb-2488639",
-      "sourceIds": {
-        "thesportsdb": "2488639"
-      },
-      "title": "Pérez Zeledón vs Alajuelense",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788055200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "FUTV CR",
-          "aliases": [],
-          "territory": "CR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-08-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Pérez Zeledón",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rbsepr1589122379.png",
-        "sourceIds": {
-          "thesportsdb": "139707"
-        }
-      },
-      "awayTeam": {
-        "name": "Alajuelense",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zi9ft21707630526.png",
-        "sourceIds": {
-          "thesportsdb": "139703"
-        }
-      },
-      "competition": "Costa-Rica Liga FPD"
-    },
-    {
       "id": "tsdb-2416536",
       "sourceIds": {
         "thesportsdb": "2416536"
@@ -23893,6 +23809,45 @@
         }
       },
       "competition": "Scottish Premier League"
+    },
+    {
+      "id": "tsdb-2511759",
+      "sourceIds": {
+        "thesportsdb": "2511759"
+      },
+      "title": "Darmstadt vs Hannover 96",
+      "sport": "football",
+      "startUtcEpochSeconds": 1788089400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Viaplay SE",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-08-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Darmstadt",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5f3dyd1608236981.png",
+        "sourceIds": {
+          "thesportsdb": "134693"
+        }
+      },
+      "awayTeam": {
+        "name": "Hannover 96",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tqpqqv1473454148.png",
+        "sourceIds": {
+          "thesportsdb": "133656"
+        }
+      },
+      "competition": "German 2. Bundesliga"
     },
     {
       "id": "tsdb-2511760",
