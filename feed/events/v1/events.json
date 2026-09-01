@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788287297,
-  "validUntilEpochSeconds": 1788330497,
+  "generatedAtEpochSeconds": 1788304627,
+  "validUntilEpochSeconds": 1788347827,
   "events": [
     {
       "id": "sky-Arsenal-Chelsea-1788712200000",
@@ -6906,6 +6906,19 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Movistar LALIGA",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+canonical-participant-alias",
+          "eventMatchConfidence": 170
+        },
+        {
           "channelName": "DAZN",
           "aliases": [
             "FR DAZN"
@@ -7042,6 +7055,11 @@
         }
       },
       "competition": "Spanish La Liga",
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": true
+      },
       "broadcastRights": [
         {
           "territory": "ES",
@@ -8067,81 +8085,6 @@
       ]
     },
     {
-      "id": "tsdb-2579098",
-      "sourceIds": {
-        "thesportsdb": "2579098"
-      },
-      "title": "Parma vs Cremonese",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788278400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Paramount+ AUS",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-01",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Novasports Prime",
-          "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-01",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 1 IE",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-01",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Mediaset Extra",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-01",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Cremonese",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6yiaxs1627406063.png",
-        "sourceIds": {
-          "thesportsdb": "134224"
-        }
-      },
-      "awayTeam": {
-        "name": "Parma",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6ng2vy1579708291.png",
-        "sourceIds": {
-          "thesportsdb": "135728"
-        }
-      },
-      "competition": "Coppa Italia"
-    },
-    {
       "id": "tsdb-2577931",
       "sourceIds": {
         "thesportsdb": "2577931"
@@ -8680,45 +8623,6 @@
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000A5N",
         "eventMatched": false
       }
-    },
-    {
-      "id": "tsdb-2528857",
-      "sourceIds": {
-        "thesportsdb": "2528857"
-      },
-      "title": "Bandırmaspor vs Antalyaspor",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788267600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TRT Spor TR",
-          "aliases": [],
-          "territory": "TR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-01",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Bandırmaspor",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/e4ynam1580904361.png",
-        "sourceIds": {
-          "thesportsdb": "138970"
-        }
-      },
-      "awayTeam": {
-        "name": "Antalyaspor",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vqoral1601669436.png",
-        "sourceIds": {
-          "thesportsdb": "133799"
-        }
-      },
-      "competition": "Turkish 1 Lig"
     },
     {
       "id": "tsdb-2493484",
@@ -10037,45 +9941,6 @@
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KO",
         "eventMatched": false
       }
-    },
-    {
-      "id": "tsdb-2572746",
-      "sourceIds": {
-        "thesportsdb": "2572746"
-      },
-      "title": "Austria Wien Women vs Brann Women",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788278400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ORF Eins",
-          "aliases": [],
-          "territory": "AT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-01",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Austria Wien Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lttz761781996257.png",
-        "sourceIds": {
-          "thesportsdb": "146457"
-        }
-      },
-      "awayTeam": {
-        "name": "Brann Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yn1xoy1642445833.png",
-        "sourceIds": {
-          "thesportsdb": "144944"
-        }
-      },
-      "competition": "UEFA Womens Champions League"
     },
     {
       "id": "tsdb-2572753",
