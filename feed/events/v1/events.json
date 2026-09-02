@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788323383,
-  "validUntilEpochSeconds": 1788366583,
+  "generatedAtEpochSeconds": 1788347676,
+  "validUntilEpochSeconds": 1788390876,
   "events": [
     {
       "id": "sky-Arsenal-Chelsea-1788712200000",
@@ -2168,7 +2168,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
           "verifiedAt": "2026-09-02",
           "exclusive": false,
           "destinationType": "linear",
@@ -2236,6 +2236,30 @@
           "channelName": "Stöð 2 Sport IS",
           "aliases": [],
           "territory": "IS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sport Calcio",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "HBO Max Mexico",
+          "aliases": [],
+          "territory": "MX",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2348,7 +2372,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
           "verifiedAt": "2026-09-02",
           "exclusive": false,
           "destinationType": "linear",
@@ -2388,7 +2412,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
           "verifiedAt": "2026-09-02",
           "exclusive": false,
           "destinationType": "linear",
@@ -3895,7 +3919,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
           "verifiedAt": "2026-09-02",
           "exclusive": false,
           "destinationType": "linear",
@@ -4382,6 +4406,18 @@
       "startUtcEpochSeconds": 1788535800,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "DAZN Italy",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "S Sport+",
           "aliases": [],
@@ -5851,19 +5887,31 @@
       "competition": "New Zealand National Provincial Championship"
     },
     {
-      "id": "tsdb-2467613",
+      "id": "tsdb-2467616",
       "sourceIds": {
-        "thesportsdb": "2467613"
+        "thesportsdb": "2467616"
       },
-      "title": "Hungary Basketball Women vs France Basketball Women",
+      "title": "Spain Basketball Women vs Germany Basketball Women",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1788548400,
+      "startUtcEpochSeconds": 1788536700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MagentaTV DE",
+          "channelName": "DAZN Canada",
           "aliases": [],
-          "territory": "DE",
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Movistar #Vamos",
+          "aliases": [],
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5874,17 +5922,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Hungary Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70oiw41651192951.png",
+        "name": "Spain Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
         "sourceIds": {
-          "thesportsdb": "146128"
+          "thesportsdb": "141533"
         }
       },
       "awayTeam": {
-        "name": "France Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j149lk1623962465.png",
+        "name": "Germany Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yqxj3m1651192940.png",
         "sourceIds": {
-          "thesportsdb": "141525"
+          "thesportsdb": "146126"
         }
       },
       "competition": "FIBA Womens World Cup"
@@ -7339,6 +7387,45 @@
         }
       },
       "competition": "Australian National Rugby League"
+    },
+    {
+      "id": "tsdb-2467613",
+      "sourceIds": {
+        "thesportsdb": "2467613"
+      },
+      "title": "Hungary Basketball Women vs France Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1788548400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "MagentaTV DE",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Hungary Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70oiw41651192951.png",
+        "sourceIds": {
+          "thesportsdb": "146128"
+        }
+      },
+      "awayTeam": {
+        "name": "France Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j149lk1623962465.png",
+        "sourceIds": {
+          "thesportsdb": "141525"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
     },
     {
       "id": "sky-Hull City-Aston Villa-1788629400000",
@@ -9845,6 +9932,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Viaplay SE",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "BeIn Sports USA",
           "aliases": [],
           "territory": "US",
@@ -10911,6 +11010,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Sportbox.ru",
+          "aliases": [],
+          "territory": "RU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Arena Sport 1 SI",
           "aliases": [],
           "territory": "SI",
@@ -11066,6 +11177,30 @@
           "channelName": "Polsat Sport 2",
           "aliases": [],
           "territory": "PL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sportbox.ru",
+          "aliases": [],
+          "territory": "RU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "True Premier Football HD 4",
+          "aliases": [],
+          "territory": "TH",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -11562,6 +11697,18 @@
       "startUtcEpochSeconds": 1788453000,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "Band Sports",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-02",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "Movistar #Vamos",
           "aliases": [],
