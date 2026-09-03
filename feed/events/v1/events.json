@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788433822,
-  "validUntilEpochSeconds": 1788477022,
+  "generatedAtEpochSeconds": 1788452628,
+  "validUntilEpochSeconds": 1788495828,
   "events": [
     {
       "id": "sky-Arsenal-Chelsea-1788712200000",
@@ -1467,19 +1467,31 @@
       "competition": "Caribbean Premier League"
     },
     {
-      "id": "tsdb-2470718",
+      "id": "tsdb-2396016",
       "sourceIds": {
-        "thesportsdb": "2470718"
+        "thesportsdb": "2396016"
       },
-      "title": "Taranaki vs Auckland",
+      "title": "Bradford Bulls vs Castleford Tigers",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788419400,
+      "startUtcEpochSeconds": 1788462000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "SportsNet World",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sports Action",
+          "aliases": [],
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1490,20 +1502,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Taranaki",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y4qamm1648907716.png",
+        "name": "Bradford Bulls",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mm5kx11764710149.png",
         "sourceIds": {
-          "thesportsdb": "145942"
+          "thesportsdb": "137398"
         }
       },
       "awayTeam": {
-        "name": "Auckland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by4lk71694617222.png",
+        "name": "Castleford Tigers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/euqty81761164375.png",
         "sourceIds": {
-          "thesportsdb": "145931"
+          "thesportsdb": "135211"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "English Rugby League Super League"
     },
     {
       "id": "tsdb-2467611",
@@ -2171,43 +2183,19 @@
       "competition": "Italian Serie A"
     },
     {
-      "id": "tsdb-2417370",
+      "id": "tsdb-2470719",
       "sourceIds": {
-        "thesportsdb": "2417370"
+        "thesportsdb": "2470719"
       },
-      "title": "Canterbury Bankstown Bulldogs vs Brisbane Broncos",
+      "title": "Hawkes Bay vs Otago",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788429000,
+      "startUtcEpochSeconds": 1788505800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports HD 1 France",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fox Soccer Plus",
-          "aliases": [],
-          "territory": "US",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2218,20 +2206,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Canterbury Bankstown Bulldogs",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vaq0n31646347699.png",
+        "name": "Hawkes Bay",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n2ut6h1648907665.png",
         "sourceIds": {
-          "thesportsdb": "135187"
+          "thesportsdb": "145935"
         }
       },
       "awayTeam": {
-        "name": "Brisbane Broncos",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dnj6uw1646347648.png",
+        "name": "Otago",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6onld01694618136.png",
         "sourceIds": {
-          "thesportsdb": "135191"
+          "thesportsdb": "145939"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "tsdb-2467617",
@@ -2309,7 +2297,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -2525,7 +2513,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -2565,7 +2553,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -3934,19 +3922,19 @@
       ]
     },
     {
-      "id": "tsdb-2396016",
+      "id": "tsdb-2417371",
       "sourceIds": {
-        "thesportsdb": "2396016"
+        "thesportsdb": "2417371"
       },
-      "title": "Bradford Bulls vs Castleford Tigers",
+      "title": "Gold Coast Titans vs Dolphins",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788462000,
+      "startUtcEpochSeconds": 1788508800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet World",
+          "channelName": "FOX League",
           "aliases": [],
-          "territory": "CA",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3956,9 +3944,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Sky Sports Action",
+          "channelName": "Fox Soccer Plus",
           "aliases": [],
-          "territory": "GB",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3969,20 +3957,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Bradford Bulls",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mm5kx11764710149.png",
+        "name": "Gold Coast Titans",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4qqmp81646347724.png",
         "sourceIds": {
-          "thesportsdb": "137398"
+          "thesportsdb": "135194"
         }
       },
       "awayTeam": {
-        "name": "Castleford Tigers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/euqty81761164375.png",
+        "name": "Dolphins",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tyoy421672068536.png",
         "sourceIds": {
-          "thesportsdb": "135211"
+          "thesportsdb": "147022"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2467618",
@@ -4072,7 +4060,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -4499,19 +4487,19 @@
       ]
     },
     {
-      "id": "tsdb-2470719",
+      "id": "tsdb-2417372",
       "sourceIds": {
-        "thesportsdb": "2470719"
+        "thesportsdb": "2417372"
       },
-      "title": "Hawkes Bay vs Otago",
+      "title": "South Sydney Rabbitohs vs Sydney Roosters",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788505800,
+      "startUtcEpochSeconds": 1788516000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "BeIn Sports HD 1 France",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -4522,20 +4510,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Hawkes Bay",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n2ut6h1648907665.png",
+        "name": "South Sydney Rabbitohs",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0m4unp1552072677.png",
         "sourceIds": {
-          "thesportsdb": "145935"
+          "thesportsdb": "135185"
         }
       },
       "awayTeam": {
-        "name": "Otago",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6onld01694618136.png",
+        "name": "Sydney Roosters",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
         "sourceIds": {
-          "thesportsdb": "145939"
+          "thesportsdb": "135192"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2467616",
@@ -5989,19 +5977,19 @@
       ]
     },
     {
-      "id": "tsdb-2417371",
+      "id": "tsdb-2396019",
       "sourceIds": {
-        "thesportsdb": "2417371"
+        "thesportsdb": "2396019"
       },
-      "title": "Gold Coast Titans vs Dolphins",
+      "title": "Leigh Leopards vs St Helens",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788508800,
+      "startUtcEpochSeconds": 1788548400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "SportsNet World",
           "aliases": [],
-          "territory": "AU",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -6011,9 +5999,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Fox Soccer Plus",
+          "channelName": "Sky Sports Action",
           "aliases": [],
-          "territory": "US",
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -6024,20 +6012,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Gold Coast Titans",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4qqmp81646347724.png",
+        "name": "Leigh Leopards",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qjmky21673549784.png",
         "sourceIds": {
-          "thesportsdb": "135194"
+          "thesportsdb": "137396"
         }
       },
       "awayTeam": {
-        "name": "Dolphins",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tyoy421672068536.png",
+        "name": "St Helens",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xolesg1706620870.png",
         "sourceIds": {
-          "thesportsdb": "147022"
+          "thesportsdb": "135218"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "English Rugby League Super League"
     },
     {
       "id": "tsdb-2467613",
@@ -6120,7 +6108,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -6172,7 +6160,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -7541,19 +7529,19 @@
       ]
     },
     {
-      "id": "tsdb-2417372",
+      "id": "tsdb-2470720",
       "sourceIds": {
-        "thesportsdb": "2417372"
+        "thesportsdb": "2470720"
       },
-      "title": "South Sydney Rabbitohs vs Sydney Roosters",
+      "title": "Bay of Plenty vs Manawatu",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788516000,
+      "startUtcEpochSeconds": 1788573900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 1 France",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "FR",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -7564,20 +7552,20 @@
         }
       ],
       "homeTeam": {
-        "name": "South Sydney Rabbitohs",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0m4unp1552072677.png",
+        "name": "Bay of Plenty",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
         "sourceIds": {
-          "thesportsdb": "135185"
+          "thesportsdb": "145932"
         }
       },
       "awayTeam": {
-        "name": "Sydney Roosters",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
+        "name": "Manawatu",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzis9i1694618120.png",
         "sourceIds": {
-          "thesportsdb": "135192"
+          "thesportsdb": "145936"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "tsdb-2467621",
@@ -9055,19 +9043,19 @@
       ]
     },
     {
-      "id": "tsdb-2396019",
+      "id": "tsdb-2496232",
       "sourceIds": {
-        "thesportsdb": "2396019"
+        "thesportsdb": "2496232"
       },
-      "title": "Leigh Leopards vs St Helens",
+      "title": "South Africa Rugby vs New Zealand Rugby",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788548400,
+      "startUtcEpochSeconds": 1788620700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet World",
+          "channelName": "Stan Sport AU",
           "aliases": [],
-          "territory": "CA",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -9087,23 +9075,47 @@
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Wowow JP",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SuperSport Grandstand",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Leigh Leopards",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qjmky21673549784.png",
+        "name": "South Africa Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
         "sourceIds": {
-          "thesportsdb": "137396"
+          "thesportsdb": "137137"
         }
       },
       "awayTeam": {
-        "name": "St Helens",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xolesg1706620870.png",
+        "name": "New Zealand Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
         "sourceIds": {
-          "thesportsdb": "135218"
+          "thesportsdb": "137133"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "Rugby Union International Friendlies"
     },
     {
       "id": "tsdb-2467620",
@@ -9181,7 +9193,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -9584,19 +9596,19 @@
       ]
     },
     {
-      "id": "tsdb-2470720",
+      "id": "tsdb-2550370",
       "sourceIds": {
-        "thesportsdb": "2470720"
+        "thesportsdb": "2550370"
       },
-      "title": "Bay of Plenty vs Manawatu",
+      "title": "Montpellier Hérault Rugby vs Section Paloise",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788573900,
+      "startUtcEpochSeconds": 1788627900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "MultiSports 5 FR",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -9607,20 +9619,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Bay of Plenty",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
+        "name": "Montpellier Hérault Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
         "sourceIds": {
-          "thesportsdb": "145932"
+          "thesportsdb": "135334"
         }
       },
       "awayTeam": {
-        "name": "Manawatu",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzis9i1694618120.png",
+        "name": "Section Paloise",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
         "sourceIds": {
-          "thesportsdb": "145936"
+          "thesportsdb": "137384"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2467619",
@@ -9715,7 +9727,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -9767,7 +9779,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -11136,55 +11148,19 @@
       ]
     },
     {
-      "id": "tsdb-2496232",
+      "id": "tsdb-2396022",
       "sourceIds": {
-        "thesportsdb": "2496232"
+        "thesportsdb": "2396022"
       },
-      "title": "South Africa Rugby vs New Zealand Rugby",
+      "title": "Leeds Rhinos vs Wigan Warriors",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788620700,
+      "startUtcEpochSeconds": 1788634800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stan Sport AU",
+          "channelName": "SportsNet World",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Action",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Wowow JP",
-          "aliases": [],
-          "territory": "JP",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SuperSport Grandstand",
-          "aliases": [],
-          "territory": "ZA",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -11195,20 +11171,20 @@
         }
       ],
       "homeTeam": {
-        "name": "South Africa Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
+        "name": "Leeds Rhinos",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryqwvv1447875742.png",
         "sourceIds": {
-          "thesportsdb": "137137"
+          "thesportsdb": "135216"
         }
       },
       "awayTeam": {
-        "name": "New Zealand Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
+        "name": "Wigan Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
         "sourceIds": {
-          "thesportsdb": "137133"
+          "thesportsdb": "135222"
         }
       },
-      "competition": "Rugby Union International Friendlies"
+      "competition": "English Rugby League Super League"
     },
     {
       "id": "sky-Hull City-Aston Villa-1788629400000",
@@ -12611,45 +12587,6 @@
       ]
     },
     {
-      "id": "tsdb-2550370",
-      "sourceIds": {
-        "thesportsdb": "2550370"
-      },
-      "title": "Montpellier Hérault Rugby vs Section Paloise",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788627900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "MultiSports 5 FR",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Montpellier Hérault Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
-        "sourceIds": {
-          "thesportsdb": "135334"
-        }
-      },
-      "awayTeam": {
-        "name": "Section Paloise",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
-        "sourceIds": {
-          "thesportsdb": "137384"
-        }
-      },
-      "competition": "French Top 14"
-    },
-    {
       "id": "l1_championship_match_73845",
       "title": "Paris Saint-Germain vs AS Monaco",
       "sport": "football",
@@ -12720,45 +12657,6 @@
           "season": "2026/27"
         }
       ]
-    },
-    {
-      "id": "tsdb-2396022",
-      "sourceIds": {
-        "thesportsdb": "2396022"
-      },
-      "title": "Leeds Rhinos vs Wigan Warriors",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788634800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "SportsNet World",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Leeds Rhinos",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryqwvv1447875742.png",
-        "sourceIds": {
-          "thesportsdb": "135216"
-        }
-      },
-      "awayTeam": {
-        "name": "Wigan Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
-        "sourceIds": {
-          "thesportsdb": "135222"
-        }
-      },
-      "competition": "English Rugby League Super League"
     },
     {
       "id": "tsdb-2508345",
@@ -13719,7 +13617,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -15136,7 +15034,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -16565,7 +16463,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-03",
           "exclusive": false,
           "destinationType": "linear",
@@ -21395,6 +21293,74 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KS",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009KW",
+      "title": "CF Montréal vs Charlotte FC",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1788996600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "CF Montréal",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Charlotte FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KW",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KW",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009KY",
+      "title": "Philadelphia Union vs FC Cincinnati",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1788996600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Philadelphia Union",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "FC Cincinnati",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KY",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KY",
         "eventMatched": false
       }
     }
