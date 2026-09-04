@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788520484,
-  "validUntilEpochSeconds": 1788563684,
+  "generatedAtEpochSeconds": 1788538760,
+  "validUntilEpochSeconds": 1788581960,
   "events": [
     {
       "id": "tsdb-2494022",
@@ -45,7 +45,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -199,7 +199,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -1568,19 +1568,58 @@
       ]
     },
     {
-      "id": "tsdb-2467611",
+      "id": "tsdb-2467617",
       "sourceIds": {
-        "thesportsdb": "2467611"
+        "thesportsdb": "2467617"
       },
-      "title": "Australia Basketball Women vs Puerto Rico Basketball Women",
+      "title": "United States Basketball Women vs China Basketball Women",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1788514200,
+      "startUtcEpochSeconds": 1788524100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN Australia",
+          "channelName": "Arena Sport 1 SI",
           "aliases": [],
-          "territory": "AU",
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "United States Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/80q44q1770921523.png",
+        "sourceIds": {
+          "thesportsdb": "141514"
+        }
+      },
+      "awayTeam": {
+        "name": "China Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rkcklk1704629807.png",
+        "sourceIds": {
+          "thesportsdb": "146113"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
+    },
+    {
+      "id": "tsdb-2396019",
+      "sourceIds": {
+        "thesportsdb": "2396019"
+      },
+      "title": "Leigh Leopards vs St Helens",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1788548400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "SportsNet World",
+          "aliases": [],
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1590,9 +1629,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "BeIn Sports HD 2 France",
+          "channelName": "Sky Sports Action",
           "aliases": [],
-          "territory": "FR",
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1603,59 +1642,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Australia Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1do1hl1704638641.png",
+        "name": "Leigh Leopards",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qjmky21673549784.png",
         "sourceIds": {
-          "thesportsdb": "146112"
+          "thesportsdb": "137396"
         }
       },
       "awayTeam": {
-        "name": "Puerto Rico Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rjx8lu1623964414.png",
+        "name": "St Helens",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xolesg1706620870.png",
         "sourceIds": {
-          "thesportsdb": "141513"
+          "thesportsdb": "135218"
         }
       },
-      "competition": "FIBA Womens World Cup"
-    },
-    {
-      "id": "tsdb-2470719",
-      "sourceIds": {
-        "thesportsdb": "2470719"
-      },
-      "title": "Hawkes Bay vs Otago",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788505800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TVNZ+",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Hawkes Bay",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n2ut6h1648907665.png",
-        "sourceIds": {
-          "thesportsdb": "145935"
-        }
-      },
-      "awayTeam": {
-        "name": "Otago",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6onld01694618136.png",
-        "sourceIds": {
-          "thesportsdb": "145939"
-        }
-      },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "English Rugby League Super League"
     },
     {
       "id": "tsdb-2578486",
@@ -3701,135 +3701,6 @@
       ]
     },
     {
-      "id": "tsdb-2467617",
-      "sourceIds": {
-        "thesportsdb": "2467617"
-      },
-      "title": "United States Basketball Women vs China Basketball Women",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1788524100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Arena Sport 1 SI",
-          "aliases": [],
-          "territory": "SI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "United States Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/80q44q1770921523.png",
-        "sourceIds": {
-          "thesportsdb": "141514"
-        }
-      },
-      "awayTeam": {
-        "name": "China Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rkcklk1704629807.png",
-        "sourceIds": {
-          "thesportsdb": "146113"
-        }
-      },
-      "competition": "FIBA Womens World Cup"
-    },
-    {
-      "id": "tsdb-2417371",
-      "sourceIds": {
-        "thesportsdb": "2417371"
-      },
-      "title": "Gold Coast Titans vs Dolphins",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788508800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "FOX League",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fox Soccer Plus",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Gold Coast Titans",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4qqmp81646347724.png",
-        "sourceIds": {
-          "thesportsdb": "135194"
-        }
-      },
-      "awayTeam": {
-        "name": "Dolphins",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tyoy421672068536.png",
-        "sourceIds": {
-          "thesportsdb": "147022"
-        }
-      },
-      "competition": "Australian National Rugby League"
-    },
-    {
-      "id": "tsdb-2482165",
-      "sourceIds": {
-        "thesportsdb": "2482165"
-      },
-      "title": "Inter Milan vs Napoli",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788624000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "True Premier Football HD 3",
-          "aliases": [],
-          "territory": "TH",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Inter Milan",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryhu6d1617113103.png",
-        "sourceIds": {
-          "thesportsdb": "133681"
-        }
-      },
-      "awayTeam": {
-        "name": "Napoli",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l8qyxv1742982541.png",
-        "sourceIds": {
-          "thesportsdb": "133670"
-        }
-      },
-      "competition": "Italian Serie A"
-    },
-    {
       "id": "tsdb-2467618",
       "sourceIds": {
         "thesportsdb": "2467618"
@@ -3953,19 +3824,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2417372",
+      "id": "tsdb-2470720",
       "sourceIds": {
-        "thesportsdb": "2417372"
+        "thesportsdb": "2470720"
       },
-      "title": "South Sydney Rabbitohs vs Sydney Roosters",
+      "title": "Bay of Plenty vs Manawatu",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788516000,
+      "startUtcEpochSeconds": 1788573900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 1 France",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "FR",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3976,20 +3847,185 @@
         }
       ],
       "homeTeam": {
-        "name": "South Sydney Rabbitohs",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0m4unp1552072677.png",
+        "name": "Bay of Plenty",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
         "sourceIds": {
-          "thesportsdb": "135185"
+          "thesportsdb": "145932"
         }
       },
       "awayTeam": {
-        "name": "Sydney Roosters",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
+        "name": "Manawatu",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzis9i1694618120.png",
         "sourceIds": {
-          "thesportsdb": "135192"
+          "thesportsdb": "145936"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "New Zealand National Provincial Championship"
+    },
+    {
+      "id": "tsdb-2482165",
+      "sourceIds": {
+        "thesportsdb": "2482165"
+      },
+      "title": "Inter Milan vs Napoli",
+      "sport": "football",
+      "startUtcEpochSeconds": 1788624000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "True Premier Football HD 3",
+          "aliases": [],
+          "territory": "TH",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Inter Milan",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryhu6d1617113103.png",
+        "sourceIds": {
+          "thesportsdb": "133681"
+        }
+      },
+      "awayTeam": {
+        "name": "Napoli",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l8qyxv1742982541.png",
+        "sourceIds": {
+          "thesportsdb": "133670"
+        }
+      },
+      "competition": "Italian Serie A"
+    },
+    {
+      "id": "tsdb-2467616",
+      "sourceIds": {
+        "thesportsdb": "2467616"
+      },
+      "title": "Spain Basketball Women vs Germany Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1788536700,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Canada",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Movistar #Vamos",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Spain Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
+        "sourceIds": {
+          "thesportsdb": "141533"
+        }
+      },
+      "awayTeam": {
+        "name": "Germany Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yqxj3m1651192940.png",
+        "sourceIds": {
+          "thesportsdb": "146126"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
+    },
+    {
+      "id": "tsdb-2496232",
+      "sourceIds": {
+        "thesportsdb": "2496232"
+      },
+      "title": "South Africa Rugby vs New Zealand Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1788620700,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Stan Sport AU",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sports Action",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Wowow JP",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SuperSport Grandstand",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "South Africa Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
+        "sourceIds": {
+          "thesportsdb": "137137"
+        }
+      },
+      "awayTeam": {
+        "name": "New Zealand Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
+        "sourceIds": {
+          "thesportsdb": "137133"
+        }
+      },
+      "competition": "Rugby Union International Friendlies"
     },
     {
       "id": "tsdb-2494027",
@@ -4028,7 +4064,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -4244,7 +4280,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -4284,7 +4320,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -5653,31 +5689,19 @@
       ]
     },
     {
-      "id": "tsdb-2467616",
+      "id": "tsdb-2467613",
       "sourceIds": {
-        "thesportsdb": "2467616"
+        "thesportsdb": "2467613"
       },
-      "title": "Spain Basketball Women vs Germany Basketball Women",
+      "title": "Hungary Basketball Women vs France Basketball Women",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1788536700,
+      "startUtcEpochSeconds": 1788548400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Canada",
+          "channelName": "MagentaTV DE",
           "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Movistar #Vamos",
-          "aliases": [],
-          "territory": "ES",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5688,47 +5712,35 @@
         }
       ],
       "homeTeam": {
-        "name": "Spain Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
+        "name": "Hungary Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70oiw41651192951.png",
         "sourceIds": {
-          "thesportsdb": "141533"
+          "thesportsdb": "146128"
         }
       },
       "awayTeam": {
-        "name": "Germany Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yqxj3m1651192940.png",
+        "name": "France Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j149lk1623962465.png",
         "sourceIds": {
-          "thesportsdb": "146126"
+          "thesportsdb": "141525"
         }
       },
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2396019",
+      "id": "tsdb-2550369",
       "sourceIds": {
-        "thesportsdb": "2396019"
+        "thesportsdb": "2550369"
       },
-      "title": "Leigh Leopards vs St Helens",
+      "title": "Castres Olympique vs Vannes",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788548400,
+      "startUtcEpochSeconds": 1788627900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet World",
+          "channelName": "Premier Sports 1 IE",
           "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Action",
-          "aliases": [],
-          "territory": "GB",
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5739,20 +5751,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Leigh Leopards",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qjmky21673549784.png",
+        "name": "Castres Olympique",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
         "sourceIds": {
-          "thesportsdb": "137396"
+          "thesportsdb": "135331"
         }
       },
       "awayTeam": {
-        "name": "St Helens",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xolesg1706620870.png",
+        "name": "Vannes",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/foy0571694603578.png",
         "sourceIds": {
-          "thesportsdb": "135218"
+          "thesportsdb": "144865"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2506205",
@@ -5791,7 +5803,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -6236,13 +6248,13 @@
       ]
     },
     {
-      "id": "tsdb-2467613",
+      "id": "tsdb-2467621",
       "sourceIds": {
-        "thesportsdb": "2467613"
+        "thesportsdb": "2467621"
       },
-      "title": "Hungary Basketball Women vs France Basketball Women",
+      "title": "Mali Basketball Women vs Spain Basketball Women",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1788548400,
+      "startUtcEpochSeconds": 1788600600,
       "status": "confirmed",
       "broadcasts": [
         {
@@ -6256,38 +6268,47 @@
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Hungary Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70oiw41651192951.png",
-        "sourceIds": {
-          "thesportsdb": "146128"
-        }
-      },
-      "awayTeam": {
-        "name": "France Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j149lk1623962465.png",
-        "sourceIds": {
-          "thesportsdb": "141525"
-        }
-      },
-      "competition": "FIBA Womens World Cup"
-    },
-    {
-      "id": "tsdb-2470720",
-      "sourceIds": {
-        "thesportsdb": "2470720"
-      },
-      "title": "Bay of Plenty vs Manawatu",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788573900,
-      "status": "confirmed",
-      "broadcasts": [
+        },
         {
-          "channelName": "TVNZ+",
+          "channelName": "Movistar #Vamos",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 1 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 1 SI",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN US",
+          "aliases": [],
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -6298,20 +6319,59 @@
         }
       ],
       "homeTeam": {
-        "name": "Bay of Plenty",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
+        "name": "Mali Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s5kszr1726931094.png",
         "sourceIds": {
-          "thesportsdb": "145932"
+          "thesportsdb": "146115"
         }
       },
       "awayTeam": {
-        "name": "Manawatu",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzis9i1694618120.png",
+        "name": "Spain Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
         "sourceIds": {
-          "thesportsdb": "145936"
+          "thesportsdb": "141533"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "FIBA Womens World Cup"
+    },
+    {
+      "id": "tsdb-2550370",
+      "sourceIds": {
+        "thesportsdb": "2550370"
+      },
+      "title": "Montpellier Hérault Rugby vs Section Paloise",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1788627900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "MultiSports 5 FR",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Montpellier Hérault Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
+        "sourceIds": {
+          "thesportsdb": "135334"
+        }
+      },
+      "awayTeam": {
+        "name": "Section Paloise",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
+        "sourceIds": {
+          "thesportsdb": "137384"
+        }
+      },
+      "competition": "French Top 14"
     },
     {
       "id": "sky-Ipswich Town-Liverpool-1788552000000",
@@ -7714,1630 +7774,6 @@
       ]
     },
     {
-      "id": "tsdb-2467621",
-      "sourceIds": {
-        "thesportsdb": "2467621"
-      },
-      "title": "Mali Basketball Women vs Spain Basketball Women",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1788600600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "MagentaTV DE",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Movistar #Vamos",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport 1 RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport 1 SI",
-          "aliases": [],
-          "territory": "SI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN US",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Mali Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s5kszr1726931094.png",
-        "sourceIds": {
-          "thesportsdb": "146115"
-        }
-      },
-      "awayTeam": {
-        "name": "Spain Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
-        "sourceIds": {
-          "thesportsdb": "141533"
-        }
-      },
-      "competition": "FIBA Womens World Cup"
-    },
-    {
-      "id": "tsdb-2496232",
-      "sourceIds": {
-        "thesportsdb": "2496232"
-      },
-      "title": "South Africa Rugby vs New Zealand Rugby",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788620700,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Stan Sport AU",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Action",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Wowow JP",
-          "aliases": [],
-          "territory": "JP",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SuperSport Grandstand",
-          "aliases": [],
-          "territory": "ZA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "South Africa Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
-        "sourceIds": {
-          "thesportsdb": "137137"
-        }
-      },
-      "awayTeam": {
-        "name": "New Zealand Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
-        "sourceIds": {
-          "thesportsdb": "137133"
-        }
-      },
-      "competition": "Rugby Union International Friendlies"
-    },
-    {
-      "id": "tsdb-2494024",
-      "sourceIds": {
-        "thesportsdb": "2494024"
-      },
-      "title": "Manchester City vs Coventry City",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788616800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "beIN SPORTS 1",
-          "aliases": [
-            "beIN Sports HD 1",
-            "beIN Sports 1 HD",
-            "beIN Sports 1 FHD",
-            "MENA | beIN Sports 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:canonical-participant-alias+exact-normalized-participant",
-          "eventMatchConfidence": 170
-        },
-        {
-          "channelName": "Sky Sport Calcio",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS EN 1",
-          "aliases": [
-            "beIN Sports EN 1 HD",
-            "MENA | beIN Sports EN 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:canonical-participant-alias+exact-normalized-participant",
-          "eventMatchConfidence": 170
-        }
-      ],
-      "homeTeam": {
-        "name": "Manchester City",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vwpvry1467462651.png",
-        "sourceIds": {
-          "thesportsdb": "133613"
-        }
-      },
-      "awayTeam": {
-        "name": "Coventry City",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uxyqys1424033798.png",
-        "sourceIds": {
-          "thesportsdb": "133625"
-        }
-      },
-      "competition": "English Premier League",
-      "broadcastRights": [
-        {
-          "territory": "GB",
-          "holders": [
-            {
-              "name": "Sky Sports",
-              "kind": "network"
-            },
-            {
-              "name": "TNT Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ES",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "FR",
-          "holders": [
-            {
-              "name": "CANAL+",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DE",
-          "holders": [
-            {
-              "name": "Sky Deutschland",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AT",
-          "holders": [
-            {
-              "name": "Sky Deutschland",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IT",
-          "holders": [
-            {
-              "name": "Sky Italia",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PT",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TR",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BH",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DZ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "EG",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IQ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "JO",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KW",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LB",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "OM",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PS",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "QA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TN",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "YE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AO",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BF",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BI",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BJ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CD",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CF",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CI",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CV",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DJ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ER",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ET",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GA",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GH",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GN",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GQ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KE",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LR",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LS",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ML",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MR",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MU",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MZ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NA",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NE",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "RW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SC",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SD",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SL",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SN",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SO",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SS",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ST",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SZ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TD",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TZ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "UG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ZA",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ZM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ZW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "NBC Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CA",
-          "holders": [
-            {
-              "name": "Fubo",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AU",
-          "holders": [
-            {
-              "name": "Stan Sport",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BR",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AR",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BO",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CL",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CO",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "EC",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GY",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PE",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PY",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SR",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "UY",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        },
-        {
-          "territory": "VE",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2025-08-01",
-          "validThrough": "2028-07-31",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
       "id": "tsdb-2467620",
       "sourceIds": {
         "thesportsdb": "2467620"
@@ -9377,19 +7813,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2550369",
+      "id": "tsdb-2396022",
       "sourceIds": {
-        "thesportsdb": "2550369"
+        "thesportsdb": "2396022"
       },
-      "title": "Castres Olympique vs Vannes",
+      "title": "Leeds Rhinos vs Wigan Warriors",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788627900,
+      "startUtcEpochSeconds": 1788634800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Premier Sports 1 IE",
+          "channelName": "SportsNet World",
           "aliases": [],
-          "territory": "IE",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -9400,31 +7836,83 @@
         }
       ],
       "homeTeam": {
-        "name": "Castres Olympique",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
+        "name": "Leeds Rhinos",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryqwvv1447875742.png",
         "sourceIds": {
-          "thesportsdb": "135331"
+          "thesportsdb": "135216"
         }
       },
       "awayTeam": {
-        "name": "Vannes",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/foy0571694603578.png",
+        "name": "Wigan Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
         "sourceIds": {
-          "thesportsdb": "144865"
+          "thesportsdb": "135222"
         }
       },
-      "competition": "French Top 14"
+      "competition": "English Rugby League Super League"
     },
     {
-      "id": "tsdb-2494023",
+      "id": "tsdb-2494024",
       "sourceIds": {
-        "thesportsdb": "2494023"
+        "thesportsdb": "2494024"
       },
-      "title": "Everton vs Manchester United",
+      "title": "Manchester City vs Coventry City",
       "sport": "football",
-      "startUtcEpochSeconds": 1788699600,
+      "startUtcEpochSeconds": 1788616800,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "beIN SPORTS EN 1",
+          "aliases": [
+            "beIN Sports EN 1 HD",
+            "MENA | beIN Sports EN 1"
+          ],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:canonical-participant-alias+exact-normalized-participant",
+          "eventMatchConfidence": 170
+        },
+        {
+          "channelName": "Sky Sport Calcio",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "beIN SPORTS 1",
           "aliases": [
@@ -9457,105 +7945,29 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
           "destinationVerified": true,
           "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
-          "channelName": "Disney+ Hotstar",
-          "aliases": [],
-          "territory": "IN",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sport Calcio",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "VOYO",
-          "aliases": [],
-          "territory": "RO",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS EN 1",
-          "aliases": [
-            "beIN Sports EN 1 HD",
-            "MENA | beIN Sports EN 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
+          "eventMatchingMethod": "ordered:canonical-participant-alias+exact-normalized-participant",
+          "eventMatchConfidence": 170
         }
       ],
       "homeTeam": {
-        "name": "Everton",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/eqayrf1523184794.png",
+        "name": "Manchester City",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vwpvry1467462651.png",
         "sourceIds": {
-          "thesportsdb": "133615"
+          "thesportsdb": "133613"
         }
       },
       "awayTeam": {
-        "name": "Manchester United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xzqdr11517660252.png",
+        "name": "Coventry City",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uxyqys1424033798.png",
         "sourceIds": {
-          "thesportsdb": "133612"
+          "thesportsdb": "133625"
         }
       },
       "competition": "English Premier League",
@@ -10953,19 +9365,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2550370",
+      "id": "tsdb-2470723",
       "sourceIds": {
-        "thesportsdb": "2550370"
+        "thesportsdb": "2470723"
       },
-      "title": "Montpellier Hérault Rugby vs Section Paloise",
+      "title": "Counties Manukau vs Southland",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788627900,
+      "startUtcEpochSeconds": 1788660300,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MultiSports 5 FR",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "FR",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -10976,79 +9388,165 @@
         }
       ],
       "homeTeam": {
-        "name": "Montpellier Hérault Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
+        "name": "Counties Manukau",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
         "sourceIds": {
-          "thesportsdb": "135334"
+          "thesportsdb": "145934"
         }
       },
       "awayTeam": {
-        "name": "Section Paloise",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
+        "name": "Southland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/57foyk1648907703.png",
         "sourceIds": {
-          "thesportsdb": "137384"
+          "thesportsdb": "145940"
         }
       },
-      "competition": "French Top 14"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
-      "id": "sky-Everton-Manchester United-1788703200000",
+      "id": "tsdb-2494023",
+      "sourceIds": {
+        "thesportsdb": "2494023"
+      },
       "title": "Everton vs Manchester United",
       "sport": "football",
-      "competition": "Premier League",
-      "startUtcEpochSeconds": 1788703200,
+      "startUtcEpochSeconds": 1788699600,
       "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "aliases": [
+            "beIN Sports HD 1",
+            "beIN Sports 1 HD",
+            "beIN Sports 1 FHD",
+            "MENA | beIN Sports 1"
+          ],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Disney+ Hotstar",
+          "aliases": [],
+          "territory": "IN",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sport Calcio",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "VOYO",
+          "aliases": [],
+          "territory": "RO",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS EN 1",
+          "aliases": [
+            "beIN Sports EN 1 HD",
+            "MENA | beIN Sports EN 1"
+          ],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
+        }
+      ],
       "homeTeam": {
         "name": "Everton",
-        "badgeUrl": null
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/eqayrf1523184794.png",
+        "sourceIds": {
+          "thesportsdb": "133615"
+        }
       },
       "awayTeam": {
         "name": "Manchester United",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Sky Sports Main Event",
-          "aliases": [
-            "Sky Sports Main Event UK",
-            "UK Sky Sports Main Event",
-            "Sky Sports Main Event HD",
-            "Sky Sports Main Event FHD",
-            "SkySports Main Event"
-          ],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "fixture-row-teams-kickoff",
-          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "exclusive": false,
-          "destinationPrecision": "channel",
-          "destinationVerified": true
-        },
-        {
-          "channelName": "Sky Sports Premier League",
-          "aliases": [
-            "Sky Sports Premier League UK",
-            "UK Sky Sports Premier League",
-            "Sky Sports Premier League HD",
-            "Sky Sports Premier League FHD",
-            "SkySports Premier League"
-          ],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "fixture-row-teams-kickoff",
-          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "exclusive": false,
-          "destinationPrecision": "channel",
-          "destinationVerified": true
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xzqdr11517660252.png",
+        "sourceIds": {
+          "thesportsdb": "133612"
         }
-      ],
-      "broadcasterEvidence": {
-        "source": "sky",
-        "url": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-        "eventMatched": false
       },
+      "competition": "English Premier League",
       "broadcastRights": [
         {
           "territory": "GB",
@@ -12455,19 +10953,31 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2396022",
+      "id": "tsdb-2417377",
       "sourceIds": {
-        "thesportsdb": "2396022"
+        "thesportsdb": "2417377"
       },
-      "title": "Leeds Rhinos vs Wigan Warriors",
+      "title": "Penrith Panthers vs Wests Tigers",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788634800,
+      "startUtcEpochSeconds": 1788674700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet World",
+          "channelName": "FOX League",
           "aliases": [],
-          "territory": "CA",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 1 France",
+          "aliases": [],
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -12478,20 +10988,1522 @@
         }
       ],
       "homeTeam": {
-        "name": "Leeds Rhinos",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryqwvv1447875742.png",
+        "name": "Penrith Panthers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/239jb41552073712.png",
         "sourceIds": {
-          "thesportsdb": "135216"
+          "thesportsdb": "135197"
         }
       },
       "awayTeam": {
-        "name": "Wigan Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
+        "name": "Wests Tigers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cs6i6f1646347894.png",
         "sourceIds": {
-          "thesportsdb": "135222"
+          "thesportsdb": "135189"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "Australian National Rugby League"
+    },
+    {
+      "id": "sky-Everton-Manchester United-1788703200000",
+      "title": "Everton vs Manchester United",
+      "sport": "football",
+      "competition": "Premier League",
+      "startUtcEpochSeconds": 1788703200,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Everton",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Manchester United",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Sky Sports Main Event",
+          "aliases": [
+            "Sky Sports Main Event UK",
+            "UK Sky Sports Main Event",
+            "Sky Sports Main Event HD",
+            "Sky Sports Main Event FHD",
+            "SkySports Main Event"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "fixture-row-teams-kickoff",
+          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
+          "exclusive": false,
+          "destinationPrecision": "channel",
+          "destinationVerified": true
+        },
+        {
+          "channelName": "Sky Sports Premier League",
+          "aliases": [
+            "Sky Sports Premier League UK",
+            "UK Sky Sports Premier League",
+            "Sky Sports Premier League HD",
+            "Sky Sports Premier League FHD",
+            "SkySports Premier League"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "fixture-row-teams-kickoff",
+          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
+          "exclusive": false,
+          "destinationPrecision": "channel",
+          "destinationVerified": true
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "sky",
+        "url": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "GB",
+          "holders": [
+            {
+              "name": "Sky Sports",
+              "kind": "network"
+            },
+            {
+              "name": "TNT Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "CANAL+",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DE",
+          "holders": [
+            {
+              "name": "Sky Deutschland",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AT",
+          "holders": [
+            {
+              "name": "Sky Deutschland",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IT",
+          "holders": [
+            {
+              "name": "Sky Italia",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PT",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TR",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AO",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BF",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BI",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BJ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CD",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CF",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CI",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CV",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DJ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ER",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ET",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GA",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GH",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GN",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GQ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KE",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LR",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LS",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ML",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MR",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MU",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MZ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NA",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NE",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "RW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SC",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SD",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SL",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SN",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SO",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SS",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ST",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SZ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TD",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TZ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "UG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ZA",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ZM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ZW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "NBC Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CA",
+          "holders": [
+            {
+              "name": "Fubo",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AU",
+          "holders": [
+            {
+              "name": "Stan Sport",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BR",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AR",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BO",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CL",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CO",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EC",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GY",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PE",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PY",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SR",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "UY",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "VE",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2467624",
+      "sourceIds": {
+        "thesportsdb": "2467624"
+      },
+      "title": "China Basketball Women vs Czech Republic Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1788697800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BeIn Sports HD 3 France",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "China Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rkcklk1704629807.png",
+        "sourceIds": {
+          "thesportsdb": "146113"
+        }
+      },
+      "awayTeam": {
+        "name": "Czech Republic Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/54w0ld1746101491.png",
+        "sourceIds": {
+          "thesportsdb": "141524"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
+    },
+    {
+      "id": "tsdb-2550373",
+      "sourceIds": {
+        "thesportsdb": "2550373"
+      },
+      "title": "Stade Rochelais vs Stade Toulousain",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1788721500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ESPN Extra Argentina",
+          "aliases": [],
+          "territory": "AR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay Sports 1 UK",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Premier Sports 1 IE",
+          "aliases": [],
+          "territory": "IE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Stade Rochelais",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a4yd1y1536393155.png",
+        "sourceIds": {
+          "thesportsdb": "135340"
+        }
+      },
+      "awayTeam": {
+        "name": "Stade Toulousain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
+        "sourceIds": {
+          "thesportsdb": "135339"
+        }
+      },
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2506200",
@@ -12535,7 +12547,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -12956,19 +12968,31 @@
       ]
     },
     {
-      "id": "tsdb-2467624",
+      "id": "tsdb-2467626",
       "sourceIds": {
-        "thesportsdb": "2467624"
+        "thesportsdb": "2467626"
       },
-      "title": "China Basketball Women vs Czech Republic Basketball Women",
+      "title": "Italy Basketball Women vs United States Basketball Women",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1788697800,
+      "startUtcEpochSeconds": 1788720300,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 3 France",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "FR",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-04",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TNT",
+          "aliases": [],
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -12979,59 +13003,20 @@
         }
       ],
       "homeTeam": {
-        "name": "China Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rkcklk1704629807.png",
+        "name": "Italy Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2fx9la1623963622.png",
         "sourceIds": {
-          "thesportsdb": "146113"
+          "thesportsdb": "141527"
         }
       },
       "awayTeam": {
-        "name": "Czech Republic Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/54w0ld1746101491.png",
+        "name": "United States Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/80q44q1770921523.png",
         "sourceIds": {
-          "thesportsdb": "141524"
+          "thesportsdb": "141514"
         }
       },
       "competition": "FIBA Womens World Cup"
-    },
-    {
-      "id": "tsdb-2470723",
-      "sourceIds": {
-        "thesportsdb": "2470723"
-      },
-      "title": "Counties Manukau vs Southland",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788660300,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TVNZ+",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Counties Manukau",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
-        "sourceIds": {
-          "thesportsdb": "145934"
-        }
-      },
-      "awayTeam": {
-        "name": "Southland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/57foyk1648907703.png",
-        "sourceIds": {
-          "thesportsdb": "145940"
-        }
-      },
-      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "tsdb-2506199",
@@ -13070,7 +13055,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -13519,108 +13504,6 @@
       ]
     },
     {
-      "id": "tsdb-2467626",
-      "sourceIds": {
-        "thesportsdb": "2467626"
-      },
-      "title": "Italy Basketball Women vs United States Basketball Women",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1788720300,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Australia",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TNT",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Italy Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2fx9la1623963622.png",
-        "sourceIds": {
-          "thesportsdb": "141527"
-        }
-      },
-      "awayTeam": {
-        "name": "United States Basketball Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/80q44q1770921523.png",
-        "sourceIds": {
-          "thesportsdb": "141514"
-        }
-      },
-      "competition": "FIBA Womens World Cup"
-    },
-    {
-      "id": "tsdb-2417377",
-      "sourceIds": {
-        "thesportsdb": "2417377"
-      },
-      "title": "Penrith Panthers vs Wests Tigers",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788674700,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "FOX League",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports HD 1 France",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Penrith Panthers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/239jb41552073712.png",
-        "sourceIds": {
-          "thesportsdb": "135197"
-        }
-      },
-      "awayTeam": {
-        "name": "Wests Tigers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cs6i6f1646347894.png",
-        "sourceIds": {
-          "thesportsdb": "135189"
-        }
-      },
-      "competition": "Australian National Rugby League"
-    },
-    {
       "id": "tsdb-2494028",
       "sourceIds": {
         "thesportsdb": "2494028"
@@ -13662,7 +13545,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -13714,7 +13597,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -15081,69 +14964,6 @@
           "season": "2026/27"
         }
       ]
-    },
-    {
-      "id": "tsdb-2550373",
-      "sourceIds": {
-        "thesportsdb": "2550373"
-      },
-      "title": "Stade Rochelais vs Stade Toulousain",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1788721500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Extra Argentina",
-          "aliases": [],
-          "territory": "AR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay Sports 1 UK",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 1 IE",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-04",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Stade Rochelais",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a4yd1y1536393155.png",
-        "sourceIds": {
-          "thesportsdb": "135340"
-        }
-      },
-      "awayTeam": {
-        "name": "Stade Toulousain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
-        "sourceIds": {
-          "thesportsdb": "135339"
-        }
-      },
-      "competition": "French Top 14"
     },
     {
       "id": "sky-Hull City-Aston Villa-1788629400000",
@@ -16587,7 +16407,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -17516,7 +17336,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -18933,7 +18753,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -20362,7 +20182,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -21815,7 +21635,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-04",
           "exclusive": false,
           "destinationType": "linear",
@@ -26290,6 +26110,142 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KH",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009KI",
+      "title": "Orlando City vs San Diego FC",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1788651000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Orlando City",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "San Diego FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KI",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KI",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009KJ",
+      "title": "Philadelphia Union vs CF Montréal",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1788651000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Philadelphia Union",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "CF Montréal",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KJ",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KJ",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009KN",
+      "title": "Toronto FC vs Chicago Fire FC",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1788651000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Toronto FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Chicago Fire FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KN",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009KB",
+      "title": "Austin FC vs San Jose Earthquakes",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1788654600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Austin FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "San Jose Earthquakes",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KB",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KB",
         "eventMatched": false
       }
     }
