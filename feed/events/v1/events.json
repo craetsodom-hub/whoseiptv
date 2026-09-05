@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788582200,
-  "validUntilEpochSeconds": 1788625400,
+  "generatedAtEpochSeconds": 1788604335,
+  "validUntilEpochSeconds": 1788647535,
   "events": [
     {
       "id": "tsdb-2494022",
@@ -45,7 +45,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -54,6 +54,18 @@
           "rightsHolder": "beIN Sports",
           "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
           "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Super Sport 3 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "Arena Sport 1 BiH",
@@ -199,7 +211,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -1578,6 +1590,30 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "DAZN Brasil",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Canada",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "MagentaTV DE",
           "aliases": [],
           "territory": "DE",
@@ -1602,6 +1638,30 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "DAZN Greece",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Croatia",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Arena Sport 1 RS",
           "aliases": [],
           "territory": "RS",
@@ -1617,6 +1677,18 @@
           "channelName": "Arena Sport 1 SI",
           "aliases": [],
           "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Turkey",
+          "aliases": [],
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1655,19 +1727,55 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2470720",
+      "id": "tsdb-2496232",
       "sourceIds": {
-        "thesportsdb": "2470720"
+        "thesportsdb": "2496232"
       },
-      "title": "Bay of Plenty vs Manawatu",
+      "title": "South Africa Rugby vs New Zealand Rugby",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788573900,
+      "startUtcEpochSeconds": 1788621000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "Stan Sport AU",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sports Action",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Wowow JP",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SuperSport Grandstand",
+          "aliases": [],
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1678,20 +1786,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Bay of Plenty",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
+        "name": "South Africa Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
         "sourceIds": {
-          "thesportsdb": "145932"
+          "thesportsdb": "137137"
         }
       },
       "awayTeam": {
-        "name": "Manawatu",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzis9i1694618120.png",
+        "name": "New Zealand Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
         "sourceIds": {
-          "thesportsdb": "145936"
+          "thesportsdb": "137133"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Rugby Union International Friendlies"
     },
     {
       "id": "tsdb-2578486",
@@ -3757,6 +3865,18 @@
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Poland",
+          "aliases": [],
+          "territory": "PL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -3776,55 +3896,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2496232",
+      "id": "tsdb-2550369",
       "sourceIds": {
-        "thesportsdb": "2496232"
+        "thesportsdb": "2550369"
       },
-      "title": "South Africa Rugby vs New Zealand Rugby",
+      "title": "Castres Olympique vs Vannes",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788620700,
+      "startUtcEpochSeconds": 1788627900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stan Sport AU",
+          "channelName": "Premier Sports 1 IE",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-05",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Action",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-05",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Wowow JP",
-          "aliases": [],
-          "territory": "JP",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-05",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SuperSport Grandstand",
-          "aliases": [],
-          "territory": "ZA",
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3835,20 +3919,20 @@
         }
       ],
       "homeTeam": {
-        "name": "South Africa Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
+        "name": "Castres Olympique",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
         "sourceIds": {
-          "thesportsdb": "137137"
+          "thesportsdb": "135331"
         }
       },
       "awayTeam": {
-        "name": "New Zealand Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
+        "name": "Vannes",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/foy0571694603578.png",
         "sourceIds": {
-          "thesportsdb": "137133"
+          "thesportsdb": "144865"
         }
       },
-      "competition": "Rugby Union International Friendlies"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2482165",
@@ -3941,19 +4025,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2550369",
+      "id": "tsdb-2550370",
       "sourceIds": {
-        "thesportsdb": "2550369"
+        "thesportsdb": "2550370"
       },
-      "title": "Castres Olympique vs Vannes",
+      "title": "Montpellier Hérault Rugby vs Section Paloise",
       "sport": "rugby",
       "startUtcEpochSeconds": 1788627900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Premier Sports 1 IE",
+          "channelName": "MultiSports 5 FR",
           "aliases": [],
-          "territory": "IE",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3964,17 +4048,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Castres Olympique",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
+        "name": "Montpellier Hérault Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
         "sourceIds": {
-          "thesportsdb": "135331"
+          "thesportsdb": "135334"
         }
       },
       "awayTeam": {
-        "name": "Vannes",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/foy0571694603578.png",
+        "name": "Section Paloise",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
         "sourceIds": {
-          "thesportsdb": "144865"
+          "thesportsdb": "137384"
         }
       },
       "competition": "French Top 14"
@@ -4021,7 +4105,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -4073,7 +4157,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -5452,6 +5536,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "MagentaTV DE",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Arena Sport 2 Premium RS",
           "aliases": [],
           "territory": "RS",
@@ -5505,19 +5601,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2550370",
+      "id": "tsdb-2396022",
       "sourceIds": {
-        "thesportsdb": "2550370"
+        "thesportsdb": "2396022"
       },
-      "title": "Montpellier Hérault Rugby vs Section Paloise",
+      "title": "Leeds Rhinos vs Wigan Warriors",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788627900,
+      "startUtcEpochSeconds": 1788634800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MultiSports 5 FR",
+          "channelName": "SportsNet World",
           "aliases": [],
-          "territory": "FR",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5528,20 +5624,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Montpellier Hérault Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
+        "name": "Leeds Rhinos",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryqwvv1447875742.png",
         "sourceIds": {
-          "thesportsdb": "135334"
+          "thesportsdb": "135216"
         }
       },
       "awayTeam": {
-        "name": "Section Paloise",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
+        "name": "Wigan Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
         "sourceIds": {
-          "thesportsdb": "137384"
+          "thesportsdb": "135222"
         }
       },
-      "competition": "French Top 14"
+      "competition": "English Rugby League Super League"
     },
     {
       "id": "tsdb-2494023",
@@ -5585,7 +5681,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -5661,7 +5757,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -7069,19 +7165,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2396022",
+      "id": "tsdb-2470723",
       "sourceIds": {
-        "thesportsdb": "2396022"
+        "thesportsdb": "2470723"
       },
-      "title": "Leeds Rhinos vs Wigan Warriors",
+      "title": "Counties Manukau vs Southland",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788634800,
+      "startUtcEpochSeconds": 1788660300,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet World",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "CA",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -7092,20 +7188,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Leeds Rhinos",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryqwvv1447875742.png",
+        "name": "Counties Manukau",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
         "sourceIds": {
-          "thesportsdb": "135216"
+          "thesportsdb": "145934"
         }
       },
       "awayTeam": {
-        "name": "Wigan Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
+        "name": "Southland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/57foyk1648907703.png",
         "sourceIds": {
-          "thesportsdb": "135222"
+          "thesportsdb": "145940"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "sky-Everton-Manchester United-1788703200000",
@@ -8559,19 +8655,31 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2470723",
+      "id": "tsdb-2417377",
       "sourceIds": {
-        "thesportsdb": "2470723"
+        "thesportsdb": "2417377"
       },
-      "title": "Counties Manukau vs Southland",
+      "title": "Penrith Panthers vs Wests Tigers",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788660300,
+      "startUtcEpochSeconds": 1788674700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "FOX League",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 1 France",
+          "aliases": [],
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -8582,20 +8690,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Counties Manukau",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
+        "name": "Penrith Panthers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/239jb41552073712.png",
         "sourceIds": {
-          "thesportsdb": "145934"
+          "thesportsdb": "135197"
         }
       },
       "awayTeam": {
-        "name": "Southland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/57foyk1648907703.png",
+        "name": "Wests Tigers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cs6i6f1646347894.png",
         "sourceIds": {
-          "thesportsdb": "145940"
+          "thesportsdb": "135189"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2506200",
@@ -8639,7 +8747,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -9099,31 +9207,19 @@
       "competition": "FIBA Womens World Cup"
     },
     {
-      "id": "tsdb-2417377",
+      "id": "tsdb-2597732",
       "sourceIds": {
-        "thesportsdb": "2417377"
+        "thesportsdb": "2597732"
       },
-      "title": "Penrith Panthers vs Wests Tigers",
+      "title": "Free State Cheetahs vs Pumas",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1788674700,
+      "startUtcEpochSeconds": 1788701400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "SuperSport Rugby",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-05",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports HD 1 France",
-          "aliases": [],
-          "territory": "FR",
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -9134,20 +9230,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Penrith Panthers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/239jb41552073712.png",
+        "name": "Free State Cheetahs",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fc24hq1752674187.png",
         "sourceIds": {
-          "thesportsdb": "135197"
+          "thesportsdb": "142067"
         }
       },
       "awayTeam": {
-        "name": "Wests Tigers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cs6i6f1646347894.png",
+        "name": "Pumas",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5eltim1651859350.png",
         "sourceIds": {
-          "thesportsdb": "135189"
+          "thesportsdb": "142072"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "Currie Cup"
     },
     {
       "id": "tsdb-2506199",
@@ -9186,7 +9282,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -11217,7 +11313,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -11269,7 +11365,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -14087,6 +14183,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "Arena Sport 1 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Arena Sport 2 SI",
           "aliases": [],
           "territory": "SI",
@@ -14157,7 +14265,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -15014,7 +15122,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -16431,7 +16539,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -17860,7 +17968,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -19313,7 +19421,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -19757,7 +19865,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
           "verifiedAt": "2026-09-05",
           "exclusive": false,
           "destinationType": "linear",
@@ -19766,6 +19874,18 @@
           "rightsHolder": "beIN Sports",
           "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
           "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Super Sport 2 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "ESPN Extra Argentina",
@@ -21922,6 +22042,57 @@
       "competition": "Argentinian Primera Division"
     },
     {
+      "id": "tsdb-2573347",
+      "sourceIds": {
+        "thesportsdb": "2573347"
+      },
+      "title": "Al-Hilal vs Neom",
+      "sport": "football",
+      "startUtcEpochSeconds": 1788804000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport Klub 2 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 2 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Al-Hilal",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w0b80d1661656916.png",
+        "sourceIds": {
+          "thesportsdb": "136013"
+        }
+      },
+      "awayTeam": {
+        "name": "Neom",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4luwe11737685220.png",
+        "sourceIds": {
+          "thesportsdb": "150637"
+        }
+      },
+      "competition": "Saudi-Arabian Pro League"
+    },
+    {
       "id": "tsdb-2494440",
       "sourceIds": {
         "thesportsdb": "2494440"
@@ -22071,45 +22242,6 @@
         }
       },
       "competition": "Brazilian Serie A"
-    },
-    {
-      "id": "tsdb-2419904",
-      "sourceIds": {
-        "thesportsdb": "2419904"
-      },
-      "title": "Bay FC vs Kansas City Current",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788573600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Amazon Prime Video US",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-05",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Bay FC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/hu29fv1700301975.png",
-        "sourceIds": {
-          "thesportsdb": "147853"
-        }
-      },
-      "awayTeam": {
-        "name": "Kansas City Current",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j5vgpb1652642998.png",
-        "sourceIds": {
-          "thesportsdb": "142126"
-        }
-      },
-      "competition": "American NWSL"
     },
     {
       "id": "tsdb-2416539",
@@ -22467,6 +22599,45 @@
         }
       },
       "competition": "English League Championship"
+    },
+    {
+      "id": "tsdb-2573344",
+      "sourceIds": {
+        "thesportsdb": "2573344"
+      },
+      "title": "Al-Taawoun vs Al-Fateh",
+      "sport": "football",
+      "startUtcEpochSeconds": 1788623700,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Austria",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-05",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Al-Taawoun",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rlsmp91646835052.png",
+        "sourceIds": {
+          "thesportsdb": "136012"
+        }
+      },
+      "awayTeam": {
+        "name": "Al-Fateh",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a5cjf41662659789.png",
+        "sourceIds": {
+          "thesportsdb": "136011"
+        }
+      },
+      "competition": "Saudi-Arabian Pro League"
     },
     {
       "id": "laliga-102286",
@@ -24085,45 +24256,6 @@
         }
       },
       "competition": "German 2. Bundesliga"
-    },
-    {
-      "id": "tsdb-2593305",
-      "sourceIds": {
-        "thesportsdb": "2593305"
-      },
-      "title": "Cerro vs Racing Montevideo",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788699600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Blue Sport 3 CH",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-05",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Cerro",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wtuxsq1464887392.png",
-        "sourceIds": {
-          "thesportsdb": "135363"
-        }
-      },
-      "awayTeam": {
-        "name": "Racing Montevideo",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rtsusv1473541178.png",
-        "sourceIds": {
-          "thesportsdb": "135370"
-        }
-      },
-      "competition": "Uruguayan Primera Division"
     }
   ]
 }
