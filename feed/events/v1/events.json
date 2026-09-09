@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788971761,
-  "validUntilEpochSeconds": 1789014961,
+  "generatedAtEpochSeconds": 1788987279,
+  "validUntilEpochSeconds": 1789030479,
   "events": [
     {
       "id": "tsdb-2594541",
@@ -14,8 +14,11 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN SPORTS 3",
-          "aliases": [],
+          "channelName": "beIN SPORTS EN 1",
+          "aliases": [
+            "beIN Sports EN 1 HD",
+            "MENA | beIN Sports EN 1"
+          ],
           "region": "Arabic",
           "displayRegion": "AR",
           "territories": [
@@ -40,7 +43,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -109,46 +112,6 @@
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS EN 1",
-          "aliases": [
-            "beIN Sports EN 1 HD",
-            "MENA | beIN Sports EN 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+structured-participant-equivalence",
-          "eventMatchConfidence": 150
         }
       ],
       "homeTeam": {
@@ -2067,48 +2030,6 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN SPORTS 1",
-          "aliases": [
-            "beIN Sports HD 1",
-            "beIN Sports 1 HD",
-            "beIN Sports 1 FHD",
-            "MENA | beIN Sports 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
           "channelName": "Blue Sport 5 CH",
           "aliases": [],
           "territory": "CH",
@@ -2218,46 +2139,6 @@
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS EN 1",
-          "aliases": [
-            "beIN Sports EN 1 HD",
-            "MENA | beIN Sports EN 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
         }
       ],
       "homeTeam": {
@@ -3656,7 +3537,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -4937,7 +4818,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -7696,7 +7577,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -14049,7 +13930,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -23177,96 +23058,6 @@
       "competition": "EFL Cup"
     },
     {
-      "id": "tsdb-2598894",
-      "sourceIds": {
-        "thesportsdb": "2598894"
-      },
-      "title": "Ghana U20 Women vs South Korea U20 Women",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788958800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TUDN Mexico",
-          "aliases": [],
-          "territory": "MX",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TOD KSA",
-          "aliases": [],
-          "territory": "SA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Ghana U20 Women",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/l8ba6m1788196258.png",
-        "sourceIds": {
-          "thesportsdb": "157007"
-        }
-      },
-      "awayTeam": {
-        "name": "South Korea U20 Women",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/smcue21788196108.png",
-        "sourceIds": {
-          "thesportsdb": "157006"
-        }
-      },
-      "competition": "FIFA U20 Womens World Cup"
-    },
-    {
-      "id": "tsdb-2599044",
-      "sourceIds": {
-        "thesportsdb": "2599044"
-      },
-      "title": "Italy U20 Women vs New Zealand U20 Women",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788958800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Rai Sport 1",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Italy U20 Women",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/hi7g991788199212.png",
-        "sourceIds": {
-          "thesportsdb": "157023"
-        }
-      },
-      "awayTeam": {
-        "name": "New Zealand U20 Women",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/5o4f1d1788198345.png",
-        "sourceIds": {
-          "thesportsdb": "157020"
-        }
-      },
-      "competition": "FIFA U20 Womens World Cup"
-    },
-    {
       "id": "tsdb-2598900",
       "sourceIds": {
         "thesportsdb": "2598900"
@@ -23303,14 +23094,14 @@
       ],
       "homeTeam": {
         "name": "China U20 Women",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/oc6ift1788195556.png",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/oc6ift1788195556.png",
         "sourceIds": {
           "thesportsdb": "157003"
         }
       },
       "awayTeam": {
         "name": "Nigeria U20 Women",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/a89f3c1788196383.png",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a89f3c1788196383.png",
         "sourceIds": {
           "thesportsdb": "157008"
         }
