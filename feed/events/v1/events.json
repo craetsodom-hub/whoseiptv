@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1788952737,
-  "validUntilEpochSeconds": 1788995937,
+  "generatedAtEpochSeconds": 1788971761,
+  "validUntilEpochSeconds": 1789014961,
   "events": [
     {
       "id": "tsdb-2594541",
@@ -40,7 +40,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -140,7 +140,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -2098,7 +2098,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -2249,7 +2249,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -3656,7 +3656,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -4937,7 +4937,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -7696,7 +7696,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -14049,7 +14049,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
           "verifiedAt": "2026-09-09",
           "exclusive": false,
           "destinationType": "linear",
@@ -18764,57 +18764,6 @@
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000AFN",
         "eventMatched": false
       }
-    },
-    {
-      "id": "tsdb-2416546",
-      "sourceIds": {
-        "thesportsdb": "2416546"
-      },
-      "title": "Gangwon FC vs Jeonbuk Hyundai Motors",
-      "sport": "football",
-      "startUtcEpochSeconds": 1788949800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "LAOLA1 AT",
-          "aliases": [],
-          "territory": "AT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Veikkaus TV",
-          "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Gangwon FC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/c4igx71579729617.png",
-        "sourceIds": {
-          "thesportsdb": "138108"
-        }
-      },
-      "awayTeam": {
-        "name": "Jeonbuk Hyundai Motors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8jif3b1747853225.png",
-        "sourceIds": {
-          "thesportsdb": "138111"
-        }
-      },
-      "competition": "South Korean K League 1"
     },
     {
       "id": "tsdb-2532387",
