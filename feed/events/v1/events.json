@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789015120,
-  "validUntilEpochSeconds": 1789058320,
+  "generatedAtEpochSeconds": 1789038939,
+  "validUntilEpochSeconds": 1789082139,
   "events": [
     {
       "id": "tsdb-2594652",
@@ -45,7 +45,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -1283,6 +1283,45 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "tsdb-2603124",
+      "sourceIds": {
+        "thesportsdb": "2603124"
+      },
+      "title": "China Basketball Women vs France Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1789043400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Arena Sport 1x2 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "China Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rkcklk1704629807.png",
+        "sourceIds": {
+          "thesportsdb": "146113"
+        }
+      },
+      "awayTeam": {
+        "name": "France Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j149lk1623962465.png",
+        "sourceIds": {
+          "thesportsdb": "141525"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
     },
     {
       "id": "tsdb-2470725",
@@ -3362,6 +3401,45 @@
       ]
     },
     {
+      "id": "tsdb-2600661",
+      "sourceIds": {
+        "thesportsdb": "2600661"
+      },
+      "title": "Belgium Basketball Women vs Germany Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1789055100,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TV Slovenija 2",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Belgium Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mj0wq91751300426.png",
+        "sourceIds": {
+          "thesportsdb": "141521"
+        }
+      },
+      "awayTeam": {
+        "name": "Germany Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yqxj3m1651192940.png",
+        "sourceIds": {
+          "thesportsdb": "146126"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
+    },
+    {
       "id": "tsdb-2550567",
       "sourceIds": {
         "thesportsdb": "2550567"
@@ -3442,7 +3520,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -4752,6 +4830,81 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "tsdb-2603125",
+      "sourceIds": {
+        "thesportsdb": "2603125"
+      },
+      "title": "Australia Basketball Women vs Spain Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1789065900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ESPN Australia",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 1 France",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 6 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TVP Sport",
+          "aliases": [],
+          "territory": "PL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Australia Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1do1hl1704638641.png",
+        "sourceIds": {
+          "thesportsdb": "146112"
+        }
+      },
+      "awayTeam": {
+        "name": "Spain Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
+        "sourceIds": {
+          "thesportsdb": "141533"
+        }
+      },
+      "competition": "FIBA Womens World Cup"
     },
     {
       "id": "tsdb-2470726",
@@ -6066,58 +6219,6 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN SPORTS EN 1",
-          "aliases": [
-            "beIN Sports EN 1 HD",
-            "MENA | beIN Sports EN 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
-          "channelName": "Spíler1 HU",
-          "aliases": [],
-          "territory": "HU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
           "channelName": "beIN 4K",
           "aliases": [],
           "region": "Arabic",
@@ -6144,7 +6245,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -6153,6 +6254,18 @@
           "rightsHolder": "beIN Sports",
           "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
           "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Spíler1 HU",
+          "aliases": [],
+          "territory": "HU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "beIN SPORTS 1",
@@ -6186,7 +6299,47 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "beIN SPORTS EN 1",
+          "aliases": [
+            "beIN Sports EN 1 HD",
+            "MENA | beIN Sports EN 1"
+          ],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -8097,7 +8250,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -9565,7 +9718,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -9619,7 +9772,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -9659,7 +9812,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2500",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -11067,168 +11220,6 @@
       "competition": "New Zealand National Provincial Championship"
     },
     {
-      "id": "tsdb-2580618",
-      "sourceIds": {
-        "thesportsdb": "2580618"
-      },
-      "title": "Estudiantes de La Plata vs Corinthians",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789000200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "FOX Sports Argentina",
-          "aliases": [],
-          "territory": "AR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports 3 Australia",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports Canada",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Polsat Sport",
-          "aliases": [],
-          "territory": "PL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport TV 1",
-          "aliases": [],
-          "territory": "PT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport 2 Premium RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Okko Sport RU",
-          "aliases": [],
-          "territory": "RU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports USA",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Estudiantes de La Plata",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pf08dq1760634366.png",
-        "sourceIds": {
-          "thesportsdb": "135160"
-        }
-      },
-      "awayTeam": {
-        "name": "Corinthians",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vvuvps1473538042.png",
-        "sourceIds": {
-          "thesportsdb": "134284"
-        }
-      },
-      "competition": "Copa Libertadores"
-    },
-    {
-      "id": "tsdb-2600191",
-      "sourceIds": {
-        "thesportsdb": "2600191"
-      },
-      "title": "New Zealand Warriors vs Dolphins",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789193100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Fox Sports 2 US",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "New Zealand Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w8b9kw1646347767.png",
-        "sourceIds": {
-          "thesportsdb": "135193"
-        }
-      },
-      "awayTeam": {
-        "name": "Dolphins",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tyoy421672068536.png",
-        "sourceIds": {
-          "thesportsdb": "147022"
-        }
-      },
-      "competition": "Australian National Rugby League"
-    },
-    {
       "id": "tsdb-2592843",
       "sourceIds": {
         "thesportsdb": "2592843"
@@ -11292,19 +11283,19 @@
       "competition": "Copa Libertadores"
     },
     {
-      "id": "tsdb-2550377",
+      "id": "tsdb-2600191",
       "sourceIds": {
-        "thesportsdb": "2550377"
+        "thesportsdb": "2600191"
       },
-      "title": "Racing Métro 92 vs Lyon OU",
+      "title": "New Zealand Warriors vs Dolphins",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789223700,
+      "startUtcEpochSeconds": 1789193100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Canal+ France",
+          "channelName": "Fox Sports 2 US",
           "aliases": [],
-          "territory": "FR",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -11315,20 +11306,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Racing Métro 92",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ywxugl1536392844.png",
+        "name": "New Zealand Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w8b9kw1646347767.png",
         "sourceIds": {
-          "thesportsdb": "135336"
+          "thesportsdb": "135193"
         }
       },
       "awayTeam": {
-        "name": "Lyon OU",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kjljr41536392388.png",
+        "name": "Dolphins",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tyoy421672068536.png",
         "sourceIds": {
-          "thesportsdb": "135341"
+          "thesportsdb": "147022"
         }
       },
-      "competition": "French Top 14"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2494033",
@@ -11372,7 +11363,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -11424,7 +11415,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -12793,19 +12784,19 @@
       ]
     },
     {
-      "id": "tsdb-2550378",
+      "id": "tsdb-2550377",
       "sourceIds": {
-        "thesportsdb": "2550378"
+        "thesportsdb": "2550377"
       },
-      "title": "ASM Clermont Auvergne vs Stade Français Paris",
+      "title": "Racing Métro 92 vs Lyon OU",
       "sport": "rugby",
       "startUtcEpochSeconds": 1789223700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Premier Sports 2 IE",
+          "channelName": "Canal+ France",
           "aliases": [],
-          "territory": "IE",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -12816,17 +12807,17 @@
         }
       ],
       "homeTeam": {
-        "name": "ASM Clermont Auvergne",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
+        "name": "Racing Métro 92",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ywxugl1536392844.png",
         "sourceIds": {
-          "thesportsdb": "135332"
+          "thesportsdb": "135336"
         }
       },
       "awayTeam": {
-        "name": "Stade Français Paris",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lr2v3f1622926121.png",
+        "name": "Lyon OU",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kjljr41536392388.png",
         "sourceIds": {
-          "thesportsdb": "135337"
+          "thesportsdb": "135341"
         }
       },
       "competition": "French Top 14"
@@ -14232,55 +14223,19 @@
       ]
     },
     {
-      "id": "tsdb-2496234",
+      "id": "tsdb-2550378",
       "sourceIds": {
-        "thesportsdb": "2496234"
+        "thesportsdb": "2550378"
       },
-      "title": "South Africa Rugby vs New Zealand Rugby",
+      "title": "ASM Clermont Auvergne vs Stade Français Paris",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789239600,
+      "startUtcEpochSeconds": 1789223700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stan Sport AU",
+          "channelName": "Premier Sports 2 IE",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Action",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Wowow JP",
-          "aliases": [],
-          "territory": "JP",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-10",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SuperSport Grandstand",
-          "aliases": [],
-          "territory": "ZA",
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -14291,20 +14246,20 @@
         }
       ],
       "homeTeam": {
-        "name": "South Africa Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
+        "name": "ASM Clermont Auvergne",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
         "sourceIds": {
-          "thesportsdb": "137137"
+          "thesportsdb": "135332"
         }
       },
       "awayTeam": {
-        "name": "New Zealand Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
+        "name": "Stade Français Paris",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lr2v3f1622926121.png",
         "sourceIds": {
-          "thesportsdb": "137133"
+          "thesportsdb": "135337"
         }
       },
-      "competition": "Rugby Union International Friendlies"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2506211",
@@ -14754,6 +14709,81 @@
       ]
     },
     {
+      "id": "tsdb-2496234",
+      "sourceIds": {
+        "thesportsdb": "2496234"
+      },
+      "title": "South Africa Rugby vs New Zealand Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1789239600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Stan Sport AU",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sports Action",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Wowow JP",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SuperSport Grandstand",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "South Africa Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
+        "sourceIds": {
+          "thesportsdb": "137137"
+        }
+      },
+      "awayTeam": {
+        "name": "New Zealand Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fhr0ys1566381231.png",
+        "sourceIds": {
+          "thesportsdb": "137133"
+        }
+      },
+      "competition": "Rugby Union International Friendlies"
+    },
+    {
       "id": "tsdb-2494037",
       "sourceIds": {
         "thesportsdb": "2494037"
@@ -14795,7 +14825,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -18259,7 +18289,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -19532,7 +19562,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -20949,7 +20979,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationType": "linear",
@@ -25955,6 +25985,18 @@
           "verifiedAt": "2026-09-10",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay SE",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -26038,6 +26080,18 @@
           "channelName": "Novasports 3",
           "aliases": [],
           "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay IS",
+          "aliases": [],
+          "territory": "IS",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -26167,6 +26221,18 @@
           "channelName": "DAZN Brasil",
           "aliases": [],
           "territory": "BR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN New Zealand",
+          "aliases": [],
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -29687,6 +29753,45 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a89f3c1788196383.png",
         "sourceIds": {
           "thesportsdb": "157008"
+        }
+      },
+      "competition": "FIFA U20 Womens World Cup"
+    },
+    {
+      "id": "tsdb-2599039",
+      "sourceIds": {
+        "thesportsdb": "2599039"
+      },
+      "title": "Argentina U20 Women vs Mexico U20 Women",
+      "sport": "football",
+      "startUtcEpochSeconds": 1789142400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Austria",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-10",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Argentina U20 Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/17d1q81788197945.png",
+        "sourceIds": {
+          "thesportsdb": "157017"
+        }
+      },
+      "awayTeam": {
+        "name": "Mexico U20 Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jd271g1788197078.png",
+        "sourceIds": {
+          "thesportsdb": "157012"
         }
       },
       "competition": "FIFA U20 Womens World Cup"
