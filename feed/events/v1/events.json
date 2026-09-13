@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789274616,
-  "validUntilEpochSeconds": 1789317816,
+  "generatedAtEpochSeconds": 1789300073,
+  "validUntilEpochSeconds": 1789343273,
   "events": [
     {
       "id": "tsdb-2494030",
@@ -45,7 +45,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-13",
           "exclusive": false,
           "destinationType": "linear",
@@ -139,7 +139,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
           "verifiedAt": "2026-09-13",
           "exclusive": false,
           "destinationType": "linear",
@@ -1508,58 +1508,19 @@
       ]
     },
     {
-      "id": "tsdb-2470730",
+      "id": "tsdb-2604715",
       "sourceIds": {
-        "thesportsdb": "2470730"
+        "thesportsdb": "2604715"
       },
-      "title": "Hawkes Bay vs North Harbour",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789265100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TVNZ+",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Hawkes Bay",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n2ut6h1648907665.png",
-        "sourceIds": {
-          "thesportsdb": "145935"
-        }
-      },
-      "awayTeam": {
-        "name": "North Harbour",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qee9p31648907679.png",
-        "sourceIds": {
-          "thesportsdb": "145937"
-        }
-      },
-      "competition": "New Zealand National Provincial Championship"
-    },
-    {
-      "id": "tsdb-2525184",
-      "sourceIds": {
-        "thesportsdb": "2525184"
-      },
-      "title": "Promitheas Patras BC vs BC Vienna",
+      "title": "Spain Basketball Women vs Germany Basketball Women",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1789470900,
+      "startUtcEpochSeconds": 1789309800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Cosmopolitan TV Canada",
+          "channelName": "ESPN 2 Australia",
           "aliases": [],
-          "territory": "CA",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1569,9 +1530,69 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Cosmote Sport 4 GR",
+          "channelName": "Teledeporte",
           "aliases": [],
-          "territory": "GR",
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 3 France",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 5 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TVP Sport",
+          "aliases": [],
+          "territory": "PL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 4 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 3 SI",
+          "aliases": [],
+          "territory": "SI",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1582,20 +1603,71 @@
         }
       ],
       "homeTeam": {
-        "name": "Promitheas Patras BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o9c3f1739693075.png",
+        "name": "Spain Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vzvbyi1623962521.png",
         "sourceIds": {
-          "thesportsdb": "136332"
+          "thesportsdb": "141533"
         }
       },
       "awayTeam": {
-        "name": "BC Vienna",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/okeyil1784571631.png",
+        "name": "Germany Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yqxj3m1651192940.png",
         "sourceIds": {
-          "thesportsdb": "143930"
+          "thesportsdb": "146126"
         }
       },
-      "competition": "Basketball Champions League"
+      "competition": "FIBA Womens World Cup"
+    },
+    {
+      "id": "tsdb-2600193",
+      "sourceIds": {
+        "thesportsdb": "2600193"
+      },
+      "title": "Penrith Panthers vs Sydney Roosters",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1789279500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "FOX League",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ESPN South Africa",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Penrith Panthers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zjh0jo1771495164.png",
+        "sourceIds": {
+          "thesportsdb": "135197"
+        }
+      },
+      "awayTeam": {
+        "name": "Sydney Roosters",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
+        "sourceIds": {
+          "thesportsdb": "135192"
+        }
+      },
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2524746",
@@ -3648,19 +3720,19 @@
       ]
     },
     {
-      "id": "tsdb-2600193",
+      "id": "tsdb-2604716",
       "sourceIds": {
-        "thesportsdb": "2600193"
+        "thesportsdb": "2604716"
       },
-      "title": "Penrith Panthers vs Sydney Roosters",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789279500,
+      "title": "United States Basketball Women vs France Basketball Women",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1789322400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "Rai Sport 1",
           "aliases": [],
-          "territory": "AU",
+          "territory": "IT",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3670,9 +3742,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "ESPN South Africa",
+          "channelName": "TNT",
           "aliases": [],
-          "territory": "ZA",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3683,20 +3755,83 @@
         }
       ],
       "homeTeam": {
-        "name": "Penrith Panthers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zjh0jo1771495164.png",
+        "name": "United States Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/80q44q1770921523.png",
         "sourceIds": {
-          "thesportsdb": "135197"
+          "thesportsdb": "141514"
         }
       },
       "awayTeam": {
-        "name": "Sydney Roosters",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
+        "name": "France Basketball Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j149lk1623962465.png",
         "sourceIds": {
-          "thesportsdb": "135192"
+          "thesportsdb": "141525"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "FIBA Womens World Cup"
+    },
+    {
+      "id": "tsdb-2550380",
+      "sourceIds": {
+        "thesportsdb": "2550380"
+      },
+      "title": "Stade Toulousain vs Union Bordeaux Bègles",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1789326300,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Canal+ France",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay Sports 2 UK",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Premier Sports 2 IE",
+          "aliases": [],
+          "territory": "IE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Stade Toulousain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
+        "sourceIds": {
+          "thesportsdb": "135339"
+        }
+      },
+      "awayTeam": {
+        "name": "Union Bordeaux Bègles",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qiw7sx1536393400.png",
+        "sourceIds": {
+          "thesportsdb": "135329"
+        }
+      },
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2506213",
@@ -4101,19 +4236,19 @@
       ]
     },
     {
-      "id": "tsdb-2550380",
+      "id": "tsdb-2525184",
       "sourceIds": {
-        "thesportsdb": "2550380"
+        "thesportsdb": "2525184"
       },
-      "title": "Stade Toulousain vs Union Bordeaux Bègles",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789326300,
+      "title": "Promitheas Patras BC vs BC Vienna",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1789470900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Canal+ France",
+          "channelName": "Cosmopolitan TV Canada",
           "aliases": [],
-          "territory": "FR",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -4123,21 +4258,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Viaplay Sports 2 UK",
+          "channelName": "Cosmote Sport 4 GR",
           "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 2 IE",
-          "aliases": [],
-          "territory": "IE",
+          "territory": "GR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -4148,20 +4271,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Stade Toulousain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
+        "name": "Promitheas Patras BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o9c3f1739693075.png",
         "sourceIds": {
-          "thesportsdb": "135339"
+          "thesportsdb": "136332"
         }
       },
       "awayTeam": {
-        "name": "Union Bordeaux Bègles",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qiw7sx1536393400.png",
+        "name": "BC Vienna",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/okeyil1784571631.png",
         "sourceIds": {
-          "thesportsdb": "135329"
+          "thesportsdb": "143930"
         }
       },
-      "competition": "French Top 14"
+      "competition": "Basketball Champions League"
     },
     {
       "id": "sky-Bournemouth-Liverpool-1789912800000",
@@ -9787,7 +9910,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-13",
           "exclusive": false,
           "destinationType": "linear",
@@ -9930,6 +10053,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "FPT TV VNM",
+          "aliases": [],
+          "territory": "VN",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "beIN SPORTS EN 1",
           "aliases": [
             "beIN Sports EN 1 HD",
@@ -9959,7 +10094,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200",
           "verifiedAt": "2026-09-13",
           "exclusive": false,
           "destinationType": "linear",
@@ -13884,7 +14019,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-13",
           "exclusive": false,
           "destinationType": "linear",
@@ -14003,6 +14138,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "FPT TV VNM",
+          "aliases": [],
+          "territory": "VN",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "beIN SPORTS EN 1",
           "aliases": [
             "beIN Sports EN 1 HD",
@@ -14032,7 +14179,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-13",
           "exclusive": false,
           "destinationType": "linear",
@@ -17321,6 +17468,18 @@
           "destinationType": "service",
           "ruleType": "all-events",
           "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Spíler1 HU",
+          "aliases": [],
+          "territory": "HU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "Prima Sport 2",
