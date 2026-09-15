@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789491383,
-  "validUntilEpochSeconds": 1789534583,
+  "generatedAtEpochSeconds": 1789507102,
+  "validUntilEpochSeconds": 1789550302,
   "events": [
     {
       "id": "tsdb-2594868",
@@ -125,57 +125,6 @@
         }
       },
       "competition": "UEFA Europa League"
-    },
-    {
-      "id": "tsdb-2525184",
-      "sourceIds": {
-        "thesportsdb": "2525184"
-      },
-      "title": "Promitheas Patras BC vs BC Vienna",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1789470900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Cosmopolitan TV Canada",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Cosmote Sport 4 GR",
-          "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Promitheas Patras BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o9c3f1739693075.png",
-        "sourceIds": {
-          "thesportsdb": "136332"
-        }
-      },
-      "awayTeam": {
-        "name": "BC Vienna",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/okeyil1784571631.png",
-        "sourceIds": {
-          "thesportsdb": "143930"
-        }
-      },
-      "competition": "Basketball Champions League"
     },
     {
       "id": "tsdb-2524746",
@@ -7519,6 +7468,43 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "beIN SPORTS XTRA 1",
+          "aliases": [],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+canonical-participant-alias",
+          "eventMatchConfidence": 170
+        },
+        {
           "channelName": "DAZN",
           "aliases": [
             "FR DAZN"
@@ -8037,7 +8023,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700",
           "verifiedAt": "2026-09-15",
           "exclusive": false,
           "destinationType": "linear",
@@ -8611,7 +8597,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
           "verifiedAt": "2026-09-15",
           "exclusive": false,
           "destinationType": "linear",
@@ -10582,45 +10568,6 @@
       "competition": "EFL Cup"
     },
     {
-      "id": "tsdb-2579913",
-      "sourceIds": {
-        "thesportsdb": "2579913"
-      },
-      "title": "Beijing Guoan vs Pohang Steelers",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789474500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TOD KSA",
-          "aliases": [],
-          "territory": "SA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Beijing Guoan",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cdkguq1652626854.png",
-        "sourceIds": {
-          "thesportsdb": "134635"
-        }
-      },
-      "awayTeam": {
-        "name": "Pohang Steelers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/63jst01769097748.png",
-        "sourceIds": {
-          "thesportsdb": "138112"
-        }
-      },
-      "competition": "AFC Champions League Elite"
-    },
-    {
       "id": "tsdb-2579917",
       "sourceIds": {
         "thesportsdb": "2579917"
@@ -11556,7 +11503,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-15",
           "exclusive": false,
           "destinationType": "linear",
