@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789447877,
-  "validUntilEpochSeconds": 1789491077,
+  "generatedAtEpochSeconds": 1789472464,
+  "validUntilEpochSeconds": 1789515664,
   "events": [
     {
       "id": "tsdb-2594868",
@@ -29,6 +29,18 @@
           "channelName": "Blue Sport 5 CH",
           "aliases": [],
           "territory": "CH",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sony LIV",
+          "aliases": [],
+          "territory": "IN",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -200,6 +212,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Sony Ten 1",
+          "aliases": [],
+          "territory": "IN",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Sky Sport 1 NZ",
           "aliases": [],
           "territory": "NZ",
@@ -278,6 +302,156 @@
         }
       },
       "competition": "New Zealand National Provincial Championship"
+    },
+    {
+      "id": "l1_championship_match_73861",
+      "title": "Olympique de Marseille vs Paris Saint-Germain",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789929900,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Olympique de Marseille",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Paris Saint-Germain",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73861",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73861",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2524747",
+      "sourceIds": {
+        "thesportsdb": "2524747"
+      },
+      "title": "England Cricket vs Sri Lanka Cricket",
+      "sport": "cricket",
+      "startUtcEpochSeconds": 1789666200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sky Sport 2 NZ",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "England Cricket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y5wcl81646775152.png",
+        "sourceIds": {
+          "thesportsdb": "137142"
+        }
+      },
+      "awayTeam": {
+        "name": "Sri Lanka Cricket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i5fqg01646775193.png",
+        "sourceIds": {
+          "thesportsdb": "137149"
+        }
+      },
+      "competition": "Twenty20 International Series"
+    },
+    {
+      "id": "tsdb-2550579",
+      "sourceIds": {
+        "thesportsdb": "2550579"
+      },
+      "title": "Aurillac vs CA Brive",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1789671600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "MultiSports 2 FR",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Aurillac",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bswjkc1694604193.png",
+        "sourceIds": {
+          "thesportsdb": "144856"
+        }
+      },
+      "awayTeam": {
+        "name": "CA Brive",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/90p5p01536392092.png",
+        "sourceIds": {
+          "thesportsdb": "135330"
+        }
+      },
+      "competition": "French Pro D2"
     },
     {
       "id": "sky-Bournemouth-Liverpool-1789912800000",
@@ -1678,84 +1852,6 @@
           "season": "2026/27"
         }
       ]
-    },
-    {
-      "id": "tsdb-2524747",
-      "sourceIds": {
-        "thesportsdb": "2524747"
-      },
-      "title": "England Cricket vs Sri Lanka Cricket",
-      "sport": "cricket",
-      "startUtcEpochSeconds": 1789666200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sky Sport 2 NZ",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "England Cricket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y5wcl81646775152.png",
-        "sourceIds": {
-          "thesportsdb": "137142"
-        }
-      },
-      "awayTeam": {
-        "name": "Sri Lanka Cricket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i5fqg01646775193.png",
-        "sourceIds": {
-          "thesportsdb": "137149"
-        }
-      },
-      "competition": "Twenty20 International Series"
-    },
-    {
-      "id": "tsdb-2550579",
-      "sourceIds": {
-        "thesportsdb": "2550579"
-      },
-      "title": "Aurillac vs CA Brive",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789671600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "MultiSports 2 FR",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Aurillac",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bswjkc1694604193.png",
-        "sourceIds": {
-          "thesportsdb": "144856"
-        }
-      },
-      "awayTeam": {
-        "name": "CA Brive",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/90p5p01536392092.png",
-        "sourceIds": {
-          "thesportsdb": "135330"
-        }
-      },
-      "competition": "French Pro D2"
     },
     {
       "id": "sky-Manchester City-Sunderland-1789912800000",
@@ -6001,16 +6097,17 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "DAZN Spain",
+          "channelName": "Movistar LALIGA",
           "aliases": [],
           "territory": "ES",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:structured-participant-equivalence+structured-participant-equivalence",
+          "eventMatchConfidence": 140
         },
         {
           "channelName": "DAZN",
@@ -6077,6 +6174,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Sportbox.ru",
+          "aliases": [],
+          "territory": "RU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "ESPN+",
           "aliases": [
             "US ESPN+",
@@ -6092,6 +6201,18 @@
           "destinationType": "service",
           "ruleType": "all-events",
           "destinationPrecision": "service"
+        },
+        {
+          "channelName": "DAZN Spain",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "Disney+",
@@ -6125,6 +6246,11 @@
         }
       },
       "competition": "Spanish La Liga",
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": true
+      },
       "broadcastRights": [
         {
           "territory": "ES",
@@ -6450,6 +6576,18 @@
       "startUtcEpochSeconds": 1789605000,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "Canais Globo",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "BeIn Sports Canada",
           "aliases": [],
@@ -6805,16 +6943,20 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "DAZN LaLiga",
-          "aliases": [],
+          "channelName": "DAZN",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
           "territory": "ES",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+structured-participant-equivalence",
+          "eventMatchConfidence": 150
         },
         {
           "channelName": "DAZN",
@@ -6874,6 +7016,18 @@
           "destinationPrecision": "service"
         },
         {
+          "channelName": "DAZN LaLiga",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Disney+",
           "aliases": [
             "FR Disney+"
@@ -6905,6 +7059,11 @@
         }
       },
       "competition": "Spanish La Liga",
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": true
+      },
       "broadcastRights": [
         {
           "territory": "ES",
@@ -7852,16 +8011,20 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN LaLiga",
-          "aliases": [],
+          "channelName": "DAZN",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
           "territory": "ES",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+structured-participant-equivalence",
+          "eventMatchConfidence": 150
         },
         {
           "channelName": "DAZN",
@@ -7921,6 +8084,18 @@
           "destinationPrecision": "service"
         },
         {
+          "channelName": "DAZN LaLiga",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Disney+",
           "aliases": [
             "FR Disney+"
@@ -7952,6 +8127,11 @@
         }
       },
       "competition": "Spanish La Liga",
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": true
+      },
       "broadcastRights": [
         {
           "territory": "ES",
@@ -8430,6 +8610,22 @@
         {
           "channelName": "DAZN",
           "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:structured-participant-equivalence+structured-participant-equivalence",
+          "eventMatchConfidence": 140
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
             "FR DAZN"
           ],
           "territory": "FR",
@@ -8528,6 +8724,11 @@
         }
       },
       "competition": "Spanish La Liga",
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": true
+      },
       "broadcastRights": [
         {
           "territory": "ES",
@@ -10487,6 +10688,150 @@
       "competition": "AFC Champions League Elite"
     },
     {
+      "id": "l1_championship_match_73862",
+      "title": "AS Monaco vs RC Lens",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789757100,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "AS Monaco",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "RC Lens",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73862",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73862",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73864",
+      "title": "Paris FC vs RC Strasbourg Alsace",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789830900,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Paris FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "RC Strasbourg Alsace",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73864",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73864",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "l1_championship_match_73857",
       "title": "Angers SCO vs Estac Troyes",
       "sport": "football",
@@ -10559,6 +10904,222 @@
       ]
     },
     {
+      "id": "l1_championship_match_73859",
+      "title": "Le Mans FC vs FC Lorient",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789843500,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Le Mans FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "FC Lorient",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 5",
+          "aliases": [
+            "Ligue1+ 5",
+            "FR Ligue 1+ 5",
+            "Ligue 1+ 5 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73859",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73859",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73860",
+      "title": "Olympique Lyonnais vs Stade Rennais FC",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789843500,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Olympique Lyonnais",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Stade Rennais FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 3",
+          "aliases": [
+            "Ligue1+ 3",
+            "FR Ligue 1+ 3",
+            "Ligue 1+ 3 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73860",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73860",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73865",
+      "title": "Toulouse FC vs Havre Athletic Club",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789843500,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Toulouse FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Havre Athletic Club",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 4",
+          "aliases": [
+            "Ligue1+ 4",
+            "FR Ligue 1+ 4",
+            "Ligue 1+ 4 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73865",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73865",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "l1_championship_match_73858",
       "title": "AJ Auxerre vs Stade Brestois 29",
       "sport": "football",
@@ -10610,6 +11171,78 @@
       "broadcasterEvidence": {
         "source": "ligue1",
         "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73858",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73863",
+      "title": "OGC Nice vs LOSC Lille",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1789917300,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "OGC Nice",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "LOSC Lille",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 4",
+          "aliases": [
+            "Ligue1+ 4",
+            "FR Ligue 1+ 4",
+            "Ligue 1+ 4 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73863",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73863",
         "eventMatched": false
       },
       "broadcastRights": [
@@ -10813,17 +11446,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Pisa",
+        "name": "Fiorentina",
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/hc8nhu1656098030.png",
         "sourceIds": {
-          "thesportsdb": "133859"
+          "thesportsdb": "133674"
         }
       },
       "awayTeam": {
-        "name": "Fiorentina",
+        "name": "Pisa",
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2eso9w1579708309.png",
         "sourceIds": {
-          "thesportsdb": "133674"
+          "thesportsdb": "133859"
         }
       },
       "competition": "Coppa Italia"
@@ -10880,6 +11513,427 @@
       "competition": "Copa Sudamericana"
     },
     {
+      "id": "laliga-102303",
+      "title": "Elche CF vs Real Madrid",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "startUtcEpochSeconds": 1789500600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Elche CF",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Real Madrid",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Movistar LALIGA",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "FR DAZN"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "ESPN+",
+          "aliases": [
+            "US ESPN+",
+            "ESPN+ US"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Movistar Plus+",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Disney+",
+          "aliases": [
+            "FR Disney+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Orange Fútbol 1",
+          "aliases": [
+            "ES Orange Futbol 1"
+          ],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Movistar Plus+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            },
+            {
+              "name": "ESPN+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Disney+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "tsdb-2594452",
       "sourceIds": {
         "thesportsdb": "2594452"
@@ -10931,6 +11985,406 @@
       "competition": "EFL Cup"
     },
     {
+      "id": "laliga-102304",
+      "title": "FC Barcelona vs R. Racing Club",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "startUtcEpochSeconds": 1789587000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "FC Barcelona",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "R. Racing Club",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "FR DAZN"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "ESPN+",
+          "aliases": [
+            "US ESPN+",
+            "ESPN+ US"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Disney+",
+          "aliases": [
+            "FR Disney+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Movistar Plus+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            },
+            {
+              "name": "ESPN+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Disney+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "tsdb-2594456",
       "sourceIds": {
         "thesportsdb": "2594456"
@@ -10944,6 +12398,18 @@
           "channelName": "S Sport+",
           "aliases": [],
           "territory": "TR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Setanta Sports UA",
+          "aliases": [],
+          "territory": "UA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -11043,6 +12509,18 @@
           "channelName": "S Sport+",
           "aliases": [],
           "territory": "TR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Setanta Sports UA",
+          "aliases": [],
+          "territory": "UA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -11319,43 +12797,401 @@
       }
     },
     {
-      "id": "tsdb-2398081",
-      "sourceIds": {
-        "thesportsdb": "2398081"
-      },
-      "title": "Instituto vs Estudiantes de Río Cuarto",
+      "id": "laliga-102307",
+      "title": "Rayo Vallecano vs RCD Espanyol de Barcelona",
       "sport": "football",
-      "startUtcEpochSeconds": 1789431300,
+      "competition": "LALIGA EA SPORTS",
+      "startUtcEpochSeconds": 1789491600,
       "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TNT Sports Argentina",
-          "aliases": [],
-          "territory": "AR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
       "homeTeam": {
-        "name": "Instituto",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jup59w1578825794.png",
-        "sourceIds": {
-          "thesportsdb": "137786"
-        }
+        "name": "Rayo Vallecano",
+        "badgeUrl": null
       },
       "awayTeam": {
-        "name": "Estudiantes de Río Cuarto",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/391thp1775793121.png",
-        "sourceIds": {
-          "thesportsdb": "137773"
-        }
+        "name": "RCD Espanyol de Barcelona",
+        "badgeUrl": null
       },
-      "competition": "Argentinian Primera Division"
+      "broadcasts": [
+        {
+          "channelName": "Movistar LALIGA",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "FR DAZN"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "ESPN+",
+          "aliases": [
+            "US ESPN+",
+            "ESPN+ US"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Disney+",
+          "aliases": [
+            "FR Disney+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Movistar Plus+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            },
+            {
+              "name": "ESPN+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Disney+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
     },
     {
       "id": "tsdb-2594464",
@@ -11550,6 +13386,45 @@
       "competition": "EFL Cup"
     },
     {
+      "id": "tsdb-2598417",
+      "sourceIds": {
+        "thesportsdb": "2598417"
+      },
+      "title": "FC Seoul vs Persib Bandung",
+      "sport": "football",
+      "startUtcEpochSeconds": 1789552800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Vidio.com",
+          "aliases": [],
+          "territory": "ID",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "FC Seoul",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/31z1zf1579473186.png",
+        "sourceIds": {
+          "thesportsdb": "138115"
+        }
+      },
+      "awayTeam": {
+        "name": "Persib Bandung",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yicyke1733590181.png",
+        "sourceIds": {
+          "thesportsdb": "139356"
+        }
+      },
+      "competition": "AFC Champions League Two"
+    },
+    {
       "id": "tsdb-2556425",
       "sourceIds": {
         "thesportsdb": "2556425"
@@ -11589,6 +13464,419 @@
       "competition": "Italian Serie C Girone B"
     },
     {
+      "id": "laliga-102302",
+      "title": "RC Deportivo vs Sevilla FC",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "startUtcEpochSeconds": 1789578000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "RC Deportivo",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Sevilla FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "FR DAZN"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "ESPN+",
+          "aliases": [
+            "US ESPN+",
+            "ESPN+ US"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "DAZN EN ABIERTO",
+          "aliases": [
+            "ES DAZN En Abierto"
+          ],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Disney+",
+          "aliases": [
+            "FR Disney+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Movistar Plus+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            },
+            {
+              "name": "ESPN+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Disney+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "tsdb-2528254",
       "sourceIds": {
         "thesportsdb": "2528254"
@@ -11626,6 +13914,454 @@
         }
       },
       "competition": "English National League"
+    },
+    {
+      "id": "tsdb-2594455",
+      "sourceIds": {
+        "thesportsdb": "2594455"
+      },
+      "title": "Everton vs Wolverhampton Wanderers",
+      "sport": "football",
+      "startUtcEpochSeconds": 1789584300,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Viaplay SE",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Setanta Sports UA",
+          "aliases": [],
+          "territory": "UA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Everton",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/eqayrf1523184794.png",
+        "sourceIds": {
+          "thesportsdb": "133615"
+        }
+      },
+      "awayTeam": {
+        "name": "Wolverhampton Wanderers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/u9qr031621593327.png",
+        "sourceIds": {
+          "thesportsdb": "133599"
+        }
+      },
+      "competition": "EFL Cup"
+    },
+    {
+      "id": "laliga-102305",
+      "title": "Levante UD vs Athletic Club",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "startUtcEpochSeconds": 1789587000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Levante UD",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Athletic Club",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Movistar LALIGA",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "FR DAZN"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "ESPN+",
+          "aliases": [
+            "US ESPN+",
+            "ESPN+ US"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Disney+",
+          "aliases": [
+            "FR Disney+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Movistar Plus+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            },
+            {
+              "name": "ESPN+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Disney+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
     },
     {
       "id": "tsdb-2580258",
@@ -12277,6 +15013,45 @@
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LX",
         "eventMatched": false
       }
+    },
+    {
+      "id": "tsdb-2605392",
+      "sourceIds": {
+        "thesportsdb": "2605392"
+      },
+      "title": "Spain U20 Women vs Portugal U20 Women",
+      "sport": "football",
+      "startUtcEpochSeconds": 1789576200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TUDN Mexico",
+          "aliases": [],
+          "territory": "MX",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Spain U20 Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k7grwm1788199649.png",
+        "sourceIds": {
+          "thesportsdb": "157026"
+        }
+      },
+      "awayTeam": {
+        "name": "Portugal U20 Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ggnfmn1788199516.png",
+        "sourceIds": {
+          "thesportsdb": "157025"
+        }
+      },
+      "competition": "FIFA U20 Womens World Cup"
     }
   ]
 }
