@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789645085,
-  "validUntilEpochSeconds": 1789688285,
+  "generatedAtEpochSeconds": 1789664275,
+  "validUntilEpochSeconds": 1789707475,
   "events": [
     {
       "id": "tsdb-2506233",
@@ -45,7 +45,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -130,7 +130,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -575,19 +575,19 @@
       "competition": "Twenty20 International Series"
     },
     {
-      "id": "tsdb-2470732",
+      "id": "tsdb-2550579",
       "sourceIds": {
-        "thesportsdb": "2470732"
+        "thesportsdb": "2550579"
       },
-      "title": "Counties Manukau vs Otago",
+      "title": "Aurillac vs CA Brive",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789629000,
+      "startUtcEpochSeconds": 1789671600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "MultiSports 2 FR",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -598,20 +598,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Counties Manukau",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
+        "name": "Aurillac",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bswjkc1694604193.png",
         "sourceIds": {
-          "thesportsdb": "145934"
+          "thesportsdb": "144856"
         }
       },
       "awayTeam": {
-        "name": "Otago",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6onld01694618136.png",
+        "name": "CA Brive",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/90p5p01536392092.png",
         "sourceIds": {
-          "thesportsdb": "145939"
+          "thesportsdb": "135330"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "French Pro D2"
     },
     {
       "id": "tsdb-2449204",
@@ -675,55 +675,6 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN 4K",
-          "aliases": [],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
-          "verifiedAt": "2026-09-17",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:canonical-participant-alias+exact-normalized-participant",
-          "eventMatchConfidence": 170
-        },
-        {
-          "channelName": "Sky Sport Austria 1",
-          "aliases": [],
-          "territory": "AT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-17",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
           "channelName": "beIN SPORTS 1",
           "aliases": [
             "beIN Sports HD 1",
@@ -755,7 +706,56 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600",
+          "verifiedAt": "2026-09-17",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "ordered:canonical-participant-alias+exact-normalized-participant",
+          "eventMatchConfidence": 170
+        },
+        {
+          "channelName": "Sky Sport Austria 1",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-17",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN 4K",
+          "aliases": [],
+          "region": "Arabic",
+          "displayRegion": "AR",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -795,7 +795,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -2203,19 +2203,19 @@
       "competition": "One Day International Series"
     },
     {
-      "id": "tsdb-2550579",
+      "id": "tsdb-2470733",
       "sourceIds": {
-        "thesportsdb": "2550579"
+        "thesportsdb": "2470733"
       },
-      "title": "Aurillac vs CA Brive",
+      "title": "Tasman vs Auckland",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789671600,
+      "startUtcEpochSeconds": 1789715400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MultiSports 2 FR",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "FR",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2226,20 +2226,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Aurillac",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bswjkc1694604193.png",
+        "name": "Tasman",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lixu581694617296.png",
         "sourceIds": {
-          "thesportsdb": "144856"
+          "thesportsdb": "145941"
         }
       },
       "awayTeam": {
-        "name": "CA Brive",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/90p5p01536392092.png",
+        "name": "Auckland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by4lk71694617222.png",
         "sourceIds": {
-          "thesportsdb": "135330"
+          "thesportsdb": "145931"
         }
       },
-      "competition": "French Pro D2"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "tsdb-2449205",
@@ -2359,19 +2359,19 @@
       "competition": "Twenty20 International Series"
     },
     {
-      "id": "tsdb-2470733",
+      "id": "tsdb-2550576",
       "sourceIds": {
-        "thesportsdb": "2470733"
+        "thesportsdb": "2550576"
       },
-      "title": "Tasman vs Auckland",
+      "title": "Nevers vs Biarritz Olympique",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789715400,
+      "startUtcEpochSeconds": 1789752600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "Stan Sport AU",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2382,20 +2382,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Tasman",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lixu581694617296.png",
+        "name": "Nevers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xts28v1641776892.png",
         "sourceIds": {
-          "thesportsdb": "145941"
+          "thesportsdb": "144862"
         }
       },
       "awayTeam": {
-        "name": "Auckland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by4lk71694617222.png",
+        "name": "Biarritz Olympique",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/upyi9y1642977994.png",
         "sourceIds": {
-          "thesportsdb": "145931"
+          "thesportsdb": "137387"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "French Pro D2"
     },
     {
       "id": "tsdb-2563745",
@@ -2521,19 +2521,19 @@
       ]
     },
     {
-      "id": "tsdb-2550576",
+      "id": "tsdb-2550578",
       "sourceIds": {
-        "thesportsdb": "2550576"
+        "thesportsdb": "2550578"
       },
-      "title": "Nevers vs Biarritz Olympique",
+      "title": "Colomiers vs US Dax",
       "sport": "rugby",
       "startUtcEpochSeconds": 1789752600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stan Sport AU",
+          "channelName": "MultiSports 1 FR",
           "aliases": [],
-          "territory": "AU",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2544,17 +2544,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Nevers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xts28v1641776892.png",
+        "name": "Colomiers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5s3tax1641776881.png",
         "sourceIds": {
-          "thesportsdb": "144862"
+          "thesportsdb": "144860"
         }
       },
       "awayTeam": {
-        "name": "Biarritz Olympique",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/upyi9y1642977994.png",
+        "name": "US Dax",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzy07l1694075027.png",
         "sourceIds": {
-          "thesportsdb": "137387"
+          "thesportsdb": "141953"
         }
       },
       "competition": "French Pro D2"
@@ -4047,19 +4047,19 @@
       ]
     },
     {
-      "id": "tsdb-2550578",
+      "id": "tsdb-2470734",
       "sourceIds": {
-        "thesportsdb": "2550578"
+        "thesportsdb": "2470734"
       },
-      "title": "Colomiers vs US Dax",
+      "title": "Bay of Plenty vs Hawkes Bay",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789752600,
+      "startUtcEpochSeconds": 1789783500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MultiSports 1 FR",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "FR",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -4070,20 +4070,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Colomiers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5s3tax1641776881.png",
+        "name": "Bay of Plenty",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
         "sourceIds": {
-          "thesportsdb": "144860"
+          "thesportsdb": "145932"
         }
       },
       "awayTeam": {
-        "name": "US Dax",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qzy07l1694075027.png",
+        "name": "Hawkes Bay",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n2ut6h1648907665.png",
         "sourceIds": {
-          "thesportsdb": "141953"
+          "thesportsdb": "145935"
         }
       },
-      "competition": "French Pro D2"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "tsdb-2563746",
@@ -5519,19 +5519,19 @@
       ]
     },
     {
-      "id": "tsdb-2470734",
+      "id": "tsdb-2604960",
       "sourceIds": {
-        "thesportsdb": "2470734"
+        "thesportsdb": "2604960"
       },
-      "title": "Bay of Plenty vs Hawkes Bay",
+      "title": "Sydney Roosters vs Cronulla Sharks",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789783500,
+      "startUtcEpochSeconds": 1789811400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "FOX League",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5542,20 +5542,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Bay of Plenty",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l5p4bp1694618114.png",
+        "name": "Sydney Roosters",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
         "sourceIds": {
-          "thesportsdb": "145932"
+          "thesportsdb": "135192"
         }
       },
       "awayTeam": {
-        "name": "Hawkes Bay",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n2ut6h1648907665.png",
+        "name": "Cronulla Sharks",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qn3n5r1552073088.png",
         "sourceIds": {
-          "thesportsdb": "145935"
+          "thesportsdb": "135184"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "sky-Fulham-Manchester United-1789921800000",
@@ -6958,19 +6958,19 @@
       ]
     },
     {
-      "id": "tsdb-2604960",
+      "id": "tsdb-2550381",
       "sourceIds": {
-        "thesportsdb": "2604960"
+        "thesportsdb": "2550381"
       },
-      "title": "Sydney Roosters vs Cronulla Sharks",
+      "title": "Castres Olympique vs RC Toulonnais",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789811400,
+      "startUtcEpochSeconds": 1789821000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "Premier Sports 2 IE",
           "aliases": [],
-          "territory": "AU",
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -6981,20 +6981,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Sydney Roosters",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/by299w1646347883.png",
+        "name": "Castres Olympique",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
         "sourceIds": {
-          "thesportsdb": "135192"
+          "thesportsdb": "135331"
         }
       },
       "awayTeam": {
-        "name": "Cronulla Sharks",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qn3n5r1552073088.png",
+        "name": "RC Toulonnais",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/c4997c1536393005.png",
         "sourceIds": {
-          "thesportsdb": "135184"
+          "thesportsdb": "135338"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2594873",
@@ -7036,19 +7036,19 @@
       "competition": "UEFA Europa League"
     },
     {
-      "id": "tsdb-2550381",
+      "id": "tsdb-2551090",
       "sourceIds": {
-        "thesportsdb": "2550381"
+        "thesportsdb": "2551090"
       },
-      "title": "Castres Olympique vs RC Toulonnais",
+      "title": "Richmond F.C. vs Ampthill RUFC",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789821000,
+      "startUtcEpochSeconds": 1789822800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Premier Sports 2 IE",
+          "channelName": "Clubber UK",
           "aliases": [],
-          "territory": "IE",
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -7059,20 +7059,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Castres Olympique",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
+        "name": "Richmond F.C.",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n3tz091608154112.png",
         "sourceIds": {
-          "thesportsdb": "135331"
+          "thesportsdb": "140454"
         }
       },
       "awayTeam": {
-        "name": "RC Toulonnais",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/c4997c1536393005.png",
+        "name": "Ampthill RUFC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ib329i1608149031.png",
         "sourceIds": {
-          "thesportsdb": "135338"
+          "thesportsdb": "140444"
         }
       },
-      "competition": "French Top 14"
+      "competition": "English RFU Championship"
     },
     {
       "id": "tsdb-2494047",
@@ -7116,7 +7116,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -7204,7 +7204,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -8573,19 +8573,19 @@
       ]
     },
     {
-      "id": "tsdb-2551090",
+      "id": "tsdb-2550382",
       "sourceIds": {
-        "thesportsdb": "2551090"
+        "thesportsdb": "2550382"
       },
-      "title": "Richmond F.C. vs Ampthill RUFC",
+      "title": "Aviron Bayonnais vs ASM Clermont Auvergne",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789822800,
+      "startUtcEpochSeconds": 1789828500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Clubber UK",
+          "channelName": "MultiSports 3 FR",
           "aliases": [],
-          "territory": "GB",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -8596,20 +8596,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Richmond F.C.",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n3tz091608154112.png",
+        "name": "Aviron Bayonnais",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z0fq591714808782.png",
         "sourceIds": {
-          "thesportsdb": "140454"
+          "thesportsdb": "135328"
         }
       },
       "awayTeam": {
-        "name": "Ampthill RUFC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ib329i1608149031.png",
+        "name": "ASM Clermont Auvergne",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
         "sourceIds": {
-          "thesportsdb": "140444"
+          "thesportsdb": "135332"
         }
       },
-      "competition": "English RFU Championship"
+      "competition": "French Top 14"
     },
     {
       "id": "sky-Brentford-Chelsea-1789761600000",
@@ -10012,45 +10012,6 @@
       ]
     },
     {
-      "id": "tsdb-2550382",
-      "sourceIds": {
-        "thesportsdb": "2550382"
-      },
-      "title": "Aviron Bayonnais vs ASM Clermont Auvergne",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789828500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "MultiSports 3 FR",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-17",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Aviron Bayonnais",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z0fq591714808782.png",
-        "sourceIds": {
-          "thesportsdb": "135328"
-        }
-      },
-      "awayTeam": {
-        "name": "ASM Clermont Auvergne",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
-        "sourceIds": {
-          "thesportsdb": "135332"
-        }
-      },
-      "competition": "French Top 14"
-    },
-    {
       "id": "tsdb-2494046",
       "sourceIds": {
         "thesportsdb": "2494046"
@@ -10087,7 +10048,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -10189,7 +10150,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -10229,7 +10190,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -11859,7 +11820,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -14130,7 +14091,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=200",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -14728,7 +14689,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -15272,7 +15233,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -15728,7 +15689,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -16167,7 +16128,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
           "verifiedAt": "2026-09-17",
           "exclusive": false,
           "destinationType": "linear",
@@ -20717,57 +20678,6 @@
       "competition": "Argentinian Primera Division"
     },
     {
-      "id": "tsdb-2580258",
-      "sourceIds": {
-        "thesportsdb": "2580258"
-      },
-      "title": "Adelaide United vs Tai Po",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789639200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Nova Sport BG",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-17",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIN Sports 5 Qatar",
-          "aliases": [],
-          "territory": "QA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-17",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Adelaide United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wpyuwv1473454602.png",
-        "sourceIds": {
-          "thesportsdb": "134472"
-        }
-      },
-      "awayTeam": {
-        "name": "Tai Po",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/deikl71724646398.png",
-        "sourceIds": {
-          "thesportsdb": "139516"
-        }
-      },
-      "competition": "AFC Champions League Two"
-    },
-    {
       "id": "tsdb-2500774",
       "sourceIds": {
         "thesportsdb": "2500774"
@@ -22203,6 +22113,74 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LT",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009LX",
+      "title": "Inter Miami CF vs San Diego FC",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1789945200,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Inter Miami CF",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "San Diego FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LX",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LX",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009DZ",
+      "title": "Seattle Sounders FC vs Real Salt Lake",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1790213400,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Seattle Sounders FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Real Salt Lake",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009DZ",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009DZ",
         "eventMatched": false
       }
     }
