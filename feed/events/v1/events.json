@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789850222,
-  "validUntilEpochSeconds": 1789893422,
+  "generatedAtEpochSeconds": 1789858878,
+  "validUntilEpochSeconds": 1789902078,
   "events": [
     {
       "id": "tsdb-2506229",
@@ -45,7 +45,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
           "verifiedAt": "2026-09-19",
           "exclusive": false,
           "destinationType": "linear",
@@ -469,57 +469,6 @@
       ]
     },
     {
-      "id": "tsdb-2563746",
-      "sourceIds": {
-        "thesportsdb": "2563746"
-      },
-      "title": "Braunschweig vs Gladiators Trier",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1789835400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TSN 3",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DYN",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Braunschweig",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uwo9uy1629447507.png",
-        "sourceIds": {
-          "thesportsdb": "135418"
-        }
-      },
-      "awayTeam": {
-        "name": "Gladiators Trier",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fb8dgi1726928363.png",
-        "sourceIds": {
-          "thesportsdb": "137371"
-        }
-      },
-      "competition": "German BBL"
-    },
-    {
       "id": "tsdb-2524748",
       "sourceIds": {
         "thesportsdb": "2524748"
@@ -595,19 +544,19 @@
       "competition": "Twenty20 International Series"
     },
     {
-      "id": "tsdb-2551090",
+      "id": "tsdb-2487884",
       "sourceIds": {
-        "thesportsdb": "2551090"
+        "thesportsdb": "2487884"
       },
-      "title": "Richmond F.C. vs Ampthill RUFC",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789833600,
+      "title": "New Zealand Breakers vs Illawarra Hawks",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1789880400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Clubber UK",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "GB",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -618,20 +567,59 @@
         }
       ],
       "homeTeam": {
-        "name": "Richmond F.C.",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n3tz091608154112.png",
+        "name": "New Zealand Breakers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/83088b1725978587.png",
         "sourceIds": {
-          "thesportsdb": "140454"
+          "thesportsdb": "135398"
         }
       },
       "awayTeam": {
-        "name": "Ampthill RUFC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ib329i1608149031.png",
+        "name": "Illawarra Hawks",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/juj7y91725980615.png",
         "sourceIds": {
-          "thesportsdb": "140444"
+          "thesportsdb": "135402"
         }
       },
-      "competition": "English RFU Championship"
+      "competition": "Australian NBL"
+    },
+    {
+      "id": "tsdb-2470737",
+      "sourceIds": {
+        "thesportsdb": "2470737"
+      },
+      "title": "North Harbour vs Canterbury",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1789869900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TVNZ+",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-19",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "North Harbour",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qee9p31648907679.png",
+        "sourceIds": {
+          "thesportsdb": "145937"
+        }
+      },
+      "awayTeam": {
+        "name": "Canterbury",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k861411648907649.png",
+        "sourceIds": {
+          "thesportsdb": "145933"
+        }
+      },
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "f1-https-www-formula1-com-en-racing-2026-azerbaijan-race-1790420400",
@@ -1219,48 +1207,6 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "beIN SPORTS 1",
-          "aliases": [
-            "beIN Sports HD 1",
-            "beIN Sports 1 HD",
-            "beIN Sports 1 FHD",
-            "MENA | beIN Sports 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
           "channelName": "TV 2 Sport 1",
           "aliases": [],
           "territory": "DK",
@@ -1317,46 +1263,6 @@
           "destinationType": "service",
           "ruleType": "all-events",
           "destinationPrecision": "service"
-        },
-        {
-          "channelName": "beIN SPORTS EN 1",
-          "aliases": [
-            "beIN Sports EN 1 HD",
-            "MENA | beIN Sports EN 1"
-          ],
-          "region": "Arabic",
-          "displayRegion": "AR",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
         },
         {
           "channelName": "Movistar Plus+",
@@ -1739,123 +1645,6 @@
       ]
     },
     {
-      "id": "tsdb-2487884",
-      "sourceIds": {
-        "thesportsdb": "2487884"
-      },
-      "title": "New Zealand Breakers vs Illawarra Hawks",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1789880400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Australia",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "New Zealand Breakers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/83088b1725978587.png",
-        "sourceIds": {
-          "thesportsdb": "135398"
-        }
-      },
-      "awayTeam": {
-        "name": "Illawarra Hawks",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/juj7y91725980615.png",
-        "sourceIds": {
-          "thesportsdb": "135402"
-        }
-      },
-      "competition": "Australian NBL"
-    },
-    {
-      "id": "tsdb-2606120",
-      "sourceIds": {
-        "thesportsdb": "2606120"
-      },
-      "title": "Warrington Wolves vs Hull Kingston Rovers",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789835400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "SportsNet World",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Warrington Wolves",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/saimjk1656789616.png",
-        "sourceIds": {
-          "thesportsdb": "135220"
-        }
-      },
-      "awayTeam": {
-        "name": "Hull Kingston Rovers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/23h83f1641840658.png",
-        "sourceIds": {
-          "thesportsdb": "135215"
-        }
-      },
-      "competition": "English Rugby League Super League"
-    },
-    {
-      "id": "tsdb-2482181",
-      "sourceIds": {
-        "thesportsdb": "2482181"
-      },
-      "title": "Roma vs Inter Milan",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789833600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Brasil",
-          "aliases": [],
-          "territory": "BR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Roma",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jwro2s1760820674.png",
-        "sourceIds": {
-          "thesportsdb": "133682"
-        }
-      },
-      "awayTeam": {
-        "name": "Inter Milan",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryhu6d1617113103.png",
-        "sourceIds": {
-          "thesportsdb": "133681"
-        }
-      },
-      "competition": "Italian Serie A"
-    },
-    {
       "id": "tsdb-2563751",
       "sourceIds": {
         "thesportsdb": "2563751"
@@ -1895,19 +1684,55 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2470737",
+      "id": "tsdb-2604961",
       "sourceIds": {
-        "thesportsdb": "2470737"
+        "thesportsdb": "2604961"
       },
-      "title": "North Harbour vs Canterbury",
+      "title": "New Zealand Warriors vs Newcastle Knights",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789869900,
+      "startUtcEpochSeconds": 1789884300,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "FOX League",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-19",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 1 France",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-19",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Fox Sports 2 US",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-19",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ESPN South Africa",
+          "aliases": [],
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1918,20 +1743,20 @@
         }
       ],
       "homeTeam": {
-        "name": "North Harbour",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qee9p31648907679.png",
+        "name": "New Zealand Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w8b9kw1646347767.png",
         "sourceIds": {
-          "thesportsdb": "145937"
+          "thesportsdb": "135193"
         }
       },
       "awayTeam": {
-        "name": "Canterbury",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k861411648907649.png",
+        "name": "Newcastle Knights",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/aes2o51646347790.png",
         "sourceIds": {
-          "thesportsdb": "145933"
+          "thesportsdb": "135198"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "l1_championship_match_73861",
@@ -2069,19 +1894,19 @@
       "competition": "WNBA"
     },
     {
-      "id": "tsdb-2604961",
+      "id": "tsdb-2550387",
       "sourceIds": {
-        "thesportsdb": "2604961"
+        "thesportsdb": "2550387"
       },
-      "title": "New Zealand Warriors vs Newcastle Knights",
+      "title": "Union Bordeaux Bègles vs Stade Français Paris",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1789884300,
+      "startUtcEpochSeconds": 1789931100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "Viaplay Sports 2 UK",
           "aliases": [],
-          "territory": "AU",
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2091,33 +1916,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "BeIn Sports HD 1 France",
+          "channelName": "Premier Sports 2 IE",
           "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fox Sports 2 US",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "ESPN South Africa",
-          "aliases": [],
-          "territory": "ZA",
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2128,20 +1929,20 @@
         }
       ],
       "homeTeam": {
-        "name": "New Zealand Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w8b9kw1646347767.png",
+        "name": "Union Bordeaux Bègles",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qiw7sx1536393400.png",
         "sourceIds": {
-          "thesportsdb": "135193"
+          "thesportsdb": "135329"
         }
       },
       "awayTeam": {
-        "name": "Newcastle Knights",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/aes2o51646347790.png",
+        "name": "Stade Français Paris",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lr2v3f1622926121.png",
         "sourceIds": {
-          "thesportsdb": "135198"
+          "thesportsdb": "135337"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2494041",
@@ -3645,57 +3446,6 @@
         }
       },
       "competition": "WNBA"
-    },
-    {
-      "id": "tsdb-2550387",
-      "sourceIds": {
-        "thesportsdb": "2550387"
-      },
-      "title": "Union Bordeaux Bègles vs Stade Français Paris",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1789931100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Viaplay Sports 2 UK",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 2 IE",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Union Bordeaux Bègles",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qiw7sx1536393400.png",
-        "sourceIds": {
-          "thesportsdb": "135329"
-        }
-      },
-      "awayTeam": {
-        "name": "Stade Français Paris",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lr2v3f1622926121.png",
-        "sourceIds": {
-          "thesportsdb": "135337"
-        }
-      },
-      "competition": "French Top 14"
     },
     {
       "id": "sky-Bournemouth-Liverpool-1789912800000",
@@ -6555,7 +6305,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
           "verifiedAt": "2026-09-19",
           "exclusive": false,
           "destinationType": "linear",
@@ -6621,7 +6371,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
           "verifiedAt": "2026-09-19",
           "exclusive": false,
           "destinationType": "linear",
@@ -6661,7 +6411,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
           "verifiedAt": "2026-09-19",
           "exclusive": false,
           "destinationType": "linear",
@@ -9544,364 +9294,6 @@
       "competition": "Italian Serie A"
     },
     {
-      "id": "tsdb-2508365",
-      "sourceIds": {
-        "thesportsdb": "2508365"
-      },
-      "title": "Stuttgart vs Borussia Dortmund",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789835400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Play Sports 2",
-          "aliases": [],
-          "territory": "BE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Diema Sport 3 BG",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "V Sport Football",
-          "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Stuttgart",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yppyux1473454085.png",
-        "sourceIds": {
-          "thesportsdb": "133660"
-        }
-      },
-      "awayTeam": {
-        "name": "Borussia Dortmund",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tqo8ge1716960353.png",
-        "sourceIds": {
-          "thesportsdb": "133650"
-        }
-      },
-      "competition": "German Bundesliga",
-      "broadcastRights": [
-        {
-          "territory": "DE",
-          "holders": [
-            {
-              "name": "Sky Deutschland",
-              "kind": "network"
-            },
-            {
-              "name": "DAZN",
-              "kind": "service"
-            },
-            {
-              "name": "WOW",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BH",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DZ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "EG",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IQ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "JO",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KW",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LB",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "OM",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PS",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "QA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TN",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "YE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
       "id": "tsdb-2482183",
       "sourceIds": {
         "thesportsdb": "2482183"
@@ -10327,78 +9719,6 @@
           ],
           "sourceType": "official-rights",
           "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "l1_championship_match_73864",
-      "title": "Paris FC vs RC Strasbourg Alsace",
-      "sport": "football",
-      "competition": "Ligue 1",
-      "startUtcEpochSeconds": 1789830900,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Paris FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "RC Strasbourg Alsace",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Ligue 1+ 2",
-          "aliases": [
-            "Ligue1+ 2",
-            "FR Ligue 1+ 2",
-            "Ligue 1+ 2 HD"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-match-id",
-          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73864",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Ligue 1+",
-          "aliases": [
-            "Ligue1+",
-            "FR Ligue 1+"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
-          "verifiedAt": "2026-08-23",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "ligue1",
-        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73864",
-        "eventMatched": false
-      },
-      "broadcastRights": [
-        {
-          "territory": "FR",
-          "holders": [
-            {
-              "name": "Ligue 1+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
           "verifiedAt": "2026-08-23",
           "validFrom": "2026-07-01",
           "validThrough": "2027-06-30",
@@ -11543,481 +10863,6 @@
       "competition": "Scottish Premier League"
     },
     {
-      "id": "laliga-102311",
-      "title": "Celta vs R. Racing Club",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "startUtcEpochSeconds": 1789835400,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Celta",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "R. Racing Club",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Movistar LALIGA",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "embedded-match-object",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN",
-          "aliases": [
-            "FR DAZN"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "ESPN+",
-          "aliases": [
-            "US ESPN+",
-            "ESPN+ US"
-          ],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Disney+",
-          "aliases": [
-            "FR Disney+"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "laliga",
-        "url": "https://www.laliga.com/laliga-easports/resultados",
-        "eventMatched": false
-      },
-      "broadcastRights": [
-        {
-          "territory": "ES",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            },
-            {
-              "name": "Movistar Plus+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            },
-            {
-              "name": "ESPN+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "FR",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            },
-            {
-              "name": "Disney+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BH",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DZ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "EG",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IQ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "JO",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KW",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LB",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "OM",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PS",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "QA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TN",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "YE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2505767",
-      "sourceIds": {
-        "thesportsdb": "2505767"
-      },
-      "title": "Castellón vs Tenerife",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789835400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "LaLiga TV Hypermotion",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Castellón",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ywibjw1733456820.png",
-        "sourceIds": {
-          "thesportsdb": "138286"
-        }
-      },
-      "awayTeam": {
-        "name": "Tenerife",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/utuqys1420503958.png",
-        "sourceIds": {
-          "thesportsdb": "133840"
-        }
-      },
-      "competition": "Spanish La Liga 2"
-    },
-    {
-      "id": "tsdb-2533279",
-      "sourceIds": {
-        "thesportsdb": "2533279"
-      },
-      "title": "Dinamo City vs Laçi",
-      "sport": "football",
-      "startUtcEpochSeconds": 1789835400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "RTSH Sport AL",
-          "aliases": [],
-          "territory": "AL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Dinamo City",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mdqmna1743410388.png",
-        "sourceIds": {
-          "thesportsdb": "140666"
-        }
-      },
-      "awayTeam": {
-        "name": "Laçi",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z4la9v1753831985.png",
-        "sourceIds": {
-          "thesportsdb": "134349"
-        }
-      },
-      "competition": "Albanian Superliga"
-    },
-    {
       "id": "tsdb-2398090",
       "sourceIds": {
         "thesportsdb": "2398090"
@@ -12889,7 +11734,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
           "verifiedAt": "2026-09-19",
           "exclusive": false,
           "destinationType": "linear",
@@ -14206,7 +13051,7 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-match-teams-competition-kickoff",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
           "verifiedAt": "2026-09-19",
           "exclusive": false,
           "destinationType": "linear",
@@ -15259,43 +14104,38 @@
       }
     },
     {
-      "id": "tsdb-2606505",
-      "sourceIds": {
-        "thesportsdb": "2606505"
-      },
-      "title": "Brazil U20 Women vs Spain U20 Women",
+      "id": "mls-MLS-MAT-0009M1",
+      "title": "Columbus Crew vs Inter Miami CF",
       "sport": "football",
-      "startUtcEpochSeconds": 1789835400,
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1790550000,
       "status": "confirmed",
+      "homeTeam": {
+        "name": "Columbus Crew",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Inter Miami CF",
+        "badgeUrl": null
+      },
       "broadcasts": [
         {
-          "channelName": "TUDN Mexico",
+          "channelName": "Apple TV",
           "aliases": [],
-          "territory": "MX",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-19",
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M1",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
-      "homeTeam": {
-        "name": "Brazil U20 Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/izml6z1788197565.png",
-        "sourceIds": {
-          "thesportsdb": "157015"
-        }
-      },
-      "awayTeam": {
-        "name": "Spain U20 Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k7grwm1788199649.png",
-        "sourceIds": {
-          "thesportsdb": "157026"
-        }
-      },
-      "competition": "FIFA U20 Womens World Cup"
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M1",
+        "eventMatched": false
+      }
     }
   ]
 }
