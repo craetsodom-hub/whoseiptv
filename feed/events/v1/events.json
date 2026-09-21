@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1789966320,
-  "validUntilEpochSeconds": 1790009520,
+  "generatedAtEpochSeconds": 1789994635,
+  "validUntilEpochSeconds": 1790037835,
   "events": [
     {
       "id": "tsdb-2398086",
@@ -43,43 +43,19 @@
       "competition": "Argentinian Primera Division"
     },
     {
-      "id": "tsdb-2449212",
+      "id": "tsdb-2487886",
       "sourceIds": {
-        "thesportsdb": "2449212"
+        "thesportsdb": "2487886"
       },
-      "title": "Las Vegas Aces vs Seattle Storm",
+      "title": "Tasmania JackJumpers vs South East Melbourne Phoenix",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1789952400,
+      "startUtcEpochSeconds": 1789983000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TSN 5",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-21",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sport NBA",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-21",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "CNBC",
-          "aliases": [],
-          "territory": "US",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -90,20 +66,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Las Vegas Aces",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jnvk6x1741462255.png",
+        "name": "Tasmania JackJumpers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbmi6c1755702783.png",
         "sourceIds": {
-          "thesportsdb": "136437"
+          "thesportsdb": "144011"
         }
       },
       "awayTeam": {
-        "name": "Seattle Storm",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ygz07x1624031566.png",
+        "name": "South East Melbourne Phoenix",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/73xo0d1755702709.png",
         "sourceIds": {
-          "thesportsdb": "136448"
+          "thesportsdb": "136401"
         }
       },
-      "competition": "WNBA"
+      "competition": "Australian NBL"
     },
     {
       "id": "tsdb-2524729",
@@ -783,84 +759,6 @@
       "competition": "Italian Serie C Girone B"
     },
     {
-      "id": "tsdb-2487886",
-      "sourceIds": {
-        "thesportsdb": "2487886"
-      },
-      "title": "Tasmania JackJumpers vs South East Melbourne Phoenix",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1789983000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Australia",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-21",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Tasmania JackJumpers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbmi6c1755702783.png",
-        "sourceIds": {
-          "thesportsdb": "144011"
-        }
-      },
-      "awayTeam": {
-        "name": "South East Melbourne Phoenix",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/73xo0d1755702709.png",
-        "sourceIds": {
-          "thesportsdb": "136401"
-        }
-      },
-      "competition": "Australian NBL"
-    },
-    {
-      "id": "tsdb-2398093",
-      "sourceIds": {
-        "thesportsdb": "2398093"
-      },
-      "title": "Lanús vs Estudiantes de La Plata",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790036100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Premium Argentina",
-          "aliases": [],
-          "territory": "AR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-21",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Lanús",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ddty0w1769146364.png",
-        "sourceIds": {
-          "thesportsdb": "135165"
-        }
-      },
-      "awayTeam": {
-        "name": "Estudiantes de La Plata",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pf08dq1760634366.png",
-        "sourceIds": {
-          "thesportsdb": "135160"
-        }
-      },
-      "competition": "Argentinian Primera Division"
-    },
-    {
       "id": "tsdb-2449213",
       "sourceIds": {
         "thesportsdb": "2449213"
@@ -912,6 +810,84 @@
       "competition": "WNBA"
     },
     {
+      "id": "tsdb-2398093",
+      "sourceIds": {
+        "thesportsdb": "2398093"
+      },
+      "title": "Lanús vs Estudiantes de La Plata",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790036100,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ESPN Premium Argentina",
+          "aliases": [],
+          "territory": "AR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Lanús",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ddty0w1769146364.png",
+        "sourceIds": {
+          "thesportsdb": "135165"
+        }
+      },
+      "awayTeam": {
+        "name": "Estudiantes de La Plata",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pf08dq1760634366.png",
+        "sourceIds": {
+          "thesportsdb": "135160"
+        }
+      },
+      "competition": "Argentinian Primera Division"
+    },
+    {
+      "id": "tsdb-2449214",
+      "sourceIds": {
+        "thesportsdb": "2449214"
+      },
+      "title": "Phoenix Mercury vs Dallas Wings",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790042400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sky Sport NBA",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Phoenix Mercury",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bcjbjy1767191655.png",
+        "sourceIds": {
+          "thesportsdb": "136444"
+        }
+      },
+      "awayTeam": {
+        "name": "Dallas Wings",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vg11pw1552585970.png",
+        "sourceIds": {
+          "thesportsdb": "136441"
+        }
+      },
+      "competition": "WNBA"
+    },
+    {
       "id": "tsdb-2531794",
       "sourceIds": {
         "thesportsdb": "2531794"
@@ -956,19 +932,19 @@
       "competition": "EFL Trophy"
     },
     {
-      "id": "tsdb-2449214",
+      "id": "tsdb-2487887",
       "sourceIds": {
-        "thesportsdb": "2449214"
+        "thesportsdb": "2487887"
       },
-      "title": "Phoenix Mercury vs Dallas Wings",
+      "title": "Brisbane Bullets vs New Zealand Breakers",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790042400,
+      "startUtcEpochSeconds": 1790069400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sky Sport NBA",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "IT",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -979,20 +955,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Phoenix Mercury",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bcjbjy1767191655.png",
+        "name": "Brisbane Bullets",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ubzenr1545867000.png",
         "sourceIds": {
-          "thesportsdb": "136444"
+          "thesportsdb": "136287"
         }
       },
       "awayTeam": {
-        "name": "Dallas Wings",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vg11pw1552585970.png",
+        "name": "New Zealand Breakers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/83088b1725978587.png",
         "sourceIds": {
-          "thesportsdb": "136441"
+          "thesportsdb": "135398"
         }
       },
-      "competition": "WNBA"
+      "competition": "Australian NBL"
     },
     {
       "id": "tsdb-2558124",
@@ -1046,19 +1022,19 @@
       "competition": "International Friendlies"
     },
     {
-      "id": "tsdb-2487887",
+      "id": "tsdb-2449216",
       "sourceIds": {
-        "thesportsdb": "2487887"
+        "thesportsdb": "2449216"
       },
-      "title": "Brisbane Bullets vs New Zealand Breakers",
+      "title": "Indiana Fever vs Minnesota Lynx",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790069400,
+      "startUtcEpochSeconds": 1790121600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN Australia",
+          "channelName": "ESPN US",
           "aliases": [],
-          "territory": "AU",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1069,20 +1045,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Brisbane Bullets",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ubzenr1545867000.png",
+        "name": "Indiana Fever",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9xp4y31552586027.png",
         "sourceIds": {
-          "thesportsdb": "136287"
+          "thesportsdb": "136439"
         }
       },
       "awayTeam": {
-        "name": "New Zealand Breakers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/83088b1725978587.png",
+        "name": "Minnesota Lynx",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rzyqoj1552586193.png",
         "sourceIds": {
-          "thesportsdb": "135398"
+          "thesportsdb": "136442"
         }
       },
-      "competition": "Australian NBL"
+      "competition": "WNBA"
     },
     {
       "id": "tsdb-2606328",
@@ -1124,79 +1100,6 @@
       "competition": "International Friendlies"
     },
     {
-      "id": "tsdb-2449216",
-      "sourceIds": {
-        "thesportsdb": "2449216"
-      },
-      "title": "Indiana Fever vs Minnesota Lynx",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1790121600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN US",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-21",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Indiana Fever",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9xp4y31552586027.png",
-        "sourceIds": {
-          "thesportsdb": "136439"
-        }
-      },
-      "awayTeam": {
-        "name": "Minnesota Lynx",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rzyqoj1552586193.png",
-        "sourceIds": {
-          "thesportsdb": "136442"
-        }
-      },
-      "competition": "WNBA"
-    },
-    {
-      "id": "mls-MLS-MAT-0009DZ",
-      "title": "Seattle Sounders FC vs Real Salt Lake",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790213400,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Seattle Sounders FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Real Salt Lake",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009DZ",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009DZ",
-        "eventMatched": false
-      }
-    },
-    {
       "id": "tsdb-2449217",
       "sourceIds": {
         "thesportsdb": "2449217"
@@ -1236,18 +1139,18 @@
       "competition": "WNBA"
     },
     {
-      "id": "mls-MLS-MAT-0009LY",
-      "title": "Atlanta United vs New York City Football Club",
+      "id": "mls-MLS-MAT-0009DZ",
+      "title": "Seattle Sounders FC vs Real Salt Lake",
       "sport": "football",
       "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790465400,
+      "startUtcEpochSeconds": 1790213400,
       "status": "confirmed",
       "homeTeam": {
-        "name": "Atlanta United",
+        "name": "Seattle Sounders FC",
         "badgeUrl": null
       },
       "awayTeam": {
-        "name": "New York City Football Club",
+        "name": "Real Salt Lake",
         "badgeUrl": null
       },
       "broadcasts": [
@@ -1258,14 +1161,14 @@
           "confirmed": true,
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LY",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009DZ",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "broadcasterEvidence": {
         "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LY",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009DZ",
         "eventMatched": false
       }
     },
@@ -1309,18 +1212,18 @@
       "competition": "Australian NBL"
     },
     {
-      "id": "mls-MLS-MAT-0009M0",
-      "title": "Charlotte FC vs Chicago Fire FC",
+      "id": "mls-MLS-MAT-0009LY",
+      "title": "Atlanta United vs New York City Football Club",
       "sport": "football",
       "competition": "Major League Soccer - Regular Season",
       "startUtcEpochSeconds": 1790465400,
       "status": "confirmed",
       "homeTeam": {
-        "name": "Charlotte FC",
+        "name": "Atlanta United",
         "badgeUrl": null
       },
       "awayTeam": {
-        "name": "Chicago Fire FC",
+        "name": "New York City Football Club",
         "badgeUrl": null
       },
       "broadcasts": [
@@ -1331,14 +1234,14 @@
           "confirmed": true,
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M0",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LY",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "broadcasterEvidence": {
         "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M0",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LY",
         "eventMatched": false
       }
     },
@@ -1380,6 +1283,40 @@
         }
       },
       "competition": "FIBA Intercontinental Cup"
+    },
+    {
+      "id": "mls-MLS-MAT-0009M0",
+      "title": "Charlotte FC vs Chicago Fire FC",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1790465400,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Charlotte FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Chicago Fire FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M0",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M0",
+        "eventMatched": false
+      }
     },
     {
       "id": "mls-MLS-MAT-0009M5",
