@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1790182492,
-  "validUntilEpochSeconds": 1790225692,
+  "generatedAtEpochSeconds": 1790198890,
+  "validUntilEpochSeconds": 1790242090,
   "events": [
     {
       "id": "tsdb-2442738",
@@ -139,19 +139,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2586195",
+      "id": "tsdb-2449219",
       "sourceIds": {
-        "thesportsdb": "2586195"
+        "thesportsdb": "2449219"
       },
-      "title": "Beijing Royal Fighters vs NBA G League United",
+      "title": "Seattle Storm vs Dallas Wings",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790163000,
+      "startUtcEpochSeconds": 1790215200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Magenta Sport 4 GR",
+          "channelName": "Sky Sport NBA",
           "aliases": [],
-          "territory": "GR",
+          "territory": "IT",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -162,20 +162,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Beijing Royal Fighters",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v0ugmi1700075249.png",
+        "name": "Seattle Storm",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ygz07x1624031566.png",
         "sourceIds": {
-          "thesportsdb": "137339"
+          "thesportsdb": "136448"
         }
       },
       "awayTeam": {
-        "name": "NBA G League United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bx0sgl1730454235.png",
+        "name": "Dallas Wings",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vg11pw1552585970.png",
         "sourceIds": {
-          "thesportsdb": "149436"
+          "thesportsdb": "136441"
         }
       },
-      "competition": "FIBA Intercontinental Cup"
+      "competition": "WNBA"
     },
     {
       "id": "tsdb-2524730",
@@ -909,19 +909,31 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2449219",
+      "id": "tsdb-2487889",
       "sourceIds": {
-        "thesportsdb": "2449219"
+        "thesportsdb": "2487889"
       },
-      "title": "Seattle Storm vs Dallas Wings",
+      "title": "South East Melbourne Phoenix vs Melbourne United",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790215200,
+      "startUtcEpochSeconds": 1790242200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sky Sport NBA",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "IT",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "NBA TV",
+          "aliases": [],
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -932,20 +944,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Seattle Storm",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ygz07x1624031566.png",
+        "name": "South East Melbourne Phoenix",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/73xo0d1755702709.png",
         "sourceIds": {
-          "thesportsdb": "136448"
+          "thesportsdb": "136401"
         }
       },
       "awayTeam": {
-        "name": "Dallas Wings",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vg11pw1552585970.png",
+        "name": "Melbourne United",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/adpuke1755702629.png",
         "sourceIds": {
-          "thesportsdb": "136441"
+          "thesportsdb": "135397"
         }
       },
-      "competition": "WNBA"
+      "competition": "Australian NBL"
     },
     {
       "id": "tsdb-2524731",
@@ -1115,19 +1127,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2487889",
+      "id": "tsdb-2565446",
       "sourceIds": {
-        "thesportsdb": "2487889"
+        "thesportsdb": "2565446"
       },
-      "title": "South East Melbourne Phoenix vs Melbourne United",
+      "title": "Dubai Basketball vs Real Madrid Baloncesto",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790242200,
+      "startUtcEpochSeconds": 1790265600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN Australia",
+          "channelName": "BeIn Sports HD 1 France",
           "aliases": [],
-          "territory": "AU",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1137,9 +1149,21 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "NBA TV",
+          "channelName": "Sport Klub 1 HR",
           "aliases": [],
-          "territory": "US",
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "S Sport TR",
+          "aliases": [],
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1150,20 +1174,20 @@
         }
       ],
       "homeTeam": {
-        "name": "South East Melbourne Phoenix",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/73xo0d1755702709.png",
+        "name": "Dubai Basketball",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fgtnti1758215967.png",
         "sourceIds": {
-          "thesportsdb": "136401"
+          "thesportsdb": "148701"
         }
       },
       "awayTeam": {
-        "name": "Melbourne United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/adpuke1755702629.png",
+        "name": "Real Madrid Baloncesto",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
         "sourceIds": {
-          "thesportsdb": "135397"
+          "thesportsdb": "135092"
         }
       },
-      "competition": "Australian NBL"
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2470740",
@@ -1364,43 +1388,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565446",
+      "id": "tsdb-2565447",
       "sourceIds": {
-        "thesportsdb": "2565446"
+        "thesportsdb": "2565447"
       },
-      "title": "Dubai Basketball vs Real Madrid Baloncesto",
+      "title": "Hapoel Tel Aviv BC vs Bayern München Basketball",
       "sport": "basketball",
       "startUtcEpochSeconds": 1790265600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 1 France",
+          "channelName": "Sport 5 IL",
           "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 1 HR",
-          "aliases": [],
-          "territory": "HR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "S Sport TR",
-          "aliases": [],
-          "territory": "TR",
+          "territory": "IL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1411,17 +1411,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Dubai Basketball",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fgtnti1758215967.png",
+        "name": "Hapoel Tel Aviv BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrrsml1767366305.png",
         "sourceIds": {
-          "thesportsdb": "148701"
+          "thesportsdb": "136059"
         }
       },
       "awayTeam": {
-        "name": "Real Madrid Baloncesto",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
+        "name": "Bayern München Basketball",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z2r3eh1678017187.png",
         "sourceIds": {
-          "thesportsdb": "135092"
+          "thesportsdb": "135424"
         }
       },
       "competition": "EuroLeague Basketball"
@@ -1505,19 +1505,43 @@
       "competition": "International Friendlies"
     },
     {
-      "id": "tsdb-2565447",
+      "id": "tsdb-2565450",
       "sourceIds": {
-        "thesportsdb": "2565447"
+        "thesportsdb": "2565450"
       },
-      "title": "Hapoel Tel Aviv BC vs Bayern München Basketball",
+      "title": "FC Barcelona Basquet vs Anadolu Efes SK",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790265600,
+      "startUtcEpochSeconds": 1790274600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sport 5 IL",
+          "channelName": "Movistar #Vamos",
           "aliases": [],
-          "territory": "IL",
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 1 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 6 SI",
+          "aliases": [],
+          "territory": "SI",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1528,17 +1552,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Hapoel Tel Aviv BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrrsml1767366305.png",
+        "name": "FC Barcelona Basquet",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0tz26j1729097443.png",
         "sourceIds": {
-          "thesportsdb": "136059"
+          "thesportsdb": "135082"
         }
       },
       "awayTeam": {
-        "name": "Bayern München Basketball",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z2r3eh1678017187.png",
+        "name": "Anadolu Efes SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
         "sourceIds": {
-          "thesportsdb": "135424"
+          "thesportsdb": "136066"
         }
       },
       "competition": "EuroLeague Basketball"
@@ -1730,19 +1754,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565450",
+      "id": "tsdb-2565451",
       "sourceIds": {
-        "thesportsdb": "2565450"
+        "thesportsdb": "2565451"
       },
-      "title": "FC Barcelona Basquet vs Anadolu Efes SK",
+      "title": "Baskonia vs Olympiacos BC",
       "sport": "basketball",
       "startUtcEpochSeconds": 1790274600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Movistar #Vamos",
+          "channelName": "MagentaTV DE",
           "aliases": [],
-          "territory": "ES",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1752,21 +1776,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Arena Sport 1 RS",
+          "channelName": "Novasports Prime",
           "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 6 SI",
-          "aliases": [],
-          "territory": "SI",
+          "territory": "GR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1777,17 +1789,17 @@
         }
       ],
       "homeTeam": {
-        "name": "FC Barcelona Basquet",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0tz26j1729097443.png",
+        "name": "Baskonia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/p4x3o61767366090.png",
         "sourceIds": {
-          "thesportsdb": "135082"
+          "thesportsdb": "135088"
         }
       },
       "awayTeam": {
-        "name": "Anadolu Efes SK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
+        "name": "Olympiacos BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
         "sourceIds": {
-          "thesportsdb": "136066"
+          "thesportsdb": "135635"
         }
       },
       "competition": "EuroLeague Basketball"
@@ -1871,31 +1883,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565451",
+      "id": "tsdb-2449221",
       "sourceIds": {
-        "thesportsdb": "2565451"
+        "thesportsdb": "2449221"
       },
-      "title": "Baskonia vs Olympiacos BC",
+      "title": "Minnesota Lynx vs Indiana Fever",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790274600,
+      "startUtcEpochSeconds": 1790294400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MagentaTV DE",
+          "channelName": "USA Network",
           "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Novasports Prime",
-          "aliases": [],
-          "territory": "GR",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1906,20 +1906,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Baskonia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/p4x3o61767366090.png",
+        "name": "Minnesota Lynx",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rzyqoj1552586193.png",
         "sourceIds": {
-          "thesportsdb": "135088"
+          "thesportsdb": "136442"
         }
       },
       "awayTeam": {
-        "name": "Olympiacos BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
+        "name": "Indiana Fever",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9xp4y31552586027.png",
         "sourceIds": {
-          "thesportsdb": "135635"
+          "thesportsdb": "136439"
         }
       },
-      "competition": "EuroLeague Basketball"
+      "competition": "WNBA"
     },
     {
       "id": "tsdb-2553382",
@@ -2072,19 +2072,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2449221",
+      "id": "tsdb-2449223",
       "sourceIds": {
-        "thesportsdb": "2449221"
+        "thesportsdb": "2449223"
       },
-      "title": "Minnesota Lynx vs Indiana Fever",
+      "title": "Phoenix Mercury vs Las Vegas Aces",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790294400,
+      "startUtcEpochSeconds": 1790301600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "USA Network",
+          "channelName": "Sky Sport NBA",
           "aliases": [],
-          "territory": "US",
+          "territory": "IT",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2095,17 +2095,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Minnesota Lynx",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rzyqoj1552586193.png",
+        "name": "Phoenix Mercury",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bcjbjy1767191655.png",
         "sourceIds": {
-          "thesportsdb": "136442"
+          "thesportsdb": "136444"
         }
       },
       "awayTeam": {
-        "name": "Indiana Fever",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9xp4y31552586027.png",
+        "name": "Las Vegas Aces",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jnvk6x1741462255.png",
         "sourceIds": {
-          "thesportsdb": "136439"
+          "thesportsdb": "136437"
         }
       },
       "competition": "WNBA"
@@ -2213,96 +2213,6 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2449223",
-      "sourceIds": {
-        "thesportsdb": "2449223"
-      },
-      "title": "Phoenix Mercury vs Las Vegas Aces",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1790301600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sky Sport NBA",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Phoenix Mercury",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bcjbjy1767191655.png",
-        "sourceIds": {
-          "thesportsdb": "136444"
-        }
-      },
-      "awayTeam": {
-        "name": "Las Vegas Aces",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jnvk6x1741462255.png",
-        "sourceIds": {
-          "thesportsdb": "136437"
-        }
-      },
-      "competition": "WNBA"
-    },
-    {
-      "id": "tsdb-2442743",
-      "sourceIds": {
-        "thesportsdb": "2442743"
-      },
-      "title": "Kosovo vs Ireland",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790275500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Super Sport 2 HD (Albania)",
-          "aliases": [],
-          "territory": "AL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "RTE2",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Kosovo",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i3wq751730304457.png",
-        "sourceIds": {
-          "thesportsdb": "136518"
-        }
-      },
-      "awayTeam": {
-        "name": "Ireland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3vq2cl1679073105.png",
-        "sourceIds": {
-          "thesportsdb": "133911"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
       "id": "tsdb-2565453",
       "sourceIds": {
         "thesportsdb": "2565453"
@@ -2390,6 +2300,108 @@
       "competition": "EuroLeague Basketball"
     },
     {
+      "id": "tsdb-2442743",
+      "sourceIds": {
+        "thesportsdb": "2442743"
+      },
+      "title": "Kosovo vs Ireland",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790275500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Super Sport 2 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTE2",
+          "aliases": [],
+          "territory": "IE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Kosovo",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i3wq751730304457.png",
+        "sourceIds": {
+          "thesportsdb": "136518"
+        }
+      },
+      "awayTeam": {
+        "name": "Ireland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3vq2cl1679073105.png",
+        "sourceIds": {
+          "thesportsdb": "133911"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2565455",
+      "sourceIds": {
+        "thesportsdb": "2565455"
+      },
+      "title": "KK Partizan vs Olimpia Milano",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790361900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Novasports Prime",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 1 Premium RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-23",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "KK Partizan",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/us0e1z1767366567.png",
+        "sourceIds": {
+          "thesportsdb": "136102"
+        }
+      },
+      "awayTeam": {
+        "name": "Olimpia Milano",
+        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/aurbi61790186853.png",
+        "sourceIds": {
+          "thesportsdb": "135383"
+        }
+      },
+      "competition": "EuroLeague Basketball"
+    },
+    {
       "id": "tsdb-2442745",
       "sourceIds": {
         "thesportsdb": "2442745"
@@ -2454,57 +2466,6 @@
         }
       },
       "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2565455",
-      "sourceIds": {
-        "thesportsdb": "2565455"
-      },
-      "title": "KK Partizan vs Olimpia Milano",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1790361900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Novasports Prime",
-          "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport 1 Premium RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "KK Partizan",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/us0e1z1767366567.png",
-        "sourceIds": {
-          "thesportsdb": "136102"
-        }
-      },
-      "awayTeam": {
-        "name": "Olimpia Milano",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/cgrlw41790004272.png",
-        "sourceIds": {
-          "thesportsdb": "135383"
-        }
-      },
-      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2475286",
@@ -3457,93 +3418,6 @@
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M1",
         "eventMatched": false
       }
-    },
-    {
-      "id": "tsdb-2608187",
-      "sourceIds": {
-        "thesportsdb": "2608187"
-      },
-      "title": "Italy U20 Women vs Spain U20 Women",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790168400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "RDS",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TUDN Mexico",
-          "aliases": [],
-          "territory": "MX",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TVP Sport",
-          "aliases": [],
-          "territory": "PL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sportbox.ru",
-          "aliases": [],
-          "territory": "RU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TOD KSA",
-          "aliases": [],
-          "territory": "SA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-23",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Italy U20 Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/hi7g991788199212.png",
-        "sourceIds": {
-          "thesportsdb": "157023"
-        }
-      },
-      "awayTeam": {
-        "name": "Spain U20 Women",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k7grwm1788199649.png",
-        "sourceIds": {
-          "thesportsdb": "157026"
-        }
-      },
-      "competition": "FIFA U20 Womens World Cup"
     },
     {
       "id": "tsdb-2608238",
