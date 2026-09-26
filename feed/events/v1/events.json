@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1790398471,
-  "validUntilEpochSeconds": 1790441671,
+  "generatedAtEpochSeconds": 1790421675,
+  "validUntilEpochSeconds": 1790464875,
   "events": [
     {
       "id": "tsdb-2442755",
@@ -118,19 +118,31 @@
       "competition": "Turkish Basketbol Super Ligi"
     },
     {
-      "id": "tsdb-2470741",
+      "id": "tsdb-2550389",
       "sourceIds": {
-        "thesportsdb": "2470741"
+        "thesportsdb": "2550389"
       },
-      "title": "Northland vs Counties Manukau",
+      "title": "Stade Français Paris vs Lyon OU",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790388300,
+      "startUtcEpochSeconds": 1790433300,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "Viaplay Sports 2 UK",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Premier Sports 2 IE",
+          "aliases": [],
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -141,20 +153,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Northland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8ojw051694618128.png",
+        "name": "Stade Français Paris",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lr2v3f1622926121.png",
         "sourceIds": {
-          "thesportsdb": "145938"
+          "thesportsdb": "135337"
         }
       },
       "awayTeam": {
-        "name": "Counties Manukau",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g7d85u1648907657.png",
+        "name": "Lyon OU",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kjljr41536392388.png",
         "sourceIds": {
-          "thesportsdb": "145934"
+          "thesportsdb": "135341"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2524732",
@@ -861,31 +873,19 @@
       "competition": "Australian NBL"
     },
     {
-      "id": "tsdb-2550389",
+      "id": "tsdb-2550390",
       "sourceIds": {
-        "thesportsdb": "2550389"
+        "thesportsdb": "2550390"
       },
-      "title": "Stade Français Paris vs Lyon OU",
+      "title": "ASM Clermont Auvergne vs Castres Olympique",
       "sport": "rugby",
       "startUtcEpochSeconds": 1790433300,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Viaplay Sports 2 UK",
+          "channelName": "MultiSports 3 FR",
           "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 2 IE",
-          "aliases": [],
-          "territory": "IE",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -896,17 +896,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Stade Français Paris",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lr2v3f1622926121.png",
+        "name": "ASM Clermont Auvergne",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
         "sourceIds": {
-          "thesportsdb": "135337"
+          "thesportsdb": "135332"
         }
       },
       "awayTeam": {
-        "name": "Lyon OU",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kjljr41536392388.png",
+        "name": "Castres Olympique",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
         "sourceIds": {
-          "thesportsdb": "135341"
+          "thesportsdb": "135331"
         }
       },
       "competition": "French Top 14"
@@ -961,6 +961,581 @@
         }
       },
       "competition": "One Day International Series"
+    },
+    {
+      "id": "f1-https-www-formula1-com-en-racing-2026-bahrain-race-1791097200",
+      "title": "Bahrain Grand Prix",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "startUtcEpochSeconds": 1791097200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DigitAlb",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "FastSports",
+          "aliases": [],
+          "territory": "AM",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Servus TV ORF Sky",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Fox Sports Foxtel Kayo",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Idman Azerbaijan",
+          "aliases": [],
+          "territory": "AZ",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTBF Play Sports",
+          "aliases": [],
+          "territory": "BE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV Nova",
+          "aliases": [],
+          "territory": "BG",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV Globo sportv",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RDS RDS 2 TSN Noovo",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SRF RSI RTS Sky",
+          "aliases": [],
+          "territory": "CH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Shanghai TV Guandong Television Channel Tencent",
+          "aliases": [],
+          "territory": "CN",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "OmegaTV",
+          "aliases": [],
+          "territory": "CY",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Deutschland RTL",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV3 Viaplay",
+          "aliases": [],
+          "territory": "DK",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Go3 Estonia TV3",
+          "aliases": [],
+          "territory": "EE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "FI",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Canal+",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ANT1 ANT1+",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTL",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "M4 (MTVA Sports Channel)",
+          "aliases": [],
+          "territory": "HU",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "ID",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport 5",
+          "aliases": [],
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "FanCode TATA Play FanCode Sports",
+          "aliases": [],
+          "territory": "IN",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "IS",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Italia",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Fuji TV",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "KH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Coupang Play",
+          "aliases": [],
+          "territory": "KR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "LA",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Go3 Lithuania TV3",
+          "aliases": [],
+          "territory": "LT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTL Télé Lëtzebuerg",
+          "aliases": [],
+          "territory": "LU",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Go3 Latvia TV3",
+          "aliases": [],
+          "territory": "LV",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport",
+          "aliases": [],
+          "territory": "ME",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "PBS Malta",
+          "aliases": [],
+          "territory": "MT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TUDN Sky Sports Izzi",
+          "aliases": [],
+          "territory": "MX",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "NL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "V sport 1 Viaplay",
+          "aliases": [],
+          "territory": "NO",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky NZ",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "PH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Eleven Sports",
+          "aliases": [],
+          "territory": "PL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
+          "territory": "PT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Antena",
+          "aliases": [],
+          "territory": "RO",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "SG",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Kanal A VOYO",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "TH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Videoland ELTA",
+          "aliases": [],
+          "territory": "TW",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Setanta Ukraine",
+          "aliases": [],
+          "territory": "UA",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV360",
+          "aliases": [],
+          "territory": "VN",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport Artmotion Kosovo",
+          "aliases": [],
+          "territory": "XK",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "artworkUrl": "https://media.formula1.com/image/upload/f_auto/q_auto/v1785236060/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Malaysia.jpg"
     },
     {
       "id": "tsdb-2442763",
@@ -1089,19 +1664,19 @@
       "competition": "Spanish Liga ACB"
     },
     {
-      "id": "tsdb-2550390",
+      "id": "tsdb-2550100",
       "sourceIds": {
-        "thesportsdb": "2550390"
+        "thesportsdb": "2550100"
       },
-      "title": "ASM Clermont Auvergne vs Castres Olympique",
+      "title": "Zebre vs Bulls",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790433300,
+      "startUtcEpochSeconds": 1790440200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MultiSports 3 FR",
+          "channelName": "Sky Sport Max",
           "aliases": [],
-          "territory": "FR",
+          "territory": "IT",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1112,20 +1687,20 @@
         }
       ],
       "homeTeam": {
-        "name": "ASM Clermont Auvergne",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
+        "name": "Zebre",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y0vaog1716739157.png",
         "sourceIds": {
-          "thesportsdb": "135332"
+          "thesportsdb": "135606"
         }
       },
       "awayTeam": {
-        "name": "Castres Olympique",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
+        "name": "Bulls",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/7dtgtv1649010361.png",
         "sourceIds": {
-          "thesportsdb": "135331"
+          "thesportsdb": "136666"
         }
       },
-      "competition": "French Top 14"
+      "competition": "United Rugby Championship"
     },
     {
       "id": "tsdb-2442764",
@@ -1218,19 +1793,31 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2550100",
+      "id": "tsdb-2608170",
       "sourceIds": {
-        "thesportsdb": "2550100"
+        "thesportsdb": "2608170"
       },
-      "title": "Zebre vs Bulls",
+      "title": "Wigan Warriors vs Wakefield Trinity Wildcats",
       "sport": "rugby",
       "startUtcEpochSeconds": 1790440200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sky Sport Max",
+          "channelName": "FOX League",
           "aliases": [],
-          "territory": "IT",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SportsNet World",
+          "aliases": [],
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1241,20 +1828,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Zebre",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y0vaog1716739157.png",
+        "name": "Wigan Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
         "sourceIds": {
-          "thesportsdb": "135606"
+          "thesportsdb": "135222"
         }
       },
       "awayTeam": {
-        "name": "Bulls",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/7dtgtv1649010361.png",
+        "name": "Wakefield Trinity Wildcats",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xz8j1u1700224884.png",
         "sourceIds": {
-          "thesportsdb": "136666"
+          "thesportsdb": "135219"
         }
       },
-      "competition": "United Rugby Championship"
+      "competition": "English Rugby League Super League"
     },
     {
       "id": "tsdb-2442768",
@@ -1266,6 +1853,30 @@
       "startUtcEpochSeconds": 1790621100,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "Super Sport 2 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTL TVI BE",
+          "aliases": [],
+          "territory": "BE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "ESPN Brasil",
           "aliases": [],
@@ -1339,6 +1950,18 @@
           "verifiedAt": "2026-09-26",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV 6 Sverige",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -1397,31 +2020,19 @@
       "competition": "Australian NBL"
     },
     {
-      "id": "tsdb-2608170",
+      "id": "tsdb-2550393",
       "sourceIds": {
-        "thesportsdb": "2608170"
+        "thesportsdb": "2550393"
       },
-      "title": "Wigan Warriors vs Wakefield Trinity Wildcats",
+      "title": "Section Paloise vs Stade Rochelais",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790440200,
+      "startUtcEpochSeconds": 1790449200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "FOX League",
+          "channelName": "ESPN South Africa",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SportsNet World",
-          "aliases": [],
-          "territory": "CA",
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1432,20 +2043,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Wigan Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vch5a71673549813.png",
+        "name": "Section Paloise",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
         "sourceIds": {
-          "thesportsdb": "135222"
+          "thesportsdb": "137384"
         }
       },
       "awayTeam": {
-        "name": "Wakefield Trinity Wildcats",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xz8j1u1700224884.png",
+        "name": "Stade Rochelais",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a4yd1y1536393155.png",
         "sourceIds": {
-          "thesportsdb": "135219"
+          "thesportsdb": "135340"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2442769",
@@ -1538,19 +2149,19 @@
       "competition": "Spanish Liga ACB"
     },
     {
-      "id": "tsdb-2550393",
+      "id": "tsdb-2470744",
       "sourceIds": {
-        "thesportsdb": "2550393"
+        "thesportsdb": "2470744"
       },
-      "title": "Section Paloise vs Stade Rochelais",
+      "title": "Wellington vs Waikato",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790449200,
+      "startUtcEpochSeconds": 1790471100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN South Africa",
+          "channelName": "TVNZ+",
           "aliases": [],
-          "territory": "ZA",
+          "territory": "NZ",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1561,20 +2172,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Section Paloise",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
+        "name": "Wellington",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uw0qe01648907733.png",
         "sourceIds": {
-          "thesportsdb": "137384"
+          "thesportsdb": "145944"
         }
       },
       "awayTeam": {
-        "name": "Stade Rochelais",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a4yd1y1536393155.png",
+        "name": "Waikato",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cpi82g1648907724.png",
         "sourceIds": {
-          "thesportsdb": "135340"
+          "thesportsdb": "145943"
         }
       },
-      "competition": "French Top 14"
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "tsdb-2442756",
@@ -1775,19 +2386,19 @@
       "competition": "Spanish Liga ACB"
     },
     {
-      "id": "tsdb-2470744",
+      "id": "tsdb-2608134",
       "sourceIds": {
-        "thesportsdb": "2470744"
+        "thesportsdb": "2608134"
       },
-      "title": "Wellington vs Waikato",
+      "title": "Penrith Panthers vs Newcastle Knights",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790471100,
+      "startUtcEpochSeconds": 1790488800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TVNZ+",
+          "channelName": "BeIn Sports HD 1 France",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1798,20 +2409,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Wellington",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uw0qe01648907733.png",
+        "name": "Penrith Panthers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zjh0jo1771495164.png",
         "sourceIds": {
-          "thesportsdb": "145944"
+          "thesportsdb": "135197"
         }
       },
       "awayTeam": {
-        "name": "Waikato",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cpi82g1648907724.png",
+        "name": "Newcastle Knights",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/aes2o51646347790.png",
         "sourceIds": {
-          "thesportsdb": "145943"
+          "thesportsdb": "135198"
         }
       },
-      "competition": "New Zealand National Provincial Championship"
+      "competition": "Australian National Rugby League"
     },
     {
       "id": "tsdb-2475288",
@@ -1892,19 +2503,43 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2608134",
+      "id": "tsdb-2496235",
       "sourceIds": {
-        "thesportsdb": "2608134"
+        "thesportsdb": "2496235"
       },
-      "title": "Penrith Panthers vs Newcastle Knights",
+      "title": "Australia Rugby vs South Africa Rugby",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790488800,
+      "startUtcEpochSeconds": 1790501400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 1 France",
+          "channelName": "Stan Sport AU",
           "aliases": [],
-          "territory": "FR",
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "J Sports 1",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SuperSport Rugby",
+          "aliases": [],
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1915,20 +2550,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Penrith Panthers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zjh0jo1771495164.png",
+        "name": "Australia Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uc5umy1566382527.png",
         "sourceIds": {
-          "thesportsdb": "135197"
+          "thesportsdb": "137125"
         }
       },
       "awayTeam": {
-        "name": "Newcastle Knights",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/aes2o51646347790.png",
+        "name": "South Africa Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
         "sourceIds": {
-          "thesportsdb": "135198"
+          "thesportsdb": "137137"
         }
       },
-      "competition": "Australian National Rugby League"
+      "competition": "Rugby Union International Friendlies"
     },
     {
       "id": "tsdb-2442752",
@@ -2009,19 +2644,19 @@
       "competition": "Italian Lega Basket"
     },
     {
-      "id": "tsdb-2496235",
+      "id": "tsdb-2553386",
       "sourceIds": {
-        "thesportsdb": "2496235"
+        "thesportsdb": "2553386"
       },
-      "title": "Australia Rugby vs South Africa Rugby",
+      "title": "Leicester Tigers vs Saracens",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790501400,
+      "startUtcEpochSeconds": 1790517600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stan Sport AU",
+          "channelName": "SportsNet World",
           "aliases": [],
-          "territory": "AU",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2031,21 +2666,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "J Sports 1",
+          "channelName": "ITV",
           "aliases": [],
-          "territory": "JP",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SuperSport Rugby",
-          "aliases": [],
-          "territory": "ZA",
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2056,20 +2679,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Australia Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uc5umy1566382527.png",
+        "name": "Leicester Tigers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/d59nhl1523219441.png",
         "sourceIds": {
-          "thesportsdb": "137125"
+          "thesportsdb": "135180"
         }
       },
       "awayTeam": {
-        "name": "South Africa Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5174f1721829684.png",
+        "name": "Saracens",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ek19321758786974.png",
         "sourceIds": {
-          "thesportsdb": "137137"
+          "thesportsdb": "135208"
         }
       },
-      "competition": "Rugby Union International Friendlies"
+      "competition": "English Prem Rugby"
     },
     {
       "id": "tsdb-2442753",
@@ -2150,31 +2773,19 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2553386",
+      "id": "tsdb-2550394",
       "sourceIds": {
-        "thesportsdb": "2553386"
+        "thesportsdb": "2550394"
       },
-      "title": "Leicester Tigers vs Saracens",
+      "title": "Stade Toulousain vs Montpellier Hérault Rugby",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1790517600,
+      "startUtcEpochSeconds": 1790535900,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet World",
+          "channelName": "Premier Sports 1 IE",
           "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "ITV",
-          "aliases": [],
-          "territory": "GB",
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2185,20 +2796,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Leicester Tigers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/d59nhl1523219441.png",
+        "name": "Stade Toulousain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
         "sourceIds": {
-          "thesportsdb": "135180"
+          "thesportsdb": "135339"
         }
       },
       "awayTeam": {
-        "name": "Saracens",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ek19321758786974.png",
+        "name": "Montpellier Hérault Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
         "sourceIds": {
-          "thesportsdb": "135208"
+          "thesportsdb": "135334"
         }
       },
-      "competition": "English Prem Rugby"
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2475287",
@@ -2210,6 +2821,18 @@
       "startUtcEpochSeconds": 1790438400,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "DAZN Austria",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "Sony LIV",
           "aliases": [],
@@ -2223,9 +2846,33 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "TV 2 Play",
+          "aliases": [],
+          "territory": "NO",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Digi Sport 2 Romania",
           "aliases": [],
           "territory": "RO",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay SE",
+          "aliases": [],
+          "territory": "SE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2289,45 +2936,6 @@
         }
       },
       "competition": "Turkish Basketbol Super Ligi"
-    },
-    {
-      "id": "tsdb-2550394",
-      "sourceIds": {
-        "thesportsdb": "2550394"
-      },
-      "title": "Stade Toulousain vs Montpellier Hérault Rugby",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1790535900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Premier Sports 1 IE",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Stade Toulousain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
-        "sourceIds": {
-          "thesportsdb": "135339"
-        }
-      },
-      "awayTeam": {
-        "name": "Montpellier Hérault Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xbsi1g1536392475.png",
-        "sourceIds": {
-          "thesportsdb": "135334"
-        }
-      },
-      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2475289",
@@ -2502,6 +3110,18 @@
           "destinationPrecision": "channel"
         },
         {
+          "channelName": "Digi Sport 2 Romania",
+          "aliases": [],
+          "territory": "RO",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Arena Sport 2 Premium RS",
           "aliases": [],
           "territory": "RS",
@@ -2526,6 +3146,45 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pdayn21591983222.png",
         "sourceIds": {
           "thesportsdb": "135982"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2442762",
+      "sourceIds": {
+        "thesportsdb": "2442762"
+      },
+      "title": "Austria vs Kosovo",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790524800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ORF Eins",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Austria",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/874p631628721400.png",
+        "sourceIds": {
+          "thesportsdb": "135986"
+        }
+      },
+      "awayTeam": {
+        "name": "Kosovo",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i3wq751730304457.png",
+        "sourceIds": {
+          "thesportsdb": "136518"
         }
       },
       "competition": "UEFA Nations League"
@@ -2740,6 +3399,18 @@
           "verifiedAt": "2026-09-26",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 1 SI",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -2775,6 +3446,18 @@
             "UK BBC iPlayer"
           ],
           "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-26",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "M4 Sport HU",
+          "aliases": [],
+          "territory": "HU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
