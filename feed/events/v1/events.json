@@ -1,39 +1,65 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1790465748,
-  "validUntilEpochSeconds": 1790508948,
+  "generatedAtEpochSeconds": 1790486125,
+  "validUntilEpochSeconds": 1790529325,
   "events": [
     {
-      "id": "tsdb-2442755",
+      "id": "tsdb-2442773",
       "sourceIds": {
-        "thesportsdb": "2442755"
+        "thesportsdb": "2442773"
       },
-      "title": "England vs Spain",
+      "title": "Spain vs Croatia",
       "sport": "football",
-      "startUtcEpochSeconds": 1790448300,
+      "startUtcEpochSeconds": 1790707500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Diema Sport 3 BG",
-          "aliases": [],
-          "territory": "BG",
+          "channelName": "La 1",
+          "aliases": [
+            "ES La 1"
+          ],
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "BeIN Sports Connect NZ",
+          "channelName": "Nova TV HR",
           "aliases": [],
-          "territory": "NZ",
+          "territory": "HR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport 4 IL",
+          "aliases": [],
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sport Arena",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -45,104 +71,77 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Fox Sports 1 US",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "England",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
-        "sourceIds": {
-          "thesportsdb": "133914"
-        }
-      },
-      "awayTeam": {
         "name": "Spain",
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
         "sourceIds": {
           "thesportsdb": "133909"
         }
       },
+      "awayTeam": {
+        "name": "Croatia",
+        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/84cfeg1789271106.png",
+        "sourceIds": {
+          "thesportsdb": "133912"
+        }
+      },
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2563762",
+      "id": "tsdb-2487893",
       "sourceIds": {
-        "thesportsdb": "2563762"
+        "thesportsdb": "2487893"
       },
-      "title": "Bamberg Baskets vs Ludwigsburg",
+      "title": "Adelaide 36ers vs Cairns Taipans",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790445600,
+      "startUtcEpochSeconds": 1790488800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DYN",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "DE",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Bamberg Baskets",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rs1gjz1714562746.png",
+        "name": "Adelaide 36ers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zp72061755701355.png",
         "sourceIds": {
-          "thesportsdb": "135420"
+          "thesportsdb": "135394"
         }
       },
       "awayTeam": {
-        "name": "Ludwigsburg",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6guil91488108871.png",
+        "name": "Cairns Taipans",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v2c1wc1550073460.png",
         "sourceIds": {
-          "thesportsdb": "135427"
+          "thesportsdb": "135395"
         }
       },
-      "competition": "German BBL"
-    },
-    {
-      "id": "tsdb-2550393",
-      "sourceIds": {
-        "thesportsdb": "2550393"
-      },
-      "title": "Section Paloise vs Stade Rochelais",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1790449200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN South Africa",
-          "aliases": [],
-          "territory": "ZA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Section Paloise",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
-        "sourceIds": {
-          "thesportsdb": "137384"
-        }
-      },
-      "awayTeam": {
-        "name": "Stade Rochelais",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/a4yd1y1536393155.png",
-        "sourceIds": {
-          "thesportsdb": "135340"
-        }
-      },
-      "competition": "French Top 14"
+      "competition": "Australian NBL"
     },
     {
       "id": "tsdb-2524732",
@@ -162,7 +161,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -174,7 +173,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -194,6 +193,45 @@
         }
       },
       "competition": "One Day International Series"
+    },
+    {
+      "id": "tsdb-2470744",
+      "sourceIds": {
+        "thesportsdb": "2470744"
+      },
+      "title": "Wellington vs Waikato",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1790471100,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TVNZ+",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Wellington",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uw0qe01648907733.png",
+        "sourceIds": {
+          "thesportsdb": "145944"
+        }
+      },
+      "awayTeam": {
+        "name": "Waikato",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cpi82g1648907724.png",
+        "sourceIds": {
+          "thesportsdb": "145943"
+        }
+      },
+      "competition": "New Zealand National Provincial Championship"
     },
     {
       "id": "f1-https-www-formula1-com-en-racing-2026-bahrain-race-1791097200",
@@ -788,7 +826,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -805,222 +843,6 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1p0hr41593787110.png",
         "sourceIds": {
           "thesportsdb": "133905"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2487893",
-      "sourceIds": {
-        "thesportsdb": "2487893"
-      },
-      "title": "Adelaide 36ers vs Cairns Taipans",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1790488800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Australia",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Adelaide 36ers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zp72061755701355.png",
-        "sourceIds": {
-          "thesportsdb": "135394"
-        }
-      },
-      "awayTeam": {
-        "name": "Cairns Taipans",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v2c1wc1550073460.png",
-        "sourceIds": {
-          "thesportsdb": "135395"
-        }
-      },
-      "competition": "Australian NBL"
-    },
-    {
-      "id": "tsdb-2470744",
-      "sourceIds": {
-        "thesportsdb": "2470744"
-      },
-      "title": "Wellington vs Waikato",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1790471100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TVNZ+",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Wellington",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uw0qe01648907733.png",
-        "sourceIds": {
-          "thesportsdb": "145944"
-        }
-      },
-      "awayTeam": {
-        "name": "Waikato",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cpi82g1648907724.png",
-        "sourceIds": {
-          "thesportsdb": "145943"
-        }
-      },
-      "competition": "New Zealand National Provincial Championship"
-    },
-    {
-      "id": "tsdb-2524734",
-      "sourceIds": {
-        "thesportsdb": "2524734"
-      },
-      "title": "England Cricket vs Sri Lanka Cricket",
-      "sport": "cricket",
-      "startUtcEpochSeconds": 1790501400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "FOX Sports 505",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sport 2 NZ",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "England Cricket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y5wcl81646775152.png",
-        "sourceIds": {
-          "thesportsdb": "137142"
-        }
-      },
-      "awayTeam": {
-        "name": "Sri Lanka Cricket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i5fqg01646775193.png",
-        "sourceIds": {
-          "thesportsdb": "137149"
-        }
-      },
-      "competition": "One Day International Series"
-    },
-    {
-      "id": "tsdb-2442763",
-      "sourceIds": {
-        "thesportsdb": "2442763"
-      },
-      "title": "Germany vs Greece",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790534700,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Super Sport 2 HD (Albania)",
-          "aliases": [],
-          "territory": "AL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports 2 Australia",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Diema Sport 3 BG",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "MTV Urheilu 3",
-          "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIN Sports 2 Qatar",
-          "aliases": [],
-          "territory": "QA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Germany",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1xysi51726167152.png",
-        "sourceIds": {
-          "thesportsdb": "133907"
-        }
-      },
-      "awayTeam": {
-        "name": "Greece",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xtxtts1455465601.png",
-        "sourceIds": {
-          "thesportsdb": "133902"
         }
       },
       "competition": "UEFA Nations League"
@@ -1043,7 +865,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1065,6 +887,57 @@
       "competition": "Spanish Liga ACB"
     },
     {
+      "id": "tsdb-2524734",
+      "sourceIds": {
+        "thesportsdb": "2524734"
+      },
+      "title": "England Cricket vs Sri Lanka Cricket",
+      "sport": "cricket",
+      "startUtcEpochSeconds": 1790501400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "FOX Sports 505",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sport 2 NZ",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "England Cricket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y5wcl81646775152.png",
+        "sourceIds": {
+          "thesportsdb": "137142"
+        }
+      },
+      "awayTeam": {
+        "name": "Sri Lanka Cricket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/i5fqg01646775193.png",
+        "sourceIds": {
+          "thesportsdb": "137149"
+        }
+      },
+      "competition": "One Day International Series"
+    },
+    {
       "id": "tsdb-2608134",
       "sourceIds": {
         "thesportsdb": "2608134"
@@ -1082,7 +955,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1104,52 +977,88 @@
       "competition": "Australian National Rugby League"
     },
     {
-      "id": "tsdb-2442764",
+      "id": "tsdb-2442763",
       "sourceIds": {
-        "thesportsdb": "2442764"
+        "thesportsdb": "2442763"
       },
-      "title": "Norway vs Portugal",
+      "title": "Germany vs Greece",
       "sport": "football",
       "startUtcEpochSeconds": 1790534700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN Brasil",
+          "channelName": "Super Sport 2 HD (Albania)",
           "aliases": [],
-          "territory": "BR",
+          "territory": "AL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Polsat Sport 2",
+          "channelName": "BeIn Sports 2 Australia",
           "aliases": [],
-          "territory": "PL",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Diema Sport 3 BG",
+          "aliases": [],
+          "territory": "BG",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "MTV Urheilu 3",
+          "aliases": [],
+          "territory": "FI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIN Sports 2 Qatar",
+          "aliases": [],
+          "territory": "QA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Norway",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/gyfn811591973155.png",
+        "name": "Germany",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1xysi51726167152.png",
         "sourceIds": {
-          "thesportsdb": "136516"
+          "thesportsdb": "133907"
         }
       },
       "awayTeam": {
-        "name": "Portugal",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/swqvpy1455466083.png",
+        "name": "Greece",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xtxtts1455465601.png",
         "sourceIds": {
-          "thesportsdb": "133908"
+          "thesportsdb": "133902"
         }
       },
       "competition": "UEFA Nations League"
@@ -1172,7 +1081,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1184,7 +1093,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1223,7 +1132,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1235,7 +1144,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1247,7 +1156,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1269,39 +1178,15 @@
       "competition": "Rugby Union International Friendlies"
     },
     {
-      "id": "tsdb-2442768",
+      "id": "tsdb-2442764",
       "sourceIds": {
-        "thesportsdb": "2442768"
+        "thesportsdb": "2442764"
       },
-      "title": "Belgium vs France",
+      "title": "Norway vs Portugal",
       "sport": "football",
-      "startUtcEpochSeconds": 1790621100,
+      "startUtcEpochSeconds": 1790534700,
       "status": "confirmed",
       "broadcasts": [
-        {
-          "channelName": "Super Sport 2 HD (Albania)",
-          "aliases": [],
-          "territory": "AL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "RTL TVI BE",
-          "aliases": [],
-          "territory": "BE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
         {
           "channelName": "ESPN Brasil",
           "aliases": [],
@@ -1310,97 +1195,35 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "RTS Sport",
+          "channelName": "Polsat Sport 2",
           "aliases": [],
-          "territory": "CH",
+          "territory": "PL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "C More Sport 1 FI",
-          "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TF1",
-          "aliases": [
-            "FR TF1"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport 2 IL",
-          "aliases": [],
-          "territory": "IL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sport Uno",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TV 6 Sverige",
-          "aliases": [],
-          "territory": "SE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Belgium",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8xlvxv1592062265.png",
+        "name": "Norway",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/gyfn811591973155.png",
         "sourceIds": {
-          "thesportsdb": "134515"
+          "thesportsdb": "136516"
         }
       },
       "awayTeam": {
-        "name": "France",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ejx5za1788198941.png",
+        "name": "Portugal",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/swqvpy1455466083.png",
         "sourceIds": {
-          "thesportsdb": "133913"
+          "thesportsdb": "133908"
         }
       },
       "competition": "UEFA Nations League"
@@ -1423,7 +1246,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1462,7 +1285,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1474,7 +1297,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1496,52 +1319,138 @@
       "competition": "English Prem Rugby"
     },
     {
-      "id": "tsdb-2442769",
+      "id": "tsdb-2442768",
       "sourceIds": {
-        "thesportsdb": "2442769"
+        "thesportsdb": "2442768"
       },
-      "title": "Turkey vs Italy",
+      "title": "Belgium vs France",
       "sport": "football",
       "startUtcEpochSeconds": 1790621100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Diema Sport 2 BG",
+          "channelName": "Super Sport 2 HD (Albania)",
           "aliases": [],
-          "territory": "BG",
+          "territory": "AL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Polsat Sport 2",
+          "channelName": "RTL TVI BE",
           "aliases": [],
-          "territory": "PL",
+          "territory": "BE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ESPN Brasil",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTS Sport",
+          "aliases": [],
+          "territory": "CH",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "C More Sport 1 FI",
+          "aliases": [],
+          "territory": "FI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TF1",
+          "aliases": [
+            "FR TF1"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport 2 IL",
+          "aliases": [],
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Sport Uno",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV 6 Sverige",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Turkey",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70c4oo1591982459.png",
+        "name": "Belgium",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8xlvxv1592062265.png",
         "sourceIds": {
-          "thesportsdb": "135985"
+          "thesportsdb": "134515"
         }
       },
       "awayTeam": {
-        "name": "Italy",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fxijcp1726167035.png",
+        "name": "France",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ejx5za1788198941.png",
         "sourceIds": {
-          "thesportsdb": "133910"
+          "thesportsdb": "133913"
         }
       },
       "competition": "UEFA Nations League"
@@ -1564,7 +1473,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1603,7 +1512,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1625,148 +1534,52 @@
       "competition": "French Top 14"
     },
     {
-      "id": "tsdb-2442756",
+      "id": "tsdb-2442769",
       "sourceIds": {
-        "thesportsdb": "2442756"
+        "thesportsdb": "2442769"
       },
-      "title": "Czech Republic vs Croatia",
+      "title": "Turkey vs Italy",
       "sport": "football",
-      "startUtcEpochSeconds": 1790448300,
+      "startUtcEpochSeconds": 1790621100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Super Sport 5 (Albania)",
+          "channelName": "Diema Sport 2 BG",
           "aliases": [],
-          "territory": "AL",
+          "territory": "BG",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Arena Sport 1 BiH",
+          "channelName": "Polsat Sport 2",
           "aliases": [],
-          "territory": "BA",
+          "territory": "PL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "IQiyi CN",
-          "aliases": [],
-          "territory": "CN",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TV 2 Sport 1",
-          "aliases": [],
-          "territory": "DK",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Novasports 3",
-          "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Nova TV HR",
-          "aliases": [],
-          "territory": "HR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Spíler2 HU",
-          "aliases": [],
-          "territory": "HU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport 2 IL",
-          "aliases": [],
-          "territory": "IL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport TV 2",
-          "aliases": [],
-          "territory": "PT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIN Sports 2 Qatar",
-          "aliases": [],
-          "territory": "QA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Czech Republic",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o0cx31654205806.png",
+        "name": "Turkey",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70c4oo1591982459.png",
         "sourceIds": {
-          "thesportsdb": "133904"
+          "thesportsdb": "135985"
         }
       },
       "awayTeam": {
-        "name": "Croatia",
-        "badgeUrl": "https://www.thesportsdb.com/images/media/team/badge/84cfeg1789271106.png",
+        "name": "Italy",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fxijcp1726167035.png",
         "sourceIds": {
-          "thesportsdb": "133912"
+          "thesportsdb": "133910"
         }
       },
       "competition": "UEFA Nations League"
@@ -1789,7 +1602,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1811,40 +1624,76 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2475289",
+      "id": "tsdb-2442774",
       "sourceIds": {
-        "thesportsdb": "2475289"
+        "thesportsdb": "2442774"
       },
-      "title": "North Macedonia vs Switzerland",
+      "title": "Czech Republic vs England",
       "sport": "football",
-      "startUtcEpochSeconds": 1790448300,
+      "startUtcEpochSeconds": 1790707500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "RTS Sport",
+          "channelName": "DAZN 2 Germany",
           "aliases": [],
-          "territory": "CH",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV 2 Sport 1",
+          "aliases": [],
+          "territory": "DK",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "C More Sport 1 FI",
+          "aliases": [],
+          "territory": "FI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ITV",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "North Macedonia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v6xfhn1552943846.png",
+        "name": "Czech Republic",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o0cx31654205806.png",
         "sourceIds": {
-          "thesportsdb": "136457"
+          "thesportsdb": "133904"
         }
       },
       "awayTeam": {
-        "name": "Switzerland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mb7yqe1717365808.png",
+        "name": "England",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
         "sourceIds": {
-          "thesportsdb": "134506"
+          "thesportsdb": "133914"
         }
       },
       "competition": "UEFA Nations League"
@@ -1867,7 +1716,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1889,6 +1738,84 @@
       "competition": "Turkish Basketbol Super Ligi"
     },
     {
+      "id": "tsdb-2523480",
+      "sourceIds": {
+        "thesportsdb": "2523480"
+      },
+      "title": "Australia vs Brazil",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790676000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Paramount+ AUS",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Australia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/eylq8x1781926138.png",
+        "sourceIds": {
+          "thesportsdb": "134500"
+        }
+      },
+      "awayTeam": {
+        "name": "Brazil",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jl6dip1726167280.png",
+        "sourceIds": {
+          "thesportsdb": "134496"
+        }
+      },
+      "competition": "International Friendlies"
+    },
+    {
+      "id": "tsdb-2565456",
+      "sourceIds": {
+        "thesportsdb": "2565456"
+      },
+      "title": "Dubai Basketball vs FC Barcelona Basquet",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790697600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Movistar #Vamos",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Dubai Basketball",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fgtnti1758215967.png",
+        "sourceIds": {
+          "thesportsdb": "148701"
+        }
+      },
+      "awayTeam": {
+        "name": "FC Barcelona Basquet",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0tz26j1729097443.png",
+        "sourceIds": {
+          "thesportsdb": "135082"
+        }
+      },
+      "competition": "EuroLeague Basketball"
+    },
+    {
       "id": "tsdb-2442759",
       "sourceIds": {
         "thesportsdb": "2442759"
@@ -1906,7 +1833,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1918,7 +1845,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1930,7 +1857,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1952,6 +1879,45 @@
       "competition": "UEFA Nations League"
     },
     {
+      "id": "tsdb-2565457",
+      "sourceIds": {
+        "thesportsdb": "2565457"
+      },
+      "title": "Anadolu Efes SK vs Real Madrid Baloncesto",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790701200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BeIn Sports Max 4",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Anadolu Efes SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
+        "sourceIds": {
+          "thesportsdb": "136066"
+        }
+      },
+      "awayTeam": {
+        "name": "Real Madrid Baloncesto",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
+        "sourceIds": {
+          "thesportsdb": "135092"
+        }
+      },
+      "competition": "EuroLeague Basketball"
+    },
+    {
       "id": "tsdb-2442761",
       "sourceIds": {
         "thesportsdb": "2442761"
@@ -1969,7 +1935,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1981,7 +1947,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -1993,7 +1959,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2005,7 +1971,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2017,7 +1983,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2029,7 +1995,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2041,7 +2007,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2063,6 +2029,45 @@
       "competition": "UEFA Nations League"
     },
     {
+      "id": "tsdb-2565458",
+      "sourceIds": {
+        "thesportsdb": "2565458"
+      },
+      "title": "BC Žalgiris vs Olympiacos BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790701200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "S Sport TR",
+          "aliases": [],
+          "territory": "TR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "BC Žalgiris",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dn7ouv1703960565.png",
+        "sourceIds": {
+          "thesportsdb": "136113"
+        }
+      },
+      "awayTeam": {
+        "name": "Olympiacos BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
+        "sourceIds": {
+          "thesportsdb": "135635"
+        }
+      },
+      "competition": "EuroLeague Basketball"
+    },
+    {
       "id": "tsdb-2442762",
       "sourceIds": {
         "thesportsdb": "2442762"
@@ -2080,7 +2085,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2102,6 +2107,57 @@
       "competition": "UEFA Nations League"
     },
     {
+      "id": "tsdb-2588393",
+      "sourceIds": {
+        "thesportsdb": "2588393"
+      },
+      "title": "Hapoel Jerusalem BC vs Rostock Seawolves",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790701200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport 5 IL",
+          "aliases": [],
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ŠTV 3 SI",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Hapoel Jerusalem BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/o6dsqj1726912908.png",
+        "sourceIds": {
+          "thesportsdb": "137400"
+        }
+      },
+      "awayTeam": {
+        "name": "Rostock Seawolves",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8rkn4b1714562777.png",
+        "sourceIds": {
+          "thesportsdb": "144604"
+        }
+      },
+      "competition": "EuroCup Basketball"
+    },
+    {
       "id": "tsdb-2475290",
       "sourceIds": {
         "thesportsdb": "2475290"
@@ -2119,7 +2175,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2141,6 +2197,45 @@
       "competition": "UEFA Nations League"
     },
     {
+      "id": "tsdb-2588392",
+      "sourceIds": {
+        "thesportsdb": "2588392"
+      },
+      "title": "Le Mans Sarthe Basket vs Aris BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790704800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Novasports 4",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Le Mans Sarthe Basket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/iouj5l1757607112.png",
+        "sourceIds": {
+          "thesportsdb": "135241"
+        }
+      },
+      "awayTeam": {
+        "name": "Aris BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
+        "sourceIds": {
+          "thesportsdb": "135628"
+        }
+      },
+      "competition": "EuroCup Basketball"
+    },
+    {
       "id": "tsdb-2442765",
       "sourceIds": {
         "thesportsdb": "2442765"
@@ -2158,7 +2253,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2197,7 +2292,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2209,7 +2304,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2248,7 +2343,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2260,7 +2355,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2272,7 +2367,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2284,7 +2379,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2296,7 +2391,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2308,7 +2403,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2320,7 +2415,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2362,7 +2457,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2374,7 +2469,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2386,7 +2481,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2403,6 +2498,201 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ihaoit1717365719.png",
         "sourceIds": {
           "thesportsdb": "135987"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2442778",
+      "sourceIds": {
+        "thesportsdb": "2442778"
+      },
+      "title": "Moldova vs Faroe Islands",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790697600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Diema Sport 2 BG",
+          "aliases": [],
+          "territory": "BG",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Moldova",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dcxqck1591972290.png",
+        "sourceIds": {
+          "thesportsdb": "136460"
+        }
+      },
+      "awayTeam": {
+        "name": "Faroe Islands",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pjs0io1552936544.png",
+        "sourceIds": {
+          "thesportsdb": "136466"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2442775",
+      "sourceIds": {
+        "thesportsdb": "2442775"
+      },
+      "title": "San Marino vs Albania",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790707500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Super Sport 2 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "San Marino",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vfvy3j1626192199.png",
+        "sourceIds": {
+          "thesportsdb": "136452"
+        }
+      },
+      "awayTeam": {
+        "name": "Albania",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vonacg1717365654.png",
+        "sourceIds": {
+          "thesportsdb": "135981"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2442777",
+      "sourceIds": {
+        "thesportsdb": "2442777"
+      },
+      "title": "Slovakia vs Kazakhstan",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790707500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "RTV:Šport",
+          "aliases": [],
+          "territory": "SK",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Slovakia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/njbw8n1717365638.png",
+        "sourceIds": {
+          "thesportsdb": "135983"
+        }
+      },
+      "awayTeam": {
+        "name": "Kazakhstan",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/h3wfj01552944956.png",
+        "sourceIds": {
+          "thesportsdb": "136449"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2475292",
+      "sourceIds": {
+        "thesportsdb": "2475292"
+      },
+      "title": "Slovenia vs North Macedonia",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790707500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport Klub 1 SI",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Slovenia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s7k1x51552909864.png",
+        "sourceIds": {
+          "thesportsdb": "136456"
+        }
+      },
+      "awayTeam": {
+        "name": "North Macedonia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v6xfhn1552943846.png",
+        "sourceIds": {
+          "thesportsdb": "136457"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2475294",
+      "sourceIds": {
+        "thesportsdb": "2475294"
+      },
+      "title": "Scotland vs Switzerland",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790707500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "RTS Sport",
+          "aliases": [],
+          "territory": "CH",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Scotland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3691i11552945146.png",
+        "sourceIds": {
+          "thesportsdb": "136450"
+        }
+      },
+      "awayTeam": {
+        "name": "Switzerland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mb7yqe1717365808.png",
+        "sourceIds": {
+          "thesportsdb": "134506"
         }
       },
       "competition": "UEFA Nations League"
@@ -2425,7 +2715,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2447,215 +2737,6 @@
       "competition": "International Friendlies"
     },
     {
-      "id": "tsdb-2427418",
-      "sourceIds": {
-        "thesportsdb": "2427418"
-      },
-      "title": "HFX Wanderers vs Atlético Ottawa",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790452800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "OneSoccer CA",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "HFX Wanderers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uqkf0n1583351277.png",
-        "sourceIds": {
-          "thesportsdb": "139463"
-        }
-      },
-      "awayTeam": {
-        "name": "Atlético Ottawa",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k5gzuw1583351260.png",
-        "sourceIds": {
-          "thesportsdb": "139461"
-        }
-      },
-      "competition": "Canadian Premier League"
-    },
-    {
-      "id": "mls-MLS-MAT-0009LZ",
-      "title": "Austin FC vs San Diego FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790469000,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Austin FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "San Diego FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LZ",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009LZ",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009M2",
-      "title": "FC Dallas vs Los Angeles Football Club",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790469000,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "FC Dallas",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Los Angeles Football Club",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M2",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M2",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009M3",
-      "title": "Houston Dynamo FC vs Sporting Kansas City",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790469000,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Houston Dynamo FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Sporting Kansas City",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M3",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M3",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009M6",
-      "title": "Nashville SC vs Toronto FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790469000,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Nashville SC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Toronto FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M6",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M6",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009MB",
-      "title": "Seattle Sounders FC vs Minnesota United FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790469000,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Seattle Sounders FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Minnesota United FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MB",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MB",
-        "eventMatched": false
-      }
-    },
-    {
       "id": "tsdb-2397347",
       "sourceIds": {
         "thesportsdb": "2397347"
@@ -2673,7 +2754,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2685,7 +2766,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2707,142 +2788,6 @@
       "competition": "American USL Championship"
     },
     {
-      "id": "mls-MLS-MAT-0009M9",
-      "title": "Real Salt Lake vs New England Revolution",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790472600,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Real Salt Lake",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "New England Revolution",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M9",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M9",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009M4",
-      "title": "LA Galaxy vs Colorado Rapids",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790476200,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "LA Galaxy",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Colorado Rapids",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M4",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009M4",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009MA",
-      "title": "San Jose Earthquakes vs Portland Timbers",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790476200,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "San Jose Earthquakes",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Portland Timbers",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MA",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MA",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009MC",
-      "title": "Vancouver Whitecaps FC vs D.C. United",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1790476200,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Vancouver Whitecaps FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "D.C. United",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MC",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MC",
-        "eventMatched": false
-      }
-    },
-    {
       "id": "tsdb-2514528",
       "sourceIds": {
         "thesportsdb": "2514528"
@@ -2860,7 +2805,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2899,7 +2844,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -2938,7 +2883,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -2950,7 +2895,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -3023,7 +2968,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -3062,7 +3007,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -3101,7 +3046,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -3140,7 +3085,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -3160,6 +3105,45 @@
         }
       },
       "competition": "CONCACAF Nations League"
+    },
+    {
+      "id": "tsdb-2583244",
+      "sourceIds": {
+        "thesportsdb": "2583244"
+      },
+      "title": "Russia vs Iran",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790699400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sportbox.ru",
+          "aliases": [],
+          "territory": "RU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-27",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Russia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nz50i51689197440.png",
+        "sourceIds": {
+          "thesportsdb": "133903"
+        }
+      },
+      "awayTeam": {
+        "name": "Iran",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uttpvw1455465617.png",
+        "sourceIds": {
+          "thesportsdb": "134511"
+        }
+      },
+      "competition": "International Friendlies"
     },
     {
       "id": "mls-MLS-MAT-0009M7",
@@ -3247,7 +3231,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-26",
+          "verifiedAt": "2026-09-27",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
