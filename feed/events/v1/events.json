@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1790572787,
-  "validUntilEpochSeconds": 1790615987,
+  "generatedAtEpochSeconds": 1790603349,
+  "validUntilEpochSeconds": 1790646549,
   "events": [
     {
       "id": "tsdb-2442773",
@@ -43,6 +43,18 @@
           "channelName": "Sport 4 IL",
           "aliases": [],
           "territory": "IL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay IS",
+          "aliases": [],
+          "territory": "IS",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -857,6 +869,18 @@
           "channelName": "Sky Sport Uno",
           "aliases": [],
           "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV 2 Play",
+          "aliases": [],
+          "territory": "NO",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1937,6 +1961,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "MagentaTV DE",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "S Sport TR",
           "aliases": [],
           "territory": "TR",
@@ -2200,45 +2236,6 @@
       "competition": "International Friendlies"
     },
     {
-      "id": "tsdb-2608375",
-      "sourceIds": {
-        "thesportsdb": "2608375"
-      },
-      "title": "Trinidad and Tobago vs Dominican Republic",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790557200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Fox Sports 2 US",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-28",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Trinidad and Tobago",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/x0uq8u1598135774.png",
-        "sourceIds": {
-          "thesportsdb": "140176"
-        }
-      },
-      "awayTeam": {
-        "name": "Dominican Republic",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tnvu6e1774758597.png",
-        "sourceIds": {
-          "thesportsdb": "140273"
-        }
-      },
-      "competition": "CONCACAF Nations League"
-    },
-    {
       "id": "tsdb-2505773",
       "sourceIds": {
         "thesportsdb": "2505773"
@@ -2248,6 +2245,18 @@
       "startUtcEpochSeconds": 1790620200,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "DAZN Austria",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "LaLiga TV Hypermotion",
           "aliases": [],
@@ -2354,6 +2363,120 @@
         }
       },
       "competition": "International Friendlies"
+    },
+    {
+      "id": "tsdb-2528288",
+      "sourceIds": {
+        "thesportsdb": "2528288"
+      },
+      "title": "Boreham Wood vs Kidderminster Harriers",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790704800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Belgium",
+          "aliases": [],
+          "territory": "BE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Boreham Wood",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8h5d4s1512067942.png",
+        "sourceIds": {
+          "thesportsdb": "135968"
+        }
+      },
+      "awayTeam": {
+        "name": "Kidderminster Harriers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w3lw031675965943.png",
+        "sourceIds": {
+          "thesportsdb": "134448"
+        }
+      },
+      "competition": "English National League"
+    },
+    {
+      "id": "tsdb-2528282",
+      "sourceIds": {
+        "thesportsdb": "2528282"
+      },
+      "title": "Barrow vs Scunthorpe United",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790707500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Greece",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN New Zealand",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Serbia",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Turkey",
+          "aliases": [],
+          "territory": "TR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Barrow",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6ubn501512067488.png",
+        "sourceIds": {
+          "thesportsdb": "136000"
+        }
+      },
+      "awayTeam": {
+        "name": "Scunthorpe United",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ljf0ce1685771026.png",
+        "sourceIds": {
+          "thesportsdb": "133810"
+        }
+      },
+      "competition": "English National League"
     },
     {
       "id": "tsdb-2608386",
@@ -2593,6 +2716,18 @@
           "channelName": "OneSoccer CA",
           "aliases": [],
           "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-28",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "C More Sport 1 FI",
+          "aliases": [],
+          "territory": "FI",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
