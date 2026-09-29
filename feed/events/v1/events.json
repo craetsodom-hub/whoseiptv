@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1790705026,
-  "validUntilEpochSeconds": 1790748226,
+  "generatedAtEpochSeconds": 1790719945,
+  "validUntilEpochSeconds": 1790763145,
   "events": [
     {
       "id": "tsdb-2442773",
@@ -129,19 +129,43 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565456",
+      "id": "tsdb-2565457",
       "sourceIds": {
-        "thesportsdb": "2565456"
+        "thesportsdb": "2565457"
       },
-      "title": "Dubai Basketball vs FC Barcelona Basquet",
+      "title": "Anadolu Efes SK vs Real Madrid Baloncesto",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1790697600,
+      "startUtcEpochSeconds": 1790701200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Movistar #Vamos",
+          "channelName": "BeIn Sports Max 4",
           "aliases": [],
-          "territory": "ES",
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 3 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 3 RS",
+          "aliases": [],
+          "territory": "RS",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -152,17 +176,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Dubai Basketball",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fgtnti1758215967.png",
+        "name": "Anadolu Efes SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
         "sourceIds": {
-          "thesportsdb": "148701"
+          "thesportsdb": "136066"
         }
       },
       "awayTeam": {
-        "name": "FC Barcelona Basquet",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0tz26j1729097443.png",
+        "name": "Real Madrid Baloncesto",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
         "sourceIds": {
-          "thesportsdb": "135082"
+          "thesportsdb": "135092"
         }
       },
       "competition": "EuroLeague Basketball"
@@ -1052,43 +1076,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565457",
+      "id": "tsdb-2565458",
       "sourceIds": {
-        "thesportsdb": "2565457"
+        "thesportsdb": "2565458"
       },
-      "title": "Anadolu Efes SK vs Real Madrid Baloncesto",
+      "title": "BC Žalgiris vs Olympiacos BC",
       "sport": "basketball",
       "startUtcEpochSeconds": 1790701200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports Max 4",
+          "channelName": "S Sport TR",
           "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 3 HR",
-          "aliases": [],
-          "territory": "HR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 3 RS",
-          "aliases": [],
-          "territory": "RS",
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1099,17 +1099,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Anadolu Efes SK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
+        "name": "BC Žalgiris",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dn7ouv1703960565.png",
         "sourceIds": {
-          "thesportsdb": "136066"
+          "thesportsdb": "136113"
         }
       },
       "awayTeam": {
-        "name": "Real Madrid Baloncesto",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
+        "name": "Olympiacos BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
         "sourceIds": {
-          "thesportsdb": "135092"
+          "thesportsdb": "135635"
         }
       },
       "competition": "EuroLeague Basketball"
@@ -1205,96 +1205,6 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565458",
-      "sourceIds": {
-        "thesportsdb": "2565458"
-      },
-      "title": "BC Žalgiris vs Olympiacos BC",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1790701200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "S Sport TR",
-          "aliases": [],
-          "territory": "TR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "BC Žalgiris",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dn7ouv1703960565.png",
-        "sourceIds": {
-          "thesportsdb": "136113"
-        }
-      },
-      "awayTeam": {
-        "name": "Olympiacos BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
-        "sourceIds": {
-          "thesportsdb": "135635"
-        }
-      },
-      "competition": "EuroLeague Basketball"
-    },
-    {
-      "id": "tsdb-2442782",
-      "sourceIds": {
-        "thesportsdb": "2442782"
-      },
-      "title": "Greece vs Netherlands",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790880300,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ESPN Paraguay",
-          "aliases": [],
-          "territory": "PY",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 6 RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Greece",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xtxtts1455465601.png",
-        "sourceIds": {
-          "thesportsdb": "133902"
-        }
-      },
-      "awayTeam": {
-        "name": "Netherlands",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1p0hr41593787110.png",
-        "sourceIds": {
-          "thesportsdb": "133905"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
       "id": "tsdb-2588393",
       "sourceIds": {
         "thesportsdb": "2588393"
@@ -1353,6 +1263,96 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8rkn4b1714562777.png",
         "sourceIds": {
           "thesportsdb": "144604"
+        }
+      },
+      "competition": "EuroCup Basketball"
+    },
+    {
+      "id": "tsdb-2442782",
+      "sourceIds": {
+        "thesportsdb": "2442782"
+      },
+      "title": "Greece vs Netherlands",
+      "sport": "football",
+      "startUtcEpochSeconds": 1790880300,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ESPN Paraguay",
+          "aliases": [],
+          "territory": "PY",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 6 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Greece",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xtxtts1455465601.png",
+        "sourceIds": {
+          "thesportsdb": "133902"
+        }
+      },
+      "awayTeam": {
+        "name": "Netherlands",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1p0hr41593787110.png",
+        "sourceIds": {
+          "thesportsdb": "133905"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2588392",
+      "sourceIds": {
+        "thesportsdb": "2588392"
+      },
+      "title": "Le Mans Sarthe Basket vs Aris BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1790704800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Novasports 4",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Le Mans Sarthe Basket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/iouj5l1757607112.png",
+        "sourceIds": {
+          "thesportsdb": "135241"
+        }
+      },
+      "awayTeam": {
+        "name": "Aris BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
+        "sourceIds": {
+          "thesportsdb": "135628"
         }
       },
       "competition": "EuroCup Basketball"
@@ -1524,84 +1524,6 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/swqvpy1455466083.png",
         "sourceIds": {
           "thesportsdb": "133908"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2588392",
-      "sourceIds": {
-        "thesportsdb": "2588392"
-      },
-      "title": "Le Mans Sarthe Basket vs Aris BC",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1790704800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Novasports 4",
-          "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Le Mans Sarthe Basket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/iouj5l1757607112.png",
-        "sourceIds": {
-          "thesportsdb": "135241"
-        }
-      },
-      "awayTeam": {
-        "name": "Aris BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
-        "sourceIds": {
-          "thesportsdb": "135628"
-        }
-      },
-      "competition": "EuroCup Basketball"
-    },
-    {
-      "id": "tsdb-2442778",
-      "sourceIds": {
-        "thesportsdb": "2442778"
-      },
-      "title": "Moldova vs Faroe Islands",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790697600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Diema Sport 2 BG",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Moldova",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dcxqck1591972290.png",
-        "sourceIds": {
-          "thesportsdb": "136460"
-        }
-      },
-      "awayTeam": {
-        "name": "Faroe Islands",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pjs0io1552936544.png",
-        "sourceIds": {
-          "thesportsdb": "136466"
         }
       },
       "competition": "UEFA Nations League"
@@ -2471,19 +2393,19 @@
       "competition": "WNBA"
     },
     {
-      "id": "tsdb-2583244",
+      "id": "tsdb-2528288",
       "sourceIds": {
-        "thesportsdb": "2583244"
+        "thesportsdb": "2528288"
       },
-      "title": "Russia vs Iran",
+      "title": "Boreham Wood vs Kidderminster Harriers",
       "sport": "football",
-      "startUtcEpochSeconds": 1790697600,
+      "startUtcEpochSeconds": 1790704800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sportbox.ru",
+          "channelName": "DAZN Belgium",
           "aliases": [],
-          "territory": "RU",
+          "territory": "BE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2494,20 +2416,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Russia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nz50i51689197440.png",
+        "name": "Boreham Wood",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8h5d4s1512067942.png",
         "sourceIds": {
-          "thesportsdb": "133903"
+          "thesportsdb": "135968"
         }
       },
       "awayTeam": {
-        "name": "Iran",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uttpvw1455465617.png",
+        "name": "Kidderminster Harriers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w3lw031675965943.png",
         "sourceIds": {
-          "thesportsdb": "134511"
+          "thesportsdb": "134448"
         }
       },
-      "competition": "International Friendlies"
+      "competition": "English National League"
     },
     {
       "id": "tsdb-2487897",
@@ -2549,19 +2471,55 @@
       "competition": "Australian NBL"
     },
     {
-      "id": "tsdb-2528288",
+      "id": "tsdb-2528282",
       "sourceIds": {
-        "thesportsdb": "2528288"
+        "thesportsdb": "2528282"
       },
-      "title": "Boreham Wood vs Kidderminster Harriers",
+      "title": "Barrow vs Scunthorpe United",
       "sport": "football",
-      "startUtcEpochSeconds": 1790704800,
+      "startUtcEpochSeconds": 1790707500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Belgium",
+          "channelName": "DAZN Greece",
           "aliases": [],
-          "territory": "BE",
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN New Zealand",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Serbia",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-09-29",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Turkey",
+          "aliases": [],
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2572,17 +2530,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Boreham Wood",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8h5d4s1512067942.png",
+        "name": "Barrow",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6ubn501512067488.png",
         "sourceIds": {
-          "thesportsdb": "135968"
+          "thesportsdb": "136000"
         }
       },
       "awayTeam": {
-        "name": "Kidderminster Harriers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w3lw031675965943.png",
+        "name": "Scunthorpe United",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ljf0ce1685771026.png",
         "sourceIds": {
-          "thesportsdb": "134448"
+          "thesportsdb": "133810"
         }
       },
       "competition": "English National League"
@@ -2687,55 +2645,19 @@
       "competition": "EuroLeague Basketball"
     },
     {
-      "id": "tsdb-2528282",
+      "id": "tsdb-2608386",
       "sourceIds": {
-        "thesportsdb": "2528282"
+        "thesportsdb": "2608386"
       },
-      "title": "Barrow vs Scunthorpe United",
+      "title": "Anguilla vs Aruba",
       "sport": "football",
-      "startUtcEpochSeconds": 1790707500,
+      "startUtcEpochSeconds": 1790722800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Greece",
+          "channelName": "OneSoccer CA",
           "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN New Zealand",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN Serbia",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN Turkey",
-          "aliases": [],
-          "territory": "TR",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2746,20 +2668,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Barrow",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6ubn501512067488.png",
+        "name": "Anguilla",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/e4sbaf1607457641.png",
         "sourceIds": {
-          "thesportsdb": "136000"
+          "thesportsdb": "140262"
         }
       },
       "awayTeam": {
-        "name": "Scunthorpe United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ljf0ce1685771026.png",
+        "name": "Aruba",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fjly6d1600953875.png",
         "sourceIds": {
-          "thesportsdb": "133810"
+          "thesportsdb": "140264"
         }
       },
-      "competition": "English National League"
+      "competition": "CONCACAF Nations League"
     },
     {
       "id": "tsdb-2565470",
@@ -2823,45 +2745,6 @@
         }
       },
       "competition": "EuroLeague Basketball"
-    },
-    {
-      "id": "tsdb-2608386",
-      "sourceIds": {
-        "thesportsdb": "2608386"
-      },
-      "title": "Anguilla vs Aruba",
-      "sport": "football",
-      "startUtcEpochSeconds": 1790722800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "OneSoccer CA",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-09-29",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Anguilla",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/e4sbaf1607457641.png",
-        "sourceIds": {
-          "thesportsdb": "140262"
-        }
-      },
-      "awayTeam": {
-        "name": "Aruba",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fjly6d1600953875.png",
-        "sourceIds": {
-          "thesportsdb": "140264"
-        }
-      },
-      "competition": "CONCACAF Nations League"
     },
     {
       "id": "tsdb-2269543",
