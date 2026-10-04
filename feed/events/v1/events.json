@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1791061908,
-  "validUntilEpochSeconds": 1791105108,
+  "generatedAtEpochSeconds": 1791071155,
+  "validUntilEpochSeconds": 1791114355,
   "events": [
     {
-      "id": "tsdb-2442797",
+      "id": "tsdb-2442800",
       "sourceIds": {
-        "thesportsdb": "2442797"
+        "thesportsdb": "2442800"
       },
-      "title": "Croatia vs England",
+      "title": "Spain vs Czech Republic",
       "sport": "football",
-      "startUtcEpochSeconds": 1791043200,
+      "startUtcEpochSeconds": 1791053100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Super Sport 1 HD (Albania)",
+          "channelName": "TV 2 Sport 1",
           "aliases": [],
-          "territory": "AL",
+          "territory": "DK",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -26,81 +26,9 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "C More Sport 2 FI",
+          "channelName": "TVP Sport",
           "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "L'Équipe",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Nova TV HR",
-          "aliases": [],
-          "territory": "HR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Spíler1 HU",
-          "aliases": [],
-          "territory": "HU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sport Uno",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIN Sports 1 Qatar",
-          "aliases": [],
-          "territory": "QA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Digi Sport 1 Romania",
-          "aliases": [],
-          "territory": "RO",
+          "territory": "PL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -111,74 +39,87 @@
         }
       ],
       "homeTeam": {
-        "name": "Croatia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/84cfeg1789271106.png",
+        "name": "Spain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
         "sourceIds": {
-          "thesportsdb": "133912"
+          "thesportsdb": "133909"
         }
       },
       "awayTeam": {
-        "name": "England",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
+        "name": "Czech Republic",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o0cx31654205806.png",
         "sourceIds": {
-          "thesportsdb": "133914"
+          "thesportsdb": "133904"
         }
       },
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2571734",
-      "sourceIds": {
-        "thesportsdb": "2571734"
-      },
-      "title": "Joventut Badalona vs BC Andorra",
+      "id": "nba-0012600009",
+      "title": "Heat vs Raptors",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791043200,
+      "competition": "Preseason",
+      "startUtcEpochSeconds": 1791068400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
+          "channelName": "560 WQAM",
           "aliases": [],
-          "territory": "ES",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "NBA TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Joventut Badalona",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vuqqry1425410580.png",
-        "sourceIds": {
-          "thesportsdb": "135083"
-        }
+        "name": "Raptors",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "BC Andorra",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4oyjtu1538210898.png",
-        "sourceIds": {
-          "thesportsdb": "135090"
-        }
-      },
-      "competition": "Spanish Liga ACB"
+        "name": "Heat",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+      }
     },
     {
-      "id": "tsdb-2610824",
+      "id": "tsdb-2550400",
       "sourceIds": {
-        "thesportsdb": "2610824"
+        "thesportsdb": "2550400"
       },
-      "title": "Warrington Wolves vs Wakefield Trinity Wildcats",
+      "title": "Castres Olympique vs Stade Toulousain",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1791046800,
+      "startUtcEpochSeconds": 1791054000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Kayo Sports",
+          "channelName": "Viaplay Sports 2 UK",
           "aliases": [],
-          "territory": "AU",
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Premier Sports 2 IE",
+          "aliases": [],
+          "territory": "IE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -189,20 +130,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Warrington Wolves",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/saimjk1656789616.png",
+        "name": "Castres Olympique",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
         "sourceIds": {
-          "thesportsdb": "135220"
+          "thesportsdb": "135331"
         }
       },
       "awayTeam": {
-        "name": "Wakefield Trinity Wildcats",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xz8j1u1700224884.png",
+        "name": "Stade Toulousain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
         "sourceIds": {
-          "thesportsdb": "135219"
+          "thesportsdb": "135339"
         }
       },
-      "competition": "English Rugby League Super League"
+      "competition": "French Top 14"
     },
     {
       "id": "f1-https-www-formula1-com-en-racing-2026-bahrain-race-1791097200",
@@ -780,722 +721,6 @@
       "artworkUrl": "https://media.formula1.com/image/upload/f_auto/q_auto/v1785236060/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Malaysia.jpg"
     },
     {
-      "id": "tsdb-2442800",
-      "sourceIds": {
-        "thesportsdb": "2442800"
-      },
-      "title": "Spain vs Czech Republic",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791053100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TV 2 Sport 1",
-          "aliases": [],
-          "territory": "DK",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TVP Sport",
-          "aliases": [],
-          "territory": "PL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Spain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
-        "sourceIds": {
-          "thesportsdb": "133909"
-        }
-      },
-      "awayTeam": {
-        "name": "Czech Republic",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o0cx31654205806.png",
-        "sourceIds": {
-          "thesportsdb": "133904"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2563772",
-      "sourceIds": {
-        "thesportsdb": "2563772"
-      },
-      "title": "ALBA Berlin vs Bamberg Baskets",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1791045000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DYN",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "ALBA Berlin",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/58osvu1545866407.png",
-        "sourceIds": {
-          "thesportsdb": "135416"
-        }
-      },
-      "awayTeam": {
-        "name": "Bamberg Baskets",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rs1gjz1714562746.png",
-        "sourceIds": {
-          "thesportsdb": "135420"
-        }
-      },
-      "competition": "German BBL"
-    },
-    {
-      "id": "tsdb-2550400",
-      "sourceIds": {
-        "thesportsdb": "2550400"
-      },
-      "title": "Castres Olympique vs Stade Toulousain",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1791054000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Viaplay Sports 2 UK",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 2 IE",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Castres Olympique",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2hzwdf1536392242.png",
-        "sourceIds": {
-          "thesportsdb": "135331"
-        }
-      },
-      "awayTeam": {
-        "name": "Stade Toulousain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
-        "sourceIds": {
-          "thesportsdb": "135339"
-        }
-      },
-      "competition": "French Top 14"
-    },
-    {
-      "id": "f1-https-www-formula1-com-en-racing-2026-singapore-sprint-1791622800",
-      "title": "Sprint - Singapore Grand Prix",
-      "sport": "formula1",
-      "competition": "Formula 1",
-      "startUtcEpochSeconds": 1791622800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DigitAlb",
-          "aliases": [],
-          "territory": "AL",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "FastSports",
-          "aliases": [],
-          "territory": "AM",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Servus TV ORF Sky",
-          "aliases": [],
-          "territory": "AT",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fox Sports Foxtel Kayo",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Idman Azerbaijan",
-          "aliases": [],
-          "territory": "AZ",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "RTBF Play Sports",
-          "aliases": [],
-          "territory": "BE",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TV Nova",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TV Globo sportv",
-          "aliases": [],
-          "territory": "BR",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "RDS RDS 2 TSN Noovo",
-          "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "SRF RSI RTS Sky",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Shanghai TV Guandong Television Channel Tencent",
-          "aliases": [],
-          "territory": "CN",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "OmegaTV",
-          "aliases": [],
-          "territory": "CY",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Deutschland RTL",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TV3 Viaplay",
-          "aliases": [],
-          "territory": "DK",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Go3 Estonia TV3",
-          "aliases": [],
-          "territory": "EE",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay",
-          "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Canal+",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "ANT1 ANT1+",
-          "aliases": [],
-          "territory": "GR",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "RTL",
-          "aliases": [],
-          "territory": "HR",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "M4 (MTVA Sports Channel)",
-          "aliases": [],
-          "territory": "HU",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS",
-          "aliases": [],
-          "territory": "ID",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport 5",
-          "aliases": [],
-          "territory": "IL",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "FanCode TATA Play FanCode Sports",
-          "aliases": [],
-          "territory": "IN",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay",
-          "aliases": [],
-          "territory": "IS",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Italia",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fuji TV",
-          "aliases": [],
-          "territory": "JP",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS",
-          "aliases": [],
-          "territory": "KH",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Coupang Play",
-          "aliases": [],
-          "territory": "KR",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS",
-          "aliases": [],
-          "territory": "LA",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Go3 Lithuania TV3",
-          "aliases": [],
-          "territory": "LT",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "RTL Télé Lëtzebuerg",
-          "aliases": [],
-          "territory": "LU",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Go3 Latvia TV3",
-          "aliases": [],
-          "territory": "LV",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport",
-          "aliases": [],
-          "territory": "ME",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "PBS Malta",
-          "aliases": [],
-          "territory": "MT",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TUDN Sky Sports Izzi",
-          "aliases": [],
-          "territory": "MX",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay",
-          "aliases": [],
-          "territory": "NL",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "V sport 1 Viaplay",
-          "aliases": [],
-          "territory": "NO",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky NZ",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS",
-          "aliases": [],
-          "territory": "PH",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Eleven Sports",
-          "aliases": [],
-          "territory": "PL",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN",
-          "aliases": [
-            "DAZN ES",
-            "ES DAZN"
-          ],
-          "territory": "PT",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Antena",
-          "aliases": [],
-          "territory": "RO",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay",
-          "aliases": [],
-          "territory": "SE",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS",
-          "aliases": [],
-          "territory": "SG",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Kanal A VOYO",
-          "aliases": [],
-          "territory": "SI",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "beIN SPORTS",
-          "aliases": [],
-          "territory": "TH",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Videoland ELTA",
-          "aliases": [],
-          "territory": "TW",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Setanta Ukraine",
-          "aliases": [],
-          "territory": "UA",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TV360",
-          "aliases": [],
-          "territory": "VN",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport Artmotion Kosovo",
-          "aliases": [],
-          "territory": "XK",
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "official-country-broadcaster-table",
-          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "artworkUrl": "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245022/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Singapore.jpg"
-    },
-    {
       "id": "tsdb-2442803",
       "sourceIds": {
         "thesportsdb": "2442803"
@@ -1583,44 +808,55 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "nba-0012600009",
-      "title": "Heat vs Raptors",
+      "id": "tsdb-2601616",
+      "sourceIds": {
+        "thesportsdb": "2601616"
+      },
+      "title": "Toronto Raptors vs Miami Heat",
       "sport": "basketball",
-      "competition": "Preseason",
       "startUtcEpochSeconds": 1791068400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "560 WQAM",
+          "channelName": "TSN 4",
           "aliases": [],
-          "territory": "US",
+          "territory": "CA",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "NBA TV",
+          "channelName": "BeIn Sports Max 4",
           "aliases": [],
-          "territory": "US",
+          "territory": "FR",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Raptors",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        "name": "Toronto Raptors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lct96a1778227205.png",
+        "sourceIds": {
+          "thesportsdb": "134864"
+        }
       },
       "awayTeam": {
-        "name": "Heat",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
-      }
+        "name": "Miami Heat",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b9tye31778226616.png",
+        "sourceIds": {
+          "thesportsdb": "134882"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2470751",
@@ -1662,11 +898,11 @@
       "competition": "New Zealand National Provincial Championship"
     },
     {
-      "id": "f1-https-www-formula1-com-en-racing-2026-singapore-race-1791720000",
-      "title": "Singapore Grand Prix",
+      "id": "f1-https-www-formula1-com-en-racing-2026-singapore-sprint-1791622800",
+      "title": "Sprint - Singapore Grand Prix",
       "sport": "formula1",
       "competition": "Formula 1",
-      "startUtcEpochSeconds": 1791720000,
+      "startUtcEpochSeconds": 1791622800,
       "status": "confirmed",
       "broadcasts": [
         {
@@ -2288,31 +1524,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2601616",
+      "id": "tsdb-2571737",
       "sourceIds": {
-        "thesportsdb": "2601616"
+        "thesportsdb": "2571737"
       },
-      "title": "Toronto Raptors vs Miami Heat",
+      "title": "Força Lleida CE vs CB San Pablo Burgos",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791068400,
+      "startUtcEpochSeconds": 1791108000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TSN 4",
+          "channelName": "DAZN Spain",
           "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports Max 4",
-          "aliases": [],
-          "territory": "FR",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2323,20 +1547,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Toronto Raptors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lct96a1778227205.png",
+        "name": "Força Lleida CE",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xmypxg1786723117.png",
         "sourceIds": {
-          "thesportsdb": "134864"
+          "thesportsdb": "144690"
         }
       },
       "awayTeam": {
-        "name": "Miami Heat",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b9tye31778226616.png",
+        "name": "CB San Pablo Burgos",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/60nftb1752259508.png",
         "sourceIds": {
-          "thesportsdb": "134882"
+          "thesportsdb": "136244"
         }
       },
-      "competition": "NBA"
+      "competition": "Spanish Liga ACB"
     },
     {
       "id": "tsdb-2611336",
@@ -2388,6 +1612,581 @@
         }
       },
       "competition": "Australian National Rugby League"
+    },
+    {
+      "id": "f1-https-www-formula1-com-en-racing-2026-singapore-race-1791720000",
+      "title": "Singapore Grand Prix",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "startUtcEpochSeconds": 1791720000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DigitAlb",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "FastSports",
+          "aliases": [],
+          "territory": "AM",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Servus TV ORF Sky",
+          "aliases": [],
+          "territory": "AT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Fox Sports Foxtel Kayo",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Idman Azerbaijan",
+          "aliases": [],
+          "territory": "AZ",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTBF Play Sports",
+          "aliases": [],
+          "territory": "BE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV Nova",
+          "aliases": [],
+          "territory": "BG",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV Globo sportv",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RDS RDS 2 TSN Noovo",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SRF RSI RTS Sky",
+          "aliases": [],
+          "territory": "CH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Shanghai TV Guandong Television Channel Tencent",
+          "aliases": [],
+          "territory": "CN",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "OmegaTV",
+          "aliases": [],
+          "territory": "CY",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Deutschland RTL",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV3 Viaplay",
+          "aliases": [],
+          "territory": "DK",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Go3 Estonia TV3",
+          "aliases": [],
+          "territory": "EE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "FI",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Canal+",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ANT1 ANT1+",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTL",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "M4 (MTVA Sports Channel)",
+          "aliases": [],
+          "territory": "HU",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "ID",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport 5",
+          "aliases": [],
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "FanCode TATA Play FanCode Sports",
+          "aliases": [],
+          "territory": "IN",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "IS",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky Italia",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Fuji TV",
+          "aliases": [],
+          "territory": "JP",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "KH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Coupang Play",
+          "aliases": [],
+          "territory": "KR",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "LA",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Go3 Lithuania TV3",
+          "aliases": [],
+          "territory": "LT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "RTL Télé Lëtzebuerg",
+          "aliases": [],
+          "territory": "LU",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Go3 Latvia TV3",
+          "aliases": [],
+          "territory": "LV",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport",
+          "aliases": [],
+          "territory": "ME",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "PBS Malta",
+          "aliases": [],
+          "territory": "MT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TUDN Sky Sports Izzi",
+          "aliases": [],
+          "territory": "MX",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "NL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "V sport 1 Viaplay",
+          "aliases": [],
+          "territory": "NO",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sky NZ",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "PH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Eleven Sports",
+          "aliases": [],
+          "territory": "PL",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
+          "territory": "PT",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Antena",
+          "aliases": [],
+          "territory": "RO",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "SG",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Kanal A VOYO",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "beIN SPORTS",
+          "aliases": [],
+          "territory": "TH",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Videoland ELTA",
+          "aliases": [],
+          "territory": "TW",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Setanta Ukraine",
+          "aliases": [],
+          "territory": "UA",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TV360",
+          "aliases": [],
+          "territory": "VN",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport Artmotion Kosovo",
+          "aliases": [],
+          "territory": "XK",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "official-country-broadcaster-table",
+          "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "artworkUrl": "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245022/content/dam/fom-website/2018-redesign-assets/Racehub%20header%20images%2016x9/Singapore.jpg"
     },
     {
       "id": "tsdb-2442805",
@@ -2453,19 +2252,43 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2571737",
+      "id": "tsdb-2571739",
       "sourceIds": {
-        "thesportsdb": "2571737"
+        "thesportsdb": "2571739"
       },
-      "title": "Força Lleida CE vs CB San Pablo Burgos",
+      "title": "Obradoiro CAB vs Real Madrid Baloncesto",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791108000,
+      "startUtcEpochSeconds": 1791109800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
+          "channelName": "DAZN 1 France",
           "aliases": [],
-          "territory": "ES",
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 7 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 5 SI",
+          "aliases": [],
+          "territory": "SI",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2476,17 +2299,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Força Lleida CE",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xmypxg1786723117.png",
+        "name": "Obradoiro CAB",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06qdqv1677768007.png",
         "sourceIds": {
-          "thesportsdb": "144690"
+          "thesportsdb": "135093"
         }
       },
       "awayTeam": {
-        "name": "CB San Pablo Burgos",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/60nftb1752259508.png",
+        "name": "Real Madrid Baloncesto",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
         "sourceIds": {
-          "thesportsdb": "136244"
+          "thesportsdb": "135092"
         }
       },
       "competition": "Spanish Liga ACB"
@@ -2644,43 +2467,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2571739",
+      "id": "tsdb-2563776",
       "sourceIds": {
-        "thesportsdb": "2571739"
+        "thesportsdb": "2563776"
       },
-      "title": "Obradoiro CAB vs Real Madrid Baloncesto",
+      "title": "Science City Jena vs Niners Chemnitz",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791109800,
+      "startUtcEpochSeconds": 1791124200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN 1 France",
+          "channelName": "DYN",
           "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 7 RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 5 SI",
-          "aliases": [],
-          "territory": "SI",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2691,20 +2490,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Obradoiro CAB",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06qdqv1677768007.png",
+        "name": "Science City Jena",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wvd2im1759138234.png",
         "sourceIds": {
-          "thesportsdb": "135093"
+          "thesportsdb": "135919"
         }
       },
       "awayTeam": {
-        "name": "Real Madrid Baloncesto",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
+        "name": "Niners Chemnitz",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/f4swrz1609272395.png",
         "sourceIds": {
-          "thesportsdb": "135092"
+          "thesportsdb": "140488"
         }
       },
-      "competition": "Spanish Liga ACB"
+      "competition": "German BBL"
     },
     {
       "id": "tsdb-2550401",
@@ -2809,19 +2608,19 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2563776",
+      "id": "tsdb-2571740",
       "sourceIds": {
-        "thesportsdb": "2563776"
+        "thesportsdb": "2571740"
       },
-      "title": "Science City Jena vs Niners Chemnitz",
+      "title": "Basket Zaragoza vs Valencia Basket",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791124200,
+      "startUtcEpochSeconds": 1791126000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DYN",
+          "channelName": "Sport 3 IL",
           "aliases": [],
-          "territory": "DE",
+          "territory": "IL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2832,20 +2631,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Science City Jena",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wvd2im1759138234.png",
+        "name": "Basket Zaragoza",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrames1721554095.png",
         "sourceIds": {
-          "thesportsdb": "135919"
+          "thesportsdb": "135081"
         }
       },
       "awayTeam": {
-        "name": "Niners Chemnitz",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/f4swrz1609272395.png",
+        "name": "Valencia Basket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9qyc231536398868.png",
         "sourceIds": {
-          "thesportsdb": "140488"
+          "thesportsdb": "135097"
         }
       },
-      "competition": "German BBL"
+      "competition": "Spanish Liga ACB"
     },
     {
       "id": "l1_championship_match_73872",
@@ -2899,117 +2698,6 @@
       "broadcasterEvidence": {
         "source": "ligue1",
         "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73872",
-        "eventMatched": false
-      },
-      "broadcastRights": [
-        {
-          "territory": "FR",
-          "holders": [
-            {
-              "name": "Ligue 1+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2571740",
-      "sourceIds": {
-        "thesportsdb": "2571740"
-      },
-      "title": "Basket Zaragoza vs Valencia Basket",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1791126000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sport 3 IL",
-          "aliases": [],
-          "territory": "IL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Basket Zaragoza",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrames1721554095.png",
-        "sourceIds": {
-          "thesportsdb": "135081"
-        }
-      },
-      "awayTeam": {
-        "name": "Valencia Basket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9qyc231536398868.png",
-        "sourceIds": {
-          "thesportsdb": "135097"
-        }
-      },
-      "competition": "Spanish Liga ACB"
-    },
-    {
-      "id": "l1_championship_match_73874",
-      "title": "Estac Troyes vs Olympique de Marseille",
-      "sport": "football",
-      "competition": "Ligue 1",
-      "startUtcEpochSeconds": 1791744300,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Estac Troyes",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Olympique de Marseille",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Ligue 1+ 2",
-          "aliases": [
-            "Ligue1+ 2",
-            "FR Ligue 1+ 2",
-            "Ligue 1+ 2 HD"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-match-id",
-          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73874",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Ligue 1+",
-          "aliases": [
-            "Ligue1+",
-            "FR Ligue 1+"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
-          "verifiedAt": "2026-08-23",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "ligue1",
-        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73874",
         "eventMatched": false
       },
       "broadcastRights": [
@@ -3094,55 +2782,76 @@
       "competition": "WNBA"
     },
     {
-      "id": "tsdb-2442798",
-      "sourceIds": {
-        "thesportsdb": "2442798"
-      },
-      "title": "Belarus vs San Marino",
+      "id": "l1_championship_match_73874",
+      "title": "Estac Troyes vs Olympique de Marseille",
       "sport": "football",
-      "startUtcEpochSeconds": 1791043200,
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1791744300,
       "status": "confirmed",
+      "homeTeam": {
+        "name": "Estac Troyes",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Olympique de Marseille",
+        "badgeUrl": null
+      },
       "broadcasts": [
         {
-          "channelName": "Diema Sport BG",
-          "aliases": [],
-          "territory": "BG",
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73874",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "IQiyi CN",
-          "aliases": [],
-          "territory": "CN",
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
         }
       ],
-      "homeTeam": {
-        "name": "Belarus",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bz4o2m1552857077.png",
-        "sourceIds": {
-          "thesportsdb": "136454"
-        }
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73874",
+        "eventMatched": false
       },
-      "awayTeam": {
-        "name": "San Marino",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vfvy3j1626192199.png",
-        "sourceIds": {
-          "thesportsdb": "136452"
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
         }
-      },
-      "competition": "UEFA Nations League"
+      ]
     },
     {
       "id": "nba-0012600066",
@@ -3196,19 +2905,19 @@
       }
     },
     {
-      "id": "tsdb-2442799",
+      "id": "tsdb-2475298",
       "sourceIds": {
-        "thesportsdb": "2442799"
+        "thesportsdb": "2475298"
       },
-      "title": "Iceland vs Bulgaria",
+      "title": "Switzerland vs Slovenia",
       "sport": "football",
-      "startUtcEpochSeconds": 1791043200,
+      "startUtcEpochSeconds": 1791053100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stöð 2 Sport IS",
+          "channelName": "RTS Deux CH",
           "aliases": [],
-          "territory": "IS",
+          "territory": "CH",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -3219,17 +2928,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Iceland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xc6kuy1742982312.png",
+        "name": "Switzerland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mb7yqe1717365808.png",
         "sourceIds": {
-          "thesportsdb": "135988"
+          "thesportsdb": "134506"
         }
       },
       "awayTeam": {
-        "name": "Bulgaria",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0bee7p1552858893.png",
+        "name": "Slovenia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s7k1x51552909864.png",
         "sourceIds": {
-          "thesportsdb": "136461"
+          "thesportsdb": "136456"
         }
       },
       "competition": "UEFA Nations League"
@@ -3273,135 +2982,6 @@
         "name": "Jazz",
         "badgeUrl": "https://cdn.nba.com/logos/nba/1610612762/primary/L/logo.svg"
       }
-    },
-    {
-      "id": "tsdb-2475297",
-      "sourceIds": {
-        "thesportsdb": "2475297"
-      },
-      "title": "Estonia vs Luxembourg",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791043200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sport TV 3",
-          "aliases": [],
-          "territory": "PT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Estonia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/n43zxi1730303815.png",
-        "sourceIds": {
-          "thesportsdb": "136453"
-        }
-      },
-      "awayTeam": {
-        "name": "Luxembourg",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nsakoo1713725395.png",
-        "sourceIds": {
-          "thesportsdb": "136458"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2601620",
-      "sourceIds": {
-        "thesportsdb": "2601620"
-      },
-      "title": "Philadelphia 76ers vs New York Knicks",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1791241200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "BeIn Sports Max 6",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "NBC Sports Philadelphia",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Philadelphia 76ers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j6rlbi1778226857.png",
-        "sourceIds": {
-          "thesportsdb": "134863"
-        }
-      },
-      "awayTeam": {
-        "name": "New York Knicks",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4k8obt1778226764.png",
-        "sourceIds": {
-          "thesportsdb": "134862"
-        }
-      },
-      "competition": "NBA"
-    },
-    {
-      "id": "tsdb-2475298",
-      "sourceIds": {
-        "thesportsdb": "2475298"
-      },
-      "title": "Switzerland vs Slovenia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791053100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "RTS Deux CH",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-03",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Switzerland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mb7yqe1717365808.png",
-        "sourceIds": {
-          "thesportsdb": "134506"
-        }
-      },
-      "awayTeam": {
-        "name": "Slovenia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s7k1x51552909864.png",
-        "sourceIds": {
-          "thesportsdb": "136456"
-        }
-      },
-      "competition": "UEFA Nations League"
     },
     {
       "id": "tsdb-2442801",
@@ -3477,6 +3057,57 @@
         }
       },
       "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2601620",
+      "sourceIds": {
+        "thesportsdb": "2601620"
+      },
+      "title": "Philadelphia 76ers vs New York Knicks",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1791241200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BeIn Sports Max 6",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "NBC Sports Philadelphia",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-03",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Philadelphia 76ers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j6rlbi1778226857.png",
+        "sourceIds": {
+          "thesportsdb": "134863"
+        }
+      },
+      "awayTeam": {
+        "name": "New York Knicks",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4k8obt1778226764.png",
+        "sourceIds": {
+          "thesportsdb": "134862"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2442802",
@@ -8938,6 +8569,40 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "mls-MLS-MAT-0009MQ",
+      "title": "St. Louis CITY SC vs LA Galaxy",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1791759600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "St. Louis CITY SC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "LA Galaxy",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MQ",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MQ",
+        "eventMatched": false
+      }
     },
     {
       "id": "tsdb-2554359",
