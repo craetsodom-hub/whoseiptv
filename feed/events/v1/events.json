@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1791508332,
-  "validUntilEpochSeconds": 1791551532,
+  "generatedAtEpochSeconds": 1791541751,
+  "validUntilEpochSeconds": 1791584951,
   "events": [
     {
       "id": "tsdb-2506242",
@@ -452,43 +452,55 @@
       ]
     },
     {
-      "id": "tsdb-2548853",
-      "sourceIds": {
-        "thesportsdb": "2548853"
-      },
-      "title": "San Antonio Spurs vs Atlanta Hawks",
+      "id": "nba-0012600012",
+      "title": "Rockets vs Mavericks",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791504000,
+      "competition": "Preseason",
+      "startUtcEpochSeconds": 1791547200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports Max 4",
+          "channelName": "105.3 The Fan (Tape Delay)",
           "aliases": [],
-          "territory": "FR",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "790 AM / 740 AM",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "NBA TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "San Antonio Spurs",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yc5qfx1781459158.png",
-        "sourceIds": {
-          "thesportsdb": "134879"
-        }
+        "name": "Mavericks",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "Atlanta Hawks",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/7o1noy1778226315.png",
-        "sourceIds": {
-          "thesportsdb": "134880"
-        }
-      },
-      "competition": "NBA"
+        "name": "Rockets",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
+      }
     },
     {
       "id": "tsdb-2524750",
@@ -2644,19 +2656,19 @@
       ]
     },
     {
-      "id": "tsdb-2601633",
+      "id": "tsdb-2564055",
       "sourceIds": {
-        "thesportsdb": "2601633"
+        "thesportsdb": "2564055"
       },
-      "title": "Los Angeles Lakers vs Sacramento Kings",
+      "title": "Basket Zielona Góra vs Legia Warszawa",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791513000,
+      "startUtcEpochSeconds": 1791561600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Spectrum Sports",
+          "channelName": "Polsat Sport 2",
           "aliases": [],
-          "territory": "US",
+          "territory": "PL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -2667,20 +2679,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Los Angeles Lakers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/d8uoxw1714254511.png",
+        "name": "Basket Zielona Góra",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b1b22y1550416473.png",
         "sourceIds": {
-          "thesportsdb": "134867"
+          "thesportsdb": "136336"
         }
       },
       "awayTeam": {
-        "name": "Sacramento Kings",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k2buwo1778227426.png",
+        "name": "Legia Warszawa",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yg1cdx1757947790.png",
         "sourceIds": {
-          "thesportsdb": "134869"
+          "thesportsdb": "137567"
         }
       },
-      "competition": "NBA"
+      "competition": "Polish Basketball League"
     },
     {
       "id": "tsdb-2550111",
@@ -3720,55 +3732,43 @@
       ]
     },
     {
-      "id": "nba-0012600012",
-      "title": "Rockets vs Mavericks",
+      "id": "tsdb-2563779",
+      "sourceIds": {
+        "thesportsdb": "2563779"
+      },
+      "title": "Bonn vs Science City Jena",
       "sport": "basketball",
-      "competition": "Preseason",
-      "startUtcEpochSeconds": 1791547200,
+      "startUtcEpochSeconds": 1791568800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "105.3 The Fan (Tape Delay)",
+          "channelName": "DYN",
           "aliases": [],
-          "territory": "US",
+          "territory": "DE",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "790 AM / 740 AM",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "NBA TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Mavericks",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612742/primary/L/logo.svg"
+        "name": "Bonn",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fva1jj1726927533.png",
+        "sourceIds": {
+          "thesportsdb": "135432"
+        }
       },
       "awayTeam": {
-        "name": "Rockets",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612745/primary/L/logo.svg"
-      }
+        "name": "Science City Jena",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wvd2im1759138234.png",
+        "sourceIds": {
+          "thesportsdb": "135919"
+        }
+      },
+      "competition": "German BBL"
     },
     {
       "id": "tsdb-2553392",
@@ -5202,19 +5202,19 @@
       ]
     },
     {
-      "id": "tsdb-2564055",
+      "id": "tsdb-2599254",
       "sourceIds": {
-        "thesportsdb": "2564055"
+        "thesportsdb": "2599254"
       },
-      "title": "Basket Zielona Góra vs Legia Warszawa",
+      "title": "Dijon vs Limoges",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791561600,
+      "startUtcEpochSeconds": 1791568800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Polsat Sport 2",
+          "channelName": "DAZN Australia",
           "aliases": [],
-          "territory": "PL",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5225,20 +5225,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Basket Zielona Góra",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b1b22y1550416473.png",
+        "name": "Dijon",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06b1fd1666897191.png",
         "sourceIds": {
-          "thesportsdb": "136336"
+          "thesportsdb": "135237"
         }
       },
       "awayTeam": {
-        "name": "Legia Warszawa",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yg1cdx1757947790.png",
+        "name": "Limoges",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rryxux1423605495.png",
         "sourceIds": {
-          "thesportsdb": "137567"
+          "thesportsdb": "135242"
         }
       },
-      "competition": "Polish Basketball League"
+      "competition": "French LNB"
     },
     {
       "id": "tsdb-2550594",
@@ -5614,19 +5614,43 @@
       ]
     },
     {
-      "id": "tsdb-2563779",
+      "id": "tsdb-2565483",
       "sourceIds": {
-        "thesportsdb": "2563779"
+        "thesportsdb": "2565483"
       },
-      "title": "Bonn vs Science City Jena",
+      "title": "Olympiacos BC vs Anadolu Efes SK",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791568800,
+      "startUtcEpochSeconds": 1791569700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DYN",
+          "channelName": "Sport Klub 3 HR",
           "aliases": [],
-          "territory": "DE",
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 3 SI",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "S Sport TR",
+          "aliases": [],
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5637,20 +5661,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Bonn",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fva1jj1726927533.png",
+        "name": "Olympiacos BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
         "sourceIds": {
-          "thesportsdb": "135432"
+          "thesportsdb": "135635"
         }
       },
       "awayTeam": {
-        "name": "Science City Jena",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wvd2im1759138234.png",
+        "name": "Anadolu Efes SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
         "sourceIds": {
-          "thesportsdb": "135919"
+          "thesportsdb": "136066"
         }
       },
-      "competition": "German BBL"
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2460816",
@@ -5764,19 +5788,31 @@
       ]
     },
     {
-      "id": "tsdb-2599254",
+      "id": "tsdb-2565484",
       "sourceIds": {
-        "thesportsdb": "2599254"
+        "thesportsdb": "2565484"
       },
-      "title": "Dijon vs Limoges",
+      "title": "FC Barcelona Basquet vs BC Žalgiris",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791568800,
+      "startUtcEpochSeconds": 1791570600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Australia",
+          "channelName": "Novasports 4",
           "aliases": [],
-          "territory": "AU",
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Arena Sport 3 Premium RS",
+          "aliases": [],
+          "territory": "RS",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5787,20 +5823,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Dijon",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06b1fd1666897191.png",
+        "name": "FC Barcelona Basquet",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0tz26j1729097443.png",
         "sourceIds": {
-          "thesportsdb": "135237"
+          "thesportsdb": "135082"
         }
       },
       "awayTeam": {
-        "name": "Limoges",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rryxux1423605495.png",
+        "name": "BC Žalgiris",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dn7ouv1703960565.png",
         "sourceIds": {
-          "thesportsdb": "135242"
+          "thesportsdb": "136113"
         }
       },
-      "competition": "French LNB"
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2550114",
@@ -5917,43 +5953,19 @@
       "competition": "Italian Serie A"
     },
     {
-      "id": "tsdb-2565483",
+      "id": "tsdb-2611765",
       "sourceIds": {
-        "thesportsdb": "2565483"
+        "thesportsdb": "2611765"
       },
-      "title": "Olympiacos BC vs Anadolu Efes SK",
+      "title": "New York Liberty vs Atlanta Dream",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791569700,
+      "startUtcEpochSeconds": 1791588600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sport Klub 3 HR",
+          "channelName": "Sky Sport NBA",
           "aliases": [],
-          "territory": "HR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 3 SI",
-          "aliases": [],
-          "territory": "SI",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "S Sport TR",
-          "aliases": [],
-          "territory": "TR",
+          "territory": "IT",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5964,20 +5976,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Olympiacos BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
+        "name": "New York Liberty",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s3y5hx1702757871.png",
         "sourceIds": {
-          "thesportsdb": "135635"
+          "thesportsdb": "136438"
         }
       },
       "awayTeam": {
-        "name": "Anadolu Efes SK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
+        "name": "Atlanta Dream",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wtqjpk1702757695.png",
         "sourceIds": {
-          "thesportsdb": "136066"
+          "thesportsdb": "136447"
         }
       },
-      "competition": "EuroLeague Basketball"
+      "competition": "WNBA"
     },
     {
       "id": "tsdb-2553393",
@@ -5989,6 +6001,18 @@
       "startUtcEpochSeconds": 1791641100,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "Stan Sport AU",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "Sky Sport 2 NZ",
           "aliases": [],
@@ -6389,55 +6413,55 @@
       ]
     },
     {
-      "id": "tsdb-2565484",
-      "sourceIds": {
-        "thesportsdb": "2565484"
-      },
-      "title": "FC Barcelona Basquet vs BC Žalgiris",
+      "id": "nba-0012600037",
+      "title": "Grizzlies vs Bulls",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791570600,
+      "competition": "Preseason",
+      "startUtcEpochSeconds": 1791590400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Novasports 4",
+          "channelName": "104.3 The Score",
           "aliases": [],
-          "territory": "GR",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Arena Sport 3 Premium RS",
+          "channelName": "ESPN 92.9FM/680AM",
           "aliases": [],
-          "territory": "RS",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "NBA TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "FC Barcelona Basquet",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0tz26j1729097443.png",
-        "sourceIds": {
-          "thesportsdb": "135082"
-        }
+        "name": "Bulls",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "BC Žalgiris",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dn7ouv1703960565.png",
-        "sourceIds": {
-          "thesportsdb": "136113"
-        }
-      },
-      "competition": "EuroLeague Basketball"
+        "name": "Grizzlies",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
+      }
     },
     {
       "id": "tsdb-2550408",
@@ -6489,6 +6513,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "C More Extreme",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Paramount+ US",
           "aliases": [
             "US Paramount Plus"
@@ -6520,19 +6556,19 @@
       "competition": "Italian Serie A"
     },
     {
-      "id": "tsdb-2611765",
+      "id": "tsdb-2601634",
       "sourceIds": {
-        "thesportsdb": "2611765"
+        "thesportsdb": "2601634"
       },
-      "title": "New York Liberty vs Atlanta Dream",
+      "title": "Chicago Bulls vs Memphis Grizzlies",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791588600,
+      "startUtcEpochSeconds": 1791590400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sky Sport NBA",
+          "channelName": "NBA TV",
           "aliases": [],
-          "territory": "IT",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -6543,20 +6579,20 @@
         }
       ],
       "homeTeam": {
-        "name": "New York Liberty",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s3y5hx1702757871.png",
+        "name": "Chicago Bulls",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ehq8l31778197349.png",
         "sourceIds": {
-          "thesportsdb": "136438"
+          "thesportsdb": "134870"
         }
       },
       "awayTeam": {
-        "name": "Atlanta Dream",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wtqjpk1702757695.png",
+        "name": "Memphis Grizzlies",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v44qp21778197640.png",
         "sourceIds": {
-          "thesportsdb": "136447"
+          "thesportsdb": "134877"
         }
       },
-      "competition": "WNBA"
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2553395",
@@ -6694,55 +6730,94 @@
       ]
     },
     {
-      "id": "nba-0012600037",
-      "title": "Grizzlies vs Bulls",
+      "id": "tsdb-2571218",
+      "sourceIds": {
+        "thesportsdb": "2571218"
+      },
+      "title": "Bahçeşehir Koleji SK vs Karşıyaka Basket",
       "sport": "basketball",
-      "competition": "Preseason",
-      "startUtcEpochSeconds": 1791590400,
+      "startUtcEpochSeconds": 1791626400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "104.3 The Score",
+          "channelName": "Sport Klub 10 RS",
           "aliases": [],
-          "territory": "US",
+          "territory": "RS",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "ESPN 92.9FM/680AM",
+          "channelName": "Sport Klub 1 SI",
           "aliases": [],
-          "territory": "US",
+          "territory": "SI",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "NBA TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Bulls",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612741/primary/L/logo.svg"
+        "name": "Bahçeşehir Koleji SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/twgvxv1726910272.png",
+        "sourceIds": {
+          "thesportsdb": "136325"
+        }
       },
       "awayTeam": {
-        "name": "Grizzlies",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612763/primary/L/logo.svg"
-      }
+        "name": "Karşıyaka Basket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mhh1y41739692642.png",
+        "sourceIds": {
+          "thesportsdb": "136076"
+        }
+      },
+      "competition": "Turkish Basketbol Super Ligi"
+    },
+    {
+      "id": "tsdb-2550407",
+      "sourceIds": {
+        "thesportsdb": "2550407"
+      },
+      "title": "Stade Toulousain vs Aviron Bayonnais",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1791745500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "RMC Sport 2",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Stade Toulousain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
+        "sourceIds": {
+          "thesportsdb": "135339"
+        }
+      },
+      "awayTeam": {
+        "name": "Aviron Bayonnais",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z0fq591714808782.png",
+        "sourceIds": {
+          "thesportsdb": "135328"
+        }
+      },
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2506240",
@@ -7159,19 +7234,19 @@
       ]
     },
     {
-      "id": "tsdb-2601634",
+      "id": "tsdb-2571743",
       "sourceIds": {
-        "thesportsdb": "2601634"
+        "thesportsdb": "2571743"
       },
-      "title": "Chicago Bulls vs Memphis Grizzlies",
+      "title": "Básquet Coruña vs Basket Zaragoza",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791590400,
+      "startUtcEpochSeconds": 1791648000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "NBA TV",
+          "channelName": "DAZN Spain",
           "aliases": [],
-          "territory": "US",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -7182,20 +7257,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Chicago Bulls",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ehq8l31778197349.png",
+        "name": "Básquet Coruña",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/10iz0v1691223542.png",
         "sourceIds": {
-          "thesportsdb": "134870"
+          "thesportsdb": "144621"
         }
       },
       "awayTeam": {
-        "name": "Memphis Grizzlies",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v44qp21778197640.png",
+        "name": "Basket Zaragoza",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrames1721554095.png",
         "sourceIds": {
-          "thesportsdb": "134877"
+          "thesportsdb": "135081"
         }
       },
-      "competition": "NBA"
+      "competition": "Spanish Liga ACB"
     },
     {
       "id": "tsdb-2494055",
@@ -8578,31 +8653,19 @@
       ]
     },
     {
-      "id": "tsdb-2571218",
+      "id": "tsdb-2597399",
       "sourceIds": {
-        "thesportsdb": "2571218"
+        "thesportsdb": "2597399"
       },
-      "title": "Bahçeşehir Koleji SK vs Karşıyaka Basket",
+      "title": "Maccabi Tel Aviv BC vs Hapoel Galil Elyon",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791626400,
+      "startUtcEpochSeconds": 1791652500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sport Klub 10 RS",
+          "channelName": "Sport 5 IL",
           "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub 1 SI",
-          "aliases": [],
-          "territory": "SI",
+          "territory": "IL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -8613,20 +8676,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Bahçeşehir Koleji SK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/twgvxv1726910272.png",
+        "name": "Maccabi Tel Aviv BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z0mk1l1789281457.png",
         "sourceIds": {
-          "thesportsdb": "136325"
+          "thesportsdb": "136065"
         }
       },
       "awayTeam": {
-        "name": "Karşıyaka Basket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mhh1y41739692642.png",
+        "name": "Hapoel Galil Elyon",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8fpvr41737280220.png",
         "sourceIds": {
-          "thesportsdb": "136076"
+          "thesportsdb": "144626"
         }
       },
-      "competition": "Turkish Basketbol Super Ligi"
+      "competition": "Israeli Basketball Premier League"
     },
     {
       "id": "tsdb-2506247",
@@ -9061,19 +9124,19 @@
       ]
     },
     {
-      "id": "tsdb-2571743",
+      "id": "tsdb-2571744",
       "sourceIds": {
-        "thesportsdb": "2571743"
+        "thesportsdb": "2571744"
       },
-      "title": "Básquet Coruña vs Basket Zaragoza",
+      "title": "Baloncesto Málaga vs BC Andorra",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791648000,
+      "startUtcEpochSeconds": 1791653400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
+          "channelName": "Sport Klub 4 HR",
           "aliases": [],
-          "territory": "ES",
+          "territory": "HR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -9084,17 +9147,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Básquet Coruña",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/10iz0v1691223542.png",
+        "name": "Baloncesto Málaga",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ieeluq1778174522.png",
         "sourceIds": {
-          "thesportsdb": "144621"
+          "thesportsdb": "135096"
         }
       },
       "awayTeam": {
-        "name": "Basket Zaragoza",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrames1721554095.png",
+        "name": "BC Andorra",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4oyjtu1538210898.png",
         "sourceIds": {
-          "thesportsdb": "135081"
+          "thesportsdb": "135090"
         }
       },
       "competition": "Spanish Liga ACB"
@@ -10564,44 +10627,43 @@
       ]
     },
     {
-      "id": "nba-0012600015",
-      "title": "Clippers vs Raptors",
+      "id": "tsdb-2563782",
+      "sourceIds": {
+        "thesportsdb": "2563782"
+      },
+      "title": "Baskets Oldenburg vs Phoenix Hagen",
       "sport": "basketball",
-      "competition": "Preseason",
-      "startUtcEpochSeconds": 1791671400,
+      "startUtcEpochSeconds": 1791655200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "AM 570 LA Sports",
+          "channelName": "DYN",
           "aliases": [],
-          "territory": "US",
+          "territory": "DE",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "League Pass",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Raptors",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+        "name": "Baskets Oldenburg",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ryf75v1545866721.png",
+        "sourceIds": {
+          "thesportsdb": "135423"
+        }
       },
       "awayTeam": {
-        "name": "Clippers",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
-      }
+        "name": "Phoenix Hagen",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/o2zxvc1573655706.png",
+        "sourceIds": {
+          "thesportsdb": "137370"
+        }
+      },
+      "competition": "German BBL"
     },
     {
       "id": "tsdb-2494056",
@@ -12008,43 +12070,44 @@
       ]
     },
     {
-      "id": "tsdb-2601635",
-      "sourceIds": {
-        "thesportsdb": "2601635"
-      },
-      "title": "Toronto Raptors vs Los Angeles Clippers",
+      "id": "nba-0012600015",
+      "title": "Clippers vs Raptors",
       "sport": "basketball",
+      "competition": "Preseason",
       "startUtcEpochSeconds": 1791671400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TSN 4",
+          "channelName": "AM 570 LA Sports",
           "aliases": [],
-          "territory": "CA",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "League Pass",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Toronto Raptors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lct96a1778227205.png",
-        "sourceIds": {
-          "thesportsdb": "134864"
-        }
+        "name": "Raptors",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "Los Angeles Clippers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3gtb8s1719303125.png",
-        "sourceIds": {
-          "thesportsdb": "134866"
-        }
-      },
-      "competition": "NBA"
+        "name": "Clippers",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612746/primary/L/logo.svg"
+      }
     },
     {
       "id": "sky-Crystal Palace-Nottingham Forest-1791727200000",
@@ -13429,44 +13492,43 @@
       ]
     },
     {
-      "id": "nba-0012600006",
-      "title": "Hawks vs Pacers",
+      "id": "tsdb-2601635",
+      "sourceIds": {
+        "thesportsdb": "2601635"
+      },
+      "title": "Toronto Raptors vs Los Angeles Clippers",
       "sport": "basketball",
-      "competition": "Preseason",
-      "startUtcEpochSeconds": 1791673200,
+      "startUtcEpochSeconds": 1791671400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "93.5/107.5 The Fan",
+          "channelName": "TSN 4",
           "aliases": [],
-          "territory": "US",
+          "territory": "CA",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "League Pass",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Pacers",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
+        "name": "Toronto Raptors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lct96a1778227205.png",
+        "sourceIds": {
+          "thesportsdb": "134864"
+        }
       },
       "awayTeam": {
-        "name": "Hawks",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
-      }
+        "name": "Los Angeles Clippers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3gtb8s1719303125.png",
+        "sourceIds": {
+          "thesportsdb": "134866"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "l1_championship_match_73867",
@@ -13541,26 +13603,15 @@
       ]
     },
     {
-      "id": "nba-0012600038",
-      "title": "Pistons vs Wizards",
+      "id": "nba-0012600006",
+      "title": "Hawks vs Pacers",
       "sport": "basketball",
       "competition": "Preseason",
       "startUtcEpochSeconds": 1791673200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "106.7 The Fan/The Team 980 AM/Bloomberg 99.1",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "950 AM",
+          "channelName": "93.5/107.5 The Fan",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
@@ -13583,12 +13634,12 @@
         }
       ],
       "homeTeam": {
-        "name": "Wizards",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
+        "name": "Pacers",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612754/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "Pistons",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
+        "name": "Hawks",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
       }
     },
     {
@@ -13701,15 +13752,15 @@
       ]
     },
     {
-      "id": "nba-0012600002",
-      "title": "Timberwolves vs Heat",
+      "id": "nba-0012600038",
+      "title": "Pistons vs Wizards",
       "sport": "basketball",
       "competition": "Preseason",
-      "startUtcEpochSeconds": 1791676800,
+      "startUtcEpochSeconds": 1791673200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "830 WCCO",
+          "channelName": "106.7 The Fan/The Team 980 AM/Bloomberg 99.1",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
@@ -13720,7 +13771,7 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "FM 104.3 WQAM / S: WAQI 710",
+          "channelName": "950 AM",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
@@ -13743,12 +13794,12 @@
         }
       ],
       "homeTeam": {
-        "name": "Heat",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
+        "name": "Wizards",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612764/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "Timberwolves",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
+        "name": "Pistons",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612765/primary/L/logo.svg"
       }
     },
     {
@@ -13803,15 +13854,15 @@
       "competition": "Italian Serie A"
     },
     {
-      "id": "nba-0012600013",
-      "title": "76ers vs Celtics",
+      "id": "nba-0012600002",
+      "title": "Timberwolves vs Heat",
       "sport": "basketball",
       "competition": "Preseason",
       "startUtcEpochSeconds": 1791676800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "97.5 The Fanatic",
+          "channelName": "830 WCCO",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
@@ -13822,7 +13873,7 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "98.5 The Sports Hub",
+          "channelName": "FM 104.3 WQAM / S: WAQI 710",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
@@ -13833,7 +13884,7 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "NBA TV",
+          "channelName": "League Pass",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
@@ -13845,12 +13896,12 @@
         }
       ],
       "homeTeam": {
-        "name": "Celtics",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
+        "name": "Heat",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "76ers",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+        "name": "Timberwolves",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612750/primary/L/logo.svg"
       }
     },
     {
@@ -13926,43 +13977,55 @@
       ]
     },
     {
-      "id": "tsdb-2548857",
-      "sourceIds": {
-        "thesportsdb": "2548857"
-      },
-      "title": "Boston Celtics vs Philadelphia 76ers",
+      "id": "nba-0012600013",
+      "title": "76ers vs Celtics",
       "sport": "basketball",
+      "competition": "Preseason",
       "startUtcEpochSeconds": 1791676800,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "97.5 The Fanatic",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "98.5 The Sports Hub",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "NBA TV",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Boston Celtics",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4j85bn1667936589.png",
-        "sourceIds": {
-          "thesportsdb": "134860"
-        }
+        "name": "Celtics",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612738/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "Philadelphia 76ers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j6rlbi1778226857.png",
-        "sourceIds": {
-          "thesportsdb": "134863"
-        }
-      },
-      "competition": "NBA"
+        "name": "76ers",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612755/primary/L/logo.svg"
+      }
     },
     {
       "id": "tsdb-2489507",
@@ -14038,55 +14101,43 @@
       ]
     },
     {
-      "id": "nba-0012600014",
-      "title": "Kings vs Warriors",
+      "id": "tsdb-2548857",
+      "sourceIds": {
+        "thesportsdb": "2548857"
+      },
+      "title": "Boston Celtics vs Philadelphia 76ers",
       "sport": "basketball",
-      "competition": "Preseason",
-      "startUtcEpochSeconds": 1791678600,
+      "startUtcEpochSeconds": 1791676800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "95.7 The Game",
+          "channelName": "NBA TV",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Kings Radio",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "League Pass",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Warriors",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+        "name": "Boston Celtics",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4j85bn1667936589.png",
+        "sourceIds": {
+          "thesportsdb": "134860"
+        }
       },
       "awayTeam": {
-        "name": "Kings",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
-      }
+        "name": "Philadelphia 76ers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j6rlbi1778226857.png",
+        "sourceIds": {
+          "thesportsdb": "134863"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "l1_championship_match_73866",
@@ -14140,6 +14191,129 @@
       "broadcasterEvidence": {
         "source": "ligue1",
         "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73866",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "nba-0012600014",
+      "title": "Kings vs Warriors",
+      "sport": "basketball",
+      "competition": "Preseason",
+      "startUtcEpochSeconds": 1791678600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "95.7 The Game",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Kings Radio",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "League Pass",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Warriors",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+      },
+      "awayTeam": {
+        "name": "Kings",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+      }
+    },
+    {
+      "id": "l1_championship_match_73869",
+      "title": "FC Lorient vs Paris FC",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1791657900,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "FC Lorient",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Paris FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 5",
+          "aliases": [
+            "Ligue1+ 5",
+            "FR Ligue 1+ 5",
+            "Ligue 1+ 5 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73869",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73869",
         "eventMatched": false
       },
       "broadcastRights": [
@@ -14217,117 +14391,6 @@
       }
     },
     {
-      "id": "l1_championship_match_73869",
-      "title": "FC Lorient vs Paris FC",
-      "sport": "football",
-      "competition": "Ligue 1",
-      "startUtcEpochSeconds": 1791657900,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "FC Lorient",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Paris FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Ligue 1+ 5",
-          "aliases": [
-            "Ligue1+ 5",
-            "FR Ligue 1+ 5",
-            "Ligue 1+ 5 HD"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-match-id",
-          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73869",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Ligue 1+",
-          "aliases": [
-            "Ligue1+",
-            "FR Ligue 1+"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
-          "verifiedAt": "2026-08-23",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "ligue1",
-        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73869",
-        "eventMatched": false
-      },
-      "broadcastRights": [
-        {
-          "territory": "FR",
-          "holders": [
-            {
-              "name": "Ligue 1+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2601637",
-      "sourceIds": {
-        "thesportsdb": "2601637"
-      },
-      "title": "Phoenix Suns vs San Antonio Spurs",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1791685800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "BeIn Sports Max 4",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Phoenix Suns",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xfyknc1778198971.png",
-        "sourceIds": {
-          "thesportsdb": "134868"
-        }
-      },
-      "awayTeam": {
-        "name": "San Antonio Spurs",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yc5qfx1781459158.png",
-        "sourceIds": {
-          "thesportsdb": "134879"
-        }
-      },
-      "competition": "NBA"
-    },
-    {
       "id": "l1_championship_match_73870",
       "title": "AS Monaco vs Toulouse FC",
       "sport": "football",
@@ -14400,19 +14463,19 @@
       ]
     },
     {
-      "id": "tsdb-2548859",
+      "id": "tsdb-2601637",
       "sourceIds": {
-        "thesportsdb": "2548859"
+        "thesportsdb": "2601637"
       },
-      "title": "Houston Rockets vs Dallas Mavericks",
+      "title": "Phoenix Suns vs San Antonio Spurs",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791712800,
+      "startUtcEpochSeconds": 1791685800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN Australia",
+          "channelName": "BeIn Sports Max 4",
           "aliases": [],
-          "territory": "AU",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -14423,17 +14486,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Houston Rockets",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/azoktf1780729261.png",
+        "name": "Phoenix Suns",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xfyknc1778198971.png",
         "sourceIds": {
-          "thesportsdb": "134876"
+          "thesportsdb": "134868"
         }
       },
       "awayTeam": {
-        "name": "Dallas Mavericks",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s5dx7c1778197536.png",
+        "name": "San Antonio Spurs",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yc5qfx1781459158.png",
         "sourceIds": {
-          "thesportsdb": "134875"
+          "thesportsdb": "134879"
         }
       },
       "competition": "NBA"
@@ -14511,19 +14574,19 @@
       ]
     },
     {
-      "id": "tsdb-2571746",
+      "id": "tsdb-2548859",
       "sourceIds": {
-        "thesportsdb": "2571746"
+        "thesportsdb": "2548859"
       },
-      "title": "Obradoiro CAB vs Força Lleida CE",
+      "title": "Houston Rockets vs Dallas Mavericks",
       "sport": "basketball",
       "startUtcEpochSeconds": 1791712800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
+          "channelName": "ESPN Australia",
           "aliases": [],
-          "territory": "ES",
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -14534,20 +14597,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Obradoiro CAB",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06qdqv1677768007.png",
+        "name": "Houston Rockets",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/azoktf1780729261.png",
         "sourceIds": {
-          "thesportsdb": "135093"
+          "thesportsdb": "134876"
         }
       },
       "awayTeam": {
-        "name": "Força Lleida CE",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xmypxg1786723117.png",
+        "name": "Dallas Mavericks",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s5dx7c1778197536.png",
         "sourceIds": {
-          "thesportsdb": "144690"
+          "thesportsdb": "134875"
         }
       },
-      "competition": "Spanish Liga ACB"
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2489508",
@@ -14635,31 +14698,19 @@
       ]
     },
     {
-      "id": "tsdb-2571747",
+      "id": "tsdb-2571746",
       "sourceIds": {
-        "thesportsdb": "2571747"
+        "thesportsdb": "2571746"
       },
-      "title": "Real Madrid Baloncesto vs Basquet Manresa",
+      "title": "Obradoiro CAB vs Força Lleida CE",
       "sport": "basketball",
       "startUtcEpochSeconds": 1791712800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sport 1 IL",
+          "channelName": "DAZN Spain",
           "aliases": [],
-          "territory": "IL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sport Klub Polska",
-          "aliases": [],
-          "territory": "PL",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -14670,17 +14721,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Real Madrid Baloncesto",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
+        "name": "Obradoiro CAB",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06qdqv1677768007.png",
         "sourceIds": {
-          "thesportsdb": "135092"
+          "thesportsdb": "135093"
         }
       },
       "awayTeam": {
-        "name": "Basquet Manresa",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/f02ctj1684597687.png",
+        "name": "Força Lleida CE",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xmypxg1786723117.png",
         "sourceIds": {
-          "thesportsdb": "135087"
+          "thesportsdb": "144690"
         }
       },
       "competition": "Spanish Liga ACB"
@@ -14758,19 +14809,31 @@
       ]
     },
     {
-      "id": "tsdb-2601638",
+      "id": "tsdb-2571747",
       "sourceIds": {
-        "thesportsdb": "2601638"
+        "thesportsdb": "2571747"
       },
-      "title": "Cleveland Cavaliers vs Orlando Magic",
+      "title": "Real Madrid Baloncesto vs Basquet Manresa",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791757800,
+      "startUtcEpochSeconds": 1791712800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ESPN 2 Brazil",
+          "channelName": "Sport 1 IL",
           "aliases": [],
-          "territory": "BR",
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub Polska",
+          "aliases": [],
+          "territory": "PL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -14781,20 +14844,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Cleveland Cavaliers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pch9ct1778195828.png",
+        "name": "Real Madrid Baloncesto",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g4ev2c1522175902.png",
         "sourceIds": {
-          "thesportsdb": "134871"
+          "thesportsdb": "135092"
         }
       },
       "awayTeam": {
-        "name": "Orlando Magic",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j0mpu81778198371.png",
+        "name": "Basquet Manresa",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/f02ctj1684597687.png",
         "sourceIds": {
-          "thesportsdb": "134883"
+          "thesportsdb": "135087"
         }
       },
-      "competition": "NBA"
+      "competition": "Spanish Liga ACB"
     },
     {
       "id": "tsdb-2489511",
@@ -14868,6 +14931,45 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "tsdb-2606140",
+      "sourceIds": {
+        "thesportsdb": "2606140"
+      },
+      "title": "Olympiacos BC vs Kolossos BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1791712800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport Klub 5 SI",
+          "aliases": [],
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Olympiacos BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
+        "sourceIds": {
+          "thesportsdb": "135635"
+        }
+      },
+      "awayTeam": {
+        "name": "Kolossos BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/acp9id1679682467.png",
+        "sourceIds": {
+          "thesportsdb": "135631"
+        }
+      },
+      "competition": "Greek Basket League"
     },
     {
       "id": "tsdb-2508369",
@@ -15204,6 +15306,57 @@
       ]
     },
     {
+      "id": "tsdb-2571749",
+      "sourceIds": {
+        "thesportsdb": "2571749"
+      },
+      "title": "Baskonia vs Joventut Badalona",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1791730800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport Klub 4 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 4 RS",
+          "aliases": [],
+          "territory": "RS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Baskonia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/p4x3o61767366090.png",
+        "sourceIds": {
+          "thesportsdb": "135088"
+        }
+      },
+      "awayTeam": {
+        "name": "Joventut Badalona",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vuqqry1425410580.png",
+        "sourceIds": {
+          "thesportsdb": "135083"
+        }
+      },
+      "competition": "Spanish Liga ACB"
+    },
+    {
       "id": "tsdb-2398488",
       "sourceIds": {
         "thesportsdb": "2398488"
@@ -15255,6 +15408,45 @@
       "competition": "Brazilian Serie A"
     },
     {
+      "id": "tsdb-2564304",
+      "sourceIds": {
+        "thesportsdb": "2564304"
+      },
+      "title": "Reyer Venezia Mestre vs Virtus Pallacanestro Bologna",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1791738000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Rai Sport 1",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Reyer Venezia Mestre",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/gmaq4x1678899614.png",
+        "sourceIds": {
+          "thesportsdb": "135391"
+        }
+      },
+      "awayTeam": {
+        "name": "Virtus Pallacanestro Bologna",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nfl8dz1786178078.png",
+        "sourceIds": {
+          "thesportsdb": "135386"
+        }
+      },
+      "competition": "Italian Lega Basket"
+    },
+    {
       "id": "tsdb-2496761",
       "sourceIds": {
         "thesportsdb": "2496761"
@@ -15304,6 +15496,45 @@
         }
       },
       "competition": "Belgian Pro League"
+    },
+    {
+      "id": "tsdb-2601638",
+      "sourceIds": {
+        "thesportsdb": "2601638"
+      },
+      "title": "Cleveland Cavaliers vs Orlando Magic",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1791757800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ESPN 2 Brazil",
+          "aliases": [],
+          "territory": "BR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Cleveland Cavaliers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pch9ct1778195828.png",
+        "sourceIds": {
+          "thesportsdb": "134871"
+        }
+      },
+      "awayTeam": {
+        "name": "Orlando Magic",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j0mpu81778198371.png",
+        "sourceIds": {
+          "thesportsdb": "134883"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2496754",
@@ -15745,93 +15976,6 @@
       ]
     },
     {
-      "id": "tsdb-2398477",
-      "sourceIds": {
-        "thesportsdb": "2398477"
-      },
-      "title": "Palmeiras vs Bahia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791505800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Canais Globo",
-          "aliases": [],
-          "territory": "BR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay Sports 2 UK",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 2 IE",
-          "aliases": [],
-          "territory": "IE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Arena Sport 3 Premium RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sportbox.ru",
-          "aliases": [],
-          "territory": "RU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Palmeiras",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vsqwqp1473538105.png",
-        "sourceIds": {
-          "thesportsdb": "134465"
-        }
-      },
-      "awayTeam": {
-        "name": "Bahia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xuvtsv1473539308.png",
-        "sourceIds": {
-          "thesportsdb": "134293"
-        }
-      },
-      "competition": "Brazilian Serie A"
-    },
-    {
       "id": "tsdb-2398121",
       "sourceIds": {
         "thesportsdb": "2398121"
@@ -15947,6 +16091,18 @@
           "channelName": "Sport TV 1",
           "aliases": [],
           "territory": "PT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "True Premier Football HD 4",
+          "aliases": [],
+          "territory": "TH",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -16229,9 +16385,33 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "Viaplay DK",
+          "aliases": [],
+          "territory": "DK",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Viaplay IS",
           "aliases": [],
           "territory": "IS",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Viaplay SE",
+          "aliases": [],
+          "territory": "SE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -17615,6 +17795,18 @@
           "verifiedAt": "2026-10-09",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TOD KSA",
+          "aliases": [],
+          "territory": "SA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-09",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -17632,157 +17824,6 @@
         }
       },
       "competition": "English League Championship"
-    },
-    {
-      "id": "tsdb-2528307",
-      "sourceIds": {
-        "thesportsdb": "2528307"
-      },
-      "title": "AFC Fylde vs Scunthorpe United",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791640800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DAZN Brasil",
-          "aliases": [],
-          "territory": "BR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "AFC Fylde",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3906561703176936.png",
-        "sourceIds": {
-          "thesportsdb": "135977"
-        }
-      },
-      "awayTeam": {
-        "name": "Scunthorpe United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ljf0ce1685771026.png",
-        "sourceIds": {
-          "thesportsdb": "133810"
-        }
-      },
-      "competition": "English National League"
-    },
-    {
-      "id": "tsdb-2499750",
-      "sourceIds": {
-        "thesportsdb": "2499750"
-      },
-      "title": "Grazer AK vs Red Bull Salzburg",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791644400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sky Sport Austria 2",
-          "aliases": [],
-          "territory": "AT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Grazer AK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/43rocv1750352978.png",
-        "sourceIds": {
-          "thesportsdb": "139415"
-        }
-      },
-      "awayTeam": {
-        "name": "Red Bull Salzburg",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nc2cua1781541639.png",
-        "sourceIds": {
-          "thesportsdb": "133970"
-        }
-      },
-      "competition": "Austrian Bundesliga"
-    },
-    {
-      "id": "tsdb-2493382",
-      "sourceIds": {
-        "thesportsdb": "2493382"
-      },
-      "title": "Lugano vs Luzern",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791648000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Blue Sport 2 CH",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-09",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Lugano",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2kh2if1567615581.png",
-        "sourceIds": {
-          "thesportsdb": "136037"
-        }
-      },
-      "awayTeam": {
-        "name": "Luzern",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rsupty1473587847.png",
-        "sourceIds": {
-          "thesportsdb": "134123"
-        }
-      },
-      "competition": "Swiss Super League"
-    },
-    {
-      "id": "mls-MLS-MAT-0009MR",
-      "title": "Toronto FC vs CF Montréal",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1791651600,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Toronto FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "CF Montréal",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MR",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MR",
-        "eventMatched": false
-      }
     }
   ]
 }
