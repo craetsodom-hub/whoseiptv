@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1791801821,
-  "validUntilEpochSeconds": 1791845021,
+  "generatedAtEpochSeconds": 1791839703,
+  "validUntilEpochSeconds": 1791882903,
   "events": [
     {
       "id": "tsdb-2594547",
@@ -24126,84 +24126,6 @@
       "competition": "Argentinian Primera Division"
     },
     {
-      "id": "tsdb-2611123",
-      "sourceIds": {
-        "thesportsdb": "2611123"
-      },
-      "title": "NorthEast United vs Mohun Bagan Super Giant",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791813600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sony Ten 2",
-          "aliases": [],
-          "territory": "IN",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "NorthEast United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/h86ghn1583254754.png",
-        "sourceIds": {
-          "thesportsdb": "139368"
-        }
-      },
-      "awayTeam": {
-        "name": "Mohun Bagan Super Giant",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g3zmfx1694438403.png",
-        "sourceIds": {
-          "thesportsdb": "139432"
-        }
-      },
-      "competition": "Indian Super League"
-    },
-    {
-      "id": "tsdb-2505803",
-      "sourceIds": {
-        "thesportsdb": "2505803"
-      },
-      "title": "Burgos vs Granada",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791814500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "LaLiga TV Hypermotion",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Burgos",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/79h3ul1708150894.png",
-        "sourceIds": {
-          "thesportsdb": "138161"
-        }
-      },
-      "awayTeam": {
-        "name": "Granada",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/f9iss11677472689.png",
-        "sourceIds": {
-          "thesportsdb": "133721"
-        }
-      },
-      "competition": "Spanish La Liga 2"
-    },
-    {
       "id": "tsdb-2487340",
       "sourceIds": {
         "thesportsdb": "2487340"
@@ -25982,6 +25904,74 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NB",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009NI",
+      "title": "Portland Timbers vs Colorado Rapids",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1792290600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Portland Timbers",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Colorado Rapids",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NI",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NI",
+        "eventMatched": false
+      }
+    },
+    {
+      "id": "mls-MLS-MAT-0009NJ",
+      "title": "San Jose Earthquakes vs Nashville SC",
+      "sport": "football",
+      "competition": "Major League Soccer - Regular Season",
+      "startUtcEpochSeconds": 1792290600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "San Jose Earthquakes",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Nashville SC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Apple TV",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "mls-match-api-broadcaster",
+          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NJ",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "mls",
+        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NJ",
         "eventMatched": false
       }
     }
