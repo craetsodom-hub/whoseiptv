@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1791858881,
-  "validUntilEpochSeconds": 1791902081,
+  "generatedAtEpochSeconds": 1791887451,
+  "validUntilEpochSeconds": 1791930651,
   "events": [
     {
       "id": "tsdb-2594547",
@@ -3884,6 +3884,18 @@
           "verifiedAt": "2026-10-13",
           "exclusive": false,
           "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Sport Klub 4 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
@@ -3955,6 +3967,18 @@
           "channelName": "Sky Sport Calcio",
           "aliases": [],
           "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Wowow JP",
+          "aliases": [],
+          "territory": "JP",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -10637,6 +10661,18 @@
           "destinationPrecision": "channel",
           "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
           "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Vidio.com",
+          "aliases": [],
+          "territory": "ID",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "Sony LIV",
@@ -18263,6 +18299,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "Sport Klub 1 HR",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Sport 5 IL",
           "aliases": [],
           "territory": "IL",
@@ -18305,6 +18353,18 @@
           "channelName": "Movistar Liga de Campeones",
           "aliases": [],
           "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Wowow JP",
+          "aliases": [],
+          "territory": "JP",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -19857,43 +19917,76 @@
       "competition": "Basketball Champions League"
     },
     {
-      "id": "tsdb-2579931",
-      "sourceIds": {
-        "thesportsdb": "2579931"
-      },
-      "title": "Al-Sadd vs Al-Hilal",
+      "id": "l1_championship_match_73882",
+      "title": "RC Strasbourg Alsace vs Paris Saint-Germain",
       "sport": "football",
-      "startUtcEpochSeconds": 1791907200,
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792250100,
       "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Diema Sport 3 BG",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
       "homeTeam": {
-        "name": "Al-Sadd",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/908a011774579337.png",
-        "sourceIds": {
-          "thesportsdb": "137648"
-        }
+        "name": "RC Strasbourg Alsace",
+        "badgeUrl": null
       },
       "awayTeam": {
-        "name": "Al-Hilal",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w0b80d1661656916.png",
-        "sourceIds": {
-          "thesportsdb": "136013"
-        }
+        "name": "Paris Saint-Germain",
+        "badgeUrl": null
       },
-      "competition": "AFC Champions League Elite"
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 3",
+          "aliases": [
+            "Ligue1+ 3",
+            "FR Ligue 1+ 3",
+            "Ligue 1+ 3 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73882",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73882",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
     },
     {
       "id": "tsdb-2588415",
@@ -19930,6 +20023,96 @@
         "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4dkgx11784568429.png",
         "sourceIds": {
           "thesportsdb": "143962"
+        }
+      },
+      "competition": "EuroCup Basketball"
+    },
+    {
+      "id": "tsdb-2579931",
+      "sourceIds": {
+        "thesportsdb": "2579931"
+      },
+      "title": "Al-Sadd vs Al-Hilal",
+      "sport": "football",
+      "startUtcEpochSeconds": 1791907200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Diema Sport 3 BG",
+          "aliases": [],
+          "territory": "BG",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TOD KSA",
+          "aliases": [],
+          "territory": "SA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Al-Sadd",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/908a011774579337.png",
+        "sourceIds": {
+          "thesportsdb": "137648"
+        }
+      },
+      "awayTeam": {
+        "name": "Al-Hilal",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w0b80d1661656916.png",
+        "sourceIds": {
+          "thesportsdb": "136013"
+        }
+      },
+      "competition": "AFC Champions League Elite"
+    },
+    {
+      "id": "tsdb-2588425",
+      "sourceIds": {
+        "thesportsdb": "2588425"
+      },
+      "title": "Aris BC vs Derthona Basket",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1791997200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Novasports Prime",
+          "aliases": [],
+          "territory": "GR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Aris BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
+        "sourceIds": {
+          "thesportsdb": "135628"
+        }
+      },
+      "awayTeam": {
+        "name": "Derthona Basket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fmsnnb1784568176.png",
+        "sourceIds": {
+          "thesportsdb": "143963"
         }
       },
       "competition": "EuroCup Basketball"
@@ -19974,19 +20157,19 @@
       "competition": "UEFA Conference League"
     },
     {
-      "id": "tsdb-2588425",
+      "id": "tsdb-2565495",
       "sourceIds": {
-        "thesportsdb": "2588425"
+        "thesportsdb": "2565495"
       },
-      "title": "Aris BC vs Derthona Basket",
+      "title": "Paris Basketball vs Virtus Pallacanestro Bologna",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1791997200,
+      "startUtcEpochSeconds": 1792003500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Novasports Prime",
+          "channelName": "BeIn Sports HD 1 France",
           "aliases": [],
-          "territory": "GR",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -19997,20 +20180,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Aris BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
+        "name": "Paris Basketball",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9q0d6x1726681476.png",
         "sourceIds": {
-          "thesportsdb": "135628"
+          "thesportsdb": "141489"
         }
       },
       "awayTeam": {
-        "name": "Derthona Basket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fmsnnb1784568176.png",
+        "name": "Virtus Pallacanestro Bologna",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nfl8dz1786178078.png",
         "sourceIds": {
-          "thesportsdb": "143963"
+          "thesportsdb": "135386"
         }
       },
-      "competition": "EuroCup Basketball"
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2579932",
@@ -20076,19 +20259,31 @@
       "competition": "AFC Champions League Elite"
     },
     {
-      "id": "tsdb-2565495",
+      "id": "tsdb-2588410",
       "sourceIds": {
-        "thesportsdb": "2565495"
+        "thesportsdb": "2588410"
       },
-      "title": "Paris Basketball vs Virtus Pallacanestro Bologna",
+      "title": "Reyer Venezia Mestre vs Türk Telekom BK",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792003500,
+      "startUtcEpochSeconds": 1792004400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 1 France",
+          "channelName": "ŠTV 2 SI",
           "aliases": [],
-          "territory": "FR",
+          "territory": "SI",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "TRT Spor TR",
+          "aliases": [],
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -20099,20 +20294,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Paris Basketball",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9q0d6x1726681476.png",
+        "name": "Reyer Venezia Mestre",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/gmaq4x1678899614.png",
         "sourceIds": {
-          "thesportsdb": "141489"
+          "thesportsdb": "135391"
         }
       },
       "awayTeam": {
-        "name": "Virtus Pallacanestro Bologna",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nfl8dz1786178078.png",
+        "name": "Türk Telekom BK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/89j3fk1726910405.png",
         "sourceIds": {
-          "thesportsdb": "135386"
+          "thesportsdb": "136326"
         }
       },
-      "competition": "EuroLeague Basketball"
+      "competition": "EuroCup Basketball"
     },
     {
       "id": "l1_championship_match_73875",
@@ -20187,55 +20382,55 @@
       ]
     },
     {
-      "id": "tsdb-2588410",
-      "sourceIds": {
-        "thesportsdb": "2588410"
-      },
-      "title": "Reyer Venezia Mestre vs Türk Telekom BK",
+      "id": "nba-0012600003",
+      "title": "Nets vs Heat",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792004400,
+      "competition": "Preseason",
+      "startUtcEpochSeconds": 1792020600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "ŠTV 2 SI",
+          "channelName": "101.9 FM / 660 AM",
           "aliases": [],
-          "territory": "SI",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "TRT Spor TR",
+          "channelName": "FM 104.3 WQAM / S: WAQI 710",
           "aliases": [],
-          "territory": "TR",
+          "territory": "US",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "League Pass",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-game-card",
+          "sourceUrl": "https://www.nba.com/games?date=",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Reyer Venezia Mestre",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/gmaq4x1678899614.png",
-        "sourceIds": {
-          "thesportsdb": "135391"
-        }
+        "name": "Heat",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
       },
       "awayTeam": {
-        "name": "Türk Telekom BK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/89j3fk1726910405.png",
-        "sourceIds": {
-          "thesportsdb": "136326"
-        }
-      },
-      "competition": "EuroCup Basketball"
+        "name": "Nets",
+        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg"
+      }
     },
     {
       "id": "tsdb-2594659",
@@ -21438,96 +21633,6 @@
       ]
     },
     {
-      "id": "nba-0012600003",
-      "title": "Nets vs Heat",
-      "sport": "basketball",
-      "competition": "Preseason",
-      "startUtcEpochSeconds": 1792020600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "101.9 FM / 660 AM",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "FM 104.3 WQAM / S: WAQI 710",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "League Pass",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "official-game-card",
-          "sourceUrl": "https://www.nba.com/games?date=",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Heat",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612748/primary/L/logo.svg"
-      },
-      "awayTeam": {
-        "name": "Nets",
-        "badgeUrl": "https://cdn.nba.com/logos/nba/1610612751/primary/L/logo.svg"
-      }
-    },
-    {
-      "id": "tsdb-2594820",
-      "sourceIds": {
-        "thesportsdb": "2594820"
-      },
-      "title": "Lyon vs Crystal Palace",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792082700,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Ring BG",
-          "aliases": [],
-          "territory": "BG",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Lyon",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/blk9771656932845.png",
-        "sourceIds": {
-          "thesportsdb": "133713"
-        }
-      },
-      "awayTeam": {
-        "name": "Crystal Palace",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ia6i3m1656014992.png",
-        "sourceIds": {
-          "thesportsdb": "133632"
-        }
-      },
-      "competition": "UEFA Europa League"
-    },
-    {
       "id": "nba-0012600017",
       "title": "Hornets vs Celtics",
       "sport": "basketball",
@@ -21579,19 +21684,19 @@
       }
     },
     {
-      "id": "tsdb-2594954",
+      "id": "tsdb-2594820",
       "sourceIds": {
-        "thesportsdb": "2594954"
+        "thesportsdb": "2594820"
       },
-      "title": "Torreense vs Sunderland",
+      "title": "Lyon vs Crystal Palace",
       "sport": "football",
       "startUtcEpochSeconds": 1792082700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "V Sport 3 NO",
+          "channelName": "Ring BG",
           "aliases": [],
-          "territory": "NO",
+          "territory": "BG",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -21602,17 +21707,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Torreense",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/byn6c21659694982.png",
+        "name": "Lyon",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/blk9771656932845.png",
         "sourceIds": {
-          "thesportsdb": "143720"
+          "thesportsdb": "133713"
         }
       },
       "awayTeam": {
-        "name": "Sunderland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tprtus1448813498.png",
+        "name": "Crystal Palace",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ia6i3m1656014992.png",
         "sourceIds": {
-          "thesportsdb": "133603"
+          "thesportsdb": "133632"
         }
       },
       "competition": "UEFA Europa League"
@@ -21669,19 +21774,19 @@
       }
     },
     {
-      "id": "tsdb-2594815",
+      "id": "tsdb-2594954",
       "sourceIds": {
-        "thesportsdb": "2594815"
+        "thesportsdb": "2594954"
       },
-      "title": "Bournemouth vs Sturm Graz",
+      "title": "Torreense vs Sunderland",
       "sport": "football",
-      "startUtcEpochSeconds": 1792090800,
+      "startUtcEpochSeconds": 1792082700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Stöð 2 Sport IS",
+          "channelName": "V Sport 3 NO",
           "aliases": [],
-          "territory": "IS",
+          "territory": "NO",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -21692,17 +21797,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Bournemouth",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y08nak1534071116.png",
+        "name": "Torreense",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/byn6c21659694982.png",
         "sourceIds": {
-          "thesportsdb": "134301"
+          "thesportsdb": "143720"
         }
       },
       "awayTeam": {
-        "name": "Sturm Graz",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ppg0j71578585847.png",
+        "name": "Sunderland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tprtus1448813498.png",
         "sourceIds": {
-          "thesportsdb": "137743"
+          "thesportsdb": "133603"
         }
       },
       "competition": "UEFA Europa League"
@@ -21737,19 +21842,19 @@
       }
     },
     {
-      "id": "tsdb-2594833",
+      "id": "tsdb-2594815",
       "sourceIds": {
-        "thesportsdb": "2594833"
+        "thesportsdb": "2594815"
       },
-      "title": "Hoffenheim vs Beşiktaş",
+      "title": "Bournemouth vs Sturm Graz",
       "sport": "football",
       "startUtcEpochSeconds": 1792090800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "RTL",
+          "channelName": "Stöð 2 Sport IS",
           "aliases": [],
-          "territory": "DE",
+          "territory": "IS",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -21760,17 +21865,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Hoffenheim",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9hwvb21621593919.png",
+        "name": "Bournemouth",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/y08nak1534071116.png",
         "sourceIds": {
-          "thesportsdb": "133657"
+          "thesportsdb": "134301"
         }
       },
       "awayTeam": {
-        "name": "Beşiktaş",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/svo05k1776827439.png",
+        "name": "Sturm Graz",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ppg0j71578585847.png",
         "sourceIds": {
-          "thesportsdb": "133794"
+          "thesportsdb": "137743"
         }
       },
       "competition": "UEFA Europa League"
@@ -21827,19 +21932,19 @@
       }
     },
     {
-      "id": "tsdb-2594910",
+      "id": "tsdb-2594833",
       "sourceIds": {
-        "thesportsdb": "2594910"
+        "thesportsdb": "2594833"
       },
-      "title": "Dinamo Zagreb vs Anderlecht",
+      "title": "Hoffenheim vs Beşiktaş",
       "sport": "football",
       "startUtcEpochSeconds": 1792090800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MultiSports 4 FR",
+          "channelName": "RTL",
           "aliases": [],
-          "territory": "FR",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -21850,17 +21955,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Dinamo Zagreb",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zcb6f61784988620.png",
+        "name": "Hoffenheim",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9hwvb21621593919.png",
         "sourceIds": {
-          "thesportsdb": "133961"
+          "thesportsdb": "133657"
         }
       },
       "awayTeam": {
-        "name": "Anderlecht",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/auindn1771129464.png",
+        "name": "Beşiktaş",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/svo05k1776827439.png",
         "sourceIds": {
-          "thesportsdb": "133776"
+          "thesportsdb": "133794"
         }
       },
       "competition": "UEFA Europa League"
@@ -21917,19 +22022,19 @@
       }
     },
     {
-      "id": "tsdb-2579925",
+      "id": "tsdb-2594859",
       "sourceIds": {
-        "thesportsdb": "2579925"
+        "thesportsdb": "2594859"
       },
-      "title": "Newcastle Jets vs Gamba Osaka",
+      "title": "Jagiellonia Białystok vs Ararat-Armenia",
       "sport": "football",
-      "startUtcEpochSeconds": 1791877500,
+      "startUtcEpochSeconds": 1792090800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sport 1 IL",
+          "channelName": "Polsat Sport",
           "aliases": [],
-          "territory": "IL",
+          "territory": "PL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -21940,20 +22045,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Newcastle Jets",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5jevk91653487832.png",
+        "name": "Jagiellonia Białystok",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ucze1y1601404699.png",
         "sourceIds": {
-          "thesportsdb": "134474"
+          "thesportsdb": "135297"
         }
       },
       "awayTeam": {
-        "name": "Gamba Osaka",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tq9edk1638813311.png",
+        "name": "Ararat-Armenia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/g396se1596470244.png",
         "sourceIds": {
-          "thesportsdb": "137705"
+          "thesportsdb": "137892"
         }
       },
-      "competition": "AFC Champions League Elite"
+      "competition": "UEFA Europa League"
     },
     {
       "id": "tsdb-2601649",
@@ -21995,19 +22100,19 @@
       "competition": "NBA"
     },
     {
-      "id": "tsdb-2579929",
+      "id": "tsdb-2594910",
       "sourceIds": {
-        "thesportsdb": "2579929"
+        "thesportsdb": "2594910"
       },
-      "title": "Buriram United vs Beijing Guoan",
+      "title": "Dinamo Zagreb vs Anderlecht",
       "sport": "football",
-      "startUtcEpochSeconds": 1791893700,
+      "startUtcEpochSeconds": 1792090800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sport Klub 1 HR",
+          "channelName": "MultiSports 4 FR",
           "aliases": [],
-          "territory": "HR",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -22018,20 +22123,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Buriram United",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0z45791784587806.png",
+        "name": "Dinamo Zagreb",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zcb6f61784988620.png",
         "sourceIds": {
-          "thesportsdb": "139208"
+          "thesportsdb": "133961"
         }
       },
       "awayTeam": {
-        "name": "Beijing Guoan",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cdkguq1652626854.png",
+        "name": "Anderlecht",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/auindn1771129464.png",
         "sourceIds": {
-          "thesportsdb": "134635"
+          "thesportsdb": "133776"
         }
       },
-      "competition": "AFC Champions League Elite"
+      "competition": "UEFA Europa League"
     },
     {
       "id": "nba-0012600064",
@@ -22074,31 +22179,19 @@
       }
     },
     {
-      "id": "tsdb-2579934",
+      "id": "tsdb-2579925",
       "sourceIds": {
-        "thesportsdb": "2579934"
+        "thesportsdb": "2579925"
       },
-      "title": "Vissel Kobe vs Jeonbuk Hyundai Motors",
+      "title": "Newcastle Jets vs Gamba Osaka",
       "sport": "football",
-      "startUtcEpochSeconds": 1791972000,
+      "startUtcEpochSeconds": 1791877500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Paramount+ AUS",
+          "channelName": "Sport 1 IL",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIN Sports 2 Qatar",
-          "aliases": [],
-          "territory": "QA",
+          "territory": "IL",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -22109,17 +22202,17 @@
         }
       ],
       "homeTeam": {
-        "name": "Vissel Kobe",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2axjch1578239819.png",
+        "name": "Newcastle Jets",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5jevk91653487832.png",
         "sourceIds": {
-          "thesportsdb": "137717"
+          "thesportsdb": "134474"
         }
       },
       "awayTeam": {
-        "name": "Jeonbuk Hyundai Motors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8jif3b1747853225.png",
+        "name": "Gamba Osaka",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/tq9edk1638813311.png",
         "sourceIds": {
-          "thesportsdb": "138111"
+          "thesportsdb": "137705"
         }
       },
       "competition": "AFC Champions League Elite"
@@ -22188,19 +22281,19 @@
       "competition": "EuroLeague Basketball"
     },
     {
-      "id": "tsdb-2594749",
+      "id": "tsdb-2579929",
       "sourceIds": {
-        "thesportsdb": "2594749"
+        "thesportsdb": "2579929"
       },
-      "title": "Lugano vs Crvena Zvezda",
+      "title": "Buriram United vs Beijing Guoan",
       "sport": "football",
-      "startUtcEpochSeconds": 1792082700,
+      "startUtcEpochSeconds": 1791893700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Blue Sport 1 CH",
+          "channelName": "Sport Klub 1 HR",
           "aliases": [],
-          "territory": "CH",
+          "territory": "HR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -22211,20 +22304,110 @@
         }
       ],
       "homeTeam": {
-        "name": "Lugano",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2kh2if1567615581.png",
+        "name": "Buriram United",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0z45791784587806.png",
         "sourceIds": {
-          "thesportsdb": "136037"
+          "thesportsdb": "139208"
         }
       },
       "awayTeam": {
-        "name": "Crvena Zvezda",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/osgmbz1781157114.png",
+        "name": "Beijing Guoan",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/cdkguq1652626854.png",
         "sourceIds": {
-          "thesportsdb": "133987"
+          "thesportsdb": "134635"
         }
       },
-      "competition": "UEFA Conference League"
+      "competition": "AFC Champions League Elite"
+    },
+    {
+      "id": "tsdb-2565498",
+      "sourceIds": {
+        "thesportsdb": "2565498"
+      },
+      "title": "Valencia Basket vs Maccabi Tel Aviv BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1792089000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport 5 IL",
+          "aliases": [],
+          "territory": "IL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Valencia Basket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9qyc231536398868.png",
+        "sourceIds": {
+          "thesportsdb": "135097"
+        }
+      },
+      "awayTeam": {
+        "name": "Maccabi Tel Aviv BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z0mk1l1789281457.png",
+        "sourceIds": {
+          "thesportsdb": "136065"
+        }
+      },
+      "competition": "EuroLeague Basketball"
+    },
+    {
+      "id": "tsdb-2579934",
+      "sourceIds": {
+        "thesportsdb": "2579934"
+      },
+      "title": "Vissel Kobe vs Jeonbuk Hyundai Motors",
+      "sport": "football",
+      "startUtcEpochSeconds": 1791972000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Paramount+ AUS",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIN Sports 2 Qatar",
+          "aliases": [],
+          "territory": "QA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Vissel Kobe",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2axjch1578239819.png",
+        "sourceIds": {
+          "thesportsdb": "137717"
+        }
+      },
+      "awayTeam": {
+        "name": "Jeonbuk Hyundai Motors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8jif3b1747853225.png",
+        "sourceIds": {
+          "thesportsdb": "138111"
+        }
+      },
+      "competition": "AFC Champions League Elite"
     },
     {
       "id": "tsdb-2565499",
@@ -22276,6 +22459,45 @@
         }
       },
       "competition": "EuroLeague Basketball"
+    },
+    {
+      "id": "tsdb-2594749",
+      "sourceIds": {
+        "thesportsdb": "2594749"
+      },
+      "title": "Lugano vs Crvena Zvezda",
+      "sport": "football",
+      "startUtcEpochSeconds": 1792082700,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Blue Sport 1 CH",
+          "aliases": [],
+          "territory": "CH",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Lugano",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2kh2if1567615581.png",
+        "sourceIds": {
+          "thesportsdb": "136037"
+        }
+      },
+      "awayTeam": {
+        "name": "Crvena Zvezda",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/osgmbz1781157114.png",
+        "sourceIds": {
+          "thesportsdb": "133987"
+        }
+      },
+      "competition": "UEFA Conference League"
     },
     {
       "id": "tsdb-2594757",
@@ -22356,6 +22578,45 @@
       "competition": "UEFA Conference League"
     },
     {
+      "id": "tsdb-2594791",
+      "sourceIds": {
+        "thesportsdb": "2594791"
+      },
+      "title": "Egnatia vs FC Midtjylland",
+      "sport": "football",
+      "startUtcEpochSeconds": 1792082700,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Super Sport 1 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Egnatia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4tufos1639086825.png",
+        "sourceIds": {
+          "thesportsdb": "140667"
+        }
+      },
+      "awayTeam": {
+        "name": "FC Midtjylland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s5bpcr1755712262.png",
+        "sourceIds": {
+          "thesportsdb": "133891"
+        }
+      },
+      "competition": "UEFA Conference League"
+    },
+    {
       "id": "tsdb-2594706",
       "sourceIds": {
         "thesportsdb": "2594706"
@@ -22417,6 +22678,222 @@
         }
       },
       "competition": "UEFA Conference League"
+    },
+    {
+      "id": "l1_championship_match_73877",
+      "title": "Le Mans FC vs Toulouse FC",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792176300,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Le Mans FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Toulouse FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73877",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73877",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73878",
+      "title": "LOSC Lille vs Stade Brestois 29",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792262700,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "LOSC Lille",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Stade Brestois 29",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73878",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73878",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73883",
+      "title": "Estac Troyes vs RC Lens",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792262700,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Estac Troyes",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "RC Lens",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 3",
+          "aliases": [
+            "Ligue1+ 3",
+            "FR Ligue 1+ 3",
+            "Ligue 1+ 3 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73883",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73883",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
     },
     {
       "id": "l1_championship_match_73876",
@@ -22491,6 +22968,222 @@
       ]
     },
     {
+      "id": "l1_championship_match_73879",
+      "title": "FC Lorient vs AS Monaco",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792336500,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "FC Lorient",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "AS Monaco",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 5",
+          "aliases": [
+            "Ligue1+ 5",
+            "FR Ligue 1+ 5",
+            "Ligue 1+ 5 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73879",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73879",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73881",
+      "title": "Paris FC vs Stade Rennais FC",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792336500,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Paris FC",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Stade Rennais FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 4",
+          "aliases": [
+            "Ligue1+ 4",
+            "FR Ligue 1+ 4",
+            "Ligue 1+ 4 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73881",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73881",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73880",
+      "title": "Olympique Lyonnais vs OGC Nice",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1792349100,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Olympique Lyonnais",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "OGC Nice",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73880",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73880",
+        "eventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "tsdb-2573374",
       "sourceIds": {
         "thesportsdb": "2573374"
@@ -22501,9 +23194,33 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "Spíler1 HU",
+          "aliases": [],
+          "territory": "HU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "Sport TV 1",
           "aliases": [],
           "territory": "PT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "S Sport+",
+          "aliases": [],
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -22680,45 +23397,6 @@
       "competition": "Argentinian Primera Division"
     },
     {
-      "id": "tsdb-2398483",
-      "sourceIds": {
-        "thesportsdb": "2398483"
-      },
-      "title": "Bragantino vs Cruzeiro",
-      "sport": "football",
-      "startUtcEpochSeconds": 1791849600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Arena Sport 2 Premium RS",
-          "aliases": [],
-          "territory": "RS",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Bragantino",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2p7tl41701423595.png",
-        "sourceIds": {
-          "thesportsdb": "134736"
-        }
-      },
-      "awayTeam": {
-        "name": "Cruzeiro",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/upsvvu1473538059.png",
-        "sourceIds": {
-          "thesportsdb": "134294"
-        }
-      },
-      "competition": "Brazilian Serie A"
-    },
-    {
       "id": "tsdb-2501358",
       "sourceIds": {
         "thesportsdb": "2501358"
@@ -22806,6 +23484,18 @@
       "startUtcEpochSeconds": 1791918000,
       "status": "confirmed",
       "broadcasts": [
+        {
+          "channelName": "Super Sport 2 HD (Albania)",
+          "aliases": [],
+          "territory": "AL",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "BeIn Sports Max 4",
           "aliases": [],
@@ -22972,6 +23662,45 @@
         }
       },
       "competition": "Japanese JLeague Cup"
+    },
+    {
+      "id": "tsdb-2407916",
+      "sourceIds": {
+        "thesportsdb": "2407916"
+      },
+      "title": "Bryne vs Raufoss",
+      "sport": "football",
+      "startUtcEpochSeconds": 1791997200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Direktesport NO",
+          "aliases": [],
+          "territory": "NO",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Bryne",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/e3t5fg1690695712.png",
+        "sourceIds": {
+          "thesportsdb": "134750"
+        }
+      },
+      "awayTeam": {
+        "name": "Raufoss",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xmwvvh1523905503.png",
+        "sourceIds": {
+          "thesportsdb": "135722"
+        }
+      },
+      "competition": "Norwegian 1. Divisjon"
     },
     {
       "id": "tsdb-2501366",
@@ -23400,356 +24129,6 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N5",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009MU",
-      "title": "Colorado Rapids vs Minnesota United FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792027800,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Colorado Rapids",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Minnesota United FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MU",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MU",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009N3",
-      "title": "Real Salt Lake vs San Jose Earthquakes",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792027800,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Real Salt Lake",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "San Jose Earthquakes",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N3",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N3",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009MY",
-      "title": "LA Galaxy vs Portland Timbers",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792031400,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "LA Galaxy",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Portland Timbers",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MY",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MY",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009MZ",
-      "title": "Los Angeles Football Club vs Austin FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792031400,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Los Angeles Football Club",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Austin FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MZ",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009MZ",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009N4",
-      "title": "San Diego FC vs Houston Dynamo FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792031400,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "San Diego FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Houston Dynamo FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N4",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N4",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "tsdb-2580275",
-      "sourceIds": {
-        "thesportsdb": "2580275"
-      },
-      "title": "Tampines Rovers vs Machida Zelvia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792066500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "BeIN Sports 3 Qatar",
-          "aliases": [],
-          "territory": "QA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Tampines Rovers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kfpndj1583167068.png",
-        "sourceIds": {
-          "thesportsdb": "139393"
-        }
-      },
-      "awayTeam": {
-        "name": "Machida Zelvia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/99zl6k1590070905.png",
-        "sourceIds": {
-          "thesportsdb": "139889"
-        }
-      },
-      "competition": "AFC Champions League Two"
-    },
-    {
-      "id": "tsdb-2398139",
-      "sourceIds": {
-        "thesportsdb": "2398139"
-      },
-      "title": "Huracán vs Gimnasia y Esgrima de La Plata",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792105200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TNT Sports Argentina",
-          "aliases": [],
-          "territory": "AR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Huracán",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kppi2b1775776550.png",
-        "sourceIds": {
-          "thesportsdb": "135163"
-        }
-      },
-      "awayTeam": {
-        "name": "Gimnasia y Esgrima de La Plata",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/dtqto61775838814.png",
-        "sourceIds": {
-          "thesportsdb": "135161"
-        }
-      },
-      "competition": "Argentinian Primera Division"
-    },
-    {
-      "id": "mls-MLS-MAT-0009NH",
-      "title": "Philadelphia Union vs Charlotte FC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792261800,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Philadelphia Union",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Charlotte FC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NH",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NH",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009NC",
-      "title": "Minnesota United FC vs St. Louis CITY SC",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792269000,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Minnesota United FC",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "St. Louis CITY SC",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NC",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NC",
-        "eventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009N7",
-      "title": "Atlanta United vs Inter Miami CF",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1792279800,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Atlanta United",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Inter Miami CF",
-        "badgeUrl": null
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N7",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009N7",
         "eventMatched": false
       }
     }
