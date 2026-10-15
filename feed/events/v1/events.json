@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1792083448,
-  "validUntilEpochSeconds": 1792126648,
+  "generatedAtEpochSeconds": 1792099188,
+  "validUntilEpochSeconds": 1792142388,
   "events": [
     {
       "id": "tsdb-2594845",
@@ -13631,57 +13631,6 @@
       "competition": "Argentinian Primera Division"
     },
     {
-      "id": "tsdb-2580275",
-      "sourceIds": {
-        "thesportsdb": "2580275"
-      },
-      "title": "Tampines Rovers vs Machida Zelvia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792066500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sport 2 IL",
-          "aliases": [],
-          "territory": "IL",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIN Sports 3 Qatar",
-          "aliases": [],
-          "territory": "QA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-15",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Tampines Rovers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/kfpndj1583167068.png",
-        "sourceIds": {
-          "thesportsdb": "139393"
-        }
-      },
-      "awayTeam": {
-        "name": "Machida Zelvia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/99zl6k1590070905.png",
-        "sourceIds": {
-          "thesportsdb": "139889"
-        }
-      },
-      "competition": "AFC Champions League Two"
-    },
-    {
       "id": "tsdb-2500827",
       "sourceIds": {
         "thesportsdb": "2500827"
@@ -15481,6 +15430,45 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "tsdb-2399182",
+      "sourceIds": {
+        "thesportsdb": "2399182"
+      },
+      "title": "Viking vs Fredrikstad",
+      "sport": "football",
+      "startUtcEpochSeconds": 1792252800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Direktesport NO",
+          "aliases": [],
+          "territory": "NO",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-15",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Viking",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9mzq961590148192.png",
+        "sourceIds": {
+          "thesportsdb": "134570"
+        }
+      },
+      "awayTeam": {
+        "name": "Fredrikstad",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9se6qv1690695269.png",
+        "sourceIds": {
+          "thesportsdb": "134749"
+        }
+      },
+      "competition": "Norwegian Eliteserien"
     }
   ]
 }
