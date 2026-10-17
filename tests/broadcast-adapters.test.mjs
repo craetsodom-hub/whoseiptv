@@ -174,22 +174,6 @@ test("beIN first-party EPG aligns competition, teams, match kickoff and exact ch
   assert.equal(target.broadcasts[0].matchingMethod, "bein-epg-match-teams-competition-kickoff");
 });
 
-test("beIN namespaces Opta event and participant IDs", async () => {
-  const body = JSON.stringify({ rows: [{
-    data: {
-      m_date: "2026-08-27T19:00:00", m_time: "19:00:00Z", competition_name: "LaLiga",
-      teama: "Barcelona", teamb: "Athletic Club", teama_id: "home-1", teamb_id: "away-1", matchid: "match-1", Live: "True"
-    },
-    live: true,
-    replay: false,
-    channel: { name: "beIN SPORTS 1" }
-  }] });
-  const [candidate] = await collect(beinMenaAdapter, body);
-  assert.deepEqual(candidate.sourceIds, { "bein-opta": "match-1" });
-  assert.deepEqual(candidate.homeTeam.sourceIds, { "bein-opta": "home-1" });
-  assert.deepEqual(candidate.awayTeam.sourceIds, { "bein-opta": "away-1" });
-});
-
 test("beIN discovers its full current EPG window from API count", async () => {
   const first = {
     count: 301,
@@ -211,6 +195,22 @@ test("beIN discovers its full current EPG window from API count", async () => {
   assert(urls[0].includes("offset=0"));
   assert.deepEqual(urls.slice(1).map((url) => url.match(/offset=(\d+)/)?.[1]), ["100", "200", "300"]);
   assert.deepEqual(candidates.map((candidate) => candidate.competition), ["LaLiga", "LaLiga", "LaLiga", "Bundesliga"]);
+});
+
+test("beIN namespaces Opta event and participant IDs", async () => {
+  const body = JSON.stringify({ rows: [{
+    data: {
+      m_date: "2026-08-27T19:00:00", m_time: "19:00:00Z", competition_name: "LaLiga",
+      teama: "Barcelona", teamb: "Athletic Club", teama_id: "home-1", teamb_id: "away-1", matchid: "match-1", Live: "True"
+    },
+    live: true,
+    replay: false,
+    channel: { name: "beIN SPORTS 1" }
+  }] });
+  const [candidate] = await collect(beinMenaAdapter, body);
+  assert.deepEqual(candidate.sourceIds, { "bein-opta": "match-1" });
+  assert.deepEqual(candidate.homeTeam.sourceIds, { "bein-opta": "home-1" });
+  assert.deepEqual(candidate.awayTeam.sourceIds, { "bein-opta": "away-1" });
 });
 
 test("beIN rejects an unbounded remote EPG page count", async () => {

@@ -2,6 +2,7 @@ import { compareEvents } from "./football-ranking.mjs";
 import { isSupportedTerritory } from "./territories.mjs";
 import { MAX_BROADCASTS_PER_EVENT, broadcastTerritories, mergeExactBroadcasts } from "./broadcast/resolver.mjs";
 import { eventIdentityEvidence } from "./broadcast/identity.mjs";
+import { broadcastAliases, canonicalChannelIdentity } from "./broadcast/normalize.mjs";
 
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
@@ -13,7 +14,9 @@ const TRUSTED_ARTWORK_HOSTS = new Set([
   "r2.thesportsdb.com",
   "www.thesportsdb.com",
   "cdn.nba.com",
-  "media.formula1.com"
+  "media.formula1.com",
+  "assets.laliga.com",
+  "images.mlssoccer.com"
 ]);
 
 function clean(value, maxLength) {
@@ -22,7 +25,7 @@ function clean(value, maxLength) {
 }
 
 function channelKey(value) {
-  return String(value ?? "").toLocaleLowerCase("en-US").replace(/[^a-z0-9]+/g, "");
+  return canonicalChannelIdentity(value);
 }
 
 function imageUrl(value) {
@@ -68,11 +71,8 @@ function aliasesFor(channelName, aliasesByChannel) {
   const entry = Object.entries(aliasesByChannel).find(
     ([candidate]) => channelKey(candidate) === key
   );
-  return (entry?.[1] ?? [])
-    .map((alias) => clean(alias, 120))
-    .filter(Boolean)
-    .filter((alias, index, all) => all.indexOf(alias) === index)
-    .slice(0, MAX_ALIASES_PER_BROADCAST);
+  return broadcastAliases(channelName, (entry?.[1] ?? [])
+    .map((alias) => clean(alias, 120)).filter(Boolean), MAX_ALIASES_PER_BROADCAST);
 }
 
 export function mergeBroadcastAssignments(left = [], right = []) {
@@ -102,8 +102,15 @@ export function mergeCollectedEvents(events) {
       continue;
     }
     existing.broadcasts = mergeExactBroadcasts(existing.broadcasts, event.broadcasts);
-    existing.homeTeam ??= event.homeTeam;
-    existing.awayTeam ??= event.awayTeam;
+    for (const side of ["homeTeam", "awayTeam"]) {
+      const current = existing[side], incoming = event[side];
+      if (!current) existing[side] = incoming;
+      else if (incoming) {
+        current.badgeUrl ??= incoming.badgeUrl;
+        const ids = { ...(current.sourceIds ?? {}), ...(incoming.sourceIds ?? {}) };
+        if (Object.keys(ids).length) current.sourceIds = ids;
+      }
+    }
     existing.artworkUrl ??= event.artworkUrl;
     existing.competition ??= event.competition;
     existing.broadcasterEvidence ??= event.broadcasterEvidence;
@@ -240,7 +247,10 @@ export function validateFeed(feed, nowEpochSeconds) {
     }
     for (const broadcast of event.broadcasts) {
       const territories = broadcastTerritories(broadcast);
-      if (!broadcast.channelName || territories.length === 0 || (broadcast.region && (!broadcast.displayRegion || broadcast.territory !== undefined)) || broadcast.confirmed !== true ||
+      const exactChannel = ["official-event", "official-broadcaster-schedule", "source-event"].includes(broadcast.sourceType) &&
+        (broadcast.destinationPrecision ?? "channel") === "channel";
+      if (!broadcast.channelName || territories.length === 0 || (broadcast.region && (!broadcast.displayRegion || broadcast.territory !== undefined)) || typeof broadcast.confirmed !== "boolean" ||
+          (broadcast.confirmed === true && !exactChannel && broadcast.sourceType !== "official-all-events") ||
           !broadcast.sourceType || !broadcast.sourceUrl || !broadcast.matchingMethod ||
           (broadcast.aliases !== undefined && (!Array.isArray(broadcast.aliases) || broadcast.aliases.length > MAX_ALIASES_PER_BROADCAST))) {
         throw new Error(`Invalid broadcaster for ${event.id}`);

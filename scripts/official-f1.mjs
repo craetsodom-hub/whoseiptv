@@ -1,4 +1,5 @@
 import { isSupportedTerritory } from "./territories.mjs";
+import { broadcastAliases } from "./broadcast/normalize.mjs";
 
 const CALENDAR_BASE = "https://www.formula1.com/en/racing";
 const BROADCASTERS_URL = "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN";
@@ -75,7 +76,7 @@ function aliasesFor(channelName, aliasesByChannel) {
   const entry = Object.entries(aliasesByChannel).find(
     ([candidate]) => normalizedName(candidate) === key
   );
-  return [...new Set(entry?.[1] ?? [])].slice(0, 8);
+  return broadcastAliases(channelName, entry?.[1] ?? [], 8);
 }
 
 export function parseFormulaOneBroadcasters(html, aliasesByChannel = {}) {

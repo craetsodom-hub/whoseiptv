@@ -1,4 +1,5 @@
 import { isSupportedTerritory } from "./territories.mjs";
+import { broadcastAliases } from "./broadcast/normalize.mjs";
 
 const NBA_GAMES_URL = "https://www.nba.com/games?date=";
 const MAX_PAST_SECONDS = 6 * 60 * 60;
@@ -18,7 +19,7 @@ function aliasesFor(channelName, aliasesByChannel) {
   const entry = Object.entries(aliasesByChannel).find(
     ([candidate]) => normalizedName(candidate) === key
   );
-  return [...new Set(entry?.[1] ?? [])].slice(0, 8);
+  return broadcastAliases(channelName, entry?.[1] ?? [], 8);
 }
 
 function nextData(html) {

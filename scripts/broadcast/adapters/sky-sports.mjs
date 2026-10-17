@@ -22,4 +22,4 @@ export function parseSkySportsSchedule(html) {
 
 export const skySportsAdapter = scheduleAdapter({ id: "sky-sports-uk", url: SKY_SPORTS_URL, parse: parseSkySportsSchedule });
 skySportsAdapter.contractStatus = "semantic-html-verified";
-skySportsAdapter.parserTypes = ["embedded-json", "semantic-html"];
+skySportsAdapter.parserTypes = ["embedded-page-state", "json-ld", "semantic-html"];

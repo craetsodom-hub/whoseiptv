@@ -31,11 +31,17 @@ function normalizeAssignment(item) {
   const territories = broadcastTerritories(item);
   const channelName = rawChannelName;
   if (!channelName || territories.length === 0 || (region && !displayRegion)) return null;
+  const destinationPrecision = item.destinationPrecision ?? "channel";
+  const exactVerifiedChannel = ["official-event", "official-broadcaster-schedule"].includes(item.sourceType ?? "source-event") &&
+    destinationPrecision === "channel" && item.destinationVerified !== false;
   return {
     channelName,
     aliases: cleanAliases(channelName, item.aliases ?? []),
     ...(region ? { region, displayRegion, territories } : { territory: territories[0] }),
-    confirmed: true,
+    // Older all-event service entries explicitly carry confirmed:true and are
+    // preserved as part of the v1 contract. New network/service evidence is
+    // intentionally not promoted to a confirmed event-level channel.
+    confirmed: item.confirmed === true || (item.confirmed === undefined && exactVerifiedChannel),
     sourceType: item.sourceType ?? "source-event",
     matchingMethod: item.matchingMethod ?? item.ruleType ?? item.sourceType ?? "source-event-id",
     sourceUrl: item.sourceUrl,
@@ -43,7 +49,7 @@ function normalizeAssignment(item) {
     exclusive: item.exclusive === true,
     destinationType: item.destinationType,
     ruleType: item.ruleType,
-    destinationPrecision: item.destinationPrecision ?? "channel",
+    destinationPrecision,
     ...(item.destinationVerified === true ? { destinationVerified: true } : {}),
     rightsHolder: item.rightsHolder,
     eventMatchingMethod: item.eventMatchingMethod,

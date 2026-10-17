@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import rights from "../config/official-event-broadcasters.json" with { type: "json" };
-import { attachAllEventDestinations, augmentWithOfficialRights, coverageReport, matchingRights, validateOfficialRightsConfig } from "../scripts/official-rights.mjs";
+import { activeAllEventDestinations, attachAllEventDestinations, augmentWithOfficialRights, coverageReport, matchingRights, validateOfficialRightsConfig } from "../scripts/official-rights.mjs";
 import { canonicalChannelIdentity, cleanAliases } from "../scripts/broadcast/normalize.mjs";
 import { broadcastScopeKey, canonicalizeRegionalBroadcasts, collectAdaptersSafely, filterTrustedScheduleBroadcasts, matchesEvent, mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import { SUPPORTED_TERRITORIES } from "../scripts/territories.mjs";
@@ -15,7 +15,29 @@ const event = (competition = "Premier League", season = "2026/27") => ({
 
 test("validates the season-aware multi-competition rights catalog", () => {
   assert.equal(validateOfficialRightsConfig(rights), true);
-  assert.deepEqual(rights.competitions.map((item) => item.id), ["fifa-world-cup", "premier-league", "uefa-champions-league", "laliga", "bundesliga", "ligue-1", "mls", "leagues-cup"]);
+  assert.deepEqual(rights.competitions.map((item) => item.id), ["fifa-world-cup", "premier-league", "uefa-champions-league", "uefa-europa-league", "uefa-conference-league", "laliga", "bundesliga", "serie-a", "ligue-1", "mls", "leagues-cup"]);
+});
+
+test("exports only current season-bound all-event guarantees for feed consumers", () => {
+  const at = Math.floor(Date.parse("2026-10-17T12:00:00Z") / 1000);
+  const records = activeAllEventDestinations(rights, at);
+  assert(records.some((item) => item.competitionId === "serie-a" && item.territory === "US" && item.name === "Paramount+"));
+  assert(records.some((item) => item.competitionId === "uefa-champions-league" && item.viewingUrl === "https://www.paramountplus.com/shows/uefa-champions-league/"));
+  assert(records.some((item) => item.competitionId === "uefa-europa-league"));
+  assert(records.some((item) => item.competitionId === "uefa-conference-league"));
+  assert(!records.some((item) => item.validFrom > "2026-10-17" || item.validThrough < "2026-10-17"));
+  assert(records.every((item) => item.sourceUrl === item.allMatchesEvidenceUrl && item.competitionAliases.length > 0));
+  assert.equal(activeAllEventDestinations(rights, Math.floor(Date.parse("2030-10-17T12:00:00Z") / 1000)).length, 0);
+});
+
+test("current Serie A and UEFA guarantees attach as services while wrong seasons do not", () => {
+  const targets = [event("Serie A"), event("UEFA Champions League"), event("UEFA Europa League"), event("UEFA Conference League")];
+  attachAllEventDestinations(targets, rights);
+  assert(targets.every((target) => target.broadcasts.some((item) => item.channelName === "Paramount+" && item.territory === "US" && item.ruleType === "all-events")));
+  assert.equal(targets[0].broadcasts[0].viewingUrl, undefined);
+  const wrongSeason = event("Serie A", "2025/26");
+  attachAllEventDestinations([wrongSeason], rights);
+  assert.equal(wrongSeason.broadcasts.length, 0);
 });
 
 test("rights metadata never becomes a playlist-match broadcast and never leaks", () => {

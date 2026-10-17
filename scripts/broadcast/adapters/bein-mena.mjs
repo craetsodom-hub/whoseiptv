@@ -1,4 +1,4 @@
-import { canonicalChannelIdentity } from "../normalize.mjs";
+import { broadcastAliases, canonicalChannelIdentity } from "../normalize.mjs";
 import { TERRITORY_REGIONS } from "../territory-regions.mjs";
 import { embeddedJson, exactRow, objectsWithin, parseRows, stringValue } from "./common.mjs";
 
@@ -121,7 +121,7 @@ export const beinMenaAdapter = {
       broadcasts: row.channels.flatMap((channelName) => row.broadcastsFor().map((broadcast) => ({
         ...broadcast,
         channelName,
-        aliases: Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? [],
+        aliases: broadcastAliases(channelName, Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? []),
         sourceType: "official-broadcaster-schedule",
         destinationVerified: true,
         sourceUrl: row.sourceUrl ?? BEIN_MENA_API_URL,

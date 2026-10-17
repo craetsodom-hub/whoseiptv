@@ -52,6 +52,35 @@
           { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] },
           { "region": "SUB_SAHARAN_AFRICA", "holders": [{ "name": "SuperSport", "kind": "network" }] },
           { "region": "INDIAN_SUBCONTINENT", "holders": [{ "name": "Sony Sports Network", "kind": "network" }] }
+        ],
+        "allEventDestinations": [
+          { "territory": "US", "name": "Paramount+", "aliases": ["Paramount Plus", "US Paramount+"], "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/", "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/", "allMatches": true, "allMatchesEvidenceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/", "lastVerified": "2026-10-17" }
+        ]
+      }]
+    },
+    {
+      "id": "uefa-europa-league", "aliases": ["UEFA Europa League", "Europa League"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.uefa.com/uefaeuropaleague/fixtures-results/",
+      "cycles": [{
+        "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-10-17",
+        "sourceUrl": "https://www.uefa.com/uefaeuropaleague/news/028d-1af1354fca61-efb642e380e6-1000--where-to-watch-the-europa-league-tv-broadcast-partners-live-/",
+        "coverage": [
+          { "territory": "US", "holders": [{ "name": "Paramount+", "kind": "service" }, { "name": "DAZN", "kind": "service" }, { "name": "TUDN", "kind": "network" }] }
+        ],
+        "allEventDestinations": [
+          { "territory": "US", "name": "Paramount+", "aliases": ["Paramount Plus", "US Paramount+"], "sourceUrl": "https://www.paramountplus.com/shows/uefa-europa-league/", "viewingUrl": "https://www.paramountplus.com/shows/uefa-europa-league/", "allMatches": true, "allMatchesEvidenceUrl": "https://www.paramountplus.com/shows/uefa-europa-league/", "lastVerified": "2026-10-17" }
+        ]
+      }]
+    },
+    {
+      "id": "uefa-conference-league", "aliases": ["UEFA Conference League", "UEFA Europa Conference League", "Conference League"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.uefa.com/uefaconferenceleague/fixtures-results/",
+      "cycles": [{
+        "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-10-17",
+        "sourceUrl": "https://www.uefa.com/uefaconferenceleague/news/0285-18f79eae3aac-5c7eb199a66d-1000--where-to-watch-the-uefa-europa-conference-league-final-tv-b/",
+        "coverage": [
+          { "territory": "US", "holders": [{ "name": "Paramount+", "kind": "service" }, { "name": "TUDN", "kind": "network" }] }
+        ],
+        "allEventDestinations": [
+          { "territory": "US", "name": "Paramount+", "aliases": ["Paramount Plus", "US Paramount+"], "sourceUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/", "viewingUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/", "allMatches": true, "allMatchesEvidenceUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/", "lastVerified": "2026-10-17" }
         ]
       }]
     },
@@ -86,6 +115,19 @@
           { "territory": "DE", "holders": [{ "name": "Sky Deutschland", "kind": "network" }, { "name": "DAZN", "kind": "service" }, { "name": "WOW", "kind": "service" }] },
           { "territory": "US", "holders": [{ "name": "ESPN", "kind": "network" }] },
           { "region": "MENA", "holders": [{ "name": "beIN Sports", "kind": "network" }] }
+        ]
+      }]
+    },
+    {
+      "id": "serie-a", "aliases": ["Serie A", "Italian Serie A", "Serie A Enilive"], "updateFrequencyHours": 3, "fallbackPolicy": "rights-metadata-only", "exactEventSource": "https://www.paramountplus.com/shows/serie-a/episodes/",
+      "cycles": [{
+        "seasons": ["2026/27"], "validFrom": "2026-07-01", "validThrough": "2027-06-30", "lastVerified": "2026-10-17",
+        "sourceUrl": "https://www.paramountpressexpress.com/paramount-plus/shows/soccer/releases/?view=112947-cbs-sports-and-lega-serie-a-extend-us-media-rights-partnership-through-20262027-season-with-all-matches-to-continue-to-be-streamed-on-paramount",
+        "coverage": [
+          { "territory": "US", "holders": [{ "name": "Paramount+", "kind": "service" }] }
+        ],
+        "allEventDestinations": [
+          { "territory": "US", "name": "Paramount+", "aliases": ["Paramount Plus", "US Paramount+"], "sourceUrl": "https://www.paramountpressexpress.com/paramount-plus/shows/soccer/releases/?view=112947-cbs-sports-and-lega-serie-a-extend-us-media-rights-partnership-through-20262027-season-with-all-matches-to-continue-to-be-streamed-on-paramount", "viewingUrl": "https://www.paramountplus.com/shows/serie-a/episodes/", "allMatches": true, "allMatchesEvidenceUrl": "https://www.paramountpressexpress.com/paramount-plus/shows/soccer/releases/?view=112947-cbs-sports-and-lega-serie-a-extend-us-media-rights-partnership-through-20262027-season-with-all-matches-to-continue-to-be-streamed-on-paramount", "lastVerified": "2026-10-17" }
         ]
       }]
     },

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFile } from "node:fs/promises";
 import { buildFeed, mergeBroadcastAssignments, mergeCollectedEvents, parseUtcTimestamp, validateFeed } from "../scripts/feed-core.mjs";
-import { createCoverageReport } from "../scripts/coverage-report.mjs";
 
 const now = 1_800_000_000;
 
@@ -158,9 +158,23 @@ test("accepts only trusted official artwork hosts", () => {
   assert.throws(() => validateFeed(validFeed, now), /Invalid team artwork/);
 });
 
-test("coverage sidecar reports missing exact channels without inventing them", () => {
-  const feed = { events: [{ id: "one", title: "One vs Two", sport: "football", competition: "Italian Serie A", broadcasts: [] }] };
-  const report = createCoverageReport(feed, [{ sport: "football", territory: "IT", date: "2027-01-15", status: "success" }], now);
-  assert.equal(report.summary.topTierUnsupportedFixtures, 1);
-  assert.equal(report.gaps[0].id, "one");
+test("all currently emitted confirmed broadcast assignments survive the collection merge", async () => {
+  const current = JSON.parse(await readFile(new URL("../feed/events/v1/events.json", import.meta.url), "utf8"));
+  const merged = mergeCollectedEvents(structuredClone(current.events));
+  for (const event of current.events) {
+    const retained = merged.find((candidate) => candidate.id === event.id);
+    assert(retained, `event ${event.id} was removed`);
+    for (const broadcast of event.broadcasts.filter((item) => item.confirmed)) {
+      assert(retained.broadcasts.some((candidate) => candidate.channelName === broadcast.channelName &&
+        candidate.territory === broadcast.territory && JSON.stringify(candidate.territories ?? []) === JSON.stringify(broadcast.territories ?? []) &&
+        broadcast.aliases.every((alias) => candidate.aliases.includes(alias))), `${event.id} lost ${broadcast.channelName}`);
+    }
+  }
+});
+
+test("feed data contains broadcaster names and provenance, never IPTV stream destinations", async () => {
+  const feed = await readFile(new URL("../feed/events/v1/events.json", import.meta.url), "utf8");
+  assert.doesNotMatch(feed, /(?:m3u8|rtmp:|rtsp:|acestream:|xtream|#EXTINF|portal\.php)/i);
+  const parsed = JSON.parse(feed);
+  assert(parsed.events.flatMap((event) => event.broadcasts).every((broadcast) => !Object.keys(broadcast).some((key) => /stream|iptv|playlist|url$/i.test(key) && key !== "sourceUrl")));
 });

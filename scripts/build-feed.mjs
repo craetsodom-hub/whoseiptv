@@ -7,16 +7,16 @@ import { buildFeed, mergeCollectedEvents, selectEvents, validateFeed } from "./f
 import { collectFormulaOneEvents } from "./official-f1.mjs";
 import { collectNbaEvents } from "./official-nba.mjs";
 import { collectOfficialFootballEvents } from "./official-football.mjs";
-import { attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
-import { canonicalizeRegionalBroadcasts, collectAdaptersSafely, filterTrustedScheduleBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
+import { activeAllEventDestinations, attachAllEventDestinations, augmentWithOfficialRights, validateOfficialRightsConfig } from "./official-rights.mjs";
+import { canonicalizeRegionalBroadcasts, filterTrustedScheduleBroadcasts, resolveExactBroadcasts } from "./broadcast/resolver.mjs";
 import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
-import { enrichTeamBadges } from "./team-badges.mjs";
-import { createCoverageReport } from "./coverage-report.mjs";
+import { buildDiscoveryCoverage, discoverOfficialDestinations } from "./broadcast/discovery.mjs";
+import { createTeamArtworkResolver, enrichTeamArtwork } from "./team-artwork.mjs";
+import { scheduledCountriesForSport } from "./source-plan.mjs";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
 const coveragePath = resolve(projectRoot, "feed/events/v1/coverage.json");
-const badgeCachePath = resolve(projectRoot, "feed/events/v1/team-badges-cache.json");
 const aliasesPath = resolve(projectRoot, "config/channel-aliases.json");
 const footballCountriesPath = resolve(projectRoot, "config/football-countries.json");
 const sportCountriesPath = resolve(projectRoot, "config/sport-countries.json");
@@ -43,37 +43,56 @@ const sports = [
 ];
 const REQUEST_TIMEOUT_MS = 15_000;
 const MAX_RESPONSE_CHARACTERS = 1_000_000;
-const REQUEST_PACING_MS = Number(process.env.REQUEST_PACING_MS ?? 2_200);
-const MAX_FETCH_ATTEMPTS = 3;
+const REQUEST_PACING_MS = Number(process.env.REQUEST_PACING_MS ?? 2_500);
+const MIN_SOURCE_SUCCESS_RATIO = 0.8;
+const MAX_DETAIL_REQUESTS = Number(process.env.MAX_DETAIL_REQUESTS ?? 12);
+const MAX_ARTWORK_REQUESTS = Number(process.env.MAX_ARTWORK_REQUESTS ?? 8);
+const MAX_RETRIES = 2;
 const execFileAsync = promisify(execFile);
 
 async function fetchWithCurlFallback(url, accept) {
-  let lastError;
-  for (let attempt = 0; attempt < MAX_FETCH_ATTEMPTS; attempt += 1) {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
-    try {
-      const response = await fetch(url, {
-        headers: { Accept: accept, "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)" },
-        signal: controller.signal
-      });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const body = await response.text();
-      if (!body || body.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response is empty or too large");
-      return body;
-    } catch (fetchError) {
-      try {
-        const curl = process.platform === "win32" ? "curl.exe" : "curl";
-        const result = await execFileAsync(curl, ["-L", "--fail", "--compressed", "--max-time", String(Math.ceil(REQUEST_TIMEOUT_MS / 1000)), "-A", "WhoseIPTV-Events/1.0", "-H", `Accept: ${accept}`, url], { maxBuffer: MAX_RESPONSE_CHARACTERS * 2 });
-        if (!result.stdout || result.stdout.length > MAX_RESPONSE_CHARACTERS) throw fetchError;
-        return result.stdout;
-      } catch (curlError) {
-        lastError = curlError;
-      }
-    } finally {
-      clearTimeout(timeout);
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  try {
+    const response = await fetch(url, {
+      headers: { Accept: accept, "User-Agent": "WhoseIPTV-Events/1.0 (+https://github.com/craetsodom-hub/whoseiptv)" },
+      signal: controller.signal
+    });
+    if (!response.ok) {
+      const error = new Error(`HTTP ${response.status}`);
+      error.status = response.status;
+      error.retryAfter = Number(response.headers.get("retry-after"));
+      throw error;
     }
-    if (attempt < MAX_FETCH_ATTEMPTS - 1) await wait(250 * (attempt + 1));
+    const body = await response.text();
+    if (!body || body.length > MAX_RESPONSE_CHARACTERS) throw new Error("Response is empty or too large");
+    return body;
+  } catch (fetchError) {
+    // A valid HTTP response must not be repeated through curl. In particular,
+    // retrying a 429 through a second transport doubles pressure on the source.
+    if (fetchError?.status) throw fetchError;
+    const curl = process.platform === "win32" ? "curl.exe" : "curl";
+    const result = await execFileAsync(curl, ["-L", "--fail", "--compressed", "--max-time", String(Math.ceil(REQUEST_TIMEOUT_MS / 1000)), "-A", "WhoseIPTV-Events/1.0", "-H", `Accept: ${accept}`, url], { maxBuffer: MAX_RESPONSE_CHARACTERS * 2 });
+    if (!result.stdout || result.stdout.length > MAX_RESPONSE_CHARACTERS) throw fetchError;
+    return result.stdout;
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function fetchWithRetry(url, accept) {
+  let lastError;
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt += 1) {
+    try {
+      return await fetchWithCurlFallback(url, accept);
+    } catch (error) {
+      lastError = error;
+      const retryable = !error?.status || error.status === 429 || error.status >= 500;
+      if (!retryable || attempt === MAX_RETRIES) break;
+      const defaultBackoff = error?.status === 429 ? 15_000 * (attempt + 1) : 2_000 * (attempt + 1);
+      const retryAfter = Number.isFinite(error.retryAfter) && error.retryAfter > 0 ? error.retryAfter * 1000 : defaultBackoff;
+      await wait(Math.min(retryAfter, 30_000));
+    }
   }
   throw lastError;
 }
@@ -111,7 +130,7 @@ function isValidCountryList(value, allowEmpty = false) {
 async function fetchCountryDay(country, date, sport) {
   const parameters = new URLSearchParams({ d: date, s: sport.query, a: country.query });
   {
-    const text = await fetchWithCurlFallback(`${sourceBase}?${parameters}`, "application/json");
+    const text = await fetchWithRetry(`${sourceBase}?${parameters}`, "application/json");
     const payload = JSON.parse(text);
     if (payload.tvevents !== null && !Array.isArray(payload.tvevents)) {
       throw new Error("Unexpected response shape");
@@ -127,23 +146,59 @@ async function fetchCountryDay(country, date, sport) {
 async function fetchEventDetails(sourceId) {
   const parameters = new URLSearchParams({ id: sourceId });
   {
-    const text = await fetchWithCurlFallback(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupevent.php?${parameters}`, "application/json");
+    const text = await fetchWithRetry(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupevent.php?${parameters}`, "application/json");
     const payload = JSON.parse(text);
     return payload.events?.[0] ?? null;
   }
 }
 
 async function fetchOfficialPage(url) {
-  return fetchWithCurlFallback(url, "text/html,application/xhtml+xml");
+  return fetchWithRetry(url, "text/html,application/xhtml+xml");
+}
+
+function configuredCountriesForSport(sport, footballCountries, sportCountries) {
+  return sport.id === "football" ? footballCountries : sportCountries[sport.id];
+}
+
+function previousDetails(feed) {
+  const details = new Map();
+  for (const event of feed?.events ?? []) {
+    const sourceId = String(event?.sourceIds?.thesportsdb ?? "").trim();
+    if (!/^\d+$/.test(sourceId)) continue;
+    details.set(sourceId, {
+      strEvent: event.title,
+      strTimestamp: new Date(event.startUtcEpochSeconds * 1000).toISOString(),
+      strLeague: event.competition,
+      strHomeTeam: event.homeTeam?.name,
+      idHomeTeam: event.homeTeam?.sourceIds?.thesportsdb,
+      strHomeTeamBadge: event.homeTeam?.badgeUrl,
+      strAwayTeam: event.awayTeam?.name,
+      idAwayTeam: event.awayTeam?.sourceIds?.thesportsdb,
+      strAwayTeamBadge: event.awayTeam?.badgeUrl
+    });
+  }
+  return details;
+}
+
+async function writeJsonAtomic(path, value) {
+  const temporaryPath = `${path}.tmp`;
+  await writeFile(temporaryPath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+  await rename(temporaryPath, path);
 }
 
 async function main() {
+  let discoveryCoverage = null;
   const nowEpochSeconds = generationEpochSeconds();
+  let priorFeed = null;
+  try {
+    priorFeed = JSON.parse(await readFile(outputPath, "utf8"));
+  } catch (error) {
+    if (error?.code !== "ENOENT" && !(error instanceof SyntaxError)) throw error;
+  }
   if (process.env.SOURCE_DATE_EPOCH !== undefined) {
     try {
-      const existing = JSON.parse(await readFile(outputPath, "utf8"));
-      if (existing.generatedAtEpochSeconds === nowEpochSeconds) {
-        validateFeed(existing, nowEpochSeconds);
+      if (priorFeed?.generatedAtEpochSeconds === nowEpochSeconds) {
+        validateFeed(priorFeed, nowEpochSeconds);
         console.log(`Feed already generated for SOURCE_DATE_EPOCH=${nowEpochSeconds}; preserving deterministic output`);
         return;
       }
@@ -170,7 +225,7 @@ async function main() {
   const sourceAttempts = [];
   let successfulRequests = 0;
   const jobs = dates.flatMap((date) => sports.flatMap((sport) =>
-    (sport.id === "football" ? footballCountries : sportCountries[sport.id])
+    scheduledCountriesForSport(sport, configuredCountriesForSport(sport, footballCountries, sportCountries), nowEpochSeconds)
       .map((country) => ({ date, sport, country }))
   ));
   const totalRequests = jobs.length;
@@ -180,18 +235,20 @@ async function main() {
       successfulRequests += 1;
       sourceAttempts.push({ sport: sport.id, territory: country.territory, date, status: "success" });
     } catch (error) {
-      sourceAttempts.push({ sport: sport.id, territory: country.territory, date, status: "failed" });
+      sourceAttempts.push({ sport: sport.id, territory: country.territory, date, status: "failed", reason: String(error.message).slice(0, 160) });
       console.error(`Source failed for ${sport.id}/${country.territory} on ${date}: ${error.message}`);
     }
     await wait(REQUEST_PACING_MS);
   }
 
-  if (successfulRequests !== totalRequests) {
-    throw new Error(`Only ${successfulRequests}/${totalRequests} source requests succeeded; keeping the previous feed`);
+  if (successfulRequests / totalRequests < MIN_SOURCE_SUCCESS_RATIO) {
+    throw new Error(`Only ${successfulRequests}/${totalRequests} source requests succeeded (minimum ${MIN_SOURCE_SUCCESS_RATIO * 100}%); keeping the previous feed`);
   }
 
-  const detailsByEvent = new Map();
-  for (const sourceId of new Set(records.map((record) => String(record.idEvent ?? "").trim()).filter(Boolean))) {
+  const detailsByEvent = previousDetails(priorFeed);
+  const uncachedSourceIds = [...new Set(records.map((record) => String(record.idEvent ?? "").trim()).filter(Boolean))]
+    .filter((sourceId) => !detailsByEvent.has(sourceId)).slice(0, MAX_DETAIL_REQUESTS);
+  for (const sourceId of uncachedSourceIds) {
     try {
       const details = await fetchEventDetails(sourceId);
       if (details) detailsByEvent.set(sourceId, details);
@@ -200,12 +257,6 @@ async function main() {
     }
     await wait(REQUEST_PACING_MS);
   }
-  const badgeStats = await enrichTeamBadges({
-    detailsByEvent,
-    cachePath: badgeCachePath,
-    fetchJson: async (teamId) => JSON.parse(await fetchWithCurlFallback(`https://www.thesportsdb.com/api/v1/json/${encodeURIComponent(apiKey)}/lookupteam.php?id=${encodeURIComponent(teamId)}`, "application/json")),
-    onError: (teamId, error) => console.error(`Team badge lookup failed safely for ${teamId}: ${error.message}`)
-  });
 
   const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent, { select: false });
   try {
@@ -241,19 +292,44 @@ async function main() {
       console.error(`Official football sources failed safely: ${footballResult.reason.message}`);
     }
     const mergedEvents = mergeCollectedEvents([...feed.events, ...footballEvents, ...formulaOneEvents, ...nbaEvents]);
-    const exactCandidates = await collectAdaptersSafely(OFFICIAL_BROADCAST_ADAPTERS, {
+    const discovery = await discoverOfficialDestinations(OFFICIAL_BROADCAST_ADAPTERS, {
       events: mergedEvents,
       fetchText: fetchOfficialPage,
       aliasesByChannel,
       verifiedAt: new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10)
-    }, (id, error) => console.error(`Official broadcast adapter ${id} failed safely: ${error.message}`));
+    });
+    for (const attempt of discovery.attempts.filter((attempt) => !attempt.success)) {
+      console.error(`Official broadcast adapter ${attempt.id} failed safely: ${attempt.failure}`);
+    }
     augmentWithOfficialRights(mergedEvents, officialRights);
     filterTrustedScheduleBroadcasts(mergedEvents);
     attachAllEventDestinations(mergedEvents, officialRights);
-    resolveExactBroadcasts(mergedEvents, exactCandidates);
+    resolveExactBroadcasts(mergedEvents, discovery.candidates);
     canonicalizeRegionalBroadcasts(mergedEvents);
+    const artworkCache = new Map();
+    for (const event of priorFeed?.events ?? []) for (const team of [event.homeTeam, event.awayTeam].filter(Boolean)) {
+      const id = String(team.sourceIds?.thesportsdb ?? "").trim();
+      if (/^\d+$/.test(id) && team.badgeUrl) artworkCache.set(`id:${id}`, { badgeUrl: team.badgeUrl, expiresAt: Date.now() + 7 * 24 * 60 * 60 * 1000 });
+    }
+    const artworkResolver = createTeamArtworkResolver({ fetchText: (url) => fetchWithRetry(url, "application/json"), apiKey, concurrency: 1, minIntervalMs: REQUEST_PACING_MS, maxRequests: MAX_ARTWORK_REQUESTS, cache: artworkCache });
+    await enrichTeamArtwork(mergedEvents, artworkResolver);
+    discoveryCoverage = buildDiscoveryCoverage(mergedEvents, OFFICIAL_BROADCAST_ADAPTERS, discovery.attempts);
+    discoveryCoverage.allEventDestinations = activeAllEventDestinations(officialRights, nowEpochSeconds);
+    discoveryCoverage.pipeline = {
+      generatedAt: new Date(nowEpochSeconds * 1000).toISOString(),
+      scheduleMode: "priority-plus-rotating-secondary-markets",
+      requests: totalRequests,
+      succeeded: successfulRequests,
+      failed: totalRequests - successfulRequests,
+      successRatio: Number((successfulRequests / totalRequests).toFixed(3)),
+      minimumSuccessRatio: MIN_SOURCE_SUCCESS_RATIO,
+      detailRequests: uncachedSourceIds.length,
+      maximumDetailRequests: MAX_DETAIL_REQUESTS,
+      maximumArtworkRequests: MAX_ARTWORK_REQUESTS,
+      sourceAttempts
+    };
     feed.events = selectEvents(mergedEvents);
-    const matchedFootball = footballEvents.filter((event) => event.broadcasterEvidence?.eventMatched).length;
+    const matchedFootball = footballEvents.filter((event) => event.broadcasterEvidence?.sourceEventMatched).length;
     console.log(`Collected ${footballEvents.length} exact official football events (${matchedFootball} resolved to source events), ${formulaOneEvents.length} official Formula 1 and ${nbaEvents.length} official basketball events`);
   } catch (error) {
     console.error(`Official source batch failed safely: ${error.message}`);
@@ -261,11 +337,8 @@ async function main() {
   validateFeed(feed, nowEpochSeconds);
 
   await mkdir(dirname(outputPath), { recursive: true });
-  const temporaryPath = `${outputPath}.tmp`;
-  await writeFile(temporaryPath, `${JSON.stringify(feed, null, 2)}\n`, "utf8");
-  await rename(temporaryPath, outputPath);
-  await writeFile(coveragePath, `${JSON.stringify(createCoverageReport(feed, sourceAttempts, nowEpochSeconds), null, 2)}\n`, "utf8");
-  console.log(`Resolved ${badgeStats.resolved} team badges (${badgeStats.cached} cached)`);
+  await writeJsonAtomic(outputPath, feed);
+  if (discoveryCoverage) await writeJsonAtomic(coveragePath, discoveryCoverage);
   console.log(`Published ${feed.events.length} multi-sport events from ${successfulRequests}/${totalRequests} successful requests`);
 }
 

@@ -1,4 +1,4 @@
-import { canonicalChannelIdentity, normalizeBroadcastText } from "../normalize.mjs";
+import { broadcastAliases, canonicalChannelIdentity, normalizeBroadcastText } from "../normalize.mjs";
 
 export const REPLAY_MARKERS = /\b(?:replay|highlights?|mini match|review|best of|season review|stories|magazine|preview)\b/i;
 
@@ -144,7 +144,7 @@ export function scheduleAdapter({ id, url, parse, sport = "football" }) {
   return {
     id,
     contractStatus: "fixture-tested-live-unverified",
-    parserTypes: ["embedded-json"],
+    parserTypes: ["embedded-page-state", "json-ld"],
     async collect({ fetchText, verifiedAt, aliasesByChannel = {} }) {
       const rows = parse(await fetchText(url));
       return rows.map((row) => ({
@@ -156,7 +156,7 @@ export function scheduleAdapter({ id, url, parse, sport = "football" }) {
         broadcasts: row.channels.flatMap((channelName) => row.broadcastsFor(channelName).map((broadcast) => ({ broadcast, channelName }))).map(({ broadcast, channelName }) => ({
           ...broadcast,
           channelName,
-          aliases: Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? [],
+          aliases: broadcastAliases(channelName, Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? []),
           sourceType: row.sourceType ?? "official-broadcaster-schedule",
           destinationVerified: true,
           sourceUrl: url,

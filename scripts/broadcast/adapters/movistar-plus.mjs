@@ -1,4 +1,5 @@
 import { decodeHtml } from "./common.mjs";
+import { broadcastAliases } from "../normalize.mjs";
 
 const CHANNEL_SLUGS = ["chapio", "chap1", "chap2", "chap3", "chap4"];
 const BASE_URL = "https://www.movistarplus.es/programacion-tv";
@@ -77,7 +78,7 @@ export const movistarChampionsAdapter = {
       startUtcEpochSeconds: row.startUtcEpochSeconds,
       broadcasts: [{
         channelName: row.channelName,
-        aliases: aliasesByChannel[row.channelName] ?? [],
+        aliases: broadcastAliases(row.channelName, aliasesByChannel[row.channelName] ?? []),
         territory: "ES",
         sourceType: "official-event",
         sourceUrl: row.sourceUrl,

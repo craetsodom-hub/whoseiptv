@@ -24,6 +24,52 @@ function allMatchesDestination(destination) {
   return destination?.allMatches === true && /^https:\/\//.test(destination?.allMatchesEvidenceUrl ?? "");
 }
 
+function validHttpsUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && !url.username && !url.password;
+  } catch {
+    return false;
+  }
+}
+
+function destinationRecord(competition, destination, scope) {
+  return {
+    competitionId: competition.id,
+    competitionAliases: [...competition.aliases],
+    seasons: [...scope.seasons],
+    validFrom: scope.validFrom,
+    validThrough: scope.validThrough,
+    territory: destination.territory,
+    name: destination.name,
+    aliases: [...(destination.aliases ?? [])],
+    sourceUrl: destination.allMatchesEvidenceUrl,
+    allMatchesEvidenceUrl: destination.allMatchesEvidenceUrl,
+    ...(destination.viewingUrl ? { viewingUrl: destination.viewingUrl } : {}),
+    lastVerified: destination.lastVerified
+  };
+}
+
+export function activeAllEventDestinations(config, atEpochSeconds = Math.floor(Date.now() / 1000)) {
+  const records = config.competitions.flatMap((competition) => {
+    const cycleRecords = competition.cycles
+      .filter((cycle) => dateWithin(cycle, atEpochSeconds))
+      .flatMap((cycle) => (cycle.allEventDestinations ?? [])
+        .filter(allMatchesDestination)
+        .map((destination) => destinationRecord(competition, destination, cycle)));
+    const independentRecords = (competition.allEventDestinations ?? [])
+      .filter((destination) => dateWithin(destination, atEpochSeconds) && allMatchesDestination(destination))
+      .map((destination) => destinationRecord(competition, destination, destination));
+    return [...cycleRecords, ...independentRecords];
+  });
+  return [...new Map(records.map((record) => [
+    `${record.competitionId}|${record.territory}|${normalizeBroadcastText(record.name)}|${record.validFrom}|${record.validThrough}`,
+    record
+  ])).values()].sort((left, right) =>
+    left.competitionId.localeCompare(right.competitionId) || left.territory.localeCompare(right.territory) || left.name.localeCompare(right.name)
+  );
+}
+
 export function matchingRights(event, config) {
   const competition = config.competitions.find((item) => item.aliases.some((alias) => seasonless(alias) === seasonless(event.competition)));
   if (!competition) return [];
@@ -90,7 +136,8 @@ export function validateRightsCatalog(config) {
     for (const destination of competition.allEventDestinations ?? []) {
       if (!Array.isArray(destination.seasons) || destination.seasons.length === 0 || !/^\d{4}-\d{2}-\d{2}$/.test(destination.validFrom ?? "") ||
           !/^\d{4}-\d{2}-\d{2}$/.test(destination.validThrough ?? "") || destination.validFrom > destination.validThrough || !isSupportedTerritory(destination.territory) ||
-          !String(destination.name ?? "").trim() || !/^https:\/\//.test(destination.sourceUrl ?? "") || !allMatchesDestination(destination) || !/^\d{4}-\d{2}-\d{2}$/.test(destination.lastVerified ?? "")) throw new Error(`Invalid independent all-event destination for ${competition.id}`);
+          !String(destination.name ?? "").trim() || !validHttpsUrl(destination.sourceUrl) || !allMatchesDestination(destination) || !validHttpsUrl(destination.allMatchesEvidenceUrl) ||
+          (destination.viewingUrl && !validHttpsUrl(destination.viewingUrl)) || !/^\d{4}-\d{2}-\d{2}$/.test(destination.lastVerified ?? "")) throw new Error(`Invalid independent all-event destination for ${competition.id}`);
     }
     for (const cycle of competition.cycles) {
       if (!/^https:\/\//.test(cycle.sourceUrl ?? "") || !/^\d{4}-\d{2}-\d{2}$/.test(cycle.lastVerified ?? "") ||
@@ -105,7 +152,8 @@ export function validateRightsCatalog(config) {
         }
       }
       for (const destination of cycle.allEventDestinations ?? []) {
-        if (!isSupportedTerritory(destination?.territory) || !String(destination?.name ?? "").trim() || !/^https:\/\//.test(destination?.sourceUrl ?? "") || !allMatchesDestination(destination) ||
+        if (!isSupportedTerritory(destination?.territory) || !String(destination?.name ?? "").trim() || !validHttpsUrl(destination?.sourceUrl) || !allMatchesDestination(destination) || !validHttpsUrl(destination?.allMatchesEvidenceUrl) ||
+            (destination?.viewingUrl && !validHttpsUrl(destination.viewingUrl)) ||
             !/^\d{4}-\d{2}-\d{2}$/.test(destination?.lastVerified ?? "")) throw new Error(`Invalid all-event destination for ${competition.id}`);
       }
     }

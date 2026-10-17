@@ -26,12 +26,12 @@ jobs:
     timeout-minutes: 45
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Test feed rules
         run: npm test
@@ -39,18 +39,28 @@ jobs:
       - name: Build validated feed
         run: npm run build
 
+      - name: Record last-known-good state on failure
+        if: failure()
+        shell: bash
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const feed = JSON.parse(require('node:fs').readFileSync('feed/events/v1/events.json', 'utf8'))
+          const expiry = new Date(feed.validUntilEpochSeconds * 1000).toISOString()
+          console.log(`## Feed refresh failed\n\nThe previous atomic feed was preserved. Its strict expiry is **${expiry}**; clients must treat it as stale after that time.`)
+          NODE
+
       - name: Audit broadcaster coverage
         run: npm run coverage:broadcasts
 
       - name: Publish changed feed
         shell: bash
         run: |
-          if git diff --quiet -- feed/events/v1/events.json feed/events/v1/coverage.json feed/events/v1/team-badges-cache.json; then
+          if git diff --quiet -- feed/events/v1/events.json feed/events/v1/coverage.json; then
             echo "Feed has not changed"
             exit 0
           fi
           git config user.name "whoseiptv-events-bot"
           git config user.email "whoseiptv-events-bot@users.noreply.github.com"
-          git add feed/events/v1/events.json feed/events/v1/coverage.json feed/events/v1/team-badges-cache.json
+          git add feed/events/v1/events.json feed/events/v1/coverage.json
           git commit -m "chore: refresh sports events"
           git push

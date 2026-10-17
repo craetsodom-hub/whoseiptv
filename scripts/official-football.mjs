@@ -4,6 +4,7 @@ const LIGUE1_CALENDAR_URL = "https://ma-api.ligue1.fr/championship-calendar/1/ne
 const LIGUE1_MATCH_URL = "https://ma-api.ligue1.fr/championship-match/";
 const MLS_SCHEDULE_URL = "https://stats-api.mlssoccer.com/matches/seasons/MLS-SEA-0001KA";
 const MLS_MATCH_URL = "https://sportapi.mlssoccer.com/api/matches/bySportecIds/";
+import { broadcastAliases } from "./broadcast/normalize.mjs";
 const EXACT_SKY_CHANNELS = new Set([
   "Sky Sports Main Event",
   "Sky Sports Premier League",
@@ -15,7 +16,23 @@ function text(value) {
 }
 
 function aliasesFor(channelName, aliasesByChannel) {
-  return (aliasesByChannel[channelName] ?? []).filter((alias, index, all) => all.indexOf(alias) === index).slice(0, 8);
+  return broadcastAliases(channelName, aliasesByChannel[channelName] ?? [], 8);
+}
+
+function laligaBadgeUrl(value) {
+  try {
+    const url = new URL(String(value ?? ""));
+    return url.protocol === "https:" && url.hostname === "assets.laliga.com" && /^\/assets\/\d{4}\/\d{2}\/\d{2}\/(?:small|medium|large)\/[a-z0-9_.-]+\.png$/i.test(url.pathname)
+      ? url.toString() : null;
+  } catch { return null; }
+}
+
+function mlsBadgeUrl(value) {
+  try {
+    const url = new URL(String(value ?? "").replace("{formatInstructions}", "f_auto,q_auto,w_128,h_128,c_fit"));
+    return url.protocol === "https:" && url.hostname === "images.mlssoccer.com" && /^\/image\/upload\/[a-z0-9_,.-]+\/v\d+\/assets\/[a-z0-9_./-]+\.png$/i.test(url.pathname)
+      ? url.toString() : null;
+  } catch { return null; }
 }
 
 function broadcast(channelName, territory, aliasesByChannel, sourceType, sourceUrl, matchingMethod) {
@@ -91,6 +108,10 @@ export function parseLaLiga(html, aliasesByChannel = {}) {
       competition: "LALIGA EA SPORTS",
       homeTeam,
       awayTeam,
+      homeTeamBadgeUrl: laligaBadgeUrl(match?.home_team?.shield?.url),
+      awayTeamBadgeUrl: laligaBadgeUrl(match?.away_team?.shield?.url),
+      ...(match?.home_team?.id ? { homeTeamSourceIds: { laliga: String(match.home_team.id) } } : {}),
+      ...(match?.away_team?.id ? { awayTeamSourceIds: { laliga: String(match.away_team.id) } } : {}),
       startUtcEpochSeconds: Math.floor(start / 1000),
       broadcasts: channels.map((channel) => broadcast(channel, "ES", aliasesByChannel, "official-event", LALIGA_URL, "embedded-match-object"))
     }];
@@ -139,6 +160,10 @@ export function parseMlsMatch(body, aliasesByChannel = {}) {
     competition,
     homeTeam,
     awayTeam,
+    homeTeamBadgeUrl: mlsBadgeUrl(match?.home?.logoColorUrl),
+    awayTeamBadgeUrl: mlsBadgeUrl(match?.away?.logoColorUrl),
+    ...(match?.home?.sportecId ? { homeTeamSourceIds: { mls: String(match.home.sportecId) } } : {}),
+    ...(match?.away?.sportecId ? { awayTeamSourceIds: { mls: String(match.away.sportecId) } } : {}),
     startUtcEpochSeconds: Math.floor(start / 1000),
     broadcasts: [broadcast(channel, "US", aliasesByChannel, "official-event", sourceUrl, "mls-match-api-broadcaster")]
   }];
@@ -199,6 +224,8 @@ export function resolveOfficialFootball(candidates, records, detailsByEvent = ne
     const bestScore = possible.length > 0 ? Math.max(...possible.map(({ evidence }) => evidence.score)) : null;
     const best = possible.filter(({ evidence }) => evidence.score === bestScore);
     const resolved = best.length === 1 ? best[0] : null;
+    const homeSourceIds = { ...(candidate.homeTeamSourceIds ?? {}), ...(resolved?.source.homeTeam?.sourceIds ?? {}) };
+    const awaySourceIds = { ...(candidate.awayTeamSourceIds ?? {}), ...(resolved?.source.awayTeam?.sourceIds ?? {}) };
     return {
       id: resolved?.source.id ?? candidate.sourceId,
       title: candidate.title,
@@ -206,14 +233,24 @@ export function resolveOfficialFootball(candidates, records, detailsByEvent = ne
       competition: candidate.competition,
       startUtcEpochSeconds: candidate.startUtcEpochSeconds,
       status: "confirmed",
-      homeTeam: { name: candidate.homeTeam, badgeUrl: null },
-      awayTeam: { name: candidate.awayTeam, badgeUrl: null },
+      ...(resolved?.source.sourceIds ? { sourceIds: resolved.source.sourceIds } : {}),
+      homeTeam: { name: candidate.homeTeam, badgeUrl: candidate.homeTeamBadgeUrl ?? null, ...(Object.keys(homeSourceIds).length ? { sourceIds: homeSourceIds } : {}) },
+      awayTeam: { name: candidate.awayTeam, badgeUrl: candidate.awayTeamBadgeUrl ?? null, ...(Object.keys(awaySourceIds).length ? { sourceIds: awaySourceIds } : {}) },
       broadcasts: candidate.broadcasts.map((item) => resolved ? {
         ...item,
         eventMatchingMethod: resolved.evidence.matchingMethod,
         eventMatchConfidence: resolved.evidence.score
       } : item),
-      broadcasterEvidence: { source: candidate.source, url: candidate.sourceUrl, eventMatched: Boolean(resolved) }
+      broadcasterEvidence: {
+        source: candidate.source,
+        url: candidate.sourceUrl,
+        // The official row itself is an exact event record. This flag means
+        // the destination is attached to the parsed teams/kickoff above.
+        eventMatched: true,
+        // A separate field records whether it was also reconciled to the
+        // shared TheSportsDB source ID; consumers must not confuse the two.
+        sourceEventMatched: Boolean(resolved)
+      }
     };
   });
 }

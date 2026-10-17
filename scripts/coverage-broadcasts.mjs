@@ -17,6 +17,13 @@ const officialServices = assignments.filter((item) => isOfficial(item) && isServ
 const sourceEventServices = assignments.filter((item) => item.broadcast.sourceType === "source-event" && isService(item));
 const uniqueOfficialChannels = new Set([...officialLinear, ...officialServices].map(({ broadcast }) => canonicalChannelIdentity(broadcast.channelName)));
 const footballSummary = footballCoverageSummary(events);
+let discoveryCoverage = null;
+try {
+  discoveryCoverage = JSON.parse(await readFile(new URL("../feed/events/v1/coverage.json", import.meta.url), "utf8"));
+} catch {
+  // The sidecar is produced by a live build. A committed feed remains
+  // auditable even before an adapter-attempt report exists.
+}
 const topTierPattern = /^(?:Premier League|English Premier League|UEFA Champions League|UEFA Europa League|UEFA Conference League|LaLiga|LALIGA EA SPORTS|Spanish La Liga|Italian Serie A|Bundesliga|Ligue 1)$/i;
 
 const invalid = assignments.filter(({ broadcast }) => broadcastTerritories(broadcast).length === 0);
@@ -87,6 +94,18 @@ console.log(`Rights metadata territories: ${rightsTerritories.length} (${rightsT
 console.log(`Invalid/legacy territories: ${invalid.length}`);
 console.log(`Sanity anomalies: ${anomalies.length}`);
 for (const anomaly of anomalies) console.log(`ANOMALY | ${anomaly}`);
+if (discoveryCoverage) {
+  console.log("\nOfficial discovery coverage (latest build)");
+  for (const [dimension, rows] of Object.entries(discoveryCoverage.summaries ?? {})) {
+    for (const row of rows) console.log(`COVERAGE | ${dimension}=${row[dimension]} | exact=${row.exactCovered}/${row.total} | ${row.coveragePercentage}%`);
+  }
+  for (const attempt of discoveryCoverage.adapters ?? []) {
+    if (!attempt.success) console.log(`UNSUPPORTED SOURCE | ${attempt.id} | ${attempt.failure ?? "failed without detail"}`);
+  }
+  for (const event of discoveryCoverage.events ?? []) {
+    if (event.rejectionReason) console.log(`GAP | ${event.eventId} | ${event.territory} | ${event.rejectionReason}`);
+  }
+}
 if (officialLinear.length === 0) throw new Error("OFFICIAL exact linear must be greater than zero");
 if (invalid.length > 0) throw new Error("Invalid or empty broadcaster territory scope emitted");
 if (anomalies.length > 0) throw new Error("Generated feed sanity audit failed");

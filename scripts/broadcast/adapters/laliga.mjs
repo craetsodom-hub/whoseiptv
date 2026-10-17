@@ -29,4 +29,4 @@ export function parseLaligaSchedule(html) {
 
 export const laligaAdapter = scheduleAdapter({ id: "laliga-spain", url: LALIGA_URL, parse: parseLaligaSchedule });
 laligaAdapter.contractStatus = "semantic-html-verified";
-laligaAdapter.parserTypes = ["embedded-json", "semantic-table"];
+laligaAdapter.parserTypes = ["embedded-page-state", "json-ld", "semantic-table"];
