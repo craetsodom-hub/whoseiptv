@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T11:15:48.101Z",
+  "generatedAt": "2026-10-18T16:04:51.742Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -7,8 +7,9 @@
       "parserTypes": [
         "first-party-json-api"
       ],
-      "success": true,
-      "candidates": 1
+      "success": false,
+      "candidates": 0,
+      "failure": "HTTP 403"
     },
     {
       "id": "sky-sports-uk",
@@ -127,6 +128,16 @@
       "eventId": "tsdb-2571759",
       "sport": "basketball",
       "competition": "Spanish Liga ACB",
+      "territory": "HR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2571759",
+      "sport": "basketball",
+      "competition": "Spanish Liga ACB",
       "territory": "US",
       "sourcesAttempted": [],
       "exactDestinations": [],
@@ -138,16 +149,6 @@
       "sport": "basketball",
       "competition": null,
       "territory": "ES",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2599267",
-      "sport": "basketball",
-      "competition": "French LNB",
-      "territory": "DE",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -194,6 +195,36 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
+      "eventId": "tsdb-2494064",
+      "sport": "football",
+      "competition": null,
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2494064",
+      "sport": "football",
+      "competition": null,
+      "territory": "GB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2573388",
+      "sport": "football",
+      "competition": "Saudi-Arabian Pro League",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
       "eventId": "tsdb-2505813",
       "sport": "football",
       "competition": "Spanish La Liga 2",
@@ -211,16 +242,6 @@
           "candidates": 0
         }
       ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2494064",
-      "sport": "football",
-      "competition": null,
-      "territory": "FR",
-      "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
       "rejectionReason": "No permitted official source returned a verified event-level destination."
@@ -304,6 +325,16 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
+      "eventId": "tsdb-2573386",
+      "sport": "football",
+      "competition": "Saudi-Arabian Pro League",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
       "eventId": "tsdb-2594576",
       "sport": "football",
       "competition": "UEFA Champions League",
@@ -315,8 +346,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -895,8 +927,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -1115,8 +1148,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -1153,8 +1187,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -1436,27 +1471,7 @@
       "eventId": "tsdb-2601665",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "TR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601665",
-      "sport": "basketball",
-      "competition": "NBA",
       "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2588428",
-      "sport": "basketball",
-      "competition": "EuroCup Basketball",
-      "territory": "DE",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -1474,8 +1489,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -2185,8 +2201,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -2405,8 +2422,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -2443,8 +2461,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -2649,8 +2668,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -2799,8 +2819,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -3515,8 +3536,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -3735,8 +3757,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -3773,8 +3796,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -3979,8 +4003,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -4129,8 +4154,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -4835,8 +4861,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -5055,8 +5082,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -5093,8 +5121,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -5299,8 +5328,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -5449,8 +5479,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -6155,8 +6186,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -6375,8 +6407,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -6413,8 +6446,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -6619,8 +6653,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -6769,8 +6804,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -7475,8 +7511,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -7695,8 +7732,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -7733,8 +7771,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -7939,8 +7978,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -8089,8 +8129,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -8800,8 +8841,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9020,8 +9062,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9058,8 +9101,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9264,8 +9308,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9414,8 +9459,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9593,8 +9639,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9645,8 +9692,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9669,8 +9717,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9750,8 +9799,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9929,8 +9979,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -9981,8 +10032,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10005,8 +10057,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10086,8 +10139,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10265,8 +10319,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10317,8 +10372,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10341,8 +10397,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10422,8 +10479,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10601,8 +10659,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10653,8 +10712,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10677,8 +10737,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10758,8 +10819,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10937,8 +10999,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -10989,8 +11052,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -11013,8 +11077,9 @@
           "parserTypes": [
             "first-party-json-api"
           ],
-          "success": true,
-          "candidates": 1
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -12287,17 +12352,17 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 7,
+        "total": 5,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "sport": "football",
-        "total": 751,
+        "total": 754,
         "attempted": 66,
         "exactCovered": 35,
-        "coveragePercentage": 4.7
+        "coveragePercentage": 4.6
       },
       {
         "sport": "formula1",
@@ -12317,13 +12382,6 @@
     "competition": [
       {
         "competition": "English League 2",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "competition": "EuroCup Basketball",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -12352,7 +12410,7 @@
       },
       {
         "competition": "French LNB",
-        "total": 2,
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -12387,7 +12445,7 @@
       },
       {
         "competition": "NBA",
-        "total": 2,
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -12401,7 +12459,7 @@
       },
       {
         "competition": "Saudi-Arabian Pro League",
-        "total": 2,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -12415,7 +12473,7 @@
       },
       {
         "competition": "Spanish Liga ACB",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -12429,7 +12487,7 @@
       },
       {
         "competition": "unknown",
-        "total": 9,
+        "total": 10,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -12655,10 +12713,10 @@
       },
       {
         "territory": "DE",
-        "total": 12,
+        "total": 10,
         "attempted": 0,
         "exactCovered": 1,
-        "coveragePercentage": 8.3
+        "coveragePercentage": 10
       },
       {
         "territory": "DJ",
@@ -12746,10 +12804,10 @@
       },
       {
         "territory": "GB",
-        "total": 10,
+        "total": 11,
         "attempted": 6,
         "exactCovered": 6,
-        "coveragePercentage": 60
+        "coveragePercentage": 54.5
       },
       {
         "territory": "GH",
@@ -12802,10 +12860,10 @@
       },
       {
         "territory": "HR",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 1,
-        "coveragePercentage": 100
+        "coveragePercentage": 50
       },
       {
         "territory": "HU",
@@ -13306,7 +13364,7 @@
       },
       {
         "territory": "TR",
-        "total": 7,
+        "total": 6,
         "attempted": 6,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -13341,10 +13399,10 @@
       },
       {
         "territory": "US",
-        "total": 34,
+        "total": 36,
         "attempted": 0,
         "exactCovered": 17,
-        "coveragePercentage": 50
+        "coveragePercentage": 47.2
       },
       {
         "territory": "UY",
@@ -13408,8 +13466,8 @@
         "sourceAdapter": "bein-mena",
         "total": 1,
         "attempted": 1,
-        "exactCovered": 1,
-        "coveragePercentage": 100
+        "exactCovered": 0,
+        "coveragePercentage": 0
       },
       {
         "sourceAdapter": "bundesliga-active",
@@ -13635,14 +13693,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-10-18T10:59:44.000Z",
+    "generatedAt": "2026-10-18T15:49:20.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
-    "succeeded": 65,
-    "failed": 7,
-    "successRatio": 0.903,
+    "succeeded": 66,
+    "failed": 6,
+    "successRatio": 0.917,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 3,
+    "detailRequests": 1,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -13684,7 +13742,7 @@
       },
       {
         "sport": "football",
-        "territory": "ID",
+        "territory": "TH",
         "date": "2026-10-18",
         "status": "success"
       },
@@ -13710,11 +13768,12 @@
         "sport": "basketball",
         "territory": "DE",
         "date": "2026-10-18",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "basketball",
-        "territory": "TR",
+        "territory": "HR",
         "date": "2026-10-18",
         "status": "success"
       },
@@ -13722,15 +13781,13 @@
         "sport": "tennis",
         "territory": "GB",
         "date": "2026-10-18",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "tennis",
         "territory": "US",
         "date": "2026-10-18",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "tennis",
@@ -13740,7 +13797,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "AU",
         "date": "2026-10-18",
         "status": "success"
       },
@@ -13764,7 +13821,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "JM",
+        "territory": "GY",
         "date": "2026-10-18",
         "status": "success"
       },
@@ -13788,23 +13845,22 @@
       },
       {
         "sport": "rugby",
-        "territory": "TO",
+        "territory": "GE",
         "date": "2026-10-18",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "football",
         "territory": "GB",
         "date": "2026-10-19",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "football",
         "territory": "US",
         "date": "2026-10-19",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "football",
@@ -13832,7 +13888,7 @@
       },
       {
         "sport": "football",
-        "territory": "ID",
+        "territory": "TH",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -13858,11 +13914,12 @@
         "sport": "basketball",
         "territory": "DE",
         "date": "2026-10-19",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "basketball",
-        "territory": "TR",
+        "territory": "HR",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -13882,12 +13939,11 @@
         "sport": "tennis",
         "territory": "ES",
         "date": "2026-10-19",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "AU",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -13911,7 +13967,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "JM",
+        "territory": "GY",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -13935,9 +13991,10 @@
       },
       {
         "sport": "rugby",
-        "territory": "TO",
+        "territory": "GE",
         "date": "2026-10-19",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "football",
@@ -13949,8 +14006,7 @@
         "sport": "football",
         "territory": "US",
         "date": "2026-10-20",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "football",
@@ -13978,7 +14034,7 @@
       },
       {
         "sport": "football",
-        "territory": "ID",
+        "territory": "TH",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -14004,11 +14060,12 @@
         "sport": "basketball",
         "territory": "DE",
         "date": "2026-10-20",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "basketball",
-        "territory": "TR",
+        "territory": "HR",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -14028,12 +14085,11 @@
         "sport": "tennis",
         "territory": "ES",
         "date": "2026-10-20",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "AU",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -14057,7 +14113,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "JM",
+        "territory": "GY",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -14081,9 +14137,10 @@
       },
       {
         "sport": "rugby",
-        "territory": "TO",
+        "territory": "GE",
         "date": "2026-10-20",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       }
     ]
   }
