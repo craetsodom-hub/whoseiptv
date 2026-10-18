@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1792297649,
-  "validUntilEpochSeconds": 1792340849,
+  "generatedAtEpochSeconds": 1792321184,
+  "validUntilEpochSeconds": 1792364384,
   "events": [
     {
       "id": "sky-Chelsea-Tottenham Hotspur-1792863000000",
@@ -3286,6 +3286,18 @@
       "status": "confirmed",
       "broadcasts": [
         {
+          "channelName": "DAZN Germany",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
           "channelName": "DAZN 1 France",
           "aliases": [],
           "territory": "FR",
@@ -4737,30 +4749,21 @@
       ]
     },
     {
-      "id": "tsdb-2601665",
+      "id": "tsdb-2571759",
       "sourceIds": {
-        "thesportsdb": "2601665"
+        "thesportsdb": "2571759"
       },
-      "title": "Detroit Pistons vs Boston Celtics",
+      "title": "CB 1939 Canarias vs Baskonia",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792522800,
+      "startUtcEpochSeconds": 1792339200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sky Sport NBA",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Peacock Premium",
-          "aliases": [],
+          "channelName": "DAZN US",
+          "aliases": [
+            "DAZN ES",
+            "ES DAZN"
+          ],
           "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
@@ -4772,20 +4775,44 @@
         }
       ],
       "homeTeam": {
-        "name": "Detroit Pistons",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lg7qrc1621594751.png",
+        "name": "CB 1939 Canarias",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vpchdl1698244853.png",
         "sourceIds": {
-          "thesportsdb": "134872"
+          "thesportsdb": "135086"
         }
       },
       "awayTeam": {
-        "name": "Boston Celtics",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4j85bn1667936589.png",
+        "name": "Baskonia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/p4x3o61767366090.png",
         "sourceIds": {
-          "thesportsdb": "134860"
+          "thesportsdb": "135088"
         }
       },
-      "competition": "NBA"
+      "competition": "Spanish Liga ACB"
+    },
+    {
+      "id": "tsdb-2550800",
+      "sourceIds": {
+        "thesportsdb": "2550800"
+      },
+      "title": "Northampton Saints vs Cardiff Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1792341000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "SuperSport Rugby",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
     },
     {
       "id": "sky-Manchester United-Bournemouth-1792936800000",
@@ -6169,6 +6196,45 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "tsdb-2588428",
+      "sourceIds": {
+        "thesportsdb": "2588428"
+      },
+      "title": "Rostock Seawolves vs Aris BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1792519200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "MagentaTV DE",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Rostock Seawolves",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8rkn4b1714562777.png",
+        "sourceIds": {
+          "thesportsdb": "144604"
+        }
+      },
+      "awayTeam": {
+        "name": "Aris BC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
+        "sourceIds": {
+          "thesportsdb": "135628"
+        }
+      },
+      "competition": "EuroCup Basketball"
     },
     {
       "id": "sky-Tottenham Hotspur-Coventry City-1792440000000",
@@ -7570,6 +7636,57 @@
           "season": "2026/27"
         }
       ]
+    },
+    {
+      "id": "tsdb-2601665",
+      "sourceIds": {
+        "thesportsdb": "2601665"
+      },
+      "title": "Detroit Pistons vs Boston Celtics",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1792522800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "S Sport TR",
+          "aliases": [],
+          "territory": "TR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "Peacock Premium",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Detroit Pistons",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lg7qrc1621594751.png",
+        "sourceIds": {
+          "thesportsdb": "134872"
+        }
+      },
+      "awayTeam": {
+        "name": "Boston Celtics",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4j85bn1667936589.png",
+        "sourceIds": {
+          "thesportsdb": "134860"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "sky-Crystal Palace-Newcastle United-1792936800000",
@@ -11434,24 +11551,6 @@
           "verifiedAt": "2026-10-18",
           "exclusive": false,
           "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sky Sports Premier League",
-          "aliases": [
-            "Sky Sports Premier League UK",
-            "UK Sky Sports Premier League",
-            "Sky Sports Premier League HD",
-            "Sky Sports Premier League FHD",
-            "SkySports Premier League"
-          ],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationPrecision": "channel"
         }
       ]
     },
@@ -11481,18 +11580,6 @@
           "channelName": "Movistar #Vamos",
           "aliases": [],
           "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fox Deportes",
-          "aliases": [],
-          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -11577,45 +11664,6 @@
           "destinationPrecision": "channel"
         }
       ]
-    },
-    {
-      "id": "tsdb-2573388",
-      "sourceIds": {
-        "thesportsdb": "2573388"
-      },
-      "title": "Al-Fayha vs Al-Ahli",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792422300,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Fox Deportes",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Al-Fayha",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/jl3spp1677530565.png",
-        "sourceIds": {
-          "thesportsdb": "136014"
-        }
-      },
-      "awayTeam": {
-        "name": "Al-Ahli",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1bbtgb1755192301.png",
-        "sourceIds": {
-          "thesportsdb": "137721"
-        }
-      },
-      "competition": "Saudi-Arabian Pro League"
     },
     {
       "id": "tsdb-2554362",
