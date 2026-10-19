@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T04:52:06.358Z",
+  "generatedAt": "2026-10-19T13:24:44.665Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -129,26 +129,6 @@
       "eventId": "tsdb-2482207",
       "sport": "football",
       "competition": "Italian Serie A",
-      "territory": "TR",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api"
-          ],
-          "success": true,
-          "candidates": 1
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482207",
-      "sport": "football",
-      "competition": "Italian Serie A",
       "territory": "US",
       "sourcesAttempted": [],
       "exactDestinations": [],
@@ -182,6 +162,16 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2398141",
+      "sport": "football",
+      "competition": "Argentinian Primera Division",
+      "territory": "AR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
       "eventId": "tsdb-2500283",
@@ -1356,17 +1346,27 @@
       "eventId": "tsdb-2601665",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "US",
+      "territory": "ES",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "tsdb-2588428",
+      "eventId": "tsdb-2601665",
       "sport": "basketball",
-      "competition": "EuroCup Basketball",
-      "territory": "DE",
+      "competition": "NBA",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2601665",
+      "sport": "basketball",
+      "competition": "NBA",
+      "territory": "US",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -1707,26 +1707,6 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "tsdb-2506222",
-      "sport": "football",
-      "competition": "Spanish La Liga",
-      "territory": "TR",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api"
-          ],
-          "success": true,
-          "candidates": 1
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
       "eventId": "tsdb-2506222",
@@ -4056,6 +4036,36 @@
       "sport": "basketball",
       "competition": "NBA",
       "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2601671",
+      "sport": "basketball",
+      "competition": "NBA",
+      "territory": "ES",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2601671",
+      "sport": "basketball",
+      "competition": "NBA",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2525253",
+      "sport": "basketball",
+      "competition": "Basketball Champions League",
+      "territory": "DE",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -13446,15 +13456,15 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 3,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "sport": "football",
-        "total": 844,
-        "attempted": 63,
+        "total": 843,
+        "attempted": 61,
         "exactCovered": 26,
         "coveragePercentage": 3.1
       },
@@ -13467,6 +13477,20 @@
       }
     ],
     "competition": [
+      {
+        "competition": "Argentinian Primera Division",
+        "total": 1,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
+        "competition": "Basketball Champions League",
+        "total": 1,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
       {
         "competition": "English League 1",
         "total": 1,
@@ -13482,13 +13506,6 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "EuroCup Basketball",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "competition": "Formula 1",
         "total": 51,
         "attempted": 0,
@@ -13497,8 +13514,8 @@
       },
       {
         "competition": "Italian Serie A",
-        "total": 5,
-        "attempted": 1,
+        "total": 4,
+        "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
@@ -13525,7 +13542,7 @@
       },
       {
         "competition": "NBA",
-        "total": 2,
+        "total": 6,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -13546,8 +13563,8 @@
       },
       {
         "competition": "Spanish La Liga",
-        "total": 23,
-        "attempted": 6,
+        "total": 22,
+        "attempted": 5,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
@@ -13604,7 +13621,7 @@
       },
       {
         "territory": "AR",
-        "total": 6,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -13849,10 +13866,10 @@
       },
       {
         "territory": "ES",
-        "total": 12,
+        "total": 14,
         "attempted": 5,
         "exactCovered": 2,
-        "coveragePercentage": 16.7
+        "coveragePercentage": 14.3
       },
       {
         "territory": "ET",
@@ -13870,10 +13887,10 @@
       },
       {
         "territory": "FR",
-        "total": 14,
+        "total": 16,
         "attempted": 0,
         "exactCovered": 3,
-        "coveragePercentage": 21.4
+        "coveragePercentage": 18.8
       },
       {
         "territory": "GA",
@@ -14444,8 +14461,8 @@
       },
       {
         "territory": "TR",
-        "total": 8,
-        "attempted": 8,
+        "total": 6,
+        "attempted": 6,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
@@ -14773,14 +14790,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-10-19T04:35:57.000Z",
+    "generatedAt": "2026-10-19T13:07:24.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
-    "succeeded": 65,
-    "failed": 7,
-    "successRatio": 0.903,
+    "succeeded": 64,
+    "failed": 8,
+    "successRatio": 0.889,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 5,
+    "detailRequests": 3,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -14822,7 +14839,7 @@
       },
       {
         "sport": "football",
-        "territory": "TR",
+        "territory": "AR",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -14848,14 +14865,14 @@
         "sport": "basketball",
         "territory": "DE",
         "date": "2026-10-19",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "basketball",
-        "territory": "CZ",
+        "territory": "JP",
         "date": "2026-10-19",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "tennis",
@@ -14877,7 +14894,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "CZ",
+        "territory": "GR",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -14901,7 +14918,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "PK",
+        "territory": "NZ",
         "date": "2026-10-19",
         "status": "success"
       },
@@ -14915,21 +14932,20 @@
         "sport": "rugby",
         "territory": "FR",
         "date": "2026-10-19",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "rugby",
         "territory": "ZA",
         "date": "2026-10-19",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "rugby",
-        "territory": "NZ",
+        "territory": "US",
         "date": "2026-10-19",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "football",
@@ -14969,7 +14985,7 @@
       },
       {
         "sport": "football",
-        "territory": "TR",
+        "territory": "AR",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -14995,11 +15011,12 @@
         "sport": "basketball",
         "territory": "DE",
         "date": "2026-10-20",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "basketball",
-        "territory": "CZ",
+        "territory": "JP",
         "date": "2026-10-20",
         "status": "failed",
         "reason": "HTTP 429"
@@ -15024,7 +15041,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "CZ",
+        "territory": "GR",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -15048,7 +15065,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "PK",
+        "territory": "NZ",
         "date": "2026-10-20",
         "status": "success"
       },
@@ -15073,9 +15090,10 @@
       },
       {
         "sport": "rugby",
-        "territory": "NZ",
+        "territory": "US",
         "date": "2026-10-20",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "football",
@@ -15115,7 +15133,7 @@
       },
       {
         "sport": "football",
-        "territory": "TR",
+        "territory": "AR",
         "date": "2026-10-21",
         "status": "success"
       },
@@ -15145,16 +15163,16 @@
       },
       {
         "sport": "basketball",
-        "territory": "CZ",
+        "territory": "JP",
         "date": "2026-10-21",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "tennis",
         "territory": "GB",
         "date": "2026-10-21",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       },
       {
         "sport": "tennis",
@@ -15170,7 +15188,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "CZ",
+        "territory": "GR",
         "date": "2026-10-21",
         "status": "success"
       },
@@ -15194,7 +15212,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "PK",
+        "territory": "NZ",
         "date": "2026-10-21",
         "status": "success"
       },
@@ -15214,14 +15232,14 @@
         "sport": "rugby",
         "territory": "ZA",
         "date": "2026-10-21",
-        "status": "failed",
-        "reason": "HTTP 429"
+        "status": "success"
       },
       {
         "sport": "rugby",
-        "territory": "NZ",
+        "territory": "US",
         "date": "2026-10-21",
-        "status": "success"
+        "status": "failed",
+        "reason": "HTTP 429"
       }
     ]
   }
