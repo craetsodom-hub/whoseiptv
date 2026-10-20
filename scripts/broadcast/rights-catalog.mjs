@@ -2,6 +2,7 @@ import { isSupportedTerritory } from "../territories.mjs";
 import { normalizeBroadcastText } from "./normalize.mjs";
 import { expandTerritories } from "./territory-regions.mjs";
 import { broadcastTerritories, mergeExactBroadcasts } from "./resolver.mjs";
+import { verifiedLanguageEvidence } from "./channel-identity.mjs";
 
 function seasonless(value) {
   return normalizeBroadcastText(value).replace(/\s+(?:19|20)\d{2}(?:\s+(?:19|20)?\d{2})?$/, "");
@@ -18,6 +19,13 @@ function eventSeason(event) {
   const year = date.getUTCFullYear();
   const start = date.getUTCMonth() >= 6 ? year : year - 1;
   return `${start}/${String(start + 1).slice(-2)}`;
+}
+
+function matchesSeason(event, seasons) {
+  // Explicit source seasons take precedence; calendar-year competitions also
+  // need to work for fixtures whose source omits the season field.
+  if (event?.season) return seasons.includes(String(event.season));
+  return seasons.includes(eventSeason(event)) || seasons.includes(String(new Date(event.startUtcEpochSeconds * 1000).getUTCFullYear()));
 }
 
 function allMatchesDestination(destination) {
@@ -46,6 +54,7 @@ function destinationRecord(competition, destination, scope) {
     sourceUrl: destination.allMatchesEvidenceUrl,
     allMatchesEvidenceUrl: destination.allMatchesEvidenceUrl,
     ...(destination.viewingUrl ? { viewingUrl: destination.viewingUrl } : {}),
+    ...(destination.languageEvidence ? { languages: destination.languages, languageEvidence: destination.languageEvidence } : {}),
     lastVerified: destination.lastVerified
   };
 }
@@ -74,7 +83,7 @@ export function matchingRights(event, config) {
   const competition = config.competitions.find((item) => item.aliases.some((alias) => seasonless(alias) === seasonless(event.competition)));
   if (!competition) return [];
   const season = eventSeason(event);
-  return competition.cycles.filter((cycle) => cycle.seasons.includes(season) && dateWithin(cycle, event.startUtcEpochSeconds))
+  return competition.cycles.filter((cycle) => matchesSeason(event, cycle.seasons) && dateWithin(cycle, event.startUtcEpochSeconds))
     .flatMap((cycle) => cycle.coverage.flatMap((coverage) => expandTerritories(coverage).map((territory) => ({
       territory,
       holders: coverage.holders,
@@ -91,7 +100,7 @@ export function attachRightsMetadata(events, config) {
   for (const event of events) {
     const rights = matchingRights(event, config);
     if (rights.length > 0) event.broadcastRights = rights;
-    else delete event.broadcastRights;
+    else if (config.competitions.some(item => item.aliases.some(alias => seasonless(alias) === seasonless(event.competition)))) delete event.broadcastRights;
   }
   return events;
 }
@@ -100,15 +109,14 @@ export function attachAllEventDestinations(events, config) {
   for (const event of events) {
     const competition = config.competitions.find((item) => item.aliases.some((alias) => seasonless(alias) === seasonless(event.competition)));
     if (!competition) continue;
-    const season = eventSeason(event);
-    const cycleDestinations = competition.cycles.filter((cycle) => cycle.seasons.includes(season) && dateWithin(cycle, event.startUtcEpochSeconds))
+    const cycleDestinations = competition.cycles.filter((cycle) => matchesSeason(event, cycle.seasons) && dateWithin(cycle, event.startUtcEpochSeconds))
       .flatMap((cycle) => (cycle.allEventDestinations ?? []).filter(allMatchesDestination).map((destination) => ({
         ...destination,
         validFrom: cycle.validFrom,
         validThrough: cycle.validThrough,
         seasons: cycle.seasons
       })));
-    const independentDestinations = (competition.allEventDestinations ?? []).filter((destination) => allMatchesDestination(destination) && destination.seasons.includes(season) && dateWithin(destination, event.startUtcEpochSeconds));
+    const independentDestinations = (competition.allEventDestinations ?? []).filter((destination) => allMatchesDestination(destination) && matchesSeason(event, destination.seasons) && dateWithin(destination, event.startUtcEpochSeconds));
     const assignments = [...cycleDestinations, ...independentDestinations].map((destination) => ({
       channelName: destination.name,
       aliases: destination.aliases ?? [],
@@ -117,6 +125,8 @@ export function attachAllEventDestinations(events, config) {
       sourceType: "official-all-events",
       sourceUrl: destination.allMatchesEvidenceUrl,
       verifiedAt: destination.lastVerified,
+      ...(destination.viewingUrl ? { viewingUrl: destination.viewingUrl } : {}),
+      ...(destination.languageEvidence ? { languages: destination.languages, languageEvidence: destination.languageEvidence } : {}),
       destinationType: "service",
       destinationPrecision: "service",
       ruleType: "all-events"
@@ -133,6 +143,9 @@ export function validateRightsCatalog(config) {
     if (!competition.id || ids.has(competition.id) || !Array.isArray(competition.aliases) || competition.aliases.length === 0 || !Array.isArray(competition.cycles) ||
         !/^https:\/\//.test(competition.exactEventSource ?? "") || competition.fallbackPolicy !== "rights-metadata-only" || !Number.isInteger(competition.updateFrequencyHours)) throw new Error("Invalid competition rights metadata");
     ids.add(competition.id);
+    for (const destination of [...(competition.allEventDestinations ?? []), ...competition.cycles.flatMap(cycle => cycle.allEventDestinations ?? [])]) {
+      if ((destination.languages || destination.languageEvidence) && (!verifiedLanguageEvidence({ ...destination, sourceUrl: destination.allMatchesEvidenceUrl }) || !Array.isArray(destination.languages) || !destination.languages.length || destination.languages.some(code => !/^[a-z]{2}$/.test(code)))) throw new Error(`Invalid audio evidence for ${competition.id}`);
+    }
     for (const destination of competition.allEventDestinations ?? []) {
       if (!Array.isArray(destination.seasons) || destination.seasons.length === 0 || !/^\d{4}-\d{2}-\d{2}$/.test(destination.validFrom ?? "") ||
           !/^\d{4}-\d{2}-\d{2}$/.test(destination.validThrough ?? "") || destination.validFrom > destination.validThrough || !isSupportedTerritory(destination.territory) ||

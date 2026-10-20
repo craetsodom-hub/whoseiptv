@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { validateFeed, mergeCollectedEvents } from "../scripts/feed-core.mjs";
+import { resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import {
   extractFormulaOneRaceLinks,
   parseFormulaOneBroadcasters,
@@ -30,9 +32,19 @@ test("parses country broadcasters and rejects unconfirmed rows", () => {
   `;
   const result = parseFormulaOneBroadcasters(html, { "Sky UK": ["Sky Sports F1"] });
   assert.deepEqual(result, [
-    { channelName: "Sky UK", aliases: ["Sky Sports F1"], territory: "GB", confirmed: true, sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN", matchingMethod: "official-country-broadcaster-table" },
-    { channelName: "Canal+", aliases: [], territory: "FR", confirmed: true, sourceType: "official-broadcaster-schedule", sourceUrl: "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN", matchingMethod: "official-country-broadcaster-table" }
+    { channelName: "Sky UK", aliases: ["Sky Sports F1"], territory: "GB", confirmed: false, sourceType: "official-rights", destinationPrecision: "network", sourceUrl: "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN", matchingMethod: "official-country-broadcaster-table" },
+    { channelName: "Canal+", aliases: [], territory: "FR", confirmed: false, sourceType: "official-rights", destinationPrecision: "network", sourceUrl: "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN", matchingMethod: "official-country-broadcaster-table" }
   ]);
+});
+
+test("F1 rights tables survive the complete resolver and validation without becoming race channels", () => {
+  const broadcasts = parseFormulaOneBroadcasters('<table><tr><td>Germany</td><td>Sky Deutschland</td></tr><tr><td>Spain</td><td>DAZN</td></tr></table>');
+  const html = `<script type="application/ld+json">${JSON.stringify({ '@type': 'SportsEvent', subEvent: [{ '@id': 'race', name: 'Race - Belgian Grand Prix', startDate: '2026-07-19T13:00:00Z' }] })}</script>`;
+  const events = mergeCollectedEvents(parseFormulaOneRacePage(html, broadcasts, now));
+  resolveExactBroadcasts(events, []);
+  assert.equal(validateFeed({ schemaVersion: 1, generatedAtEpochSeconds: now, validUntilEpochSeconds: now + 43200, events }, now), true);
+  assert.ok(events[0].broadcasts.every(b => b.confirmed === false && b.sourceType === 'official-rights'));
+  assert.equal(events[0].broadcastRights.length, 2);
 });
 
 test("rejects legacy region codes from the official broadcaster table", () => {

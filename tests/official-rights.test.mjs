@@ -34,7 +34,7 @@ test("current Serie A and UEFA guarantees attach as services while wrong seasons
   const targets = [event("Serie A"), event("UEFA Champions League"), event("UEFA Europa League"), event("UEFA Conference League")];
   attachAllEventDestinations(targets, rights);
   assert(targets.every((target) => target.broadcasts.some((item) => item.channelName === "Paramount+" && item.territory === "US" && item.ruleType === "all-events")));
-  assert.equal(targets[0].broadcasts[0].viewingUrl, undefined);
+  assert(targets[0].broadcasts.some(b => b.viewingUrl === 'https://www.paramountplus.com/shows/serie-a/episodes/'));
   const wrongSeason = event("Serie A", "2025/26");
   attachAllEventDestinations([wrongSeason], rights);
   assert.equal(wrongSeason.broadcasts.length, 0);
@@ -104,14 +104,14 @@ test("equal-priority broadcaster ordering is independent of adapter row order", 
   assert.deepEqual(mergeExactBroadcasts(rows).map((item) => item.channelName), ["Provider A", "Provider Z"]);
 });
 
-test("duplicate formats collapse to aliases while distinct channel numbers survive", () => {
+test("uncorroborated format variants and channel numbers retain separate identities", () => {
   const merged = mergeExactBroadcasts(
     { channelName: "beIN Sports 1", aliases: [], territory: "MA", sourceType: "official-event" },
     { channelName: "MA | beIN Sports 1 HD", aliases: [], territory: "MA", sourceType: "official-broadcaster-schedule" },
     { channelName: "beIN Sports 2", aliases: [], territory: "MA", sourceType: "official-event" }
   );
-  assert.equal(merged.length, 2);
-  assert(merged.find((item) => item.channelName === "beIN Sports 1").aliases.includes("MA | beIN Sports 1 HD"));
+  assert.equal(merged.length, 3);
+  assert.equal(new Set(merged.map(item => item.channelId)).size, 3);
 });
 
 test("a service alias cannot become an alias for every numbered channel", () => {
@@ -158,6 +158,8 @@ test("existing MENA EPG rows migrate to one Arabic destination", () => {
   canonicalizeRegionalBroadcasts(events);
   assert.deepEqual(events[0].broadcasts.map((item) => item.channelName), ["beIN SPORTS 1"]);
   assert.deepEqual(events[0].broadcasts[0].territories, ["AE", "MA", "QA"]);
+  assert.equal(events[0].broadcasts[0].region, "MENA");
+  assert.equal(events[0].broadcasts[0].languages, undefined);
 });
 
 test("adapter outage fails safely without discarding successful candidates", async () => {
@@ -222,7 +224,9 @@ test("coverage reports rights-only, exact-event, and unresolved territories hone
   assert(!premierLeague.rightsOnlyTerritories.includes("GB"));
   assert(premierLeague.unresolvedTerritories.includes("JP"));
   const laliga = reports.find((item) => item.id === "laliga");
-  assert.deepEqual(laliga.exactServiceTerritories, ["FR", "US"]);
+  assert(laliga.exactServiceTerritories.includes('FR'));
+  assert(laliga.exactServiceTerritories.includes('US'));
+  assert(laliga.exactServiceTerritories.includes('AU'));
 });
 
 test("gap diagnostics declare authoritative providers and sources checked", () => {

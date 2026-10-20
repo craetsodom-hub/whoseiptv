@@ -80,6 +80,6 @@ test("normalised duplicate destinations stay inside their territories", () => {
     { channelName: "Example Sports", territory: "ES", sourceType: "official-event", sourceUrl: "https://official.example.test/s", confirmed: true },
     { channelName: "Example Sports", territory: "GB", sourceType: "official-event", sourceUrl: "https://official.example.test/s", confirmed: true }
   );
-  assert.equal(destinations.length, 2);
-  assert.deepEqual(destinations.map((item) => item.territory).sort(), ["ES", "GB"]);
+  assert.equal(destinations.length, 3);
+  assert.deepEqual(destinations.map((item) => item.territory).sort(), ["ES", "ES", "GB"]);
 });

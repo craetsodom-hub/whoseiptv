@@ -1,6 +1,8 @@
 import { broadcastAliases, canonicalChannelIdentity } from "../normalize.mjs";
 import { TERRITORY_REGIONS } from "../territory-regions.mjs";
-import { embeddedJson, exactRow, objectsWithin, parseRows, stringValue } from "./common.mjs";
+import { embeddedJson, exactRow, objectsWithin, parseRows, stringValue, REPLAY_MARKERS } from "./common.mjs";
+import { beinMenaLanguages } from "../languages.mjs";
+import { reviewedChannelAudio } from "../channel-identity.mjs";
 
 export const BEIN_MENA_URL = "https://www.beinsports.com/en-mena/tv-guide";
 // Some full EPG rows carry long programme descriptions. Keep pages well below
@@ -13,8 +15,8 @@ export const BEIN_MENA_API_URL = `${BEIN_MENA_API_BASE}&limit=${BEIN_MENA_PAGE_S
 // variants are separate channels; French MAX/FR and AFC packages are excluded.
 const CHANNEL = /^beIN(?: SPORTS)? (?:(?:[1-9]|10)|4K(?: HDR)?|XTRA(?: [1-9])?|EN [12])$/i;
 
-function regionalBroadcast() {
-  return [{ region: "Arabic", displayRegion: "AR", rightsHolder: "beIN Sports", regionTerritories: TERRITORY_REGIONS.MENA }];
+function regionalBroadcast(channelName) {
+  return [{ region: "MENA", displayRegion: "MENA", rightsHolder: "beIN Sports", regionTerritories: TERRITORY_REGIONS.MENA, languages: beinMenaLanguages(channelName) }];
 }
 
 function normalizedChannel(value) {
@@ -29,8 +31,46 @@ function normalizedSport(value) {
 function guideKickoff(data) {
   const date = String(data?.m_date ?? "").slice(0, 10);
   const time = String(data?.m_time ?? "").trim();
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !/^\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})$/.test(time)) return null;
   const milliseconds = Date.parse(date && time ? `${date}T${time}` : "");
   return Number.isFinite(milliseconds) ? Math.floor(milliseconds / 1000) : null;
+}
+
+// A programme start is not a match kickoff. Keep the interval separate and
+// reconcile it against an independently sourced fixture in the resolver.
+function programmeMatch(item) {
+  const data = item?.data;
+  if (item?.channel?.provider?.name !== "epg.bein" || data?.ChannelName !== item.channel.name ||
+      String(data?.ChannelCode) !== String(item.channel.externalId)) return null;
+  // Partial structured identities must not be replaced by title guesses.
+  if ([data?.teama, data?.teamb, data?.m_date, data?.m_time, data?.competition_name].some(Boolean)) return null;
+  const title = String(data?.Title?.English ?? "").trim();
+  if (REPLAY_MARKERS.test(title)) return null;
+  const match = title.match(/^(.+?)\s+vs\.?\s+(.+?)\s+-\s+(Spanish LaLiga|UEFA Champions League|UEFA Europa League|UEFA Conference League|Premier League|Ligue 1|Bundesliga)\s+(\d{4})[/-](\d{2}|\d{4})(?:\s+-\s+[^\n]+)?$/i);
+  if (!match || Number(match[5].length === 2 ? match[4].slice(0, 2) + match[5] : match[5]) !== Number(match[4]) + 1) return null;
+  const competitions = {
+    "spanish laliga": ["LaLiga", "Spanish League - Primera División"],
+    "uefa champions league": ["UEFA Champions League", "UEFA Champions League"],
+    "uefa europa league": ["UEFA Europa League", "UEFA Europa League"],
+    "uefa conference league": ["UEFA Conference League", "UEFA Conference League"],
+    "premier league": ["Premier League", "English Premier League"],
+    "ligue 1": ["Ligue 1", "French Ligue 1"],
+    "bundesliga": ["Bundesliga", "German Bundesliga"]
+  };
+  const [competition, category] = competitions[match[3].toLowerCase()];
+  if (data?.Category?.English !== category) return null;
+  const start = String(item.startDate ?? "");
+  const duration = String(data.Duration ?? "").match(/^(\d{2}):([0-5]\d):([0-5]\d)$/);
+  if (!/Z$/.test(start) || !duration) return null;
+  const from = Date.parse(start) / 1000;
+  const seconds = Number(duration[1]) * 3600 + Number(duration[2]) * 60 + Number(duration[3]);
+  if (!Number.isInteger(from) || seconds < 90 * 60 || seconds > 5 * 3600) return null;
+  const seasonStart = Date.UTC(Number(match[4]), 6, 1) / 1000;
+  const seasonEnd = Date.UTC(Number(match[4]) + 1, 6, 1) / 1000;
+  if (from < seasonStart || from >= seasonEnd) return null;
+  return { homeTeam: match[1].trim(), awayTeam: match[2].trim(), competition,
+    programmeWindow: { startUtcEpochSeconds: from, endUtcEpochSeconds: from + seconds },
+    matchingMethod: "bein-epg-title-competition-programme-window" };
 }
 
 export function parseBeinMenaApi(body, sourceUrl = BEIN_MENA_API_URL) {
@@ -39,6 +79,9 @@ export function parseBeinMenaApi(body, sourceUrl = BEIN_MENA_API_URL) {
   if (!Array.isArray(payload?.rows)) return [];
   const rows = payload.rows.flatMap((item) => {
     const data = item?.data;
+    // The endpoint includes APAC rows even with region=en-mena. Never use
+    // channel names alone to transplant a regional feed into MENA.
+    if (item?.channel?.provider?.name && item.channel.provider.name !== "epg.bein") return [];
     const channelName = normalizedChannel(item?.channel?.name ?? data?.ChannelName);
     const homeTeam = String(data?.teama ?? "").trim();
     const awayTeam = String(data?.teamb ?? "").trim();
@@ -48,7 +91,11 @@ export function parseBeinMenaApi(body, sourceUrl = BEIN_MENA_API_URL) {
     const sourceId = String(data?.matchid ?? "").trim();
     const startUtcEpochSeconds = guideKickoff(data);
     const isLive = item?.live === true && String(data?.Live).toLowerCase() === "true";
-    if (!CHANNEL.test(channelName) || !homeTeam || !awayTeam || !competition || !startUtcEpochSeconds || !isLive || item?.replay === true) return [];
+    if (!CHANNEL.test(channelName) || !isLive || item?.replay === true) return [];
+    if (!homeTeam || !awayTeam || !competition || !startUtcEpochSeconds) {
+      const programme = programmeMatch(item);
+      return programme ? [{ ...programme, sport: "football", channels: [channelName], broadcastsFor: regionalBroadcast, sourceUrl }] : [];
+    }
     return [{
       homeTeam, awayTeam, competition, sport: normalizedSport(data?.sport ?? data?.sport_name) ?? "football",
       ...(homeTeamSourceId ? { homeTeamSourceId } : {}),
@@ -59,7 +106,7 @@ export function parseBeinMenaApi(body, sourceUrl = BEIN_MENA_API_URL) {
     }];
   });
   return rows.filter((row, index, all) => all.findIndex((item) => item.competition === row.competition &&
-    item.homeTeam === row.homeTeam && item.awayTeam === row.awayTeam && item.startUtcEpochSeconds === row.startUtcEpochSeconds &&
+    item.homeTeam === row.homeTeam && item.awayTeam === row.awayTeam && item.startUtcEpochSeconds === row.startUtcEpochSeconds && item.programmeWindow?.startUtcEpochSeconds === row.programmeWindow?.startUtcEpochSeconds &&
     item.channels[0] === row.channels[0]) === index);
 }
 
@@ -95,22 +142,43 @@ export function parseBeinMenaGuide(html) {
 export const beinMenaAdapter = {
   id: "bein-mena",
   contractStatus: "first-party-api-verified",
-  parserTypes: ["first-party-json-api"],
+  parserTypes: ["first-party-json-api", "semantic-html", "embedded-json"],
   trustedHosts: ["www.beinsports.com"],
-  async collect({ fetchText, verifiedAt, aliasesByChannel = {} }) {
+  async collect({ fetchText, verifiedAt, aliasesByChannel = {}, onPartialFailure = () => {} }) {
     // The API does not expose a verified date-filter contract. Its count field
     // is authoritative for the current EPG window, so discover every page
     // from that response instead of relying on stale hard-coded offsets.
-    const firstBody = await fetchText(BEIN_MENA_API_URL);
-    const bodies = [{ url: BEIN_MENA_API_URL, body: firstBody }];
-    for (let page = 1; page < pageCount(firstBody); page += 1) {
-      const url = pageUrl(page);
-      bodies.push({ url, body: await fetchText(url) });
+    const bodies = [];
+    const failures = [];
+    try {
+      const firstBody = await fetchText(BEIN_MENA_API_URL);
+      bodies.push({ url: BEIN_MENA_API_URL, body: firstBody });
+      for (let page = 1; page < pageCount(firstBody); page += 1) {
+        const url = pageUrl(page);
+        try { bodies.push({ url, body: await fetchText(url) }); }
+        catch (error) {
+          failures.push(error);
+          // Respect throttling: do not continue hammering the provider.
+          if (error?.status === 429 || /HTTP 429/.test(String(error?.message))) break;
+        }
+      }
+    } catch (error) {
+      if (/exceeds the audited limit/i.test(String(error?.message))) throw error;
+      failures.push(error);
     }
+    let guideHtml = "";
+    try { guideHtml = await fetchText(BEIN_MENA_URL); } catch (error) { failures.push(error); }
+    if (bodies.length === 0 && !guideHtml) throw failures[0] ?? new Error("beIN schedule sources returned no data");
+    for (const failure of failures) onPartialFailure(String(failure?.message ?? failure).slice(0, 160));
     const apiRows = bodies.flatMap(({ url, body }) => parseBeinMenaApi(body, url));
-    // HTML is accepted only for the retained captured-hydration contract used
-    // by older regression fixtures; live production responses are JSON.
-    const rows = apiRows.length > 0 ? apiRows : bodies.flatMap(({ body }) => String(body).includes("<script") ? parseBeinMenaGuide(body) : []);
+    // The public guide and JSON endpoint are independent first-party views.
+    // Read both because the API can expose a narrower active window while the
+    // guide already publishes future exact-channel assignments.
+    const guideRows = guideHtml ? parseBeinMenaGuide(guideHtml) : [];
+    const rows = [...apiRows, ...guideRows].filter((row, index, all) => all.findIndex((item) =>
+      item.competition === row.competition && item.homeTeam === row.homeTeam && item.awayTeam === row.awayTeam &&
+      item.startUtcEpochSeconds === row.startUtcEpochSeconds && item.programmeWindow?.startUtcEpochSeconds === row.programmeWindow?.startUtcEpochSeconds && item.channels.join("|") === row.channels.join("|")
+    ) === index);
     return rows.map((row) => ({
       sport: row.sport ?? "football",
       competition: row.competition,
@@ -118,8 +186,10 @@ export const beinMenaAdapter = {
       awayTeam: row.awayTeamSourceId ? { name: row.awayTeam, sourceIds: { "bein-opta": row.awayTeamSourceId } } : row.awayTeam,
       ...(row.sourceId ? { sourceIds: { "bein-opta": row.sourceId } } : {}),
       startUtcEpochSeconds: row.startUtcEpochSeconds,
-      broadcasts: row.channels.flatMap((channelName) => row.broadcastsFor().map((broadcast) => ({
+      ...(row.programmeWindow ? { programmeWindow: row.programmeWindow, matchingMethod: row.matchingMethod } : {}),
+      broadcasts: row.channels.flatMap((channelName) => row.broadcastsFor(channelName).map((broadcast) => ({
         ...broadcast,
+        ...reviewedChannelAudio(channelName, "MENA", verifiedAt),
         channelName,
         aliases: broadcastAliases(channelName, Object.entries(aliasesByChannel).find(([name]) => canonicalChannelIdentity(name) === canonicalChannelIdentity(channelName))?.[1] ?? []),
         sourceType: "official-broadcaster-schedule",

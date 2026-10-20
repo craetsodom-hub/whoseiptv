@@ -14,6 +14,7 @@ import { OFFICIAL_ADAPTER_STATUS, OFFICIAL_BROADCAST_ADAPTERS } from "../scripts
 import { attachAllEventDestinations, augmentWithOfficialRights } from "../scripts/official-rights.mjs";
 import { mergeExactBroadcasts, resolveExactBroadcasts } from "../scripts/broadcast/resolver.mjs";
 import { canonicalChannelIdentity } from "../scripts/broadcast/normalize.mjs";
+import { validateOfficialSourceAdapter } from "../scripts/broadcast/discovery.mjs";
 
 const script = (value) => `<script type="application/json">${JSON.stringify(value)}</script>`;
 const epoch = (value) => Math.floor(Date.parse(value) / 1000);
@@ -28,6 +29,7 @@ test("only fail-closed fixture-tested adapters are registered", () => {
   assert(!OFFICIAL_ADAPTER_STATUS.some((adapter) => adapter.id === "ligue1-france"));
   assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "sky-sports-uk").contractStatus, "semantic-html-verified");
   assert.equal(OFFICIAL_ADAPTER_STATUS.find((adapter) => adapter.id === "bein-mena").contractStatus, "first-party-api-verified");
+  for (const adapter of OFFICIAL_BROADCAST_ADAPTERS) assert.equal(validateOfficialSourceAdapter(adapter), true);
 });
 
 test("Sky parses exact subchannels and preserves legitimate simulcasts", async () => {
@@ -141,8 +143,9 @@ test("beIN accepts only aligned LIVE matches and rejects replay programming", as
   resolveExactBroadcasts([target], await collect(beinMenaAdapter, guide));
   assert.equal(target.broadcasts.length, 1);
   assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1");
-  assert.equal(target.broadcasts[0].region, "Arabic");
-  assert.equal(target.broadcasts[0].displayRegion, "AR");
+  assert.equal(target.broadcasts[0].region, "MENA");
+  assert.equal(target.broadcasts[0].displayRegion, "MENA");
+  assert.equal(target.broadcasts[0].languages, undefined);
   assert(target.broadcasts[0].territories.includes("MA"));
   assert(!target.broadcasts[0].territories.includes("FR"));
 });
@@ -169,6 +172,7 @@ test("beIN first-party EPG aligns competition, teams, match kickoff and exact ch
   resolveExactBroadcasts([target], await collect(beinMenaAdapter, snapshot));
   assert.equal(target.broadcasts.length, 1);
   assert.equal(target.broadcasts[0].channelName, "beIN SPORTS 1");
+  assert.equal(target.broadcasts[0].languages, undefined);
   assert(target.broadcasts[0].territories.includes("MA"));
   assert(target.broadcasts[0].sourceUrl.includes("/api/opta/tv-event"));
   assert.equal(target.broadcasts[0].matchingMethod, "bein-epg-match-teams-competition-kickoff");
@@ -191,10 +195,52 @@ test("beIN discovers its full current EPG window from API count", async () => {
     },
     verifiedAt: "2026-08-24"
   });
-  assert.equal(urls.length, 4);
+  assert.equal(urls.length, 5);
   assert(urls[0].includes("offset=0"));
-  assert.deepEqual(urls.slice(1).map((url) => url.match(/offset=(\d+)/)?.[1]), ["100", "200", "300"]);
-  assert.deepEqual(candidates.map((candidate) => candidate.competition), ["LaLiga", "LaLiga", "LaLiga", "Bundesliga"]);
+  assert.deepEqual(urls.slice(1, 4).map((url) => url.match(/offset=(\d+)/)?.[1]), ["100", "200", "300"]);
+  assert.equal(urls[4], "https://www.beinsports.com/en-mena/tv-guide");
+  assert.deepEqual(candidates.map((candidate) => candidate.competition), ["LaLiga", "Bundesliga"]);
+});
+
+test("beIN preserves named channel variants without inferring commentary audio", async () => {
+  const body = JSON.stringify({ rows: [
+    { data: { m_date: "2026-10-17T16:30:00", m_time: "16:30:00Z", competition_name: "LaLiga", teama: "Barcelona", teamb: "Real Betis", Live: "True" }, live: true, replay: false, channel: { name: "beIN SPORTS EN 1" } },
+    { data: { m_date: "2026-10-17T18:30:00", m_time: "18:30:00Z", competition_name: "LaLiga", teama: "Sevilla", teamb: "Valencia", Live: "True" }, live: true, replay: false, channel: { name: "beIN SPORTS 1" } }
+  ] });
+  const candidates = await collect(beinMenaAdapter, body);
+  assert.deepEqual(candidates.map((candidate) => candidate.broadcasts[0].languages), [[], []]);
+});
+
+test("beIN guide remains usable when its API is unavailable", async () => {
+  const guide = script({ channels: [{ channelName: "beIN SPORTS 1", programmes: [{
+    title: "Barcelona vs Real Betis", competition: "LaLiga", startDate: "2026-10-17T16:30:00Z", isLive: true
+  }] }] });
+  const candidates = await beinMenaAdapter.collect({
+    fetchText: async (url) => {
+      if (url.includes("/api/opta/tv-event")) throw new Error("API unavailable");
+      return guide;
+    },
+    verifiedAt: "2026-10-17"
+  });
+  assert.deepEqual(candidates.map((candidate) => [candidate.homeTeam, candidate.awayTeam, candidate.broadcasts[0].channelName]), [
+    ["Barcelona", "Real Betis", "beIN SPORTS 1"]
+  ]);
+});
+
+test("beIN API remains usable when its guide is unavailable", async () => {
+  const body = JSON.stringify({ count: 1, rows: [{
+    data: { m_date: "2026-10-17T16:30:00", m_time: "16:30:00Z", competition_name: "LaLiga", teama: "Barcelona", teamb: "Real Betis", Live: "True" },
+    live: true, replay: false, channel: { name: "beIN SPORTS 1" }
+  }] });
+  const candidates = await beinMenaAdapter.collect({
+    fetchText: async (url) => {
+      if (url === "https://www.beinsports.com/en-mena/tv-guide") throw new Error("Guide unavailable");
+      return body;
+    },
+    verifiedAt: "2026-10-17"
+  });
+  assert.equal(candidates.length, 1);
+  assert.equal(candidates[0].broadcasts[0].channelName, "beIN SPORTS 1");
 });
 
 test("beIN namespaces Opta event and participant IDs", async () => {

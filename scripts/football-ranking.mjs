@@ -63,7 +63,20 @@ export function footballImportance(event) {
   return Number((competitionPopularity(event?.competition) * 0.6 + clubScore * 0.4 + matchSignificance(event)).toFixed(3));
 }
 
+export function broadcastEvidencePriority(event) {
+  return (event?.broadcasts ?? []).reduce((best, broadcast) => {
+    const exactOfficial = ["official-event", "official-broadcaster-schedule"].includes(broadcast?.sourceType) &&
+      (broadcast?.destinationPrecision ?? "channel") === "channel" && broadcast?.confirmed === true;
+    if (exactOfficial) return Math.max(best, 3);
+    if (broadcast?.sourceType === "official-all-events" && broadcast?.confirmed === true) return Math.max(best, 2);
+    if (broadcast?.sourceType === "source-event" && broadcast?.confirmed === true) return Math.max(best, 1);
+    return best;
+  }, 0);
+}
+
 export function compareEvents(left, right) {
+  const evidence = broadcastEvidencePriority(right) - broadcastEvidencePriority(left);
+  if (evidence !== 0) return evidence;
   if (left.sport === "football" && right.sport === "football") {
     const importance = footballImportance(right) - footballImportance(left);
     if (importance !== 0) return importance;

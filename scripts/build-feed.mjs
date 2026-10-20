@@ -13,6 +13,9 @@ import { OFFICIAL_BROADCAST_ADAPTERS } from "./broadcast/adapters/index.mjs";
 import { buildDiscoveryCoverage, discoverOfficialDestinations } from "./broadcast/discovery.mjs";
 import { createTeamArtworkResolver, enrichTeamArtwork } from "./team-artwork.mjs";
 import { scheduledCountriesForSport } from "./source-plan.mjs";
+import { retryAfterMilliseconds, retryDelayMilliseconds } from "./http-retry-policy.mjs";
+import { collectEuropeanFixtures } from './european-fixtures.mjs';
+import { previewBaseline } from './preview-baseline.mjs';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(projectRoot, "feed/events/v1/events.json");
@@ -61,7 +64,7 @@ async function fetchWithCurlFallback(url, accept) {
     if (!response.ok) {
       const error = new Error(`HTTP ${response.status}`);
       error.status = response.status;
-      error.retryAfter = Number(response.headers.get("retry-after"));
+      error.retryAfterMs = retryAfterMilliseconds(response.headers.get("retry-after"));
       throw error;
     }
     const body = await response.text();
@@ -89,9 +92,7 @@ async function fetchWithRetry(url, accept) {
       lastError = error;
       const retryable = !error?.status || error.status === 429 || error.status >= 500;
       if (!retryable || attempt === MAX_RETRIES) break;
-      const defaultBackoff = error?.status === 429 ? 15_000 * (attempt + 1) : 2_000 * (attempt + 1);
-      const retryAfter = Number.isFinite(error.retryAfter) && error.retryAfter > 0 ? error.retryAfter * 1000 : defaultBackoff;
-      await wait(Math.min(retryAfter, 30_000));
+      await wait(retryDelayMilliseconds(error, attempt));
     }
   }
   throw lastError;
@@ -241,8 +242,9 @@ async function main() {
     await wait(REQUEST_PACING_MS);
   }
 
+  const baseline = previewBaseline(priorFeed, nowEpochSeconds);
   if (successfulRequests / totalRequests < MIN_SOURCE_SUCCESS_RATIO) {
-    throw new Error(`Only ${successfulRequests}/${totalRequests} source requests succeeded (minimum ${MIN_SOURCE_SUCCESS_RATIO * 100}%); keeping the previous feed`);
+    console.warn(`Only ${successfulRequests}/${totalRequests} source requests succeeded (minimum ${MIN_SOURCE_SUCCESS_RATIO * 100}%); continuing with baseline (${baseline.events.length} events) and independent official sources`);
   }
 
   const detailsByEvent = previousDetails(priorFeed);
@@ -259,6 +261,9 @@ async function main() {
   }
 
   const feed = buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByEvent, { select: false });
+  if (successfulRequests / totalRequests < MIN_SOURCE_SUCCESS_RATIO && baseline.events.length > 0) {
+    feed.events = mergeCollectedEvents([...baseline.events, ...feed.events]);
+  }
   try {
     const [formulaOneResult, nbaResult, footballResult] = await Promise.allSettled([
       collectFormulaOneEvents({
@@ -282,6 +287,14 @@ async function main() {
     const formulaOneEvents = formulaOneResult.status === "fulfilled" ? formulaOneResult.value : [];
     const nbaEvents = nbaResult.status === "fulfilled" ? nbaResult.value : [];
     const footballEvents = footballResult.status === "fulfilled" ? footballResult.value : [];
+    // These collectors read primary sources during this run. Preserve that check
+    // timestamp without suggesting that a country/language label verifies audio.
+    for (const event of [...footballEvents, ...formulaOneEvents, ...nbaEvents]) {
+      for (const broadcast of event.broadcasts ?? []) {
+        broadcast.verifiedAt ??= new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10);
+        broadcast.checkedAt = new Date(nowEpochSeconds * 1000).toISOString();
+      }
+    }
     if (formulaOneResult.status === "rejected") {
       console.error(`Official Formula 1 source failed safely: ${formulaOneResult.reason.message}`);
     }
@@ -291,12 +304,13 @@ async function main() {
     if (footballResult.status === "rejected") {
       console.error(`Official football sources failed safely: ${footballResult.reason.message}`);
     }
-    const mergedEvents = mergeCollectedEvents([...feed.events, ...footballEvents, ...formulaOneEvents, ...nbaEvents]);
+    const europeanFixtures = await collectEuropeanFixtures({fetchText:fetchOfficialPage, nowEpochSeconds, onFailure:failure=>console.error(`European fixture source ${failure.source}: ${failure.error}`)});
+    const mergedEvents = mergeCollectedEvents([...feed.events, ...footballEvents, ...formulaOneEvents, ...nbaEvents, ...europeanFixtures]);
     const discovery = await discoverOfficialDestinations(OFFICIAL_BROADCAST_ADAPTERS, {
       events: mergedEvents,
       fetchText: fetchOfficialPage,
       aliasesByChannel,
-      verifiedAt: new Date(nowEpochSeconds * 1000).toISOString().slice(0, 10)
+      verifiedAt: new Date(nowEpochSeconds * 1000).toISOString()
     });
     for (const attempt of discovery.attempts.filter((attempt) => !attempt.success)) {
       console.error(`Official broadcast adapter ${attempt.id} failed safely: ${attempt.failure}`);
@@ -304,6 +318,7 @@ async function main() {
     augmentWithOfficialRights(mergedEvents, officialRights);
     filterTrustedScheduleBroadcasts(mergedEvents);
     attachAllEventDestinations(mergedEvents, officialRights);
+    for (const candidate of discovery.candidates) for (const broadcast of candidate.broadcasts ?? []) broadcast.checkedAt = new Date(nowEpochSeconds * 1000).toISOString();
     resolveExactBroadcasts(mergedEvents, discovery.candidates);
     canonicalizeRegionalBroadcasts(mergedEvents);
     const artworkCache = new Map();

@@ -1,7 +1,9 @@
+import { stableChannelId, verifiedLanguageEvidence } from "./channel-identity.mjs";
 import { canonicalChannelIdentity, cleanAliases } from "./normalize.mjs";
 import { eventIdentityEvidence } from "./identity.mjs";
 import { strongerSource } from "./source-priority.mjs";
 import { isSupportedTerritory } from "../territories.mjs";
+import { beinMenaLanguages, normalizeBroadcastLanguages } from "./languages.mjs";
 
 export const MAX_BROADCASTS_PER_EVENT = 256;
 const TIME_TOLERANCE_SECONDS = 15 * 60;
@@ -31,12 +33,18 @@ function normalizeAssignment(item) {
   const territories = broadcastTerritories(item);
   const channelName = rawChannelName;
   if (!channelName || territories.length === 0 || (region && !displayRegion)) return null;
-  const destinationPrecision = item.destinationPrecision ?? "channel";
+  const destinationPrecision = /^(?:DAZN|Apple TV|Apple TV\+|WOW|Sky Deutschland|Paramount\+|ESPN\+|Prime Video|Amazon Prime Video|Orange TV)$/i.test(channelName) ? "service" : item.destinationPrecision ?? "channel";
+  const languageEvidence = verifiedLanguageEvidence(item);
+  const languages = languageEvidence ? normalizeBroadcastLanguages(item.languages) : [];
   const exactVerifiedChannel = ["official-event", "official-broadcaster-schedule"].includes(item.sourceType ?? "source-event") &&
     destinationPrecision === "channel" && item.destinationVerified !== false;
   return {
     channelName,
+    originalChannelName: item.originalChannelName ?? rawChannelName,
+    channelId: stableChannelId({ ...item, languages }),
+    ...(languageEvidence ? { languageEvidence } : {}),
     aliases: cleanAliases(channelName, item.aliases ?? []),
+    ...(languages.length > 0 ? { languages } : {}),
     ...(region ? { region, displayRegion, territories } : { territory: territories[0] }),
     // Older all-event service entries explicitly carry confirmed:true and are
     // preserved as part of the v1 contract. New network/service evidence is
@@ -45,13 +53,16 @@ function normalizeAssignment(item) {
     sourceType: item.sourceType ?? "source-event",
     matchingMethod: item.matchingMethod ?? item.ruleType ?? item.sourceType ?? "source-event-id",
     sourceUrl: item.sourceUrl,
+    ...(typeof item.viewingUrl === 'string' && /^https:\/\/[^\s/@]+(?:\/|$)/.test(item.viewingUrl) ? { viewingUrl: item.viewingUrl } : {}),
     verifiedAt: item.verifiedAt,
+    ...(item.checkedAt ? { checkedAt: item.checkedAt } : {}),
     exclusive: item.exclusive === true,
     destinationType: item.destinationType,
     ruleType: item.ruleType,
     destinationPrecision,
     ...(item.destinationVerified === true ? { destinationVerified: true } : {}),
     rightsHolder: item.rightsHolder,
+    ...(item.scope ? { scope: item.scope } : {}),
     eventMatchingMethod: item.eventMatchingMethod,
     eventMatchConfidence: item.eventMatchConfidence
   };
@@ -71,10 +82,12 @@ export function mergeExactBroadcasts(...collections) {
         if (broadcastScopeKey(accepted[index]) === scope && strongerSource(accepted[index], candidate) > 0) accepted.splice(index, 1);
       }
     }
-    const key = `${scope}|${canonicalChannelIdentity(candidate.channelName)}`;
-    const existing = accepted.find((item) => `${broadcastScopeKey(item)}|${canonicalChannelIdentity(item.channelName)}` === key);
+    const key = candidate.channelId;
+    const existing = accepted.find((item) => item.channelId === key);
     if (existing) {
       existing.aliases = cleanAliases(existing.channelName, [...existing.aliases, candidate.channelName, ...candidate.aliases]);
+      const languages = normalizeBroadcastLanguages([...(existing.languages ?? []), ...(candidate.languages ?? [])]);
+      if (languages.length > 0) existing.languages = languages;
       if (existing.region) existing.territories = [...new Set([...existing.territories, ...candidate.territories])].sort();
       continue;
     }
@@ -169,8 +182,9 @@ export function canonicalizeRegionalBroadcasts(events) {
     }
     const regional = [...groups.values()].map((items) => ({
       ...items[0],
-      region: "Arabic",
-      displayRegion: "AR",
+      region: "MENA",
+      displayRegion: "MENA",
+      languages: [], // Regional grouping is not an audio-language assertion.
       territories: items.map((item) => item.territory)
     }));
     event.broadcasts = mergeExactBroadcasts(retained, regional);

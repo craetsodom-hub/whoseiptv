@@ -25,14 +25,18 @@ export function validateOfficialSourceAdapter(adapter) {
 
 export async function discoverOfficialDestinations(adapters, context) {
   adapters.forEach(validateOfficialSourceAdapter);
-  const settled = await Promise.allSettled(adapters.map((adapter) => adapter.collect(context)));
+  const partialFailures = adapters.map(() => []);
+  const settled = await Promise.allSettled(adapters.map((adapter, index) => adapter.collect({ ...context,
+    onPartialFailure: failure => partialFailures[index].push(String(failure).slice(0, 160))
+  })));
   const attempts = settled.map((result, index) => ({
     id: adapters[index].id,
     sourceUrl: adapters[index].sourceUrl,
     parserTypes: adapters[index].parserTypes,
-    success: result.status === "fulfilled",
+    success: result.status === "fulfilled" && partialFailures[index].length === 0,
     candidates: result.status === "fulfilled" ? result.value.length : 0,
-    ...(result.status === "rejected" ? { failure: String(result.reason?.message ?? result.reason).slice(0, 240) } : {})
+    ...(result.status === "rejected" ? { failure: String(result.reason?.message ?? result.reason).slice(0, 240) } : {}),
+    ...(partialFailures[index].length ? { partial: true, failure: partialFailures[index].join('; ').slice(0, 240) } : {})
   }));
   return {
     candidates: settled.flatMap((result) => result.status === "fulfilled" ? result.value : []),

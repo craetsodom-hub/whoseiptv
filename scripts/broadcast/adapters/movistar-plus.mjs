@@ -80,6 +80,7 @@ export const movistarChampionsAdapter = {
         channelName: row.channelName,
         aliases: broadcastAliases(row.channelName, aliasesByChannel[row.channelName] ?? []),
         territory: "ES",
+        languages: [],
         sourceType: "official-event",
         sourceUrl: row.sourceUrl,
         verifiedAt,

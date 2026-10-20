@@ -176,5 +176,5 @@ test("feed data contains broadcaster names and provenance, never IPTV stream des
   const feed = await readFile(new URL("../feed/events/v1/events.json", import.meta.url), "utf8");
   assert.doesNotMatch(feed, /(?:m3u8|rtmp:|rtsp:|acestream:|xtream|#EXTINF|portal\.php)/i);
   const parsed = JSON.parse(feed);
-  assert(parsed.events.flatMap((event) => event.broadcasts).every((broadcast) => !Object.keys(broadcast).some((key) => /stream|iptv|playlist|url$/i.test(key) && key !== "sourceUrl")));
+  assert(parsed.events.flatMap((event) => event.broadcasts).every((broadcast) => !Object.keys(broadcast).some((key) => /stream|iptv|playlist|url$/i.test(key) && key !== "sourceUrl" && key !== "viewingUrl")));
 });

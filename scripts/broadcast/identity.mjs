@@ -257,11 +257,16 @@ export function eventIdentityEvidence(event, candidate, toleranceSeconds = 15 * 
   const sport = candidate.sport ?? "football";
   const competitionIds = compatibleSourceIds(event.competition, candidate.competition);
   if (competitionIds === "conflict" || (competitionIds !== "match" && competitionIdentity(event.competition) !== competitionIdentity(candidate.competition))) return null;
-  if (!Number.isInteger(event.startUtcEpochSeconds) || !Number.isInteger(candidate.startUtcEpochSeconds) ||
-      Math.abs(event.startUtcEpochSeconds - candidate.startUtcEpochSeconds) > toleranceSeconds) return null;
+  if (!Number.isInteger(event.startUtcEpochSeconds)) return null;
+  const programme = candidate.matchingMethod === "bein-epg-title-competition-programme-window" ? candidate.programmeWindow : null;
+  if (programme) {
+    const start = programme.startUtcEpochSeconds, end = programme.endUtcEpochSeconds, kickoff = event.startUtcEpochSeconds;
+    if (sport !== "football" || !Number.isInteger(start) || !Number.isInteger(end) ||
+        end - start < 90 * 60 || end - start > 5 * 3600 || kickoff < start || kickoff - start > 90 * 60 || end - kickoff < 80 * 60) return null;
+  } else if (!Number.isInteger(candidate.startUtcEpochSeconds) || Math.abs(event.startUtcEpochSeconds - candidate.startUtcEpochSeconds) > toleranceSeconds) return null;
   const eventIds = eventSourceIdStatus(event, candidate);
   if (eventIds === "conflict") return null;
-  if (eventIds === "match") return { score: 1000, matchingMethod: "compatible-source-event-id" };
+  if (eventIds === "match" && !programme) return { score: 1000, matchingMethod: "compatible-source-event-id" };
 
   const eventHome = participant(event, "home");
   const eventAway = participant(event, "away");
@@ -278,8 +283,9 @@ export function eventIdentityEvidence(event, candidate, toleranceSeconds = 15 * 
   const best = pairings.filter(([left, right]) => left.score + right.score === bestScore);
   if (best.length !== 1) return null;
   const [left, right, order] = best[0];
+  if (programme && (left.score < 70 || right.score < 70)) return null;
   return {
     score: left.score + right.score,
-    matchingMethod: `${order}:${left.method}+${right.method}`
+    matchingMethod: `${programme ? "programme-window:" : ""}${order}:${left.method}+${right.method}`
   };
 }

@@ -99,6 +99,7 @@ test("parses a numbered Ligue 1+ channel from the official match object", async 
     channelName: "Ligue 1+ 2",
     aliases: ["FR Ligue 1 Plus 2"],
     territory: "FR",
+    rightsHolder: "Ligue 1+",
     confirmed: true,
     sourceType: "official-event",
     sourceUrl: "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73827",

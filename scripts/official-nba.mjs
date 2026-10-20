@@ -32,19 +32,23 @@ function broadcasterEntries(card, aliasesByChannel) {
   const broadcasters = card.broadcasters ?? {};
   const entries = [];
   for (const [key, values] of Object.entries(broadcasters)) {
+    if (!["nationalBroadcasters", "nationalOttBroadcasters", "homeTvBroadcasters", "awayTvBroadcasters", "homeOttBroadcasters", "awayOttBroadcasters", "intlTvBroadcasters", "intlOttBroadcasters"].includes(key)) continue;
     if (!Array.isArray(values)) continue;
     for (const value of values) {
       const channelName = String(value?.broadcasterDisplayName ?? "").trim();
       if (!channelName) continue;
       const region = String(value?.broadcasterLocalizationRegion ?? "").toUpperCase();
-      const territory = key.startsWith("intl") && isSupportedTerritory(region) ? region : "US";
+      if (key.startsWith("intl") && !isSupportedTerritory(region)) continue;
+      const territory = key.startsWith("intl") ? region : "US";
       entries.push({
         channelName,
         aliases: aliasesFor(channelName, aliasesByChannel),
         territory,
         confirmed: true,
+        destinationPrecision: key.toLowerCase().includes("ott") ? "service" : "channel",
+        ...(key.startsWith("home") || key.startsWith("away") ? { scope: "Local-market listing; regional and package restrictions apply." } : {}),
         sourceType: "official-event",
-        sourceUrl: NBA_GAMES_URL,
+        sourceUrl: card.shareUrl,
         matchingMethod: "official-game-card"
       });
     }
@@ -72,6 +76,7 @@ function cardEvents(data, nowEpochSeconds, aliasesByChannel) {
   const latest = nowEpochSeconds + MAX_FUTURE_SECONDS;
   const cards = data?.props?.pageProps?.gameCardFeed?.modules?.flatMap((module) => module.cards ?? []) ?? [];
   return cards.map((item) => item.cardData).map((card) => {
+    if (!card || card.gameStatus !== 1 || !/^\d{10}$/.test(String(card.gameId)) || !new RegExp(`^https://www\\.nba\\.com/game/[a-z0-9-]+-${card.gameId}/?$`).test(String(card.shareUrl))) return null;
     const start = Math.floor(Date.parse(card?.gameTimeUtc ?? "") / 1000);
     const home = card?.homeTeam?.teamName;
     const away = card?.awayTeam?.teamName;

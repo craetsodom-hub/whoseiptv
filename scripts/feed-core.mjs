@@ -3,6 +3,7 @@ import { isSupportedTerritory } from "./territories.mjs";
 import { MAX_BROADCASTS_PER_EVENT, broadcastTerritories, mergeExactBroadcasts } from "./broadcast/resolver.mjs";
 import { eventIdentityEvidence } from "./broadcast/identity.mjs";
 import { broadcastAliases, canonicalChannelIdentity } from "./broadcast/normalize.mjs";
+import { isUnconfirmedLegacyChannel } from "./broadcast/channel-status.mjs";
 
 const MAX_PAST_SECONDS = 6 * 60 * 60;
 const MAX_FUTURE_SECONDS = 8 * 24 * 60 * 60;
@@ -185,7 +186,7 @@ export function buildFeed(records, aliasesByChannel, nowEpochSeconds, detailsByE
       (broadcast) => broadcast.territory === territory &&
         broadcast.channelName.toLocaleLowerCase("en-US") === channelName.toLocaleLowerCase("en-US")
     );
-    if (channelName && !duplicate && event.broadcasts.length < MAX_BROADCASTS_PER_EVENT) {
+    if (channelName && !duplicate && !isUnconfirmedLegacyChannel(channelName, territory, startUtcEpochSeconds) && event.broadcasts.length < MAX_BROADCASTS_PER_EVENT) {
       event.broadcasts.push({
         channelName,
         aliases: aliasesFor(channelName, aliasesByChannel),
@@ -247,11 +248,14 @@ export function validateFeed(feed, nowEpochSeconds) {
     }
     for (const broadcast of event.broadcasts) {
       const territories = broadcastTerritories(broadcast);
-      const exactChannel = ["official-event", "official-broadcaster-schedule", "source-event"].includes(broadcast.sourceType) &&
-        (broadcast.destinationPrecision ?? "channel") === "channel";
+      // v1 confirmed means a supplied event destination. Precision distinguishes
+      // an exact linear channel from an event-specific streaming platform.
+      const eventDestination = ["official-event", "official-broadcaster-schedule", "source-event"].includes(broadcast.sourceType) &&
+        ["channel", "service", "network"].includes(broadcast.destinationPrecision ?? "channel");
       if (!broadcast.channelName || territories.length === 0 || (broadcast.region && (!broadcast.displayRegion || broadcast.territory !== undefined)) || typeof broadcast.confirmed !== "boolean" ||
-          (broadcast.confirmed === true && !exactChannel && broadcast.sourceType !== "official-all-events") ||
+          (broadcast.confirmed === true && !eventDestination && broadcast.sourceType !== "official-all-events") ||
           !broadcast.sourceType || !broadcast.sourceUrl || !broadcast.matchingMethod ||
+          (broadcast.languages !== undefined && (!Array.isArray(broadcast.languages) || broadcast.languages.length > 8 || broadcast.languages.some((language) => !/^[a-z]{2}$/.test(language)))) ||
           (broadcast.aliases !== undefined && (!Array.isArray(broadcast.aliases) || broadcast.aliases.length > MAX_ALIASES_PER_BROADCAST))) {
         throw new Error(`Invalid broadcaster for ${event.id}`);
       }

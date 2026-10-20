@@ -5,15 +5,7 @@ const LIGUE1_MATCH_URL = "https://ma-api.ligue1.fr/championship-match/";
 const MLS_SCHEDULE_URL = "https://stats-api.mlssoccer.com/matches/seasons/MLS-SEA-0001KA";
 const MLS_MATCH_URL = "https://sportapi.mlssoccer.com/api/matches/bySportecIds/";
 import { broadcastAliases } from "./broadcast/normalize.mjs";
-const EXACT_SKY_CHANNELS = new Set([
-  "Sky Sports Main Event",
-  "Sky Sports Premier League",
-  "Sky Sports+"
-]);
-
-function text(value) {
-  return String(value ?? "").replace(/<[^>]+>/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
-}
+import { parseSkyFixtureSchedule } from './broadcast/sky-fixtures.mjs';
 
 function aliasesFor(channelName, aliasesByChannel) {
   return broadcastAliases(channelName, aliasesByChannel[channelName] ?? [], 8);
@@ -35,11 +27,14 @@ function mlsBadgeUrl(value) {
   } catch { return null; }
 }
 
-function broadcast(channelName, territory, aliasesByChannel, sourceType, sourceUrl, matchingMethod) {
+function broadcast(channelName, territory, aliasesByChannel, sourceType, sourceUrl, matchingMethod, languages = []) {
+  const rightsHolder = /^Sky Sports/i.test(channelName) ? "Sky Sports" : /^Movistar|^M\+/i.test(channelName) ? "Movistar Plus+" : /^DAZN/i.test(channelName) ? "DAZN" : /^Orange/i.test(channelName) ? "Orange" : /^Ligue 1\+/i.test(channelName) ? "Ligue 1+" : channelName === "Apple TV" ? "Apple" : undefined;
   return {
     channelName,
     aliases: aliasesFor(channelName, aliasesByChannel),
     territory,
+    // Language needs an explicit audio evidence contract; display language is insufficient.
+    ...(rightsHolder ? { rightsHolder } : {}),
     confirmed: true,
     sourceType,
     sourceUrl,
@@ -49,40 +44,7 @@ function broadcast(channelName, territory, aliasesByChannel, sourceType, sourceU
 }
 
 export function parseSkyPremierLeague(html, aliasesByChannel = {}, referenceDate = new Date()) {
-  const candidates = [];
-  const dateSections = String(html).split(/(?=<h3\b[^>]*>)/i);
-  for (const section of dateSections) {
-    const dateLabel = text(section.match(/^<h3\b[^>]*>([\s\S]*?)<\/h3>/i)?.[1]);
-    const dateParts = dateLabel.match(/^(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+(\d{1,2})(?:st|nd|rd|th)\s+([A-Za-z]+)$/);
-    if (!dateParts) continue;
-    let year = referenceDate.getUTCFullYear();
-    const month = new Date(`${dateParts[2]} 1, 2000 UTC`).getUTCMonth();
-    if (!Number.isInteger(month)) continue;
-    if (month < referenceDate.getUTCMonth() - 6) year += 1;
-    if (month > referenceDate.getUTCMonth() + 6) year -= 1;
-
-    for (const match of section.matchAll(/<div\b[^>]*class="[^"]*event-group[^"]*"[^>]*>([\s\S]*?)<p\b[^>]*class="[^"]*event-detail[^"]*"[^>]*>([\s\S]*?)<\/p>[\s\S]*?<\/div>/gi)) {
-      const teams = [...match[1].matchAll(/<strong\b[^>]*>([\s\S]*?)<\/strong>/gi)].map((item) => text(item[1]));
-      const kickoff = text(match[1].match(/<li\b[^>]*class="[^"]*col2[^"]*"[^>]*>([\s\S]*?)<\/li>/i)?.[1]);
-      const details = text(match[2]);
-      const channels = [...details.matchAll(/(Sky Sports Main Event|Sky Sports Premier League|Sky Sports\+)\s*\(/g)]
-        .map((item) => item[1]).filter((channel, index, all) => EXACT_SKY_CHANNELS.has(channel) && all.indexOf(channel) === index);
-      if (teams.length < 2 || !/^\d{2}:\d{2}$/.test(kickoff) || channels.length === 0) continue;
-      const start = Date.UTC(year, month, Number(dateParts[1]), Number(kickoff.slice(0, 2)), Number(kickoff.slice(3)));
-      candidates.push({
-        source: "sky",
-        sourceUrl: SKY_URL,
-        sourceId: `sky-${teams[0]}-${teams[1]}-${start}`,
-        title: `${teams[0]} vs ${teams[1]}`,
-        competition: "Premier League",
-        homeTeam: teams[0],
-        awayTeam: teams[1],
-        startUtcEpochSeconds: Math.floor(start / 1000),
-        broadcasts: channels.map((channel) => broadcast(channel, "GB", aliasesByChannel, "official-broadcaster-schedule", SKY_URL, "fixture-row-teams-kickoff"))
-      });
-    }
-  }
-  return candidates;
+  return parseSkyFixtureSchedule(html, aliasesByChannel, referenceDate);
 }
 
 export function parseLaLiga(html, aliasesByChannel = {}) {
@@ -113,7 +75,7 @@ export function parseLaLiga(html, aliasesByChannel = {}) {
       ...(match?.home_team?.id ? { homeTeamSourceIds: { laliga: String(match.home_team.id) } } : {}),
       ...(match?.away_team?.id ? { awayTeamSourceIds: { laliga: String(match.away_team.id) } } : {}),
       startUtcEpochSeconds: Math.floor(start / 1000),
-      broadcasts: channels.map((channel) => broadcast(channel, "ES", aliasesByChannel, "official-event", LALIGA_URL, "embedded-match-object"))
+      broadcasts: channels.map((channel) => broadcast(channel, "ES", aliasesByChannel, "official-event", LALIGA_URL, "embedded-match-object", ["es"]))
     }];
   });
 }
@@ -136,7 +98,7 @@ export function parseLigue1Match(body, aliasesByChannel = {}) {
     homeTeam,
     awayTeam,
     startUtcEpochSeconds: Math.floor(start / 1000),
-    broadcasts: channels.map((channel) => broadcast(channel, "FR", aliasesByChannel, "official-event", `${LIGUE1_MATCH_URL}${match.id}`, "official-match-id"))
+    broadcasts: channels.map((channel) => broadcast(channel, "FR", aliasesByChannel, "official-event", `${LIGUE1_MATCH_URL}${match.id}`, "official-match-id", ["fr"]))
   }];
 }
 
@@ -233,7 +195,7 @@ export function resolveOfficialFootball(candidates, records, detailsByEvent = ne
       competition: candidate.competition,
       startUtcEpochSeconds: candidate.startUtcEpochSeconds,
       status: "confirmed",
-      ...(resolved?.source.sourceIds ? { sourceIds: resolved.source.sourceIds } : {}),
+      ...((candidate.sourceIds || resolved?.source.sourceIds) ? { sourceIds: { ...candidate.sourceIds, ...resolved?.source.sourceIds } } : {}),
       homeTeam: { name: candidate.homeTeam, badgeUrl: candidate.homeTeamBadgeUrl ?? null, ...(Object.keys(homeSourceIds).length ? { sourceIds: homeSourceIds } : {}) },
       awayTeam: { name: candidate.awayTeam, badgeUrl: candidate.awayTeamBadgeUrl ?? null, ...(Object.keys(awaySourceIds).length ? { sourceIds: awaySourceIds } : {}) },
       broadcasts: candidate.broadcasts.map((item) => resolved ? {

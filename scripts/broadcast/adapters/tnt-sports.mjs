@@ -7,7 +7,7 @@ export function parseTntSportsSchedule(html) {
   return parseRows(html, { channelKeys: ["channels", "services", "broadcasters"], channelPattern: DESTINATION, competitionFallback: "Premier League", sourceTimeKeys: ["kickoff", "kickoffTime", "startDate"] })
     .map((row) => ({
       ...row,
-      broadcastsFor: (channel) => [{ territory: "GB", rightsHolder: "TNT Sports", destinationType: /^HBO Max$/i.test(channel) ? "service" : "linear", destinationPrecision: /^TNT Sports$/i.test(channel) ? "network" : "channel" }]
+      broadcastsFor: (channel) => [{ territory: "GB", rightsHolder: "TNT Sports", languages: [], destinationType: /^HBO Max$/i.test(channel) ? "service" : "linear", destinationPrecision: /^TNT Sports$/i.test(channel) ? "network" : "channel" }]
     }));
 }
 

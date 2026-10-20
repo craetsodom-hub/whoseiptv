@@ -24,7 +24,7 @@ export function parseLaligaSemanticTable(html) {
 export function parseLaligaSchedule(html) {
   const rows = [...parseRows(html, { channelKeys: ["operators", "operator", "broadcasters"], channelPattern: OPERATOR, competitionFallback: "LaLiga", sourceTimeKeys: ["kickoff", "kickoffTime", "startDate"] }), ...parseLaligaSemanticTable(html)];
   return rows.filter((row, index, all) => all.findIndex((item) => item.homeTeam === row.homeTeam && item.awayTeam === row.awayTeam && item.startUtcEpochSeconds === row.startUtcEpochSeconds && item.channels.join("|") === row.channels.join("|")) === index)
-    .map((row) => ({ ...row, broadcastsFor: (channel) => [{ territory: "ES", rightsHolder: /^Movistar/i.test(channel) ? "Movistar Plus+" : "DAZN", destinationType: /^DAZN$/i.test(channel) ? "service" : "linear" }] }));
+    .map((row) => ({ ...row, broadcastsFor: (channel) => [{ territory: "ES", rightsHolder: /^Movistar/i.test(channel) ? "Movistar Plus+" : "DAZN", languages: [], destinationType: /^DAZN$/i.test(channel) ? "service" : "linear" }] }));
 }
 
 export const laligaAdapter = scheduleAdapter({ id: "laliga-spain", url: LALIGA_URL, parse: parseLaligaSchedule });

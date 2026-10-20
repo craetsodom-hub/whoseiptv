@@ -94,8 +94,9 @@ export function parseFormulaOneBroadcasters(html, aliasesByChannel = {}) {
         channelName: channelName.slice(0, 120),
         aliases: aliasesFor(channelName, aliasesByChannel),
         territory,
-        confirmed: true,
-        sourceType: "official-broadcaster-schedule",
+        confirmed: false,
+        sourceType: "official-rights",
+        destinationPrecision: "network",
         sourceUrl: BROADCASTERS_URL,
         matchingMethod: "official-country-broadcaster-table"
       });
@@ -166,7 +167,16 @@ export function parseFormulaOneRacePage(html, broadcasts, nowEpochSeconds) {
         competition: "Formula 1",
         startUtcEpochSeconds,
         status: "confirmed",
+        // Retain v1 broadcaster records as explicitly unconfirmed network
+        // references, and expose their actual competition-rights semantics.
         broadcasts,
+        broadcastRights: [...new Set(broadcasts.map(b => b.territory))].map(territory => ({
+          territory,
+          holders: broadcasts.filter(b => b.territory === territory).map(b => ({ name: b.channelName })),
+          sourceType: "official-rights",
+          sourceUrl: BROADCASTERS_URL,
+          season: String(new Date(startUtcEpochSeconds * 1000).getUTCFullYear())
+        })),
         artworkUrl: officialArtworkUrl(session.image) ?? officialArtworkUrl(root.image)
       });
     }

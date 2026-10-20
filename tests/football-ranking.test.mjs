@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { competitionPopularity, footballImportance, matchSignificance, normalizeFootballName } from "../scripts/football-ranking.mjs";
+import { broadcastEvidencePriority, competitionPopularity, footballImportance, matchSignificance, normalizeFootballName } from "../scripts/football-ranking.mjs";
 import { selectEvents } from "../scripts/feed-core.mjs";
 
 let id = 0;
@@ -64,6 +64,18 @@ test("importance selection happens before the 100-event cap and kickoff is last 
   const tiedEarly = fixture("Bundesliga", "Bayern Munich", "Borussia Dortmund", 1_800_000_001);
   const tiedLate = fixture("Bundesliga", "Bayern Munich", "Borussia Dortmund", 1_800_000_002);
   assert.deepEqual(selectEvents([tiedLate, tiedEarly]), [tiedEarly, tiedLate]);
+});
+
+test("exact official channels survive the cap before unresolved popular fixtures", () => {
+  const unresolved = Array.from({ length: 100 }, (_, index) => fixture("UEFA Champions League", `Major ${index}`, `Elite ${index}`, 1_800_000_000 + index));
+  const covered = fixture("Regional League", "Local A", "Local B", 1_800_100_000);
+  covered.broadcasts = [{
+    channelName: "beIN SPORTS 1", confirmed: true, sourceType: "official-broadcaster-schedule", destinationPrecision: "channel"
+  }];
+  const selected = selectEvents([...unresolved, covered]);
+  assert.equal(broadcastEvidencePriority(covered), 3);
+  assert(selected.includes(covered));
+  assert.equal(selected[0], covered);
 });
 
 test("Champions League night ranks UCL above domestic and global league fixtures", () => {

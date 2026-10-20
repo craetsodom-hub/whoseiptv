@@ -5,7 +5,7 @@ const ACTIVE = /^(?:Sky Deutschland|DAZN|WOW)$/i;
 
 export function parseBundesligaSchedule(html) {
   return parseRows(html, { channelKeys: ["activeBroadcasters", "activeBroadcaster"], channelPattern: ACTIVE, competitionFallback: "Bundesliga" })
-    .map((row) => ({ ...row, broadcastsFor: () => [{ territory: "DE" }] }));
+    .map((row) => ({ ...row, broadcastsFor: () => [{ territory: "DE", languages: [] }] }));
 }
 
 export const bundesligaAdapter = scheduleAdapter({ id: "bundesliga-active", url: BUNDESLIGA_URL, parse: parseBundesligaSchedule });
