@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1792540246,
-  "validUntilEpochSeconds": 1792583446,
+  "generatedAtEpochSeconds": 1792557714,
+  "validUntilEpochSeconds": 1792600914,
   "events": [
     {
       "id": "espn-401915312",
@@ -70,9 +70,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -107,8 +107,8 @@
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
           "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap2/2026-10-21",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -174,9 +174,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -1349,45 +1349,86 @@
       ]
     },
     {
-      "id": "tsdb-2588428",
+      "id": "tsdb-2601667",
       "sourceIds": {
-        "thesportsdb": "2588428"
+        "thesportsdb": "2601667"
       },
-      "title": "Rostock Seawolves vs Aris BC",
+      "title": "San Antonio Spurs vs Oklahoma City Thunder",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792519200,
+      "startUtcEpochSeconds": 1792546200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MagentaTV DE",
-          "originalChannelName": "MagentaTV DE",
-          "channelId": "territory:de|magentatv de|",
+          "channelName": "Peacock Premium",
+          "originalChannelName": "Peacock Premium",
+          "channelId": "territory:us|peacock premium|",
           "aliases": [],
-          "territory": "DE",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Rostock Seawolves",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8rkn4b1714562777.png",
+        "name": "San Antonio Spurs",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yc5qfx1781459158.png",
         "sourceIds": {
-          "thesportsdb": "144604"
+          "thesportsdb": "134879"
         }
       },
       "awayTeam": {
-        "name": "Aris BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/l0tssh1739659466.png",
+        "name": "Oklahoma City Thunder",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bkhj5p1778199006.png",
         "sourceIds": {
-          "thesportsdb": "135628"
+          "thesportsdb": "134887"
         }
       },
-      "competition": "EuroCup Basketball"
+      "competition": "NBA"
+    },
+    {
+      "id": "tsdb-2550118",
+      "sourceIds": {
+        "thesportsdb": "2550118"
+      },
+      "title": "Edinburgh vs Lions",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1792781100,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "SuperSport Rugby",
+          "originalChannelName": "SuperSport Rugby",
+          "channelId": "territory:za|supersport rugby|",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Edinburgh",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5t1tbn1536391225.png",
+        "sourceIds": {
+          "thesportsdb": "135598"
+        }
+      },
+      "awayTeam": {
+        "name": "Lions",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6y804o1649010370.png",
+        "sourceIds": {
+          "thesportsdb": "136668"
+        }
+      },
+      "competition": "United Rugby Championship"
     },
     {
       "id": "f1-https-www-formula1-com-en-racing-2026-united-states-race-1792958400",
@@ -1407,8 +1448,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1422,8 +1463,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1437,8 +1478,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1452,8 +1493,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1467,8 +1508,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1482,8 +1523,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1497,8 +1538,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1512,8 +1553,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1527,8 +1568,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1542,8 +1583,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1557,8 +1598,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1572,8 +1613,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1587,8 +1628,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1602,8 +1643,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1617,8 +1658,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1632,8 +1673,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1647,8 +1688,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1662,8 +1703,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1677,8 +1718,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1692,8 +1733,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1707,8 +1748,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1722,8 +1763,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1737,8 +1778,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1752,8 +1793,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1767,8 +1808,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1782,8 +1823,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1797,8 +1838,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1812,8 +1853,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1827,8 +1868,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1842,8 +1883,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1857,8 +1898,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1872,8 +1913,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1887,8 +1928,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1902,8 +1943,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1917,8 +1958,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1932,8 +1973,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1947,8 +1988,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1962,8 +2003,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1977,8 +2018,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1992,8 +2033,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2010,8 +2051,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service"
         },
@@ -2025,8 +2066,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2040,8 +2081,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2055,8 +2096,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2070,8 +2111,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2085,8 +2126,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2100,8 +2141,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2115,8 +2156,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2130,8 +2171,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2145,8 +2186,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2160,8 +2201,8 @@
           "sourceType": "official-rights",
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         }
@@ -2798,8 +2839,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -2838,8 +2879,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -2877,8 +2918,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -4235,75 +4276,86 @@
       ]
     },
     {
-      "id": "tsdb-2601665",
+      "id": "tsdb-2525253",
       "sourceIds": {
-        "thesportsdb": "2601665"
+        "thesportsdb": "2525253"
       },
-      "title": "Detroit Pistons vs Boston Celtics",
+      "title": "Joventut Badalona vs Bonn",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792522800,
+      "startUtcEpochSeconds": 1792605600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
+          "channelName": "MagentaTV DE",
+          "originalChannelName": "MagentaTV DE",
+          "channelId": "territory:de|magentatv de|",
           "aliases": [],
-          "territory": "ES",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports HD 1 France",
-          "originalChannelName": "BeIn Sports HD 1 France",
-          "channelId": "territory:fr|bein sports hd 1 france|",
-          "aliases": [
-            "BeIn Sports 1 France"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Peacock Premium",
-          "originalChannelName": "Peacock Premium",
-          "channelId": "territory:us|peacock premium|",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Detroit Pistons",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lg7qrc1621594751.png",
+        "name": "Joventut Badalona",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vuqqry1425410580.png",
         "sourceIds": {
-          "thesportsdb": "134872"
+          "thesportsdb": "135083"
         }
       },
       "awayTeam": {
-        "name": "Boston Celtics",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4j85bn1667936589.png",
+        "name": "Bonn",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fva1jj1726927533.png",
         "sourceIds": {
-          "thesportsdb": "134860"
+          "thesportsdb": "135432"
         }
       },
-      "competition": "NBA"
+      "competition": "Basketball Champions League"
+    },
+    {
+      "id": "tsdb-2553397",
+      "sourceIds": {
+        "thesportsdb": "2553397"
+      },
+      "title": "Gloucester vs Bath Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1792781100,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TNT Sports Ultimate",
+          "originalChannelName": "TNT Sports Ultimate",
+          "channelId": "territory:gb|tnt sports ultimate|",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Gloucester",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v9unxi1536943971.png",
+        "sourceIds": {
+          "thesportsdb": "135201"
+        }
+      },
+      "awayTeam": {
+        "name": "Bath Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/u4l0r31546689367.png",
+        "sourceIds": {
+          "thesportsdb": "135199"
+        }
+      },
+      "competition": "English Prem Rugby"
     },
     {
       "id": "espn-401915395",
@@ -4338,6 +4390,104 @@
         "badgeUrl": null
       },
       "broadcasts": [
+        {
+          "channelName": "beIN SPORTS 2",
+          "originalChannelName": "beIN SPORTS 2",
+          "channelId": "region:mena|bein sports 2|",
+          "aliases": [
+            "beIN Sports HD 2",
+            "beIN Sports 2 HD",
+            "beIN Sports 2 FHD",
+            "MENA | beIN Sports 2"
+          ],
+          "region": "MENA",
+          "displayRegion": "MENA",
+          "territories": [
+            "AE",
+            "BH",
+            "DZ",
+            "EG",
+            "IQ",
+            "JO",
+            "KW",
+            "LB",
+            "LY",
+            "MA",
+            "OM",
+            "PS",
+            "QA",
+            "SA",
+            "SY",
+            "TN",
+            "YE"
+          ],
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "bein-epg-title-competition-programme-window",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "beIN Sports",
+          "eventMatchingMethod": "programme-window:ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Stan Sport",
+          "originalChannelName": "Stan Sport",
+          "channelId": "territory:au|stan sport|",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "M+ Liga de Campeones 2",
+          "originalChannelName": "M+ Liga de Campeones 2",
+          "channelId": "territory:es|m+ liga de campeones 2|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "movistar-epg-match-teams-coverage-time",
+          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap1/2026-10-21",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+structured-participant-equivalence",
+          "eventMatchConfidence": 150
+        },
+        {
+          "channelName": "Paramount+",
+          "originalChannelName": "Paramount+",
+          "channelId": "territory:us|paramount+|",
+          "aliases": [
+            "US Paramount+"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+          "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+          "verifiedAt": "2026-10-17",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
         {
           "channelName": "beIN SPORTS EN 1",
           "originalChannelName": "beIN SPORTS EN 1",
@@ -4378,107 +4528,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "destinationVerified": true,
-          "rightsHolder": "beIN Sports",
-          "eventMatchingMethod": "programme-window:ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
-          "channelName": "Stan Sport",
-          "originalChannelName": "Stan Sport",
-          "channelId": "territory:au|stan sport|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "M+ Liga de Campeones 2",
-          "originalChannelName": "M+ Liga de Campeones 2",
-          "channelId": "territory:es|m+ liga de campeones 2|",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "movistar-epg-match-teams-coverage-time",
-          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap1/2026-10-21",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+structured-participant-equivalence",
-          "eventMatchConfidence": 150
-        },
-        {
-          "channelName": "Paramount+",
-          "originalChannelName": "Paramount+",
-          "channelId": "territory:us|paramount+|",
-          "aliases": [
-            "US Paramount+"
-          ],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
-          "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
-          "verifiedAt": "2026-10-17",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "beIN SPORTS 2",
-          "originalChannelName": "beIN SPORTS 2",
-          "channelId": "region:mena|bein sports 2|",
-          "aliases": [
-            "beIN Sports HD 2",
-            "beIN Sports 2 HD",
-            "beIN Sports 2 FHD",
-            "MENA | beIN Sports 2"
-          ],
-          "region": "MENA",
-          "displayRegion": "MENA",
-          "territories": [
-            "AE",
-            "BH",
-            "DZ",
-            "EG",
-            "IQ",
-            "JO",
-            "KW",
-            "LB",
-            "LY",
-            "MA",
-            "OM",
-            "PS",
-            "QA",
-            "SA",
-            "SY",
-            "TN",
-            "YE"
-          ],
-          "confirmed": true,
-          "sourceType": "official-broadcaster-schedule",
-          "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -5651,42 +5703,58 @@
       ]
     },
     {
-      "id": "tsdb-2601667",
+      "id": "tsdb-2601671",
       "sourceIds": {
-        "thesportsdb": "2601667"
+        "thesportsdb": "2601671"
       },
-      "title": "San Antonio Spurs vs Oklahoma City Thunder",
+      "title": "Miami Heat vs Minnesota Timberwolves",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792546200,
+      "startUtcEpochSeconds": 1792625400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Peacock Premium",
-          "originalChannelName": "Peacock Premium",
-          "channelId": "territory:us|peacock premium|",
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
           "aliases": [],
-          "territory": "US",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 1 France",
+          "originalChannelName": "BeIn Sports HD 1 France",
+          "channelId": "territory:fr|bein sports hd 1 france|",
+          "aliases": [
+            "BeIn Sports 1 France"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "San Antonio Spurs",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yc5qfx1781459158.png",
+        "name": "Miami Heat",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b9tye31778226616.png",
         "sourceIds": {
-          "thesportsdb": "134879"
+          "thesportsdb": "134882"
         }
       },
       "awayTeam": {
-        "name": "Oklahoma City Thunder",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bkhj5p1778199006.png",
+        "name": "Minnesota Timberwolves",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/epenxg1781034811.png",
         "sourceIds": {
-          "thesportsdb": "134887"
+          "thesportsdb": "134886"
         }
       },
       "competition": "NBA"
@@ -5735,9 +5803,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -5772,7 +5840,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -6976,45 +7044,45 @@
       ]
     },
     {
-      "id": "tsdb-2525253",
+      "id": "tsdb-2601676",
       "sourceIds": {
-        "thesportsdb": "2525253"
+        "thesportsdb": "2601676"
       },
-      "title": "Joventut Badalona vs Bonn",
+      "title": "Los Angeles Lakers vs Golden State Warriors",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792605600,
+      "startUtcEpochSeconds": 1792634400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MagentaTV DE",
-          "originalChannelName": "MagentaTV DE",
-          "channelId": "territory:de|magentatv de|",
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
           "aliases": [],
-          "territory": "DE",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Joventut Badalona",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vuqqry1425410580.png",
+        "name": "Los Angeles Lakers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/d8uoxw1714254511.png",
         "sourceIds": {
-          "thesportsdb": "135083"
+          "thesportsdb": "134867"
         }
       },
       "awayTeam": {
-        "name": "Bonn",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fva1jj1726927533.png",
+        "name": "Golden State Warriors",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xokycb1778197905.png",
         "sourceIds": {
-          "thesportsdb": "135432"
+          "thesportsdb": "134865"
         }
       },
-      "competition": "Basketball Champions League"
+      "competition": "NBA"
     },
     {
       "id": "espn-401915390",
@@ -7078,9 +7146,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -8288,58 +8356,42 @@
       ]
     },
     {
-      "id": "tsdb-2601671",
+      "id": "tsdb-2601678",
       "sourceIds": {
-        "thesportsdb": "2601671"
+        "thesportsdb": "2601678"
       },
-      "title": "Miami Heat vs Minnesota Timberwolves",
+      "title": "Los Angeles Clippers vs Sacramento Kings",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792625400,
+      "startUtcEpochSeconds": 1792636200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
+          "channelName": "NBC Sports California",
+          "originalChannelName": "NBC Sports California",
+          "channelId": "territory:us|nbc sports california|",
           "aliases": [],
-          "territory": "ES",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "BeIn Sports HD 1 France",
-          "originalChannelName": "BeIn Sports HD 1 France",
-          "channelId": "territory:fr|bein sports hd 1 france|",
-          "aliases": [
-            "BeIn Sports 1 France"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Miami Heat",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b9tye31778226616.png",
+        "name": "Los Angeles Clippers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3gtb8s1719303125.png",
         "sourceIds": {
-          "thesportsdb": "134882"
+          "thesportsdb": "134866"
         }
       },
       "awayTeam": {
-        "name": "Minnesota Timberwolves",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/epenxg1781034811.png",
+        "name": "Sacramento Kings",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k2buwo1778227426.png",
         "sourceIds": {
-          "thesportsdb": "134886"
+          "thesportsdb": "134869"
         }
       },
       "competition": "NBA"
@@ -8406,9 +8458,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -9616,45 +9668,45 @@
       ]
     },
     {
-      "id": "tsdb-2601676",
+      "id": "tsdb-2565507",
       "sourceIds": {
-        "thesportsdb": "2601676"
+        "thesportsdb": "2565507"
       },
-      "title": "Los Angeles Lakers vs Golden State Warriors",
+      "title": "Anadolu Efes SK vs Besiktas Basketbol",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792634400,
+      "startUtcEpochSeconds": 1792690200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
+          "channelName": "MagentaTV DE",
+          "originalChannelName": "MagentaTV DE",
+          "channelId": "territory:de|magentatv de|",
           "aliases": [],
-          "territory": "ES",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Los Angeles Lakers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/d8uoxw1714254511.png",
+        "name": "Anadolu Efes SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
         "sourceIds": {
-          "thesportsdb": "134867"
+          "thesportsdb": "136066"
         }
       },
       "awayTeam": {
-        "name": "Golden State Warriors",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xokycb1778197905.png",
+        "name": "Besiktas Basketbol",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rx0o811667119583.png",
         "sourceIds": {
-          "thesportsdb": "134865"
+          "thesportsdb": "135885"
         }
       },
-      "competition": "NBA"
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2594632",
@@ -9695,9 +9747,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -9732,8 +9784,8 @@
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
           "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap1/2026-10-21",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -10940,45 +10992,47 @@
       ]
     },
     {
-      "id": "tsdb-2601678",
+      "id": "tsdb-2565512",
       "sourceIds": {
-        "thesportsdb": "2601678"
+        "thesportsdb": "2565512"
       },
-      "title": "Los Angeles Clippers vs Sacramento Kings",
+      "title": "KK Partizan vs KK Crvena zvezda",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792636200,
+      "startUtcEpochSeconds": 1792694700,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "NBC Sports California",
-          "originalChannelName": "NBC Sports California",
-          "channelId": "territory:us|nbc sports california|",
-          "aliases": [],
-          "territory": "US",
+          "channelName": "BeIn Sports HD 2 France",
+          "originalChannelName": "BeIn Sports HD 2 France",
+          "channelId": "territory:fr|bein sports hd 2 france|",
+          "aliases": [
+            "BeIn Sports 2 France"
+          ],
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Los Angeles Clippers",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3gtb8s1719303125.png",
+        "name": "KK Partizan",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/us0e1z1767366567.png",
         "sourceIds": {
-          "thesportsdb": "134866"
+          "thesportsdb": "136102"
         }
       },
       "awayTeam": {
-        "name": "Sacramento Kings",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/k2buwo1778227426.png",
+        "name": "KK Crvena zvezda",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5tlez31767366440.png",
         "sourceIds": {
-          "thesportsdb": "134869"
+          "thesportsdb": "136096"
         }
       },
-      "competition": "NBA"
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "sky-Liverpool-Brighton and Hove Albion-1792936800000",
@@ -11047,8 +11101,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -12437,45 +12491,75 @@
       ]
     },
     {
-      "id": "tsdb-2565507",
+      "id": "tsdb-2601680",
       "sourceIds": {
-        "thesportsdb": "2565507"
+        "thesportsdb": "2601680"
       },
-      "title": "Anadolu Efes SK vs Besiktas Basketbol",
+      "title": "Oklahoma City Thunder vs Denver Nuggets",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1792690200,
+      "startUtcEpochSeconds": 1792719000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MagentaTV DE",
-          "originalChannelName": "MagentaTV DE",
-          "channelId": "territory:de|magentatv de|",
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
           "aliases": [],
-          "territory": "DE",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "BeIn Sports HD 1 France",
+          "originalChannelName": "BeIn Sports HD 1 France",
+          "channelId": "territory:fr|bein sports hd 1 france|",
+          "aliases": [
+            "BeIn Sports 1 France"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ESPN Deportes",
+          "originalChannelName": "ESPN Deportes",
+          "channelId": "territory:us|espn deportes|",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Anadolu Efes SK",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
+        "name": "Oklahoma City Thunder",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/bkhj5p1778199006.png",
         "sourceIds": {
-          "thesportsdb": "136066"
+          "thesportsdb": "134887"
         }
       },
       "awayTeam": {
-        "name": "Besiktas Basketbol",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rx0o811667119583.png",
+        "name": "Denver Nuggets",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s8ch7m1778197814.png",
         "sourceIds": {
-          "thesportsdb": "135885"
+          "thesportsdb": "134885"
         }
       },
-      "competition": "EuroLeague Basketball"
+      "competition": "NBA"
     },
     {
       "id": "sky-Manchester United-Bournemouth-1792936800000",
@@ -12544,8 +12628,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -13934,49 +14018,6 @@
       ]
     },
     {
-      "id": "tsdb-2565512",
-      "sourceIds": {
-        "thesportsdb": "2565512"
-      },
-      "title": "KK Partizan vs KK Crvena zvezda",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1792694700,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "BeIn Sports HD 2 France",
-          "originalChannelName": "BeIn Sports HD 2 France",
-          "channelId": "territory:fr|bein sports hd 2 france|",
-          "aliases": [
-            "BeIn Sports 2 France"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "KK Partizan",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/us0e1z1767366567.png",
-        "sourceIds": {
-          "thesportsdb": "136102"
-        }
-      },
-      "awayTeam": {
-        "name": "KK Crvena zvezda",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/5tlez31767366440.png",
-        "sourceIds": {
-          "thesportsdb": "136096"
-        }
-      },
-      "competition": "EuroLeague Basketball"
-    },
-    {
       "id": "sky-Crystal Palace-Newcastle United-1792936800000",
       "title": "Crystal Palace vs Newcastle United",
       "sport": "football",
@@ -14042,8 +14083,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -15461,8 +15502,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73890",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -15541,8 +15582,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73888",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -15653,9 +15694,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700",
-          "verifiedAt": "2026-10-20T23:50:46.000Z",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600",
+          "verifiedAt": "2026-10-21T04:41:54.000Z",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -16863,23 +16904,14 @@
       ]
     },
     {
-      "id": "sky-Ipswich Town-Nottingham Forest-1792785600000",
+      "id": "tsdb-2494075",
+      "sourceIds": {
+        "thesportsdb": "2494075"
+      },
       "title": "Ipswich Town vs Nottingham Forest",
       "sport": "football",
-      "competition": "Premier League",
       "startUtcEpochSeconds": 1792782000,
       "status": "confirmed",
-      "sourceIds": {
-        "sky": "559520"
-      },
-      "homeTeam": {
-        "name": "Ipswich Town",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "Nottingham Forest",
-        "badgeUrl": null
-      },
       "broadcasts": [
         {
           "channelName": "Stan Sport",
@@ -16925,13 +16957,29 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
           "destinationVerified": true,
-          "rightsHolder": "Sky Sports"
+          "rightsHolder": "Sky Sports",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
+        },
+        {
+          "channelName": "Sky Sport Max",
+          "originalChannelName": "Sky Sport Max",
+          "channelId": "territory:it|sky sport max|",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         },
         {
           "channelName": "Premier League+",
@@ -16966,11 +17014,26 @@
           "destinationPrecision": "service"
         }
       ],
+      "homeTeam": {
+        "name": "Ipswich Town",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/mdj1ey1634670785.png",
+        "sourceIds": {
+          "thesportsdb": "133622"
+        }
+      },
+      "awayTeam": {
+        "name": "Nottingham Forest",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/sar2y41781740886.png",
+        "sourceIds": {
+          "thesportsdb": "133720"
+        }
+      },
+      "competition": "English Premier League",
       "broadcasterEvidence": {
         "source": "sky",
         "url": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
         "eventMatched": true,
-        "sourceEventMatched": false
+        "sourceEventMatched": true
       },
       "broadcastRights": [
         {
@@ -18375,8 +18438,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -19831,8 +19894,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -19871,8 +19934,8 @@
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -21245,21 +21308,29 @@
       ]
     },
     {
-      "id": "l1_championship_match_73886",
-      "title": "Stade Brestois 29 vs OGC Nice",
+      "id": "tsdb-2489530",
+      "sourceIds": {
+        "thesportsdb": "2489530"
+      },
+      "title": "Brest vs Nice",
       "sport": "football",
-      "competition": "Ligue 1",
       "startUtcEpochSeconds": 1792781100,
       "status": "confirmed",
-      "homeTeam": {
-        "name": "Stade Brestois 29",
-        "badgeUrl": null
-      },
-      "awayTeam": {
-        "name": "OGC Nice",
-        "badgeUrl": null
-      },
       "broadcasts": [
+        {
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
         {
           "channelName": "Ligue 1+ 2",
           "originalChannelName": "Ligue 1+ 2",
@@ -21274,11 +21345,13 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73886",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
-          "rightsHolder": "Ligue 1+"
+          "rightsHolder": "Ligue 1+",
+          "eventMatchingMethod": "ordered:canonical-participant-alias+canonical-participant-alias",
+          "eventMatchConfidence": 180
         },
         {
           "channelName": "Ligue 1+",
@@ -21298,13 +21371,42 @@
           "destinationType": "service",
           "ruleType": "all-events",
           "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Ligue 1+ 1 FR",
+          "originalChannelName": "Ligue 1+ 1 FR",
+          "channelId": "territory:fr|ligue 1+ 1 fr|",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
         }
       ],
+      "homeTeam": {
+        "name": "Brest",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z69be41598797026.png",
+        "sourceIds": {
+          "thesportsdb": "133704"
+        }
+      },
+      "awayTeam": {
+        "name": "Nice",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/msy7ly1621593859.png",
+        "sourceIds": {
+          "thesportsdb": "133712"
+        }
+      },
+      "competition": "French Ligue 1",
       "broadcasterEvidence": {
         "source": "ligue1",
         "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73886",
         "eventMatched": true,
-        "sourceEventMatched": false
+        "sourceEventMatched": true
       },
       "broadcastRights": [
         {
@@ -21354,8 +21456,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73892",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -21434,8 +21536,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73887",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -21514,8 +21616,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73889",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -21594,8 +21696,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73884",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -21674,8 +21776,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73885",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -21754,8 +21856,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73891",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -21947,8 +22049,8 @@
           "sourceType": "official-event",
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -22472,1229 +22574,6 @@
           "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
           "verifiedAt": "2026-08-23",
           "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2594576",
-      "sourceIds": {
-        "thesportsdb": "2594576"
-      },
-      "title": "Stuttgart vs Atlético Madrid",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792522800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Stan Sport",
-          "originalChannelName": "Stan Sport",
-          "channelId": "territory:au|stan sport|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Paramount+",
-          "originalChannelName": "Paramount+",
-          "channelId": "territory:us|paramount+|",
-          "aliases": [
-            "US Paramount+"
-          ],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
-          "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
-          "verifiedAt": "2026-10-17",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "homeTeam": {
-        "name": "Stuttgart",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yppyux1473454085.png",
-        "sourceIds": {
-          "thesportsdb": "133660"
-        }
-      },
-      "awayTeam": {
-        "name": "Atlético Madrid",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/0ulh3q1719984315.png",
-        "sourceIds": {
-          "thesportsdb": "133729"
-        }
-      },
-      "competition": "UEFA Champions League",
-      "broadcastRights": [
-        {
-          "territory": "GB",
-          "holders": [
-            {
-              "name": "TNT Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "Paramount+",
-              "kind": "service"
-            },
-            {
-              "name": "TUDN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CA",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AU",
-          "holders": [
-            {
-              "name": "Stan Sport",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BH",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DZ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "EG",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IQ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "JO",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KW",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LB",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "OM",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PS",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "QA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TN",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "YE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AO",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BF",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BI",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BJ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CD",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CF",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CI",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CV",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DJ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ER",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ET",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GA",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GH",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GN",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GQ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "GW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KE",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LR",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LS",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ML",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MR",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MU",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MZ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NA",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NE",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "RW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SC",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SD",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SL",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SN",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SO",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SS",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ST",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SZ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TD",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TZ",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "UG",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ZA",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ZM",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "ZW",
-          "holders": [
-            {
-              "name": "SuperSport",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BD",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BT",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IN",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LK",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MV",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "NP",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PK",
-          "holders": [
-            {
-              "name": "Sony Sports Network",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
           "validThrough": "2027-06-30",
           "season": "2026/27"
         }
@@ -26312,7 +25191,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -26681,7 +25560,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -26695,7 +25574,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -26755,105 +25634,6 @@
           ],
           "sourceType": "official-rights",
           "sourceUrl": "https://www.uefa.com/uefaeuropaleague/news/028d-1af1354fca61-efb642e380e6-1000--where-to-watch-the-europa-league-tv-broadcast-partners-live-/",
-          "verifiedAt": "2026-10-17",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2594713",
-      "sourceIds": {
-        "thesportsdb": "2594713"
-      },
-      "title": "Ajax vs Atalanta",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792695600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Stan Sport",
-          "originalChannelName": "Stan Sport",
-          "channelId": "territory:au|stan sport|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Blue Sport 4 CH",
-          "originalChannelName": "Blue Sport 4 CH",
-          "channelId": "territory:ch|blue sport 4 ch|",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Paramount+",
-          "originalChannelName": "Paramount+",
-          "channelId": "territory:us|paramount+|",
-          "aliases": [
-            "US Paramount+"
-          ],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
-          "viewingUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
-          "verifiedAt": "2026-10-17",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "homeTeam": {
-        "name": "Ajax",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zg9tii1755495289.png",
-        "sourceIds": {
-          "thesportsdb": "133772",
-          "espn": "139"
-        }
-      },
-      "awayTeam": {
-        "name": "Atalanta",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qix5ku1780561327.png",
-        "sourceIds": {
-          "thesportsdb": "134782",
-          "espn": "105"
-        }
-      },
-      "competition": "UEFA Conference League",
-      "broadcastRights": [
-        {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "Paramount+",
-              "kind": "service"
-            },
-            {
-              "name": "TUDN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefaconferenceleague/news/0285-18f79eae3aac-5c7eb199a66d-1000--where-to-watch-the-uefa-europa-conference-league-final-tv-b/",
           "verifiedAt": "2026-10-17",
           "validFrom": "2026-07-01",
           "validThrough": "2027-06-30",
@@ -27152,20 +25932,6 @@
           "destinationPrecision": "service"
         },
         {
-          "channelName": "DAZN Switzerland",
-          "originalChannelName": "DAZN Switzerland",
-          "channelId": "territory:ch|dazn switzerland|",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
           "channelName": "DAZN 2 Germany",
           "originalChannelName": "DAZN 2 Germany",
           "channelId": "territory:de|dazn 2 germany|",
@@ -27175,7 +25941,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -27206,7 +25972,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -27223,7 +25989,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -28560,7 +27326,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -28663,7 +27429,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -30187,6 +28953,97 @@
       ]
     },
     {
+      "id": "espn-401915837",
+      "sourceIds": {
+        "espn": "401915837"
+      },
+      "title": "Ajax Amsterdam vs Atalanta",
+      "sport": "football",
+      "competition": "UEFA Conference League",
+      "startUtcEpochSeconds": 1792695600,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Ajax Amsterdam",
+        "aliases": [
+          "Ajax",
+          "Ajax Amsterdam"
+        ],
+        "sourceIds": {
+          "espn": "139"
+        },
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Atalanta",
+        "aliases": [
+          "Atalanta",
+          "Atalanta"
+        ],
+        "sourceIds": {
+          "espn": "105"
+        },
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Stan Sport",
+          "originalChannelName": "Stan Sport",
+          "channelId": "territory:au|stan sport|",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Paramount+",
+          "originalChannelName": "Paramount+",
+          "channelId": "territory:us|paramount+|",
+          "aliases": [
+            "US Paramount+"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
+          "viewingUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
+          "verifiedAt": "2026-10-17",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcastRights": [
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "Paramount+",
+              "kind": "service"
+            },
+            {
+              "name": "TUDN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefaconferenceleague/news/0285-18f79eae3aac-5c7eb199a66d-1000--where-to-watch-the-uefa-europa-conference-league-final-tv-b/",
+          "verifiedAt": "2026-10-17",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
       "id": "tsdb-2594707",
       "sourceIds": {
         "thesportsdb": "2594707"
@@ -30222,7 +29079,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -30286,155 +29143,381 @@
       ]
     },
     {
-      "id": "tsdb-2573386",
+      "id": "tsdb-2607183",
       "sourceIds": {
-        "thesportsdb": "2573386"
+        "thesportsdb": "2607183"
       },
-      "title": "Al-Nassr vs Neom",
+      "title": "Flamengo vs Estudiantes de La Plata",
       "sport": "football",
-      "startUtcEpochSeconds": 1792519200,
+      "startUtcEpochSeconds": 1792715400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sportdigital Fussball",
-          "originalChannelName": "Sportdigital Fussball",
-          "channelId": "territory:de|sportdigital fussball|",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Movistar #Vamos",
-          "originalChannelName": "Movistar #Vamos",
-          "channelId": "territory:es|movistar #vamos|",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Fox Deportes",
-          "originalChannelName": "Fox Deportes",
-          "channelId": "territory:us|fox deportes|",
+          "channelName": "BeIn Sports USA",
+          "originalChannelName": "BeIn Sports USA",
+          "channelId": "territory:us|bein sports usa|",
           "aliases": [],
           "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Al-Nassr",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/84yvqi1748524565.png",
+        "name": "Flamengo",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/syptwx1473538074.png",
         "sourceIds": {
-          "thesportsdb": "136022"
+          "thesportsdb": "134287"
         }
       },
       "awayTeam": {
-        "name": "Neom",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4luwe11737685220.png",
+        "name": "Estudiantes de La Plata",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/pf08dq1760634366.png",
         "sourceIds": {
-          "thesportsdb": "150637"
+          "thesportsdb": "135160"
         }
       },
-      "competition": "Saudi-Arabian Pro League"
+      "competition": "Copa Libertadores"
     },
     {
-      "id": "tsdb-2573384",
+      "id": "tsdb-2508392",
       "sourceIds": {
-        "thesportsdb": "2573384"
+        "thesportsdb": "2508392"
       },
-      "title": "Al-Ettifaq vs Al-Ittihad",
+      "title": "Stuttgart vs Borussia Mönchengladbach",
       "sport": "football",
-      "startUtcEpochSeconds": 1792519200,
+      "startUtcEpochSeconds": 1792780200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Switzerland",
-          "originalChannelName": "DAZN Switzerland",
-          "channelId": "territory:ch|dazn switzerland|",
+          "channelName": "OneSoccer CA",
+          "originalChannelName": "OneSoccer CA",
+          "channelId": "territory:ca|onesoccer ca|",
           "aliases": [],
-          "territory": "CH",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Al-Ettifaq",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/m272h51694761970.png",
+        "name": "Stuttgart",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yppyux1473454085.png",
         "sourceIds": {
-          "thesportsdb": "136017"
+          "thesportsdb": "133660"
         }
       },
       "awayTeam": {
-        "name": "Al-Ittihad",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8n1t1j1755192418.png",
+        "name": "Borussia Mönchengladbach",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/sysurw1473453380.png",
         "sourceIds": {
-          "thesportsdb": "136018"
+          "thesportsdb": "134779"
         }
       },
-      "competition": "Saudi-Arabian Pro League"
-    },
-    {
-      "id": "tsdb-2500283",
-      "sourceIds": {
-        "thesportsdb": "2500283"
-      },
-      "title": "Gillingham vs Port Vale",
-      "sport": "football",
-      "startUtcEpochSeconds": 1792522800,
-      "status": "confirmed",
-      "broadcasts": [
+      "competition": "German Bundesliga",
+      "broadcastRights": [
         {
-          "channelName": "Sky Sports Football",
-          "originalChannelName": "Sky Sports Football",
-          "channelId": "territory:gb|sky sports football|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
-          "exclusive": false,
-          "destinationPrecision": "channel"
+          "territory": "DE",
+          "holders": [
+            {
+              "name": "Sky Deutschland",
+              "kind": "network"
+            },
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "WOW",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/info/broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
         }
-      ],
-      "homeTeam": {
-        "name": "Gillingham",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/sqxvpp1424033506.png",
-        "sourceIds": {
-          "thesportsdb": "134230"
-        }
-      },
-      "awayTeam": {
-        "name": "Port Vale",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/s1ke3v1761710614.png",
-        "sourceIds": {
-          "thesportsdb": "134375"
-        }
-      },
-      "competition": "English League 2"
+      ]
     },
     {
       "id": "tsdb-2500840",
@@ -30456,7 +29539,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-20",
+          "verifiedAt": "2026-10-21",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -30476,6 +29559,129 @@
         }
       },
       "competition": "English League 1"
+    },
+    {
+      "id": "tsdb-2607487",
+      "sourceIds": {
+        "thesportsdb": "2607487"
+      },
+      "title": "Montevideo City Torque vs Atlético Mineiro",
+      "sport": "football",
+      "startUtcEpochSeconds": 1792620000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BeIn Sports Canada",
+          "originalChannelName": "BeIn Sports Canada",
+          "channelId": "territory:ca|bein sports canada|",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Montevideo City Torque",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v7urjn1580234584.png",
+        "sourceIds": {
+          "thesportsdb": "138818"
+        }
+      },
+      "awayTeam": {
+        "name": "Atlético Mineiro",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/x5lixs1743742872.png",
+        "sourceIds": {
+          "thesportsdb": "134299"
+        }
+      },
+      "competition": "Copa Sudamericana"
+    },
+    {
+      "id": "tsdb-2540112",
+      "sourceIds": {
+        "thesportsdb": "2540112"
+      },
+      "title": "Brisbane Roar vs Perth Glory",
+      "sport": "football",
+      "startUtcEpochSeconds": 1792746000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sportdigital Fussball",
+          "originalChannelName": "Sportdigital Fussball",
+          "channelId": "territory:de|sportdigital fussball|",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Brisbane Roar",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/sypxsu1473454634.png",
+        "sourceIds": {
+          "thesportsdb": "134476"
+        }
+      },
+      "awayTeam": {
+        "name": "Perth Glory",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/2c9k5p1679114095.png",
+        "sourceIds": {
+          "thesportsdb": "134481"
+        }
+      },
+      "competition": "Australian A-League"
+    },
+    {
+      "id": "tsdb-2501387",
+      "sourceIds": {
+        "thesportsdb": "2501387"
+      },
+      "title": "Bolton Wanderers vs Middlesbrough",
+      "sport": "football",
+      "startUtcEpochSeconds": 1792782000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sky Sports Football",
+          "originalChannelName": "Sky Sports Football",
+          "channelId": "territory:gb|sky sports football|",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-21",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Bolton Wanderers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yvxxrv1448808301.png",
+        "sourceIds": {
+          "thesportsdb": "133606"
+        }
+      },
+      "awayTeam": {
+        "name": "Middlesbrough",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/advjg71780068902.png",
+        "sourceIds": {
+          "thesportsdb": "133628"
+        }
+      },
+      "competition": "English League Championship"
     },
     {
       "id": "mls-MLS-MAT-0009KD",
@@ -30509,8 +29715,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009KD",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30555,8 +29761,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NT",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30601,8 +29807,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NO",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30647,8 +29853,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NU",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30693,8 +29899,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NM",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30739,8 +29945,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NQ",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30785,8 +29991,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NV",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30831,8 +30037,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NW",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30877,8 +30083,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NP",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30923,8 +30129,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NR",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -30969,8 +30175,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NS",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31015,8 +30221,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NN",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31061,8 +30267,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NY",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31107,8 +30313,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NX",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31153,8 +30359,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009NZ",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31199,8 +30405,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009O0",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31245,8 +30451,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009O2",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31291,8 +30497,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009O5",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31337,8 +30543,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009O8",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31383,8 +30589,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009O9",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
+          "verifiedAt": "2026-10-21",
+          "checkedAt": "2026-10-21T04:41:54.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -31393,52 +30599,6 @@
       "broadcasterEvidence": {
         "source": "mls",
         "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009O9",
-        "eventMatched": true,
-        "sourceEventMatched": false
-      }
-    },
-    {
-      "id": "mls-MLS-MAT-0009OD",
-      "title": "Toronto FC vs D.C. United",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "startUtcEpochSeconds": 1793230200,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "Toronto FC",
-        "badgeUrl": "https://images.mlssoccer.com/image/upload/f_auto,q_auto,w_128,h_128,c_fit/v1748265251/assets/logos/mls-clubs/Club_Logo-Toronto_vz6hao.png",
-        "sourceIds": {
-          "mls": "MLS-CLU-00000M"
-        }
-      },
-      "awayTeam": {
-        "name": "D.C. United",
-        "badgeUrl": "https://images.mlssoccer.com/image/upload/f_auto,q_auto,w_128,h_128,c_fit/v1747500504/assets/logos/mls-clubs/Club_Logo-D.C_t03ekm.png",
-        "sourceIds": {
-          "mls": "MLS-CLU-00000D"
-        }
-      },
-      "broadcasts": [
-        {
-          "channelName": "Apple TV",
-          "originalChannelName": "Apple TV",
-          "channelId": "territory:us|apple tv|",
-          "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "mls-match-api-broadcaster",
-          "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009OD",
-          "verifiedAt": "2026-10-20",
-          "checkedAt": "2026-10-20T23:50:46.000Z",
-          "exclusive": false,
-          "destinationPrecision": "service",
-          "rightsHolder": "Apple"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "mls",
-        "url": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-0009OD",
         "eventMatched": true,
         "sourceEventMatched": false
       }
