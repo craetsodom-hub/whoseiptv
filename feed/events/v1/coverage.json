@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T22:28:14.851Z",
+  "generatedAt": "2026-10-28T05:57:28.642Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -10,7 +10,7 @@
         "embedded-json"
       ],
       "success": true,
-      "candidates": 5
+      "candidates": 6
     },
     {
       "id": "sky-sports-uk",
@@ -51,7 +51,7 @@
         "semantic-html"
       ],
       "success": true,
-      "candidates": 0
+      "candidates": 8
     },
     {
       "id": "bundesliga-active",
@@ -65,154 +65,6 @@
     }
   ],
   "events": [
-    {
-      "eventId": "tsdb-2606325",
-      "sport": "football",
-      "competition": "EFL Cup",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2606325",
-      "sport": "football",
-      "competition": "EFL Cup",
-      "territory": "GB",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482221",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482221",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482221",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Paramount+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "tsdb-2600213",
-      "sport": "football",
-      "competition": "DFB-Pokal",
-      "territory": "ES",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2532410",
-      "sport": "football",
-      "competition": "German Regionalliga SudWest",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482223",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482223",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482223",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482223",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Paramount+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "tsdb-2600208",
-      "sport": "football",
-      "competition": "DFB-Pokal",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601717",
-      "sport": "basketball",
-      "competition": "NBA",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2525230",
-      "sport": "basketball",
-      "competition": "Basketball Champions League",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
     {
       "eventId": "tsdb-2494470",
       "sport": "football",
@@ -354,11 +206,23 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
-      "eventId": "tsdb-2599897",
+      "eventId": "tsdb-2600203",
       "sport": "football",
-      "competition": "UEFA Womens Champions League",
-      "territory": "NZ",
-      "sourcesAttempted": [],
+      "competition": "DFB-Pokal",
+      "territory": "TR",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 6
+        }
+      ],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
       "rejectionReason": "No permitted official source returned a verified event-level destination."
@@ -388,6 +252,16 @@
       "sport": "basketball",
       "competition": "NBA",
       "territory": "ES",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2601721",
+      "sport": "basketball",
+      "competition": "NBA",
+      "territory": "IT",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -477,6 +351,28 @@
       "eventId": "tsdb-2482222",
       "sport": "football",
       "competition": "Italian Serie A",
+      "territory": "TR",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 6
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2482222",
+      "sport": "football",
+      "competition": "Italian Serie A",
       "territory": "US",
       "sourcesAttempted": [],
       "exactDestinations": [],
@@ -528,6 +424,150 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
+      "eventId": "tsdb-2501398",
+      "sport": "football",
+      "competition": "English League Championship",
+      "territory": "GB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2573406",
+      "sport": "football",
+      "competition": "Saudi-Arabian Pro League",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2489541",
+      "sport": "football",
+      "competition": "French Ligue 1",
+      "territory": "ES",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2489541",
+      "sport": "football",
+      "competition": "French Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Ligue 1+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2496774",
+      "sport": "football",
+      "competition": "Belgian Pro League",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2540118",
+      "sport": "football",
+      "competition": "Australian A-League",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2556908",
+      "sport": "football",
+      "competition": "Italian Serie C Girone A",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2601738",
+      "sport": "basketball",
+      "competition": "NBA",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2601735",
+      "sport": "basketball",
+      "competition": "NBA",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2563790",
+      "sport": "basketball",
+      "competition": "German BBL",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2524757",
+      "sport": "cricket",
+      "competition": "Twenty20 International Series",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2524757",
+      "sport": "cricket",
+      "competition": "Twenty20 International Series",
+      "territory": "GB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2420433",
+      "sport": "rugby",
+      "competition": "Rugby League World Cup",
+      "territory": "GB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2550127",
+      "sport": "rugby",
+      "competition": null,
+      "territory": "ZA",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
       "eventId": "sky-Tottenham Hotspur-Crystal Palace-1793467800000",
       "sport": "football",
       "competition": "Premier League",
@@ -542,7 +582,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -1255,7 +1295,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -1477,7 +1517,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -1517,7 +1557,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -1735,7 +1775,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -1887,7 +1927,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -2600,7 +2640,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -2822,7 +2862,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -2862,7 +2902,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -3080,7 +3120,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -3232,7 +3272,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -3945,7 +3985,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -4167,7 +4207,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -4207,7 +4247,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -4425,7 +4465,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -5613,7 +5653,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -6185,7 +6225,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -6407,7 +6447,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -6447,7 +6487,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -6740,7 +6780,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -7312,7 +7352,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -7534,7 +7574,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -7574,7 +7614,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -7867,7 +7907,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -8439,7 +8479,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -8661,7 +8701,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -8701,7 +8741,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -8994,7 +9034,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -9566,7 +9606,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -9788,7 +9828,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -9828,7 +9868,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -10121,7 +10161,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -10693,7 +10733,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -10915,7 +10955,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -10955,7 +10995,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -11248,7 +11288,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -11543,6 +11583,32 @@
       "eventId": "espn-401915307",
       "sport": "football",
       "competition": "UEFA Champions League",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "movistar-plus-champions-spain",
+          "sourceUrl": "https://www.movistarplus.es/programacion-tv",
+          "parserTypes": [
+            "semantic-html"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "M+ Liga de Campeones 5",
+          "normalizedName": "mplusligadecampeones5",
+          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap4/2026-11-03"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "espn-401915307",
+      "sport": "football",
+      "competition": "UEFA Champions League",
       "territory": "ET",
       "sourcesAttempted": [],
       "exactDestinations": [],
@@ -11820,7 +11886,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -12042,7 +12108,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -12082,7 +12148,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -12375,7 +12441,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -12947,7 +13013,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -13169,7 +13235,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -13209,7 +13275,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -13502,7 +13568,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -14074,7 +14140,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -14296,7 +14362,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -14336,7 +14402,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -14629,7 +14695,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -15201,7 +15267,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -15423,7 +15489,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -15463,7 +15529,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 6
         }
       ],
       "exactDestinations": [],
@@ -15746,24 +15812,24 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 8,
+        "total": 10,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "sport": "cricket",
-        "total": 1,
+        "total": 3,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "sport": "football",
-        "total": 1026,
-        "attempted": 55,
-        "exactCovered": 5,
-        "coveragePercentage": 0.5
+        "total": 1023,
+        "attempted": 58,
+        "exactCovered": 6,
+        "coveragePercentage": 0.6
       },
       {
         "sport": "formula1",
@@ -15774,7 +15840,7 @@
       },
       {
         "sport": "rugby",
-        "total": 1,
+        "total": 3,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -15782,8 +15848,22 @@
     ],
     "competition": [
       {
+        "competition": "Australian A-League",
+        "total": 1,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
         "competition": "Basketball Champions League",
-        "total": 2,
+        "total": 1,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
+        "competition": "Belgian Pro League",
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -15797,14 +15877,21 @@
       },
       {
         "competition": "DFB-Pokal",
-        "total": 3,
-        "attempted": 0,
+        "total": 2,
+        "attempted": 1,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "competition": "EFL Cup",
-        "total": 4,
+        "total": 2,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
+        "competition": "English League Championship",
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -15817,6 +15904,13 @@
         "coveragePercentage": 0
       },
       {
+        "competition": "French Ligue 1",
+        "total": 2,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
         "competition": "French Pro D2",
         "total": 1,
         "attempted": 0,
@@ -15824,7 +15918,7 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "German Regionalliga SudWest",
+        "competition": "German BBL",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -15839,7 +15933,14 @@
       },
       {
         "competition": "Italian Serie A",
-        "total": 18,
+        "total": 12,
+        "attempted": 1,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
+        "competition": "Italian Serie C Girone A",
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -15860,7 +15961,7 @@
       },
       {
         "competition": "NBA",
-        "total": 6,
+        "total": 8,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -15873,8 +15974,15 @@
         "coveragePercentage": 1.1
       },
       {
+        "competition": "Rugby League World Cup",
+        "total": 1,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
         "competition": "Saudi-Arabian Pro League",
-        "total": 2,
+        "total": 3,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -15887,14 +15995,21 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "UEFA Champions League",
-        "total": 693,
-        "attempted": 36,
+        "competition": "Twenty20 International Series",
+        "total": 2,
+        "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
-        "competition": "UEFA Womens Champions League",
+        "competition": "UEFA Champions League",
+        "total": 694,
+        "attempted": 37,
+        "exactCovered": 1,
+        "coveragePercentage": 0.1
+      },
+      {
+        "competition": "unknown",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -15946,7 +16061,7 @@
       },
       {
         "territory": "AU",
-        "total": 18,
+        "total": 17,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -16177,10 +16292,10 @@
       },
       {
         "territory": "ES",
-        "total": 8,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 9,
+        "attempted": 1,
+        "exactCovered": 1,
+        "coveragePercentage": 11.1
       },
       {
         "territory": "ET",
@@ -16198,10 +16313,10 @@
       },
       {
         "territory": "FR",
-        "total": 11,
+        "total": 13,
         "attempted": 0,
         "exactCovered": 2,
-        "coveragePercentage": 18.2
+        "coveragePercentage": 15.4
       },
       {
         "territory": "GA",
@@ -16212,10 +16327,10 @@
       },
       {
         "territory": "GB",
-        "total": 15,
+        "total": 17,
         "attempted": 4,
         "exactCovered": 3,
-        "coveragePercentage": 20
+        "coveragePercentage": 17.6
       },
       {
         "territory": "GH",
@@ -16317,7 +16432,7 @@
       },
       {
         "territory": "IT",
-        "total": 6,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -16555,7 +16670,7 @@
       },
       {
         "territory": "NZ",
-        "total": 8,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -16772,8 +16887,8 @@
       },
       {
         "territory": "TR",
-        "total": 3,
-        "attempted": 3,
+        "total": 5,
+        "attempted": 5,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
@@ -16807,7 +16922,7 @@
       },
       {
         "territory": "US",
-        "total": 50,
+        "total": 49,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -16849,7 +16964,7 @@
       },
       {
         "territory": "ZA",
-        "total": 12,
+        "total": 13,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -16895,8 +17010,8 @@
         "sourceAdapter": "movistar-plus-champions-spain",
         "total": 1,
         "attempted": 1,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 100
       },
       {
         "sourceAdapter": "premier-league-selections",
@@ -18010,164 +18125,20 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-10-27T22:10:10.000Z",
+    "generatedAt": "2026-10-28T05:36:46.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
     "succeeded": 72,
     "failed": 0,
     "successRatio": 1,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 4,
+    "detailRequests": 12,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
       {
         "sport": "football",
         "territory": "GB",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "US",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "ES",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "FR",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "DE",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "IT",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "NZ",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "basketball",
-        "territory": "US",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "basketball",
-        "territory": "ES",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "basketball",
-        "territory": "FR",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "basketball",
-        "territory": "DE",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "basketball",
-        "territory": "AR",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "tennis",
-        "territory": "GB",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "tennis",
-        "territory": "US",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "tennis",
-        "territory": "ES",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "tennis",
-        "territory": "RO",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "cricket",
-        "territory": "GB",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "cricket",
-        "territory": "IN",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "cricket",
-        "territory": "AU",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "cricket",
-        "territory": "AE",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "rugby",
-        "territory": "GB",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "rugby",
-        "territory": "FR",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "rugby",
-        "territory": "ZA",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "rugby",
-        "territory": "FJ",
-        "date": "2026-10-27",
-        "status": "success"
-      },
-      {
-        "sport": "football",
-        "territory": "GB",
         "date": "2026-10-28",
         "status": "success"
       },
@@ -18203,7 +18174,7 @@
       },
       {
         "sport": "football",
-        "territory": "NZ",
+        "territory": "TR",
         "date": "2026-10-28",
         "status": "success"
       },
@@ -18233,7 +18204,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "AR",
+        "territory": "IT",
         "date": "2026-10-28",
         "status": "success"
       },
@@ -18257,7 +18228,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "RO",
+        "territory": "TR",
         "date": "2026-10-28",
         "status": "success"
       },
@@ -18281,7 +18252,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "AE",
+        "territory": "JM",
         "date": "2026-10-28",
         "status": "success"
       },
@@ -18305,7 +18276,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "FJ",
+        "territory": "TO",
         "date": "2026-10-28",
         "status": "success"
       },
@@ -18347,7 +18318,7 @@
       },
       {
         "sport": "football",
-        "territory": "NZ",
+        "territory": "TR",
         "date": "2026-10-29",
         "status": "success"
       },
@@ -18377,7 +18348,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "AR",
+        "territory": "IT",
         "date": "2026-10-29",
         "status": "success"
       },
@@ -18401,7 +18372,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "RO",
+        "territory": "TR",
         "date": "2026-10-29",
         "status": "success"
       },
@@ -18425,7 +18396,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "AE",
+        "territory": "JM",
         "date": "2026-10-29",
         "status": "success"
       },
@@ -18449,8 +18420,152 @@
       },
       {
         "sport": "rugby",
-        "territory": "FJ",
+        "territory": "TO",
         "date": "2026-10-29",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "GB",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "US",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "ES",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "FR",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "DE",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "IT",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "football",
+        "territory": "TR",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "basketball",
+        "territory": "US",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "basketball",
+        "territory": "ES",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "basketball",
+        "territory": "FR",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "basketball",
+        "territory": "DE",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "basketball",
+        "territory": "IT",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "tennis",
+        "territory": "GB",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "tennis",
+        "territory": "US",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "tennis",
+        "territory": "ES",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "tennis",
+        "territory": "TR",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "cricket",
+        "territory": "GB",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "cricket",
+        "territory": "IN",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "cricket",
+        "territory": "AU",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "cricket",
+        "territory": "JM",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "rugby",
+        "territory": "GB",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "rugby",
+        "territory": "FR",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "rugby",
+        "territory": "ZA",
+        "date": "2026-10-30",
+        "status": "success"
+      },
+      {
+        "sport": "rugby",
+        "territory": "TO",
+        "date": "2026-10-30",
         "status": "success"
       }
     ]
