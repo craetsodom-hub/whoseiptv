@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1793354212,
-  "validUntilEpochSeconds": 1793397412,
+  "generatedAtEpochSeconds": 1793383139,
+  "validUntilEpochSeconds": 1793426339,
   "events": [
     {
       "id": "espn-401915387",
@@ -62,8 +62,8 @@
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
           "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap1/2026-11-03",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -1294,13 +1294,39 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2524757",
+      "id": "tsdb-2550127",
       "sourceIds": {
-        "thesportsdb": "2524757"
+        "thesportsdb": "2550127"
+      },
+      "title": "Glasgow vs Lions",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1793389500,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "SuperSport Rugby",
+          "originalChannelName": "SuperSport Rugby",
+          "channelId": "territory:za|supersport rugby|",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2524758",
+      "sourceIds": {
+        "thesportsdb": "2524758"
       },
       "title": "New Zealand Cricket vs India Cricket",
       "sport": "cricket",
-      "startUtcEpochSeconds": 1793343600,
+      "startUtcEpochSeconds": 1793516400,
       "status": "confirmed",
       "broadcasts": [
         {
@@ -1318,15 +1344,10 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "TNT Sports 1",
-          "originalChannelName": "TNT Sports 1",
-          "channelId": "territory:gb|tnt sports 1|",
-          "aliases": [
-            "TNT Sports One",
-            "UK TNT Sports 1",
-            "TNT Sports 1 HD",
-            "TNT Sports 1 FHD"
-          ],
+          "channelName": "TNT Sports 3",
+          "originalChannelName": "TNT Sports 3",
+          "channelId": "territory:gb|tnt sports 3|",
+          "aliases": [],
           "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
@@ -1354,61 +1375,6 @@
       "competition": "Twenty20 International Series"
     },
     {
-      "id": "tsdb-2420433",
-      "sourceIds": {
-        "thesportsdb": "2420433"
-      },
-      "title": "England Rugby League vs Papua New Guinea Rugby League",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1793351100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "7 NSW",
-          "originalChannelName": "7 NSW",
-          "channelId": "territory:au|7 nsw|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Viaplay Sports 1 UK",
-          "originalChannelName": "Viaplay Sports 1 UK",
-          "channelId": "territory:gb|viaplay sports 1 uk|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "England Rugby League",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/6byujg1768738636.png",
-        "sourceIds": {
-          "thesportsdb": "154457"
-        }
-      },
-      "awayTeam": {
-        "name": "Papua New Guinea Rugby League",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qrdbp11768738702.png",
-        "sourceIds": {
-          "thesportsdb": "154466"
-        }
-      },
-      "competition": "Rugby League World Cup"
-    },
-    {
       "id": "f1-https-www-formula1-com-en-racing-2026-mexico-race-1793563200",
       "title": "Mexico City Grand Prix",
       "sport": "formula1",
@@ -1427,7 +1393,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1442,7 +1408,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1457,7 +1423,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1472,7 +1438,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1487,7 +1453,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1502,7 +1468,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1517,7 +1483,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1532,7 +1498,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1547,7 +1513,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1562,7 +1528,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1577,7 +1543,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1592,7 +1558,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1607,7 +1573,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1622,7 +1588,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1637,7 +1603,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1652,7 +1618,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1667,7 +1633,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1682,7 +1648,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1697,7 +1663,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1712,7 +1678,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1727,7 +1693,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1742,7 +1708,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1757,7 +1723,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1772,7 +1738,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1787,7 +1753,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1802,7 +1768,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1817,7 +1783,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1832,7 +1798,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1847,7 +1813,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1862,7 +1828,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1877,7 +1843,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1892,7 +1858,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1907,7 +1873,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1922,7 +1888,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1937,7 +1903,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1952,7 +1918,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1967,7 +1933,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1982,7 +1948,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -1997,7 +1963,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2012,7 +1978,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2030,7 +1996,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "service"
         },
@@ -2045,7 +2011,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2060,7 +2026,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2075,7 +2041,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2090,7 +2056,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2105,7 +2071,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2120,7 +2086,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2135,7 +2101,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2150,7 +2116,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2165,7 +2131,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         },
@@ -2180,7 +2146,7 @@
           "matchingMethod": "official-country-broadcaster-table",
           "sourceUrl": "https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "network"
         }
@@ -2809,8 +2775,8 @@
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
           "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap2/2026-11-04",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -4010,11 +3976,11 @@
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "S Sport TR",
-          "originalChannelName": "S Sport TR",
-          "channelId": "territory:tr|s sport tr|",
+          "channelName": "Sport Klub 3 HR",
+          "originalChannelName": "Sport Klub 3 HR",
+          "channelId": "territory:hr|sport klub 3 hr|",
           "aliases": [],
-          "territory": "TR",
+          "territory": "HR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -4041,35 +4007,21 @@
       "competition": "EuroLeague Basketball"
     },
     {
-      "id": "tsdb-2524758",
+      "id": "tsdb-2550421",
       "sourceIds": {
-        "thesportsdb": "2524758"
+        "thesportsdb": "2550421"
       },
-      "title": "New Zealand Cricket vs India Cricket",
-      "sport": "cricket",
-      "startUtcEpochSeconds": 1793516400,
+      "title": "ASM Clermont Auvergne vs Racing Métro 92",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1793453400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Kayo Sports",
-          "originalChannelName": "Kayo Sports",
-          "channelId": "territory:au|kayo sports|",
+          "channelName": "Canal+ Sport France",
+          "originalChannelName": "Canal+ Sport France",
+          "channelId": "territory:fr|canal+ sport france|",
           "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TNT Sports 3",
-          "originalChannelName": "TNT Sports 3",
-          "channelId": "territory:gb|tnt sports 3|",
-          "aliases": [],
-          "territory": "GB",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -4080,46 +4032,20 @@
         }
       ],
       "homeTeam": {
-        "name": "New Zealand Cricket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1yyh9s1646775166.png",
+        "name": "ASM Clermont Auvergne",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
         "sourceIds": {
-          "thesportsdb": "137145"
+          "thesportsdb": "135332"
         }
       },
       "awayTeam": {
-        "name": "India Cricket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/donl7g1646775159.png",
+        "name": "Racing Métro 92",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ywxugl1536392844.png",
         "sourceIds": {
-          "thesportsdb": "137143"
+          "thesportsdb": "135336"
         }
       },
-      "competition": "Twenty20 International Series"
-    },
-    {
-      "id": "tsdb-2550127",
-      "sourceIds": {
-        "thesportsdb": "2550127"
-      },
-      "title": "Glasgow vs Lions",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1793389500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "SuperSport Rugby",
-          "originalChannelName": "SuperSport Rugby",
-          "channelId": "territory:za|supersport rugby|",
-          "aliases": [],
-          "territory": "ZA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
+      "competition": "French Top 14"
     },
     {
       "id": "tsdb-2494082",
@@ -4194,7 +4120,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -4250,7 +4176,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -5681,21 +5607,21 @@
       "competition": "NBA"
     },
     {
-      "id": "tsdb-2420426",
+      "id": "tsdb-2550129",
       "sourceIds": {
-        "thesportsdb": "2420426"
+        "thesportsdb": "2550129"
       },
-      "title": "Australia Rugby League vs Cook Islands Rugby League",
+      "title": "Bulls vs Scarlets",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1793437500,
+      "startUtcEpochSeconds": 1793458800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "7 NSW",
-          "originalChannelName": "7 NSW",
-          "channelId": "territory:au|7 nsw|",
+          "channelName": "SuperSport Rugby",
+          "originalChannelName": "SuperSport Rugby",
+          "channelId": "territory:za|supersport rugby|",
           "aliases": [],
-          "territory": "AU",
+          "territory": "ZA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -5704,22 +5630,7 @@
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ],
-      "homeTeam": {
-        "name": "Australia Rugby League",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/32i45q1768738620.png",
-        "sourceIds": {
-          "thesportsdb": "154455"
-        }
-      },
-      "awayTeam": {
-        "name": "Cook Islands Rugby League",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3fkrbr1768738629.png",
-        "sourceIds": {
-          "thesportsdb": "154456"
-        }
-      },
-      "competition": "Rugby League World Cup"
+      ]
     },
     {
       "id": "espn-401915307",
@@ -5780,8 +5691,1339 @@
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
           "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap4/2026-11-03",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "eventMatchingMethod": "ordered:exact-normalized-participant+canonical-participant-alias",
+          "eventMatchConfidence": 170
+        },
+        {
+          "channelName": "Paramount+",
+          "originalChannelName": "Paramount+",
+          "channelId": "territory:us|paramount+|",
+          "aliases": [
+            "US Paramount+"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+          "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+          "verifiedAt": "2026-10-17",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcastRights": [
+        {
+          "territory": "GB",
+          "holders": [
+            {
+              "name": "TNT Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "Paramount+",
+              "kind": "service"
+            },
+            {
+              "name": "TUDN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CA",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AU",
+          "holders": [
+            {
+              "name": "Stan Sport",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AO",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BF",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BI",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BJ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CD",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CF",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CI",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "CV",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DJ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ER",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ET",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GA",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GH",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GN",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GQ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KE",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LR",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LS",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ML",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MR",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MU",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MZ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NA",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NE",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "RW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SC",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SD",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SL",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SN",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SO",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SS",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ST",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SZ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TD",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TZ",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "UG",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ZA",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ZM",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "ZW",
+          "holders": [
+            {
+              "name": "SuperSport",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BD",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BT",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IN",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LK",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MV",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "NP",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PK",
+          "holders": [
+            {
+              "name": "Sony Sports Network",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2024-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2487930",
+      "sourceIds": {
+        "thesportsdb": "2487930"
+      },
+      "title": "Perth Wildcats vs Illawarra Hawks",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1793442600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport Klub 6 HR",
+          "originalChannelName": "Sport Klub 6 HR",
+          "channelId": "territory:hr|sport klub 6 hr|",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Perth Wildcats",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/7gkvnd1755701286.png",
+        "sourceIds": {
+          "thesportsdb": "135399"
+        }
+      },
+      "awayTeam": {
+        "name": "Illawarra Hawks",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/juj7y91725980615.png",
+        "sourceIds": {
+          "thesportsdb": "135402"
+        }
+      },
+      "competition": "Australian NBL"
+    },
+    {
+      "id": "tsdb-2550133",
+      "sourceIds": {
+        "thesportsdb": "2550133"
+      },
+      "title": "Ospreys vs Cardiff Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1793475900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "S4C",
+          "originalChannelName": "S4C",
+          "channelId": "territory:gb|s4c|",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Ospreys",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zctq2h1552074123.png",
+        "sourceIds": {
+          "thesportsdb": "135603"
+        }
+      },
+      "awayTeam": {
+        "name": "Cardiff Rugby",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/p8728b1647091605.png",
+        "sourceIds": {
+          "thesportsdb": "135596"
+        }
+      },
+      "competition": "United Rugby Championship"
+    },
+    {
+      "id": "espn-401915309",
+      "sourceIds": {
+        "espn": "401915309"
+      },
+      "title": "Villarreal vs Paris Saint-Germain",
+      "sport": "football",
+      "competition": "UEFA Champions League",
+      "startUtcEpochSeconds": 1793736000,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "Villarreal",
+        "aliases": [
+          "Villarreal",
+          "Villarreal"
+        ],
+        "sourceIds": {
+          "espn": "102"
+        },
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Paris Saint-Germain",
+        "aliases": [
+          "PSG",
+          "Paris Saint-Germain"
+        ],
+        "sourceIds": {
+          "espn": "160"
+        },
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Stan Sport",
+          "originalChannelName": "Stan Sport",
+          "channelId": "territory:au|stan sport|",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "M+ Liga de Campeones 3",
+          "originalChannelName": "M+ Liga de Campeones 3",
+          "channelId": "territory:es|m+ liga de campeones 3|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "movistar-epg-match-teams-coverage-time",
+          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap2/2026-11-03",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -7012,21 +8254,21 @@
       "competition": "Spanish Liga ACB"
     },
     {
-      "id": "tsdb-2550421",
+      "id": "tsdb-2420434",
       "sourceIds": {
-        "thesportsdb": "2550421"
+        "thesportsdb": "2420434"
       },
-      "title": "ASM Clermont Auvergne vs Racing Métro 92",
+      "title": "Lebanon Rugby League vs France Rugby League",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1793453400,
+      "startUtcEpochSeconds": 1793515800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Canal+ Sport France",
-          "originalChannelName": "Canal+ Sport France",
-          "channelId": "territory:fr|canal+ sport france|",
+          "channelName": "Premier Sports 2 UK",
+          "originalChannelName": "Premier Sports 2 UK",
+          "channelId": "territory:gb|premier sports 2 uk|",
           "aliases": [],
-          "territory": "FR",
+          "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -7037,50 +8279,50 @@
         }
       ],
       "homeTeam": {
-        "name": "ASM Clermont Auvergne",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/qh7djg1622926100.png",
+        "name": "Lebanon Rugby League",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fiois71768738686.png",
         "sourceIds": {
-          "thesportsdb": "135332"
+          "thesportsdb": "154464"
         }
       },
       "awayTeam": {
-        "name": "Racing Métro 92",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ywxugl1536392844.png",
+        "name": "France Rugby League",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/7sx2xh1768738649.png",
         "sourceIds": {
-          "thesportsdb": "135336"
+          "thesportsdb": "154459"
         }
       },
-      "competition": "French Top 14"
+      "competition": "Rugby League World Cup"
     },
     {
-      "id": "espn-401915309",
+      "id": "espn-401915304",
       "sourceIds": {
-        "espn": "401915309"
+        "espn": "401915304"
       },
-      "title": "Villarreal vs Paris Saint-Germain",
+      "title": "Borussia Dortmund vs Real Betis",
       "sport": "football",
       "competition": "UEFA Champions League",
-      "startUtcEpochSeconds": 1793736000,
+      "startUtcEpochSeconds": 1793822400,
       "status": "confirmed",
       "homeTeam": {
-        "name": "Villarreal",
+        "name": "Borussia Dortmund",
         "aliases": [
-          "Villarreal",
-          "Villarreal"
+          "Dortmund",
+          "Borussia Dortmund"
         ],
         "sourceIds": {
-          "espn": "102"
+          "espn": "124"
         },
         "badgeUrl": null
       },
       "awayTeam": {
-        "name": "Paris Saint-Germain",
+        "name": "Real Betis",
         "aliases": [
-          "PSG",
-          "Paris Saint-Germain"
+          "Betis",
+          "Real Betis"
         ],
         "sourceIds": {
-          "espn": "160"
+          "espn": "244"
         },
         "badgeUrl": null
       },
@@ -7102,22 +8344,22 @@
           "destinationPrecision": "service"
         },
         {
-          "channelName": "M+ Liga de Campeones 3",
-          "originalChannelName": "M+ Liga de Campeones 3",
-          "channelId": "territory:es|m+ liga de campeones 3|",
+          "channelName": "M+ Liga de Campeones 2",
+          "originalChannelName": "M+ Liga de Campeones 2",
+          "channelId": "territory:es|m+ liga de campeones 2|",
           "aliases": [],
           "territory": "ES",
           "confirmed": true,
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
-          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap2/2026-11-03",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap1/2026-11-04",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+canonical-participant-alias",
-          "eventMatchConfidence": 170
+          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
+          "eventMatchConfidence": 160
         },
         {
           "channelName": "Paramount+",
@@ -8343,21 +9585,21 @@
       "competition": "German BBL"
     },
     {
-      "id": "tsdb-2550129",
+      "id": "tsdb-2550416",
       "sourceIds": {
-        "thesportsdb": "2550129"
+        "thesportsdb": "2550416"
       },
-      "title": "Bulls vs Scarlets",
+      "title": "Section Paloise vs Stade Toulousain",
       "sport": "rugby",
-      "startUtcEpochSeconds": 1793458800,
+      "startUtcEpochSeconds": 1793563500,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SuperSport Rugby",
-          "originalChannelName": "SuperSport Rugby",
-          "channelId": "territory:za|supersport rugby|",
+          "channelName": "Canal+ France",
+          "originalChannelName": "Canal+ France",
+          "channelId": "territory:fr|canal+ france|",
           "aliases": [],
-          "territory": "ZA",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -8366,37 +9608,52 @@
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ]
+      ],
+      "homeTeam": {
+        "name": "Section Paloise",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
+        "sourceIds": {
+          "thesportsdb": "137384"
+        }
+      },
+      "awayTeam": {
+        "name": "Stade Toulousain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
+        "sourceIds": {
+          "thesportsdb": "135339"
+        }
+      },
+      "competition": "French Top 14"
     },
     {
-      "id": "espn-401915304",
+      "id": "espn-401915311",
       "sourceIds": {
-        "espn": "401915304"
+        "espn": "401915311"
       },
-      "title": "Borussia Dortmund vs Real Betis",
+      "title": "Galatasaray vs VfB Stuttgart",
       "sport": "football",
       "competition": "UEFA Champions League",
-      "startUtcEpochSeconds": 1793822400,
+      "startUtcEpochSeconds": 1793727900,
       "status": "confirmed",
       "homeTeam": {
-        "name": "Borussia Dortmund",
+        "name": "Galatasaray",
         "aliases": [
-          "Dortmund",
-          "Borussia Dortmund"
+          "Galatasaray",
+          "Galatasaray"
         ],
         "sourceIds": {
-          "espn": "124"
+          "espn": "432"
         },
         "badgeUrl": null
       },
       "awayTeam": {
-        "name": "Real Betis",
+        "name": "VfB Stuttgart",
         "aliases": [
-          "Betis",
-          "Real Betis"
+          "Stuttgart",
+          "VfB Stuttgart"
         ],
         "sourceIds": {
-          "espn": "244"
+          "espn": "134"
         },
         "badgeUrl": null
       },
@@ -8418,17 +9675,17 @@
           "destinationPrecision": "service"
         },
         {
-          "channelName": "M+ Liga de Campeones 2",
-          "originalChannelName": "M+ Liga de Campeones 2",
-          "channelId": "territory:es|m+ liga de campeones 2|",
+          "channelName": "M+ Liga de Campeones 3",
+          "originalChannelName": "M+ Liga de Campeones 3",
+          "channelId": "territory:es|m+ liga de campeones 3|",
           "aliases": [],
           "territory": "ES",
           "confirmed": true,
           "sourceType": "official-event",
           "matchingMethod": "movistar-epg-match-teams-coverage-time",
-          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap1/2026-11-04",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap2/2026-11-03",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -9659,76 +10916,21 @@
       "competition": "NBA"
     },
     {
-      "id": "tsdb-2550133",
-      "sourceIds": {
-        "thesportsdb": "2550133"
-      },
-      "title": "Ospreys vs Cardiff Rugby",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1793475900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "S4C",
-          "originalChannelName": "S4C",
-          "channelId": "territory:gb|s4c|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Ospreys",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zctq2h1552074123.png",
-        "sourceIds": {
-          "thesportsdb": "135603"
-        }
-      },
-      "awayTeam": {
-        "name": "Cardiff Rugby",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/p8728b1647091605.png",
-        "sourceIds": {
-          "thesportsdb": "135596"
-        }
-      },
-      "competition": "United Rugby Championship"
-    },
-    {
-      "id": "espn-401915311",
-      "sourceIds": {
-        "espn": "401915311"
-      },
-      "title": "Galatasaray vs VfB Stuttgart",
+      "id": "sky-Nottingham Forest-Manchester City-1794072600000",
+      "title": "Nottingham Forest vs Manchester City",
       "sport": "football",
-      "competition": "UEFA Champions League",
-      "startUtcEpochSeconds": 1793727900,
+      "competition": "Premier League",
+      "startUtcEpochSeconds": 1794072600,
       "status": "confirmed",
+      "sourceIds": {
+        "sky": "559542"
+      },
       "homeTeam": {
-        "name": "Galatasaray",
-        "aliases": [
-          "Galatasaray",
-          "Galatasaray"
-        ],
-        "sourceIds": {
-          "espn": "432"
-        },
+        "name": "Nottingham Forest",
         "badgeUrl": null
       },
       "awayTeam": {
-        "name": "VfB Stuttgart",
-        "aliases": [
-          "Stuttgart",
-          "VfB Stuttgart"
-        ],
-        "sourceIds": {
-          "espn": "134"
-        },
+        "name": "Manchester City",
         "badgeUrl": null
       },
       "broadcasts": [
@@ -9741,7 +10943,7 @@
           "confirmed": true,
           "sourceType": "official-all-events",
           "matchingMethod": "all-events",
-          "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+          "sourceUrl": "https://www.stan.com.au/watch/sport/football/premier-league",
           "verifiedAt": "2026-10-18",
           "exclusive": false,
           "destinationType": "service",
@@ -9749,80 +10951,130 @@
           "destinationPrecision": "service"
         },
         {
-          "channelName": "M+ Liga de Campeones 3",
-          "originalChannelName": "M+ Liga de Campeones 3",
-          "channelId": "territory:es|m+ liga de campeones 3|",
+          "channelName": "Fubo",
+          "originalChannelName": "Fubo",
+          "channelId": "territory:ca|fubo|",
           "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "movistar-epg-match-teams-coverage-time",
-          "sourceUrl": "https://www.movistarplus.es/programacion-tv/chap2/2026-11-03",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
-          "exclusive": false,
-          "destinationType": "linear",
-          "destinationPrecision": "channel",
-          "eventMatchingMethod": "ordered:exact-normalized-participant+exact-normalized-participant",
-          "eventMatchConfidence": 160
-        },
-        {
-          "channelName": "Paramount+",
-          "originalChannelName": "Paramount+",
-          "channelId": "territory:us|paramount+|",
-          "aliases": [
-            "US Paramount+"
-          ],
-          "territory": "US",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "official-all-events",
           "matchingMethod": "all-events",
-          "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
-          "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
-          "verifiedAt": "2026-10-17",
+          "sourceUrl": "https://www.fubo.tv/news/canada/how-to-watch-premier-league-canada/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Sky Sports Main Event",
+          "originalChannelName": "Sky Sports Main Event",
+          "channelId": "territory:gb|sky sports main event|",
+          "aliases": [
+            "Sky Sports Main Event UK",
+            "UK Sky Sports Main Event",
+            "Sky Sports Main Event HD",
+            "Sky Sports Main Event FHD",
+            "SkySports Main Event"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "sky-fixture-row-teams-london-kickoff",
+          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
+          "verifiedAt": "2026-10-30",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "Sky Sports"
+        },
+        {
+          "channelName": "Premier League+",
+          "originalChannelName": "Premier League+",
+          "channelId": "territory:sg|premier league+|",
+          "aliases": [],
+          "territory": "SG",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.premierleague.com/en/news/4687725/premier-league-launches-video-streaming-service-in-singapore",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Sky Sports Premier League",
+          "originalChannelName": "Sky Sports Premier League",
+          "channelId": "territory:gb|sky sports premier league|",
+          "aliases": [
+            "Sky Sports Premier League UK",
+            "UK Sky Sports Premier League",
+            "Sky Sports Premier League HD",
+            "Sky Sports Premier League FHD",
+            "SkySports Premier League"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "official-broadcaster-schedule",
+          "matchingMethod": "sky-fixture-row-teams-london-kickoff",
+          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
+          "verifiedAt": "2026-10-30",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
+          "exclusive": false,
+          "destinationType": "linear",
+          "destinationPrecision": "channel",
+          "destinationVerified": true,
+          "rightsHolder": "Sky Sports"
+        },
+        {
+          "channelName": "StarHub TV+ Premier+",
+          "originalChannelName": "StarHub TV+ Premier+",
+          "channelId": "territory:sg|starhub tv+ premier+|",
+          "aliases": [],
+          "territory": "SG",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.starhub.com/personal/bundles/premier-league.html",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
           "destinationType": "service",
           "ruleType": "all-events",
           "destinationPrecision": "service"
         }
       ],
+      "broadcasterEvidence": {
+        "source": "sky",
+        "url": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
+        "eventMatched": true,
+        "sourceEventMatched": false
+      },
       "broadcastRights": [
         {
           "territory": "GB",
           "holders": [
+            {
+              "name": "Sky Sports",
+              "kind": "network"
+            },
             {
               "name": "TNT Sports",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "Paramount+",
-              "kind": "service"
-            },
-            {
-              "name": "TUDN",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "CA",
+          "territory": "ES",
           "holders": [
             {
               "name": "DAZN",
@@ -9830,25 +11082,100 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "AU",
+          "territory": "FR",
           "holders": [
             {
-              "name": "Stan Sport",
+              "name": "CANAL+",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DE",
+          "holders": [
+            {
+              "name": "Sky Deutschland",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AT",
+          "holders": [
+            {
+              "name": "Sky Deutschland",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IT",
+          "holders": [
+            {
+              "name": "Sky Italia",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PT",
+          "holders": [
+            {
+              "name": "DAZN",
               "kind": "service"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TR",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9860,10 +11187,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9875,10 +11202,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9890,10 +11217,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9905,10 +11232,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9920,10 +11247,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9935,10 +11262,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9950,10 +11277,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9965,10 +11292,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9980,10 +11307,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -9995,10 +11322,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10010,10 +11337,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10025,10 +11352,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10040,10 +11367,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10055,10 +11382,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10070,10 +11397,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10085,10 +11412,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10100,10 +11427,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10115,10 +11442,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10130,10 +11457,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10145,10 +11472,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10160,10 +11487,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10175,10 +11502,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10190,10 +11517,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10205,10 +11532,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10220,10 +11547,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10235,10 +11562,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10250,10 +11577,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10265,10 +11592,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10280,10 +11607,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10295,10 +11622,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10310,10 +11637,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10325,10 +11652,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10340,10 +11667,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10355,10 +11682,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10370,10 +11697,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10385,10 +11712,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10400,10 +11727,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10415,10 +11742,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10430,10 +11757,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10445,10 +11772,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10460,10 +11787,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10475,10 +11802,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10490,10 +11817,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10505,10 +11832,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10520,10 +11847,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10535,10 +11862,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10550,10 +11877,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10565,10 +11892,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10580,10 +11907,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10595,10 +11922,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10610,10 +11937,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10625,10 +11952,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10640,10 +11967,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10655,10 +11982,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10670,10 +11997,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10685,10 +12012,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10700,10 +12027,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10715,10 +12042,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10730,10 +12057,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10745,10 +12072,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10760,10 +12087,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10775,10 +12102,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10790,10 +12117,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10805,10 +12132,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10820,10 +12147,10 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
@@ -10835,115 +12162,235 @@
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "BD",
+          "territory": "US",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "NBC Sports",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "BT",
+          "territory": "CA",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "Fubo",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AU",
+          "holders": [
+            {
+              "name": "Stan Sport",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BR",
+          "holders": [
+            {
+              "name": "ESPN",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "IN",
+          "territory": "AR",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "ESPN",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "LK",
+          "territory": "BO",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "ESPN",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "MV",
+          "territory": "CL",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "ESPN",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "NP",
+          "territory": "CO",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "ESPN",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         },
         {
-          "territory": "PK",
+          "territory": "EC",
           "holders": [
             {
-              "name": "Sony Sports Network",
+              "name": "ESPN",
               "kind": "network"
             }
           ],
           "sourceType": "official-rights",
-          "sourceUrl": "https://www.uefa.com/uefachampionsleague/news/025a-0ea9ecef1c1a-broadcast-partners/",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
           "verifiedAt": "2026-08-23",
-          "validFrom": "2024-07-01",
-          "validThrough": "2027-06-30",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "GY",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PE",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PY",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SR",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "UY",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
+          "season": "2026/27"
+        },
+        {
+          "territory": "VE",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.premierleague.com/en/about/broadcast-partners",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2025-08-01",
+          "validThrough": "2028-07-31",
           "season": "2026/27"
         }
       ]
@@ -10958,20 +12405,6 @@
       "startUtcEpochSeconds": 1793493000,
       "status": "confirmed",
       "broadcasts": [
-        {
-          "channelName": "S Sport TR",
-          "originalChannelName": "S Sport TR",
-          "channelId": "territory:tr|s sport tr|",
-          "aliases": [],
-          "territory": "TR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
         {
           "channelName": "NBA TV",
           "originalChannelName": "NBA TV",
@@ -11002,61 +12435,6 @@
         }
       },
       "competition": "NBA"
-    },
-    {
-      "id": "tsdb-2420434",
-      "sourceIds": {
-        "thesportsdb": "2420434"
-      },
-      "title": "Lebanon Rugby League vs France Rugby League",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1793515800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "7 Queensland",
-          "originalChannelName": "7 Queensland",
-          "channelId": "territory:au|7 queensland|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Premier Sports 2 UK",
-          "originalChannelName": "Premier Sports 2 UK",
-          "channelId": "territory:gb|premier sports 2 uk|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Lebanon Rugby League",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fiois71768738686.png",
-        "sourceIds": {
-          "thesportsdb": "154464"
-        }
-      },
-      "awayTeam": {
-        "name": "France Rugby League",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/7sx2xh1768738649.png",
-        "sourceIds": {
-          "thesportsdb": "154459"
-        }
-      },
-      "competition": "Rugby League World Cup"
     },
     {
       "id": "sky-Tottenham Hotspur-Crystal Palace-1793467800000",
@@ -11120,7 +12498,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -11160,7 +12538,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -12588,47 +13966,6 @@
       "competition": "Spanish Liga ACB"
     },
     {
-      "id": "tsdb-2550416",
-      "sourceIds": {
-        "thesportsdb": "2550416"
-      },
-      "title": "Section Paloise vs Stade Toulousain",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1793563500,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Canal+ France",
-          "originalChannelName": "Canal+ France",
-          "channelId": "territory:fr|canal+ france|",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-10-30",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Section Paloise",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/zak92e1573136893.png",
-        "sourceIds": {
-          "thesportsdb": "137384"
-        }
-      },
-      "awayTeam": {
-        "name": "Stade Toulousain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z7pjfg1622926113.png",
-        "sourceIds": {
-          "thesportsdb": "135339"
-        }
-      },
-      "competition": "French Top 14"
-    },
-    {
       "id": "sky-Newcastle United-Everton-1793649600000",
       "title": "Newcastle United vs Everton",
       "sport": "football",
@@ -12696,7 +14033,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -12736,7 +14073,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -14109,6 +15446,32 @@
       ]
     },
     {
+      "id": "tsdb-2606154",
+      "sourceIds": {
+        "thesportsdb": "2606154"
+      },
+      "title": "Olympiacos BC vs Peristeri BC",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1793530800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sport Klub 1 HR",
+          "originalChannelName": "Sport Klub 1 HR",
+          "channelId": "territory:hr|sport klub 1 hr|",
+          "aliases": [],
+          "territory": "HR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-10-30",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
       "id": "l1_championship_match_73893",
       "title": "Havre Athletic Club vs Paris Saint-Germain",
       "sport": "football",
@@ -14139,7 +15502,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73893",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -14219,7 +15582,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73897",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -14336,7 +15699,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -14376,7 +15739,7 @@
           "matchingMethod": "sky-fixture-row-teams-london-kickoff",
           "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -15773,13 +17136,13 @@
           "destinationPrecision": "channel"
         },
         {
-          "channelName": "Ligue 1+ 2",
-          "originalChannelName": "Ligue 1+ 2",
-          "channelId": "territory:fr|ligue 1+ 2|",
+          "channelName": "Ligue 1+ 4",
+          "originalChannelName": "Ligue 1+ 4",
+          "channelId": "territory:fr|ligue 1+ 4|",
           "aliases": [
-            "Ligue1+ 2",
-            "FR Ligue 1+ 2",
-            "Ligue 1+ 2 HD"
+            "Ligue1+ 4",
+            "FR Ligue 1+ 4",
+            "Ligue 1+ 4 HD"
           ],
           "territory": "FR",
           "confirmed": true,
@@ -15787,7 +17150,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73898",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+",
@@ -15884,7 +17247,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73894",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -15950,13 +17313,13 @@
       },
       "broadcasts": [
         {
-          "channelName": "Ligue 1+ 5",
-          "originalChannelName": "Ligue 1+ 5",
-          "channelId": "territory:fr|ligue 1+ 5|",
+          "channelName": "Ligue 1+ 2",
+          "originalChannelName": "Ligue 1+ 2",
+          "channelId": "territory:fr|ligue 1+ 2|",
           "aliases": [
-            "Ligue1+ 5",
-            "FR Ligue 1+ 5",
-            "Ligue 1+ 5 HD"
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
           ],
           "territory": "FR",
           "confirmed": true,
@@ -15964,7 +17327,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73901",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -16044,7 +17407,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73900",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -16110,13 +17473,13 @@
       },
       "broadcasts": [
         {
-          "channelName": "Ligue 1+ 3",
-          "originalChannelName": "Ligue 1+ 3",
-          "channelId": "territory:fr|ligue 1+ 3|",
+          "channelName": "Ligue 1+ 5",
+          "originalChannelName": "Ligue 1+ 5",
+          "channelId": "territory:fr|ligue 1+ 5|",
           "aliases": [
-            "Ligue1+ 3",
-            "FR Ligue 1+ 3",
-            "Ligue 1+ 3 HD"
+            "Ligue1+ 5",
+            "FR Ligue 1+ 5",
+            "Ligue 1+ 5 HD"
           ],
           "territory": "FR",
           "confirmed": true,
@@ -16124,7 +17487,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73896",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -16204,7 +17567,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73899",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -16270,13 +17633,13 @@
       },
       "broadcasts": [
         {
-          "channelName": "Ligue 1+ 4",
-          "originalChannelName": "Ligue 1+ 4",
-          "channelId": "territory:fr|ligue 1+ 4|",
+          "channelName": "Ligue 1+ 2",
+          "originalChannelName": "Ligue 1+ 2",
+          "channelId": "territory:fr|ligue 1+ 2|",
           "aliases": [
-            "Ligue1+ 4",
-            "FR Ligue 1+ 4",
-            "Ligue 1+ 4 HD"
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
           ],
           "territory": "FR",
           "confirmed": true,
@@ -16284,7 +17647,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73895",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -16312,6 +17675,86 @@
       "broadcasterEvidence": {
         "source": "ligue1",
         "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73895",
+        "eventMatched": true,
+        "sourceEventMatched": false
+      },
+      "broadcastRights": [
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "Ligue 1+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        }
+      ]
+    },
+    {
+      "id": "l1_championship_match_73903",
+      "title": "AJ Auxerre vs Paris FC",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "startUtcEpochSeconds": 1794068100,
+      "status": "confirmed",
+      "homeTeam": {
+        "name": "AJ Auxerre",
+        "badgeUrl": null
+      },
+      "awayTeam": {
+        "name": "Paris FC",
+        "badgeUrl": null
+      },
+      "broadcasts": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "originalChannelName": "Ligue 1+ 2",
+          "channelId": "territory:fr|ligue 1+ 2|",
+          "aliases": [
+            "Ligue1+ 2",
+            "FR Ligue 1+ 2",
+            "Ligue 1+ 2 HD"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "official-match-id",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73903",
+          "verifiedAt": "2026-10-30",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
+          "exclusive": false,
+          "destinationPrecision": "channel",
+          "rightsHolder": "Ligue 1+"
+        },
+        {
+          "channelName": "Ligue 1+",
+          "originalChannelName": "Ligue 1+",
+          "channelId": "territory:fr|ligue 1+|",
+          "aliases": [
+            "Ligue1+",
+            "FR Ligue 1+"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+          "verifiedAt": "2026-08-23",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        }
+      ],
+      "broadcasterEvidence": {
+        "source": "ligue1",
+        "url": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73903",
         "eventMatched": true,
         "sourceEventMatched": false
       },
@@ -16389,9 +17832,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1500",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -16522,7 +17965,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -16707,7 +18150,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -16758,7 +18201,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Orange"
@@ -17141,9 +18584,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=400",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -17274,7 +18717,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -17947,7 +19390,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -18527,9 +19970,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -18663,7 +20106,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "DAZN"
@@ -19248,9 +20691,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1400",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -19384,7 +20827,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "DAZN"
@@ -19964,9 +21407,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -20100,7 +21543,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "DAZN"
@@ -20680,9 +22123,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2100",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -20813,7 +22256,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -21398,9 +22841,9 @@
           "confirmed": true,
           "sourceType": "official-broadcaster-schedule",
           "matchingMethod": "bein-epg-title-competition-programme-window",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200",
-          "verifiedAt": "2026-10-30T09:56:52.000Z",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800",
+          "verifiedAt": "2026-10-30T17:58:59.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationType": "linear",
           "destinationPrecision": "channel",
@@ -21534,7 +22977,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "DAZN"
@@ -22209,7 +23652,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "DAZN"
@@ -22394,7 +23837,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
+          "checkedAt": "2026-10-30T17:58:59.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -43928,682 +45371,6 @@
           "sourceType": "official-rights",
           "sourceUrl": "https://www.uefa.com/uefaconferenceleague/news/0285-18f79eae3aac-5c7eb199a66d-1000--where-to-watch-the-uefa-europa-conference-league-final-tv-b/",
           "verifiedAt": "2026-10-17",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        }
-      ]
-    },
-    {
-      "id": "laliga-102356",
-      "title": "R. Racing Club vs Real Madrid",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "startUtcEpochSeconds": 1793546100,
-      "status": "confirmed",
-      "homeTeam": {
-        "name": "R. Racing Club",
-        "badgeUrl": "https://assets.laliga.com/assets/2019/06/07/medium/racing.png",
-        "sourceIds": {
-          "laliga": "49"
-        }
-      },
-      "awayTeam": {
-        "name": "Real Madrid",
-        "badgeUrl": "https://assets.laliga.com/assets/2019/06/07/medium/real-madrid.png",
-        "sourceIds": {
-          "laliga": "15"
-        }
-      },
-      "broadcasts": [
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:at|dazn|",
-          "aliases": [],
-          "territory": "AT",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
-          "viewingUrl": "https://www.dazn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "beIN SPORTS CONNECT",
-          "originalChannelName": "beIN SPORTS CONNECT",
-          "channelId": "territory:au|bein sports connect|en,es",
-          "languageEvidence": {
-            "scope": "feed-audio",
-            "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
-            "verifiedAt": "2026-10-18T11:00:00Z"
-          },
-          "aliases": [],
-          "languages": [
-            "en",
-            "es"
-          ],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
-          "viewingUrl": "https://connect-au.beinsports.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:be|dazn|",
-          "aliases": [],
-          "territory": "BE",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
-          "viewingUrl": "https://www.dazn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:ch|dazn|",
-          "aliases": [],
-          "territory": "CH",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
-          "viewingUrl": "https://www.dazn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:de|dazn|",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
-          "viewingUrl": "https://www.dazn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Disney+",
-          "originalChannelName": "Disney+",
-          "channelId": "territory:dk|disney+|",
-          "aliases": [],
-          "territory": "DK",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
-          "viewingUrl": "https://www.disneyplus.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:es|dazn|",
-          "aliases": [
-            "DAZN ES",
-            "ES DAZN"
-          ],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "official-event",
-          "matchingMethod": "embedded-match-object",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "verifiedAt": "2026-10-30",
-          "checkedAt": "2026-10-30T09:56:52.000Z",
-          "exclusive": false,
-          "destinationPrecision": "service",
-          "rightsHolder": "DAZN"
-        },
-        {
-          "channelName": "Disney+",
-          "originalChannelName": "Disney+",
-          "channelId": "territory:fi|disney+|",
-          "aliases": [],
-          "territory": "FI",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
-          "viewingUrl": "https://www.disneyplus.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Disney+",
-          "originalChannelName": "Disney+",
-          "channelId": "territory:fr|disney+|fr",
-          "languageEvidence": {
-            "scope": "feed-audio",
-            "sourceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
-            "verifiedAt": "2026-10-18T11:00:00Z"
-          },
-          "aliases": [],
-          "languages": [
-            "fr"
-          ],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
-          "viewingUrl": "https://www.disneyplus.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Disney+",
-          "originalChannelName": "Disney+",
-          "channelId": "territory:is|disney+|",
-          "aliases": [],
-          "territory": "IS",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
-          "viewingUrl": "https://www.disneyplus.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:it|dazn|",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
-          "viewingUrl": "https://www.dazn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "beIN SPORTS CONNECT",
-          "originalChannelName": "beIN SPORTS CONNECT",
-          "channelId": "territory:nz|bein sports connect|",
-          "aliases": [],
-          "territory": "NZ",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
-          "viewingUrl": "https://connect-nz.beinsports.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:pt|dazn|",
-          "aliases": [],
-          "territory": "PT",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
-          "viewingUrl": "https://www.dazn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "Disney+",
-          "originalChannelName": "Disney+",
-          "channelId": "territory:se|disney+|",
-          "aliases": [],
-          "territory": "SE",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
-          "viewingUrl": "https://www.disneyplus.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "ESPN+",
-          "originalChannelName": "ESPN+",
-          "channelId": "territory:us|espn+|en,es",
-          "languageEvidence": {
-            "scope": "feed-audio",
-            "sourceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
-            "verifiedAt": "2026-10-18T11:00:00Z"
-          },
-          "aliases": [],
-          "languages": [
-            "en",
-            "es"
-          ],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
-          "viewingUrl": "https://plus.espn.com/",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "beIN SPORTS CONNECT on Fetch TV",
-          "originalChannelName": "beIN SPORTS CONNECT on Fetch TV",
-          "channelId": "territory:au|bein sports connect on fetch tv|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "DAZN",
-          "originalChannelName": "DAZN",
-          "channelId": "territory:fr|dazn|",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.laliga.com/en-GB/news/disney-and-dazn-become-the-new-home-of-laliga-ea-sports-in-france",
-          "viewingUrl": "https://www.dazn.com/fr-FR/home",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        },
-        {
-          "channelName": "beIN SPORTS CONNECT on Prime Video",
-          "originalChannelName": "beIN SPORTS CONNECT on Prime Video",
-          "channelId": "territory:au|bein sports connect on prime video|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "official-all-events",
-          "matchingMethod": "all-events",
-          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
-          "verifiedAt": "2026-10-18",
-          "exclusive": false,
-          "destinationType": "service",
-          "ruleType": "all-events",
-          "destinationPrecision": "service"
-        }
-      ],
-      "broadcasterEvidence": {
-        "source": "laliga",
-        "url": "https://www.laliga.com/laliga-easports/resultados",
-        "eventMatched": true,
-        "sourceEventMatched": false
-      },
-      "broadcastRights": [
-        {
-          "territory": "ES",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            },
-            {
-              "name": "Movistar Plus+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "US",
-          "holders": [
-            {
-              "name": "ESPN",
-              "kind": "network"
-            },
-            {
-              "name": "ESPN+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "FR",
-          "holders": [
-            {
-              "name": "DAZN",
-              "kind": "service"
-            },
-            {
-              "name": "Disney+",
-              "kind": "service"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "AE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "BH",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "DZ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "EG",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "IQ",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "JO",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "KW",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LB",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "LY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "MA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "OM",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "PS",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "QA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SA",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "SY",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "TN",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
-          "validFrom": "2026-07-01",
-          "validThrough": "2027-06-30",
-          "season": "2026/27"
-        },
-        {
-          "territory": "YE",
-          "holders": [
-            {
-              "name": "beIN Sports",
-              "kind": "network"
-            }
-          ],
-          "sourceType": "official-rights",
-          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
-          "verifiedAt": "2026-08-23",
           "validFrom": "2026-07-01",
           "validThrough": "2027-06-30",
           "season": "2026/27"
