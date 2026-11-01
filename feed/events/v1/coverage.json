@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T00:24:24.207Z",
+  "generatedAt": "2026-11-01T06:14:15.643Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -10,7 +10,7 @@
         "embedded-json"
       ],
       "success": true,
-      "candidates": 5
+      "candidates": 9
     },
     {
       "id": "sky-sports-uk",
@@ -80,7 +80,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -793,7 +793,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -1015,7 +1015,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -1055,7 +1055,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -1273,7 +1273,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -1466,24 +1466,341 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "tsdb-2407947",
+      "eventId": "tsdb-2508400",
       "sport": "football",
-      "competition": "Norwegian 1. Divisjon",
-      "territory": "DK",
+      "competition": "German Bundesliga",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 9
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "DE",
+      "sourcesAttempted": [
+        {
+          "id": "bundesliga-active",
+          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/matchday",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Sky Deutschland",
+          "DAZN",
+          "WOW"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 9
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "NO",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "tsdb-2601752",
-      "sport": "basketball",
-      "competition": "NBA",
-      "territory": "CA",
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "OM",
       "sourcesAttempted": [],
       "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 9
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 9
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2508400",
+      "sport": "football",
+      "competition": "German Bundesliga",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "tsdb-2601752",
@@ -1539,7 +1856,7 @@
       "eventId": "tsdb-2420434",
       "sport": "rugby",
       "competition": "Rugby League World Cup",
-      "territory": "AU",
+      "territory": "GB",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -1549,7 +1866,7 @@
       "eventId": "tsdb-2420434",
       "sport": "rugby",
       "competition": "Rugby League World Cup",
-      "territory": "GB",
+      "territory": "NZ",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -1580,7 +1897,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -2293,7 +2610,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -2515,7 +2832,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -2555,7 +2872,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -2773,7 +3090,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -2990,7 +3307,7 @@
       "eventId": "tsdb-2601756",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "CA",
+      "territory": "FR",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -3000,7 +3317,7 @@
       "eventId": "tsdb-2601756",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "FR",
+      "territory": "IT",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -3051,7 +3368,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -3299,16 +3616,6 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "tsdb-2594620",
-      "sport": "football",
-      "competition": "UEFA Champions League",
-      "territory": "DK",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
       "eventId": "tsdb-2594620",
@@ -3653,7 +3960,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -3875,7 +4182,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -3915,7 +4222,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -4208,7 +4515,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -4816,7 +5123,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -5038,7 +5345,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -5078,7 +5385,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -5371,7 +5678,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -5979,7 +6286,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -6201,7 +6508,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -6241,7 +6548,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -6533,7 +6840,7 @@
       "eventId": "tsdb-2601757",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "CA",
+      "territory": "FR",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -6543,7 +6850,7 @@
       "eventId": "tsdb-2601757",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "FR",
+      "territory": "IT",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -6564,7 +6871,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -7277,7 +7584,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -7499,7 +7806,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -7539,7 +7846,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -7757,7 +8064,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -7909,7 +8216,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -8622,7 +8929,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -8844,7 +9151,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -8884,7 +9191,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -9102,7 +9409,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -9254,7 +9561,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -9962,7 +10269,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -10184,7 +10491,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -10224,7 +10531,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -10442,7 +10749,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -10594,7 +10901,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -11302,7 +11609,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -11524,7 +11831,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -11564,7 +11871,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -11782,7 +12089,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -11934,7 +12241,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -12642,7 +12949,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -12864,7 +13171,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -12904,7 +13211,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -13122,7 +13429,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -13274,7 +13581,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -13982,7 +14289,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -14204,7 +14511,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -14244,7 +14551,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -14462,7 +14769,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -14614,7 +14921,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -15327,7 +15634,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -15549,7 +15856,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -15589,7 +15896,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -15807,7 +16114,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -15945,480 +16252,6 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AE",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 5
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "CH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DK",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "EG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "ES",
-      "sourcesAttempted": [
-        {
-          "id": "laliga-spain",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld",
-            "semantic-table"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "Movistar LALIGA",
-          "normalizedName": "movistarlaliga",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
-        },
-        {
-          "channelName": "Movistar Plus+",
-          "normalizedName": "movistarplusplus",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
-        },
-        {
-          "channelName": "Orange Fútbol 1",
-          "normalizedName": "orangefutbol1",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN",
-          "Disney+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "JO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "KW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LB",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "MA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 5
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "OM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "QA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 5
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 5
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "TN",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN",
-          "ESPN+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102353",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "YE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
       "eventId": "laliga-102354",
       "sport": "football",
       "competition": "LALIGA EA SPORTS",
@@ -16433,14 +16266,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16486,7 +16319,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16532,7 +16365,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16548,7 +16381,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16616,7 +16449,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16652,7 +16485,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16668,7 +16501,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16684,7 +16517,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16700,7 +16533,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16721,14 +16554,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16754,7 +16587,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16770,7 +16603,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16801,14 +16634,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16829,14 +16662,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16862,7 +16695,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16878,7 +16711,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16909,7 +16742,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=300"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -16930,7 +16763,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -17200,7 +17033,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -17274,7 +17107,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -17300,7 +17133,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -17393,14 +17226,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17446,7 +17279,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17492,7 +17325,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17508,7 +17341,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17577,7 +17410,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17613,7 +17446,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17629,7 +17462,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17645,7 +17478,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17661,7 +17494,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17682,14 +17515,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17715,7 +17548,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17731,7 +17564,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17762,14 +17595,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17790,14 +17623,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17823,7 +17656,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17839,7 +17672,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17870,7 +17703,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=500"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17891,14 +17724,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17944,7 +17777,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -17990,7 +17823,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18006,7 +17839,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18074,7 +17907,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18110,7 +17943,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18126,7 +17959,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18142,7 +17975,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18158,7 +17991,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18179,14 +18012,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18212,7 +18045,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18228,7 +18061,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18259,14 +18092,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18287,14 +18120,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18320,7 +18153,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18336,7 +18169,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18367,7 +18200,7 @@
         {
           "channelName": "beIN SPORTS 1",
           "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=800"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=600"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -18388,7 +18221,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -18664,7 +18497,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -18738,7 +18571,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -18764,7 +18597,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -18923,22 +18756,6 @@
       "rejectionReason": null
     },
     {
-      "eventId": "l1_championship_match_73901",
-      "sport": "football",
-      "competition": "Ligue 1",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "Ligue 1+ 2",
-          "normalizedName": "ligue1plus2",
-          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73901"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
       "eventId": "l1_championship_match_73902",
       "sport": "football",
       "competition": "Ligue 1",
@@ -18969,16 +18786,6 @@
       ],
       "rightsWithoutEventDestination": [],
       "rejectionReason": null
-    },
-    {
-      "eventId": "mls-MLS-MAT-0009OH",
-      "sport": "football",
-      "competition": "Major League Soccer - Regular Season",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
       "eventId": "mls-MLS-MAT-0009OL",
@@ -20633,7 +20440,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -21231,7 +21038,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -21453,7 +21260,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -21493,7 +21300,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -21786,7 +21593,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -22358,7 +22165,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -22580,7 +22387,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -22620,7 +22427,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -22913,7 +22720,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -23485,7 +23292,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -23707,7 +23514,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -23747,7 +23554,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -24040,7 +23847,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -24612,7 +24419,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -24834,7 +24641,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -24874,7 +24681,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -25167,7 +24974,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -25739,7 +25546,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -25961,7 +25768,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -26001,7 +25808,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -26294,7 +26101,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -26892,7 +26699,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -27114,7 +26921,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -27154,7 +26961,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -27447,7 +27254,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -28019,7 +27826,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -28241,7 +28048,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -28281,7 +28088,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -28574,7 +28381,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -29172,7 +28979,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -29394,7 +29201,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -29434,7 +29241,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -29727,7 +29534,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -30325,7 +30132,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -30547,7 +30354,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -30587,7 +30394,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -30880,7 +30687,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -31452,7 +31259,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -31674,7 +31481,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -31714,7 +31521,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -32007,7 +31814,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -32579,7 +32386,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -32801,7 +32608,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -32841,7 +32648,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -33134,7 +32941,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -33706,7 +33513,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -33928,7 +33735,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -33968,7 +33775,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -34261,7 +34068,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -34833,7 +34640,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -35055,7 +34862,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -35095,7 +34902,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -35388,7 +35195,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -35960,7 +35767,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -36182,7 +35989,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -36222,7 +36029,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -36515,7 +36322,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -37087,7 +36894,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -37309,7 +37116,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -37349,7 +37156,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 5
+          "candidates": 9
         }
       ],
       "exactDestinations": [],
@@ -38550,7 +38357,7 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 10,
+        "total": 9,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -38564,10 +38371,10 @@
       },
       {
         "sport": "football",
-        "total": 2513,
+        "total": 2497,
         "attempted": 165,
-        "exactCovered": 77,
-        "coveragePercentage": 3.1
+        "exactCovered": 75,
+        "coveragePercentage": 3
       },
       {
         "sport": "formula1",
@@ -38642,6 +38449,13 @@
         "coveragePercentage": 0
       },
       {
+        "competition": "German Bundesliga",
+        "total": 20,
+        "attempted": 5,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
         "competition": "Italian Serie A",
         "total": 4,
         "attempted": 0,
@@ -38650,35 +38464,28 @@
       },
       {
         "competition": "LALIGA EA SPORTS",
-        "total": 192,
-        "attempted": 30,
-        "exactCovered": 54,
-        "coveragePercentage": 28.1
+        "total": 160,
+        "attempted": 25,
+        "exactCovered": 53,
+        "coveragePercentage": 33.1
       },
       {
         "competition": "Ligue 1",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
-        "exactCovered": 8,
+        "exactCovered": 7,
         "coveragePercentage": 100
       },
       {
         "competition": "Major League Soccer - Regular Season",
-        "total": 22,
+        "total": 21,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "competition": "NBA",
-        "total": 8,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "competition": "Norwegian 1. Divisjon",
-        "total": 1,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -38720,7 +38527,7 @@
       },
       {
         "competition": "UEFA Champions League",
-        "total": 1396,
+        "total": 1395,
         "attempted": 79,
         "exactCovered": 6,
         "coveragePercentage": 0.4
@@ -38778,14 +38585,14 @@
       },
       {
         "territory": "AT",
-        "total": 17,
+        "total": 16,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "AU",
-        "total": 74,
+        "total": 72,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -38806,7 +38613,7 @@
       },
       {
         "territory": "BE",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -38876,7 +38683,7 @@
       },
       {
         "territory": "CA",
-        "total": 32,
+        "total": 29,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -38904,7 +38711,7 @@
       },
       {
         "territory": "CH",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -38961,7 +38768,7 @@
       {
         "territory": "DE",
         "total": 20,
-        "attempted": 1,
+        "attempted": 2,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
@@ -38974,7 +38781,7 @@
       },
       {
         "territory": "DK",
-        "total": 10,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -39016,10 +38823,10 @@
       },
       {
         "territory": "ES",
-        "total": 25,
-        "attempted": 14,
-        "exactCovered": 9,
-        "coveragePercentage": 36
+        "total": 24,
+        "attempted": 13,
+        "exactCovered": 8,
+        "coveragePercentage": 33.3
       },
       {
         "territory": "ET",
@@ -39030,17 +38837,17 @@
       },
       {
         "territory": "FI",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "FR",
-        "total": 31,
+        "total": 29,
         "attempted": 0,
-        "exactCovered": 8,
-        "coveragePercentage": 25.8
+        "exactCovered": 7,
+        "coveragePercentage": 24.1
       },
       {
         "territory": "GA",
@@ -39149,14 +38956,14 @@
       },
       {
         "territory": "IS",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "IT",
-        "total": 18,
+        "total": 19,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -39380,7 +39187,7 @@
       },
       {
         "territory": "NO",
-        "total": 2,
+        "total": 3,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -39443,7 +39250,7 @@
       },
       {
         "territory": "PT",
-        "total": 17,
+        "total": 16,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -39506,7 +39313,7 @@
       },
       {
         "territory": "SE",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -39646,7 +39453,7 @@
       },
       {
         "territory": "US",
-        "total": 97,
+        "total": 96,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -40849,14 +40656,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-11-01T00:05:51.000Z",
+    "generatedAt": "2026-11-01T05:57:40.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
     "succeeded": 72,
     "failed": 0,
     "successRatio": 1,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 9,
+    "detailRequests": 1,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -40898,7 +40705,7 @@
       },
       {
         "sport": "football",
-        "territory": "DK",
+        "territory": "NO",
         "date": "2026-11-01",
         "status": "success"
       },
@@ -40928,7 +40735,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "CA",
+        "territory": "IT",
         "date": "2026-11-01",
         "status": "success"
       },
@@ -40952,7 +40759,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "PL",
+        "territory": "RO",
         "date": "2026-11-01",
         "status": "success"
       },
@@ -40976,7 +40783,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "IE",
+        "territory": "PK",
         "date": "2026-11-01",
         "status": "success"
       },
@@ -41000,7 +40807,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "AU",
+        "territory": "NZ",
         "date": "2026-11-01",
         "status": "success"
       },
@@ -41042,7 +40849,7 @@
       },
       {
         "sport": "football",
-        "territory": "DK",
+        "territory": "NO",
         "date": "2026-11-02",
         "status": "success"
       },
@@ -41072,7 +40879,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "CA",
+        "territory": "IT",
         "date": "2026-11-02",
         "status": "success"
       },
@@ -41096,7 +40903,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "PL",
+        "territory": "RO",
         "date": "2026-11-02",
         "status": "success"
       },
@@ -41120,7 +40927,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "IE",
+        "territory": "PK",
         "date": "2026-11-02",
         "status": "success"
       },
@@ -41144,7 +40951,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "AU",
+        "territory": "NZ",
         "date": "2026-11-02",
         "status": "success"
       },
@@ -41186,7 +40993,7 @@
       },
       {
         "sport": "football",
-        "territory": "DK",
+        "territory": "NO",
         "date": "2026-11-03",
         "status": "success"
       },
@@ -41216,7 +41023,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "CA",
+        "territory": "IT",
         "date": "2026-11-03",
         "status": "success"
       },
@@ -41240,7 +41047,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "PL",
+        "territory": "RO",
         "date": "2026-11-03",
         "status": "success"
       },
@@ -41264,7 +41071,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "IE",
+        "territory": "PK",
         "date": "2026-11-03",
         "status": "success"
       },
@@ -41288,7 +41095,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "AU",
+        "territory": "NZ",
         "date": "2026-11-03",
         "status": "success"
       }
