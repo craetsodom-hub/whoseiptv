@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T06:31:10.121Z",
+  "generatedAt": "2026-11-04T14:46:04.169Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -3517,16 +3517,6 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "tsdb-2620791",
-      "sport": "basketball",
-      "competition": "NCAA Division I Basketball Mens",
-      "territory": "ES",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
       "eventId": "tsdb-2565537",
       "sport": "basketball",
       "competition": "EuroLeague Basketball",
@@ -3541,26 +3531,6 @@
       "sport": "basketball",
       "competition": "Basketball Champions League",
       "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2588470",
-      "sport": "basketball",
-      "competition": "EuroCup Basketball",
-      "territory": "IL",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2524708",
-      "sport": "cricket",
-      "competition": "One Day International Series",
-      "territory": "AU",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -3830,13 +3800,15 @@
       "competition": "French Ligue 1",
       "territory": "FR",
       "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Ligue 1+"
-        ]
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "normalizedName": "ligue1plus2",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73910"
+        }
       ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
     },
     {
       "eventId": "tsdb-2488808",
@@ -4189,16 +4161,6 @@
       "eventId": "tsdb-2601787",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "IL",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601787",
-      "sport": "basketball",
-      "competition": "NBA",
       "territory": "US",
       "sourcesAttempted": [],
       "exactDestinations": [],
@@ -4230,16 +4192,6 @@
       "sport": "basketball",
       "competition": "EuroLeague Basketball",
       "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2449603",
-      "sport": "rugby",
-      "competition": "Nations Championship",
-      "territory": "AU",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -13661,6 +13613,4856 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "DAZN EN ABIERTO",
+          "normalizedName": "daznenabierto",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102366",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "Movistar LALIGA",
+          "normalizedName": "movistarlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102363",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Movistar Plus+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102362",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "Movistar LALIGA",
+          "normalizedName": "movistarlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        },
+        {
+          "channelName": "Movistar Plus+",
+          "normalizedName": "movistarplusplus",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        },
+        {
+          "channelName": "Orange Fútbol 1",
+          "normalizedName": "orangefutbol1",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102364",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3000"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Movistar Plus+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102367",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 1",
+          "normalizedName": "beinsports1",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3100"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Movistar Plus+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102361",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 8",
+          "normalizedName": "beinsports8",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "Movistar LALIGA",
+          "normalizedName": "movistarlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102365",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS XTRA 6",
+          "normalizedName": "beinsportsxtra6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "Movistar LALIGA",
+          "normalizedName": "movistarlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102360",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Movistar Plus+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102368",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 6",
+          "normalizedName": "beinsports6",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=3800"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "Movistar LALIGA",
+          "normalizedName": "movistarlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 8
+        }
+      ],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "laliga-102359",
+      "sport": "football",
+      "competition": "LALIGA EA SPORTS",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
       "eventId": "l1_championship_match_73902",
       "sport": "football",
       "competition": "Ligue 1",
@@ -13687,6 +18489,102 @@
           "channelName": "Ligue 1+ 2",
           "normalizedName": "ligue1plus2",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73903"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "l1_championship_match_73904",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 4",
+          "normalizedName": "ligue1plus4",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73904"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "l1_championship_match_73905",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 7",
+          "normalizedName": "ligue1plus7",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73905"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "l1_championship_match_73906",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 5",
+          "normalizedName": "ligue1plus5",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73906"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "l1_championship_match_73907",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 2",
+          "normalizedName": "ligue1plus2",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73907"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "l1_championship_match_73908",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 3",
+          "normalizedName": "ligue1plus3",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73908"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "l1_championship_match_73909",
+      "sport": "football",
+      "competition": "Ligue 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "Ligue 1+ 3",
+          "normalizedName": "ligue1plus3",
+          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73909"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -22189,24 +27087,17 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 14,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "sport": "cricket",
-        "total": 1,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "sport": "football",
-        "total": 1452,
-        "attempted": 85,
-        "exactCovered": 10,
-        "coveragePercentage": 0.7
+        "total": 1778,
+        "attempted": 135,
+        "exactCovered": 125,
+        "coveragePercentage": 7
       },
       {
         "sport": "formula1",
@@ -22217,7 +27108,7 @@
       },
       {
         "sport": "rugby",
-        "total": 4,
+        "total": 3,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22246,13 +27137,6 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "EuroCup Basketball",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "competition": "EuroLeague Basketball",
         "total": 3,
         "attempted": 0,
@@ -22270,8 +27154,8 @@
         "competition": "French Ligue 1",
         "total": 2,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 50
       },
       {
         "competition": "French Ligue 2",
@@ -22302,10 +27186,17 @@
         "coveragePercentage": 0
       },
       {
+        "competition": "LALIGA EA SPORTS",
+        "total": 320,
+        "attempted": 50,
+        "exactCovered": 108,
+        "coveragePercentage": 33.8
+      },
+      {
         "competition": "Ligue 1",
-        "total": 2,
+        "total": 8,
         "attempted": 0,
-        "exactCovered": 2,
+        "exactCovered": 8,
         "coveragePercentage": 100
       },
       {
@@ -22317,28 +27208,14 @@
       },
       {
         "competition": "Nations Championship",
-        "total": 3,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "competition": "NBA",
-        "total": 6,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "competition": "NCAA Division I Basketball Mens",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "competition": "One Day International Series",
-        "total": 1,
+        "total": 5,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22389,10 +27266,10 @@
     "territory": [
       {
         "territory": "AE",
-        "total": 17,
-        "attempted": 17,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 27,
+        "attempted": 27,
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "AL",
@@ -22424,14 +27301,14 @@
       },
       {
         "territory": "AT",
-        "total": 8,
+        "total": 18,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "AU",
-        "total": 57,
+        "total": 65,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22452,7 +27329,7 @@
       },
       {
         "territory": "BE",
-        "total": 1,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22473,10 +27350,10 @@
       },
       {
         "territory": "BH",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "BI",
@@ -22550,7 +27427,7 @@
       },
       {
         "territory": "CH",
-        "total": 1,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22606,7 +27483,7 @@
       },
       {
         "territory": "DE",
-        "total": 14,
+        "total": 24,
         "attempted": 1,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22620,17 +27497,17 @@
       },
       {
         "territory": "DK",
-        "total": 1,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "DZ",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "EC",
@@ -22648,10 +27525,10 @@
       },
       {
         "territory": "EG",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "ER",
@@ -22662,10 +27539,10 @@
       },
       {
         "territory": "ES",
-        "total": 14,
-        "attempted": 2,
-        "exactCovered": 1,
-        "coveragePercentage": 7.1
+        "total": 23,
+        "attempted": 12,
+        "exactCovered": 7,
+        "coveragePercentage": 30.4
       },
       {
         "territory": "ET",
@@ -22676,17 +27553,17 @@
       },
       {
         "territory": "FI",
-        "total": 1,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "FR",
-        "total": 17,
+        "total": 33,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 11.8
+        "exactCovered": 9,
+        "coveragePercentage": 27.3
       },
       {
         "territory": "GA",
@@ -22774,7 +27651,7 @@
       },
       {
         "territory": "IL",
-        "total": 3,
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -22788,31 +27665,31 @@
       },
       {
         "territory": "IQ",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "IS",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "IT",
         "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
-        "territory": "JO",
-        "total": 17,
+        "territory": "IT",
+        "total": 21,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
+      },
+      {
+        "territory": "JO",
+        "total": 27,
+        "attempted": 0,
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "JP",
@@ -22851,10 +27728,10 @@
       },
       {
         "territory": "KW",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "LA",
@@ -22865,10 +27742,10 @@
       },
       {
         "territory": "LB",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "LK",
@@ -22914,17 +27791,17 @@
       },
       {
         "territory": "LY",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "MA",
-        "total": 17,
-        "attempted": 17,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 27,
+        "attempted": 27,
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "ME",
@@ -23040,17 +27917,17 @@
       },
       {
         "territory": "NZ",
-        "total": 2,
+        "total": 12,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "OM",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "PE",
@@ -23082,14 +27959,14 @@
       },
       {
         "territory": "PS",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "PT",
-        "total": 8,
+        "total": 18,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -23103,10 +27980,10 @@
       },
       {
         "territory": "QA",
-        "total": 17,
-        "attempted": 17,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 27,
+        "attempted": 27,
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "RO",
@@ -23131,10 +28008,10 @@
       },
       {
         "territory": "SA",
-        "total": 17,
-        "attempted": 17,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 27,
+        "attempted": 27,
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "SC",
@@ -23152,7 +28029,7 @@
       },
       {
         "territory": "SE",
-        "total": 1,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -23215,10 +28092,10 @@
       },
       {
         "territory": "SY",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "SZ",
@@ -23250,10 +28127,10 @@
       },
       {
         "territory": "TN",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "TR",
@@ -23292,7 +28169,7 @@
       },
       {
         "territory": "US",
-        "total": 74,
+        "total": 84,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -23327,10 +28204,10 @@
       },
       {
         "territory": "YE",
-        "total": 17,
+        "total": 27,
         "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 6,
+        "coveragePercentage": 22.2
       },
       {
         "territory": "ZA",
@@ -24495,14 +29372,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-11-04T06:12:25.000Z",
+    "generatedAt": "2026-11-04T14:28:07.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
     "succeeded": 72,
     "failed": 0,
     "successRatio": 1,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 12,
+    "detailRequests": 1,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -24544,7 +29421,7 @@
       },
       {
         "sport": "football",
-        "territory": "CR",
+        "territory": "NG",
         "date": "2026-11-04",
         "status": "success"
       },
@@ -24574,7 +29451,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "IL",
+        "territory": "JP",
         "date": "2026-11-04",
         "status": "success"
       },
@@ -24598,7 +29475,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "FR",
+        "territory": "IT",
         "date": "2026-11-04",
         "status": "success"
       },
@@ -24622,7 +29499,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "IE",
+        "territory": "BD",
         "date": "2026-11-04",
         "status": "success"
       },
@@ -24646,7 +29523,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "AU",
+        "territory": "AR",
         "date": "2026-11-04",
         "status": "success"
       },
@@ -24688,7 +29565,7 @@
       },
       {
         "sport": "football",
-        "territory": "CR",
+        "territory": "NG",
         "date": "2026-11-05",
         "status": "success"
       },
@@ -24718,7 +29595,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "IL",
+        "territory": "JP",
         "date": "2026-11-05",
         "status": "success"
       },
@@ -24742,7 +29619,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "FR",
+        "territory": "IT",
         "date": "2026-11-05",
         "status": "success"
       },
@@ -24766,7 +29643,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "IE",
+        "territory": "BD",
         "date": "2026-11-05",
         "status": "success"
       },
@@ -24790,7 +29667,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "AU",
+        "territory": "AR",
         "date": "2026-11-05",
         "status": "success"
       },
@@ -24832,7 +29709,7 @@
       },
       {
         "sport": "football",
-        "territory": "CR",
+        "territory": "NG",
         "date": "2026-11-06",
         "status": "success"
       },
@@ -24862,7 +29739,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "IL",
+        "territory": "JP",
         "date": "2026-11-06",
         "status": "success"
       },
@@ -24886,7 +29763,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "FR",
+        "territory": "IT",
         "date": "2026-11-06",
         "status": "success"
       },
@@ -24910,7 +29787,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "IE",
+        "territory": "BD",
         "date": "2026-11-06",
         "status": "success"
       },
@@ -24934,7 +29811,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "AU",
+        "territory": "AR",
         "date": "2026-11-06",
         "status": "success"
       }
