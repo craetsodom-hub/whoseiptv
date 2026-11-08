@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:10:39.734Z",
+  "generatedAt": "2026-11-08T22:16:18.116Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -10,7 +10,7 @@
         "embedded-json"
       ],
       "success": true,
-      "candidates": 4
+      "candidates": 1
     },
     {
       "id": "sky-sports-uk",
@@ -21,7 +21,7 @@
         "semantic-html"
       ],
       "success": true,
-      "candidates": 12
+      "candidates": 11
     },
     {
       "id": "premier-league-selections",
@@ -80,68 +80,11 @@
             "semantic-html"
           ],
           "success": true,
-          "candidates": 12
+          "candidates": 11
         },
         {
           "id": "premier-league-selections",
           "sourceUrl": "https://www.premierleague.com/en/fixtures",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2489545",
-      "sport": "football",
-      "competition": "French Ligue 1",
-      "territory": "ES",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2489545",
-      "sport": "football",
-      "competition": "French Ligue 1",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "Ligue 1+ 3",
-          "normalizedName": "ligue1plus3",
-          "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73909"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "tsdb-2496782",
-      "sport": "football",
-      "competition": "Belgian Pro League",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2511829",
-      "sport": "football",
-      "competition": "German 2. Bundesliga",
-      "territory": "DE",
-      "sourcesAttempted": [
-        {
-          "id": "bundesliga-active",
-          "sourceUrl": "https://www.bundesliga.com/en/bundesliga/matchday",
           "parserTypes": [
             "embedded-page-state",
             "json-ld"
@@ -169,7 +112,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -344,7 +287,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -398,7 +341,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -424,7 +367,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -496,36 +439,6 @@
       "sport": "basketball",
       "competition": "NBA",
       "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2563811",
-      "sport": "basketball",
-      "competition": null,
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2449608",
-      "sport": "rugby",
-      "competition": null,
-      "territory": "GB",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2449608",
-      "sport": "rugby",
-      "competition": null,
-      "territory": "ZA",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -654,2278 +567,6 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "AE",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "AO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "AR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "AT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Sky Deutschland"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Stan Sport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BF",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BJ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "BW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CA",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Fubo"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CD",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CF",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CL",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "CV",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Sky Deutschland"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "DJ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "DZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "EC",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "EG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ER",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ES",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ET",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "CANAL+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GA",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GB",
-      "sourcesAttempted": [
-        {
-          "id": "sky-sports-uk",
-          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld",
-            "semantic-html"
-          ],
-          "success": true,
-          "candidates": 12
-        },
-        {
-          "id": "premier-league-selections",
-          "sourceUrl": "https://www.premierleague.com/en/fixtures",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "Sky Sports Main Event",
-          "normalizedName": "skysportsmainevent",
-          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league"
-        },
-        {
-          "channelName": "Sky Sports Premier League",
-          "normalizedName": "skysportspremierleague",
-          "sourceUrl": "https://www.skysports.com/watch/football-on-sky/competitions/premier-league"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GN",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "GY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "IQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "Sky Italia"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "JO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "KE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "KM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "KW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "LB",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "LR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "LS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "LY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "MA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "MG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ML",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "MR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "MU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "MW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "MZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "NA",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "NE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "NG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "OM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "PE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "PS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "PT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "PY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "QA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "RW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SC",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SD",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SL",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SN",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ST",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "SZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "TD",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "TG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "TN",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "TR",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "TZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "UG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "NBC Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "UY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "VE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "YE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ZA",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ZM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "sky-Manchester United-Aston Villa-1794155400000",
-      "sport": "football",
-      "competition": "Premier League",
-      "territory": "ZW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "SuperSport"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AE",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "CH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DK",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "EG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "ES",
-      "sourcesAttempted": [
-        {
-          "id": "laliga-spain",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld",
-            "semantic-table"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN",
-          "Movistar Plus+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN",
-          "Disney+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "JO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "KW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LB",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "MA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "OM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "QA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "TN",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN",
-          "ESPN+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102361",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "YE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AE",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "CH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DK",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "EG",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "ES",
-      "sourcesAttempted": [
-        {
-          "id": "laliga-spain",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld",
-            "semantic-table"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "Movistar LALIGA",
-          "normalizedName": "movistarlaliga",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN",
-          "Disney+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "JO",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "KW",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LB",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "MA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "OM",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "QA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 4
-        }
-      ],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SY",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "TN",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN",
-          "ESPN+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102365",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "YE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "beIN Sports"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
       "eventId": "laliga-102360",
       "sport": "football",
       "competition": "LALIGA EA SPORTS",
@@ -2940,7 +581,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -3211,7 +852,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -3285,7 +926,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -3311,7 +952,7 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [],
@@ -3404,18 +1045,16 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3453,15 +1092,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "BH",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3499,15 +1136,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "DZ",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3515,15 +1150,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "EG",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3583,15 +1216,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "IQ",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3619,15 +1250,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "JO",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3635,15 +1264,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "KW",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3651,15 +1278,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "LB",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3667,15 +1292,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "LY",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3692,18 +1315,16 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3721,15 +1342,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "OM",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3737,15 +1356,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "PS",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3772,18 +1389,16 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3800,18 +1415,16 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3829,15 +1442,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "SY",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3845,15 +1456,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "TN",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102368",
@@ -3876,15 +1485,13 @@
       "competition": "LALIGA EA SPORTS",
       "territory": "YE",
       "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 6",
-          "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
-        }
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN Sports"
+        ]
       ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
       "eventId": "laliga-102359",
@@ -3901,19 +1508,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -3957,14 +1559,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4008,14 +1605,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4029,14 +1621,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4103,14 +1690,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4144,14 +1726,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4165,14 +1742,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4186,14 +1758,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4207,14 +1774,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4235,19 +1797,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4271,14 +1828,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4292,14 +1844,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4330,19 +1877,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4363,19 +1905,14 @@
             "embedded-json"
           ],
           "success": true,
-          "candidates": 4
+          "candidates": 1
         }
       ],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4399,14 +1936,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4420,14 +1952,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4456,14 +1983,9 @@
       "sourcesAttempted": [],
       "exactDestinations": [
         {
-          "channelName": "beIN SPORTS 1",
-          "normalizedName": "beinsports1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
-        },
-        {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=100"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=0"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -5268,7 +2790,7 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 7,
+        "total": 6,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -5282,21 +2804,14 @@
       },
       {
         "sport": "football",
-        "total": 285,
-        "attempted": 39,
-        "exactCovered": 44,
-        "coveragePercentage": 15.4
+        "total": 127,
+        "attempted": 22,
+        "exactCovered": 24,
+        "coveragePercentage": 18.9
       },
       {
         "sport": "formula1",
         "total": 51,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "sport": "rugby",
-        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -5305,13 +2820,6 @@
     "competition": [
       {
         "competition": "Basketball Champions League",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "competition": "Belgian Pro League",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -5346,20 +2854,6 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "French Ligue 1",
-        "total": 2,
-        "attempted": 0,
-        "exactCovered": 1,
-        "coveragePercentage": 50
-      },
-      {
-        "competition": "German 2. Bundesliga",
-        "total": 1,
-        "attempted": 1,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "competition": "German BBL",
         "total": 1,
         "attempted": 0,
@@ -5382,10 +2876,10 @@
       },
       {
         "competition": "LALIGA EA SPORTS",
-        "total": 160,
-        "attempted": 25,
-        "exactCovered": 37,
-        "coveragePercentage": 23.1
+        "total": 96,
+        "attempted": 15,
+        "exactCovered": 19,
+        "coveragePercentage": 19.8
       },
       {
         "competition": "Ligue 1",
@@ -5416,13 +2910,6 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "Premier League",
-        "total": 90,
-        "attempted": 6,
-        "exactCovered": 1,
-        "coveragePercentage": 1.1
-      },
-      {
         "competition": "Scottish Premier League",
         "total": 1,
         "attempted": 1,
@@ -5442,22 +2929,15 @@
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
-      },
-      {
-        "competition": "unknown",
-        "total": 3,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
       }
     ],
     "territory": [
       {
         "territory": "AE",
-        "total": 7,
-        "attempted": 7,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "total": 4,
+        "attempted": 4,
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "AL",
@@ -5474,29 +2954,15 @@
         "coveragePercentage": 0
       },
       {
-        "territory": "AO",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "AR",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "territory": "AT",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "AU",
-        "total": 8,
+        "total": 5,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -5510,14 +2976,7 @@
       },
       {
         "territory": "BE",
-        "total": 6,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "BF",
-        "total": 1,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -5531,41 +2990,13 @@
       },
       {
         "territory": "BH",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "BI",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "BJ",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "BO",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "BR",
-        "total": 2,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "BW",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -5573,27 +3004,6 @@
       },
       {
         "territory": "CA",
-        "total": 2,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CD",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CF",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CG",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -5601,48 +3011,13 @@
       },
       {
         "territory": "CH",
-        "total": 6,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CI",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CL",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CM",
-        "total": 1,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "CN",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CO",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "CV",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -5657,38 +3032,24 @@
       },
       {
         "territory": "DE",
-        "total": 12,
-        "attempted": 2,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "DJ",
-        "total": 1,
-        "attempted": 0,
+        "total": 7,
+        "attempted": 1,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "DK",
-        "total": 6,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "DZ",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "EC",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "EE",
@@ -5699,104 +3060,41 @@
       },
       {
         "territory": "EG",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "ER",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "ES",
-        "total": 9,
-        "attempted": 6,
-        "exactCovered": 3,
-        "coveragePercentage": 33.3
-      },
-      {
-        "territory": "ET",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 5,
+        "attempted": 4,
+        "exactCovered": 2,
+        "coveragePercentage": 40
       },
       {
         "territory": "FI",
-        "total": 6,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "FR",
-        "total": 15,
+        "total": 10,
         "attempted": 0,
-        "exactCovered": 6,
-        "coveragePercentage": 40
-      },
-      {
-        "territory": "GA",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 5,
+        "coveragePercentage": 50
       },
       {
         "territory": "GB",
-        "total": 5,
-        "attempted": 2,
-        "exactCovered": 1,
-        "coveragePercentage": 20
-      },
-      {
-        "territory": "GH",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "GM",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "GN",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "GQ",
-        "total": 1,
-        "attempted": 0,
+        "total": 3,
+        "attempted": 1,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "GR",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "GW",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "GY",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -5839,31 +3137,31 @@
       },
       {
         "territory": "IQ",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "IS",
-        "total": 6,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "IT",
-        "total": 9,
+        "total": 6,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "JO",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "JP",
@@ -5873,21 +3171,7 @@
         "coveragePercentage": 0
       },
       {
-        "territory": "KE",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "territory": "KH",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "KM",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -5902,10 +3186,10 @@
       },
       {
         "territory": "KW",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "LA",
@@ -5916,24 +3200,10 @@
       },
       {
         "territory": "LB",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "LR",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "LS",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "LT",
@@ -5958,41 +3228,20 @@
       },
       {
         "territory": "LY",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "MA",
-        "total": 7,
-        "attempted": 7,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "total": 4,
+        "attempted": 4,
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "ME",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "MG",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "ML",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "MR",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -6006,49 +3255,7 @@
         "coveragePercentage": 0
       },
       {
-        "territory": "MU",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "MW",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "territory": "MX",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "MZ",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "NA",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "NE",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "NG",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -6070,24 +3277,17 @@
       },
       {
         "territory": "NZ",
-        "total": 6,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "OM",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "PE",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "PH",
@@ -6105,31 +3305,24 @@
       },
       {
         "territory": "PS",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "PT",
-        "total": 7,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "PY",
-        "total": 1,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "QA",
-        "total": 7,
-        "attempted": 7,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
+        "total": 4,
+        "attempted": 4,
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "RO",
@@ -6146,43 +3339,22 @@
         "coveragePercentage": 0
       },
       {
-        "territory": "RW",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "territory": "SA",
-        "total": 7,
-        "attempted": 7,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "SC",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "SD",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "total": 4,
+        "attempted": 4,
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "SE",
-        "total": 6,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "SG",
-        "total": 2,
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -6195,74 +3367,11 @@
         "coveragePercentage": 0
       },
       {
-        "territory": "SL",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "SN",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "SO",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "SR",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "SS",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "ST",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "territory": "SY",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "SZ",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "TD",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "TG",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "TH",
@@ -6273,27 +3382,13 @@
       },
       {
         "territory": "TN",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "TR",
-        "total": 1,
-        "attempted": 1,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       },
       {
         "territory": "TW",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "TZ",
         "total": 1,
         "attempted": 0,
         "exactCovered": 0,
@@ -6307,29 +3402,8 @@
         "coveragePercentage": 0
       },
       {
-        "territory": "UG",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "territory": "US",
-        "total": 10,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "UY",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "VE",
-        "total": 1,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -6350,31 +3424,10 @@
       },
       {
         "territory": "YE",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
-        "exactCovered": 2,
-        "coveragePercentage": 28.6
-      },
-      {
-        "territory": "ZA",
-        "total": 2,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "ZM",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "ZW",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
+        "exactCovered": 1,
+        "coveragePercentage": 25
       }
     ],
     "sourceAdapter": [
@@ -7518,14 +4571,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-11-08T17:54:22.000Z",
+    "generatedAt": "2026-11-08T21:59:41.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
     "succeeded": 72,
     "failed": 0,
     "successRatio": 1,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 2,
+    "detailRequests": 4,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -7567,7 +4620,7 @@
       },
       {
         "sport": "football",
-        "territory": "EG",
+        "territory": "TN",
         "date": "2026-11-08",
         "status": "success"
       },
@@ -7597,7 +4650,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "CN",
+        "territory": "AR",
         "date": "2026-11-08",
         "status": "success"
       },
@@ -7621,7 +4674,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "AU",
         "date": "2026-11-08",
         "status": "success"
       },
@@ -7645,7 +4698,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "TT",
+        "territory": "US",
         "date": "2026-11-08",
         "status": "success"
       },
@@ -7669,7 +4722,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "RO",
+        "territory": "IE",
         "date": "2026-11-08",
         "status": "success"
       },
@@ -7711,7 +4764,7 @@
       },
       {
         "sport": "football",
-        "territory": "EG",
+        "territory": "TN",
         "date": "2026-11-09",
         "status": "success"
       },
@@ -7741,7 +4794,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "CN",
+        "territory": "AR",
         "date": "2026-11-09",
         "status": "success"
       },
@@ -7765,7 +4818,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "AU",
         "date": "2026-11-09",
         "status": "success"
       },
@@ -7789,7 +4842,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "TT",
+        "territory": "US",
         "date": "2026-11-09",
         "status": "success"
       },
@@ -7813,7 +4866,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "RO",
+        "territory": "IE",
         "date": "2026-11-09",
         "status": "success"
       },
@@ -7855,7 +4908,7 @@
       },
       {
         "sport": "football",
-        "territory": "EG",
+        "territory": "TN",
         "date": "2026-11-10",
         "status": "success"
       },
@@ -7885,7 +4938,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "CN",
+        "territory": "AR",
         "date": "2026-11-10",
         "status": "success"
       },
@@ -7909,7 +4962,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "AU",
         "date": "2026-11-10",
         "status": "success"
       },
@@ -7933,7 +4986,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "TT",
+        "territory": "US",
         "date": "2026-11-10",
         "status": "success"
       },
@@ -7957,7 +5010,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "RO",
+        "territory": "IE",
         "date": "2026-11-10",
         "status": "success"
       }
