@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1794513125,
-  "validUntilEpochSeconds": 1794556325,
+  "generatedAtEpochSeconds": 1794534473,
+  "validUntilEpochSeconds": 1794577673,
   "events": [
     {
       "id": "l1_championship_match_73919",
@@ -33,8 +33,8 @@
           "sourceType": "official-event",
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73919",
-          "verifiedAt": "2026-11-12",
-          "checkedAt": "2026-11-12T19:52:05.000Z",
+          "verifiedAt": "2026-11-13",
+          "checkedAt": "2026-11-13T01:47:53.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -84,45 +84,44 @@
       ]
     },
     {
-      "id": "tsdb-2565548",
+      "id": "tsdb-2601836",
       "sourceIds": {
-        "thesportsdb": "2565548"
+        "thesportsdb": "2601836"
       },
-      "title": "Maccabi Tel Aviv BC vs Hapoel Tel Aviv BC",
+      "title": "Philadelphia 76ers vs Toronto Raptors",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794510300,
+      "startUtcEpochSeconds": 1794528000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "MagentaTV DE",
-          "originalChannelName": "MagentaTV DE",
-          "channelId": "territory:de|magentatv de|",
+          "channelName": "SportsNet One",
+          "originalChannelName": "SportsNet One",
+          "channelId": "territory:ca|sportsnet one|",
           "aliases": [],
-          "territory": "DE",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ],
-      "homeTeam": {
-        "name": "Maccabi Tel Aviv BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z0mk1l1789281457.png",
-        "sourceIds": {
-          "thesportsdb": "136065"
-        }
-      },
-      "awayTeam": {
-        "name": "Hapoel Tel Aviv BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/yrrsml1767366305.png",
-        "sourceIds": {
-          "thesportsdb": "136059"
-        }
-      },
-      "competition": "EuroLeague Basketball"
+      ]
     },
     {
       "id": "tsdb-2524711",
@@ -144,7 +143,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -158,7 +157,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -172,7 +171,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -200,7 +199,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -218,7 +217,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         },
@@ -232,388 +231,702 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
     },
     {
-      "id": "tsdb-2442824",
-      "sourceIds": {
-        "thesportsdb": "2442824"
-      },
-      "title": "Italy vs France",
+      "id": "laliga-102370",
+      "title": "Athletic Club vs RCD Espanyol de Barcelona",
       "sport": "football",
-      "startUtcEpochSeconds": 1794512700,
+      "competition": "LALIGA EA SPORTS",
+      "startUtcEpochSeconds": 1795204800,
       "status": "confirmed",
+      "homeTeam": {
+        "name": "Athletic Club",
+        "badgeUrl": "https://assets.laliga.com/assets/2019/06/07/medium/athletic.png",
+        "sourceIds": {
+          "laliga": "3"
+        }
+      },
+      "awayTeam": {
+        "name": "RCD Espanyol de Barcelona",
+        "badgeUrl": "https://assets.laliga.com/assets/2025/07/02/medium/e9177f6edd72c6360602adbca85e442f.png",
+        "sourceIds": {
+          "laliga": "8"
+        }
+      },
       "broadcasts": [
         {
-          "channelName": "TF1",
-          "originalChannelName": "TF1",
-          "channelId": "territory:fr|tf1|",
-          "aliases": [
-            "FR TF1"
-          ],
-          "territory": "FR",
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:at|dazn|",
+          "aliases": [],
+          "territory": "AT",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+          "viewingUrl": "https://www.dazn.com/",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
         },
         {
-          "channelName": "Fox Sports 1 US",
-          "originalChannelName": "Fox Sports 1 US",
-          "channelId": "territory:us|fox sports 1 us|",
-          "aliases": [
-            "Fox Sports One",
-            "US Fox Sports 1"
+          "channelName": "beIN SPORTS CONNECT",
+          "originalChannelName": "beIN SPORTS CONNECT",
+          "channelId": "territory:au|bein sports connect|en,es",
+          "languageEvidence": {
+            "scope": "feed-audio",
+            "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+            "verifiedAt": "2026-10-18T11:00:00Z"
+          },
+          "aliases": [],
+          "languages": [
+            "en",
+            "es"
           ],
-          "territory": "US",
+          "territory": "AU",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+          "viewingUrl": "https://connect-au.beinsports.com/",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Italy",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fxijcp1726167035.png",
-        "sourceIds": {
-          "thesportsdb": "133910"
-        }
-      },
-      "awayTeam": {
-        "name": "France",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ejx5za1788198941.png",
-        "sourceIds": {
-          "thesportsdb": "133913"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2565549",
-      "sourceIds": {
-        "thesportsdb": "2565549"
-      },
-      "title": "Olympiacos BC vs Dubai Basketball",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794510900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "BeIn Sports Max 7",
-          "originalChannelName": "BeIn Sports Max 7",
-          "channelId": "territory:fr|bein sports max 7|",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Olympiacos BC",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/4s5lug1676581220.png",
-        "sourceIds": {
-          "thesportsdb": "135635"
-        }
-      },
-      "awayTeam": {
-        "name": "Dubai Basketball",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fgtnti1758215967.png",
-        "sourceIds": {
-          "thesportsdb": "148701"
-        }
-      },
-      "competition": "EuroLeague Basketball"
-    },
-    {
-      "id": "tsdb-2449611",
-      "sourceIds": {
-        "thesportsdb": "2449611"
-      },
-      "title": "Italy Rugby vs Argentina Rugby",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1794660000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "SuperSport Rugby",
-          "originalChannelName": "SuperSport Rugby",
-          "channelId": "territory:za|supersport rugby|",
-          "aliases": [],
-          "territory": "ZA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2442826",
-      "sourceIds": {
-        "thesportsdb": "2442826"
-      },
-      "title": "England vs Croatia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794512700,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ITV",
-          "originalChannelName": "ITV",
-          "channelId": "territory:gb|itv|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "England",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
-        "sourceIds": {
-          "thesportsdb": "133914"
-        }
-      },
-      "awayTeam": {
-        "name": "Croatia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/84cfeg1789271106.png",
-        "sourceIds": {
-          "thesportsdb": "133912"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2565551",
-      "sourceIds": {
-        "thesportsdb": "2565551"
-      },
-      "title": "Valencia Basket vs Bayern München Basketball",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794511800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Movistar #Vamos",
-          "originalChannelName": "Movistar #Vamos",
-          "channelId": "territory:es|movistar #vamos|",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Valencia Basket",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/9qyc231536398868.png",
-        "sourceIds": {
-          "thesportsdb": "135097"
-        }
-      },
-      "awayTeam": {
-        "name": "Bayern München Basketball",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/z2r3eh1678017187.png",
-        "sourceIds": {
-          "thesportsdb": "135424"
-        }
-      },
-      "competition": "EuroLeague Basketball"
-    },
-    {
-      "id": "tsdb-2449613",
-      "sourceIds": {
-        "thesportsdb": "2449613"
-      },
-      "title": "England Rugby vs Japan Rugby",
-      "sport": "rugby",
-      "startUtcEpochSeconds": 1794674400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TFX",
-          "originalChannelName": "TFX",
-          "channelId": "territory:fr|tfx|",
-          "aliases": [],
-          "territory": "FR",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
         },
         {
-          "channelName": "ITV1",
-          "originalChannelName": "ITV1",
-          "channelId": "territory:gb|itv1|",
-          "aliases": [
-            "ITV 1",
-            "ITV One",
-            "ITV1 UK"
-          ],
-          "territory": "GB",
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:be|dazn|",
+          "aliases": [],
+          "territory": "BE",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+          "viewingUrl": "https://www.dazn.com/",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2442825",
-      "sourceIds": {
-        "thesportsdb": "2442825"
-      },
-      "title": "Czech Republic vs Spain",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794512700,
-      "status": "confirmed",
-      "broadcasts": [
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
         {
-          "channelName": "La 1",
-          "originalChannelName": "La 1",
-          "channelId": "territory:es|la 1|",
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:ch|dazn|",
+          "aliases": [],
+          "territory": "CH",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+          "viewingUrl": "https://www.dazn.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:de|dazn|",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+          "viewingUrl": "https://www.dazn.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Disney+",
+          "originalChannelName": "Disney+",
+          "channelId": "territory:dk|disney+|",
+          "aliases": [],
+          "territory": "DK",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+          "viewingUrl": "https://www.disneyplus.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "DAZN EN ABIERTO",
+          "originalChannelName": "DAZN EN ABIERTO",
+          "channelId": "territory:es|dazn en abierto|",
           "aliases": [
-            "ES La 1"
+            "ES DAZN En Abierto"
           ],
           "territory": "ES",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "verifiedAt": "2026-11-13",
+          "checkedAt": "2026-11-13T01:47:53.000Z",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationPrecision": "channel",
+          "rightsHolder": "DAZN"
         },
         {
-          "channelName": "ESPN 3 Paraguay",
-          "originalChannelName": "ESPN 3 Paraguay",
-          "channelId": "territory:py|espn 3 paraguay|",
+          "channelName": "Disney+",
+          "originalChannelName": "Disney+",
+          "channelId": "territory:fi|disney+|",
           "aliases": [],
-          "territory": "PY",
+          "territory": "FI",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+          "viewingUrl": "https://www.disneyplus.com/",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Czech Republic",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/1o0cx31654205806.png",
-        "sourceIds": {
-          "thesportsdb": "133904"
-        }
-      },
-      "awayTeam": {
-        "name": "Spain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
-        "sourceIds": {
-          "thesportsdb": "133909"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2601836",
-      "sourceIds": {
-        "thesportsdb": "2601836"
-      },
-      "title": "Philadelphia 76ers vs Toronto Raptors",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794528000,
-      "status": "confirmed",
-      "broadcasts": [
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
         {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
+          "channelName": "Disney+",
+          "originalChannelName": "Disney+",
+          "channelId": "territory:fr|disney+|fr",
+          "languageEvidence": {
+            "scope": "feed-audio",
+            "sourceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
+            "verifiedAt": "2026-10-18T11:00:00Z"
+          },
           "aliases": [],
-          "territory": "ES",
+          "languages": [
+            "fr"
+          ],
+          "territory": "FR",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
+          "viewingUrl": "https://www.disneyplus.com/",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2442822",
-      "sourceIds": {
-        "thesportsdb": "2442822"
-      },
-      "title": "Turkey vs Belgium",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794502800,
-      "status": "confirmed",
-      "broadcasts": [
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
         {
-          "channelName": "Sky Sport Calcio",
-          "originalChannelName": "Sky Sport Calcio",
-          "channelId": "territory:it|sky sport calcio|",
+          "channelName": "Disney+",
+          "originalChannelName": "Disney+",
+          "channelId": "territory:is|disney+|",
+          "aliases": [],
+          "territory": "IS",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+          "viewingUrl": "https://www.disneyplus.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:it|dazn|",
           "aliases": [],
           "territory": "IT",
           "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
+          "viewingUrl": "https://www.dazn.com/",
+          "verifiedAt": "2026-10-18",
           "exclusive": false,
-          "destinationPrecision": "channel"
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "beIN SPORTS CONNECT",
+          "originalChannelName": "beIN SPORTS CONNECT",
+          "channelId": "territory:nz|bein sports connect|",
+          "aliases": [],
+          "territory": "NZ",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+          "viewingUrl": "https://connect-nz.beinsports.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:pt|dazn|",
+          "aliases": [],
+          "territory": "PT",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
+          "viewingUrl": "https://www.dazn.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Disney+",
+          "originalChannelName": "Disney+",
+          "channelId": "territory:se|disney+|",
+          "aliases": [],
+          "territory": "SE",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+          "viewingUrl": "https://www.disneyplus.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "ESPN+",
+          "originalChannelName": "ESPN+",
+          "channelId": "territory:us|espn+|en,es",
+          "languageEvidence": {
+            "scope": "feed-audio",
+            "sourceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
+            "verifiedAt": "2026-10-18T11:00:00Z"
+          },
+          "aliases": [],
+          "languages": [
+            "en",
+            "es"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
+          "viewingUrl": "https://plus.espn.com/",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "beIN SPORTS CONNECT on Fetch TV",
+          "originalChannelName": "beIN SPORTS CONNECT on Fetch TV",
+          "channelId": "territory:au|bein sports connect on fetch tv|",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "Movistar LALIGA",
+          "originalChannelName": "Movistar LALIGA",
+          "channelId": "territory:es|movistar laliga|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "official-event",
+          "matchingMethod": "embedded-match-object",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "verifiedAt": "2026-11-13",
+          "checkedAt": "2026-11-13T01:47:53.000Z",
+          "exclusive": false,
+          "destinationPrecision": "channel",
+          "rightsHolder": "Movistar Plus+"
+        },
+        {
+          "channelName": "DAZN",
+          "originalChannelName": "DAZN",
+          "channelId": "territory:fr|dazn|",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.laliga.com/en-GB/news/disney-and-dazn-become-the-new-home-of-laliga-ea-sports-in-france",
+          "viewingUrl": "https://www.dazn.com/fr-FR/home",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
+        },
+        {
+          "channelName": "beIN SPORTS CONNECT on Prime Video",
+          "originalChannelName": "beIN SPORTS CONNECT on Prime Video",
+          "channelId": "territory:au|bein sports connect on prime video|",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "official-all-events",
+          "matchingMethod": "all-events",
+          "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+          "verifiedAt": "2026-10-18",
+          "exclusive": false,
+          "destinationType": "service",
+          "ruleType": "all-events",
+          "destinationPrecision": "service"
         }
       ],
-      "homeTeam": {
-        "name": "Turkey",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70c4oo1591982459.png",
-        "sourceIds": {
-          "thesportsdb": "135985"
-        }
+      "broadcasterEvidence": {
+        "source": "laliga",
+        "url": "https://www.laliga.com/laliga-easports/resultados",
+        "eventMatched": true,
+        "sourceEventMatched": false
       },
-      "awayTeam": {
-        "name": "Belgium",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8xlvxv1592062265.png",
-        "sourceIds": {
-          "thesportsdb": "134515"
+      "broadcastRights": [
+        {
+          "territory": "ES",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Movistar Plus+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "US",
+          "holders": [
+            {
+              "name": "ESPN",
+              "kind": "network"
+            },
+            {
+              "name": "ESPN+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "FR",
+          "holders": [
+            {
+              "name": "DAZN",
+              "kind": "service"
+            },
+            {
+              "name": "Disney+",
+              "kind": "service"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "AE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "BH",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "DZ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "EG",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "IQ",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "JO",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "KW",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LB",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "LY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "MA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "OM",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "PS",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "QA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SA",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "SY",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "TN",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
+        },
+        {
+          "territory": "YE",
+          "holders": [
+            {
+              "name": "beIN Sports",
+              "kind": "network"
+            }
+          ],
+          "sourceType": "official-rights",
+          "sourceUrl": "https://www.laliga.com/en-GB/where-to-watch-laliga-easports",
+          "verifiedAt": "2026-08-23",
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "season": "2026/27"
         }
-      },
-      "competition": "UEFA Nations League"
+      ]
     },
     {
       "id": "tsdb-2601837",
@@ -635,52 +948,101 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
     },
     {
-      "id": "tsdb-2475307",
+      "id": "tsdb-2524712",
       "sourceIds": {
-        "thesportsdb": "2475307"
+        "thesportsdb": "2524712"
       },
-      "title": "Scotland vs North Macedonia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794599100,
+      "title": "New Zealand Cricket vs India Cricket",
+      "sport": "cricket",
+      "startUtcEpochSeconds": 1794708000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BBC iPlayer",
-          "originalChannelName": "BBC iPlayer",
-          "channelId": "territory:gb|bbc iplayer|",
-          "aliases": [
-            "BBC iPlayer UK",
-            "UK BBC iPlayer"
-          ],
+          "channelName": "Kayo Sports",
+          "originalChannelName": "Kayo Sports",
+          "channelId": "territory:au|kayo sports|",
+          "aliases": [],
+          "territory": "AU",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2449611",
+      "sourceIds": {
+        "thesportsdb": "2449611"
+      },
+      "title": "Italy Rugby vs Argentina Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1794660000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "SuperSport Rugby",
+          "originalChannelName": "SuperSport Rugby",
+          "channelId": "territory:za|supersport rugby|",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2442848",
+      "sourceIds": {
+        "thesportsdb": "2442848"
+      },
+      "title": "Spain vs England",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794771900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ITV",
+          "originalChannelName": "ITV",
+          "channelId": "territory:gb|itv|",
+          "aliases": [],
           "territory": "GB",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ],
       "homeTeam": {
-        "name": "Scotland",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3691i11552945146.png",
+        "name": "Spain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
         "sourceIds": {
-          "thesportsdb": "136450"
+          "thesportsdb": "133909"
         }
       },
       "awayTeam": {
-        "name": "North Macedonia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v6xfhn1552943846.png",
+        "name": "England",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
         "sourceIds": {
-          "thesportsdb": "136457"
+          "thesportsdb": "133914"
         }
       },
       "competition": "UEFA Nations League"
@@ -705,7 +1067,442 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2623109",
+      "sourceIds": {
+        "thesportsdb": "2623109"
+      },
+      "title": "South Africa Cricket vs Bangladesh Cricket",
+      "sport": "cricket",
+      "startUtcEpochSeconds": 1794729600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sky Sports Cricket",
+          "originalChannelName": "Sky Sports Cricket",
+          "channelId": "territory:gb|sky sports cricket|",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "South Africa Cricket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/hn47e51646775185.png",
+        "sourceIds": {
+          "thesportsdb": "137150"
+        }
+      },
+      "awayTeam": {
+        "name": "Bangladesh Cricket",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/j74o4t1646775146.png",
+        "sourceIds": {
+          "thesportsdb": "137152"
+        }
+      },
+      "competition": "ICC World Test Championship"
+    },
+    {
+      "id": "tsdb-2449613",
+      "sourceIds": {
+        "thesportsdb": "2449613"
+      },
+      "title": "England Rugby vs Japan Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1794674400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TFX",
+          "originalChannelName": "TFX",
+          "channelId": "territory:fr|tfx|",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ITV1",
+          "originalChannelName": "ITV1",
+          "channelId": "territory:gb|itv1|",
+          "aliases": [
+            "ITV 1",
+            "ITV One",
+            "ITV1 UK"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2442846",
+      "sourceIds": {
+        "thesportsdb": "2442846"
+      },
+      "title": "France vs Turkey",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794771900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TF1",
+          "originalChannelName": "TF1",
+          "channelId": "territory:fr|tf1|",
+          "aliases": [
+            "FR TF1"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "France",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ejx5za1788198941.png",
+        "sourceIds": {
+          "thesportsdb": "133913"
+        }
+      },
+      "awayTeam": {
+        "name": "Turkey",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/70c4oo1591982459.png",
+        "sourceIds": {
+          "thesportsdb": "135985"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2565555",
+      "sourceIds": {
+        "thesportsdb": "2565555"
+      },
+      "title": "Lyon-Villeurbanne vs Besiktas Basketbol",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794598200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BeIn Sports HD 2 France",
+          "originalChannelName": "BeIn Sports HD 2 France",
+          "channelId": "territory:fr|bein sports hd 2 france|",
+          "aliases": [
+            "BeIn Sports 2 France"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2449614",
+      "sourceIds": {
+        "thesportsdb": "2449614"
+      },
+      "title": "Scotland Rugby vs Australia Rugby",
+      "sport": "rugby",
+      "startUtcEpochSeconds": 1794755400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TF1",
+          "originalChannelName": "TF1",
+          "channelId": "territory:fr|tf1|",
+          "aliases": [
+            "FR TF1"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "ITV1",
+          "originalChannelName": "ITV1",
+          "channelId": "territory:gb|itv1|",
+          "aliases": [
+            "ITV 1",
+            "ITV One",
+            "ITV1 UK"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        },
+        {
+          "channelName": "SuperSport Rugby",
+          "originalChannelName": "SuperSport Rugby",
+          "channelId": "territory:za|supersport rugby|",
+          "aliases": [],
+          "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2442847",
+      "sourceIds": {
+        "thesportsdb": "2442847"
+      },
+      "title": "Belgium vs Italy",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794771900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Rai 1",
+          "originalChannelName": "Rai 1",
+          "channelId": "territory:it|rai 1|",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Belgium",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/8xlvxv1592062265.png",
+        "sourceIds": {
+          "thesportsdb": "134515"
+        }
+      },
+      "awayTeam": {
+        "name": "Italy",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/fxijcp1726167035.png",
+        "sourceIds": {
+          "thesportsdb": "133910"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2601844",
+      "sourceIds": {
+        "thesportsdb": "2601844"
+      },
+      "title": "Houston Rockets vs Utah Jazz",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794619800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "TSN 4",
+          "originalChannelName": "TSN 4",
+          "channelId": "territory:ca|tsn 4|",
+          "aliases": [],
+          "territory": "CA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Houston Rockets",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/azoktf1780729261.png",
+        "sourceIds": {
+          "thesportsdb": "134876"
+        }
+      },
+      "awayTeam": {
+        "name": "Utah Jazz",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/trct8w1778198868.png",
+        "sourceIds": {
+          "thesportsdb": "134889"
+        }
+      },
+      "competition": "NBA"
+    },
+    {
+      "id": "tsdb-2475307",
+      "sourceIds": {
+        "thesportsdb": "2475307"
+      },
+      "title": "Scotland vs North Macedonia",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794599100,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BBC iPlayer",
+          "originalChannelName": "BBC iPlayer",
+          "channelId": "territory:gb|bbc iplayer|",
+          "aliases": [
+            "BBC iPlayer UK",
+            "UK BBC iPlayer"
+          ],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Scotland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/3691i11552945146.png",
+        "sourceIds": {
+          "thesportsdb": "136450"
+        }
+      },
+      "awayTeam": {
+        "name": "North Macedonia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v6xfhn1552943846.png",
+        "sourceIds": {
+          "thesportsdb": "136457"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2487946",
+      "sourceIds": {
+        "thesportsdb": "2487946"
+      },
+      "title": "Melbourne United vs South East Melbourne Phoenix",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794645000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "NBA TV",
+          "originalChannelName": "NBA TV",
+          "channelId": "territory:us|nba tv|",
+          "aliases": [],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2442845",
+      "sourceIds": {
+        "thesportsdb": "2442845"
+      },
+      "title": "Finland vs San Marino",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794762000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN 2 Germany",
+          "originalChannelName": "DAZN 2 Germany",
+          "channelId": "territory:de|dazn 2 germany|",
+          "aliases": [],
+          "territory": "DE",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Finland",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/wgvfd21730303889.png",
+        "sourceIds": {
+          "thesportsdb": "136468"
+        }
+      },
+      "awayTeam": {
+        "name": "San Marino",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vfvy3j1626192199.png",
+        "sourceIds": {
+          "thesportsdb": "136452"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2571788",
+      "sourceIds": {
+        "thesportsdb": "2571788"
+      },
+      "title": "CB Breogan vs CB San Pablo Burgos",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794675600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -731,35 +1528,33 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
     },
     {
-      "id": "tsdb-2565555",
+      "id": "tsdb-2563815",
       "sourceIds": {
-        "thesportsdb": "2565555"
+        "thesportsdb": "2563815"
       },
-      "title": "Lyon-Villeurbanne vs Besiktas Basketbol",
+      "title": "Bamberg Baskets vs Bonn",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794598200,
+      "startUtcEpochSeconds": 1794677400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 2 France",
-          "originalChannelName": "BeIn Sports HD 2 France",
-          "channelId": "territory:fr|bein sports hd 2 france|",
-          "aliases": [
-            "BeIn Sports 2 France"
-          ],
-          "territory": "FR",
+          "channelName": "DYN",
+          "originalChannelName": "DYN",
+          "channelId": "territory:de|dyn|",
+          "aliases": [],
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -787,7 +1582,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -809,93 +1604,26 @@
       "competition": "International Friendlies"
     },
     {
-      "id": "tsdb-2487946",
+      "id": "tsdb-2599298",
       "sourceIds": {
-        "thesportsdb": "2487946"
+        "thesportsdb": "2599298"
       },
-      "title": "Melbourne United vs South East Melbourne Phoenix",
+      "title": "Bourg-en-Bresse vs Chorale Roanne Basket",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794645000,
+      "startUtcEpochSeconds": 1794677400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "NBA TV",
-          "originalChannelName": "NBA TV",
-          "channelId": "territory:us|nba tv|",
+          "channelName": "DAZN 1 France",
+          "originalChannelName": "DAZN 1 France",
+          "channelId": "territory:fr|dazn 1 france|",
           "aliases": [],
-          "territory": "US",
+          "territory": "FR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2623093",
-      "sourceIds": {
-        "thesportsdb": "2623093"
-      },
-      "title": "Malta vs Eswatini",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794504600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DAZN Germany",
-          "originalChannelName": "DAZN Germany",
-          "channelId": "territory:de|dazn germany|",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Malta",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/w3knbf1790356155.png",
-        "sourceIds": {
-          "thesportsdb": "136465"
-        }
-      },
-      "awayTeam": {
-        "name": "Eswatini",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/c46mz91742102274.png",
-        "sourceIds": {
-          "thesportsdb": "136501"
-        }
-      },
-      "competition": "International Friendlies"
-    },
-    {
-      "id": "tsdb-2571788",
-      "sourceIds": {
-        "thesportsdb": "2571788"
-      },
-      "title": "CB Breogan vs CB San Pablo Burgos",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794675600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -921,51 +1649,52 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "ESPN Paraguay",
-          "originalChannelName": "ESPN Paraguay",
-          "channelId": "territory:py|espn paraguay|",
-          "aliases": [],
-          "territory": "PY",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
     },
     {
-      "id": "tsdb-2563815",
+      "id": "tsdb-2601850",
       "sourceIds": {
-        "thesportsdb": "2563815"
+        "thesportsdb": "2601850"
       },
-      "title": "Bamberg Baskets vs Bonn",
+      "title": "Memphis Grizzlies vs Brooklyn Nets",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794677400,
+      "startUtcEpochSeconds": 1794704400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DYN",
-          "originalChannelName": "DYN",
-          "channelId": "territory:de|dyn|",
+          "channelName": "YES",
+          "originalChannelName": "YES",
+          "channelId": "territory:us|yes|",
           "aliases": [],
-          "territory": "DE",
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ]
+      ],
+      "homeTeam": {
+        "name": "Memphis Grizzlies",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/v44qp21778197640.png",
+        "sourceIds": {
+          "thesportsdb": "134877"
+        }
+      },
+      "awayTeam": {
+        "name": "Brooklyn Nets",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/hkafe61739948361.png",
+        "sourceIds": {
+          "thesportsdb": "134861"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2505850",
@@ -987,37 +1716,52 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
     },
     {
-      "id": "tsdb-2599298",
+      "id": "tsdb-2601851",
       "sourceIds": {
-        "thesportsdb": "2599298"
+        "thesportsdb": "2601851"
       },
-      "title": "Bourg-en-Bresse vs Chorale Roanne Basket",
+      "title": "Miami Heat vs Detroit Pistons",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794677400,
+      "startUtcEpochSeconds": 1794704400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN 1 France",
-          "originalChannelName": "DAZN 1 France",
-          "channelId": "territory:fr|dazn 1 france|",
+          "channelName": "TSN 3",
+          "originalChannelName": "TSN 3",
+          "channelId": "territory:ca|tsn 3|",
           "aliases": [],
-          "territory": "FR",
+          "territory": "CA",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ]
+      ],
+      "homeTeam": {
+        "name": "Miami Heat",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b9tye31778226616.png",
+        "sourceIds": {
+          "thesportsdb": "134882"
+        }
+      },
+      "awayTeam": {
+        "name": "Detroit Pistons",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lg7qrc1621594751.png",
+        "sourceIds": {
+          "thesportsdb": "134872"
+        }
+      },
+      "competition": "NBA"
     },
     {
       "id": "tsdb-2442835",
@@ -1039,25 +1783,52 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "ESPN Paraguay",
-          "originalChannelName": "ESPN Paraguay",
-          "channelId": "territory:py|espn paraguay|",
-          "aliases": [],
-          "territory": "PY",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
+    },
+    {
+      "id": "tsdb-2571791",
+      "sourceIds": {
+        "thesportsdb": "2571791"
+      },
+      "title": "Força Lleida CE vs Basquet Manresa",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794740400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Força Lleida CE",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xmypxg1786723117.png",
+        "sourceIds": {
+          "thesportsdb": "144690"
+        }
+      },
+      "awayTeam": {
+        "name": "Basquet Manresa",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vm1il61792765973.png",
+        "sourceIds": {
+          "thesportsdb": "135087"
+        }
+      },
+      "competition": "Spanish Liga ACB"
     },
     {
       "id": "tsdb-2546333",
@@ -1079,11 +1850,52 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
+    },
+    {
+      "id": "tsdb-2599300",
+      "sourceIds": {
+        "thesportsdb": "2599300"
+      },
+      "title": "Dijon vs Nanterre",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794756600,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN 1 France",
+          "originalChannelName": "DAZN 1 France",
+          "channelId": "territory:fr|dazn 1 france|",
+          "aliases": [],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Dijon",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/06b1fd1666897191.png",
+        "sourceIds": {
+          "thesportsdb": "135237"
+        }
+      },
+      "awayTeam": {
+        "name": "Nanterre",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/hdqr5m1523101484.png",
+        "sourceIds": {
+          "thesportsdb": "135245"
+        }
+      },
+      "competition": "French LNB"
     },
     {
       "id": "tsdb-2554388",
@@ -1107,7 +1919,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1133,7 +1945,7 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
@@ -1159,11 +1971,95 @@
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
           "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-12",
+          "verifiedAt": "2026-11-13",
           "exclusive": false,
           "destinationPrecision": "channel"
         }
       ]
+    },
+    {
+      "id": "tsdb-2514576",
+      "sourceIds": {
+        "thesportsdb": "2514576"
+      },
+      "title": "Valencia Femenino vs Granada Femenino",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794762900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Valencia Femenino",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/alvi3a1661511071.png",
+        "sourceIds": {
+          "thesportsdb": "144782"
+        }
+      },
+      "awayTeam": {
+        "name": "Granada Femenino",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xecwzu1685869518.png",
+        "sourceIds": {
+          "thesportsdb": "147383"
+        }
+      },
+      "competition": "Spanish Liga F"
+    },
+    {
+      "id": "tsdb-2554390",
+      "sourceIds": {
+        "thesportsdb": "2554390"
+      },
+      "title": "Manchester United WFC vs Crystal Palace FC Women",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794660300,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Paramount+ US",
+          "originalChannelName": "Paramount+ US",
+          "channelId": "territory:us|paramount+ us|",
+          "aliases": [
+            "US Paramount Plus"
+          ],
+          "territory": "US",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Manchester United WFC",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xqy8ct1605361724.png",
+        "sourceIds": {
+          "thesportsdb": "140226"
+        }
+      },
+      "awayTeam": {
+        "name": "Crystal Palace FC Women",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/imirxf1610531377.png",
+        "sourceIds": {
+          "thesportsdb": "140537"
+        }
+      },
+      "competition": "English Womens Super League"
     },
     {
       "id": "mls-MLS-MAT-000ACQ",
@@ -1197,8 +2093,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000ACQ",
-          "verifiedAt": "2026-11-12",
-          "checkedAt": "2026-11-12T19:52:05.000Z",
+          "verifiedAt": "2026-11-13",
+          "checkedAt": "2026-11-13T01:47:53.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -1243,8 +2139,8 @@
           "sourceType": "official-event",
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000ACP",
-          "verifiedAt": "2026-11-12",
-          "checkedAt": "2026-11-12T19:52:05.000Z",
+          "verifiedAt": "2026-11-13",
+          "checkedAt": "2026-11-13T01:47:53.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
