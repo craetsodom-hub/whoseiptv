@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAtEpochSeconds": 1794534473,
-  "validUntilEpochSeconds": 1794577673,
+  "generatedAtEpochSeconds": 1794567273,
+  "validUntilEpochSeconds": 1794610473,
   "events": [
     {
       "id": "l1_championship_match_73919",
@@ -34,7 +34,7 @@
           "matchingMethod": "official-match-id",
           "sourceUrl": "https://ma-api.ligue1.fr/championship-match/l1_championship_match_73919",
           "verifiedAt": "2026-11-13",
-          "checkedAt": "2026-11-13T01:47:53.000Z",
+          "checkedAt": "2026-11-13T10:54:33.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Ligue 1+"
@@ -84,35 +84,21 @@
       ]
     },
     {
-      "id": "tsdb-2601836",
+      "id": "tsdb-2565553",
       "sourceIds": {
-        "thesportsdb": "2601836"
+        "thesportsdb": "2565553"
       },
-      "title": "Philadelphia 76ers vs Toronto Raptors",
+      "title": "Anadolu Efes SK vs Virtus Pallacanestro Bologna",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794528000,
+      "startUtcEpochSeconds": 1794591000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "SportsNet One",
-          "originalChannelName": "SportsNet One",
-          "channelId": "territory:ca|sportsnet one|",
+          "channelName": "S Sport TR",
+          "originalChannelName": "S Sport TR",
+          "channelId": "territory:tr|s sport tr|",
           "aliases": [],
-          "territory": "CA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
-          "aliases": [],
-          "territory": "ES",
+          "territory": "TR",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -121,61 +107,22 @@
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ]
-    },
-    {
-      "id": "tsdb-2524711",
-      "sourceIds": {
-        "thesportsdb": "2524711"
+      ],
+      "homeTeam": {
+        "name": "Anadolu Efes SK",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/uldz0d1782050729.png",
+        "sourceIds": {
+          "thesportsdb": "136066"
+        }
       },
-      "title": "New Zealand Cricket vs India Cricket",
-      "sport": "cricket",
-      "startUtcEpochSeconds": 1794535200,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Kayo Sports",
-          "originalChannelName": "Kayo Sports",
-          "channelId": "territory:au|kayo sports|",
-          "aliases": [],
-          "territory": "AU",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "TNT Sports 2",
-          "originalChannelName": "TNT Sports 2",
-          "channelId": "territory:gb|tnt sports 2|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        },
-        {
-          "channelName": "Sony Ten 1",
-          "originalChannelName": "Sony Ten 1",
-          "channelId": "territory:in|sony ten 1|",
-          "aliases": [],
-          "territory": "IN",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
+      "awayTeam": {
+        "name": "Virtus Pallacanestro Bologna",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/nfl8dz1786178078.png",
+        "sourceIds": {
+          "thesportsdb": "135386"
         }
-      ]
+      },
+      "competition": "EuroLeague Basketball"
     },
     {
       "id": "tsdb-2449609",
@@ -227,6 +174,32 @@
           "channelId": "territory:za|supersport rugby|",
           "aliases": [],
           "territory": "ZA",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2524712",
+      "sourceIds": {
+        "thesportsdb": "2524712"
+      },
+      "title": "New Zealand Cricket vs India Cricket",
+      "sport": "cricket",
+      "startUtcEpochSeconds": 1794708000,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Kayo Sports",
+          "originalChannelName": "Kayo Sports",
+          "channelId": "territory:au|kayo sports|",
+          "aliases": [],
+          "territory": "AU",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -383,7 +356,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-11-13",
-          "checkedAt": "2026-11-13T01:47:53.000Z",
+          "checkedAt": "2026-11-13T10:54:33.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "DAZN"
@@ -568,7 +541,7 @@
           "matchingMethod": "embedded-match-object",
           "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
           "verifiedAt": "2026-11-13",
-          "checkedAt": "2026-11-13T01:47:53.000Z",
+          "checkedAt": "2026-11-13T10:54:33.000Z",
           "exclusive": false,
           "destinationPrecision": "channel",
           "rightsHolder": "Movistar Plus+"
@@ -929,47 +902,21 @@
       ]
     },
     {
-      "id": "tsdb-2601837",
+      "id": "tsdb-2515595",
       "sourceIds": {
-        "thesportsdb": "2601837"
+        "thesportsdb": "2515595"
       },
-      "title": "Minnesota Timberwolves vs Dallas Mavericks",
+      "title": "Bayreuth vs USC Heidelberg",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794531600,
+      "startUtcEpochSeconds": 1794592800,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "NBA TV",
-          "originalChannelName": "NBA TV",
-          "channelId": "territory:us|nba tv|",
+          "channelName": "SportDeutschland.TV",
+          "originalChannelName": "SportDeutschland.TV",
+          "channelId": "territory:de|sportdeutschland.tv|",
           "aliases": [],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2524712",
-      "sourceIds": {
-        "thesportsdb": "2524712"
-      },
-      "title": "New Zealand Cricket vs India Cricket",
-      "sport": "cricket",
-      "startUtcEpochSeconds": 1794708000,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Kayo Sports",
-          "originalChannelName": "Kayo Sports",
-          "channelId": "territory:au|kayo sports|",
-          "aliases": [],
-          "territory": "AU",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -996,73 +943,6 @@
           "channelId": "territory:za|supersport rugby|",
           "aliases": [],
           "territory": "ZA",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2442848",
-      "sourceIds": {
-        "thesportsdb": "2442848"
-      },
-      "title": "Spain vs England",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794771900,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "ITV",
-          "originalChannelName": "ITV",
-          "channelId": "territory:gb|itv|",
-          "aliases": [],
-          "territory": "GB",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Spain",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
-        "sourceIds": {
-          "thesportsdb": "133909"
-        }
-      },
-      "awayTeam": {
-        "name": "England",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
-        "sourceIds": {
-          "thesportsdb": "133914"
-        }
-      },
-      "competition": "UEFA Nations League"
-    },
-    {
-      "id": "tsdb-2515595",
-      "sourceIds": {
-        "thesportsdb": "2515595"
-      },
-      "title": "Bayreuth vs USC Heidelberg",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794592800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "SportDeutschland.TV",
-          "originalChannelName": "SportDeutschland.TV",
-          "channelId": "territory:de|sportdeutschland.tv|",
-          "aliases": [],
-          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1113,6 +993,75 @@
         }
       },
       "competition": "ICC World Test Championship"
+    },
+    {
+      "id": "tsdb-2442848",
+      "sourceIds": {
+        "thesportsdb": "2442848"
+      },
+      "title": "Spain vs England",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794771900,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "ITV",
+          "originalChannelName": "ITV",
+          "channelId": "territory:gb|itv|",
+          "aliases": [],
+          "territory": "GB",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Spain",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/ncgqyr1726166942.png",
+        "sourceIds": {
+          "thesportsdb": "133909"
+        }
+      },
+      "awayTeam": {
+        "name": "England",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/vf5ttc1726166739.png",
+        "sourceIds": {
+          "thesportsdb": "133914"
+        }
+      },
+      "competition": "UEFA Nations League"
+    },
+    {
+      "id": "tsdb-2565555",
+      "sourceIds": {
+        "thesportsdb": "2565555"
+      },
+      "title": "Lyon-Villeurbanne vs Besiktas Basketbol",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794598200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "BeIn Sports HD 2 France",
+          "originalChannelName": "BeIn Sports HD 2 France",
+          "channelId": "territory:fr|bein sports hd 2 france|",
+          "aliases": [
+            "BeIn Sports 2 France"
+          ],
+          "territory": "FR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
     },
     {
       "id": "tsdb-2449613",
@@ -1202,23 +1151,21 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2565555",
+      "id": "tsdb-2487946",
       "sourceIds": {
-        "thesportsdb": "2565555"
+        "thesportsdb": "2487946"
       },
-      "title": "Lyon-Villeurbanne vs Besiktas Basketbol",
+      "title": "Melbourne United vs South East Melbourne Phoenix",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794598200,
+      "startUtcEpochSeconds": 1794645000,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "BeIn Sports HD 2 France",
-          "originalChannelName": "BeIn Sports HD 2 France",
-          "channelId": "territory:fr|bein sports hd 2 france|",
-          "aliases": [
-            "BeIn Sports 2 France"
-          ],
-          "territory": "FR",
+          "channelName": "NBA TV",
+          "originalChannelName": "NBA TV",
+          "channelId": "territory:us|nba tv|",
+          "aliases": [],
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1331,21 +1278,21 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2601844",
+      "id": "tsdb-2571788",
       "sourceIds": {
-        "thesportsdb": "2601844"
+        "thesportsdb": "2571788"
       },
-      "title": "Houston Rockets vs Utah Jazz",
+      "title": "CB Breogan vs CB San Pablo Burgos",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794619800,
+      "startUtcEpochSeconds": 1794675600,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "TSN 4",
-          "originalChannelName": "TSN 4",
-          "channelId": "territory:ca|tsn 4|",
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
           "aliases": [],
-          "territory": "CA",
+          "territory": "ES",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1354,22 +1301,7 @@
           "exclusive": false,
           "destinationPrecision": "channel"
         }
-      ],
-      "homeTeam": {
-        "name": "Houston Rockets",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/azoktf1780729261.png",
-        "sourceIds": {
-          "thesportsdb": "134876"
-        }
-      },
-      "awayTeam": {
-        "name": "Utah Jazz",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/trct8w1778198868.png",
-        "sourceIds": {
-          "thesportsdb": "134889"
-        }
-      },
-      "competition": "NBA"
+      ]
     },
     {
       "id": "tsdb-2475307",
@@ -1416,21 +1348,21 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2487946",
+      "id": "tsdb-2563815",
       "sourceIds": {
-        "thesportsdb": "2487946"
+        "thesportsdb": "2563815"
       },
-      "title": "Melbourne United vs South East Melbourne Phoenix",
+      "title": "Bamberg Baskets vs Bonn",
       "sport": "basketball",
-      "startUtcEpochSeconds": 1794645000,
+      "startUtcEpochSeconds": 1794677400,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "NBA TV",
-          "originalChannelName": "NBA TV",
-          "channelId": "territory:us|nba tv|",
+          "channelName": "DYN",
+          "originalChannelName": "DYN",
+          "channelId": "territory:de|dyn|",
           "aliases": [],
-          "territory": "US",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1483,127 +1415,6 @@
       "competition": "UEFA Nations League"
     },
     {
-      "id": "tsdb-2571788",
-      "sourceIds": {
-        "thesportsdb": "2571788"
-      },
-      "title": "CB Breogan vs CB San Pablo Burgos",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794675600,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2442829",
-      "sourceIds": {
-        "thesportsdb": "2442829"
-      },
-      "title": "Serbia vs Germany",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794599100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "RTL+ Germany",
-          "originalChannelName": "RTL+ Germany",
-          "channelId": "territory:de|rtl+ germany|",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2563815",
-      "sourceIds": {
-        "thesportsdb": "2563815"
-      },
-      "title": "Bamberg Baskets vs Bonn",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794677400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "DYN",
-          "originalChannelName": "DYN",
-          "channelId": "territory:de|dyn|",
-          "aliases": [],
-          "territory": "DE",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2606353",
-      "sourceIds": {
-        "thesportsdb": "2606353"
-      },
-      "title": "Qatar vs Australia",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794581100,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Paramount+ US",
-          "originalChannelName": "Paramount+ US",
-          "channelId": "territory:us|paramount+ us|",
-          "aliases": [
-            "US Paramount Plus"
-          ],
-          "territory": "US",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ],
-      "homeTeam": {
-        "name": "Qatar",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rs3ir31642708685.png",
-        "sourceIds": {
-          "thesportsdb": "136472"
-        }
-      },
-      "awayTeam": {
-        "name": "Australia",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/eylq8x1781926138.png",
-        "sourceIds": {
-          "thesportsdb": "134500"
-        }
-      },
-      "competition": "International Friendlies"
-    },
-    {
       "id": "tsdb-2599298",
       "sourceIds": {
         "thesportsdb": "2599298"
@@ -1630,21 +1441,21 @@
       ]
     },
     {
-      "id": "tsdb-2442832",
+      "id": "tsdb-2442829",
       "sourceIds": {
-        "thesportsdb": "2442832"
+        "thesportsdb": "2442829"
       },
-      "title": "Moldova vs Kazakhstan",
+      "title": "Serbia vs Germany",
       "sport": "football",
-      "startUtcEpochSeconds": 1794589200,
+      "startUtcEpochSeconds": 1794599100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "Sky Sport Calcio",
-          "originalChannelName": "Sky Sport Calcio",
-          "channelId": "territory:it|sky sport calcio|",
+          "channelName": "RTL+ Germany",
+          "originalChannelName": "RTL+ Germany",
+          "channelId": "territory:de|rtl+ germany|",
           "aliases": [],
-          "territory": "IT",
+          "territory": "DE",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1697,47 +1508,23 @@
       "competition": "NBA"
     },
     {
-      "id": "tsdb-2505850",
+      "id": "tsdb-2606353",
       "sourceIds": {
-        "thesportsdb": "2505850"
+        "thesportsdb": "2606353"
       },
-      "title": "Leganés vs Burgos",
+      "title": "Qatar vs Australia",
       "sport": "football",
-      "startUtcEpochSeconds": 1794598200,
+      "startUtcEpochSeconds": 1794581100,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "LaLiga TV Hypermotion",
-          "originalChannelName": "LaLiga TV Hypermotion",
-          "channelId": "territory:es|laliga tv hypermotion|",
-          "aliases": [],
-          "territory": "ES",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
-    },
-    {
-      "id": "tsdb-2601851",
-      "sourceIds": {
-        "thesportsdb": "2601851"
-      },
-      "title": "Miami Heat vs Detroit Pistons",
-      "sport": "basketball",
-      "startUtcEpochSeconds": 1794704400,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "TSN 3",
-          "originalChannelName": "TSN 3",
-          "channelId": "territory:ca|tsn 3|",
-          "aliases": [],
-          "territory": "CA",
+          "channelName": "Paramount+ US",
+          "originalChannelName": "Paramount+ US",
+          "channelId": "territory:us|paramount+ us|",
+          "aliases": [
+            "US Paramount Plus"
+          ],
+          "territory": "US",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1748,46 +1535,20 @@
         }
       ],
       "homeTeam": {
-        "name": "Miami Heat",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/b9tye31778226616.png",
+        "name": "Qatar",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/rs3ir31642708685.png",
         "sourceIds": {
-          "thesportsdb": "134882"
+          "thesportsdb": "136472"
         }
       },
       "awayTeam": {
-        "name": "Detroit Pistons",
-        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/lg7qrc1621594751.png",
+        "name": "Australia",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/eylq8x1781926138.png",
         "sourceIds": {
-          "thesportsdb": "134872"
+          "thesportsdb": "134500"
         }
       },
-      "competition": "NBA"
-    },
-    {
-      "id": "tsdb-2442835",
-      "sourceIds": {
-        "thesportsdb": "2442835"
-      },
-      "title": "Kosovo vs Israel",
-      "sport": "football",
-      "startUtcEpochSeconds": 1794664800,
-      "status": "confirmed",
-      "broadcasts": [
-        {
-          "channelName": "Sky Sport Max",
-          "originalChannelName": "Sky Sport Max",
-          "channelId": "territory:it|sky sport max|",
-          "aliases": [],
-          "territory": "IT",
-          "confirmed": true,
-          "sourceType": "source-event",
-          "matchingMethod": "source-event-id",
-          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
-          "verifiedAt": "2026-11-13",
-          "exclusive": false,
-          "destinationPrecision": "channel"
-        }
-      ]
+      "competition": "International Friendlies"
     },
     {
       "id": "tsdb-2571791",
@@ -1831,21 +1592,21 @@
       "competition": "Spanish Liga ACB"
     },
     {
-      "id": "tsdb-2546333",
+      "id": "tsdb-2442832",
       "sourceIds": {
-        "thesportsdb": "2546333"
+        "thesportsdb": "2442832"
       },
-      "title": "Fiorentina Women vs Lazio Women",
+      "title": "Moldova vs Kazakhstan",
       "sport": "football",
-      "startUtcEpochSeconds": 1794664800,
+      "startUtcEpochSeconds": 1794589200,
       "status": "confirmed",
       "broadcasts": [
         {
-          "channelName": "DAZN Spain",
-          "originalChannelName": "DAZN Spain",
-          "channelId": "territory:es|dazn spain|",
+          "channelName": "Sky Sport Calcio",
+          "originalChannelName": "Sky Sport Calcio",
+          "channelId": "territory:it|sky sport calcio|",
           "aliases": [],
-          "territory": "ES",
+          "territory": "IT",
           "confirmed": true,
           "sourceType": "source-event",
           "matchingMethod": "source-event-id",
@@ -1896,6 +1657,125 @@
         }
       },
       "competition": "French LNB"
+    },
+    {
+      "id": "tsdb-2505850",
+      "sourceIds": {
+        "thesportsdb": "2505850"
+      },
+      "title": "Leganés vs Burgos",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794598200,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "LaLiga TV Hypermotion",
+          "originalChannelName": "LaLiga TV Hypermotion",
+          "channelId": "territory:es|laliga tv hypermotion|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2601854",
+      "sourceIds": {
+        "thesportsdb": "2601854"
+      },
+      "title": "Phoenix Suns vs Los Angeles Lakers",
+      "sport": "basketball",
+      "startUtcEpochSeconds": 1794776400,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "S Sport TR",
+          "originalChannelName": "S Sport TR",
+          "channelId": "territory:tr|s sport tr|",
+          "aliases": [],
+          "territory": "TR",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ],
+      "homeTeam": {
+        "name": "Phoenix Suns",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/xfyknc1778198971.png",
+        "sourceIds": {
+          "thesportsdb": "134868"
+        }
+      },
+      "awayTeam": {
+        "name": "Los Angeles Lakers",
+        "badgeUrl": "https://r2.thesportsdb.com/images/media/team/badge/d8uoxw1714254511.png",
+        "sourceIds": {
+          "thesportsdb": "134867"
+        }
+      },
+      "competition": "NBA"
+    },
+    {
+      "id": "tsdb-2442835",
+      "sourceIds": {
+        "thesportsdb": "2442835"
+      },
+      "title": "Kosovo vs Israel",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794664800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "Sky Sport Max",
+          "originalChannelName": "Sky Sport Max",
+          "channelId": "territory:it|sky sport max|",
+          "aliases": [],
+          "territory": "IT",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
+    },
+    {
+      "id": "tsdb-2546333",
+      "sourceIds": {
+        "thesportsdb": "2546333"
+      },
+      "title": "Fiorentina Women vs Lazio Women",
+      "sport": "football",
+      "startUtcEpochSeconds": 1794664800,
+      "status": "confirmed",
+      "broadcasts": [
+        {
+          "channelName": "DAZN Spain",
+          "originalChannelName": "DAZN Spain",
+          "channelId": "territory:es|dazn spain|",
+          "aliases": [],
+          "territory": "ES",
+          "confirmed": true,
+          "sourceType": "source-event",
+          "matchingMethod": "source-event-id",
+          "sourceUrl": "https://www.thesportsdb.com/api/v1/json/123/eventstv.php",
+          "verifiedAt": "2026-11-13",
+          "exclusive": false,
+          "destinationPrecision": "channel"
+        }
+      ]
     },
     {
       "id": "tsdb-2554388",
@@ -2094,7 +1974,7 @@
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000ACQ",
           "verifiedAt": "2026-11-13",
-          "checkedAt": "2026-11-13T01:47:53.000Z",
+          "checkedAt": "2026-11-13T10:54:33.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
@@ -2140,7 +2020,7 @@
           "matchingMethod": "mls-match-api-broadcaster",
           "sourceUrl": "https://sportapi.mlssoccer.com/api/matches/bySportecIds/MLS-MAT-000ACP",
           "verifiedAt": "2026-11-13",
-          "checkedAt": "2026-11-13T01:47:53.000Z",
+          "checkedAt": "2026-11-13T10:54:33.000Z",
           "exclusive": false,
           "destinationPrecision": "service",
           "rightsHolder": "Apple"
