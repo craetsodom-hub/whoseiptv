@@ -38,8 +38,21 @@ await Actor.main(async () => {
     url.searchParams.set('generation', generatedAt)
     url.searchParams.set('offset', nextOffset)
   } while (true)
+  const charging = Actor.getChargingManager()
+  const { isPayPerEvent, perEventPrices } = charging.getPricingInfo()
+  const exportEvent = 'apify-default-dataset-item'
+  const chargesPerRow = isPayPerEvent && perEventPrices[exportEvent] > 0
+  if (chargesPerRow && charging.calculateMaxEventChargeCountWithinLimit(exportEvent) < rows.length) {
+    throw new Error(`The spending limit cannot cover this ${rows.length}-row export. Narrow the filters or raise the limit.`)
+  }
+  const dataset = chargesPerRow ? await Actor.openDataset() : null
+  const existingRows = dataset ? (await dataset.getInfo())?.itemCount : 0
+  if (dataset && !Number.isSafeInteger(existingRows)) throw new Error('The export dataset is unavailable.')
   for (let offset = 0; offset < rows.length; offset += 200) {
     await Actor.pushData(rows.slice(offset, offset + 200))
+  }
+  if (dataset && (await dataset.getInfo())?.itemCount !== existingRows + rows.length) {
+    throw new Error('The platform saved only part of the paid export.')
   }
   await Actor.setValue('EXPORT_SUMMARY', {
     records: rows.length, country: input.country ?? null, season: input.season ?? null
