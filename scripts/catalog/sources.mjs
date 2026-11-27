@@ -3,6 +3,8 @@ import { extractFormulaOneRaceLinks, parseFormulaOneBroadcasters } from '../offi
 import { parseSkyFixtureSchedule, skyLocalKickoff } from '../broadcast/sky-fixtures.mjs'
 
 export const premierLeague = {
+  liveFixtures: 'https://fantasy.premierleague.com/api/fixtures/',
+  liveTeams: 'https://fantasy.premierleague.com/api/bootstrap-static/',
   fixtures: 'https://www.premierleague.com/en/news/4675097/all-380-fixtures-for-the-202627-premier-league-season',
   roster: 'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams?limit=40',
   scoreboard: 'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard',
@@ -225,6 +227,50 @@ export function applyCompletedPremierLeagueResults(batch, scoreboards, now = Dat
     const date = londonDate.format(new Date(result.startsAt))
     if (date !== fixture.date) continue
     Object.assign(fixture, result, { startStatus: 'scheduled' })
+  }
+}
+
+export function applyLivePremierLeagueTimes(batch, games, roster, skyListings, evidence) {
+  const season = batch.seasons[0]
+  const clubs = new Map(batch.organizations.filter(row => row.kind === 'club').map(row => [teamKey(row.name), row.id]))
+  const clubId = name => clubs.get(NAME_ALIASES[teamKey(name)] ?? teamKey(name))
+  const ids = new Map(roster.teams.map(team => [team.id, clubId(team.name)]))
+  const lastDeadline = roster.events.at(-1)?.deadline_time?.slice(0, 10)
+  if (!lastDeadline || lastDeadline < season.startsOn || lastDeadline > season.endsOn ||
+      ids.size !== 20 || [...ids.values()].includes(undefined) || games.length !== season.expectedFixtureIds.length) {
+    throw new Error('Live fixture inventory differs from the Premier League season')
+  }
+  const live = new Map(games.map(game => [[ids.get(game.team_h), ids.get(game.team_a)].join('/'), game]))
+  if (live.size !== games.length || batch.fixtures.some(row => !live.has(orderedMatchup(row.participants))) ||
+      games.some(game => typeof game.provisional_start_time !== 'boolean' ||
+        (game.kickoff_time !== null && !Number.isFinite(Date.parse(game.kickoff_time))))) {
+    throw new Error('Unmatched Premier League fixture in the live schedule')
+  }
+  const televised = new Map()
+  for (const row of skyListings) {
+    const pair = [clubId(row.homeTeam), clubId(row.awayTeam)].join('/')
+    const times = televised.get(pair) ?? new Map()
+    times.set(row.startUtcEpochSeconds * 1000, row.sourceUrl)
+    televised.set(pair, times)
+  }
+  const localDate = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/London' })
+  for (const row of batch.fixtures) {
+    const key = orderedMatchup(row.participants)
+    const game = live.get(key)
+    if (game.started === true || game.finished === true) continue
+    const time = Date.parse(game.kickoff_time)
+    if (Number.isFinite(time) && time < Date.parse(evidence.verifiedAt)) continue
+    const date = Number.isFinite(time) ? localDate.format(time) : row.date
+    if (date < season.startsOn || date > season.endsOn) continue
+    const times = televised.get(key)
+    const confirmed = game.provisional_start_time === false && times?.size === 1 && times.has(time)
+    if (!confirmed && game.provisional_start_time === false && time === Date.parse(row.startsAt)) continue
+    if (!confirmed && row.startStatus === 'postponed') continue
+    if (time !== Date.parse(row.startsAt) || !confirmed) row.broadcasts = []
+    Object.assign(row, { date, startsAt: confirmed ? new Date(time).toISOString() : null,
+      startStatus: confirmed ? 'scheduled' : 'unannounced', sourceUrl: premierLeague.liveFixtures })
+    if (confirmed) row.scheduleCrossCheckUrl = times.get(time)
+    else delete row.scheduleCrossCheckUrl
   }
 }
 

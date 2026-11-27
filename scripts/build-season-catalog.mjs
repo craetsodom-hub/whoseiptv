@@ -3,13 +3,13 @@ import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { isDeepStrictEqual, promisify } from 'node:util'
 import { randomUUID } from 'node:crypto'
-import { SKY_PREMIER_LEAGUE_URL } from './broadcast/sky-fixtures.mjs'
+import { parseSkyFixtureSchedule, SKY_PREMIER_LEAGUE_URL } from './broadcast/sky-fixtures.mjs'
 import { indexCatalog } from './catalog/model.mjs'
 import {
-  ashes, australianOpen, nba, parseAshes, parseAustralianOpen, parseNbaSeason, parseSixNations, sixNations
+  ashes, australianOpen, nba, nbaPrimeOffers, parseAshes, parseAustralianOpen, parseNbaSeason, parseSixNations, sixNations
 } from './catalog/season-expansion.mjs'
 import {
-  addFormulaOneUkListings, addFormulaOneUsListings, addPremierLeagueTelevision,
+  addFormulaOneUkListings, addFormulaOneUsListings, addPremierLeagueTelevision, applyLivePremierLeagueTimes,
   applyCompletedPremierLeagueResults, applyPremierLeagueAmendments, applyPremierLeagueFinalDay, formulaOne, formulaOneRaceUrls, parseFormulaOneSeason, parseFormulaOneUsPrices, parsePremierLeague, parseSportsPrices,
   premierLeague, premierLeagueConflicts, resolvePremierLeagueConflict, sportsEntitlementsUrl, sportsPricingUrl
 } from './catalog/sources.mjs'
@@ -17,6 +17,7 @@ import {
 const exec = promisify(execFile)
 const MAX_BYTES = 8 * 1024 * 1024
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
+const timesOnly = process.env.CATALOG_TIMES_ONLY === '1'
 
 async function fetchText(url, maxBytes = MAX_BYTES, headers = {}) {
   let response
@@ -97,8 +98,17 @@ async function loadPremierLeague() {
     }
   }
   applyCompletedPremierLeagueResults(batch, scoreboards)
+  batch.seasons[0].timeSyncUnavailable = true
   try {
-    const listings = await fetchText(SKY_PREMIER_LEAGUE_URL)
+    const listings = await optionalPage(SKY_PREMIER_LEAGUE_URL)
+    const [games, teams] = await Promise.allSettled([json(premierLeague.liveFixtures), json(premierLeague.liveTeams)])
+    if (games.status === 'fulfilled' && teams.status === 'fulfilled') {
+      const evidence = verificationTimes()
+      applyLivePremierLeagueTimes(batch, games.value, teams.value, parseSkyFixtureSchedule(listings, {}, new Date(evidence.verifiedAt)), evidence)
+      delete batch.seasons[0].timeSyncUnavailable
+    } else {
+      console.error('Live Premier League schedule unavailable. Existing time confirmations retain their original expiry.')
+    }
     addPremierLeagueTelevision(batch, listings, verificationTimes())
   } catch (error) {
     console.error(`Channel airtimes are unavailable for this refresh. ${error.message}`)
@@ -109,7 +119,8 @@ async function loadPremierLeague() {
 }
 
 async function loadFormulaOne() {
-  const [calendar, broadcasters] = await Promise.all([fetchText(formulaOne.calendar), fetchText(formulaOne.broadcasters)])
+  const [calendar, broadcasters] = await Promise.all([fetchText(formulaOne.calendar),
+    timesOnly ? '' : fetchText(formulaOne.broadcasters)])
   const urls = formulaOneRaceUrls(calendar)
   const pages = new Map()
   for (let offset = 0; offset < urls.length; offset += 4) {
@@ -117,6 +128,7 @@ async function loadFormulaOne() {
     for (const [url, html] of group) pages.set(url, html)
   }
   const season = parseFormulaOneSeason(calendar, pages, broadcasters, verificationTimes())
+  if (timesOnly) return season
   const schedules = await Promise.allSettled([formulaOne.ukListings, formulaOne.ukFinaleListings]
     .map(async url => [url, await fetchText(url)]))
   addFormulaOneUkListings(season, schedules.filter(result => result.status === 'fulfilled').map(result => result.value),
@@ -144,11 +156,13 @@ async function optionalPage(url) {
 async function loadAdditionalSeasons() {
   const sources = [
     ['NBA', async () => {
-      const [schedule, announcement] = await Promise.all([
+      const [schedule, announcement, pricing] = await Promise.all([
         fetchText(nba.schedule, MAX_BYTES, { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.nba.com/' }),
-        fetchText(nba.announcement)
+        fetchText(nba.announcement), timesOnly ? '' : optionalPage(nba.primePricing)
       ])
-      return [parseNbaSeason(JSON.parse(schedule), announcement, verificationTimes())]
+      const batch = parseNbaSeason(JSON.parse(schedule), announcement, verificationTimes())
+      batch.offers = nbaPrimeOffers(batch, pricing, verificationTimes())
+      return [batch]
     }],
     ...Object.values(sixNations).map(edition => [edition.name, async () => {
       const [fixtures, rights] = await Promise.all([fetchText(edition.fixtures), optionalPage(edition.rights)])
@@ -187,8 +201,17 @@ async function writeSnapshot(catalogPath, catalog) {
 }
 
 const [output = '.season-catalog/catalog.json', ...inputPaths] = process.argv.slice(2)
+async function loadSeason(load) {
+  try {
+    return await load()
+  } catch (error) {
+    if (!timesOnly) throw error
+    console.error(`Time sync could not refresh ${load.name}: ${error.message}`)
+    return null
+  }
+}
 const [football, racing, expanded, ...additional] = await Promise.all([
-  loadPremierLeague(), loadFormulaOne(), loadAdditionalSeasons(),
+  loadSeason(loadPremierLeague), loadSeason(loadFormulaOne), loadAdditionalSeasons(),
   ...inputPaths.map(async path => JSON.parse(await readFile(path, 'utf8')))
 ])
 let offers = []
@@ -211,7 +234,7 @@ try {
     // An earlier snapshot is optional. Expired prices are never renewed here.
   }
 }
-if (racing.seasons[0].markets.some(market => market.country === 'US' && market.expectedListedFixtureIds.length)) {
+if (racing?.seasons[0].markets.some(market => market.country === 'US' && market.expectedListedFixtureIds.length)) {
   try {
     const [pricing, entitlements] = await Promise.all([
       fetchText(formulaOne.usPricing), fetchText(formulaOne.usEntitlements)
@@ -221,7 +244,8 @@ if (racing.seasons[0].markets.some(market => market.country === 'US' && market.e
     console.error(`US racing subscription pricing could not be verified. ${error.message}`)
   }
 }
-const batches = [football, racing, ...expanded, ...additional]
+const batches = [football, racing, ...expanded, ...additional].filter(Boolean)
+if (!football || !racing) offers = []
 
 function combineEntities(rows) {
   const entities = new Map()
@@ -240,7 +264,7 @@ const catalog = {
   seasons: batches.flatMap(batch => batch.seasons),
   fixtures: batches.flatMap(batch => batch.fixtures),
   competitionInventory: additional.flatMap(batch => batch.competitionInventory ?? []),
-  offers: [...offers, ...additional.flatMap(batch => batch.offers ?? [])]
+  offers: [...offers, ...batches.flatMap(batch => batch.offers ?? [])]
 }
 const { fixtures, seasons } = indexCatalog(catalog)
 await writeSnapshot(resolve(output), catalog)

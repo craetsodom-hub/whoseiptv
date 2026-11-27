@@ -4,7 +4,8 @@ import { isDate, isTimestamp } from './model.mjs'
 
 export const nba = {
   schedule: 'https://stats.nba.com/stats/scheduleleaguev2?LeagueID=00&Season=2026-27',
-  announcement: 'https://www.nba.com/news/2026-27-nba-regular-season-schedule'
+  announcement: 'https://www.nba.com/news/2026-27-nba-regular-season-schedule',
+  primePricing: 'https://www.aboutamazon.com/news/entertainment/stream-nba-prime-video'
 }
 export const sixNations = {
   men: {
@@ -50,6 +51,21 @@ function fixtureBatch(competition, organizations, edition, fixtures) {
 const usNbaChannels = new Set(['ABC', 'ESPN', 'ESPN2', 'NBC', 'NBC Sports Network', 'NBA TV', 'Telemundo', 'Disney Channel'])
 const usNbaServices = new Set(['Peacock', 'Prime Video', 'Disney+'])
 
+export function nbaPrimeOffers(batch, html, evidence) {
+  const article = decodeText(html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '').replace(/<[^>]*>/g, ' '))
+  const prices = article.match(/Prime Video is included with a Prime membership\s*, which costs \$(\d+(?:\.\d{2})?) a month or \$(\d+(?:\.\d{2})?) a year/i)
+  if (!prices || !/2026[-–]27 NBA season on Prime Video/i.test(article)) return []
+  const ids = new Set(batch.fixtures.flatMap(row => row.broadcasts
+    .filter(b => b.country === 'US' && b.name === 'Prime Video' && b.type === 'service').map(b => b.destinationId)))
+  if (!ids.size) return []
+  return ['month', 'year'].map((period, i) => ({
+    ...evidence, id: 'us-prime-nba-' + period, provider: 'Amazon', plan: 'Prime', country: 'US',
+    billingPeriod: period, currency: 'USD', amountMinor: Math.round(Number(prices[i + 1]) * 100),
+    competitionIds: ['nba'], destinationIds: [...ids], sourceUrl: nba.primePricing,
+    entitlementSourceUrl: nba.primePricing, terms: 'Standard US Prime membership for games listed on Prime Video.'
+  }))
+}
+
 export function parseNbaSeason(schedule, announcement, evidence) {
   const league = schedule?.leagueSchedule
   if (league?.seasonYear !== '2026-27' || league.leagueId !== '00' || !Array.isArray(league.gameDates)) {
@@ -80,8 +96,9 @@ export function parseNbaSeason(schedule, announcement, evidence) {
       const home = byTeam.get('nba-team-' + game.homeTeam?.teamId)
       const away = byTeam.get('nba-team-' + game.awayTeam?.teamId)
       const date = game.gameDateEst?.slice(0, 10)
-      const undecided = game.gameLabel === 'Emirates NBA Cup' && game.gameStatusText === 'TBD'
-      if ((!undecided && (!home || !away)) || !isDate(date) || !isTimestamp(game.gameDateTimeUTC) ||
+      const undecided = /^(?:TBD|TBA)$/i.test(game.gameStatusText?.trim() ?? '')
+      const pendingTeams = game.gameLabel === 'Emirates NBA Cup' && game.gameStatus === 1
+      if ((!pendingTeams && (!home || !away)) || !isDate(date) || (!undecided && !isTimestamp(game.gameDateTimeUTC)) ||
           ![1, 2, 3].includes(game.gameStatus) || !['N', 'P'].includes(game.postponedStatus)) {
         throw new Error('Unexpected NBA fixture ' + game.gameId)
       }
@@ -209,6 +226,14 @@ const rugbyMarketCodes = new Map([
   })
 ])
 
+const cricketTeamBadges = Object.fromEntries([
+  ['england-men', 137142, 'y5wcl81646775152'], ['australia-men', 137146, 'zvm8581646775132'],
+  ['england-women', 145688, 'av4o8u1646775500'], ['australia-women', 145686, 'e5po1e1646775485']
+].map(([team, id, asset]) => [team, {
+  url: 'https://r2.thesportsdb.com/images/media/team/badge/' + asset + '.png',
+  sourceUrl: 'https://www.thesportsdb.com/team/' + id
+}]))
+
 export function parseAshes(fixturesHtml, broadcastsHtml, australiaHtml, evidence) {
   const sections = new Map([...fixturesHtml.matchAll(/<p><strong>England (Men|Women) v Australia[^<]+Ashes[^<]*<\/strong><\/p>((?:\s*<p>(?!<strong>)[\s\S]*?<\/p>)+)/g)]
     .map(([, division, html]) => [division, html]))
@@ -232,8 +257,10 @@ export function parseAshes(fixturesHtml, broadcastsHtml, australiaHtml, evidence
     const editionName = division + "'s Ashes"
     const competitionId = suffix + 's-ashes'
     const seasonId = competitionId + '-2027'
-    const england = { id: 'england-cricket-' + suffix, name: 'England ' + division, kind: 'team', country: 'GB' }
-    const australia = { id: 'australia-cricket-' + suffix, name: 'Australia ' + division, kind: 'team', country: 'AU' }
+    const england = { id: 'england-cricket-' + suffix, name: 'England ' + division, kind: 'team', country: 'GB',
+      logo: cricketTeamBadges['england-' + suffix] }
+    const australia = { id: 'australia-cricket-' + suffix, name: 'Australia ' + division, kind: 'team', country: 'AU',
+      logo: cricketTeamBadges['australia-' + suffix] }
     const markets = division === 'Men' && hasSky ? ['GB', 'IE'] : homeSeriesOnSky ? ['GB'] : []
     const broadcastSource = division === 'Men' && hasSky ? ashes.broadcasts : ashes.fixtures
     const fixtures = []

@@ -4,6 +4,8 @@ Small, validated multi-sport schedule feed for the WhoseIPTV Android app. No dom
 
 ## Public feed
 
+Season start times are available in the [live season time feed](https://raw.githubusercontent.com/craetsodom-hub/whoseiptv/season-times/feed/seasons/v1/start-times.json). GitHub checks the sources hourly. Each event has a stable ID and a UTC `startsAt` once confirmed. Refresh saved events by ID, clear a saved time when `startsAt` becomes null, and check the season’s `validUntil` before displaying it. `changedAt` records when the sync first observed the current date, status and time. GitHub may delay scheduled runs.
+
 `https://raw.githubusercontent.com/craetsodom-hub/whoseiptv/main/feed/events/v1/events.json`
 
 The scheduled GitHub Action refreshes the feed every three hours. It requests today plus the next two UTC days using a bounded priority set and one rotating secondary market per sport. Football uses `config/football-countries.json`; basketball, tennis, cricket, and rugby use `config/sport-countries.json`. Spain, the UK, the US, France, Germany and Italy remain in the priority set where the sport configuration supports them; the rest of the reviewed country list rotates across runs. Formula 1 uses the official worldwide broadcaster table instead of duplicating legacy country requests. The current plan is 72 primary TV-schedule calls per run instead of the previous 450-call burst.
