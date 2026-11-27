@@ -7,7 +7,9 @@
     "build": "node scripts/build-feed.mjs",
     "test": "node --test tests/*.test.mjs",
     "coverage:broadcasts": "node scripts/coverage-broadcasts.mjs",
-    "canonicalize:broadcast-regions": "node scripts/canonicalize-broadcast-regions.mjs"
+    "canonicalize:broadcast-regions": "node scripts/canonicalize-broadcast-regions.mjs",
+    "catalog:build": "node scripts/build-season-catalog.mjs",
+    "catalog:serve": "node scripts/serve-season-catalog.mjs"
   },
   "engines": {
     "node": ">=20"

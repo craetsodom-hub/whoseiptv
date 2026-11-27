@@ -1,0 +1,18 @@
+{
+  "title": "Sports season catalog export",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "sport": { "title": "Sport", "type": "string", "description": "Sport ID such as football or formula1.", "editor": "textfield" },
+    "competition": { "title": "Competition", "type": "string", "description": "Competition ID from the catalog.", "editor": "textfield" },
+    "season": { "title": "Season", "type": "string", "description": "Season ID from the catalog.", "editor": "textfield" },
+    "kind": { "title": "Competition type", "type": "string", "description": "Filter by league, cup, series or tournament.", "editor": "select", "enum": ["league", "cup", "series", "tournament"] },
+    "leagueCountry": { "title": "League country", "type": "string", "description": "Two-letter code for the country of the competition.", "editor": "textfield" },
+    "country": { "title": "Broadcast country", "type": "string", "description": "Two-letter code for the viewer's broadcast market and prices.", "editor": "textfield" },
+    "organization": { "title": "Participant", "type": "string", "description": "Club or other participant ID.", "editor": "textfield" },
+    "from": { "title": "From", "type": "string", "description": "First fixture date to include, YYYY-MM-DD.", "editor": "textfield" },
+    "to": { "title": "To", "type": "string", "description": "Last fixture date to include, YYYY-MM-DD.", "editor": "textfield" },
+    "broadcastsOnly": { "title": "Only currently listed broadcasts", "type": "boolean", "editor": "checkbox", "description": "Omit fixtures without a current listing for the selected broadcast country." },
+    "maxRecords": { "title": "Maximum records", "type": "integer", "editor": "number", "description": "Fail before exporting if the result exceeds this limit.", "default": 10000, "minimum": 1, "maximum": 100000 }
+  }
+}

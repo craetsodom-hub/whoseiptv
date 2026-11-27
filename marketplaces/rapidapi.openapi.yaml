@@ -1,0 +1,237 @@
+openapi: 3.0.3
+info:
+  title: WhoseIPTV Sports Season Catalog
+  version: 1.0.0
+  description: Season fixtures, participant and competition logos, broadcast airings and country-specific viewing prices. Check the coverage endpoint for available season and market combinations.
+paths:
+  /v1/fixtures:
+    get:
+      operationId: listFixtures
+      summary: Search season fixtures and broadcast prices
+      parameters:
+        - $ref: '#/components/parameters/Sport'
+        - $ref: '#/components/parameters/Competition'
+        - $ref: '#/components/parameters/Season'
+        - $ref: '#/components/parameters/Kind'
+        - $ref: '#/components/parameters/LeagueCountry'
+        - $ref: '#/components/parameters/Country'
+        - $ref: '#/components/parameters/Organization'
+        - in: query
+          name: from
+          description: First published fixture date, inclusive.
+          schema: { type: string, format: date }
+        - in: query
+          name: to
+          description: Last published fixture date, inclusive.
+          schema: { type: string, format: date }
+        - in: query
+          name: broadcastsOnly
+          description: Include only fixtures with current listings for country.
+          schema: { type: boolean }
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Generation'
+      responses:
+        '200':
+          description: A page of fixtures.
+          content:
+            application/json:
+              schema:
+                allOf:
+                  - $ref: '#/components/schemas/Page'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items: { $ref: '#/components/schemas/Fixture' }
+        '400': { description: Invalid filter. }
+        '409': { description: Catalog refreshed. Restart pagination. }
+        '503': { description: No validated snapshot is available. }
+  /v1/fixtures/{id}:
+    get:
+      operationId: getFixture
+      summary: Get one fixture and its broadcast prices
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: { type: string }
+        - $ref: '#/components/parameters/Country'
+      responses:
+        '200':
+          description: A single fixture.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  generatedAt: { type: string, format: date-time }
+                  data: { $ref: '#/components/schemas/Fixture' }
+        '404': { description: Fixture not found. }
+  /v1/competitions:
+    get:
+      operationId: listCompetitions
+      summary: Find sports competitions, seasons, organizers and logos
+      parameters:
+        - $ref: '#/components/parameters/Sport'
+        - $ref: '#/components/parameters/Competition'
+        - $ref: '#/components/parameters/Season'
+        - $ref: '#/components/parameters/Kind'
+        - $ref: '#/components/parameters/LeagueCountry'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Generation'
+      responses:
+        '200': { $ref: '#/components/responses/Page' }
+  /v1/organizations:
+    get:
+      operationId: listOrganizations
+      summary: Find clubs, federations, organizers and their logos
+      parameters:
+        - $ref: '#/components/parameters/Organization'
+        - in: query
+          name: country
+          description: Organization's country, independent of broadcast availability.
+          schema: { type: string, pattern: '^[A-Z]{2}$' }
+        - in: query
+          name: kind
+          schema: { type: string, enum: [club, team, federation, organizer, institution] }
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Generation'
+      responses:
+        '200': { $ref: '#/components/responses/Page' }
+  /v1/coverage:
+    get:
+      operationId: listCoverage
+      summary: See fixture and broadcast coverage by competition, season and market
+      parameters:
+        - $ref: '#/components/parameters/Sport'
+        - $ref: '#/components/parameters/Competition'
+        - $ref: '#/components/parameters/Season'
+        - $ref: '#/components/parameters/Kind'
+        - $ref: '#/components/parameters/LeagueCountry'
+        - $ref: '#/components/parameters/Country'
+        - $ref: '#/components/parameters/Offset'
+        - $ref: '#/components/parameters/Limit'
+        - $ref: '#/components/parameters/Generation'
+      responses:
+        '200': { $ref: '#/components/responses/Page' }
+components:
+  parameters:
+    Sport:
+      in: query
+      name: sport
+      schema: { type: string }
+    Competition:
+      in: query
+      name: competition
+      schema: { type: string }
+    Season:
+      in: query
+      name: season
+      schema: { type: string }
+    Kind:
+      in: query
+      name: kind
+      schema: { type: string, enum: [league, cup, series, tournament] }
+    Country:
+      in: query
+      name: country
+      description: The viewer's broadcast market and subscription pricing country.
+      schema: { type: string, pattern: '^[A-Z]{2}$' }
+    LeagueCountry:
+      in: query
+      name: leagueCountry
+      description: The competition's country.
+      schema: { type: string, pattern: '^[A-Z]{2}$' }
+    Organization:
+      in: query
+      name: organization
+      schema: { type: string }
+    Offset:
+      in: query
+      name: offset
+      schema: { type: integer, minimum: 0, default: 0 }
+    Limit:
+      in: query
+      name: limit
+      schema: { type: integer, minimum: 1, maximum: 200, default: 100 }
+    Generation:
+      in: query
+      name: generation
+      description: Pass generatedAt from the preceding page to keep pagination on the same snapshot.
+      schema: { type: string, format: date-time }
+  responses:
+    Page:
+      description: A page of results.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Page' }
+  schemas:
+    Page:
+      type: object
+      required: [generatedAt, total, offset, limit, nextOffset, data]
+      properties:
+        generatedAt: { type: string, format: date-time }
+        total: { type: integer }
+        offset: { type: integer }
+        limit: { type: integer }
+        nextOffset: { type: integer, nullable: true }
+        data:
+          type: array
+          items: { type: object }
+    Fixture:
+      type: object
+      required: [id, title, competitionId, seasonId, date, startsAt, startStatus, scheduleStatus, sourceUrl, participants, broadcastStatus, broadcasts]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        competitionId: { type: string }
+        seasonId: { type: string }
+        date: { type: string, format: date }
+        startsAt: { type: string, format: date-time, nullable: true }
+        startStatus: { type: string, enum: [scheduled, provisional, unannounced, postponed, cancelled] }
+        scheduleStatus: { type: string, enum: [current, stale] }
+        sourceUrl: { type: string, format: uri }
+        country: { type: string }
+        participants:
+          type: array
+          items: { type: object }
+        broadcastStatus: { type: string, enum: [listed, unverified, stale, not_covered] }
+        broadcasts:
+          type: array
+          items: { $ref: '#/components/schemas/Broadcast' }
+    Broadcast:
+      type: object
+      properties:
+        country: { type: string }
+        name: { type: string }
+        destinationId: { type: string }
+        type: { type: string, enum: [channel, service, network] }
+        kind: { type: string, enum: [live, delayed, replay, unspecified] }
+        airsAt: { type: string, format: date-time, nullable: true }
+        airtimeStatus: { type: string, enum: [published, not_published] }
+        sourceUrl: { type: string, format: uri }
+        verifiedAt: { type: string, format: date-time }
+        validUntil: { type: string, format: date-time }
+        priceStatus: { type: string, enum: [verified, stale, unverified] }
+        offers:
+          type: array
+          items: { $ref: '#/components/schemas/Offer' }
+    Offer:
+      type: object
+      properties:
+        id: { type: string }
+        country: { type: string }
+        provider: { type: string }
+        plan: { type: string }
+        currency: { type: string }
+        amountMinor:
+          type: integer
+          description: Published price in the named currency's minor units. GBP 1499 means £14.99.
+        billingPeriod: { type: string, enum: [day, month, year, one-time, free] }
+        terms: { type: string }
+        sourceUrl: { type: string, format: uri }
+        verifiedAt: { type: string, format: date-time }
+        validUntil: { type: string, format: date-time }

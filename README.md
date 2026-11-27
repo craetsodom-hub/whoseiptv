@@ -65,3 +65,7 @@ Do not add event-to-channel exceptions, provider-specific aliases, IPTV URLs, or
 npm test
 npm run build
 ```
+
+## Sports season catalog
+
+The [season catalog](docs/season-catalog.md) adds full fixture calendars, competition and country filters, club and organizer records, and verified broadcast prices. It includes a RapidAPI import specification and an Apify export Actor.

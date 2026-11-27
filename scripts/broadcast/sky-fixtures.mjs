@@ -18,7 +18,7 @@ export function skyLocalKickoff(year, month, day, hour, minute) {
   return candidates.length === 1 ? Math.floor(candidates[0] / 1000) : null;
 }
 
-export function parseSkyFixtureSchedule(html, aliasesByChannel = {}, referenceDate = new Date()) {
+export function parseSkyFixtureSchedule(html, aliasesByChannel = {}, referenceDate = new Date(), { includeAirtimes = false } = {}) {
   const candidates = [], referenceYear = referenceDate.getUTCFullYear();
   if (!Number.isFinite(referenceDate.getTime())) return candidates;
   for (const section of String(html).split(/(?=<h3\b[^>]*>)/i)) {
@@ -34,10 +34,18 @@ export function parseSkyFixtureSchedule(html, aliasesByChannel = {}, referenceDa
       const teams = [...row.matchAll(/<strong\b[^>]*>([\s\S]*?)<\/strong>/gi)].map(match => clean(match[1]));
       const kickoff = clean(row.match(/<li\b[^>]*class=["'][^"']*\bcol2\b[^"']*["'][^>]*>([\s\S]*?)<\/li>/i)?.[1]);
       const detail = clean(row.match(/<p\b[^>]*class=["'][^"']*\bevent-detail\b[^"']*["'][^>]*>([\s\S]*)$/i)?.[1]);
-      const channels = [...new Set([...detail.matchAll(/\b(Sky Sports(?:[ A-Za-z0-9+]*?))\s*\(\d{1,2}:\d{2}\)/g)].map(match => match[1].trim()))];
+      const airings = [...detail.matchAll(/\b(Sky Sports(?:[ A-Za-z0-9+]*?))\s*\((\d{1,2}):(\d{2})\)/g)];
+      const channels = [...new Set(airings.map(match => match[1].trim()))];
       if (teams.length !== 2 || teams.some(team => !team || team.length > 120) || !/^\d{1,2}:\d{2}$/.test(kickoff) || !channels.length) continue;
       const startUtcEpochSeconds = skyLocalKickoff(year, month, Number(date[2]), Number(kickoff.split(':')[0]), Number(kickoff.split(':')[1]));
       if (!startUtcEpochSeconds || london.formatToParts(startUtcEpochSeconds * 1000).find(part => part.type === 'weekday')?.value !== date[1]) continue;
+      const airtimes = new Map();
+      if (includeAirtimes) for (const [, channel, hour, minute] of airings) {
+        const time = skyLocalKickoff(year, month, Number(date[2]), Number(hour), Number(minute));
+        if (time === null || time > startUtcEpochSeconds || time < startUtcEpochSeconds - 2 * 3600) continue;
+        const name = channel.trim();
+        airtimes.set(name, airtimes.has(name) && airtimes.get(name) !== time ? null : time);
+      }
       const preview = row.match(/href=["'](https:\/\/www\.skysports\.com\/football\/[a-z0-9-]+\/(\d+))["']/i);
       // Preserve existing v1 IDs, which were derived from the displayed clock.
       // Fixing the UTC instant must not invalidate Android's saved event IDs.
@@ -52,7 +60,8 @@ export function parseSkyFixtureSchedule(html, aliasesByChannel = {}, referenceDa
           aliases: broadcastAliases(channelName, aliasesByChannel[channelName] ?? [], 8),
           territory: 'GB', rightsHolder: 'Sky Sports', confirmed: true,
           sourceType: 'official-broadcaster-schedule', destinationType: 'linear', destinationPrecision: 'channel', destinationVerified: true,
-          sourceUrl: SKY_PREMIER_LEAGUE_URL, matchingMethod: 'sky-fixture-row-teams-london-kickoff'
+          sourceUrl: SKY_PREMIER_LEAGUE_URL, matchingMethod: 'sky-fixture-row-teams-london-kickoff',
+          ...(includeAirtimes && airtimes.get(channelName) ? { airsAtUtcEpochSeconds: airtimes.get(channelName) } : {})
         }))
       });
     }
