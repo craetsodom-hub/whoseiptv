@@ -157,7 +157,7 @@ try {
 } catch (error) {
   console.error(`The current subscription price check failed. ${error.message}`)
   try {
-    const previous = indexCatalog(JSON.parse(await readFile(output, 'utf8')))
+    const previous = indexCatalog(JSON.parse(await readFile(process.env.CATALOG_PREVIOUS_PATH ?? output, 'utf8')))
     offers = [...previous.offers.values()].filter(offer =>
       offer.sourceUrl === sportsPricingUrl && Date.parse(offer.validUntil) > Date.now())
   } catch {

@@ -1,5 +1,7 @@
+import sportCountries from '../../config/sport-countries.json' with { type: 'json' }
 import { SUPPORTED_TERRITORIES } from '../territories.mjs'
 import { isFresh } from './model.mjs'
+import { verifyLogoAssets } from './logo-assets.mjs'
 
 /**
  * Audit the entire snapshot served by the API. Observed, rights-only and
@@ -45,6 +47,13 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
     }
   } else if (assets.size) {
     addIssue('logo_assets_unchecked', String(assets.size))
+  }
+
+  if (worldwide) {
+    const sports = new Set([...index.seasons.values()].map(season => index.competitions.get(season.competitionId).sport))
+    for (const sport of ['football', ...Object.keys(sportCountries)]) {
+      if (!sports.has(sport)) addIssue('missing_sport', sport)
+    }
   }
 
   const offers = new Map()
@@ -119,4 +128,9 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
 
 export function summarizeIssues(issues) {
   return Object.entries(issues).map(([type, { count }]) => `${type}=${count}`).join(', ')
+}
+
+export async function verifyRelease(index, { worldwide = false } = {}) {
+  const logoResults = await verifyLogoAssets(index)
+  return auditRelease(index, { worldwide, logoResults })
 }

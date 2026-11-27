@@ -9,7 +9,7 @@ npm run catalog:build
 npm run catalog:serve
 ```
 
-Set `CATALOG_PATH` to serve a different snapshot. The default is `.season-catalog/catalog.json`. The server picks up a validated snapshot after an atomic replacement. Refresh it on a schedule that runs within its 24-hour validity window.
+Set `CATALOG_PATH` to serve a different snapshot. The default is `.season-catalog/catalog.json`. The server picks up a validated snapshot after an atomic replacement. Use this mode to inspect a local snapshot.
 
 ```sh
 curl 'http://127.0.0.1:8780/v1/fixtures?competition=premier-league&season=premier-league-2026-27&leagueCountry=GB&country=GB&from=2026-11-27&broadcastsOnly=true'
@@ -41,9 +41,27 @@ npm run catalog:audit
 npm run catalog:audit -- --worldwide
 ```
 
-The first audit checks all seasons and broadcast markets in the snapshot. Use the worldwide audit when offering coverage in every supported country. It also checks for undeclared countries. Both commands verify the logo files over HTTPS and exit with a nonzero status when an audit finds a gap. The JSON output shows counts and examples for each issue.
+The first audit checks all seasons and broadcast markets in the snapshot. Use the worldwide audit when offering coverage in every supported country. It also checks for undeclared countries and missing sports from the app's six-sport catalog. Both commands verify the logo files over HTTPS and exit with a nonzero status when an audit finds a gap. The JSON output shows counts and examples for each issue.
 
 The server runs the audit on startup and on snapshot updates when binding publicly or using marketplace authentication. It requires current evidence for kickoff times, exact airings, airtimes and market-specific prices, or an explicit no-airing result. Set `CATALOG_WORLDWIDE=1` to enforce worldwide coverage. For a local release test, set `CATALOG_REQUIRE_COMPLETE=1`. A previous passing snapshot can be served through its evidence expiry if a refresh fails. Local preview keeps provisional times and coverage gaps visible.
+
+## Deploy the API
+
+Use the repository's Docker image on an always-running host with persistent storage. The included Compose file runs one API process, keeps the accepted snapshot on disk and serves HTTPS. Point the API hostname at the host and make ports 80 and 443 available. Set the hostname and at least one credential in the deployment environment.
+
+```sh
+export CATALOG_DOMAIN=api.example.com
+export CATALOG_TOKEN=replace-with-a-generated-secret
+docker compose up -d --build
+```
+
+The container builds on startup and then refreshes on a three-hour interval. Each refresh builds an isolated candidate, verifies its logos and release coverage, and promotes it atomically if it passes. A failed or blocked run retains the last accepted file and its original expiry. The container writes a `catalog_refresh` log with `published`, `blocked`, or `failed`. Keep only one running refresh process per catalog volume.
+
+- `GET /livez` returns 200 while the process is running.
+- `GET /healthz` uses the API credentials and returns 200 only when a current approved snapshot is available.
+- API calls return 503 until there is a current approved snapshot. The same applies after its evidence expires.
+
+Use the log outcome and authenticated readiness check for deployment alerts. Docker enables worldwide coverage by default. To add trusted normalized season batches, mount their directory read-only in a Compose override and set `CATALOG_INPUT_DIR` to that path. The worker loads its JSON files on every refresh.
 
 ## Marketplace integration
 

@@ -1,8 +1,12 @@
 import { createServer } from 'node:http'
+import { mkdtemp, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { catalogHandler } from '../scripts/catalog/api.mjs'
 import { isImageAsset } from '../scripts/catalog/logo-assets.mjs'
+import { refreshCatalog } from '../scripts/catalog/refresh.mjs'
 import { auditRelease } from '../scripts/catalog/release.mjs'
 import { indexCatalog } from '../scripts/catalog/model.mjs'
 import {
@@ -73,6 +77,9 @@ test('filters by distinct league and broadcast countries and suppresses expired 
     headers: { Authorization: `Bearer ${token}` }
   })
   assert.equal((await request('/v1/fixtures', 'invalid')).status, 401)
+  const liveness = await request('/livez', 'invalid')
+  assert.equal(liveness.status, 200)
+  assert.deepEqual(await liveness.json(), { status: 'alive' })
   assert.equal((await request('/v1/fixtures?country=ZZ')).status, 400)
   assert.equal((await request('/v1/fixtures?generation=old')).status, 409)
   const result = await (await request('/v1/fixtures?sport=football&competition=league&season=league-2026&leagueCountry=ES&country=GB&limit=1')).json()
@@ -163,6 +170,7 @@ test('release audit fails on incomplete fields, geography, stale prices and brok
   assert.equal(result.issues.missing_airtime.count, 1)
   assert.equal(result.issues.missing_current_price.count, 2)
   assert(result.issues.missing_market.count > 0)
+  assert(result.issues.missing_sport.examples.includes('basketball'))
 })
 
 test('release audit accepts explicit no-airing evidence and never treats an empty market as proof', () => {
@@ -261,4 +269,46 @@ test('US racing airtime uses the live national feed and the local price is free 
   assert.equal(plans[0].amountMinor, 1499)
   assert.equal(plans[1].billingPeriod, 'free')
   assert.deepEqual(plans[1].fixtureIds, [practice.id])
+})
+
+test('refresh promotes complete candidates and preserves the published file on denial or failure', async t => {
+  const directory = await mkdtemp(join(tmpdir(), 'whoseiptv-refresh-'))
+  t.after(() => rm(directory, { recursive: true, force: true }))
+  const path = join(directory, 'catalog.json')
+  const previous = 'previous verified snapshot'
+  const data = JSON.stringify(catalog())
+  await writeFile(path, previous)
+  const build = candidate => writeFile(candidate, data)
+  const validUntil = new Date(Date.now() + 60_000).toISOString()
+
+  const blocked = await refreshCatalog({ path, build, verify: async () => ({ ready: false }) })
+  assert.equal(blocked.outcome, 'blocked')
+  assert.equal(await readFile(path, 'utf8'), previous)
+
+  await assert.rejects(refreshCatalog({ path, build: async () => { throw new Error('Source unavailable') } }),
+    /Source unavailable/)
+  assert.equal(await readFile(path, 'utf8'), previous)
+  await assert.rejects(refreshCatalog({ path, build, verify: async () => ({ ready: true, validUntil: null }) }),
+    /Candidate expired/)
+  assert.equal(await readFile(path, 'utf8'), previous)
+
+  const controller = new AbortController()
+  await assert.rejects(refreshCatalog({
+    path, build, signal: controller.signal, verify: async () => {
+      controller.abort()
+      return { ready: true, validUntil }
+    }
+  }), { name: 'AbortError' })
+  assert.equal(await readFile(path, 'utf8'), previous)
+
+  const published = await refreshCatalog({
+    path, build, worldwide: true, verify: async (index, options) => {
+      assert.equal(index.fixtures.size, 2)
+      assert.equal(options.worldwide, true)
+      return { ready: true, validUntil }
+    }
+  })
+  assert.equal(published.outcome, 'published')
+  assert.equal(await readFile(path, 'utf8'), data)
+  assert.deepEqual(await readdir(directory), ['catalog.json'])
 })

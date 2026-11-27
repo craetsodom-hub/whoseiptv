@@ -185,11 +185,16 @@ export function catalogHandler({ snapshot, clock = Date.now, proxySecret, token,
     let body
     try {
       if (request.method !== 'GET') throw new RequestError(405, 'method_not_allowed', 'Use GET')
+      const url = new URL(request.url, 'http://localhost')
+      if (url.pathname === '/livez') {
+        response.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store' })
+        response.end(JSON.stringify({ status: 'alive' }))
+        return
+      }
       if ((proxySecret || token) && !equalSecret(request.headers['x-rapidapi-proxy-secret'], proxySecret) &&
           !equalSecret(request.headers.authorization, token ? `Bearer ${token}` : null)) {
         throw new RequestError(401, 'unauthorized', 'Authentication required')
       }
-      const url = new URL(request.url, 'http://localhost')
       if (url.pathname === '/healthz') {
         const index = await snapshot()
         const current = [...index.seasons.values()].some(season => isFresh(season, clock()))
