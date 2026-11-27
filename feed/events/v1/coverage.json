@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T20:35:38.401Z",
+  "generatedAt": "2026-11-27T21:31:48.977Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -1818,16 +1818,6 @@
       "sport": "basketball",
       "competition": "FIBA Basketball World Cup",
       "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2519646",
-      "sport": "basketball",
-      "competition": "FIBA Basketball World Cup",
-      "territory": "SI",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -4592,6 +4582,514 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "Movistar LALIGA",
+          "normalizedName": "movistarlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2506305",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 5",
+          "normalizedName": "beinsports5",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
       "eventId": "tsdb-2601936",
       "sport": "basketball",
       "competition": "NBA",
@@ -4626,16 +5124,6 @@
       "sport": "basketball",
       "competition": "NBA",
       "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601946",
-      "sport": "basketball",
-      "competition": "NBA",
-      "territory": "SI",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -6125,6 +6613,514 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "AE",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "BH",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "DZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "EG",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "ES",
+      "sourcesAttempted": [
+        {
+          "id": "laliga-spain",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
+          "parserTypes": [
+            "embedded-page-state",
+            "json-ld",
+            "semantic-table"
+          ],
+          "success": true,
+          "candidates": 0
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "DAZN LALIGA",
+          "normalizedName": "daznlaliga",
+          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN",
+          "Disney+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IQ",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "JO",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "KW",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "LB",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "LY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "MA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "OM",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "PS",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "QA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "SA",
+      "sourcesAttempted": [
+        {
+          "id": "bein-mena",
+          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
+          "parserTypes": [
+            "first-party-json-api",
+            "semantic-html",
+            "embedded-json"
+          ],
+          "success": true,
+          "candidates": 17
+        }
+      ],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "SY",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "TN",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "US",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ESPN",
+          "ESPN+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2506299",
+      "sport": "football",
+      "competition": "Spanish La Liga",
+      "territory": "YE",
+      "sourcesAttempted": [],
+      "exactDestinations": [
+        {
+          "channelName": "beIN SPORTS 3",
+          "normalizedName": "beinsports3",
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1600"
+        }
+      ],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": null
     },
     {
       "eventId": "tsdb-2601950",
@@ -24076,504 +25072,6 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AE",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BH",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "CH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DK",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "EG",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "ES",
-      "sourcesAttempted": [
-        {
-          "id": "laliga-spain",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld",
-            "semantic-table"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "Movistar LALIGA",
-          "normalizedName": "movistarlaliga",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN",
-          "Disney+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "JO",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "KW",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LB",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LY",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "MA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "OM",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PS",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "QA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SY",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "TN",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN",
-          "ESPN+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102379",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "YE",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 5",
-          "normalizedName": "beinsports5",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
       "eventId": "laliga-102385",
       "sport": "football",
       "competition": "LALIGA EA SPORTS",
@@ -26049,504 +26547,6 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AE",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "BH",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "CH",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DK",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "DZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "EG",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "ES",
-      "sourcesAttempted": [
-        {
-          "id": "laliga-spain",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados",
-          "parserTypes": [
-            "embedded-page-state",
-            "json-ld",
-            "semantic-table"
-          ],
-          "success": true,
-          "candidates": 0
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "DAZN LALIGA",
-          "normalizedName": "daznlaliga",
-          "sourceUrl": "https://www.laliga.com/laliga-easports/resultados"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "FR",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "DAZN",
-          "Disney+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IQ",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IS",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "JO",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "KW",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LB",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "LY",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "MA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "NZ",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "OM",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PS",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "PT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "QA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SA",
-      "sourcesAttempted": [
-        {
-          "id": "bein-mena",
-          "sourceUrl": "https://www.beinsports.com/en-mena/tv-guide",
-          "parserTypes": [
-            "first-party-json-api",
-            "semantic-html",
-            "embedded-json"
-          ],
-          "success": true,
-          "candidates": 17
-        }
-      ],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "SY",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "TN",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "US",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [
-        [
-          "ESPN",
-          "ESPN+"
-        ]
-      ],
-      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
-    },
-    {
-      "eventId": "laliga-102388",
-      "sport": "football",
-      "competition": "LALIGA EA SPORTS",
-      "territory": "YE",
-      "sourcesAttempted": [],
-      "exactDestinations": [
-        {
-          "channelName": "beIN SPORTS 3",
-          "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1700"
-        }
-      ],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": null
-    },
-    {
       "eventId": "laliga-102381",
       "sport": "football",
       "competition": "LALIGA EA SPORTS",
@@ -27032,7 +27032,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27078,7 +27078,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27124,7 +27124,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27140,7 +27140,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27209,7 +27209,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27245,7 +27245,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27261,7 +27261,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27277,7 +27277,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27293,7 +27293,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27321,7 +27321,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27347,7 +27347,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27363,7 +27363,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27401,7 +27401,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27429,7 +27429,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27455,7 +27455,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27471,7 +27471,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27502,7 +27502,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1800"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27530,12 +27530,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27581,12 +27581,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27632,12 +27632,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27653,12 +27653,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27727,12 +27727,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27768,12 +27768,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27789,12 +27789,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27810,12 +27810,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27831,12 +27831,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27864,12 +27864,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27895,12 +27895,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27916,12 +27916,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27959,12 +27959,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27992,12 +27992,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -28023,12 +28023,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -28044,12 +28044,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -28080,12 +28080,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -29713,7 +29713,7 @@
     "sport": [
       {
         "sport": "basketball",
-        "total": 11,
+        "total": 9,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -29727,10 +29727,10 @@
       },
       {
         "sport": "football",
-        "total": 1913,
+        "total": 1915,
         "attempted": 158,
         "exactCovered": 156,
-        "coveragePercentage": 8.2
+        "coveragePercentage": 8.1
       },
       {
         "sport": "formula1",
@@ -29785,7 +29785,7 @@
       },
       {
         "competition": "FIBA Basketball World Cup",
-        "total": 3,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -29827,10 +29827,10 @@
       },
       {
         "competition": "LALIGA EA SPORTS",
-        "total": 320,
-        "attempted": 50,
-        "exactCovered": 129,
-        "coveragePercentage": 40.3
+        "total": 256,
+        "attempted": 40,
+        "exactCovered": 93,
+        "coveragePercentage": 36.3
       },
       {
         "competition": "Ligue 1",
@@ -29848,7 +29848,7 @@
       },
       {
         "competition": "NBA",
-        "total": 6,
+        "total": 5,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -29880,6 +29880,13 @@
         "attempted": 1,
         "exactCovered": 0,
         "coveragePercentage": 0
+      },
+      {
+        "competition": "Spanish La Liga",
+        "total": 66,
+        "attempted": 10,
+        "exactCovered": 36,
+        "coveragePercentage": 54.5
       },
       {
         "competition": "unknown",
@@ -30262,6 +30269,13 @@
         "coveragePercentage": 0
       },
       {
+        "territory": "IE",
+        "total": 2,
+        "attempted": 0,
+        "exactCovered": 0,
+        "coveragePercentage": 0
+      },
+      {
         "territory": "IL",
         "total": 1,
         "attempted": 0,
@@ -30627,7 +30641,7 @@
       },
       {
         "territory": "SI",
-        "total": 3,
+        "total": 1,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -31956,14 +31970,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-11-27T20:17:10.000Z",
+    "generatedAt": "2026-11-27T21:12:28.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
     "succeeded": 72,
     "failed": 0,
     "successRatio": 1,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 4,
+    "detailRequests": 6,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -32005,7 +32019,7 @@
       },
       {
         "sport": "football",
-        "territory": "GB",
+        "territory": "IE",
         "date": "2026-11-27",
         "status": "success"
       },
@@ -32035,7 +32049,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "SI",
+        "territory": "LT",
         "date": "2026-11-27",
         "status": "success"
       },
@@ -32059,7 +32073,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "IT",
         "date": "2026-11-27",
         "status": "success"
       },
@@ -32083,7 +32097,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "AE",
+        "territory": "AF",
         "date": "2026-11-27",
         "status": "success"
       },
@@ -32107,7 +32121,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "FJ",
+        "territory": "WS",
         "date": "2026-11-27",
         "status": "success"
       },
@@ -32149,7 +32163,7 @@
       },
       {
         "sport": "football",
-        "territory": "GB",
+        "territory": "IE",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -32179,7 +32193,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "SI",
+        "territory": "LT",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -32203,7 +32217,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "IT",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -32227,7 +32241,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "AE",
+        "territory": "AF",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -32251,7 +32265,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "FJ",
+        "territory": "WS",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -32293,7 +32307,7 @@
       },
       {
         "sport": "football",
-        "territory": "GB",
+        "territory": "IE",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -32323,7 +32337,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "SI",
+        "territory": "LT",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -32347,7 +32361,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "DE",
+        "territory": "IT",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -32371,7 +32385,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "AE",
+        "territory": "AF",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -32395,7 +32409,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "FJ",
+        "territory": "WS",
         "date": "2026-11-29",
         "status": "success"
       }
