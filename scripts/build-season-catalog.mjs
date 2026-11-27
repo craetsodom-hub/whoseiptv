@@ -7,7 +7,7 @@ import { SKY_PREMIER_LEAGUE_URL } from './broadcast/sky-fixtures.mjs'
 import { indexCatalog } from './catalog/model.mjs'
 import {
   addPremierLeagueTelevision, formulaOne, formulaOneRaceUrls, parseFormulaOneSeason, parsePremierLeague, parseSportsPrices,
-  premierLeague, premierLeagueConflicts, resolvePremierLeagueConflict, sportsPricingUrl
+  premierLeague, premierLeagueConflicts, resolvePremierLeagueConflict, sportsEntitlementsUrl, sportsPricingUrl
 } from './catalog/sources.mjs'
 
 const exec = promisify(execFile)
@@ -100,7 +100,14 @@ const [football, racing, ...additional] = await Promise.all([
 ])
 let offers = []
 try {
-  offers = parseSportsPrices(await fetchText(sportsPricingUrl), verificationTimes())
+  const [pricing, entitlements] = await Promise.all([
+    fetchText(sportsPricingUrl),
+    fetchText(sportsEntitlementsUrl).catch(error => {
+      console.error(`Additional viewing plan entitlements could not be verified. ${error.message}`)
+      return ''
+    })
+  ])
+  offers = parseSportsPrices(pricing, verificationTimes(), entitlements)
 } catch (error) {
   console.error(`The current subscription price check failed. ${error.message}`)
   try {

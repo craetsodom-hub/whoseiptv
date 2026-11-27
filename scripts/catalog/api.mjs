@@ -1,5 +1,5 @@
 import { timingSafeEqual } from 'node:crypto'
-import { isDate, isId } from './model.mjs'
+import { isDate, isFresh, isId } from './model.mjs'
 import { isSupportedTerritory } from '../territories.mjs'
 
 class RequestError extends Error {
@@ -47,10 +47,6 @@ function queryFor(url, allowed) {
   return values
 }
 
-function isFresh(row, now) {
-  return Date.parse(row.verifiedAt) <= now && now < Date.parse(row.validUntil)
-}
-
 function isCurrentBroadcast(season, row, now) {
   return isFresh(season, now) && isFresh(row, now) &&
     isFresh(season.markets.find(market => market.country === row.country), now)
@@ -88,30 +84,34 @@ function coverageRow(index, season, country, now) {
   }
 }
 
-function fixtureResponse(index, fixture, country, now) {
+function fixtureResponse(index, fixture, country, now, exactOnly) {
   const { seasonId, participants, broadcasts, ...fields } = fixture
   const season = index.seasons.get(seasonId)
   const market = season.markets.find(row => row.country === country)
-  const relevant = broadcasts.filter(row => !country || row.country === country)
+  const relevant = broadcasts.filter(row => (!country || row.country === country) && (!exactOnly || row.type !== 'network'))
   const listings = relevant.filter(row => isCurrentBroadcast(season, row, now)).map(row => {
     const matching = [...index.offers.values()].filter(offer =>
       offer.country === row.country && offer.destinationIds.includes(row.destinationId) &&
       offer.competitionIds.includes(season.competitionId))
     const offers = matching.filter(offer => isFresh(offer, now)).map(({
-      id, country, provider, plan, currency, amountMinor, billingPeriod, terms, sourceUrl, verifiedAt, validUntil
-    }) => ({ id, country, provider, plan, currency, amountMinor, billingPeriod, terms, sourceUrl, verifiedAt, validUntil }))
+      id, country, provider, plan, currency, amountMinor, billingPeriod, terms, sourceUrl, entitlementSourceUrl, verifiedAt, validUntil
+    }) => ({ id, country, provider, plan, currency, amountMinor, billingPeriod, terms, sourceUrl, entitlementSourceUrl, verifiedAt, validUntil }))
     return { ...row, airtimeStatus: row.airsAt === null ? 'not_published' : 'published',
       priceStatus: offers.length ? 'verified' : matching.length ? 'stale' : 'unverified', offers }
   })
+  const noAiring = market?.noAiring?.find(row => row.fixtureId === fixture.id)
   let broadcastStatus = 'unverified'
   if (listings.length) broadcastStatus = 'listed'
   else if (country && !market) broadcastStatus = 'not_covered'
-  else if ((market && !isFresh(market, now)) || relevant.length) broadcastStatus = 'stale'
+  else if ((market && !isFresh(market, now)) || relevant.length || (noAiring && !isFresh(noAiring, now))) {
+    broadcastStatus = 'stale'
+  } else if (noAiring && isFresh(season, now)) broadcastStatus = 'not_scheduled'
   return { ...fields, seasonId, competitionId: season.competitionId,
     scheduleStatus: isFresh(season, now) ? 'current' : 'stale',
     participants: participants.map(participant => ({ role: participant.role,
       organization: index.organizations.get(participant.organizationId) })),
-    ...(country ? { country } : {}), broadcastStatus, broadcasts: listings }
+    ...(country ? { country } : {}), broadcastStatus, broadcasts: listings,
+    ...(broadcastStatus === 'not_scheduled' ? { noAiringEvidence: noAiring } : {}) }
 }
 
 function page(index, query, rows) {
@@ -125,16 +125,16 @@ function page(index, query, rows) {
     data: rows.slice(offset, offset + limit) }
 }
 
-function fixtures(index, url, now) {
+function fixtures(index, url, now, exactOnly) {
   const query = queryFor(url, listFilters)
   const seasonIds = new Set(scopeFor(index, query).map(season => season.id))
   const rows = index.orderedFixtures.filter(row => seasonIds.has(row.seasonId) &&
     (!query.organization || row.participants.some(participant => participant.organizationId === query.organization)) &&
     (!query.from || row.date >= query.from) && (!query.to || row.date <= query.to) &&
     (query.broadcastsOnly !== 'true' || row.broadcasts.some(broadcast => broadcast.country === query.country &&
-      isCurrentBroadcast(index.seasons.get(row.seasonId), broadcast, now))))
+      (!exactOnly || broadcast.type !== 'network') && isCurrentBroadcast(index.seasons.get(row.seasonId), broadcast, now))))
   const result = page(index, query, rows)
-  return { ...result, data: result.data.map(row => fixtureResponse(index, row, query.country, now)) }
+  return { ...result, data: result.data.map(row => fixtureResponse(index, row, query.country, now, exactOnly)) }
 }
 
 const routeFilters = {
@@ -143,14 +143,14 @@ const routeFilters = {
   '/v1/coverage': new Set(['sport', 'competition', 'season', 'leagueCountry', 'country', 'kind', 'offset', 'limit', 'generation'])
 }
 
-function route(index, url, now) {
-  if (url.pathname === '/v1/fixtures') return fixtures(index, url, now)
+function route(index, url, now, exactOnly) {
+  if (url.pathname === '/v1/fixtures') return fixtures(index, url, now, exactOnly)
   const fixtureId = /^\/v1\/fixtures\/([a-z0-9_-]+)$/.exec(url.pathname)?.[1]
   if (fixtureId) {
     const query = queryFor(url, new Set(['country']))
     const fixture = index.fixtures.get(fixtureId)
     if (!fixture) throw new RequestError(404, 'not_found', 'Fixture not found')
-    return { generatedAt: index.generatedAt, data: fixtureResponse(index, fixture, query.country, now) }
+    return { generatedAt: index.generatedAt, data: fixtureResponse(index, fixture, query.country, now, exactOnly) }
   }
   const allowed = routeFilters[url.pathname]
   if (!allowed) throw new RequestError(404, 'not_found', 'Route not found')
@@ -179,7 +179,7 @@ function equalSecret(supplied, expected) {
   return left.length === right.length && timingSafeEqual(left, right)
 }
 
-export function catalogHandler({ snapshot, clock = Date.now, proxySecret, token }) {
+export function catalogHandler({ snapshot, clock = Date.now, proxySecret, token, exactOnly = false }) {
   return async (request, response) => {
     let status = 200
     let body
@@ -196,7 +196,7 @@ export function catalogHandler({ snapshot, clock = Date.now, proxySecret, token 
         status = current ? 200 : 503
         body = { status: current ? 'ready' : 'stale', generatedAt: index.generatedAt }
       } else {
-        body = route(await snapshot(), url, clock())
+        body = route(await snapshot(), url, clock(), exactOnly)
       }
     } catch (error) {
       status = error instanceof RequestError ? error.status : 503

@@ -10,6 +10,10 @@ export function isDate(value) {
     new Date(value).toISOString().slice(0, 10) === value
 }
 
+export function isFresh(row, now) {
+  return Date.parse(row?.verifiedAt) <= now && now < Date.parse(row?.validUntil)
+}
+
 export function isId(value) {
   return typeof value === 'string' && idPattern.test(value)
 }
@@ -141,6 +145,17 @@ export function indexCatalog(catalog) {
       validateEvidence(market, generatedAt, `market ${market.country}`)
       checkInventory(market.expectedListedFixtureIds, markets.get(market.country) ?? new Set(),
         `listed fixture for ${season.id}/${market.country}`)
+      if (market.noAiring !== undefined) {
+        requireThat(Array.isArray(market.noAiring), `Invalid no-airing inventory on ${season.id}/${market.country}`)
+        const noAiringIds = new Set()
+        for (const proof of market.noAiring) {
+          requireThat(ids.has(proof?.fixtureId) && !noAiringIds.has(proof.fixtureId) &&
+            !markets.get(market.country)?.has(proof.fixtureId),
+          `Conflicting no-airing evidence on ${season.id}/${market.country}/${proof.fixtureId}`)
+          validateEvidence(proof, generatedAt, `no-airing on ${proof.fixtureId}`)
+          noAiringIds.add(proof.fixtureId)
+        }
+      }
       declared.add(market.country)
     }
     requireThat([...markets.keys()].every(country => declared.has(country)), `Undeclared broadcast market on ${season.id}`)
@@ -154,7 +169,8 @@ export function indexCatalog(catalog) {
       Array.isArray(offer.destinationIds) && offer.destinationIds.length && offer.destinationIds.every(isId) &&
       Array.isArray(offer.competitionIds) && offer.competitionIds.length &&
       offer.competitionIds.every(id => competitions.has(id)) &&
-      (!offer.terms || isText(offer.terms)), `Invalid offer ${offer.id}`)
+      (!offer.terms || isText(offer.terms)) &&
+      (offer.entitlementSourceUrl === undefined || isUrl(offer.entitlementSourceUrl)), `Invalid offer ${offer.id}`)
   }
 
   const orderedFixtures = [...fixtures.values()].sort((a, b) =>

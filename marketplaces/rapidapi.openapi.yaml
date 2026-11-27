@@ -198,7 +198,15 @@ components:
         participants:
           type: array
           items: { type: object }
-        broadcastStatus: { type: string, enum: [listed, unverified, stale, not_covered] }
+        broadcastStatus: { type: string, enum: [listed, unverified, stale, not_covered, not_scheduled] }
+        noAiringEvidence:
+          type: object
+          description: Source evidence for an explicit no-airing result in the selected country.
+          properties:
+            fixtureId: { type: string }
+            sourceUrl: { type: string, format: uri }
+            verifiedAt: { type: string, format: date-time }
+            validUntil: { type: string, format: date-time }
         broadcasts:
           type: array
           items: { $ref: '#/components/schemas/Broadcast' }
@@ -232,6 +240,7 @@ components:
           description: Published price in the named currency's minor units. GBP 1499 means £14.99.
         billingPeriod: { type: string, enum: [day, month, year, one-time, free] }
         terms: { type: string }
+        entitlementSourceUrl: { type: string, format: uri }
         sourceUrl: { type: string, format: uri }
         verifiedAt: { type: string, format: date-time }
         validUntil: { type: string, format: date-time }

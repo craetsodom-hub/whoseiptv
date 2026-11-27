@@ -12,6 +12,7 @@ export const formulaOne = {
   broadcasters: 'https://www.formula1.com/en/information/f1-broadcasters.1eqG3L8AlJATj7icjBtrfN'
 }
 export const sportsPricingUrl = 'https://www.nowtv.com/plans/new/sports'
+export const sportsEntitlementsUrl = 'https://www.nowtv.com/gb/help/article/sports-memberships'
 
 const MONTHS = 'january february march april may june july august september october november december'.split(' ')
 const NAME_ALIASES = {
@@ -200,6 +201,13 @@ export function parseFormulaOneSeason(calendarHtml, racePages, broadcastersHtml,
   const competition = { id: 'formula-1', name: 'Formula 1', kind: 'series', sport: 'formula1',
     leagueCountry: null, organizerId: organization.id }
   const seasonId = 'formula-1-2026'
+  const icon = [...calendarHtml.matchAll(/<link\b[^>]+>/gi)]
+    .find(([tag]) => /\brel=["']icon["']/i.test(tag) && /\btype=["']image\/svg\+xml["']/i.test(tag))
+    ?.[0].match(/\bhref=["'](\/assets\/racing\/_next\/static\/media\/f1-logo\.[a-f0-9]+\.svg)["']/i)?.[1]
+  if (icon) {
+    competition.logo = { url: new URL(icon, formulaOne.calendar).href, sourceUrl: formulaOne.calendar }
+    organization.logo = competition.logo
+  }
   const urls = formulaOneRaceUrls(calendarHtml)
   if (urls.length !== 23) throw new Error(`Expected 23 non-testing calendar entries, received ${urls.length}`)
   const fixtures = urls.flatMap(url => {
@@ -245,7 +253,7 @@ function productOffers(value, ids, found) {
   for (const child of Object.values(value)) productOffers(child, ids, found)
 }
 
-export function parseSportsPrices(html, evidence) {
+export function parseSportsPrices(html, evidence, entitlementsHtml = '') {
   const source = embeddedJson(html, /id=["']__NEXT_DATA__["']/i)[0]
   const products = new Map([
     ['SPORTS_PASS_DAY', { id: 'now-all-sports-day-gb', plan: 'Sports Day Membership', billingPeriod: 'day',
@@ -265,12 +273,18 @@ export function parseSportsPrices(html, evidence) {
       !/What do I get with a NOW All Sky Sports Membership/i.test(html)) {
     throw new Error('Published subscription coverage could not be verified')
   }
+  const entitlements = text(entitlementsHtml)
+  const includesPlus = /All 12 Sky Sports channels:[^.]+\bPlus\b/i.test(entitlements) &&
+    /Day Membership Everything you get with All Sky Sports Membership/i.test(entitlements)
+  const destinations = ['sky-sports', 'sky-sports-main-event', 'sky-sports-premier-league', 'sky-sports-football', 'sky-sports-cricket']
   return [...products].map(([productId, product]) => {
     const prices = found.get(productId)
     const parts = prices?.size === 1 ? [...prices][0].match(/^£(\d{1,4})\.(\d{2})$/) : null
     if (!parts) throw new Error(`Missing or conflicting UK price for ${productId}`)
     return { ...product, provider: 'NOW', country: 'GB', currency: 'GBP',
-      amountMinor: Number(parts[1]) * 100 + Number(parts[2]), destinationIds: ['sky-sports', 'sky-sports-main-event', 'sky-sports-premier-league', 'sky-sports-football', 'sky-sports-cricket'],
+      amountMinor: Number(parts[1]) * 100 + Number(parts[2]),
+      destinationIds: includesPlus ? [...destinations, 'sky-sports-plus'] : destinations,
+      ...(includesPlus ? { entitlementSourceUrl: sportsEntitlementsUrl } : {}),
       competitionIds: ['premier-league'], sourceUrl: sportsPricingUrl, ...evidence }
   })
 }
