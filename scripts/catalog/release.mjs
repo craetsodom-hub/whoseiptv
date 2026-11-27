@@ -100,7 +100,7 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
           if (!airing.airsAt) addIssue('missing_airtime', destination)
           if (airing.kind === 'unspecified') addIssue('unknown_airing_kind', destination)
           const matching = offers.get([competition.id, market.country, airing.destinationId].join('/')) ?? []
-          const prices = matching.filter(row => isFresh(row, now))
+          const prices = matching.filter(row => isFresh(row, now) && (!row.fixtureIds || row.fixtureIds.includes(fixture.id)))
           if (prices.length === 0) addIssue('missing_current_price', destination)
           else {
             counts.pricedAirings++

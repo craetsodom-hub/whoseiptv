@@ -1,6 +1,6 @@
 # Sports season catalog
 
-The catalog includes fixtures for the 2026/27 Premier League season and published sessions for the 2026 Formula 1 season. It carries the Premier League club roster and badges, competition and organizer logos, UK broadcast announcements and published channel airtimes, and UK day-pass and monthly streaming offers. Formula 1 country coverage reports season rights holders when available. Fixture-level broadcasts remain unverified until there is an airing for the fixture and market.
+The catalog includes fixtures for the 2026/27 Premier League season and published sessions for the 2026 Formula 1 season. It carries the Premier League club roster and badges, competition and organizer logos, UK broadcast announcements and published channel airtimes, and UK day-pass and monthly streaming offers. The football calendar applies published fixture amendments and verifies historical kickoffs against completed results. The racing catalog includes verified UK and US session airings where the broadcaster has published an exact listing. It retains season rights information for other markets. US pricing includes the standard monthly plan and free live practice for fixtures with a verified US airing.
 
 ## Build and serve
 

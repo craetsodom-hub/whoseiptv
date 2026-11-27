@@ -171,6 +171,15 @@ export function indexCatalog(catalog) {
       offer.competitionIds.every(id => competitions.has(id)) &&
       (!offer.terms || isText(offer.terms)) &&
       (offer.entitlementSourceUrl === undefined || isUrl(offer.entitlementSourceUrl)), `Invalid offer ${offer.id}`)
+    if (offer.fixtureIds !== undefined) {
+      requireThat(Array.isArray(offer.fixtureIds) && offer.fixtureIds.length > 0 &&
+        new Set(offer.fixtureIds).size === offer.fixtureIds.length && offer.fixtureIds.every(id => {
+          const fixture = fixtures.get(id)
+          return fixture && offer.competitionIds.includes(seasons.get(fixture.seasonId).competitionId) &&
+            fixture.broadcasts.some(airing => airing.country === offer.country &&
+              offer.destinationIds.includes(airing.destinationId))
+        }), `Invalid fixture scope for offer ${offer.id}`)
+    }
   }
 
   const orderedFixtures = [...fixtures.values()].sort((a, b) =>

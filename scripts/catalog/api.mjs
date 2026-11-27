@@ -92,7 +92,7 @@ function fixtureResponse(index, fixture, country, now, exactOnly) {
   const listings = relevant.filter(row => isCurrentBroadcast(season, row, now)).map(row => {
     const matching = [...index.offers.values()].filter(offer =>
       offer.country === row.country && offer.destinationIds.includes(row.destinationId) &&
-      offer.competitionIds.includes(season.competitionId))
+      offer.competitionIds.includes(season.competitionId) && (!offer.fixtureIds || offer.fixtureIds.includes(fixture.id)))
     const offers = matching.filter(offer => isFresh(offer, now)).map(({
       id, country, provider, plan, currency, amountMinor, billingPeriod, terms, sourceUrl, entitlementSourceUrl, verifiedAt, validUntil
     }) => ({ id, country, provider, plan, currency, amountMinor, billingPeriod, terms, sourceUrl, entitlementSourceUrl, verifiedAt, validUntil }))

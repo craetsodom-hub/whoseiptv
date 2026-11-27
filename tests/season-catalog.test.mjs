@@ -5,7 +5,10 @@ import { catalogHandler } from '../scripts/catalog/api.mjs'
 import { isImageAsset } from '../scripts/catalog/logo-assets.mjs'
 import { auditRelease } from '../scripts/catalog/release.mjs'
 import { indexCatalog } from '../scripts/catalog/model.mjs'
-import { parseSportsPrices, resolvePremierLeagueConflict } from '../scripts/catalog/sources.mjs'
+import {
+  addFormulaOneUkListings, addFormulaOneUsListings, applyCompletedPremierLeagueResults,
+  applyPremierLeagueAmendments, parseFormulaOneUsPrices, parseSportsPrices, resolvePremierLeagueConflict
+} from '../scripts/catalog/sources.mjs'
 
 const evidence = {
   sourceUrl: 'https://example.org/schedule',
@@ -191,4 +194,71 @@ test('logo asset validation requires an image response and an intact image envel
   assert(!isImageAsset(Buffer.from('<html>404</html>'), 'image/svg+xml'))
   assert(!isImageAsset(Buffer.from('<svg>'), 'image/svg+xml'))
   assert(!isImageAsset(Buffer.from('<svg></svg>'), 'text/html'))
+})
+
+test('a published kickoff amendment replaces the old time and clears mismatched listings', () => {
+  const original = structuredClone(fixture)
+  const batch = { fixtures: [original] }
+  applyPremierLeagueAmendments(batch, [{ ...original, date: '2027-02-22',
+    startsAt: '2027-02-22T20:00:00.000Z', broadcasts: [] }])
+  assert.equal(original.startsAt, '2027-02-22T20:00:00.000Z')
+  assert.equal(original.date, '2027-02-22')
+  assert.deepEqual(original.broadcasts, [])
+  assert.throws(() => applyPremierLeagueAmendments(batch, [{ ...original, id: 'unknown' }]), /outside the season/)
+})
+
+test('a completed result confirms a provisional kickoff only for the same season, teams and local date', () => {
+  const kickoff = '2026-08-23T14:00:00Z'
+  const entry = { season: { year: 2026 }, competitions: [{ date: kickoff, timeValid: true,
+    status: { type: { state: 'post', completed: true } },
+    competitors: ['home', 'away'].map(role => ({ homeAway: role, team: { displayName: role } })) }] }
+  const organizations = ['home', 'away'].map(id => ({ id, kind: 'club', name: id }))
+  const participants = organizations.map(team => ({ organizationId: team.id, role: team.id }))
+  const batch = {
+    organizations, fixtures: [
+      { date: '2026-08-23', startStatus: 'provisional', participants },
+      { date: '2026-08-24', startStatus: 'provisional', participants }
+    ]
+  }
+  const results = new Map([['202608', { leagues: [{ slug: 'eng.1' }], events: [entry] }]])
+  applyCompletedPremierLeagueResults(batch, results, Date.parse('2026-11-27'))
+  assert.equal(batch.fixtures[0].startsAt, '2026-08-23T14:00:00.000Z')
+  assert.equal(batch.fixtures[1].startStatus, 'provisional')
+})
+
+test('UK racing programme matches the named race and session at its independently published time', () => {
+  const race = { id: 'qatar-qualifying', title: 'Qualifying - Qatar Grand Prix',
+    startsAt: '2026-11-28T18:00:00.000Z', broadcasts: [] }
+  const weekend = { seasons: [{ markets: [] }], fixtures: [race] }
+  const html = '<h3>Sat 28th November</h3><div class="event-group"><strong>Qatar Airways Qatar GP - Qualifying 1</strong>' +
+    '<p class="event-detail">Sky Sports F1 HD (18:00)</p></div>'
+  addFormulaOneUkListings(weekend, [[evidence.sourceUrl, html]], evidence)
+  assert.equal(race.broadcasts[0].country, 'GB')
+  assert.equal(race.broadcasts[0].airsAt, race.startsAt)
+  assert.deepEqual(weekend.seasons[0].markets[0].expectedListedFixtureIds, [race.id])
+})
+
+test('US racing airtime uses the live national feed and the local price is free only for practice', () => {
+  const startsAt = '2026-11-29T16:00:00.000Z'
+  const airsAt = '2026-11-29T14:50:00.000Z'
+  const race = { id: 'qatar-race', title: 'Race - Qatar Grand Prix', startsAt, broadcasts: [] }
+  const weekend = { seasons: [{ markets: [] }], fixtures: [race] }
+  const eventTime = { gameKickOffStartTime: Date.parse(startsAt),
+    playerInfoDisplayTime: { startTime: Date.parse(airsAt) }, liveBadgeTime: { startTime: Date.parse(airsAt) } }
+  const channel = { leagueName: 'Formula 1', feedName: 'Main Broadcast', airingType: 'Live', shortTitle: 'Qatar: Race',
+    eventTime, url: 'https://tv.apple.com/us/sporting-event/qatar-race/umc.cse.abc?ignored=1',
+    playables: [{ externalServiceId: 'com.apple.f1.svod.ebs.US', externalId: 'F1_123_NATIONAL', eventTime }] }
+  const html = value => `<script id="serialized-server-data">${JSON.stringify(value)}</script>`
+  addFormulaOneUsListings(weekend, html({ ...channel, airingType: 'OnDemand' }), evidence)
+  assert.equal(race.broadcasts.length, 0)
+  addFormulaOneUsListings(weekend, html(channel), evidence)
+  assert.equal(race.broadcasts[0].airsAt, airsAt)
+  assert.equal(race.broadcasts[0].country, 'US')
+  const practice = { ...race, id: 'qatar-practice', title: 'Practice 1 - Qatar Grand Prix' }
+  const subscription = 'every Free Practice, Qualifying session, Sprint, and Grand Prix available to Apple TV subscribers in the U.S.'
+  const plans = parseFormulaOneUsPrices('A monthly subscription is just $14.99 per month.',
+    subscription + ' Every practice is available without a subscription.', evidence, [race, practice])
+  assert.equal(plans[0].amountMinor, 1499)
+  assert.equal(plans[1].billingPeriod, 'free')
+  assert.deepEqual(plans[1].fixtureIds, [practice.id])
 })
