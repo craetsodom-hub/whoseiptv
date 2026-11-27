@@ -1,0 +1,32 @@
+services:
+  catalog:
+    build: .
+    init: true
+    restart: unless-stopped
+    environment:
+      CATALOG_TOKEN: ${CATALOG_TOKEN:-}
+      RAPIDAPI_PROXY_SECRET: ${RAPIDAPI_PROXY_SECRET:-}
+      CATALOG_REFRESH_MINUTES: ${CATALOG_REFRESH_MINUTES:-180}
+    volumes:
+      - catalog_data:/var/lib/whoseiptv
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8780/livez').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  edge:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    environment:
+      CATALOG_DOMAIN: ${CATALOG_DOMAIN:?Set the API hostname in CATALOG_DOMAIN}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - tls_data:/data
+
+volumes:
+  catalog_data:
+  tls_data:

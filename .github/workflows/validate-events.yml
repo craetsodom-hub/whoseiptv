@@ -8,6 +8,11 @@ on:
       - "tests/**"
       - "package.json"
       - "package-lock.json"
+      - "Dockerfile"
+      - ".dockerignore"
+      - "compose.yaml"
+      - "deploy/**"
+      - "marketplaces/**"
       - ".github/workflows/**"
 
 permissions:
@@ -34,6 +39,24 @@ jobs:
 
       - name: Test feed rules
         run: npm test
+
+      - name: Verify season API container
+        env:
+          CATALOG_DOMAIN: catalog.example.test
+        run: |
+          docker compose config --quiet
+          docker build --tag whoseiptv-catalog:ci .
+          container=$(docker run --detach --env CATALOG_REFRESH_MINUTES=0 --env CATALOG_TOKEN=ci-probe whoseiptv-catalog:ci)
+          trap 'docker rm --force --volumes "$container" >/dev/null' EXIT
+          for attempt in {1..15}; do
+            if docker exec "$container" curl -fsS http://127.0.0.1:8780/livez >/dev/null; then
+              break
+            fi
+            sleep 1
+          done
+          docker exec "$container" curl -fsS http://127.0.0.1:8780/livez
+          test "$(docker exec "$container" curl -sS -o /dev/null -w '%{http_code}' http://127.0.0.1:8780/v1/fixtures)" = 401
+          test "$(docker exec "$container" curl -sS -o /dev/null -w '%{http_code}' -H 'Authorization: Bearer ci-probe' http://127.0.0.1:8780/healthz)" = 503
 
       - name: Validate fixed-epoch feed determinism
         shell: bash
