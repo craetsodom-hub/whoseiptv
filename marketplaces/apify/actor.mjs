@@ -1,17 +1,32 @@
 import { Actor } from 'apify'
 
+const competitionFilters = ['sport', 'competition', 'season', 'kind', 'leagueCountry']
+const fixtureFilters = [...competitionFilters, 'country', 'organization', 'from', 'to', 'broadcastsOnly']
+const filtersByDataset = new Map([
+  ['fixtures', fixtureFilters],
+  ['competitions', competitionFilters],
+  ['organizations', ['country', 'organization', 'organizationKind']]
+])
+
 await Actor.main(async () => {
   const input = await Actor.getInput() ?? {}
   const base = process.env.CATALOG_API_URL
   if (!base) throw new Error('CATALOG_API_URL is required')
-  const url = new URL(`${base.replace(/\/+$/, '')}/v1/fixtures`)
+  const datasetName = input.dataset ?? 'fixtures'
+  const filters = filtersByDataset.get(datasetName)
+  if (!filters) throw new Error('Choose fixtures, competitions or organizations as the dataset')
+  const url = new URL(`${base.replace(/\/+$/, '')}/v1/${datasetName}`)
   if (url.protocol !== 'https:' && !['localhost', '127.0.0.1'].includes(url.hostname)) {
     throw new Error('Use an HTTPS catalog URL')
   }
-  for (const key of ['sport', 'competition', 'season', 'kind', 'leagueCountry', 'country', 'organization',
-    'from', 'to', 'broadcastsOnly']) {
-    if (input[key] !== undefined && input[key] !== '' && (key !== 'broadcastsOnly' || input[key])) url.searchParams.set(key, input[key])
+  for (const key of [...fixtureFilters, 'organizationKind']) {
+    const value = input[key]
+    if (value == null || value === '' || (key === 'broadcastsOnly' && value === false)) continue
+    if (!filters.includes(key)) throw new Error(`The ${datasetName} dataset does not support the ${key} filter`)
+    url.searchParams.set(key === 'organizationKind' ? 'kind' : key, value)
   }
+  const maxRecords = input.maxRecords ?? 10000
+  if (!Number.isInteger(maxRecords) || maxRecords < 1 || maxRecords > 100000) throw new Error('Choose a maxRecords value from 1 to 100000')
   const headers = { Accept: 'application/json' }
   if (process.env.CATALOG_TOKEN) headers.Authorization = `Bearer ${process.env.CATALOG_TOKEN}`
   if (process.env.RAPIDAPI_KEY) headers['X-RapidAPI-Key'] = process.env.RAPIDAPI_KEY
@@ -19,7 +34,7 @@ await Actor.main(async () => {
   const rows = []
   url.searchParams.set('limit', '200')
   do {
-    const response = await fetch(url, { headers, signal: AbortSignal.timeout(30_000) })
+    const response = await fetch(url, { headers, redirect: 'error', signal: AbortSignal.timeout(30_000) })
     if (!response.ok) throw new Error(`Catalog request failed with status ${response.status}`)
     const { data, generatedAt, nextOffset, total } = await response.json()
     if (!Array.isArray(data) || typeof generatedAt !== 'string' ||
@@ -28,8 +43,10 @@ await Actor.main(async () => {
         (!data.length && nextOffset !== null)) {
       throw new Error('Unexpected catalog response')
     }
-    if (total > (input.maxRecords ?? 10000)) throw new Error('Export exceeds maxRecords. Narrow the filters or raise maxRecords.')
-    if (data.some(row => row.scheduleStatus !== 'current')) throw new Error('A selected season is stale')
+    if (total > maxRecords) throw new Error('Export exceeds maxRecords. Narrow the filters or raise maxRecords.')
+    if (datasetName === 'fixtures' && data.some(row => row.scheduleStatus !== 'current')) {
+      throw new Error('A selected season is stale')
+    }
     rows.push(...data)
     if (nextOffset === null) {
       if (rows.length !== total) throw new Error('The export count changed during pagination')
@@ -55,6 +72,6 @@ await Actor.main(async () => {
     throw new Error('The platform saved only part of the paid export.')
   }
   await Actor.setValue('EXPORT_SUMMARY', {
-    records: rows.length, country: input.country ?? null, season: input.season ?? null
+    dataset: datasetName, records: rows.length, country: input.country ?? null, season: input.season ?? null
   })
 })

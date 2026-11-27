@@ -18,7 +18,7 @@ export function isId(value) {
   return typeof value === 'string' && idPattern.test(value)
 }
 
-function isTimestamp(value) {
+export function isTimestamp(value) {
   return typeof value === 'string' && timestampPattern.test(value) && isDate(value.slice(0, 10)) &&
     Number.isFinite(Date.parse(value)) &&
     new Date(value).toISOString() === (value.includes('.') ? value : value.replace('Z', '.000Z'))

@@ -67,7 +67,7 @@ Use the log outcome and authenticated readiness check for deployment alerts. Doc
 
 For RapidAPI, import [the OpenAPI file](../marketplaces/rapidapi.openapi.yaml). Host the catalog with `CATALOG_HOST=0.0.0.0` and set `RAPIDAPI_PROXY_SECRET` to the proxy secret. Configure the base URL to the hosted service. A direct bearer token can be enabled with `CATALOG_TOKEN`.
 
-For Apify, build from [the Actor directory](../marketplaces/apify). Set `CATALOG_API_URL` and either `CATALOG_TOKEN` or both `RAPIDAPI_KEY` and `RAPIDAPI_HOST` as environment secrets. A run exports filtered fixture records to its dataset. It checks the snapshot generation while paging and fails if it changes, if a selected schedule is stale, or if the result exceeds the requested size limit.
+For Apify, build from [the Actor directory](../marketplaces/apify). Set `CATALOG_API_URL` and either `CATALOG_TOKEN` or both `RAPIDAPI_KEY` and `RAPIDAPI_HOST` as environment secrets. Choose fixtures for schedules, broadcast prices and associated logos, competitions for league and organizer records, or organizations for clubs and institutions. A run checks the snapshot generation while paging and fails if it changes, if a fixture schedule is stale, or if the result exceeds the requested size limit.
 
 ### Customer keys and pricing
 
@@ -83,4 +83,10 @@ A starting RapidAPI price test is a freemium listing with three monthly request 
 
 Set a hard limit on the Requests object for each plan. Start with the same verified data fields on each plan. Test the unit costs and both free and paid subscriptions before enabling public sales.
 
-Apify customers use their own Apify account and token. In the Actor's Publishing tab, select pay per event and set `apify-default-dataset-item` as the primary event. One row is one fixture export. Test $0.004 per row ($4 per 1,000). The Actor checks the customer's spending limit against the entire result before writing rows. A sample export can show the fields available before customers run the paid Actor.
+Apify customers use their own Apify account and token. In the Actor's Publishing tab, select pay per event and set `apify-default-dataset-item` as the primary event. Test $0.004 per exported record ($4 per 1,000). The Actor checks the customer's spending limit against the entire result before writing rows. A sample export can show the fields available before customers run the paid Actor.
+
+### Verify the live setup
+
+Set `CATALOG_PUBLIC_URL` to the deployed HTTPS origin and use the deployment's bearer secret as `CATALOG_TOKEN`. Set `CATALOG_TEST_FIXTURE_ID` and `CATALOG_TEST_COUNTRY` to a fixture and market with a confirmed start, exact airing and current price. Run `npm run catalog:verify-launch -- --origin` to check readiness, authentication and that listing.
+
+After configuring private test subscriptions and the Actor, set `RAPIDAPI_HOST`, `RAPIDAPI_FREE_KEY`, `RAPIDAPI_PRO_KEY`, `RAPIDAPI_ULTRA_KEY`, `APIFY_ACTOR_ID` and `APIFY_TOKEN`. Set the maximum spend for the test Actor run in `APIFY_TEST_MAX_USD`. Run `npm run catalog:verify-launch` to compare the fixture returned by each plan with the hosted API and to run a capped Apify export. If you changed the plan limits, set `RAPIDAPI_FREE_LIMIT`, `RAPIDAPI_PRO_LIMIT` and `RAPIDAPI_ULTRA_LIMIT` to the configured quotas. Keep keys and tokens in the environment where you run the check.

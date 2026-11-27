@@ -84,6 +84,10 @@ function coverageRow(index, season, country, now) {
   }
 }
 
+function competitionWithOrganizer(index, competition) {
+  return { ...competition, organizer: index.organizations.get(competition.organizerId) }
+}
+
 function fixtureResponse(index, fixture, country, now, exactOnly) {
   const { seasonId, participants, broadcasts, ...fields } = fixture
   const season = index.seasons.get(seasonId)
@@ -107,6 +111,7 @@ function fixtureResponse(index, fixture, country, now, exactOnly) {
     broadcastStatus = 'stale'
   } else if (noAiring && isFresh(season, now)) broadcastStatus = 'not_scheduled'
   return { ...fields, seasonId, competitionId: season.competitionId,
+    competition: competitionWithOrganizer(index, index.competitions.get(season.competitionId)),
     scheduleStatus: isFresh(season, now) ? 'current' : 'stale',
     participants: participants.map(participant => ({ role: participant.role,
       organization: index.organizations.get(participant.organizationId) })),
@@ -162,7 +167,7 @@ function route(index, url, now, exactOnly) {
   if (url.pathname === '/v1/competitions') {
     const ids = new Set(seasons.map(season => season.competitionId))
     const rows = [...index.competitions.values()].filter(row => ids.has(row.id))
-      .map(row => ({ ...row, organizer: index.organizations.get(row.organizerId),
+      .map(row => ({ ...competitionWithOrganizer(index, row),
         seasonIds: seasons.filter(season => season.competitionId === row.id).map(season => season.id) }))
     return page(index, query, rows)
   }

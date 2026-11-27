@@ -183,11 +183,13 @@ components:
           items: { type: object }
     Fixture:
       type: object
-      required: [id, title, competitionId, seasonId, date, startsAt, startStatus, scheduleStatus, sourceUrl, participants, broadcastStatus, broadcasts]
+      required: [id, title, competitionId, competition, seasonId, date, startsAt, startStatus, scheduleStatus, sourceUrl, participants, broadcastStatus, broadcasts]
       properties:
         id: { type: string }
         title: { type: string }
         competitionId: { type: string }
+        competition:
+          $ref: '#/components/schemas/Competition'
         seasonId: { type: string }
         date: { type: string, format: date }
         startsAt: { type: string, format: date-time, nullable: true }
@@ -197,7 +199,11 @@ components:
         country: { type: string }
         participants:
           type: array
-          items: { type: object }
+          items:
+            type: object
+            properties:
+              role: { type: string }
+              organization: { $ref: '#/components/schemas/Organization' }
         broadcastStatus: { type: string, enum: [listed, unverified, stale, not_covered, not_scheduled] }
         noAiringEvidence:
           type: object
@@ -210,6 +216,30 @@ components:
         broadcasts:
           type: array
           items: { $ref: '#/components/schemas/Broadcast' }
+    Logo:
+      type: object
+      properties:
+        url: { type: string, format: uri }
+        sourceUrl: { type: string, format: uri }
+    Organization:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        kind: { type: string, enum: [club, team, federation, organizer, institution] }
+        country: { type: string }
+        logo: { $ref: '#/components/schemas/Logo' }
+    Competition:
+      type: object
+      properties:
+        id: { type: string }
+        name: { type: string }
+        sport: { type: string }
+        kind: { type: string, enum: [league, cup, series, tournament] }
+        leagueCountry: { type: string }
+        organizerId: { type: string }
+        logo: { $ref: '#/components/schemas/Logo' }
+        organizer: { $ref: '#/components/schemas/Organization' }
     Broadcast:
       type: object
       properties:

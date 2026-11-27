@@ -9,6 +9,7 @@ import { isImageAsset } from '../scripts/catalog/logo-assets.mjs'
 import { refreshCatalog } from '../scripts/catalog/refresh.mjs'
 import { auditRelease } from '../scripts/catalog/release.mjs'
 import { indexCatalog } from '../scripts/catalog/model.mjs'
+import { verifyMarketplaceLaunch } from '../scripts/verify-marketplace-launch.mjs'
 import {
   addFormulaOneUkListings, addFormulaOneUsListings, applyCompletedPremierLeagueResults,
   applyPremierLeagueAmendments, parseFormulaOneUsPrices, parseSportsPrices, resolvePremierLeagueConflict
@@ -87,6 +88,8 @@ test('filters by distinct league and broadcast countries and suppresses expired 
   assert.equal(result.nextOffset, 1)
   const [listed] = result.data
   assert.equal(listed.participants[0].organization.logo.url, logo.url)
+  assert.equal(listed.competition.logo.url, logo.url)
+  assert.equal(listed.competition.organizer.logo.url, logo.url)
   assert.equal(listed.broadcasts.length, 1)
   assert.equal(listed.broadcasts[0].offers[0].amountMinor, 2499)
   assert.notEqual(listed.startsAt, listed.broadcasts[0].airsAt)
@@ -107,6 +110,77 @@ test('filters by distinct league and broadcast countries and suppresses expired 
   assert.equal(staleSchedule.data.scheduleStatus, 'stale')
   assert.equal(staleSchedule.data.broadcastStatus, 'stale')
   assert.deepEqual(staleSchedule.data.broadcasts, [])
+})
+
+test('checks each RapidAPI tier and caps the test Apify export', async () => {
+  const env = {
+    CATALOG_PUBLIC_URL: 'https://catalog.example.test', CATALOG_TOKEN: 'origin-test',
+    CATALOG_TEST_FIXTURE_ID: 'first', CATALOG_TEST_COUNTRY: 'GB', RAPIDAPI_HOST: 'example.p.rapidapi.com',
+    RAPIDAPI_FREE_KEY: 'free-test', RAPIDAPI_PRO_KEY: 'pro-test', RAPIDAPI_ULTRA_KEY: 'ultra-test',
+    APIFY_ACTOR_ID: 'owner~actor', APIFY_TOKEN: 'actor-test', APIFY_TEST_MAX_USD: '0.25'
+  }
+  const sample = {
+    ...fixture, competitionId: 'league', country: 'GB', scheduleStatus: 'current', broadcastStatus: 'listed',
+    competition: { ...catalog().competitions[0], organizer: catalog().organizations[1] },
+    participants: [{ role: 'home', organization: { id: 'club', name: 'Home', logo } }],
+    broadcasts: [{
+      ...fixture.broadcasts[0], airtimeStatus: 'published', priceStatus: 'verified', offers: [catalog().offers[0]]
+    }]
+  }
+  const checks = []
+  const request = async (endpoint, options) => {
+    const url = new URL(endpoint)
+    const headers = new Headers(options.headers)
+    assert.equal(options.redirect, 'error')
+    if (url.hostname === 'catalog.example.test') {
+      if (url.pathname === '/healthz') {
+        checks.push('readiness')
+        assert.equal(headers.get('Authorization'), 'Bearer origin-test')
+        return Response.json({ status: 'ready' })
+      }
+      assert.equal(url.pathname + url.search, '/v1/fixtures/first?country=GB')
+      if (!headers.has('Authorization')) {
+        checks.push('anonymous')
+        return Response.json({}, { status: 401 })
+      }
+      assert.equal(headers.get('Authorization'), 'Bearer origin-test')
+      checks.push('origin fixture')
+      return Response.json({ data: sample })
+    }
+    if (url.hostname === env.RAPIDAPI_HOST) {
+      const key = headers.get('X-RapidAPI-Key')
+      const quotas = { 'free-test': 100, 'pro-test': 10000, 'ultra-test': 50000 }
+      assert.equal(url.pathname + url.search, '/v1/fixtures/first?country=GB')
+      assert.equal(headers.get('X-RapidAPI-Host'), env.RAPIDAPI_HOST)
+      assert.equal(headers.has('Authorization'), false)
+      checks.push(key)
+      return Response.json({ data: sample }, { headers: { 'x-ratelimit-requests-limit': quotas[key] } })
+    }
+    assert.equal(url.origin, 'https://api.apify.com')
+    assert.equal(url.pathname, '/v2/actors/owner~actor/run-sync-get-dataset-items')
+    assert.equal(url.searchParams.get('maxTotalChargeUsd'), '0.25')
+    assert.equal(options.method, 'POST')
+    assert.equal(headers.get('Authorization'), 'Bearer actor-test')
+    assert.deepEqual(JSON.parse(options.body), {
+      country: 'GB', season: 'league-2026', from: fixture.date, to: fixture.date, broadcastsOnly: true, maxRecords: 30
+    })
+    checks.push('export')
+    return Response.json([sample])
+  }
+
+  assert.deepEqual(await verifyMarketplaceLaunch(env, request), {
+    origin: 'passed', rapidapi: ['Basic', 'Pro', 'Ultra'], apify: 'passed', fixtureId: 'first', country: 'GB'
+  })
+  assert.deepEqual(checks, ['readiness', 'anonymous', 'origin fixture', 'free-test', 'pro-test', 'ultra-test', 'export'])
+
+  checks.length = 0
+  await assert.rejects(verifyMarketplaceLaunch({ ...env, RAPIDAPI_PRO_LIMIT: '999' }, request), /RapidAPI Pro.*quota/)
+  assert.deepEqual(checks, ['readiness', 'anonymous', 'origin fixture', 'free-test', 'pro-test'])
+
+  await assert.rejects(verifyMarketplaceLaunch(env, async (endpoint) => {
+    assert.equal(endpoint, 'https://catalog.example.test/healthz')
+    return Response.json({}, { status: 503 })
+  }), /Hosted API readiness returned HTTP 503/)
 })
 
 test('uses a matching dated source to resolve a duplicated fixture', () => {
