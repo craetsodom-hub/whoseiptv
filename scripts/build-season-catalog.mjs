@@ -6,6 +6,9 @@ import { randomUUID } from 'node:crypto'
 import { SKY_PREMIER_LEAGUE_URL } from './broadcast/sky-fixtures.mjs'
 import { indexCatalog } from './catalog/model.mjs'
 import {
+  ashes, australianOpen, nba, parseAshes, parseAustralianOpen, parseNbaSeason, parseSixNations, sixNations
+} from './catalog/season-expansion.mjs'
+import {
   addFormulaOneUkListings, addFormulaOneUsListings, addPremierLeagueTelevision,
   applyCompletedPremierLeagueResults, applyPremierLeagueAmendments, applyPremierLeagueFinalDay, formulaOne, formulaOneRaceUrls, parseFormulaOneSeason, parseFormulaOneUsPrices, parsePremierLeague, parseSportsPrices,
   premierLeague, premierLeagueConflicts, resolvePremierLeagueConflict, sportsEntitlementsUrl, sportsPricingUrl
@@ -15,13 +18,14 @@ const exec = promisify(execFile)
 const MAX_BYTES = 8 * 1024 * 1024
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
 
-async function fetchText(url, maxBytes = MAX_BYTES) {
+async function fetchText(url, maxBytes = MAX_BYTES, headers = {}) {
   let response
   try {
-    response = await fetch(url, { signal: AbortSignal.timeout(20_000) })
+    response = await fetch(url, { headers, signal: AbortSignal.timeout(20_000) })
   } catch {
+    const requestHeaders = Object.entries(headers).flatMap(([name, value]) => ['--header', `${name}: ${value}`])
     const { stdout } = await exec('curl', ['--fail', '--location', '--silent', '--show-error', '--compressed',
-      '--max-time', '30', '--max-filesize', String(maxBytes), url], { maxBuffer: maxBytes })
+      '--max-time', '30', '--max-filesize', String(maxBytes), ...requestHeaders, url], { maxBuffer: maxBytes })
     if (!stdout) throw new Error(`Empty response from ${url}`)
     return stdout
   }
@@ -128,6 +132,49 @@ async function loadFormulaOne() {
   return season
 }
 
+async function optionalPage(url) {
+  try {
+    return await fetchText(url)
+  } catch (error) {
+    console.error(`Supplemental data unavailable for ${url}. ${error.message}`)
+    return ''
+  }
+}
+
+async function loadAdditionalSeasons() {
+  const sources = [
+    ['NBA', async () => {
+      const [schedule, announcement] = await Promise.all([
+        fetchText(nba.schedule, MAX_BYTES, { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.nba.com/' }),
+        fetchText(nba.announcement)
+      ])
+      return [parseNbaSeason(JSON.parse(schedule), announcement, verificationTimes())]
+    }],
+    ...Object.values(sixNations).map(edition => [edition.name, async () => {
+      const [fixtures, rights] = await Promise.all([fetchText(edition.fixtures), optionalPage(edition.rights)])
+      return [parseSixNations(edition, fixtures, rights, verificationTimes())]
+    }]),
+    ['The Ashes', async () => {
+      const [fixtures, broadcasts, organizer] = await Promise.all([
+        fetchText(ashes.fixtures), optionalPage(ashes.broadcasts), optionalPage(ashes.australia)
+      ])
+      return parseAshes(fixtures, broadcasts, organizer, verificationTimes())
+    }],
+    ['Australian Open', async () => {
+      const [dates, organizer, rights] = await Promise.all([
+        fetchText(australianOpen.dates), fetchText(australianOpen.organizer), optionalPage(australianOpen.rights)
+      ])
+      return [parseAustralianOpen(dates, organizer, rights, verificationTimes())]
+    }]
+  ]
+  const results = await Promise.allSettled(sources.map(([, load]) => load()))
+  return results.flatMap((result, index) => {
+    if (result.status === 'fulfilled') return result.value
+    console.error(`${sources[index][0]} coverage unavailable for this refresh. ${result.reason.message}`)
+    return []
+  })
+}
+
 async function writeSnapshot(catalogPath, catalog) {
   await mkdir(dirname(catalogPath), { recursive: true })
   const temporary = `${catalogPath}.${randomUUID()}.tmp`
@@ -140,8 +187,8 @@ async function writeSnapshot(catalogPath, catalog) {
 }
 
 const [output = '.season-catalog/catalog.json', ...inputPaths] = process.argv.slice(2)
-const [football, racing, ...additional] = await Promise.all([
-  loadPremierLeague(), loadFormulaOne(),
+const [football, racing, expanded, ...additional] = await Promise.all([
+  loadPremierLeague(), loadFormulaOne(), loadAdditionalSeasons(),
   ...inputPaths.map(async path => JSON.parse(await readFile(path, 'utf8')))
 ])
 let offers = []
@@ -174,7 +221,7 @@ if (racing.seasons[0].markets.some(market => market.country === 'US' && market.e
     console.error(`US racing subscription pricing could not be verified. ${error.message}`)
   }
 }
-const batches = [football, racing, ...additional]
+const batches = [football, racing, ...expanded, ...additional]
 
 function combineEntities(rows) {
   const entities = new Map()
@@ -192,6 +239,7 @@ const catalog = {
   organizations: combineEntities(batches.flatMap(batch => batch.organizations)),
   seasons: batches.flatMap(batch => batch.seasons),
   fixtures: batches.flatMap(batch => batch.fixtures),
+  competitionInventory: additional.flatMap(batch => batch.competitionInventory ?? []),
   offers: [...offers, ...additional.flatMap(batch => batch.offers ?? [])]
 }
 const { fixtures, seasons } = indexCatalog(catalog)

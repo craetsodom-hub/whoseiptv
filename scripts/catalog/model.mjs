@@ -112,6 +112,19 @@ export function indexCatalog(catalog) {
   const offers = byId(catalog.offers, 'offer')
   requireThat(seasons.size && fixtures.size, 'The catalog must contain a season and fixtures')
 
+  const competitionInventory = new Map()
+  const inventories = catalog.competitionInventory ?? []
+  requireThat(Array.isArray(inventories), 'Invalid competition inventory')
+  for (const row of inventories) {
+    const country = row?.country
+    requireThat((country === null || isSupportedTerritory(country)) && !competitionInventory.has(country) &&
+      Array.isArray(row.seasonIds) && row.seasonIds.every(isId) &&
+      new Set(row.seasonIds).size === row.seasonIds.length,
+    `Invalid competition inventory for ${country ?? 'international competitions'}`)
+    validateEvidence(row, generatedAt, `competition inventory for ${country ?? 'international competitions'}`)
+    competitionInventory.set(country, row)
+  }
+
   for (const row of organizations.values()) {
     requireThat(isText(row.name) && ['club', 'team', 'federation', 'organizer', 'institution'].includes(row.kind) &&
       (row.country === null || isSupportedTerritory(row.country)), `Invalid organization ${row.id}`)
@@ -134,9 +147,13 @@ export function indexCatalog(catalog) {
   }
   for (const season of seasons.values()) {
     const { ids, markets } = seasonFixtures.get(season.id)
+    const inventoryUnannounced = season.fixtureInventoryStatus === 'unannounced'
     requireThat(competitions.has(season.competitionId) && isText(season.label) &&
       isDate(season.startsOn) && isDate(season.endsOn) && season.startsOn <= season.endsOn &&
-      ids.size > 0 && Array.isArray(season.markets), `Invalid season ${season.id}`)
+      (inventoryUnannounced ? ids.size === 0 : ids.size > 0 && season.fixtureInventoryStatus === undefined) &&
+      (season.expectedFixtureCount === undefined || (Number.isSafeInteger(season.expectedFixtureCount) &&
+        season.expectedFixtureCount > 0 && ids.size <= season.expectedFixtureCount)) &&
+      Array.isArray(season.markets), 'Invalid season ' + season.id)
     validateEvidence(season, generatedAt, `season ${season.id}`)
     checkInventory(season.expectedFixtureIds, ids, `fixture for ${season.id}`)
     const declared = new Set()
@@ -184,5 +201,5 @@ export function indexCatalog(catalog) {
 
   const orderedFixtures = [...fixtures.values()].sort((a, b) =>
     a.date.localeCompare(b.date) || (a.startsAt ?? '').localeCompare(b.startsAt ?? '') || a.id.localeCompare(b.id))
-  return { generatedAt, organizations, competitions, seasons, fixtures, offers, orderedFixtures }
+  return { generatedAt, organizations, competitions, seasons, fixtures, offers, orderedFixtures, competitionInventory }
 }

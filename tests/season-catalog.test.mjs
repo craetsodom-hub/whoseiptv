@@ -9,6 +9,7 @@ import { isImageAsset } from '../scripts/catalog/logo-assets.mjs'
 import { refreshCatalog } from '../scripts/catalog/refresh.mjs'
 import { auditRelease } from '../scripts/catalog/release.mjs'
 import { indexCatalog } from '../scripts/catalog/model.mjs'
+import { parseAustralianOpen, parseNbaSeason } from '../scripts/catalog/season-expansion.mjs'
 import { verifyMarketplaceLaunch } from '../scripts/verify-marketplace-launch.mjs'
 import {
   addFormulaOneUkListings, addFormulaOneUsListings, applyCompletedPremierLeagueResults,
@@ -245,6 +246,59 @@ test('release audit fails on incomplete fields, geography, stale prices and brok
   assert.equal(result.issues.missing_current_price.count, 2)
   assert(result.issues.missing_market.count > 0)
   assert(result.issues.missing_sport.examples.includes('basketball'))
+})
+
+test('keeps unannounced and missing seasons visible in the worldwide audit', async t => {
+  const now = Date.parse('2026-11-27T10:00:00.000Z')
+  const original = catalog()
+  const tennis = parseAustralianOpen(
+    '<p>set for Melbourne Park on 10-31 January</p><strong>Main-draw action at AO 2027 begins 17 January</strong>',
+    '<img data-cmp-filereference="/assets/ao-brand-logo.svg">' +
+      '{"logo":{"@type":"ImageObject","url":"https://www.tennis.com.au/assets/tennis-logo.svg"}}', '', evidence
+  )
+  for (const key of ['competitions', 'organizations', 'seasons', 'fixtures']) original[key].push(...tennis[key])
+  original.seasons[0].expectedFixtureCount = 3
+  original.competitionInventory = [{ ...evidence, country: 'AU', seasonIds: ['australian-open-2027', 'unloaded-season'] }]
+  const index = indexCatalog(original)
+  const result = auditRelease(index, { now, worldwide: true, includeDetails: true })
+  assert.deepEqual(result.issues.incomplete_fixture_inventory.ids, ['league-2026', 'australian-open-2027'])
+  assert.deepEqual(result.issues.missing_competition_season.ids, ['AU/unloaded-season'])
+  assert.equal(result.issues.missing_competition_inventory.ids.length, result.issues.missing_competition_inventory.count)
+  assert(result.issues.missing_competition_inventory.ids.includes('international'))
+
+  const server = createServer(catalogHandler({ snapshot: () => index, clock: () => now }))
+  await new Promise(resolve => server.listen(0, '127.0.0.1', resolve))
+  t.after(() => new Promise(resolve => server.close(resolve)))
+  const url = `http://127.0.0.1:${server.address().port}/v1/coverage`
+  const { data } = await (await fetch(url)).json()
+  assert.deepEqual(data.map(row => [row.fixtureCount, row.fixtureInventoryStatus, row.expectedFixtureCount]),
+    [[2, 'partial', 3], [0, 'unannounced', undefined]])
+})
+
+test('a published NBA Cup date with undecided teams does not produce a kickoff or airtime', () => {
+  const game = {
+    homeTeam: { teamId: 1 }, awayTeam: { teamId: 2 }, gameDateEst: '2026-12-04T00:00:00Z',
+    gameDateTimeUTC: '2026-12-05T00:00:00Z', gameStatus: 1, postponedStatus: 'N'
+  }
+  const nationalBroadcasters = [{ broadcasterDisplay: 'Peacock', broadcasterId: 99, localizationRegion: '' }]
+  const games = Array.from({ length: 1205 }, (_, index) => ({
+    ...game, gameId: '00226' + String(index + 1).padStart(5, '0')
+  }))
+  games.push({ ...game, gameId: '0022601230', homeTeam: { teamId: 0 }, awayTeam: { teamId: 0 },
+    gameLabel: 'Emirates NBA Cup', gameSubLabel: 'Semifinal', gameStatusText: 'TBD', broadcasters: { nationalBroadcasters } })
+  const schedule = { meta: { time: '2026-11-27T08:00:00.000Z' },
+    leagueSchedule: { leagueId: '00', seasonYear: '2026-27', gameDates: [{ games }] } }
+  const badges = Array.from({ length: 30 }, (_, index) =>
+    `<img src="https://cdn.nba.com/logos/nba/${index + 1}/primary/L/logo.svg" title="Team ${index + 1} Logo">`)
+  badges.push('<img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="NBA Logo">')
+  const batch = parseNbaSeason(schedule, badges.join(''), evidence)
+  const placeholder = batch.fixtures.at(-1)
+  assert.equal(batch.seasons[0].expectedFixtureCount, 1230)
+  assert.equal(placeholder.startStatus, 'unannounced')
+  assert.equal(placeholder.startsAt, null)
+  assert.deepEqual(placeholder.participants, [])
+  assert.equal(placeholder.broadcasts[0].airsAt, null)
+  assert.equal(placeholder.broadcasts[0].destinationId, 'peacock-us')
 })
 
 test('release audit accepts explicit no-airing evidence and never treats an empty market as proof', () => {

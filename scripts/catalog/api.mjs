@@ -78,6 +78,9 @@ function coverageRow(index, season, country, now) {
     seasonId: season.id, competitionId: competition.id, sport: competition.sport,
     leagueCountry: competition.leagueCountry, label: season.label, startsOn: season.startsOn, endsOn: season.endsOn,
     fixtureCount: season.expectedFixtureIds.length, scheduleStatus: isFresh(season, now) ? 'current' : 'stale',
+    fixtureInventoryStatus: season.fixtureInventoryStatus ??
+      (season.expectedFixtureCount > season.expectedFixtureIds.length ? 'partial' : 'complete'),
+    ...(season.expectedFixtureCount ? { expectedFixtureCount: season.expectedFixtureCount } : {}),
     sourceUrl: season.sourceUrl, verifiedAt: season.verifiedAt, validUntil: season.validUntil,
     markets: marketInfo,
     ...(country ? { country, marketStatus: marketInfo[0]?.status ?? 'not_covered' } : {})

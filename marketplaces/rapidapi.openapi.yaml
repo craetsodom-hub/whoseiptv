@@ -192,6 +192,12 @@ components:
           $ref: '#/components/schemas/Competition'
         seasonId: { type: string }
         date: { type: string, format: date }
+        endsOn:
+          type: string
+          format: date
+          description: Last published date of a multi-day fixture when available.
+        venue: { type: string }
+        venueCountry: { type: string, pattern: '^[A-Z]{2}$' }
         startsAt: { type: string, format: date-time, nullable: true }
         startStatus: { type: string, enum: [scheduled, provisional, unannounced, postponed, cancelled] }
         scheduleStatus: { type: string, enum: [current, stale] }
