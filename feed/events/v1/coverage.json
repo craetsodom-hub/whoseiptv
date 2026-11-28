@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T12:11:50.949Z",
+  "generatedAt": "2026-11-28T14:08:07.946Z",
   "adapters": [
     {
       "id": "bein-mena",
@@ -30,8 +30,9 @@
         "embedded-page-state",
         "json-ld"
       ],
-      "success": true,
-      "candidates": 0
+      "success": false,
+      "candidates": 0,
+      "failure": "HTTP 403"
     },
     {
       "id": "laliga-spain",
@@ -579,8 +580,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
@@ -1918,8 +1920,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -2034,6 +2037,16 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2494116",
+      "sport": "football",
+      "competition": "English Premier League",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
       "eventId": "tsdb-2494116",
@@ -2797,16 +2810,6 @@
       "eventId": "tsdb-2601946",
       "sport": "basketball",
       "competition": "NBA",
-      "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601946",
-      "sport": "basketball",
-      "competition": "NBA",
       "territory": "FR",
       "sourcesAttempted": [],
       "exactDestinations": [],
@@ -2837,17 +2840,17 @@
       "eventId": "tsdb-2631025",
       "sport": "rugby",
       "competition": null,
-      "territory": "ZA",
+      "territory": "IT",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "tsdb-2550433",
+      "eventId": "tsdb-2631025",
       "sport": "rugby",
-      "competition": "French Top 14",
-      "territory": "IE",
+      "competition": null,
+      "territory": "ZA",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -2877,13 +2880,14 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
+      "rejectionReason": "A permitted official source failed; no event-level destination was emitted."
     },
     {
       "eventId": "tsdb-2482258",
@@ -3433,8 +3437,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -3549,6 +3554,16 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "tsdb-2494112",
+      "sport": "football",
+      "competition": "English Premier League",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [],
+      "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
       "eventId": "tsdb-2494112",
@@ -4309,16 +4324,6 @@
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     },
     {
-      "eventId": "tsdb-2624191",
-      "sport": "football",
-      "competition": "South Korean K League 1",
-      "territory": "FI",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
       "eventId": "tsdb-2601950",
       "sport": "basketball",
       "competition": "NBA",
@@ -4333,16 +4338,6 @@
       "sport": "basketball",
       "competition": null,
       "territory": "DE",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601948",
-      "sport": "basketball",
-      "competition": "NBA",
-      "territory": "AU",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -4379,10 +4374,10 @@
       "rejectionReason": "No permitted official source returned a verified event-level destination."
     },
     {
-      "eventId": "tsdb-2550434",
+      "eventId": "tsdb-2631027",
       "sport": "rugby",
-      "competition": "French Top 14",
-      "territory": "IE",
+      "competition": null,
+      "territory": "IT",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -4403,16 +4398,6 @@
       "sport": "football",
       "competition": "Italian Serie A",
       "territory": "AU",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2482259",
-      "sport": "football",
-      "competition": "Italian Serie A",
-      "territory": "FI",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -4474,12 +4459,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4525,12 +4510,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4576,12 +4561,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4597,12 +4582,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4671,12 +4656,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4712,12 +4697,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4733,12 +4718,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4754,12 +4739,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4775,12 +4760,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4808,12 +4793,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4839,12 +4824,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4860,12 +4845,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4903,12 +4888,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4936,12 +4921,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4967,12 +4952,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -4988,12 +4973,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -5024,12 +5009,12 @@
         {
           "channelName": "beIN SPORTS 2",
           "normalizedName": "beinsports2",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=2200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -5040,16 +5025,6 @@
       "sport": "football",
       "competition": "Italian Serie C Girone B",
       "territory": "IT",
-      "sourcesAttempted": [],
-      "exactDestinations": [],
-      "rightsWithoutEventDestination": [],
-      "rejectionReason": "No permitted official source returned a verified event-level destination."
-    },
-    {
-      "eventId": "tsdb-2601960",
-      "sport": "basketball",
-      "competition": "NBA",
-      "territory": "AU",
       "sourcesAttempted": [],
       "exactDestinations": [],
       "rightsWithoutEventDestination": [],
@@ -5555,8 +5530,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -6895,8 +6871,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -8235,8 +8212,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -9575,8 +9553,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -10915,8 +10894,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -12260,8 +12240,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -13600,8 +13581,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -14940,8 +14922,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -16280,8 +16263,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -17620,8 +17604,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -18960,8 +18945,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -20300,8 +20286,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -21640,8 +21627,9 @@
             "embedded-page-state",
             "json-ld"
           ],
-          "success": true,
-          "candidates": 0
+          "success": false,
+          "candidates": 0,
+          "failure": "HTTP 403"
         }
       ],
       "exactDestinations": [
@@ -24505,7 +24493,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24551,7 +24539,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24597,7 +24585,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24613,7 +24601,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24682,7 +24670,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24718,7 +24706,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24734,7 +24722,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24750,7 +24738,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24766,7 +24754,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24794,7 +24782,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24820,7 +24808,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24836,7 +24824,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24874,7 +24862,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24902,7 +24890,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24928,7 +24916,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24944,7 +24932,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -24975,7 +24963,7 @@
         {
           "channelName": "beIN SPORTS 3",
           "normalizedName": "beinsports3",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1000"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=900"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25467,7 +25455,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25513,7 +25501,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25559,7 +25547,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25575,7 +25563,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25644,7 +25632,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25680,7 +25668,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25696,7 +25684,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25712,7 +25700,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25728,7 +25716,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25756,7 +25744,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25782,7 +25770,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25798,7 +25786,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25836,7 +25824,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25864,7 +25852,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25890,7 +25878,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25906,7 +25894,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25937,7 +25925,7 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1100"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -25965,12 +25953,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26016,12 +26004,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26067,12 +26055,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26088,12 +26076,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26162,12 +26150,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26203,12 +26191,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26224,12 +26212,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26245,12 +26233,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26266,12 +26254,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26299,12 +26287,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26330,12 +26318,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26351,12 +26339,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26394,12 +26382,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26427,12 +26415,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26458,12 +26446,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26479,12 +26467,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -26515,12 +26503,12 @@
         {
           "channelName": "beIN SPORTS 6",
           "normalizedName": "beinsports6",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         },
         {
           "channelName": "beIN SPORTS EN 1",
           "normalizedName": "beinsportsen1",
-          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1300"
+          "sourceUrl": "https://www.beinsports.com/api/opta/tv-event?region=en-mena&limit=100&offset=1200"
         }
       ],
       "rightsWithoutEventDestination": [],
@@ -27519,13 +27507,727 @@
         ]
       ],
       "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "AL",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DigitAlb"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "AM",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "FastSports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "AT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Servus TV ORF Sky"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "AU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Fox Sports Foxtel Kayo"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "AZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Idman Azerbaijan"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "BE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "RTBF Play Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "BG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "TV Nova"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "BR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "TV Globo sportv"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "CA",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "RDS RDS 2 TSN Noovo"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "CH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "SRF RSI RTS Sky"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "CN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Shanghai TV Guandong Television Channel Tencent"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "CY",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "OmegaTV"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "DE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Sky Deutschland RTL"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "DK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "TV3 Viaplay"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "EE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Go3 Estonia TV3"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "FI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Viaplay"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "FR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Canal+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "GR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "ANT1 ANT1+"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "HR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "RTL"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "HU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "M4 (MTVA Sports Channel)"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "ID",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN SPORTS"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "IL",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Sport 5"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "IN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "FanCode TATA Play FanCode Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "IS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Viaplay"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "IT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Sky Italia"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "JP",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Fuji TV"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "KH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN SPORTS"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "KR",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Coupang Play"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "LA",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN SPORTS"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "LT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Go3 Lithuania TV3"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "LU",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "RTL Télé Lëtzebuerg"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "LV",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Go3 Latvia TV3"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "ME",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Arena Sport"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "MT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "PBS Malta"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "MX",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "TUDN Sky Sports Izzi"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "NL",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Viaplay"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "NO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "V sport 1 Viaplay"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "NZ",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Sky NZ"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "PH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN SPORTS"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "PL",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Eleven Sports"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "PT",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "DAZN"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "RO",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Antena"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "RS",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Arena Sport"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "SE",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Viaplay"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "SG",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN SPORTS"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "SI",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Kanal A VOYO"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "TH",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "beIN SPORTS"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "TW",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Videoland ELTA"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "UA",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Setanta Ukraine"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "VN",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "TV360"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
+    },
+    {
+      "eventId": "f1-https-www-formula1-com-en-racing-2026-united-arab-emirates-race-1796562000",
+      "sport": "formula1",
+      "competition": "Formula 1",
+      "territory": "XK",
+      "sourcesAttempted": [],
+      "exactDestinations": [],
+      "rightsWithoutEventDestination": [
+        [
+          "Arena Sport Artmotion Kosovo"
+        ]
+      ],
+      "rejectionReason": "Rights-holder information exists but no verified event-level channel destination was found."
     }
   ],
   "summaries": {
     "sport": [
       {
         "sport": "basketball",
-        "total": 8,
+        "total": 5,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27546,7 +28248,7 @@
       },
       {
         "sport": "formula1",
-        "total": 51,
+        "total": 102,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27583,14 +28285,14 @@
       },
       {
         "competition": "English Premier League",
-        "total": 270,
+        "total": 272,
         "attempted": 18,
         "exactCovered": 2,
         "coveragePercentage": 0.7
       },
       {
         "competition": "Formula 1",
-        "total": 51,
+        "total": 102,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27598,13 +28300,6 @@
       {
         "competition": "French Ligue 1",
         "total": 4,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "competition": "French Top 14",
-        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27618,7 +28313,7 @@
       },
       {
         "competition": "Italian Serie A",
-        "total": 8,
+        "total": 7,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27653,7 +28348,7 @@
       },
       {
         "competition": "NBA",
-        "total": 7,
+        "total": 4,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27673,13 +28368,6 @@
         "coveragePercentage": 0
       },
       {
-        "competition": "South Korean K League 1",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
         "competition": "Spanish La Liga",
         "total": 32,
         "attempted": 5,
@@ -27688,7 +28376,7 @@
       },
       {
         "competition": "unknown",
-        "total": 7,
+        "total": 9,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27704,14 +28392,14 @@
       },
       {
         "territory": "AL",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "AM",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27732,28 +28420,28 @@
       },
       {
         "territory": "AT",
-        "total": 26,
+        "total": 27,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "AU",
-        "total": 32,
+        "total": 30,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "AZ",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "BE",
-        "total": 10,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27767,7 +28455,7 @@
       },
       {
         "territory": "BG",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27802,7 +28490,7 @@
       },
       {
         "territory": "BR",
-        "total": 17,
+        "total": 18,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27816,7 +28504,7 @@
       },
       {
         "territory": "CA",
-        "total": 17,
+        "total": 18,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27844,7 +28532,7 @@
       },
       {
         "territory": "CH",
-        "total": 10,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27872,7 +28560,7 @@
       },
       {
         "territory": "CN",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27893,14 +28581,14 @@
       },
       {
         "territory": "CY",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "DE",
-        "total": 28,
+        "total": 29,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27914,7 +28602,7 @@
       },
       {
         "territory": "DK",
-        "total": 10,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27935,7 +28623,7 @@
       },
       {
         "territory": "EE",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -27970,17 +28658,17 @@
       },
       {
         "territory": "FI",
-        "total": 12,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "FR",
-        "total": 42,
+        "total": 43,
         "attempted": 0,
         "exactCovered": 10,
-        "coveragePercentage": 23.8
+        "coveragePercentage": 23.3
       },
       {
         "territory": "GA",
@@ -28026,7 +28714,7 @@
       },
       {
         "territory": "GR",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28047,27 +28735,20 @@
       },
       {
         "territory": "HR",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "HU",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "ID",
-        "total": 1,
-        "attempted": 0,
-        "exactCovered": 0,
-        "coveragePercentage": 0
-      },
-      {
-        "territory": "IE",
         "total": 2,
         "attempted": 0,
         "exactCovered": 0,
@@ -28075,14 +28756,14 @@
       },
       {
         "territory": "IL",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "IN",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28096,14 +28777,14 @@
       },
       {
         "territory": "IS",
-        "total": 10,
+        "total": 13,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "IT",
-        "total": 27,
+        "total": 30,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28117,7 +28798,7 @@
       },
       {
         "territory": "JP",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28131,7 +28812,7 @@
       },
       {
         "territory": "KH",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28145,7 +28826,7 @@
       },
       {
         "territory": "KR",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28159,7 +28840,7 @@
       },
       {
         "territory": "LA",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28187,21 +28868,21 @@
       },
       {
         "territory": "LT",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "LU",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "LV",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28222,7 +28903,7 @@
       },
       {
         "territory": "ME",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28250,7 +28931,7 @@
       },
       {
         "territory": "MT",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28271,7 +28952,7 @@
       },
       {
         "territory": "MX",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28306,21 +28987,21 @@
       },
       {
         "territory": "NL",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "NO",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "NZ",
-        "total": 12,
+        "total": 13,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28341,14 +29022,14 @@
       },
       {
         "territory": "PH",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "PL",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28362,7 +29043,7 @@
       },
       {
         "territory": "PT",
-        "total": 26,
+        "total": 27,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28383,14 +29064,14 @@
       },
       {
         "territory": "RO",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "RS",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28425,21 +29106,21 @@
       },
       {
         "territory": "SE",
-        "total": 10,
+        "total": 11,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "SG",
-        "total": 17,
+        "total": 18,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "SI",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28516,7 +29197,7 @@
       },
       {
         "territory": "TH",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28537,7 +29218,7 @@
       },
       {
         "territory": "TW",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28551,7 +29232,7 @@
       },
       {
         "territory": "UA",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -28586,14 +29267,14 @@
       },
       {
         "territory": "VN",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
       },
       {
         "territory": "XK",
-        "total": 1,
+        "total": 2,
         "attempted": 0,
         "exactCovered": 0,
         "coveragePercentage": 0
@@ -29768,14 +30449,14 @@
     }
   ],
   "pipeline": {
-    "generatedAt": "2026-11-28T11:53:14.000Z",
+    "generatedAt": "2026-11-28T13:51:23.000Z",
     "scheduleMode": "priority-plus-rotating-secondary-markets",
     "requests": 72,
     "succeeded": 72,
     "failed": 0,
     "successRatio": 1,
     "minimumSuccessRatio": 0.8,
-    "detailRequests": 6,
+    "detailRequests": 4,
     "maximumDetailRequests": 12,
     "maximumArtworkRequests": 8,
     "sourceAttempts": [
@@ -29817,7 +30498,7 @@
       },
       {
         "sport": "football",
-        "territory": "FI",
+        "territory": "IS",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -29847,7 +30528,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "AU",
+        "territory": "JP",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -29871,7 +30552,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "RS",
+        "territory": "CZ",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -29895,7 +30576,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "US",
+        "territory": "CA",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -29919,7 +30600,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "IE",
+        "territory": "IT",
         "date": "2026-11-28",
         "status": "success"
       },
@@ -29961,7 +30642,7 @@
       },
       {
         "sport": "football",
-        "territory": "FI",
+        "territory": "IS",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -29991,7 +30672,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "AU",
+        "territory": "JP",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -30015,7 +30696,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "RS",
+        "territory": "CZ",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -30039,7 +30720,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "US",
+        "territory": "CA",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -30063,7 +30744,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "IE",
+        "territory": "IT",
         "date": "2026-11-29",
         "status": "success"
       },
@@ -30105,7 +30786,7 @@
       },
       {
         "sport": "football",
-        "territory": "FI",
+        "territory": "IS",
         "date": "2026-11-30",
         "status": "success"
       },
@@ -30135,7 +30816,7 @@
       },
       {
         "sport": "basketball",
-        "territory": "AU",
+        "territory": "JP",
         "date": "2026-11-30",
         "status": "success"
       },
@@ -30159,7 +30840,7 @@
       },
       {
         "sport": "tennis",
-        "territory": "RS",
+        "territory": "CZ",
         "date": "2026-11-30",
         "status": "success"
       },
@@ -30183,7 +30864,7 @@
       },
       {
         "sport": "cricket",
-        "territory": "US",
+        "territory": "CA",
         "date": "2026-11-30",
         "status": "success"
       },
@@ -30207,7 +30888,7 @@
       },
       {
         "sport": "rugby",
-        "territory": "IE",
+        "territory": "IT",
         "date": "2026-11-30",
         "status": "success"
       }
