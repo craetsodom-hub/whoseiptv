@@ -143,7 +143,7 @@ components:
     LeagueCountry:
       in: query
       name: leagueCountry
-      description: The competition's country.
+      description: A country in which the league is based. The NHL matches CA or US.
       schema: { type: string, pattern: '^[A-Z]{2}$' }
     Organization:
       in: query
@@ -242,7 +242,8 @@ components:
         name: { type: string }
         sport: { type: string }
         kind: { type: string, enum: [league, cup, series, tournament] }
-        leagueCountry: { type: string }
+        leagueCountry: { type: string, nullable: true }
+        leagueCountries: { type: array, items: { type: string } }
         organizerId: { type: string }
         logo: { $ref: '#/components/schemas/Logo' }
         organizer: { $ref: '#/components/schemas/Organization' }

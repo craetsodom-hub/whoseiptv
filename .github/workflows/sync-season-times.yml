@@ -3,6 +3,10 @@ name: Sync season start times
 on:
   schedule:
     - cron: "37 * * * *"
+  workflow_run:
+    workflows: ["Refresh sports events"]
+    branches: [main]
+    types: [completed]
   workflow_dispatch:
   push:
     branches: [main]
@@ -21,7 +25,7 @@ concurrency:
 
 jobs:
   sync:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || github.event.workflow_run.head_repository.full_name == github.repository)
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:

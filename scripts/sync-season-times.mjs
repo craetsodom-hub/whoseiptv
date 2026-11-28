@@ -1,5 +1,5 @@
 import { randomUUID } from 'node:crypto'
-import { mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises'
+import { appendFile, mkdir, readFile, rename, rm, writeFile } from 'node:fs/promises'
 import { dirname } from 'node:path'
 import { pathToFileURL } from 'node:url'
 import { indexCatalog, isFresh } from './catalog/model.mjs'
@@ -50,6 +50,18 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     await rename(temporary, output)
   } finally {
     await rm(temporary, { force: true })
+  }
+  if (process.env.GITHUB_STEP_SUMMARY) {
+    const prior = new Map((previous?.seasons ?? []).map(season => [season.id, season.checkedAt]))
+    const rows = feed.seasons.map(season => {
+      const state = prior.get(season.id) === season.checkedAt ? 'Carried forward' : 'Checked'
+      return [season.id, state, season.checkedAt, season.events.filter(row => row.startsAt).length, season.events.length]
+    })
+    for (const id of prior.keys()) {
+      if (!feed.seasons.some(s => s.id === id)) rows.push([id, 'Expired', prior.get(id), 0, 0])
+    }
+    const header = '| Season | Result | Last checked (UTC) | Confirmed | Events |\n|---|---|---|---:|---:|\n'
+    await appendFile(process.env.GITHUB_STEP_SUMMARY, header + rows.map(row => '| ' + row.join(' | ') + ' |').join('\n') + '\n')
   }
   const records = feed.seasons.flatMap(row => row.events)
   console.log('Published ' + records.filter(row => row.startsAt).length + ' confirmed times across ' + records.length + ' event records.')

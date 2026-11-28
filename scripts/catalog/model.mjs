@@ -135,6 +135,11 @@ export function indexCatalog(catalog) {
       ['league', 'cup', 'series', 'tournament'].includes(row.kind) &&
       (row.leagueCountry === null || isSupportedTerritory(row.leagueCountry)) &&
       organizations.has(row.organizerId), `Invalid competition ${row.id}`)
+    if (row.leagueCountries !== undefined) {
+      requireThat(Array.isArray(row.leagueCountries) && row.leagueCountries.length > 0 &&
+        row.leagueCountries.every(isSupportedTerritory) && new Set(row.leagueCountries).size === row.leagueCountries.length &&
+        (!row.leagueCountry || row.leagueCountries.includes(row.leagueCountry)), 'Invalid league countries for ' + row.id)
+    }
     validateLogo(row.logo, row.id)
   }
 
