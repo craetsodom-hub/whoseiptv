@@ -164,13 +164,19 @@ async function loadAdditionalSeasons() {
       return [batch]
     }],
     ['NBA', async () => {
-      const [schedule, announcement, pricing] = await Promise.all([
-        fetchText(nba.schedule, MAX_BYTES, { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.nba.com/' }),
-        fetchText(nba.announcement), timesOnly ? '' : optionalPage(nba.primePricing)
-      ])
-      const batch = parseNbaSeason(JSON.parse(schedule), announcement, verificationTimes())
-      batch.offers = nbaPrimeOffers(batch, pricing, verificationTimes())
-      return [batch]
+      const [announcement, pricing] = await Promise.all([fetchText(nba.announcement), timesOnly ? '' : optionalPage(nba.primePricing)])
+      const errors = []
+      for (const url of [nba.scheduleCdn, nba.schedule]) {
+        try {
+          const schedule = await fetchText(url, MAX_BYTES, { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.nba.com/' })
+          const batch = parseNbaSeason(JSON.parse(schedule), announcement, verificationTimes(), url)
+          batch.offers = nbaPrimeOffers(batch, pricing, verificationTimes())
+          return [batch]
+        } catch (error) {
+          errors.push(error.message)
+        }
+      }
+      throw new Error(errors.join(' / '))
     }],
     ...Object.values(sixNations).map(edition => [edition.name, async () => {
       const [fixtures, rights] = await Promise.all([fetchText(edition.fixtures), optionalPage(edition.rights)])
@@ -184,9 +190,10 @@ async function loadAdditionalSeasons() {
     }],
     ['Australian Open', async () => {
       const [dates, organizer, rights] = await Promise.all([
-        fetchText(australianOpen.dates), fetchText(australianOpen.organizer), optionalPage(australianOpen.rights)
+        fetchText(australianOpen.dates), timesOnly ? '' : fetchText(australianOpen.organizer),
+        timesOnly ? '' : optionalPage(australianOpen.rights)
       ])
-      return [parseAustralianOpen(dates, organizer, rights, verificationTimes())]
+      return [parseAustralianOpen(dates, organizer, rights, verificationTimes(), { datesOnly: timesOnly })]
     }]
   ]
   const results = await Promise.allSettled(sources.map(([, load]) => load()))
