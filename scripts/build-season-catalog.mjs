@@ -14,6 +14,9 @@ import {
   premierLeague, premierLeagueConflicts, resolvePremierLeagueConflict, sportsEntitlementsUrl, sportsPricingUrl
 } from './catalog/sources.mjs'
 
+import { addClassicAirings, classicAnnouncement, loadMlbSeason, loadNflSeason } from './catalog/us-leagues.mjs'
+import { addLaLigaViewing, addStanViewing, footballViewing, addMlsViewing, appleMlsPage, mlsMarkets } from './catalog/european-broadcasts.mjs'
+import { domesticLeagues, europeanCups, loadDomesticLeague, loadEuropeanCup } from './catalog/european-leagues.mjs'
 import { loadNhlSeason, nhlPrimeOffers, nhlPrimePricing, nhlPrimeRights } from './catalog/nhl.mjs'
 
 const exec = promisify(execFile)
@@ -157,6 +160,14 @@ async function optionalPage(url) {
 
 async function loadAdditionalSeasons() {
   const sources = [
+    ['MLB', async () => {
+      const batch = await loadMlbSeason(json, verificationTimes())
+      if (!timesOnly) addClassicAirings(batch, await optionalPage(classicAnnouncement), verificationTimes())
+      return [batch]
+    }],
+    ['NFL', async () => [await loadNflSeason(json, verificationTimes())]],
+    ...domesticLeagues.map(league => [league.name, async () => [await loadDomesticLeague(league, json, verificationTimes())]]),
+    ...europeanCups.map(cup => [cup.id, async () => [await loadEuropeanCup(cup, json, verificationTimes())]]),
     ['NHL', async () => {
       const [batch, pricing, rights] = await Promise.all([loadNhlSeason(json, verificationTimes()),
         timesOnly ? '' : optionalPage(nhlPrimePricing), timesOnly ? '' : optionalPage(nhlPrimeRights)])
@@ -260,6 +271,24 @@ if (racing?.seasons[0].markets.some(market => market.country === 'US' && market.
   }
 }
 const batches = [football, racing, ...expanded, ...additional].filter(Boolean)
+if (!timesOnly) {
+  const mls = batches.find(batch => batch.competitions.some(c => c.id === 'mls'))
+  if (mls) {
+    const pages = await Promise.all(Object.keys(mlsMarkets).map(async country => [country, await optionalPage(appleMlsPage(country))]))
+    for (const [country, html] of pages) addMlsViewing(mls, country, html, verificationTimes())
+  }
+  const laliga = batches.find(b => b.competitions.some(c => c.id === 'laliga'))
+  if (laliga) {
+    const keys = ['espnAccess','espnPrice','france','disneyPrice']
+    const pages = Object.fromEntries(await Promise.all(keys.map(async k => [k, await optionalPage(footballViewing[k])])))
+    addLaLigaViewing(laliga,pages,verificationTimes())
+  }
+  const stanPricing = await optionalPage(footballViewing.stanPrice)
+  await Promise.all(batches.filter(b => ['premier-league', ...europeanCups.map(c => c.id)].includes(b.competitions[0]?.id)).map(async b => {
+    const html = await optionalPage(footballViewing.stan(b.competitions[0].id))
+    addStanViewing(b,html,stanPricing,verificationTimes())
+  }))
+}
 if (!football || !racing) offers = []
 
 function combineEntities(rows) {

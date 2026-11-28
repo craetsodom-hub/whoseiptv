@@ -24,6 +24,8 @@ export function seasonTimes(index, previous, now = Date.now()) {
       return { id, title: fixture.title, date: fixture.date, status, startsAt, changedAt, sourceUrl: fixture.sourceUrl }
     })
     seasons.set(season.id, { id: season.id, sport: competition.sport, competition: competition.id,
+      fixtureInventoryStatus: season.fixtureInventoryStatus ?? (season.expectedFixtureCount > events.length ? 'partial' : 'complete'),
+      ...(season.expectedFixtureCount && {expectedFixtureCount:season.expectedFixtureCount}),
       checkedAt: season.verifiedAt, validUntil: season.validUntil, events })
     refreshed++
   }

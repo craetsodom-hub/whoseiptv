@@ -100,7 +100,7 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
     current(season, 'stale_season', season.id)
     const competition = index.competitions.get(season.competitionId)
     const fixtures = season.expectedFixtureIds.map(id => index.fixtures.get(id))
-    if (season.fixtureInventoryStatus === 'unannounced' || season.expectedFixtureCount > fixtures.length) {
+    if (['unannounced', 'partial'].includes(season.fixtureInventoryStatus) || season.expectedFixtureCount > fixtures.length) {
       addIssue('incomplete_fixture_inventory', season.id)
     }
     const markets = new Set(season.markets.map(market => market.country))
@@ -112,7 +112,7 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
     }
     for (const fixture of fixtures) {
       if (!['scheduled', 'cancelled'].includes(fixture.startStatus)) addIssue('unconfirmed_start', fixture.id)
-      if (['football', 'basketball', 'rugby', 'cricket', 'ice-hockey'].includes(competition.sport) && (fixture.participants.length !== 2 ||
+      if (['football', 'basketball', 'rugby', 'cricket', 'ice-hockey', 'baseball', 'american-football'].includes(competition.sport) && (fixture.participants.length !== 2 ||
           !['home', 'away'].every(role => fixture.participants.some(row => row.role === role)))) {
         addIssue('missing_fixture_participant', fixture.id)
       }
