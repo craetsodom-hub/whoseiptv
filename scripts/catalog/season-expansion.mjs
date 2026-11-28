@@ -4,6 +4,7 @@ import { isDate, isTimestamp } from './model.mjs'
 
 export const nba = {
   schedule: 'https://stats.nba.com/stats/scheduleleaguev2?LeagueID=00&Season=2026-27',
+  scheduleCdn: 'https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_1.json',
   announcement: 'https://www.nba.com/news/2026-27-nba-regular-season-schedule',
   primePricing: 'https://www.aboutamazon.com/news/entertainment/stream-nba-prime-video'
 }
@@ -66,7 +67,7 @@ export function nbaPrimeOffers(batch, html, evidence) {
   }))
 }
 
-export function parseNbaSeason(schedule, announcement, evidence) {
+export function parseNbaSeason(schedule, announcement, evidence, scheduleUrl = nba.schedule) {
   const league = schedule?.leagueSchedule
   if (league?.seasonYear !== '2026-27' || league.leagueId !== '00' || !Array.isArray(league.gameDates)) {
     throw new Error('Unexpected NBA schedule edition')
@@ -111,7 +112,7 @@ export function parseNbaSeason(schedule, announcement, evidence) {
         if (row.localizationRegion && !['National', 'East', 'West'].includes(row.localizationRegion)) continue
         const region = ['East', 'West'].includes(row.localizationRegion) ? ' (' + row.localizationRegion + ')' : ''
         const destinationId = name === 'Peacock' ? 'peacock-us' : 'nba-us-' + row.broadcasterId
-        broadcasts.set(destinationId, { ...evidence, sourceUrl: nba.schedule, country: 'US', destinationId,
+        broadcasts.set(destinationId, { ...evidence, sourceUrl: scheduleUrl, country: 'US', destinationId,
           name: name + region, type, kind: 'live', airsAt: null })
       }
       const participants = []
@@ -122,7 +123,7 @@ export function parseNbaSeason(schedule, announcement, evidence) {
         title: home && away ? away.name + ' at ' + home.name : game.gameLabel + ' ' + game.gameSubLabel,
         startsAt: postponed || undecided ? null : game.gameDateTimeUTC,
         startStatus: postponed ? 'postponed' : undecided ? 'unannounced' : 'scheduled',
-        sourceUrl: nba.schedule, ...(!game.isNeutral && home ? { venueCountry: home.country } : {}), participants,
+        sourceUrl: scheduleUrl, ...(!game.isNeutral && home ? { venueCountry: home.country } : {}), participants,
         broadcasts: postponed ? [] : [...broadcasts.values()]
       }
     })
@@ -131,9 +132,9 @@ export function parseNbaSeason(schedule, announcement, evidence) {
   }
   return fixtureBatch({ id: 'nba', name: 'NBA', sport: 'basketball', kind: 'league',
     leagueCountry: 'US', organizerId: organizer.id, logo: organizer.logo }, [organizer, ...teams], {
-    ...evidence, id: seasonId, label: '2026/27 regular season', sourceUrl: nba.schedule,
+    ...evidence, id: seasonId, label: '2026/27 regular season', sourceUrl: scheduleUrl,
     startsOn: '2026-10-20', endsOn: '2027-04-11', expectedFixtureCount: 1230,
-    markets: [{ ...evidence, country: 'US', sourceUrl: nba.schedule,
+    markets: [{ ...evidence, country: 'US', sourceUrl: scheduleUrl,
       expectedListedFixtureIds: fixtures.filter(row => row.broadcasts.length).map(row => row.id) }]
   }, fixtures)
 }
@@ -299,22 +300,22 @@ export function parseAshes(fixturesHtml, broadcastsHtml, australiaHtml, evidence
   })
 }
 
-export function parseAustralianOpen(datesHtml, organizerHtml, rightsHtml, evidence) {
+export function parseAustralianOpen(datesHtml, organizerHtml, rightsHtml, evidence, { datesOnly = false } = {}) {
   if (!/set for Melbourne Park on 10[–-]31 January/i.test(datesHtml) ||
       !/Main-draw action at AO 2027 begins 17 January/i.test(datesHtml)) {
     throw new Error('Australian Open dates require a fresh source check')
   }
   const logoPath = organizerHtml.match(/data-cmp-filereference="([^"]+\/ao-brand-logo\.svg)"/)?.[1]
   const organizerLogo = organizerHtml.match(/"logo":\{"@type":"ImageObject","url":"(https:\/\/www\.tennis\.com\.au\/[^"]+logo[^"]*\.svg)"/)?.[1]
-  if (!logoPath || !organizerLogo) throw new Error('Missing Australian Open or Tennis Australia logo')
+  if (!datesOnly && (!logoPath || !organizerLogo)) throw new Error('Missing Australian Open or Tennis Australia logo')
   const organizer = { id: 'tennis-australia', name: 'Tennis Australia', kind: 'federation', country: 'AU',
-    logo: siteLogo(organizerLogo, australianOpen.organizer) }
+    ...(organizerLogo && { logo: siteLogo(organizerLogo, australianOpen.organizer) }) }
   const nzConfirmed = /from 2027 fans will also be able to enjoy free-to-air evening session coverage on Three and ThreeNow/i.test(rightsHtml) &&
     /Sky Sport and Sky Sport Now/.test(rightsHtml)
   const markets = nzConfirmed ? [{ ...evidence, sourceUrl: australianOpen.rights, country: 'NZ',
     rightsHolders: ['Sky Sport', 'Sky Sport Now', 'Three', 'ThreeNow'], expectedListedFixtureIds: [] }] : []
   return fixtureBatch({ id: 'australian-open', name: 'Australian Open', sport: 'tennis', kind: 'tournament',
-    leagueCountry: 'AU', organizerId: organizer.id, logo: siteLogo(logoPath, australianOpen.organizer) }, [organizer], {
+    leagueCountry: 'AU', organizerId: organizer.id, ...(logoPath && { logo: siteLogo(logoPath, australianOpen.organizer) }) }, [organizer], {
     ...evidence, id: 'australian-open-2027', label: '2027', sourceUrl: australianOpen.dates,
     startsOn: '2027-01-10', endsOn: '2027-01-31', fixtureInventoryStatus: 'unannounced', markets
   }, [])
