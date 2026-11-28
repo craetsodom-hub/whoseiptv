@@ -75,10 +75,12 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
       }
     }
     for (const season of index.seasons.values()) {
-      const country = index.competitions.get(season.competitionId).leagueCountry
-      const inventory = index.competitionInventory.get(country)
-      if (inventory && !inventory.seasonIds.includes(season.id)) {
-        addIssue('season_outside_competition_inventory', `${country ?? 'international'}/${season.id}`)
+      const competition = index.competitions.get(season.competitionId)
+      for (const country of competition.leagueCountries ?? [competition.leagueCountry]) {
+        const inventory = index.competitionInventory.get(country)
+        if (inventory && !inventory.seasonIds.includes(season.id)) {
+          addIssue('season_outside_competition_inventory', `${country ?? 'international'}/${season.id}`)
+        }
       }
     }
   }
@@ -110,7 +112,7 @@ export function auditRelease(index, { now = Date.now(), worldwide = false, logoR
     }
     for (const fixture of fixtures) {
       if (!['scheduled', 'cancelled'].includes(fixture.startStatus)) addIssue('unconfirmed_start', fixture.id)
-      if (['football', 'basketball', 'rugby', 'cricket'].includes(competition.sport) && (fixture.participants.length !== 2 ||
+      if (['football', 'basketball', 'rugby', 'cricket', 'ice-hockey'].includes(competition.sport) && (fixture.participants.length !== 2 ||
           !['home', 'away'].every(role => fixture.participants.some(row => row.role === role)))) {
         addIssue('missing_fixture_participant', fixture.id)
       }

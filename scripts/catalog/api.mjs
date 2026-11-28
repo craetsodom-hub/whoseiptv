@@ -58,7 +58,7 @@ function scopeFor(index, filters) {
     return (!filters.season || filters.season === season.id) &&
       (!filters.competition || filters.competition === competition.id) &&
       (!filters.sport || filters.sport === competition.sport) &&
-      (!filters.leagueCountry || filters.leagueCountry === competition.leagueCountry) &&
+      (!filters.leagueCountry || filters.leagueCountry === competition.leagueCountry || competition.leagueCountries?.includes(filters.leagueCountry)) &&
       (!filters.kind || filters.kind === competition.kind)
   })
 }
@@ -76,7 +76,8 @@ function coverageRow(index, season, country, now) {
     })
   return {
     seasonId: season.id, competitionId: competition.id, sport: competition.sport,
-    leagueCountry: competition.leagueCountry, label: season.label, startsOn: season.startsOn, endsOn: season.endsOn,
+    leagueCountry: competition.leagueCountry, ...(competition.leagueCountries && { leagueCountries: competition.leagueCountries }),
+    label: season.label, startsOn: season.startsOn, endsOn: season.endsOn,
     fixtureCount: season.expectedFixtureIds.length, scheduleStatus: isFresh(season, now) ? 'current' : 'stale',
     fixtureInventoryStatus: season.fixtureInventoryStatus ??
       (season.expectedFixtureCount > season.expectedFixtureIds.length ? 'partial' : 'complete'),

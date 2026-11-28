@@ -2,6 +2,8 @@
 
 The catalog includes fixtures for the 2026/27 Premier League season and published sessions for the 2026 Formula 1 season. It carries the Premier League club roster and badges, competition and organizer logos, UK broadcast announcements and published channel airtimes, and UK day-pass and monthly streaming offers. The football calendar applies published fixture amendments and verifies historical kickoffs against completed results. The racing catalog includes verified UK and US session airings where the broadcaster has published an exact listing. It retains season rights information for other markets. US pricing includes the standard monthly plan and free live practice for fixtures with a verified US airing.
 
+The 2026/27 NHL regular season includes all 32 clubs. Each game is checked against both clubs’ schedules. National TV and streaming listings carry a broadcast country. Canadian games listed on Prime include monthly and annual prices when current membership and game coverage can both be verified. Filter the NHL by either US or CA using `leagueCountry`.
+
 The builder also refreshes the published 2026/27 NBA regular-season schedule, the 2027 men’s and women’s Six Nations and Ashes fixture lists, and the 2027 Australian Open tournament dates. It imports the NBA’s named US broadcasters, rugby rights by market, and Ashes broadcaster announcements. The Australian Open edition appears in coverage while its individual match schedule is pending.
 
 ## Build and serve

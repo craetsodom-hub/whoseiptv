@@ -14,6 +14,8 @@ import {
   premierLeague, premierLeagueConflicts, resolvePremierLeagueConflict, sportsEntitlementsUrl, sportsPricingUrl
 } from './catalog/sources.mjs'
 
+import { loadNhlSeason, nhlPrimeOffers, nhlPrimePricing, nhlPrimeRights } from './catalog/nhl.mjs'
+
 const exec = promisify(execFile)
 const MAX_BYTES = 8 * 1024 * 1024
 const ONE_DAY_MS = 24 * 60 * 60 * 1000
@@ -155,6 +157,12 @@ async function optionalPage(url) {
 
 async function loadAdditionalSeasons() {
   const sources = [
+    ['NHL', async () => {
+      const [batch, pricing, rights] = await Promise.all([loadNhlSeason(json, verificationTimes()),
+        timesOnly ? '' : optionalPage(nhlPrimePricing), timesOnly ? '' : optionalPage(nhlPrimeRights)])
+      batch.offers = nhlPrimeOffers(batch.fixtures, pricing, rights, verificationTimes())
+      return [batch]
+    }],
     ['NBA', async () => {
       const [schedule, announcement, pricing] = await Promise.all([
         fetchText(nba.schedule, MAX_BYTES, { 'User-Agent': 'Mozilla/5.0', Referer: 'https://www.nba.com/' }),

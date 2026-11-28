@@ -4,7 +4,7 @@ Small, validated multi-sport schedule feed for the WhoseIPTV Android app. No dom
 
 ## Public feed
 
-Season start times are available in the [live season time feed](https://raw.githubusercontent.com/craetsodom-hub/whoseiptv/season-times/feed/seasons/v1/start-times.json). GitHub checks the sources hourly. Each event has a stable ID and a UTC `startsAt` once confirmed. Refresh saved events by ID, clear a saved time when `startsAt` becomes null, and check the season’s `validUntil` before displaying it. `changedAt` records when the sync first observed the current date, status and time. GitHub may delay scheduled runs.
+Season start times are available in the [live season time feed](https://raw.githubusercontent.com/craetsodom-hub/whoseiptv/season-times/feed/seasons/v1/start-times.json). GitHub schedules a check every hour and checks again after the main sports feed refreshes. Each event has a stable ID and a UTC `startsAt` once confirmed. Refresh saved events by ID, clear a saved time when `startsAt` becomes null, and check the season’s `validUntil` before displaying it. `changedAt` records when the sync first observed the current date, status and time. GitHub may delay scheduled runs.
 
 `https://raw.githubusercontent.com/craetsodom-hub/whoseiptv/main/feed/events/v1/events.json`
 
