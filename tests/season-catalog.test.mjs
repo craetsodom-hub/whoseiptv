@@ -286,12 +286,14 @@ test('a published NBA Cup date with undecided teams does not produce a kickoff o
   }))
   games.push({ ...game, gameId: '0022601230', homeTeam: { teamId: 0 }, awayTeam: { teamId: 0 },
     gameLabel: 'Emirates NBA Cup', gameSubLabel: 'Semifinal', gameStatusText: 'TBD', broadcasters: { nationalBroadcasters } })
+  games[0].broadcasters = { nationalTvBroadcasters: nationalBroadcasters }
   const schedule = { meta: { time: '2026-11-27T08:00:00.000Z' },
     leagueSchedule: { leagueId: '00', seasonYear: '2026-27', gameDates: [{ games }] } }
   const badges = Array.from({ length: 30 }, (_, index) =>
     `<img src="https://cdn.nba.com/logos/nba/${index + 1}/primary/L/logo.svg" title="Team ${index + 1} Logo">`)
   badges.push('<img src="https://cdn.nba.com/logos/leagues/logo-nba.svg" alt="NBA Logo">')
   const batch = parseNbaSeason(schedule, badges.join(''), evidence)
+  assert.equal(batch.fixtures[0].broadcasts[0].destinationId, 'peacock-us')
   const placeholder = batch.fixtures.at(-1)
   assert.equal(batch.seasons[0].expectedFixtureCount, 1230)
   assert.equal(placeholder.startStatus, 'unannounced')

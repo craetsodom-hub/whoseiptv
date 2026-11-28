@@ -105,7 +105,9 @@ export function parseNbaSeason(schedule, announcement, evidence, scheduleUrl = n
       }
       const postponed = game.postponedStatus === 'P'
       const broadcasts = new Map()
-      for (const row of game.broadcasters?.nationalBroadcasters ?? []) {
+      const broadcasters = game.broadcasters ?? {}
+      for (const row of [...(broadcasters.nationalBroadcasters ?? broadcasters.nationalTvBroadcasters ?? []),
+        ...(broadcasters.nationalOttBroadcasters ?? [])]) {
         const name = row.broadcasterDisplay
         const type = usNbaServices.has(name) ? 'service' : usNbaChannels.has(name) ? 'channel' : null
         if (!type || row.tapeDelayComments) continue

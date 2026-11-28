@@ -155,7 +155,7 @@ export function indexCatalog(catalog) {
     const inventoryUnannounced = season.fixtureInventoryStatus === 'unannounced'
     requireThat(competitions.has(season.competitionId) && isText(season.label) &&
       isDate(season.startsOn) && isDate(season.endsOn) && season.startsOn <= season.endsOn &&
-      (inventoryUnannounced ? ids.size === 0 : ids.size > 0 && season.fixtureInventoryStatus === undefined) &&
+      (inventoryUnannounced ? ids.size === 0 : ids.size > 0 && [undefined, 'partial'].includes(season.fixtureInventoryStatus)) &&
       (season.expectedFixtureCount === undefined || (Number.isSafeInteger(season.expectedFixtureCount) &&
         season.expectedFixtureCount > 0 && ids.size <= season.expectedFixtureCount)) &&
       Array.isArray(season.markets), 'Invalid season ' + season.id)

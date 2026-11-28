@@ -4,6 +4,12 @@ The catalog includes fixtures for the 2026/27 Premier League season and publishe
 
 The 2026/27 NHL regular season includes all 32 clubs. Each game is checked against both clubs’ schedules. National TV and streaming listings carry a broadcast country. Canadian games listed on Prime include monthly and annual prices when current membership and game coverage can both be verified. Filter the NHL by either US or CA using `leagueCountry`.
 
+The catalog includes the complete 2026/27 LaLiga, Bundesliga, Serie A and Ligue 1 regular-season schedules, the 2026 NFL regular season, and the 2027 MLB regular season. It imports published qualifiers, league-phase matches and subsequent draws for the Champions League, Europa League and Conference League. Each European cup’s expected total includes knockout fixtures whose participants may still be undecided.
+
+MLS includes all 510 regular-season games and published playoff fixtures. A conditional series decider has a provisional start until both clubs have won a game. US, Canadian, British and Australian Apple TV listings carry the standard monthly renewal price when verified.
+
+LaLiga listings include verified US and French viewing plans. Australian listings use the broadcaster’s published schedule for airtimes and include the required base subscription in the price. US NFL listings can depend on the local station. The 2027 MLB Little League Classic has separate US and Canadian broadcast records when its announcement agrees with the current schedule.
+
 The builder also refreshes the published 2026/27 NBA regular-season schedule, the 2027 men’s and women’s Six Nations and Ashes fixture lists, and the 2027 Australian Open tournament dates. It imports the NBA’s named US broadcasters, rugby rights by market, and Ashes broadcaster announcements. The Australian Open edition appears in coverage while its individual match schedule is pending.
 
 ## Build and serve
